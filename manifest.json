@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "タブまとめん改",
+  "version": "1.2.0",
+  "description": "案件ごとにスペースを作り、同じChromeウィンドウ内でタブ構成を切り替えられる拡張機能です。",
+  "permissions": [
+    "tabs",
+    "storage",
+    "alarms",
+    "downloads",
+    "sessions",
+    "tabGroups",
+    "unlimitedStorage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "action": {
+    "default_title": "タブまとめん改 を開く",
+    "default_icon": {
+      "16": "logo.png",
+      "48": "logo.png",
+      "128": "logo.png"
+    }
+  }
+}

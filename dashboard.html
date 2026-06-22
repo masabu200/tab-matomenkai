@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>タブまとめん改</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <div class="app">
+
+    <!-- ========== 左サイドバー ========== -->
+    <aside class="sidebar">
+
+      <!-- ブランドヘッダー -->
+      <div class="sidebar__header">
+        <img src="logo.png" class="sidebar__logo-img" alt="" width="36" height="36" />
+        <div class="sidebar__brand">
+          <span class="sidebar__brand-name">タブまとめん</span>
+          <span class="sidebar__brand-sub">改</span>
+        </div>
+        <button id="btnToggleTheme" class="btn-theme-toggle" type="button" title="ダークモード切り替え">
+          <svg id="themeToggleIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></svg>
+        </button>
+      </div>
+
+      <!-- 新規スペース / カテゴリー作成ボタン -->
+      <div class="sidebar__create">
+        <button id="btnCreateSpace" class="btn-create" type="button">
+          ＋ スペース
+        </button>
+        <button id="btnCreateCategory" class="btn-create-cat" type="button" title="カテゴリーを追加">
+          ＋ カテゴリー
+        </button>
+      </div>
+
+      <!-- スペース一覧（カテゴリーグループ込み、JSで動的生成） -->
+      <div id="spaceList" class="space-list" role="list"></div>
+
+      <!-- スペースが0件のときに表示 -->
+      <p id="sidebarEmpty" class="sidebar__empty" style="display:none;">
+        スペースがまだありません
+      </p>
+
+      <!-- バックアップ（エクスポート / インポート） -->
+      <div class="sidebar__backup">
+        <div class="sidebar__backup-row">
+          <button id="btnExport" class="btn-backup" type="button" title="全データを JSON ファイルに書き出す">
+            エクスポート
+          </button>
+          <button id="btnImport" class="btn-backup" type="button" title="JSON ファイルからデータを読み込む">
+            インポート
+          </button>
+        </div>
+        <div class="sidebar__backup-row sidebar__backup-auto">
+          <span class="sidebar__auto-label">自動バックアップ</span>
+          <select id="autoBackupInterval" class="select-interval" title="自動バックアップの間隔">
+            <option value="0">オフ</option>
+            <option value="1">毎時</option>
+            <option value="6">6時間ごと</option>
+            <option value="24">毎日</option>
+          </select>
+        </div>
+        <div class="sidebar__backup-row sidebar__backup-auto">
+          <span class="sidebar__auto-label">切り替え時に自動保存</span>
+          <input type="checkbox" id="autoSaveOnSwitch" class="checkbox-setting" checked title="スペース切り替え時に現在のタブを自動保存する" />
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- インポート用ファイル選択（非表示） -->
+    <input type="file" id="importFileInput" accept=".json" style="display:none;" />
+
+    <!-- ========== メインエリア ========== -->
+    <main class="main">
+
+      <!-- 操作フィードバックメッセージ（成功/エラー） -->
+      <div id="message" class="message" role="status" aria-live="polite" style="display:none;"></div>
+
+      <!-- スペースヘッダー -->
+      <div class="main__header">
+
+        <!-- スペース名 + バッジ行 + 操作ボタン -->
+        <div class="main__title-row">
+          <div class="main__space-info-group">
+            <!-- カテゴリーバッジ（通常スペース用） -->
+            <span id="spaceCategoryBadge" class="space-category-badge" style="display:none;"></span>
+            <!-- アーカイブ済みバッジ -->
+            <span id="archivedBadge" class="archived-badge" style="display:none;">アーカイブ済み</span>
+            <h2 id="spaceTitle" class="main__space-title">スペースを選択してください</h2>
+          </div>
+          <div id="spaceActions" class="main__space-actions" style="display:none;">
+            <!-- 通常スペース用ボタン（アーカイブ時は非表示） -->
+            <button id="btnChangeCategory" class="btn btn--ghost" type="button" title="カテゴリーを変更">カテゴリー</button>
+            <button id="btnRenameSpace"    class="btn btn--ghost" type="button" title="スペース名を変更">名前変更</button>
+            <button id="btnArchiveSpace"   class="btn btn--ghost" type="button" title="スペースをアーカイブ">アーカイブ</button>
+            <button id="btnDeleteSpace"    class="btn btn--ghost btn--danger" type="button" title="スペースを削除">削除</button>
+            <!-- アーカイブ済みスペース用ボタン（通常時は非表示） -->
+            <button id="btnRestoreSpace"      class="btn btn--primary"     type="button" title="アーカイブから復元" style="display:none;">復元</button>
+            <button id="btnDeletePermanently" class="btn btn--ghost btn--danger" type="button" title="完全削除" style="display:none;">完全削除</button>
+          </div>
+        </div>
+
+        <!-- 検索ボックス + タブ保存ボタン -->
+        <div id="mainControls" class="main__controls" style="display:none;">
+          <!-- ビュー切り替えトグル -->
+          <div class="view-toggle" id="viewToggle" title="表示切り替え">
+            <button class="view-toggle__btn view-toggle__btn--active" id="btnViewList" data-view="list" title="リスト表示">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            </button>
+            <button class="view-toggle__btn" id="btnViewCard" data-view="card" title="カード表示">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+            </button>
+          </div>
+          <input
+            type="search"
+            id="searchInput"
+            class="search-input"
+            placeholder="タブのタイトルや URL で絞り込む…"
+            autocomplete="off"
+          />
+          <button id="btnCreateTabGroup" class="btn btn--ghost" type="button" title="新しいタブグループを作成">
+            ＋ グループ
+          </button>
+          <button id="btnSaveTabs" class="btn btn--primary" type="button">
+            現在のタブを保存
+          </button>
+        </div>
+
+      </div>
+
+      <!-- タブ一覧コンテンツ -->
+      <div class="main__content">
+
+        <!-- タブカード一覧（JSで動的生成） -->
+        <div id="tabList" class="tab-list"></div>
+
+        <!-- タブが0件のときに表示 -->
+        <div id="emptyTabNote" class="empty-guide" style="display:none;">
+          <p class="empty-guide__title">このスペースにはまだタブが保存されていません</p>
+          <ol class="empty-guide__steps">
+            <li>保存したいタブをすべて開く（このダッシュボードタブはそのままで OK）</li>
+            <li>上の <strong>「現在のタブを保存」</strong> ボタンをクリック</li>
+            <li>タブ一覧がここに表示されます</li>
+          </ol>
+        </div>
+
+        <!-- スペースが未選択のときに表示 -->
+        <div id="noSpaceNote" class="empty-guide">
+          <p class="empty-guide__title">はじめかた</p>
+          <ol class="empty-guide__steps">
+            <li>左の <strong>「＋ スペース」</strong> をクリックして案件名を入力</li>
+            <li>そのスペースが選ばれた状態で、保存したいタブをすべて開く</li>
+            <li><strong>「現在のタブを保存」</strong> をクリックするとタブが保存される</li>
+            <li>次の案件は新しいスペースを作って同じ手順で保存する</li>
+            <li>サイドバーのスペース名をクリックするとタブが切り替わる</li>
+            <li>スペースをドラッグしてカテゴリー名の上にドロップすると移動できる</li>
+          </ol>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+  <!-- カテゴリー作成モーダル -->
+  <div id="categoryModal" class="modal-overlay" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="categoryModalTitle">
+    <div class="modal">
+      <h3 id="categoryModalTitle" class="modal__title">カテゴリーを作成</h3>
+      <div class="modal__body">
+        <input type="text" id="categoryNameInput" class="modal__input" placeholder="カテゴリー名を入力…" autocomplete="off" />
+        <div class="modal__color-label">カラー</div>
+        <div id="categoryColorPicker" class="modal__color-grid"></div>
+      </div>
+      <div class="modal__footer">
+        <button id="categoryModalCancel" class="btn btn--ghost" type="button">キャンセル</button>
+        <button id="categoryModalOk" class="btn btn--primary" type="button">作成</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
