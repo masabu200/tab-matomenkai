@@ -1,0 +1,1 @@
+{"name":"tab-matomen-mcp-server","version":"0.1.0","private":true,"type":"module","scripts":{"start":"node bridge.js","mcp":"node mcp.js","test":"node --test *.test.js"},"dependencies":{"@modelcontextprotocol/sdk":"^1.0.0","zod":"^3.25.0"}}
