@@ -908,14 +908,15 @@ async function switchToSpace(targetSpaceId) {
           }
         });
         data.spaces[idx].tabs = savableTabs.map((t) => {
+          const url = t.pendingUrl || t.url; // 読み込み中のタブも落とさず保存する
           let dashGid = null;
-          const list = _gidsByUrl.get(t.url);
+          const list = _gidsByUrl.get(url);
           if (list && list.length > 0) {
             dashGid = list.shift();
           }
           return {
-            title:      t.title || t.url,
-            url:        t.url,
+            title:      t.title || url,
+            url:        url,
             favIconUrl: t.favIconUrl || '',
             pinned:     t.pinned || false,
             groupId:    dashGid,
