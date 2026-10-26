@@ -33,7 +33,7 @@
 - 作業プロジェクト：`/Users/mugikura/Works/KWS/個人開発/ツール開発/タブまとめん改`
 - 追加開発版：`/Users/mugikura/Works/KWS/個人開発/ツール開発/タブまとめん改/extension`
 - MCPサーバー：`/Users/mugikura/Works/KWS/個人開発/ツール開発/タブまとめん改/tab-matomen-mcp-server`
-- 2026-10-14に確認したChrome開発版の読み込み元：`/Users/mugikura/Downloads/tab-matomenkai-vertical-tabs-dev/extension`
+- Chrome開発版の読み込み元：2026-10-26にプロジェクト内 `extension/` へ切り替え済み（拡張ID `hclimckpfflegjklhkjkapciamhefnld`）。それ以前は `/Users/mugikura/Downloads/tab-matomenkai-vertical-tabs-dev/extension`（10月14日のコピー、ID `kfpomnfkloafifdhgobfokhmlnhffclo`）を読んでおり、修正が反映されない原因になっていた。古いコピーは今後使わない
 
 上記の追加開発ファイルの存在は本計画作成時に確認。過去のテスト結果は会話記録に基づくもので、今回の再試験結果ではない。配置統合時は差分を確認し、既存変更を一括上書きしない。
 
