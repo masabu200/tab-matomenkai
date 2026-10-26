@@ -16,6 +16,7 @@ const BulkActions = (() => {
     <button type="button" id="bulkOpen" class="btn btn--ghost" title="選択したタブをこのウィンドウで開く">開く</button>
     <span class="bulk-bar__field"><select id="bulkMoveTarget" aria-label="移動先のスペース"></select><button type="button" id="bulkMove" class="btn btn--ghost">移動</button></span>
     <span class="bulk-bar__field"><select id="bulkGroupTarget" aria-label="入れるグループ"></select><button type="button" id="bulkGroup" class="btn btn--ghost">グループへ</button></span>
+    <span class="bulk-bar__field"><select id="bulkCopyFormat" aria-label="コピーの形式"><option value="md">Markdown</option><option value="text">タイトルとURL</option><option value="urls">URLのみ</option></select><button type="button" id="bulkCopy" class="btn btn--ghost" title="選択したタブ（未選択ならスペース全体）の一覧をコピー">コピー</button></span>
     <button type="button" id="bulkArchive" class="btn btn--ghost" title="選択したタブをアーカイブ">アーカイブ</button>
     <button type="button" id="bulkDelete" class="btn btn--ghost btn--danger" title="選択したタブを削除">削除</button>
     <button type="button" id="bulkClear" class="btn btn--ghost" title="選択を解除（Esc）">解除</button>`;
@@ -40,6 +41,7 @@ const BulkActions = (() => {
     allBox.checked = all.length > 0 && all.every(c => selected.has(indexOf(c)));
     allBox.indeterminate = n > 0 && !allBox.checked;
     for (const id of ['bulkOpen','bulkMove','bulkGroup','bulkArchive','bulkDelete','bulkClear']) el(id).disabled = n === 0;
+    el('bulkCopy').disabled = all.length === 0;
     bar.classList.toggle('bulk-bar--active', n > 0);
   }
   let optionsSeq = 0;
@@ -166,22 +168,48 @@ const BulkActions = (() => {
       return groupId ? `${picked.length}枚を「${group.name || groupName || '名称未設定グループ'}」に入れました。` : `${picked.length}枚をグループから外しました。`;
     });
   });
+  // ---------- URL一覧コピー（選択分。未選択ならスペース全体） ----------
+  function formatTabs(tabs, format) {
+    const title = t => (t.title || t.url || '').replace(/\s+/g, ' ').trim() || t.url;
+    if (format === 'urls') return tabs.map(t => t.url).join('\n');
+    if (format === 'text') return tabs.map(t => `${title(t)}\n${t.url}`).join('\n\n');
+    return tabs.map(t => `- [${title(t).replace(/[\[\]]/g, ' ')}](${t.url})`).join('\n');
+  }
+  async function copyText(value) {
+    try { await navigator.clipboard.writeText(value); return true; } catch { /* フォールバック */ }
+    const area = document.createElement('textarea'); area.value = value; area.setAttribute('readonly', ''); area.style.position = 'fixed'; area.style.opacity = '0';
+    document.body.append(area); area.select(); let ok = false; try { ok = document.execCommand('copy'); } catch { ok = false; } area.remove(); return ok;
+  }
+  el('bulkCopy').addEventListener('click', async () => {
+    try {
+      const data = await loadData(); const space = activeSpace(data); if (!space) return;
+      const picked = selected.size ? indices().filter(i => i < space.tabs.length).map(i => space.tabs[i]) : space.tabs;
+      if (!picked.length) { showMessage('コピーするタブがありません。', 'error'); return; }
+      const format = el('bulkCopyFormat').value; const label = { md: 'Markdown', text: 'タイトルとURL', urls: 'URLのみ' }[format] || format;
+      if (await copyText(formatTabs(picked, format))) showMessage(`${picked.length}件を${label}でコピーしました。`, 'success');
+      else showMessage('クリップボードにコピーできませんでした。', 'error');
+    } catch (error) { showMessage('コピーに失敗しました。', 'error'); console.error('[PWM] bulk copy', error); }
+  });
   el('bulkArchive').addEventListener('click', () => run('アーカイブ', async (data, space, picked) => {
+    const snapshot = typeof Undo !== 'undefined' ? Undo.snapshotOf(space) : null;
     if (!Array.isArray(space.archivedTabs)) space.archivedTabs = [];
     const now = new Date().toISOString();
     const archived = picked.map(i => ({ ...space.tabs[i], archivedAt: now }));
     for (const i of [...picked].reverse()) space.tabs.splice(i, 1);
     space.archivedTabs.unshift(...archived); space.updatedAt = now;
     await saveData(data); await renderAll();
+    if (snapshot) await Undo.offer(`${archived.length}枚をアーカイブしました。`, snapshot);
     return `${archived.length}枚をアーカイブしました。`;
   }));
   el('bulkDelete').addEventListener('click', async () => {
     const n = selected.size; if (!n) return;
     if (!await DashboardDialogs.confirm(`選択した${n}枚のタブを削除します。元に戻せません。よろしいですか？`)) return;
     run('削除', async (data, space, picked) => {
+      const snapshot = typeof Undo !== 'undefined' ? Undo.snapshotOf(space) : null;
       for (const i of [...picked].reverse()) space.tabs.splice(i, 1);
       space.updatedAt = new Date().toISOString();
       await saveData(data); await renderAll();
+      if (snapshot) await Undo.offer(`${picked.length}枚のタブを削除しました。`, snapshot);
       return `${picked.length}枚のタブを削除しました。`;
     });
   });

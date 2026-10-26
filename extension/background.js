@@ -232,3 +232,92 @@ async function performAutoBackup(now = new Date()) {
     conflictAction: 'uniquify',
   });
 }
+
+
+// ============================================================
+// 右クリックメニュー「タブまとめん改に保存」
+//   ページ（または右クリックしたリンク）を、選んだスペースへ1枚追加する。
+//   スペース一覧は保存データの変更に追従して作り直す。
+// ============================================================
+const MENU_ROOT = 'pwm-save-root';
+const MENU_PREFIX = 'pwm-save:';
+const MENU_CONTEXTS = ['page', 'link'];
+const MENU_URLS = ['http://*/*', 'https://*/*'];
+let menuTimer = null;
+
+function createMenu(props) {
+  return new Promise((resolve) => { chrome.contextMenus.create(props, () => { void chrome.runtime.lastError; resolve(); }); });
+}
+async function rebuildContextMenus() {
+  if (!chrome.contextMenus) return;
+  await new Promise((resolve) => chrome.contextMenus.removeAll(() => { void chrome.runtime.lastError; resolve(); }));
+  const result = await chrome.storage.local.get(DATA_KEY);
+  const spaces = ((result[DATA_KEY] && result[DATA_KEY].spaces) || []).filter((s) => s && !s.archived && typeof s.name === 'string');
+  await createMenu({ id: MENU_ROOT, title: 'タブまとめん改に保存', contexts: MENU_CONTEXTS, documentUrlPatterns: MENU_URLS });
+  if (spaces.length === 0) {
+    await createMenu({ id: MENU_PREFIX + 'none', parentId: MENU_ROOT, title: 'スペースがありません（ダッシュボードで作成）', enabled: false, contexts: MENU_CONTEXTS, documentUrlPatterns: MENU_URLS });
+    return;
+  }
+  // Chrome のメニューが長くなりすぎないよう 60 件まで
+  for (const space of spaces.slice(0, 60)) {
+    await createMenu({ id: MENU_PREFIX + space.id, parentId: MENU_ROOT, title: space.name.length > 60 ? space.name.slice(0, 59) + '…' : space.name, contexts: MENU_CONTEXTS, documentUrlPatterns: MENU_URLS });
+  }
+}
+function scheduleMenuRebuild() {
+  if (!chrome.contextMenus || typeof setTimeout !== 'function') return;
+  clearTimeout(menuTimer); menuTimer = setTimeout(() => { rebuildContextMenus().catch((e) => console.warn('[PWM] context menu', e)); }, 400);
+}
+try {
+  chrome.runtime.onInstalled.addListener(scheduleMenuRebuild);
+  chrome.runtime.onStartup.addListener(scheduleMenuRebuild);
+  chrome.storage.onChanged.addListener((changes, area) => { if (area === 'local' && changes[DATA_KEY]) scheduleMenuRebuild(); });
+} catch (e) { /* 最小限のモック環境では登録しない */ }
+scheduleMenuRebuild();
+
+async function saveTabToSpace(spaceId, tab) {
+  const url = tab && tab.url;
+  if (!/^https?:\/\//.test(url || '')) return { ok: false, reason: 'unsupported' };
+  return navigator.locks.request('pwm-space-switch', async () => {
+    const result = await chrome.storage.local.get(DATA_KEY);
+    const data = result[DATA_KEY];
+    if (!data || !Array.isArray(data.spaces)) return { ok: false, reason: 'missing' };
+    const space = data.spaces.find((s) => s.id === spaceId && !s.archived);
+    if (!space) return { ok: false, reason: 'missing' };
+    if (!Array.isArray(space.tabs)) space.tabs = [];
+    if (space.tabs.some((t) => t.url === url)) return { ok: false, reason: 'duplicate', name: space.name };
+    space.tabs.push({ title: tab.title || url, url, favIconUrl: tab.favIconUrl || '', pinned: false, groupId: null });
+    space.updatedAt = new Date().toISOString();
+    await chrome.storage.local.set({ [DATA_KEY]: data });
+    return { ok: true, name: space.name, count: space.tabs.length };
+  });
+}
+globalThis.pwmSaveTabToSpace = saveTabToSpace;
+
+async function flashBadge(tabId, text, title, color) {
+  if (!chrome.action || tabId == null) return;
+  try {
+    await chrome.action.setBadgeBackgroundColor({ tabId, color });
+    await chrome.action.setBadgeText({ tabId, text });
+    await chrome.action.setTitle({ tabId, title });
+    setTimeout(() => {
+      chrome.action.setBadgeText({ tabId, text: '' }).catch(() => {});
+      chrome.action.setTitle({ tabId, title: 'タブまとめん改 を開く' }).catch(() => {});
+    }, 2500);
+  } catch { /* タブが閉じられた場合など */ }
+}
+
+if (chrome.contextMenus) {
+  chrome.contextMenus.onClicked.addListener(async (info, tab) => {
+    const id = String(info.menuItemId);
+    if (!id.startsWith(MENU_PREFIX) || id === MENU_PREFIX + 'none') return;
+    const spaceId = id.slice(MENU_PREFIX.length);
+    const isLink = !!info.linkUrl;
+    const url = isLink ? info.linkUrl : (info.pageUrl || (tab && tab.url));
+    const title = isLink ? (info.linkText || info.linkUrl) : ((tab && tab.title) || url);
+    const result = await saveTabToSpace(spaceId, { url, title, favIconUrl: isLink ? '' : ((tab && tab.favIconUrl) || '') }).catch((e) => ({ ok: false, reason: String(e) }));
+    const tabId = tab && tab.id;
+    if (result.ok) await flashBadge(tabId, '✓', `「${result.name}」に保存しました（${result.count}枚）`, '#2f9e63');
+    else if (result.reason === 'duplicate') await flashBadge(tabId, '＝', `「${result.name}」に保存済みです`, '#7a8098');
+    else await flashBadge(tabId, '×', '保存できませんでした。ダッシュボードでスペースを確認してください', '#d94040');
+  });
+}
