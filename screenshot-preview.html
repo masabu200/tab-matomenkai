@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>タブまとめん改</title>
+<link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+<script>
+(function () {
+  var params = new URLSearchParams(location.search);
+  var theme = params.get('theme') || 'light';
+  var view  = params.get('view')  || 'list';
+  var space = params.get('space') || 's1';
+
+  var fav = function (d) { return 'https://www.google.com/s2/favicons?domain=' + d + '&sz=64'; };
+  var now = new Date().toISOString();
+  var T = function (title, url, groupId) {
+    var t = { title: title, url: url, favIconUrl: fav(url.replace('https://', '').split('/')[0]), pinned: false, groupId: groupId || null };
+    return t;
+  };
+
+  var data = {
+    version: 1,
+    activeSpaceId: space,
+    windowActiveSpaces: { 1: space },
+    archiveColor: '',
+    categories: [
+      { id: 'c1', name: 'WEB制作', collapsed: false, color: '#4a7ef8', parentId: null },
+      { id: 'c2', name: '個人開発', collapsed: false, color: '#4aaa5a', parentId: null },
+      { id: 'c3', name: '営業・事務', collapsed: false, color: '#e07835', parentId: null }
+    ],
+    spaces: [
+      {
+        id: 's1', name: 'A社 ホームページリニューアル', createdAt: now, updatedAt: now,
+        categoryId: 'c1', archived: false, color: '#4a7ef8', icon: '',
+        tabGroups: [
+          { id: 'g1', name: 'デザイン', color: '#e8710a', collapsed: true, chromeGroupId: null },
+          { id: 'g2', name: '開発', color: '#1a73e8', collapsed: true, chromeGroupId: null },
+          { id: 'g3', name: '打ち合わせ', color: '#1e8e3e', collapsed: true, chromeGroupId: null }
+        ],
+        tabs: [
+          T('Figma – A社サイト トップページ カンプ', 'https://www.figma.com/file/demo-a', 'g1'),
+          T('Figma – 下層ページ デザイン案', 'https://www.figma.com/file/demo-b', 'g1'),
+          T('Notion – A社 修正指示一覧', 'https://www.notion.so/demo', 'g1'),
+          T('GitHub – asha-corp/website', 'https://github.com/asha-corp/website', 'g2'),
+          T('Vercel – Production Deployments', 'https://vercel.com/dashboard', 'g2'),
+          T('Google ドライブ – 素材フォルダ', 'https://drive.google.com/drive/folders/demo', 'g2'),
+          T('Google カレンダー', 'https://calendar.google.com/', 'g3'),
+          T('Gmail – A社 担当者とのやり取り', 'https://mail.google.com/', 'g3')
+        ]
+      },
+      {
+        id: 's2', name: 'B社 LP制作（新規提案）', createdAt: now, updatedAt: now,
+        categoryId: 'c1', archived: false, color: '#4a7ef8', icon: '',
+        tabGroups: [],
+        tabs: [
+          T('Figma – LP ワイヤーフレーム', 'https://www.figma.com/file/demo-c', null),
+          T('Notion – 提案書ドラフト', 'https://www.notion.so/demo2', null),
+          T('過去のLP参考 – 同業他社', 'https://www.example.com/reference', null)
+        ]
+      },
+      {
+        id: 's3', name: 'タブまとめん改 ストア公開', createdAt: now, updatedAt: now,
+        categoryId: 'c2', archived: false, color: '#4aaa5a', icon: '',
+        tabGroups: [],
+        tabs: [
+          T('Chrome Web Store デベロッパー コンソール', 'https://chrome.google.com/webstore/devconsole', null),
+          T('デベロッパープログラムポリシー', 'https://developer.chrome.com/docs/webstore/program-policies', null),
+          T('マニフェスト ファイルの概念', 'https://developer.chrome.com/docs/extensions/reference/manifest', null)
+        ]
+      },
+      {
+        id: 's4', name: '営業メール 下書き', createdAt: now, updatedAt: now,
+        categoryId: 'c3', archived: false, color: '#e07835', icon: '',
+        tabGroups: [],
+        tabs: [
+          T('Gmail – メール作成', 'https://mail.google.com/mail/u/0/#compose', null),
+          T('見積テンプレート（Google ドキュメント）', 'https://docs.google.com/document/d/demo', null)
+        ]
+      },
+      {
+        id: 's5', name: '調べもの', createdAt: now, updatedAt: now,
+        categoryId: null, archived: false, color: '', icon: '',
+        tabGroups: [],
+        tabs: [
+          T('Web 制作の見積もり相場', 'https://www.example.com/market', null),
+          T('Zenn – Chrome 拡張機能 開発', 'https://zenn.dev/topics/chrome-extension', null)
+        ]
+      }
+    ]
+  };
+
+  var store = {
+    pwm_data: data,
+    pwm_settings: { backupIntervalHours: 0, autoSaveOnSwitch: true, viewMode: view },
+    pwm_theme: theme,
+    pwm_dashboard_tab_ids: []
+  };
+
+  function getResult(keys) {
+    if (typeof keys === 'string') keys = [keys];
+    var out = {};
+    (keys || []).forEach(function (k) { if (k in store) out[k] = store[k]; });
+    return out;
+  }
+  function setObj(obj, cb) { Object.keys(obj).forEach(function (k) { store[k] = obj[k]; }); if (cb) cb(); }
+
+  var noopEv = { addListener: function () {}, removeListener: function () {} };
+
+  window.chrome = {
+    runtime: {
+      lastError: undefined,
+      getURL: function (p) { return p; },
+      onMessage: noopEv,
+      onInstalled: noopEv,
+      onStartup: noopEv
+    },
+    storage: {
+      local: {
+        get: function (keys, cb) { var r = getResult(keys); if (cb) { cb(r); return; } return Promise.resolve(r); },
+        set: function (obj, cb) { setObj(obj, cb); if (!cb) return Promise.resolve(); }
+      },
+      session: {
+        get: function (keys, cb) { var r = getResult(keys); if (cb) { cb(r); return; } return Promise.resolve(r); },
+        set: function (obj, cb) { setObj(obj, cb); if (!cb) return Promise.resolve(); }
+      }
+    },
+    windows: { getCurrent: function () { return Promise.resolve({ id: 1, focused: true }); } },
+    tabs: {
+      query: function (q, cb) { if (cb) { cb([]); return; } return Promise.resolve([]); },
+      getCurrent: function (cb) { cb({ id: 999, windowId: 1, pinned: true }); },
+      create: function (props, cb) { if (cb) { cb({ id: 1 }); return; } return Promise.resolve({ id: 1 }); },
+      update: function (id, props, cb) { if (cb) cb(); return Promise.resolve(); },
+      move: function (id, idx, cb) { if (cb) cb(); return Promise.resolve(); },
+      remove: function (ids, cb) { if (cb) cb(); return Promise.resolve(); },
+      group: function () { return Promise.resolve(1); },
+      ungroup: function () { return Promise.resolve(); },
+      onMoved: noopEv, onAttached: noopEv, onDetached: noopEv, onRemoved: noopEv
+    },
+    tabGroups: {
+      query: function () { return Promise.resolve([]); },
+      update: function () { return Promise.resolve(); },
+      move: function () { return Promise.resolve(); },
+      onUpdated: noopEv, onMoved: noopEv
+    },
+    downloads: { download: function () { return Promise.resolve(1); } },
+    alarms: { create: function () {}, clear: function () {}, onAlarm: noopEv }
+  };
+})();
+</script>
+
+<div class="app">
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <img src="logo.png" class="sidebar__logo-img" alt="" width="36" height="36" />
+      <div class="sidebar__brand">
+        <span class="sidebar__brand-name">タブまとめん</span>
+        <span class="sidebar__brand-sub">改</span>
+      </div>
+      <button id="btnToggleTheme" class="btn-theme-toggle" type="button" title="ダークモード切り替え">
+        <svg id="themeToggleIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></svg>
+      </button>
+    </div>
+
+    <div class="sidebar__create">
+      <button id="btnCreateSpace" class="btn-create" type="button">＋ スペース</button>
+      <button id="btnCreateCategory" class="btn-create-cat" type="button" title="カテゴリーを追加">＋ カテゴリー</button>
+    </div>
+
+    <div id="spaceList" class="space-list" role="list"></div>
+    <p id="sidebarEmpty" class="sidebar__empty" style="display:none;">スペースがまだありません</p>
+
+    <div class="sidebar__backup">
+      <div class="sidebar__backup-row">
+        <button id="btnExport" class="btn-backup" type="button" title="全データを JSON ファイルに書き出す">エクスポート</button>
+        <button id="btnImport" class="btn-backup" type="button" title="JSON ファイルからデータを読み込む">インポート</button>
+      </div>
+      <div class="sidebar__backup-row sidebar__backup-auto">
+        <span class="sidebar__auto-label">自動バックアップ</span>
+        <select id="autoBackupInterval" class="select-interval" title="自動バックアップの間隔">
+          <option value="0">オフ</option>
+          <option value="1">毎時</option>
+          <option value="6">6時間ごと</option>
+          <option value="24">毎日</option>
+        </select>
+      </div>
+      <div class="sidebar__backup-row sidebar__backup-auto">
+        <span class="sidebar__auto-label">切り替え時に自動保存</span>
+        <input type="checkbox" id="autoSaveOnSwitch" class="checkbox-setting" checked title="スペース切り替え時に現在のタブを自動保存する" />
+      </div>
+    </div>
+  </aside>
+
+  <input type="file" id="importFileInput" accept=".json" style="display:none;" />
+
+  <main class="main">
+    <div id="message" class="message" role="status" aria-live="polite" style="display:none;"></div>
+
+    <div class="main__header">
+      <div class="main__title-row">
+        <div class="main__space-info-group">
+          <span id="spaceCategoryBadge" class="space-category-badge" style="display:none;"></span>
+          <span id="archivedBadge" class="archived-badge" style="display:none;">アーカイブ済み</span>
+          <h2 id="spaceTitle" class="main__space-title">スペースを選択してください</h2>
+        </div>
+        <div id="spaceActions" class="main__space-actions" style="display:none;">
+          <button id="btnChangeCategory" class="btn btn--ghost" type="button" title="カテゴリーを変更">カテゴリー</button>
+          <button id="btnRenameSpace" class="btn btn--ghost" type="button" title="スペース名を変更">名前変更</button>
+          <button id="btnArchiveSpace" class="btn btn--ghost" type="button" title="スペースをアーカイブ">アーカイブ</button>
+          <button id="btnDeleteSpace" class="btn btn--ghost btn--danger" type="button" title="スペースを削除">削除</button>
+          <button id="btnRestoreSpace" class="btn btn--primary" type="button" title="アーカイブから復元" style="display:none;">復元</button>
+          <button id="btnDeletePermanently" class="btn btn--ghost btn--danger" type="button" title="完全削除" style="display:none;">完全削除</button>
+        </div>
+      </div>
+
+      <div id="mainControls" class="main__controls" style="display:none;">
+        <div class="view-toggle" id="viewToggle" title="表示切り替え">
+          <button class="view-toggle__btn view-toggle__btn--active" id="btnViewList" data-view="list" title="リスト表示">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+          </button>
+          <button class="view-toggle__btn" id="btnViewCard" data-view="card" title="カード表示">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          </button>
+        </div>
+        <input type="search" id="searchInput" class="search-input" placeholder="タブのタイトルや URL で絞り込む…" autocomplete="off" />
+        <button id="btnCreateTabGroup" class="btn btn--ghost" type="button" title="新しいタブグループを作成">＋ グループ</button>
+        <button id="btnSaveTabs" class="btn btn--primary" type="button">現在のタブを保存</button>
+      </div>
+    </div>
+
+    <div class="main__content">
+      <div id="tabList" class="tab-list"></div>
+      <div id="emptyTabNote" class="empty-guide" style="display:none;"></div>
+      <div id="noSpaceNote" class="empty-guide" style="display:none;"></div>
+    </div>
+  </main>
+</div>
+
+<div id="categoryModal" class="modal-overlay" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="categoryModalTitle">
+  <div class="modal">
+    <h3 id="categoryModalTitle" class="modal__title">カテゴリーを作成</h3>
+    <div class="modal__body">
+      <input type="text" id="categoryNameInput" class="modal__input" placeholder="カテゴリー名を入力…" autocomplete="off" />
+      <div class="modal__color-label">カラー</div>
+      <div id="categoryColorPicker" class="modal__color-grid"></div>
+    </div>
+    <div class="modal__footer">
+      <button id="categoryModalCancel" class="btn btn--ghost" type="button">キャンセル</button>
+      <button id="categoryModalOk" class="btn btn--primary" type="button">作成</button>
+    </div>
+  </div>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
