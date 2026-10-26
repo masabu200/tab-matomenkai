@@ -1,0 +1,51 @@
+{
+  "action": {
+    "default_icon": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+    },
+    "default_title": "タブまとめん改 を開く"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "content.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "description": "案件ごとにスペースを作り、同じChromeウィンドウ内でタブ構成を切り替えられる拡張機能です。",
+  "icons": {
+    "128": "icons/icon128.png",
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png"
+  },
+  "manifest_version": 3,
+  "name": "タブまとめん改",
+  "permissions": [
+    "tabs",
+    "storage",
+    "alarms",
+    "downloads",
+    "tabGroups",
+    "unlimitedStorage",
+    "sidePanel",
+    "identity"
+  ],
+  "version": "1.2.1",
+  "minimum_chrome_version": "141",
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "host_permissions": [
+    "http://127.0.0.1/*",
+    "https://www.googleapis.com/*"
+  ]
+}

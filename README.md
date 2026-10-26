@@ -1,3 +1,6 @@
+> **開発先（2026-10-26更新）**：新機能の正本は、この案件内の `extension/` です。AI連携は `tab-matomen-mcp-server/`、テストは `tests/`。直下の既存版は保持しています。
+> 詳細：[開発先の整理](planning/DEVELOPMENT-LOCATION.md) ／ [収益化計画](planning/MONETIZATION-PLAN.md)
+
 # タブまとめん改 — 使い方マニュアル
 
 案件・プロジェクトごとにタブをまとめて、ワンクリックで切り替えられるChrome拡張機能です。
