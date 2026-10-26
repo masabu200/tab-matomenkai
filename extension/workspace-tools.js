@@ -48,6 +48,9 @@ const WorkspaceTools = (() => {
   }
   restore.addEventListener('click',async()=>{
     if (busy) return;
+    // 確認ダイアログ中の再クリックで復元が二度走らないよう、先に多重実行を止める
+    busy=true; restore.disabled=true;
+    try {
     if (!await DashboardDialogs.confirm('前のタブ構成に戻します。現在の構成も履歴に残します。ページ内の未送信の入力内容は復元できません。')) return;
     await navigator.locks.request('pwm-space-switch',async()=>{
       busy=true; g_isSwitching=true; restore.disabled=true;
@@ -74,8 +77,9 @@ const WorkspaceTools = (() => {
         setActiveSpaceId(data,data.spaces.some(s=>s.id===history.spaceId)?history.spaceId:null); await saveData(data);
         await renderAll();showMessage('前のタブ構成に戻しました。','success');
       }catch(error){console.error(error);showMessage('復元に失敗しました。履歴を確認して再度お試しください。','error');}
-      finally{busy=false;g_isSwitching=false;schedule();}
+      finally{g_isSwitching=false;}
     });
+    } finally { busy=false; schedule(); }
   });
   const originalSave = saveCurrentTabsToSpace;
   saveCurrentTabsToSpace = async function(id) {

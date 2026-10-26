@@ -1,4 +1,4 @@
-const {chromium}=require('/Users/mugikura/node_modules/playwright');
+const {chromium}=require('/Users/mugikura/node_modules/playwright');const UI=require('./ui.cjs');
 const fs=require('fs'),path=require('path'),assert=require('node:assert/strict');
 (async()=>{
  const dir=fs.mkdtempSync('/tmp/sidebar-drag-');
@@ -27,7 +27,7 @@ const fs=require('fs'),path=require('path'),assert=require('node:assert/strict')
    await drag('dragOver',x,rect.y+rect.height/2);await page.waitForTimeout(100);const middle=await list.evaluate(el=>el.scrollTop);await page.waitForTimeout(250);assert.ok(Math.abs(await list.evaluate(el=>el.scrollTop)-middle)<3,mode+' center stop');
    await drag('dragOver',x,rect.y+4);await page.waitForFunction(()=>document.getElementById('spaceList').scrollTop===0,{},{timeout:15000});
    const target=await page.locator('[data-category-id="c0"] > .cat-group__header').boundingBox();await drag('dragOver',target.x+target.width/2,target.y+target.height/2);await drag('drop',target.x+target.width/2,target.y+target.height/2);await page.evaluate(()=>document.dispatchEvent(new DragEvent('dragend',{bubbles:true})));
-   await page.waitForFunction(async()=> (await loadData()).spaces.find(s=>s.id==='s20').categoryId==='c0');
+   await UI.waitForAsync(page,async()=> (await loadData()).spaces.find(s=>s.id==='s20').categoryId==='c0');
    const final=await list.evaluate(el=>el.scrollTop);await page.waitForTimeout(250);assert.equal(await list.evaluate(el=>el.scrollTop),final);
    console.log('PASS '+mode+': browser drag events up/down, stationary scroll, center/drop stop, persisted move to first category');
    await page.evaluate(async()=>{const d=await loadData();d.spaces.find(s=>s.id==='s20').categoryId='c20';await saveData(d)});await page.waitForTimeout(200);

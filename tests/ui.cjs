@@ -8,5 +8,9 @@ async function closeSettings(page){await page.evaluate(()=>{const d=document.get
 // 設定内の操作を実行し、元々閉じていた場合は閉じて戻す。
 async function inSettings(page,action){const wasOpen=await isSettingsOpen(page);await openSettings(page);try{return await action()}finally{if(!wasOpen)await closeSettings(page)}}
 // 設定内の「左バーをサイドパネルで開く」を押す（method: 'click' | 'press'）。
-async function launchPanel(page,method='click',...args){return inSettings(page,()=>page.locator('#openVerticalTabs')[method](...args))}
-module.exports={isSettingsOpen,openSettings,closeSettings,inSettings,launchPanel};
+// 起動ボタンは左バー上部にある。もし見えない（設定内へ移された）場合だけ設定を開いて操作する。
+async function launchPanel(page,method='click',...args){const b=page.locator('#openVerticalTabs');if(await b.isVisible())return b[method](...args);return inSettings(page,()=>b[method](...args))}
+// Playwright 1.62 の page.waitForFunction は async 関数を渡すと最初の評価結果（Promise）が解決した時点で
+// 真偽にかかわらず終了する（tests で実測）。非同期条件は必ずこちらでポーリングする。
+async function waitForAsync(page,fn,arg,label,timeoutMs=10000){const end=Date.now()+timeoutMs;let last;while(Date.now()<end){last=await page.evaluate(fn,arg);if(last)return last;await page.waitForTimeout(50)}throw Error('Timeout: '+(label||String(fn).slice(0,100)))}
+module.exports={isSettingsOpen,openSettings,closeSettings,inSettings,launchPanel,waitForAsync};

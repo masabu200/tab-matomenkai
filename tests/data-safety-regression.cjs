@@ -84,8 +84,8 @@ async function wait(check,label='condition',tries=200){for(let i=0;i<tries;i++){
   await p.locator('#btnSaveTabs').click();await p.waitForTimeout(600);space=(await storage()).spaces.find(s=>s.id==='a');
   assert.equal(space.tabGroups.length,1);assert.equal(space.tabGroups[0].id,groupId);
   // 切り替えて戻すと Chrome のグループが復元される
-  await p.locator('#spaceList [data-space-id="b"]').click();await p.locator('[data-choice=skip]').click();await p.waitForFunction(async()=>getActiveSpaceId(await loadData())==='b'&&!g_isSwitching);
-  await p.locator('#spaceList [data-space-id="a"]').click();await p.locator('[data-choice=skip]').click();await p.waitForFunction(async()=>getActiveSpaceId(await loadData())==='a'&&!g_isSwitching);
+  await p.locator('#spaceList [data-space-id="b"]').click();await p.locator('[data-choice=skip]').click();await UI.waitForAsync(p,async()=>getActiveSpaceId(await loadData())==='b'&&!g_isSwitching);
+  await p.locator('#spaceList [data-space-id="a"]').click();await p.locator('[data-choice=skip]').click();await UI.waitForAsync(p,async()=>getActiveSpaceId(await loadData())==='a'&&!g_isSwitching);
   const restored=await wait(async()=>{const groups=await p.evaluate(async()=>{const gs=await chrome.tabGroups.query({windowId:g_dashboardWindowId});const out=[];for(const g of gs){const tabs=await chrome.tabs.query({groupId:g.id});out.push({title:g.title,color:g.color,urls:tabs.map(t=>t.pendingUrl||t.url).sort()})}return out});return groups.length===1&&groups[0].urls.length===2?groups:null},'chrome group restored');
   assert.equal(restored[0].title,'調査');assert.equal(restored[0].color,'green');assert.deepEqual(restored[0].urls,[base+'/g1',base+'/g2']);
   space=(await storage()).spaces.find(s=>s.id==='a');assert.equal(space.tabGroups.length,1,'switching does not duplicate groups');assert.equal(space.tabs.length,3);
@@ -93,7 +93,7 @@ async function wait(check,label='condition',tries=200){for(let i=0;i<tries;i++){
   // ---------- 6. 自動保存ON: 読み込み中のタブも切り替え時に保存される ----------
   await worker.evaluate(()=>chrome.storage.local.set({pwm_settings:{autoSaveOnSwitch:true,backupIntervalHours:0}}));
   await p.evaluate(async base=>{await chrome.tabs.create({windowId:g_dashboardWindowId,url:base+'/slow/loading',active:false});},base);
-  await p.waitForTimeout(150);await p.evaluate(()=>handleSwitchSpace('b'));await p.waitForFunction(async()=>getActiveSpaceId(await loadData())==='b'&&!g_isSwitching);
+  await p.waitForTimeout(150);await p.evaluate(()=>handleSwitchSpace('b'));await UI.waitForAsync(p,async()=>getActiveSpaceId(await loadData())==='b'&&!g_isSwitching);
   space=(await storage()).spaces.find(s=>s.id==='a');assert.ok(space.tabs.some(t=>t.url===base+'/slow/loading'),'loading tab kept on auto-save: '+JSON.stringify(space.tabs.map(t=>t.url)));
   assert.equal(space.tabs.length,4);assert.equal(space.tabGroups.length,1);assert.equal(space.tabs.filter(t=>t.groupId===groupId).length,2,'group membership kept through auto-save');
   await worker.evaluate(()=>chrome.storage.local.set({pwm_settings:{autoSaveOnSwitch:false,backupIntervalHours:0}}));
@@ -107,7 +107,7 @@ async function wait(check,label='condition',tries=200){for(let i=0;i<tries;i++){
   await p2.locator('#spaceList [data-space-id="a"]').click();
   // 確認ダイアログが出る場合（現在のスペースがあるとき）は「保存せず切り替える」
   const choice=p2.locator('[data-choice=skip]');try{await choice.waitFor({timeout:1500});await choice.click()}catch{}
-  await p2.waitForFunction(async()=>getActiveSpaceId(await loadData())==='a'&&!g_isSwitching);
+  await UI.waitForAsync(p2,async()=>getActiveSpaceId(await loadData())==='a'&&!g_isSwitching);
   // ウィンドウ1の選択は b のまま
   assert.equal(await p.evaluate(async()=>getActiveSpaceId(await loadData())),'b');
   const w1tabsBefore=await p.evaluate(async()=>(await getWindowTabs()).filter(isClosableTab).map(t=>t.pendingUrl||t.url).sort());

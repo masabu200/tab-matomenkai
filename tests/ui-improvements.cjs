@@ -24,14 +24,14 @@ const fs=require('fs'),path=require('path'),os=require('os'),http=require('http'
   await p.locator('[data-group-id="g2"] .tab-group__header').click();
   await p.waitForFunction(()=>document.querySelector('[data-group-id="g2"]').classList.contains('tab-group--expanded'));
   assert.equal(await p.locator('[data-group-id="g2"] .tab-group__empty-hint').isVisible(),true);
-  await p.waitForFunction(async()=>(await loadData()).spaces[0].tabGroups.find(g=>g.id==='g2').collapsed===false);
+  await UI.waitForAsync(p,async()=>(await loadData()).spaces[0].tabGroups.find(g=>g.id==='g2').collapsed===false);
   await p.reload();await p.waitForSelector('[data-group-id="g2"].tab-group--expanded');
   // キーボード（Enter）でも折りたためる
   await p.locator('[data-group-id="g2"] .tab-group__header').focus();await p.keyboard.press('Enter');
   await p.waitForFunction(()=>!document.querySelector('[data-group-id="g2"]').classList.contains('tab-group--expanded'));
   assert.equal(await p.locator('[data-group-id="g2"] .tab-group__header').getAttribute('aria-expanded'),'false');
   // 新規グループは折りたたみで作成される
-  await p.evaluate(()=>createTabGroup('a','新規','red'));await p.waitForFunction(async()=>(await loadData()).spaces[0].tabGroups.length===3);
+  await p.evaluate(()=>createTabGroup('a','新規','red'));await UI.waitForAsync(p,async()=>(await loadData()).spaces[0].tabGroups.length===3);
   assert.equal(await p.evaluate(async()=>(await loadData()).spaces[0].tabGroups[2].collapsed),true);
   console.log('PASS tab group inline expand: existing state kept, click/Enter toggle persisted, empty hint, new groups collapsed');
   // 保存状態はメインヘッダーに常時表示（設定の中ではない）
@@ -52,7 +52,7 @@ const fs=require('fs'),path=require('path'),os=require('os'),http=require('http'
   await p.waitForFunction(()=>document.getElementById('workspaceSaveStatus').textContent.includes('変更あり'));
   assert.match(await p.locator('#btnSaveTabs').getAttribute('title'),/S）$/);
   await p.locator('h2#spaceTitle').click();await p.keyboard.press('ControlOrMeta+s');
-  await p.waitForFunction(async()=>(await loadData()).spaces[0].tabs.some(t=>t.url.endsWith('/saved-by-shortcut')));
+  await UI.waitForAsync(p,async()=>(await loadData()).spaces[0].tabs.some(t=>t.url.endsWith('/saved-by-shortcut')));
   await p.waitForFunction(()=>document.getElementById('workspaceSaveStatus').textContent.includes('保存済み'));
   console.log('PASS shortcuts: / filter, Esc clear, Cmd/Ctrl+K space search, Cmd/Ctrl+S save, no hijack while settings open');
   // 狭い幅ではサイドバーを上に積み、カードビューは1列（保存でグループが再構成されるので展開済みグループを入れ直す）

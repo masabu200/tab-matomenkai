@@ -2253,3 +2253,9 @@ body.sidebar-collapsed .sidebar-settings { min-width:32px;width:32px;padding:0; 
     grid-template-columns: 1fr;
   }
 }
+
+/* サイドパネルの配置が右のときの案内 */
+.sidebar-launch-help { color:#d1def5; font-size:12px; line-height:1.5; padding-top:6px; overflow-wrap:anywhere; }
+.sidebar-launch-help p { margin:0 0 6px; }
+.sidebar-launch-help .btn { width:100%; color:#e5edff; border-color:#46516d; white-space:normal; }
+body.sidebar-collapsed .sidebar-launch-help { display:none; }

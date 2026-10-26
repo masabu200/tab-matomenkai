@@ -7,7 +7,7 @@
   const tools=document.querySelector('.workspace-tools');
   for(const item of tools.querySelectorAll(':scope > button'))actions.append(item);
   dialog.append(heading,actions);
-  const launcher=document.querySelector('.sidebar-launcher');if(launcher)dialog.append(launcher);
+  // 「左バーをサイドパネルで開く」はページ閲覧中の表示への入口なので、設定に隠さず左バー上部に残す。
   // 保存状態（変更あり/保存済み）は設定に隠さず常に見える場所に置く:
   // ダッシュボードはメインヘッダーの保存ボタン横、サイドパネルは検索欄の下にそのまま残す。
   const status=document.getElementById('workspaceSaveStatus');

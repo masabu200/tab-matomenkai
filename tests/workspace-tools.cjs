@@ -22,10 +22,12 @@ const fs=require('fs'),path=require('path'),assert=require('node:assert/strict')
   await page.locator('#spaceSearch').fill('案件B');await page.waitForFunction(()=>document.querySelectorAll('.space-search-result').length===1);
   assert.match(await page.locator('#spaceSearchResults').textContent(),/案件B/);
   page.on('dialog',d=>d.accept());await page.locator('.space-search-result').click();await page.locator('[data-choice=skip]').click();
-  await page.waitForFunction(async()=>getActiveSpaceId(await loadData())==='beta'&&!g_isSwitching);
+  await UI.waitForAsync(page,async()=>getActiveSpaceId(await loadData())==='beta'&&!g_isSwitching);
   await page.waitForFunction(()=>!document.getElementById('restorePreviousTabs').disabled);
   await UI.inSettings(page,()=>page.locator('#restorePreviousTabs').click());
-  await page.waitForFunction(async()=>getActiveSpaceId(await loadData())==='alpha'&&!g_isSwitching);
+  await UI.waitForAsync(page,async()=>getActiveSpaceId(await loadData())==='alpha'&&!g_isSwitching);
+  // タブの削除は非同期に反映されるので、復元後の構成になるまで待ってから判定する
+  await UI.waitForAsync(page,async expected=>JSON.stringify((await getWindowTabs()).filter(isClosableTab).map(t=>t.url||t.pendingUrl))===JSON.stringify(expected),[base+'/alpha']);
   const urls=await page.evaluate(async()=>(await getWindowTabs()).filter(isClosableTab).map(t=>t.url||t.pendingUrl));assert.deepEqual(urls,[base+'/alpha']);
   console.log('PASS search, changed/saved states, switch history and real tab restoration');
   // Let the existing 1-second tab-event autosave settle before checking import isolation.
