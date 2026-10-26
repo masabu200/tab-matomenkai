@@ -9,8 +9,12 @@
     "alarms",
     "downloads",
     "tabGroups",
-    "unlimitedStorage"
+    "unlimitedStorage",
+    "sidePanel"
   ],
+  "side_panel": {
+    "default_path": "dashboard.html"
+  },
   "content_scripts": [
     {
       "matches": [

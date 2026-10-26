@@ -329,12 +329,24 @@ async function loadData() {
         if (!('color'      in s)) s.color      = '';
         if (!('icon'       in s)) s.icon       = '';
         if (!Array.isArray(s.tabGroups)) s.tabGroups = [];
-        s.tabGroups.forEach((g) => { if (!('chromeGroupId' in g)) g.chromeGroupId = null; });
+        s.tabGroups.forEach((g) => {
+          if (!('chromeGroupId' in g)) g.chromeGroupId = null;
+          if (!('collapsed' in g)) g.collapsed = true; // グループは折りたたみ初期状態
+        });
         if (Array.isArray(s.tabs)) {
           s.tabs.forEach((t) => { if (!('groupId' in t)) t.groupId = null; });
         }
         if (!Array.isArray(s.archivedTabs)) s.archivedTabs = [];
       });
+      // マイグレーション: 既存データのタブグループも一度だけ折りたたみ表示へ
+      // （以前のバージョンでは展開状態で保存されているため）
+      if (raw.__pwmGroupCollapseMigration !== 1) {
+        raw.spaces.forEach((s) => {
+          (s.tabGroups || []).forEach((g) => { g.collapsed = true; });
+        });
+        raw.__pwmGroupCollapseMigration = 1;
+        chrome.storage.local.set({ [STORAGE_KEY]: raw }, () => { void chrome.runtime.lastError; });
+      }
       // カテゴリーの正規化
       raw.categories.forEach((c) => {
         if (!('collapsed' in c)) c.collapsed = false;
@@ -709,7 +721,7 @@ async function createTabGroup(spaceId, name, color = '') {
   const space = data.spaces.find((s) => s.id === spaceId);
   if (!space) return null;
   if (!Array.isArray(space.tabGroups)) space.tabGroups = [];
-  const group = { id: generateId(), name: (name || '').trim() || '新しいグループ', color: color || '', collapsed: false };
+  const group = { id: generateId(), name: (name || '').trim() || '新しいグループ', color: color || '', collapsed: true };
   space.tabGroups.push(group);
   space.updatedAt = new Date().toISOString();
   await saveData(data);
@@ -1835,7 +1847,7 @@ function createUngroupedSection(tabItems, spaceId) {
 
 function createTabGroupSection(group, groupTabs, spaceId) {
   const section = document.createElement('div');
-  section.className = 'tab-group';
+  section.className = 'tab-group' + (group.collapsed ? '' : ' tab-group--expanded');
   section.dataset.groupId = group.id;
   const _grpHex = toDisplayHex(group.color);
   if (_grpHex) section.style.setProperty('--group-color', _grpHex);
@@ -1849,8 +1861,8 @@ function createTabGroupSection(group, groupTabs, spaceId) {
   if (_grpHex) colorBar.style.background = _grpHex;
 
   const toggle = document.createElement('span');
-  toggle.className  = 'tab-group__toggle' + (group.collapsed ? ' tab-group__toggle--collapsed' : '');
-  toggle.textContent = '▾';
+  toggle.className  = 'tab-group__toggle';
+  toggle.textContent = group.collapsed ? '▾' : '▴';
 
   const nameEl = document.createElement('span');
   nameEl.className  = 'tab-group__name';
@@ -1920,21 +1932,27 @@ function createTabGroupSection(group, groupTabs, spaceId) {
   header.appendChild(countEl);
   header.appendChild(actionsEl);
 
-  // 折りたたみ
+  // ヘッダーをクリックするとインライン展開 / 折りたたむ
   header.addEventListener('click', async () => {
-    const collapsed = body.style.display === 'none';
-    body.style.display = collapsed ? '' : 'none';
-    toggle.classList.toggle('tab-group__toggle--collapsed', !collapsed);
+    const wasExpanded = section.classList.contains('tab-group--expanded');
+    section.classList.toggle('tab-group--expanded', !wasExpanded);
+    toggle.textContent = wasExpanded ? '▾' : '▴';
     await toggleTabGroupCollapsed(spaceId, group.id);
   });
 
-  // ボディ（タブ一覧）
+  // インライン展開用ボディ（クリックで表示）
   const body = document.createElement('div');
   body.className = 'tab-group__body';
-  if (group.collapsed) body.style.display = 'none';
-  groupTabs.forEach(({ tab, originalIndex }) => {
-    body.appendChild(createTabCard(tab, originalIndex, group.color || '', _grpHex));
-  });
+  if (groupTabs.length === 0) {
+    const hint = document.createElement('p');
+    hint.className   = 'tab-group__empty-hint';
+    hint.textContent = 'このグループにはタブがありません';
+    body.appendChild(hint);
+  } else {
+    groupTabs.forEach(({ tab, originalIndex }) => {
+      body.appendChild(createTabCard(tab, originalIndex, group.color || '', _grpHex));
+    });
+  }
 
   // ドロップゾーン（ヘッダー + ボディ両方）
   function addGroupDropListeners(el) {

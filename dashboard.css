@@ -156,6 +156,26 @@ input {
   overflow: hidden;
 }
 
+/* サイドパネル（狭い幅）で開いたときはサイドバーを上に積む2段構成にする */
+@media (max-width: 640px) {
+  .app {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    max-height: 38vh;
+    border-right: none;
+    border-bottom: 1px solid #1a1d2e;
+  }
+  .main {
+    height: auto;
+    flex: 1;
+    min-height: 0;
+  }
+}
+
 /* ============================================================
    左サイドバー
 ============================================================ */
@@ -1054,7 +1074,7 @@ input {
   box-shadow: 0 2px 0 0 #4a7ef8;
 }
 
-/* 3列カード（グリッド）表示のときの挿入マーカーは左右の縦線にする */
+/* カードビューのグリッド展開時は左右の縦線にする */
 .tab-list--card-view .tab-group__body .tab-card--insert-before {
   box-shadow: -3px 0 0 0 #4a7ef8;
 }
@@ -1472,10 +1492,10 @@ input {
 ============================================================ */
 
 .tab-group {
+  position: relative;
   margin-bottom: 6px;
   border-radius: 8px;
   border: 1px solid var(--tab-group-border);
-  overflow: hidden;
   transition: box-shadow 0.15s;
 }
 
@@ -1492,7 +1512,11 @@ input {
   background: var(--tab-group-bg);
   cursor: pointer;
   user-select: none;
-  border-bottom: 1px solid var(--tab-group-border);
+  border-radius: 8px;
+}
+
+.tab-group--expanded .tab-group__header {
+  border-radius: 8px 8px 0 0;
 }
 
 .tab-group__header:hover {
@@ -1512,10 +1536,6 @@ input {
   color: #8a93b0;
   transition: transform 0.15s;
   flex-shrink: 0;
-}
-
-.tab-group__toggle--collapsed {
-  transform: rotate(-90deg);
 }
 
 .tab-group__name {
@@ -1578,13 +1598,20 @@ input {
   color: #d94040;
 }
 
+/* インライン展開用ボディ（クリックで表示） */
 .tab-group__body {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 0;
   padding: 4px;
   background: var(--tab-group-body-bg);
+  border-top: 1px solid var(--tab-group-border);
+  border-radius: 0 0 8px 8px;
   min-height: 4px;
+}
+
+.tab-group--expanded .tab-group__body {
+  display: flex;
 }
 
 .tab-group__body .tab-card {
@@ -1595,6 +1622,13 @@ input {
 
 .tab-group__body .tab-card:last-child {
   margin-bottom: 0;
+}
+
+.tab-group__empty-hint {
+  text-align: center;
+  font-size: 12px;
+  color: #aab2c9;
+  padding: 12px;
 }
 
 /* グループなしセクション */
@@ -1704,22 +1738,21 @@ input {
 }
 
 .tab-list--card-view .tab-group__header {
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px;
   padding: 10px 12px;
 }
 
-/* 折りたたみ時は下角も丸める */
-.tab-list--card-view .tab-group .tab-group__body[style*="display: none"] + * ,
-.tab-list--card-view .tab-group:has(.tab-group__body[style*="display: none"]) .tab-group__header {
-  border-radius: 10px;
+.tab-list--card-view .tab-group--expanded .tab-group__header {
+  border-radius: 10px 10px 0 0;
 }
 
-.tab-list--card-view .tab-group__body {
-  border-radius: 0 0 10px 10px;
-  padding: 8px;
+/* カードビューでは展開時もタブをグリッド表示 */
+.tab-list--card-view .tab-group--expanded .tab-group__body {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
+  padding: 8px;
+  border-radius: 0 0 10px 10px;
 }
 
 .tab-list--card-view .tab-group__body .tab-card {
@@ -1803,6 +1836,16 @@ input {
 /* カードビューではグループなしタブも少しコンパクトに */
 .tab-list--card-view .tab-ungrouped .tab-card {
   margin-bottom: 0;
+}
+
+/* サイドパネル幅ではカードビューのグリッドを1カラムに落とす */
+@media (max-width: 640px) {
+  .tab-list--card-view {
+    grid-template-columns: 1fr;
+  }
+  .tab-list--card-view .tab-group--expanded .tab-group__body {
+    grid-template-columns: 1fr;
+  }
 }
 
 
