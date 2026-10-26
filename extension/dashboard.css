@@ -1479,10 +1479,10 @@ input {
 ============================================================ */
 
 .tab-group {
+  position: relative;
   margin-bottom: 6px;
   border-radius: 8px;
   border: 1px solid var(--tab-group-border);
-  overflow: hidden;
   transition: box-shadow 0.15s;
 }
 
@@ -1499,7 +1499,16 @@ input {
   background: var(--tab-group-bg);
   cursor: pointer;
   user-select: none;
-  border-bottom: 1px solid var(--tab-group-border);
+  border-radius: 8px;
+}
+
+.tab-group--expanded .tab-group__header {
+  border-radius: 8px 8px 0 0;
+}
+
+.tab-group__header:focus-visible {
+  outline: 2px solid #4a7ef8;
+  outline-offset: -2px;
 }
 
 .tab-group__header:hover {
@@ -1519,10 +1528,6 @@ input {
   color: #8a93b0;
   transition: transform 0.15s;
   flex-shrink: 0;
-}
-
-.tab-group__toggle--collapsed {
-  transform: rotate(-90deg);
 }
 
 .tab-group__name {
@@ -1585,13 +1590,28 @@ input {
   color: #d94040;
 }
 
+/* インライン展開用ボディ（ヘッダークリックで表示） */
 .tab-group__body {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 0;
   padding: 4px;
   background: var(--tab-group-body-bg);
+  border-top: 1px solid var(--tab-group-border);
+  border-radius: 0 0 8px 8px;
   min-height: 4px;
+}
+
+.tab-group--expanded .tab-group__body {
+  display: flex;
+}
+
+.tab-group__empty-hint {
+  text-align: center;
+  font-size: 12px;
+  color: #8a93b0;
+  padding: 12px;
+  margin: 0;
 }
 
 .tab-group__body .tab-card {
@@ -1711,22 +1731,21 @@ input {
 }
 
 .tab-list--card-view .tab-group__header {
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px;
   padding: 10px 12px;
 }
 
-/* 折りたたみ時は下角も丸める */
-.tab-list--card-view .tab-group .tab-group__body[style*="display: none"] + * ,
-.tab-list--card-view .tab-group:has(.tab-group__body[style*="display: none"]) .tab-group__header {
-  border-radius: 10px;
+.tab-list--card-view .tab-group--expanded .tab-group__header {
+  border-radius: 10px 10px 0 0;
 }
 
-.tab-list--card-view .tab-group__body {
-  border-radius: 0 0 10px 10px;
-  padding: 8px;
+/* カードビューでは展開時もタブをグリッド表示 */
+.tab-list--card-view .tab-group--expanded .tab-group__body {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
+  padding: 8px;
+  border-radius: 0 0 10px 10px;
 }
 
 .tab-list--card-view .tab-group__body .tab-card {
@@ -2155,7 +2174,7 @@ body.sidebar-collapsed .sidebar-settings { min-width:32px;width:32px;padding:0; 
 .compact-navigation .sidebar__header { padding:10px 12px; }
 .compact-navigation .sidebar-controls { padding:4px 10px; }
 .compact-navigation .sidebar__create { padding:6px 10px; }
-.compact-navigation .space-shortcuts { max-height:120px; }
+.compact-navigation .space-shortcuts { max-height:min(36vh, 260px); }
 .settings-actions-title { margin:14px 0 8px; font-size:14px; }
 .settings-workspace-actions { display:flex; flex-direction:column; gap:8px; }
 .settings-workspace-actions .btn { color:#e5edff; white-space:normal; }
@@ -2188,3 +2207,49 @@ body.sidebar-collapsed .sidebar-settings { min-width:32px;width:32px;padding:0; 
 .drive-settings input { box-sizing: border-box; width: 100%; min-width: 0; }
 .drive-settings label { display: block; margin-top: 12px; }
 .drive-settings a { color: var(--text-primary); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ============================================================
+   保存状態（メインヘッダー）
+============================================================ */
+.main__save-status {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--text-secondary, #6b7390);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 280px;
+  flex-shrink: 1;
+}
+
+/* ============================================================
+   狭い幅（サイドパネル幅・小さいウィンドウ）: サイドバーを上に積む2段構成
+============================================================ */
+@media (max-width: 640px) {
+  body:not(.sidebar-panel) .app {
+    flex-direction: column;
+  }
+  body:not(.sidebar-panel) .sidebar {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    max-height: 38vh;
+    border-right: none;
+    border-bottom: 1px solid #1a1d2e;
+  }
+  body:not(.sidebar-panel) .main {
+    height: auto;
+    flex: 1;
+    min-height: 0;
+  }
+  .main__header { padding: 12px 14px; }
+  .main__controls { flex-wrap: wrap; }
+  .main__save-status { max-width: 100%; }
+  .tab-list--card-view {
+    grid-template-columns: 1fr;
+  }
+  .tab-list--card-view .tab-group--expanded .tab-group__body {
+    grid-template-columns: 1fr;
+  }
+}

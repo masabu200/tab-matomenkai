@@ -482,7 +482,8 @@ async function getWindowTabs() {
 function isSavableTab(tab) {
   if (!tab) return false;
   if (g_dashboardTabId !== null && tab.id === g_dashboardTabId) return false;
-  return isSavableUrl(tab.url);
+  // 読み込み中のタブは url が空で pendingUrl だけ入っているので、そちらも見る
+  return isSavableUrl(tab.pendingUrl || tab.url);
 }
 
 function isClosableTab(tab) {
@@ -607,16 +608,17 @@ async function saveCurrentTabsToSpace(spaceId) {
 
   // タブを保存：Chrome グループ → ダッシュボードグループ の優先順で groupId を決定
   space.tabs = savable.map((t) => {
+    const url = t.pendingUrl || t.url; // 読み込み中のタブも落とさず保存する
     const chromeGid = (t.groupId && t.groupId !== -1 && chromeGroupsMap[t.groupId])
       ? chromeGroupsMap[t.groupId].ourId : null;
     let dashGid = null;
-    const list = _existGidsByUrl.get(t.url);
+    const list = _existGidsByUrl.get(url);
     if (list && list.length > 0) {
       dashGid = list.shift();
     }
     return {
-      title:      t.title || t.url,
-      url:        t.url,
+      title:      t.title || url,
+      url:        url,
       favIconUrl: t.favIconUrl || '',
       pinned:     t.pinned || false,
       groupId:    chromeGid || dashGid,
@@ -714,7 +716,7 @@ async function createTabGroup(spaceId, name, color = '') {
   const space = data.spaces.find((s) => s.id === spaceId);
   if (!space) return null;
   if (!Array.isArray(space.tabGroups)) space.tabGroups = [];
-  const group = { id: generateId(), name: (name || '').trim() || '新しいグループ', color: color || '', collapsed: false };
+  const group = { id: generateId(), name: (name || '').trim() || '新しいグループ', color: color || '', collapsed: true }; // 新規グループは折りたたみで作成
   space.tabGroups.push(group);
   space.updatedAt = new Date().toISOString();
   await saveData(data);
@@ -1853,7 +1855,7 @@ function createUngroupedSection(tabItems, spaceId) {
 
 function createTabGroupSection(group, groupTabs, spaceId) {
   const section = document.createElement('div');
-  section.className = 'tab-group';
+  section.className = 'tab-group' + (group.collapsed ? '' : ' tab-group--expanded');
   section.dataset.groupId = group.id;
   const _grpHex = toDisplayHex(group.color);
   if (_grpHex) section.style.setProperty('--group-color', _grpHex);
@@ -1867,8 +1869,9 @@ function createTabGroupSection(group, groupTabs, spaceId) {
   if (_grpHex) colorBar.style.background = _grpHex;
 
   const toggle = document.createElement('span');
-  toggle.className  = 'tab-group__toggle' + (group.collapsed ? ' tab-group__toggle--collapsed' : '');
-  toggle.textContent = '▾';
+  toggle.className  = 'tab-group__toggle';
+  toggle.textContent = group.collapsed ? '▾' : '▴';
+  toggle.setAttribute('aria-hidden', 'true');
 
   const nameEl = document.createElement('span');
   nameEl.className  = 'tab-group__name';
@@ -1938,21 +1941,36 @@ function createTabGroupSection(group, groupTabs, spaceId) {
   header.appendChild(countEl);
   header.appendChild(actionsEl);
 
-  // 折りたたみ
-  header.addEventListener('click', async () => {
-    const collapsed = body.style.display === 'none';
-    body.style.display = collapsed ? '' : 'none';
-    toggle.classList.toggle('tab-group__toggle--collapsed', !collapsed);
+  // ヘッダーをクリックするとその場で展開 / 折りたたみ（状態は保存される）
+  header.setAttribute('role', 'button');
+  header.tabIndex = 0;
+  header.setAttribute('aria-expanded', String(!group.collapsed));
+  const toggleExpanded = async () => {
+    const wasExpanded = section.classList.contains('tab-group--expanded');
+    section.classList.toggle('tab-group--expanded', !wasExpanded);
+    header.setAttribute('aria-expanded', String(!wasExpanded));
+    toggle.textContent = wasExpanded ? '▾' : '▴';
     await toggleTabGroupCollapsed(spaceId, group.id);
+  };
+  header.addEventListener('click', toggleExpanded);
+  header.addEventListener('keydown', (e) => {
+    if (e.target !== header) return;
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleExpanded(); }
   });
 
-  // ボディ（タブ一覧）
+  // インライン展開用ボディ（タブ一覧）
   const body = document.createElement('div');
   body.className = 'tab-group__body';
-  if (group.collapsed) body.style.display = 'none';
-  groupTabs.forEach(({ tab, originalIndex }) => {
-    body.appendChild(createTabCard(tab, originalIndex, group.color || '', _grpHex));
-  });
+  if (groupTabs.length === 0) {
+    const hint = document.createElement('p');
+    hint.className   = 'tab-group__empty-hint';
+    hint.textContent = 'このグループにはタブがありません。タブをドラッグして追加できます';
+    body.appendChild(hint);
+  } else {
+    groupTabs.forEach(({ tab, originalIndex }) => {
+      body.appendChild(createTabCard(tab, originalIndex, group.color || '', _grpHex));
+    });
+  }
 
   // ドロップゾーン（ヘッダー + ボディ両方）
   function addGroupDropListeners(el) {

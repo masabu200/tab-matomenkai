@@ -49,9 +49,11 @@ async function wait(check,label='condition'){for(let i=0;i<150;i++){const r=awai
  await evaluate(panel,"document.querySelector('.space-item--active').classList.add('space-item--insert-before')");await wait(async()=>await evaluate(panel,"getComputedStyle(document.querySelector('.space-item--active')).boxShadow==='rgb(74, 126, 248) 0px -2px 0px 0px'"),'horizontal drag marker');await evaluate(panel,"document.querySelector('.space-item--active').classList.remove('space-item--insert-before')");
  await panel('Emulation.setDeviceMetricsOverride',{width:280,height:710,deviceScaleFactor:1,mobile:false});assert.equal(await evaluate(panel,'document.documentElement.scrollWidth <= innerWidth'),true,'280px has no horizontal overflow');const longName='案件A｜Webサイト制作・デザイン確認と公開準備';
  const previousName=await evaluate(panel,"document.querySelector('[data-space-id=\"a\"] .space-item__name').textContent");
- await evaluate(panel,`(()=>{const row=document.querySelector('[data-space-id="a"]');row.title=${JSON.stringify(longName)};row.querySelector('.space-item__name').textContent=${JSON.stringify(longName)};row.focus()})()`);
- assert.ok((await evaluate(panel,"document.getElementById('navigationFullTitle').textContent")).includes(longName));
- assert.equal(await evaluate(panel,"(()=>{const r=document.getElementById('navigationFullTitle').getBoundingClientRect();return r.left>=0&&r.right<=innerWidth})()"),true);
+ await evaluate(panel,`(()=>{const row=document.querySelector('[data-space-id="a"]');row.title=${JSON.stringify(longName)};row.querySelector('.space-item__name').textContent=${JSON.stringify(longName)};document.activeElement?.blur();row.focus()})()`);
+ // プレビューは遅延表示なので、長い名前で表示されるまで待ってから画面内に収まることを確認
+ await wait(async()=>{const r=await evaluate(panel,`(()=>{const p=document.getElementById('navigationFullTitle');return !p.hidden&&p.textContent.includes(${JSON.stringify(longName)})})()`);return r},'long-name preview shown');
+ const previewRect=await evaluate(panel,"(()=>{const r=document.getElementById('navigationFullTitle').getBoundingClientRect();return {left:r.left,right:r.right,innerWidth}})()");
+ assert.equal(previewRect.left>=0&&previewRect.right<=previewRect.innerWidth,true,'preview within 280px viewport: '+JSON.stringify(previewRect));
  await evaluate(panel,"document.activeElement.blur()");const narrowImage=await panel('Page.captureScreenshot',{format:'png'});fs.writeFileSync('evidence/visibility-280px.png',Buffer.from(narrowImage.data,'base64'));
  await evaluate(panel,`(()=>{const row=document.querySelector('[data-space-id="a"]');row.querySelector('.space-item__name').textContent=${JSON.stringify(previousName)};row.title='案件A（1 タブ）'})()`);
  await panel('Emulation.clearDeviceMetricsOverride');

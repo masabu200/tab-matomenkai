@@ -26,7 +26,7 @@
       if(seq!==sequence)return;owner=row;preview.hidden=false;row.setAttribute('aria-describedby',preview.id);position(row);
     }catch{hide()}
   }
-  function enter(target){const row=target.closest?.('.space-item,.cat-group__name,.tab-card');if(!row)return;if(row===owner){clearTimeout(closeTimer);return}hide();if(row.title){row.dataset.fullTitle=row.title;row.removeAttribute('title')}openTimer=setTimeout(()=>show(row),400)}
+  function enter(target){const row=target.closest?.('.space-item,.cat-group__name,.tab-card');if(!row)return;if(row===owner){clearTimeout(closeTimer);if(!preview.hidden)position(row);return}hide();if(row.title){row.dataset.fullTitle=row.title;row.removeAttribute('title')}openTimer=setTimeout(()=>show(row),400)}
   function leave(){clearTimeout(openTimer);closeTimer=setTimeout(hide,180)}
   document.addEventListener('pointerover',event=>{const row=event.target.closest?.('.space-item,.cat-group__name,.tab-card');if(row&&row.contains(event.relatedTarget))return;enter(event.target)});
   document.addEventListener('pointerout',event=>{const row=event.target.closest?.('.space-item,.cat-group__name,.tab-card');if(row&&!row.contains(event.relatedTarget)&&!preview.contains(event.relatedTarget))leave()});
@@ -35,5 +35,5 @@
   document.addEventListener('focusout',event=>{if(!preview.contains(event.relatedTarget))leave()});
   document.addEventListener('keydown',event=>{if(event.key==='Escape')hide();if(event.key==='ArrowRight'&&owner===document.activeElement&&!preview.hidden){const button=preview.querySelector('button:not(:disabled)');if(button){event.preventDefault();button.focus()}}});
   document.addEventListener('dragstart',hide,true);
-  document.addEventListener('scroll',event=>{if(!preview.contains(event.target))hide()},true);window.addEventListener('resize',hide);window.addEventListener('blur',hide);
+  document.addEventListener('scroll',event=>{if(!preview.contains(event.target)&&!preview.hidden)hide()},true);window.addEventListener('resize',hide);window.addEventListener('blur',hide);
 })();
