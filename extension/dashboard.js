@@ -2054,6 +2054,7 @@ function createTabGroupSection(group, groupTabs, spaceId) {
 function createTabCard(tab, originalIndex, groupColor = '', groupColorHex = '') {
   const card = document.createElement('div');
   card.className = 'tab-card';
+  card.dataset.tabIndex = String(originalIndex);
   card.title = `${tab.title || tab.url}\n${tab.url}\nクリックで開く / ドラッグでグループ移動`;
   card.setAttribute('draggable', 'true');
   const _cardColorHex = groupColorHex || toDisplayHex(groupColor);
@@ -2086,7 +2087,9 @@ function createTabCard(tab, originalIndex, groupColor = '', groupColorHex = '') 
   const checkbox = document.createElement('input');
   checkbox.type      = 'checkbox';
   checkbox.className = 'tab-card__checkbox';
-  checkbox.setAttribute('aria-label', tab.title || tab.url);
+  checkbox.dataset.tabIndex = String(originalIndex);
+  checkbox.setAttribute('aria-label', `選択: ${tab.title || tab.url}`);
+  checkbox.title = 'クリックで選択、Shift+クリックで範囲選択';
 
   const favicon = document.createElement('img');
   favicon.className = 'tab-card__favicon';

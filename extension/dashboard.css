@@ -2259,3 +2259,19 @@ body.sidebar-collapsed .sidebar-settings { min-width:32px;width:32px;padding:0; 
 .sidebar-launch-help p { margin:0 0 6px; }
 .sidebar-launch-help .btn { width:100%; color:#e5edff; border-color:#46516d; white-space:normal; }
 body.sidebar-collapsed .sidebar-launch-help { display:none; }
+
+/* ============================================================
+   タブの一括操作バー
+============================================================ */
+.bulk-bar { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:0 0 10px; padding:8px 12px; border:1px solid var(--tab-group-border); border-radius:8px; background:var(--tab-group-bg); font-size:12px; }
+.bulk-bar--active { border-color:#4a7ef8; box-shadow:0 0 0 1px rgba(74,126,248,.25) inset; }
+.bulk-bar__all { display:flex; align-items:center; gap:6px; cursor:pointer; user-select:none; }
+.bulk-bar__all input { width:16px; height:16px; margin:0; cursor:pointer; }
+.bulk-bar__count { min-width:5.5em; font-weight:700; }
+.bulk-bar__field { display:inline-flex; align-items:center; gap:4px; }
+.bulk-bar select { max-width:160px; padding:5px 6px; border:1px solid var(--search-border); border-radius:6px; background:var(--card-bg); color:inherit; font:inherit; font-size:12px; }
+.bulk-bar .btn { padding:5px 10px; font-size:12px; }
+.bulk-bar .btn:disabled { opacity:.45; cursor:default; }
+.bulk-bar .btn--danger:not(:disabled) { color:#d94040; }
+.tab-card--selected { outline:2px solid #4a7ef8; outline-offset:-2px; }
+@media (max-width: 640px) { .bulk-bar select { max-width:120px; } }
