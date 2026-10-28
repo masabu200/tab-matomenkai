@@ -1351,5 +1351,83 @@
   },
   "unpinnedMessage": {
     "message": "Fissaggio rimosso."
+  },
+  "shareButton": {
+    "message": "Condividi"
+  },
+  "shareButtonTitle": {
+    "message": "Esporta spazi come file o codice di condivisione"
+  },
+  "shareExportTitle": {
+    "message": "Esporta spazi"
+  },
+  "shareExportHelp": {
+    "message": "Scegli gli spazi da consegnare. Chi li riceve li aggiunge ai propri dati (nulla viene sovrascritto)."
+  },
+  "shareStripQuery": {
+    "message": "Rimuovi tutto dopo \"?\" negli URL (non passare i token dei link condivisi)"
+  },
+  "shareWarning": {
+    "message": "Nomi degli spazi, titoli delle schede e URL vengono passati così come sono. Verifica che non contengano nomi di clienti o indirizzi interni."
+  },
+  "shareToFile": {
+    "message": "Salva come file"
+  },
+  "shareCopyCode": {
+    "message": "Copia codice di condivisione"
+  },
+  "shareSelectOne": {
+    "message": "Seleziona almeno uno spazio."
+  },
+  "shareFileMany": {
+    "message": "$1 spazi"
+  },
+  "shareFileDone": {
+    "message": "$1 spazi salvati in un file."
+  },
+  "shareCodeCopied": {
+    "message": "Codice copiato ($1 caratteri). Incollalo in una chat per consegnarlo."
+  },
+  "shareCodeShown": {
+    "message": "Il codice è mostrato qui sotto. Selezionalo e copialo."
+  },
+  "shareImportTitle": {
+    "message": "Ricevi spazi"
+  },
+  "shareImportHelp": {
+    "message": "Incolla il codice ricevuto o scegli il file. I dati attuali restano invariati; gli spazi vengono aggiunti."
+  },
+  "shareCodePlaceholder": {
+    "message": "Codice che inizia con TMK1."
+  },
+  "shareChooseFile": {
+    "message": "Scegli file"
+  },
+  "shareCheck": {
+    "message": "Controlla contenuto"
+  },
+  "shareAdd": {
+    "message": "Aggiungi ai miei dati"
+  },
+  "sharePreviewTitle": {
+    "message": "Aggiunge $1 spazi e $2 schede"
+  },
+  "sharePreviewNote": {
+    "message": "Se esiste già uno spazio con lo stesso nome, viene aggiunto \"(2)\". Le categorie vengono abbinate per nome e create se mancano. Le schede aperte non cambiano."
+  },
+  "shareAdded": {
+    "message": "$1 spazi aggiunti."
+  },
+  "shareInvalid": {
+    "message": "Impossibile leggere i dati condivisi. Controlla il codice incollato o il tipo di file. I dati attuali non sono stati modificati."
+  },
+  "shareUntitled": {
+    "message": "Spazio senza nome"
+  },
+  "shareSettingsHeading": {
+    "message": "Condividi spazi"
+  },
+  "shareSettingsHelp": {
+    "message": "Per passare un progetto o condividere schede con il team. Esporta solo gli spazi scelti; chi li riceve li aggiunge."
   }
 }

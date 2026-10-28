@@ -17,6 +17,7 @@ Tab Matomen Kai saves your tabs as "spaces", one per project or task, and lets y
 - Undo: take back a delete or archive right after it happens (Ctrl/⌘+Z).
 - Copy URL lists: Markdown, title + URL, or URLs only, straight to the clipboard.
 - Right-click save: save the page or link under your cursor into any space from the context menu.
+- Share spaces: export only the spaces you choose as a file or a share code; the recipient adds them to their own data. Great for project handovers.
 - Keyboard: Ctrl/⌘+S save, Ctrl/⌘+K search spaces, / filter tabs.
 - Backup: JSON export/import, scheduled automatic backups, and manual backup to Google Drive.
 - 10 languages: English, Japanese, Simplified Chinese, Traditional Chinese, Korean, Spanish, Portuguese (Brazil), German, French and Italian. Switch in Settings.

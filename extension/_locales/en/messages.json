@@ -1351,5 +1351,83 @@
   },
   "unpinnedMessage": {
     "message": "Unpinned."
+  },
+  "shareButton": {
+    "message": "Share"
+  },
+  "shareButtonTitle": {
+    "message": "Export spaces as a file or share code"
+  },
+  "shareExportTitle": {
+    "message": "Export spaces"
+  },
+  "shareExportHelp": {
+    "message": "Choose the spaces to hand over. The recipient adds them to their own data (nothing is overwritten)."
+  },
+  "shareStripQuery": {
+    "message": "Remove everything after \"?\" in URLs (do not pass on tokens in shared links)"
+  },
+  "shareWarning": {
+    "message": "Space names, tab titles and URLs are passed on as they are. Check that no client names or internal addresses are included."
+  },
+  "shareToFile": {
+    "message": "Save as file"
+  },
+  "shareCopyCode": {
+    "message": "Copy share code"
+  },
+  "shareSelectOne": {
+    "message": "Select at least one space."
+  },
+  "shareFileMany": {
+    "message": "$1 spaces"
+  },
+  "shareFileDone": {
+    "message": "Saved $1 spaces to a file."
+  },
+  "shareCodeCopied": {
+    "message": "Share code copied ($1 characters). Paste it into a chat to hand it over."
+  },
+  "shareCodeShown": {
+    "message": "The share code is shown below. Select it and copy."
+  },
+  "shareImportTitle": {
+    "message": "Receive spaces"
+  },
+  "shareImportHelp": {
+    "message": "Paste the share code you received, or choose the file. Your current data stays as it is; the spaces are added."
+  },
+  "shareCodePlaceholder": {
+    "message": "Share code starting with TMK1."
+  },
+  "shareChooseFile": {
+    "message": "Choose file"
+  },
+  "shareCheck": {
+    "message": "Check contents"
+  },
+  "shareAdd": {
+    "message": "Add to my data"
+  },
+  "sharePreviewTitle": {
+    "message": "Adds $1 spaces and $2 tabs"
+  },
+  "sharePreviewNote": {
+    "message": "If a space with the same name exists, \"(2)\" is added to the name. Categories are matched by name and created if missing. Open tabs are not changed."
+  },
+  "shareAdded": {
+    "message": "Added $1 spaces."
+  },
+  "shareInvalid": {
+    "message": "Could not read the shared data. Check the pasted code or the file type. Your current data was not changed."
+  },
+  "shareUntitled": {
+    "message": "Untitled space"
+  },
+  "shareSettingsHeading": {
+    "message": "Share spaces"
+  },
+  "shareSettingsHelp": {
+    "message": "For handing over a project or sharing tab sets with your team. Export only the spaces you choose; the recipient adds them."
   }
 }

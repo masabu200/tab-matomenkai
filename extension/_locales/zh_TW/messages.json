@@ -1342,5 +1342,83 @@
   },
   "unpinnedMessage": {
     "message": "已取消固定。"
+  },
+  "shareButton": {
+    "message": "分享"
+  },
+  "shareButtonTitle": {
+    "message": "將空間匯出為檔案或分享代碼"
+  },
+  "shareExportTitle": {
+    "message": "匯出空間"
+  },
+  "shareExportHelp": {
+    "message": "請選擇要交給對方的空間。對方可以將其加入自己的資料（不會覆寫）。"
+  },
+  "shareStripQuery": {
+    "message": "刪除網址中「?」之後的內容（不傳遞分享連結中的權杖等）"
+  },
+  "shareWarning": {
+    "message": "空間名稱、分頁標題與網址會原樣交給對方。請確認其中不含客戶名稱或內部網址。"
+  },
+  "shareToFile": {
+    "message": "儲存為檔案"
+  },
+  "shareCopyCode": {
+    "message": "複製分享代碼"
+  },
+  "shareSelectOne": {
+    "message": "請至少選擇一個空間。"
+  },
+  "shareFileMany": {
+    "message": "$1 個空間"
+  },
+  "shareFileDone": {
+    "message": "已將 $1 個空間儲存為檔案。"
+  },
+  "shareCodeCopied": {
+    "message": "已複製分享代碼（$1 個字元）。請貼到聊天等處交給對方。"
+  },
+  "shareCodeShown": {
+    "message": "分享代碼已顯示在下方，請選取後複製。"
+  },
+  "shareImportTitle": {
+    "message": "接收空間"
+  },
+  "shareImportHelp": {
+    "message": "請貼上收到的分享代碼，或選擇檔案。目前的資料保持不變，只會新增空間。"
+  },
+  "shareCodePlaceholder": {
+    "message": "以 TMK1. 開頭的分享代碼"
+  },
+  "shareChooseFile": {
+    "message": "選擇檔案"
+  },
+  "shareCheck": {
+    "message": "檢查內容"
+  },
+  "shareAdd": {
+    "message": "加入我的資料"
+  },
+  "sharePreviewTitle": {
+    "message": "將新增 $1 個空間、$2 個分頁"
+  },
+  "sharePreviewNote": {
+    "message": "若已有同名空間，會在名稱後加上「(2)」。分類依名稱比對，不存在時會建立。不會變更已開啟的分頁。"
+  },
+  "shareAdded": {
+    "message": "已新增 $1 個空間。"
+  },
+  "shareInvalid": {
+    "message": "無法讀取分享資料。請檢查貼上的代碼或檔案類型。目前的資料未變更。"
+  },
+  "shareUntitled": {
+    "message": "未命名空間"
+  },
+  "shareSettingsHeading": {
+    "message": "分享空間"
+  },
+  "shareSettingsHelp": {
+    "message": "適合交接專案或與團隊分享分頁。只匯出所選空間，接收方可追加匯入。"
   }
 }

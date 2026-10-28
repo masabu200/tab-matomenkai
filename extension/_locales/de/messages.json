@@ -1342,5 +1342,83 @@
   },
   "unpinnedMessage": {
     "message": "Gelöst."
+  },
+  "shareButton": {
+    "message": "Teilen"
+  },
+  "shareButtonTitle": {
+    "message": "Bereiche als Datei oder Freigabecode exportieren"
+  },
+  "shareExportTitle": {
+    "message": "Bereiche exportieren"
+  },
+  "shareExportHelp": {
+    "message": "Wählen Sie die Bereiche aus, die Sie weitergeben möchten. Die Empfänger fügen sie ihren eigenen Daten hinzu (nichts wird überschrieben)."
+  },
+  "shareStripQuery": {
+    "message": "Alles nach „?“ in URLs entfernen (keine Token aus Freigabelinks weitergeben)"
+  },
+  "shareWarning": {
+    "message": "Bereichsnamen, Tab-Titel und URLs werden unverändert weitergegeben. Prüfen Sie, dass keine Kundennamen oder internen Adressen enthalten sind."
+  },
+  "shareToFile": {
+    "message": "Als Datei speichern"
+  },
+  "shareCopyCode": {
+    "message": "Freigabecode kopieren"
+  },
+  "shareSelectOne": {
+    "message": "Wählen Sie mindestens einen Bereich aus."
+  },
+  "shareFileMany": {
+    "message": "$1 Bereiche"
+  },
+  "shareFileDone": {
+    "message": "$1 Bereiche in eine Datei gespeichert."
+  },
+  "shareCodeCopied": {
+    "message": "Freigabecode kopiert ($1 Zeichen). Fügen Sie ihn z. B. in einen Chat ein."
+  },
+  "shareCodeShown": {
+    "message": "Der Freigabecode wird unten angezeigt. Markieren und kopieren Sie ihn."
+  },
+  "shareImportTitle": {
+    "message": "Bereiche empfangen"
+  },
+  "shareImportHelp": {
+    "message": "Fügen Sie den erhaltenen Freigabecode ein oder wählen Sie die Datei. Ihre aktuellen Daten bleiben erhalten; die Bereiche werden hinzugefügt."
+  },
+  "shareCodePlaceholder": {
+    "message": "Freigabecode, der mit TMK1. beginnt"
+  },
+  "shareChooseFile": {
+    "message": "Datei wählen"
+  },
+  "shareCheck": {
+    "message": "Inhalt prüfen"
+  },
+  "shareAdd": {
+    "message": "Zu meinen Daten hinzufügen"
+  },
+  "sharePreviewTitle": {
+    "message": "Fügt $1 Bereiche und $2 Tabs hinzu"
+  },
+  "sharePreviewNote": {
+    "message": "Gibt es bereits einen Bereich mit demselben Namen, wird „(2)“ angehängt. Kategorien werden nach Namen zugeordnet und bei Bedarf erstellt. Offene Tabs bleiben unverändert."
+  },
+  "shareAdded": {
+    "message": "$1 Bereiche hinzugefügt."
+  },
+  "shareInvalid": {
+    "message": "Die freigegebenen Daten konnten nicht gelesen werden. Prüfen Sie den eingefügten Code oder den Dateityp. Ihre aktuellen Daten wurden nicht geändert."
+  },
+  "shareUntitled": {
+    "message": "Unbenannter Bereich"
+  },
+  "shareSettingsHeading": {
+    "message": "Bereiche teilen"
+  },
+  "shareSettingsHelp": {
+    "message": "Zum Übergeben eines Projekts oder Teilen von Tabs mit dem Team. Exportieren Sie nur ausgewählte Bereiche; Empfänger fügen sie hinzu."
   }
 }

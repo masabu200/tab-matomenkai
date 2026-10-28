@@ -1342,5 +1342,83 @@
   },
   "unpinnedMessage": {
     "message": "Désépinglé."
+  },
+  "shareButton": {
+    "message": "Partager"
+  },
+  "shareButtonTitle": {
+    "message": "Exporter des espaces en fichier ou en code de partage"
+  },
+  "shareExportTitle": {
+    "message": "Exporter des espaces"
+  },
+  "shareExportHelp": {
+    "message": "Choisissez les espaces à transmettre. Le destinataire les ajoute à ses propres données (rien n’est écrasé)."
+  },
+  "shareStripQuery": {
+    "message": "Supprimer tout ce qui suit « ? » dans les URL (ne pas transmettre les jetons des liens partagés)"
+  },
+  "shareWarning": {
+    "message": "Les noms d’espaces, titres d’onglets et URL sont transmis tels quels. Vérifiez qu’ils ne contiennent ni noms de clients ni adresses internes."
+  },
+  "shareToFile": {
+    "message": "Enregistrer en fichier"
+  },
+  "shareCopyCode": {
+    "message": "Copier le code de partage"
+  },
+  "shareSelectOne": {
+    "message": "Sélectionnez au moins un espace."
+  },
+  "shareFileMany": {
+    "message": "$1 espaces"
+  },
+  "shareFileDone": {
+    "message": "$1 espaces enregistrés dans un fichier."
+  },
+  "shareCodeCopied": {
+    "message": "Code de partage copié ($1 caractères). Collez-le dans une discussion pour le transmettre."
+  },
+  "shareCodeShown": {
+    "message": "Le code de partage est affiché ci-dessous. Sélectionnez-le et copiez-le."
+  },
+  "shareImportTitle": {
+    "message": "Recevoir des espaces"
+  },
+  "shareImportHelp": {
+    "message": "Collez le code reçu ou choisissez le fichier. Vos données actuelles restent intactes ; les espaces sont ajoutés."
+  },
+  "shareCodePlaceholder": {
+    "message": "Code de partage commençant par TMK1."
+  },
+  "shareChooseFile": {
+    "message": "Choisir un fichier"
+  },
+  "shareCheck": {
+    "message": "Vérifier le contenu"
+  },
+  "shareAdd": {
+    "message": "Ajouter à mes données"
+  },
+  "sharePreviewTitle": {
+    "message": "Ajoute $1 espaces et $2 onglets"
+  },
+  "sharePreviewNote": {
+    "message": "Si un espace du même nom existe, « (2) » est ajouté. Les catégories sont associées par nom et créées si besoin. Les onglets ouverts ne changent pas."
+  },
+  "shareAdded": {
+    "message": "$1 espaces ajoutés."
+  },
+  "shareInvalid": {
+    "message": "Impossible de lire les données partagées. Vérifiez le code collé ou le type de fichier. Vos données actuelles n’ont pas été modifiées."
+  },
+  "shareUntitled": {
+    "message": "Espace sans nom"
+  },
+  "shareSettingsHeading": {
+    "message": "Partager des espaces"
+  },
+  "shareSettingsHelp": {
+    "message": "Pour transmettre un projet ou partager des onglets avec l’équipe. Exportez seulement les espaces choisis ; le destinataire les ajoute."
   }
 }

@@ -1342,5 +1342,83 @@
   },
   "unpinnedMessage": {
     "message": "Se dejó de fijar."
+  },
+  "shareButton": {
+    "message": "Compartir"
+  },
+  "shareButtonTitle": {
+    "message": "Exportar espacios como archivo o código para compartir"
+  },
+  "shareExportTitle": {
+    "message": "Exportar espacios"
+  },
+  "shareExportHelp": {
+    "message": "Elige los espacios que quieres entregar. Quien los reciba los añade a sus datos (no se sobrescribe nada)."
+  },
+  "shareStripQuery": {
+    "message": "Quitar todo lo que va después de \"?\" en las URL (no pasar tokens de enlaces compartidos)"
+  },
+  "shareWarning": {
+    "message": "Los nombres de espacios, títulos de pestañas y URL se entregan tal cual. Comprueba que no incluyan nombres de clientes ni direcciones internas."
+  },
+  "shareToFile": {
+    "message": "Guardar como archivo"
+  },
+  "shareCopyCode": {
+    "message": "Copiar código para compartir"
+  },
+  "shareSelectOne": {
+    "message": "Selecciona al menos un espacio."
+  },
+  "shareFileMany": {
+    "message": "$1 espacios"
+  },
+  "shareFileDone": {
+    "message": "Se guardaron $1 espacios en un archivo."
+  },
+  "shareCodeCopied": {
+    "message": "Código copiado ($1 caracteres). Pégalo en un chat para entregarlo."
+  },
+  "shareCodeShown": {
+    "message": "El código aparece abajo. Selecciónalo y cópialo."
+  },
+  "shareImportTitle": {
+    "message": "Recibir espacios"
+  },
+  "shareImportHelp": {
+    "message": "Pega el código recibido o elige el archivo. Tus datos actuales se mantienen y se añaden los espacios."
+  },
+  "shareCodePlaceholder": {
+    "message": "Código que empieza por TMK1."
+  },
+  "shareChooseFile": {
+    "message": "Elegir archivo"
+  },
+  "shareCheck": {
+    "message": "Revisar contenido"
+  },
+  "shareAdd": {
+    "message": "Añadir a mis datos"
+  },
+  "sharePreviewTitle": {
+    "message": "Se añadirán $1 espacios y $2 pestañas"
+  },
+  "sharePreviewNote": {
+    "message": "Si ya existe un espacio con el mismo nombre, se añade \"(2)\". Las categorías se emparejan por nombre y se crean si faltan. Las pestañas abiertas no cambian."
+  },
+  "shareAdded": {
+    "message": "Se añadieron $1 espacios."
+  },
+  "shareInvalid": {
+    "message": "No se pudieron leer los datos compartidos. Revisa el código pegado o el tipo de archivo. Tus datos actuales no cambiaron."
+  },
+  "shareUntitled": {
+    "message": "Espacio sin nombre"
+  },
+  "shareSettingsHeading": {
+    "message": "Compartir espacios"
+  },
+  "shareSettingsHelp": {
+    "message": "Para traspasar un proyecto o compartir pestañas con tu equipo. Exporta solo los espacios elegidos; quien los recibe los añade."
   }
 }

@@ -1743,5 +1743,83 @@
   },
   "unpinnedMessage": {
     "message": "ピン留めを外しました。"
+  },
+  "shareButton": {
+    "message": "共有"
+  },
+  "shareButtonTitle": {
+    "message": "スペースをファイルや共有コードで書き出す"
+  },
+  "shareExportTitle": {
+    "message": "スペースを書き出す"
+  },
+  "shareExportHelp": {
+    "message": "渡したいスペースを選んでください。受け取った人は、自分のデータに追加して使えます（上書きはされません）。"
+  },
+  "shareStripQuery": {
+    "message": "URL の「?」以降を消して渡す（共有リンクのトークンなどを渡さない）"
+  },
+  "shareWarning": {
+    "message": "スペース名・タブのタイトル・URL がそのまま相手に渡ります。お客様名や社内向けのアドレスが含まれていないか確認してください。"
+  },
+  "shareToFile": {
+    "message": "ファイルに書き出す"
+  },
+  "shareCopyCode": {
+    "message": "共有コードをコピー"
+  },
+  "shareSelectOne": {
+    "message": "スペースを1つ以上選んでください。"
+  },
+  "shareFileMany": {
+    "message": "スペース$1件"
+  },
+  "shareFileDone": {
+    "message": "$1件のスペースをファイルに書き出しました。"
+  },
+  "shareCodeCopied": {
+    "message": "共有コードをコピーしました（$1文字）。チャットなどに貼り付けて渡してください。"
+  },
+  "shareCodeShown": {
+    "message": "共有コードを表示しました。選択してコピーしてください。"
+  },
+  "shareImportTitle": {
+    "message": "スペースを受け取る"
+  },
+  "shareImportHelp": {
+    "message": "受け取った共有コードを貼り付けるか、ファイルを選んでください。今のデータはそのままで、スペースが追加されます。"
+  },
+  "shareCodePlaceholder": {
+    "message": "TMK1. で始まる共有コード"
+  },
+  "shareChooseFile": {
+    "message": "ファイルを選ぶ"
+  },
+  "shareCheck": {
+    "message": "内容を確認"
+  },
+  "shareAdd": {
+    "message": "自分のデータに追加"
+  },
+  "sharePreviewTitle": {
+    "message": "スペース $1 件・タブ $2 枚を追加します"
+  },
+  "sharePreviewNote": {
+    "message": "同じ名前のスペースがある場合は「(2)」を付けて追加します。カテゴリーは名前で照合し、なければ作成します。開いているタブは変更しません。"
+  },
+  "shareAdded": {
+    "message": "$1件のスペースを追加しました。"
+  },
+  "shareInvalid": {
+    "message": "共有データを読み取れませんでした。コードの貼り間違いやファイルの種類を確認してください。今のデータは変更していません。"
+  },
+  "shareUntitled": {
+    "message": "名称未設定のスペース"
+  },
+  "shareSettingsHeading": {
+    "message": "スペースの共有"
+  },
+  "shareSettingsHelp": {
+    "message": "案件の引き継ぎや、チームへのタブ一覧の共有に。選んだスペースだけを書き出し、受け取った側は追加で読み込めます。"
   }
 }

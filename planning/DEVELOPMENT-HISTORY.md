@@ -342,3 +342,14 @@ Playwright 1.62 の `page.waitForFunction` に async 関数を渡すと、最初
 - `tools/build-store-zip.sh` を追加。`extension/` から `dist/tab-matomenkai-<version>.zip` を作り、ZIP 内の manifest からだけ `key` を外す（ストアは `key` を含む manifest を拒否する）。`CHROMEWEBSTORE.md` と `.DS_Store` は除外。`dist/` は git 管理外。
 - 検証：ZIP を展開して別プロファイルで読み込み、起動・ダッシュボード表示・設定のカード6枚・Drive 組み込み方式・キー名の残りなし・エラーなしを確認。
 - アップロード：Chrome はウェブストアのページを拡張から操作させない仕様（"The extensions gallery cannot be scripted"）のため、自動アップロードはできない。利用者が手動でアップロードする。
+
+## 2026-10-28 スペース単位の共有（段階1・2）
+
+- 利用者の発案：スペース単位で書き出し・読み込み・共有できるとチームで便利。検討の結果、段階1（スペース単位のファイル書き出しと追加読み込み）と段階2（サーバー不要の共有コード）を無料機能として先に実装し、段階3（チームで常時共有）は TEAM-01 として有料プラン候補のまま残すことに利用者が同意。
+- `extension/space-share.js`：
+  - 形式 `{format:'tab-matomen-kai/spaces', version:1, exportedAt, spaces:[{name,color,categoryPath,tabGroups,tabs:[{title,url,groupId}]}]}`。ID は含めず、カテゴリーは名前の階層で持つ。ファビコンは含めない。
+  - 共有コードは `TMK1.` + base64url(gzip(JSON))（`CompressionStream`）。
+  - 書き出し：見出しの「共有」ボタン（または設定の「スペースの共有」）から。対象スペースを選択（今のスペースが選択済み）、「URL の ? 以降を消す」選択肢、お客様名・社内アドレスの注意書き。ファイル（`<名前>.tabmatomen.json`）か共有コード（クリップボードへ）。
+  - 受け取り：設定の「スペースを受け取る」。コード貼り付けかファイル選択 → 内容確認（件数・カテゴリー階層・名前）→「自分のデータに追加」。既存データは上書きしない。同名は「(2)」、カテゴリーは名前の階層で照合し無ければ作成、タブグループは新しいIDに付け替え。http/https 以外のURL、壊れたデータ、200スペース・5000タブ超は拒否（`validateBackup` を併用）。
+- テスト：`tests/space-share.test.cjs`（pack/merge/validate/コード往復）、`tests/space-share.cjs`（2つのプロファイル間でファイル・コード両方の受け渡し、上書きしないこと、クエリ削除、未選択スペースが含まれないこと）。
+- つまずき：`space-share.js` は設定ダイアログを作る `settings-dialog.js` より先に読み込まれるため、設定カードの追加を `DOMContentLoaded` 後に遅らせた。

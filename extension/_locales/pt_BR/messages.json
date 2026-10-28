@@ -1351,5 +1351,83 @@
   },
   "unpinnedMessage": {
     "message": "Desafixada."
+  },
+  "shareButton": {
+    "message": "Compartilhar"
+  },
+  "shareButtonTitle": {
+    "message": "Exportar espaços como arquivo ou código de compartilhamento"
+  },
+  "shareExportTitle": {
+    "message": "Exportar espaços"
+  },
+  "shareExportHelp": {
+    "message": "Escolha os espaços que deseja entregar. Quem receber os adiciona aos próprios dados (nada é sobrescrito)."
+  },
+  "shareStripQuery": {
+    "message": "Remover tudo após \"?\" nas URLs (não repassar tokens de links compartilhados)"
+  },
+  "shareWarning": {
+    "message": "Nomes de espaços, títulos de guias e URLs são repassados como estão. Verifique se não há nomes de clientes ou endereços internos."
+  },
+  "shareToFile": {
+    "message": "Salvar como arquivo"
+  },
+  "shareCopyCode": {
+    "message": "Copiar código de compartilhamento"
+  },
+  "shareSelectOne": {
+    "message": "Selecione pelo menos um espaço."
+  },
+  "shareFileMany": {
+    "message": "$1 espaços"
+  },
+  "shareFileDone": {
+    "message": "$1 espaços salvos em um arquivo."
+  },
+  "shareCodeCopied": {
+    "message": "Código copiado ($1 caracteres). Cole em um chat para entregar."
+  },
+  "shareCodeShown": {
+    "message": "O código aparece abaixo. Selecione e copie."
+  },
+  "shareImportTitle": {
+    "message": "Receber espaços"
+  },
+  "shareImportHelp": {
+    "message": "Cole o código recebido ou escolha o arquivo. Seus dados atuais permanecem; os espaços são adicionados."
+  },
+  "shareCodePlaceholder": {
+    "message": "Código que começa com TMK1."
+  },
+  "shareChooseFile": {
+    "message": "Escolher arquivo"
+  },
+  "shareCheck": {
+    "message": "Conferir conteúdo"
+  },
+  "shareAdd": {
+    "message": "Adicionar aos meus dados"
+  },
+  "sharePreviewTitle": {
+    "message": "Serão adicionados $1 espaços e $2 guias"
+  },
+  "sharePreviewNote": {
+    "message": "Se já existir um espaço com o mesmo nome, \"(2)\" é adicionado. As categorias são associadas pelo nome e criadas se faltarem. As guias abertas não mudam."
+  },
+  "shareAdded": {
+    "message": "$1 espaços adicionados."
+  },
+  "shareInvalid": {
+    "message": "Não foi possível ler os dados compartilhados. Verifique o código colado ou o tipo de arquivo. Seus dados atuais não foram alterados."
+  },
+  "shareUntitled": {
+    "message": "Espaço sem nome"
+  },
+  "shareSettingsHeading": {
+    "message": "Compartilhar espaços"
+  },
+  "shareSettingsHelp": {
+    "message": "Para repassar um projeto ou compartilhar guias com a equipe. Exporte só os espaços escolhidos; quem recebe os adiciona."
   }
 }

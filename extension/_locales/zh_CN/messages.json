@@ -1342,5 +1342,83 @@
   },
   "unpinnedMessage": {
     "message": "已取消固定。"
+  },
+  "shareButton": {
+    "message": "共享"
+  },
+  "shareButtonTitle": {
+    "message": "将空间导出为文件或共享代码"
+  },
+  "shareExportTitle": {
+    "message": "导出空间"
+  },
+  "shareExportHelp": {
+    "message": "请选择要交给对方的空间。对方可以将其添加到自己的数据中（不会覆盖）。"
+  },
+  "shareStripQuery": {
+    "message": "删除 URL 中“?”之后的内容（不传递共享链接中的令牌等）"
+  },
+  "shareWarning": {
+    "message": "空间名称、标签页标题和 URL 会原样交给对方。请确认其中不含客户名称或内部地址。"
+  },
+  "shareToFile": {
+    "message": "保存为文件"
+  },
+  "shareCopyCode": {
+    "message": "复制共享代码"
+  },
+  "shareSelectOne": {
+    "message": "请至少选择一个空间。"
+  },
+  "shareFileMany": {
+    "message": "$1 个空间"
+  },
+  "shareFileDone": {
+    "message": "已将 $1 个空间保存为文件。"
+  },
+  "shareCodeCopied": {
+    "message": "已复制共享代码（$1 个字符）。请粘贴到聊天等处交给对方。"
+  },
+  "shareCodeShown": {
+    "message": "共享代码已显示在下方，请选中后复制。"
+  },
+  "shareImportTitle": {
+    "message": "接收空间"
+  },
+  "shareImportHelp": {
+    "message": "请粘贴收到的共享代码，或选择文件。当前数据保持不变，只会添加空间。"
+  },
+  "shareCodePlaceholder": {
+    "message": "以 TMK1. 开头的共享代码"
+  },
+  "shareChooseFile": {
+    "message": "选择文件"
+  },
+  "shareCheck": {
+    "message": "检查内容"
+  },
+  "shareAdd": {
+    "message": "添加到我的数据"
+  },
+  "sharePreviewTitle": {
+    "message": "将添加 $1 个空间、$2 个标签页"
+  },
+  "sharePreviewNote": {
+    "message": "若已有同名空间，会在名称后加上“(2)”。分类按名称匹配，不存在时会新建。不会更改已打开的标签页。"
+  },
+  "shareAdded": {
+    "message": "已添加 $1 个空间。"
+  },
+  "shareInvalid": {
+    "message": "无法读取共享数据。请检查粘贴的代码或文件类型。当前数据未更改。"
+  },
+  "shareUntitled": {
+    "message": "未命名空间"
+  },
+  "shareSettingsHeading": {
+    "message": "共享空间"
+  },
+  "shareSettingsHelp": {
+    "message": "适合交接项目或与团队共享标签页。只导出所选空间，接收方可追加导入。"
   }
 }

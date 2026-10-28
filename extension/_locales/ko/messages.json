@@ -1342,5 +1342,83 @@
   },
   "unpinnedMessage": {
     "message": "고정을 해제했어요."
+  },
+  "shareButton": {
+    "message": "공유"
+  },
+  "shareButtonTitle": {
+    "message": "스페이스를 파일이나 공유 코드로 내보내기"
+  },
+  "shareExportTitle": {
+    "message": "스페이스 내보내기"
+  },
+  "shareExportHelp": {
+    "message": "넘겨줄 스페이스를 선택하세요. 받는 사람은 자신의 데이터에 추가해서 쓸 수 있어요(덮어쓰지 않아요)."
+  },
+  "shareStripQuery": {
+    "message": "URL의 \"?\" 이후를 지우고 넘기기(공유 링크의 토큰 등을 넘기지 않음)"
+  },
+  "shareWarning": {
+    "message": "스페이스 이름, 탭 제목, URL이 그대로 상대에게 전달돼요. 고객 이름이나 내부 주소가 포함되어 있지 않은지 확인하세요."
+  },
+  "shareToFile": {
+    "message": "파일로 저장"
+  },
+  "shareCopyCode": {
+    "message": "공유 코드 복사"
+  },
+  "shareSelectOne": {
+    "message": "스페이스를 하나 이상 선택해 주세요."
+  },
+  "shareFileMany": {
+    "message": "스페이스 $1개"
+  },
+  "shareFileDone": {
+    "message": "스페이스 $1개를 파일로 저장했어요."
+  },
+  "shareCodeCopied": {
+    "message": "공유 코드를 복사했어요($1자). 채팅 등에 붙여 넣어 전달하세요."
+  },
+  "shareCodeShown": {
+    "message": "공유 코드를 아래에 표시했어요. 선택해서 복사하세요."
+  },
+  "shareImportTitle": {
+    "message": "스페이스 받기"
+  },
+  "shareImportHelp": {
+    "message": "받은 공유 코드를 붙여 넣거나 파일을 선택하세요. 현재 데이터는 그대로 두고 스페이스만 추가돼요."
+  },
+  "shareCodePlaceholder": {
+    "message": "TMK1.로 시작하는 공유 코드"
+  },
+  "shareChooseFile": {
+    "message": "파일 선택"
+  },
+  "shareCheck": {
+    "message": "내용 확인"
+  },
+  "shareAdd": {
+    "message": "내 데이터에 추가"
+  },
+  "sharePreviewTitle": {
+    "message": "스페이스 $1개, 탭 $2개를 추가해요"
+  },
+  "sharePreviewNote": {
+    "message": "같은 이름의 스페이스가 있으면 이름에 \"(2)\"를 붙여 추가해요. 카테고리는 이름으로 맞추고 없으면 새로 만들어요. 열려 있는 탭은 바꾸지 않아요."
+  },
+  "shareAdded": {
+    "message": "스페이스 $1개를 추가했어요."
+  },
+  "shareInvalid": {
+    "message": "공유 데이터를 읽을 수 없었어요. 붙여 넣은 코드나 파일 종류를 확인하세요. 현재 데이터는 바뀌지 않았어요."
+  },
+  "shareUntitled": {
+    "message": "이름 없는 스페이스"
+  },
+  "shareSettingsHeading": {
+    "message": "스페이스 공유"
+  },
+  "shareSettingsHelp": {
+    "message": "프로젝트 인수인계나 팀과의 탭 공유에. 선택한 스페이스만 내보내고, 받는 쪽은 추가로 가져올 수 있어요."
   }
 }
