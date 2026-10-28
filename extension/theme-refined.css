@@ -1,0 +1,272 @@
+/* ============================================================
+   配色とカードの質感だけを差し替えるテーマ層
+   （tech-dictionary.com のトーンを参考: 淡いグレー地・白いカード・墨色のアクセント）
+   配置・サイズ・余白・動きは dashboard.css のまま変えない。
+   色・背景・枠線色・角丸・影だけをここで上書きする。
+============================================================ */
+
+:root {
+  --body-bg: #f5f6f6;
+  --body-color: #191c1d;
+
+  --main-bg: #f5f6f6;
+  --header-bg: rgba(255, 255, 255, 0.78);
+  --header-border: #e3e6e7;
+  --text-primary: #191c1d;
+  --text-secondary: #4a5052;
+  --text-tertiary: #8a9092;
+
+  --card-bg: #ffffff;
+  --card-border: #e6e8e9;
+  --card-hover-border: #d3d7d9;
+  --card-hover-shadow: rgba(68, 87, 101, 0.10);
+  --card-text-title: #191c1d;
+  --card-text-url: #8a9092;
+
+  --search-bg: #ffffff;
+  --search-border: #e3e6e7;
+  --search-focus-bg: #ffffff;
+  --search-text: #191c1d;
+
+  --btn-ghost-border: #e3e6e7;
+  --btn-ghost-color: #4a5052;
+  --btn-ghost-hover-bg: #eceeef;
+  --btn-ghost-hover-border: #c9cdcf;
+
+  --tab-group-bg: rgba(255, 255, 255, 0.78);
+  --tab-group-border: #e6e8e9;
+  --tab-group-body-bg: #fafbfb;
+  --tab-group-action-hover: #eceeef;
+  --tab-group-action-color: #8a9092;
+
+  --badge-bg: #eceeef;
+  --badge-border: #e3e6e7;
+  --badge-color: #4a5052;
+
+  --empty-guide-title: #191c1d;
+
+  --modal-bg: #ffffff;
+  --modal-border: #e6e8e9;
+  --modal-text: #191c1d;
+  --modal-input-bg: #f5f6f6;
+  --modal-input-border: #e3e6e7;
+
+  /* テーマ層だけで使う値 */
+  --ink: #191c1d;
+  --ink-hover: #33383a;
+  --on-ink: #ffffff;
+  --card-shadow: inset 0 1px 0 #ffffff, 0 6px 28px rgba(68, 87, 101, 0.06);
+  --rail-bg: #191c1d;
+  --rail-line: #2a2e30;
+  --rail-text: #e8eaeb;
+  --rail-muted: #a9afb1;
+  --rail-chip: #2a2e30;
+  --rail-hover: rgba(255, 255, 255, 0.06);
+  --rail-active-bg: #f5f6f6;
+  --rail-active-text: #191c1d;
+  --surface-dark: #1f2224;
+  --surface-dark-2: #26292b;
+  --surface-dark-line: #3a3f42;
+}
+
+body.theme-dark {
+  --body-bg: #111314;
+  --body-color: #d4d8d9;
+
+  --main-bg: #111314;
+  --header-bg: rgba(28, 31, 33, 0.85);
+  --header-border: #26292b;
+  --text-primary: #eef0f0;
+  --text-secondary: #b4babc;
+  --text-tertiary: #7c8385;
+
+  --card-bg: #1c1f21;
+  --card-border: #2a2e30;
+  --card-hover-border: #3a3f42;
+  --card-hover-shadow: rgba(0, 0, 0, 0.35);
+  --card-text-title: #eef0f0;
+  --card-text-url: #8a9092;
+
+  --search-bg: #1c1f21;
+  --search-border: #2a2e30;
+  --search-focus-bg: #1f2224;
+  --search-text: #eef0f0;
+
+  --btn-ghost-border: #2a2e30;
+  --btn-ghost-color: #b4babc;
+  --btn-ghost-hover-bg: #23272a;
+  --btn-ghost-hover-border: #3a3f42;
+
+  --tab-group-bg: rgba(30, 33, 35, 0.85);
+  --tab-group-border: #2a2e30;
+  --tab-group-body-bg: #171a1b;
+  --tab-group-action-hover: #23272a;
+  --tab-group-action-color: #8a9092;
+
+  --badge-bg: #23272a;
+  --badge-border: #2a2e30;
+  --badge-color: #b4babc;
+
+  --empty-guide-title: #eef0f0;
+
+  --modal-bg: #1c1f21;
+  --modal-border: #2a2e30;
+  --modal-text: #eef0f0;
+  --modal-input-bg: #23272a;
+  --modal-input-border: #3a3f42;
+
+  --ink: #eef0f0;
+  --ink-hover: #d4d8d9;
+  --on-ink: #111314;
+  --card-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 6px 28px rgba(0, 0, 0, 0.35);
+  --rail-bg: #0c0e0f;
+  --rail-line: #1f2224;
+}
+
+/* -------------------------------------------------------
+   アクセント（青 → 墨色）
+------------------------------------------------------- */
+.btn--primary { background: var(--ink); color: var(--on-ink); }
+.btn--primary:hover { background: var(--ink-hover); }
+.view-toggle { border-color: var(--card-border); }
+.view-toggle__btn { color: var(--text-tertiary); }
+.view-toggle__btn:hover { background: var(--btn-ghost-hover-bg); color: var(--text-secondary); }
+.view-toggle__btn--active,
+.view-toggle__btn--active:hover { background: var(--ink); color: var(--on-ink); }
+.search-input:focus { border-color: var(--ink); box-shadow: 0 0 0 3px rgba(25, 28, 29, 0.08); }
+.search-input::placeholder { color: var(--text-tertiary); }
+.modal__input:focus { border-color: var(--ink); box-shadow: 0 0 0 3px rgba(25, 28, 29, 0.10); }
+.modal__input::placeholder { color: var(--text-tertiary); }
+.modal__color-label { color: var(--text-tertiary); }
+.tab-card__checkbox,
+.checkbox-setting,
+.bulk-bar__all input { accent-color: var(--ink); }
+.tab-card--selected { outline-color: var(--ink); }
+.bulk-bar--active { border-color: var(--ink); box-shadow: 0 0 0 1px rgba(25, 28, 29, 0.12) inset; }
+body.theme-dark .search-input:focus { box-shadow: 0 0 0 3px rgba(238, 240, 240, 0.10); }
+
+/* -------------------------------------------------------
+   カード（白い面・大きめの角丸・ごく薄い影）
+------------------------------------------------------- */
+.main__header { backdrop-filter: blur(12px); }
+.tab-card { border-radius: 14px; }
+.tab-card:hover { box-shadow: 0 4px 18px var(--card-hover-shadow); }
+.tab-group__body .tab-card { border-radius: 12px; }
+.tab-group { border-radius: 18px; box-shadow: var(--card-shadow); background: var(--tab-group-bg); }
+.tab-group__header { border-radius: 18px; }
+.tab-group--expanded .tab-group__header { border-radius: 18px 18px 0 0; }
+.tab-group__body { border-radius: 0 0 18px 18px; }
+.tab-group__toggle,
+.tab-group__count,
+.tab-group__action-btn,
+.tab-group__empty-hint { color: var(--text-tertiary); }
+.tab-group__name { color: var(--text-primary); }
+.tab-group__count { background: var(--badge-bg); }
+.tab-group__action-btn:hover { background: var(--tab-group-action-hover); color: var(--text-primary); }
+.tab-ungrouped { border-radius: 16px; }
+.tab-ungrouped__hint { color: var(--text-tertiary); }
+.tab-list--card-view .tab-group { border-radius: 22px; box-shadow: var(--card-shadow); }
+.tab-list--card-view .tab-group__header { border-radius: 22px; }
+.tab-list--card-view .tab-group--expanded .tab-group__header { border-radius: 22px 22px 0 0; }
+.tab-list--card-view .tab-group--expanded .tab-group__body { border-radius: 0 0 22px 22px; }
+.tab-card__delete { color: var(--text-tertiary); }
+.tab-card__url { color: var(--card-text-url); }
+body.theme-dark .tab-card__url { color: var(--card-text-url); }
+.empty-guide { border-radius: 24px; box-shadow: var(--card-shadow); }
+.modal { border-radius: 20px; box-shadow: 0 20px 56px rgba(25, 28, 29, 0.22); }
+.modal-overlay { background: rgba(17, 19, 20, 0.45); }
+.bulk-bar { border-radius: 14px; }
+.message { border-radius: 12px; }
+
+/* -------------------------------------------------------
+   左のナビ（濃い面はそのまま、青みを抜いた墨色に）
+------------------------------------------------------- */
+.sidebar { --nav-text: var(--rail-text); --nav-muted: var(--rail-muted); background: var(--rail-bg); border-right-color: var(--rail-line); scrollbar-color: var(--rail-chip) transparent; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--rail-chip); }
+.sidebar__header { border-bottom-color: var(--rail-line); }
+.sidebar__brand-name { color: var(--rail-text); }
+.sidebar__brand-sub { color: var(--rail-muted); }
+.btn-theme-toggle { color: var(--rail-muted); }
+.sidebar__backup { border-top-color: var(--rail-line); background: var(--rail-bg); }
+.btn-create { background: var(--rail-active-bg); border-color: var(--rail-active-bg); color: var(--rail-active-text); }
+.btn-create:hover { background: #ffffff; border-color: #ffffff; color: var(--rail-active-text); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); }
+.sidebar .btn-create { color: var(--rail-active-text); }
+.btn-create-cat,
+.btn-backup,
+.select-interval { color: var(--rail-muted); }
+.sidebar .btn-create-cat { color: var(--rail-text); }
+.select-interval option { background: var(--rail-bg); }
+.sidebar__auto-label { color: var(--rail-muted); }
+.cat-group__toggle,
+.cat-group__name,
+.space-item,
+.space-item__name { color: var(--rail-muted); }
+.cat-group__count,
+.space-item__badge { color: var(--rail-muted); }
+.sidebar .space-item__badge,
+.sidebar .cat-group__count { color: var(--rail-text); background: var(--rail-chip); }
+.sidebar .space-item--active,
+.sidebar .space-item--active:hover { background: var(--rail-active-bg) !important; color: var(--rail-active-text); }
+.sidebar .space-item--active .space-item__name { color: var(--rail-active-text); }
+.sidebar .space-item--active .space-item__badge { background: var(--ink) !important; color: var(--on-ink) !important; }
+body.theme-dark .sidebar .space-item--active .space-item__badge { background: #191c1d !important; color: #ffffff !important; }
+.sidebar .cat-btn { color: var(--rail-muted); }
+.sidebar .cat-group__header:focus-within { background: var(--rail-chip); }
+.sidebar .cat-group__actions { background: linear-gradient(to right, rgba(42, 46, 48, 0), var(--rail-chip) 22%); }
+.sidebar .sidebar-toggle,
+.sidebar-settings { color: var(--rail-text); }
+.sidebar-toggle:hover { background: var(--rail-hover); }
+.sidebar-settings:hover { background: var(--rail-chip); }
+.sidebar-panel-launch { border-color: var(--surface-dark-line); background: var(--surface-dark-2); color: var(--rail-text); }
+.sidebar-panel-launch:hover { background: #33383a; }
+.sidebar-launch-status,
+.sidebar-launch-help { color: var(--rail-muted); }
+.sidebar-launch-help .btn,
+.workspace-tools .btn { color: var(--rail-text); border-color: var(--surface-dark-line); }
+.workspace-tools,
+.space-shortcuts,
+.space-shortcuts button { color: var(--rail-text); }
+.workspace-tools input,
+.space-search-result { border-color: var(--surface-dark-line); }
+.workspace-tools input::placeholder { color: var(--rail-muted); }
+.cat-group--archive { border-top-color: var(--rail-line); }
+.space-item--archived .space-item__badge { background: var(--rail-chip); }
+
+/* -------------------------------------------------------
+   濃い面のダイアログ・ポップアップ（青みを抜いた墨色に）
+------------------------------------------------------- */
+.settings-dialog,
+.workspace-dialog,
+.panel-dialog { background: var(--surface-dark); border-color: var(--surface-dark-line); color: var(--rail-text); border-radius: 20px; }
+.settings-dialog::backdrop,
+.workspace-dialog::backdrop,
+.panel-dialog::backdrop { background: rgba(17, 19, 20, 0.55); }
+.settings-dialog .btn,
+.workspace-dialog .btn,
+.settings-workspace-actions .btn,
+.ai-settings .btn { color: var(--rail-text); border-color: var(--surface-dark-line); }
+.settings-dialog .sidebar__backup { background: transparent; }
+.settings-description,
+#settingsNotice { color: var(--rail-muted); }
+.settings-dialog .sidebar__auto-label,
+.settings-dialog .btn-backup { color: var(--rail-text); }
+.settings-dialog .select-interval,
+.workspace-dialog select,
+.ai-settings input,
+.panel-dialog input { background: var(--surface-dark-2); color: var(--rail-text); border-color: var(--surface-dark-line); }
+.color-picker-popup { background: var(--surface-dark); border-color: var(--surface-dark-line); border-radius: 14px; }
+.color-picker-divider { background: var(--surface-dark-line); }
+.color-swatch--none,
+.modal__color-swatch--none { background: var(--surface-dark-2); color: var(--rail-muted); border-color: var(--surface-dark-line); }
+.undo-toast,
+.review-prompt { background: var(--ink); color: var(--on-ink); border-radius: 16px; }
+body.theme-dark .undo-toast,
+body.theme-dark .review-prompt { background: var(--surface-dark-2); color: var(--rail-text); }
+.review-prompt .btn--ghost { color: inherit; border-color: rgba(255, 255, 255, 0.25); }
+.nav-full-title,
+.nav-tab-preview { background: #ffffff; color: var(--ink); border-radius: 12px; box-shadow: 0 8px 28px rgba(25, 28, 29, 0.25); }
+.nav-tab-preview-item { color: #191c1d; }
+.nav-tab-preview-item:hover,
+.nav-tab-preview-item:focus-visible { background: #eceeef; outline-color: #191c1d; }
+.nav-tab-preview-item small,
+.nav-tab-preview-item .nav-tab-preview-fallback { color: #8a9092; }

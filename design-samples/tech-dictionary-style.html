@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>タブまとめん改 デザイン見本</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<style>
+/* 見本: tech-dictionary.com 風のトーン（淡いグレー地・白いガラス質カード・墨色のピル型ボタン・セリフの英字ラベル） */
+:root {
+  --bg: #f5f6f6;
+  --ink: #191c1d;
+  --ink-2: #4a5052;
+  --ink-3: #8a9092;
+  --line: #e3e6e7;
+  --card: rgba(255, 255, 255, 0.72);
+  --card-solid: #ffffff;
+  --card-edge: rgba(255, 255, 255, 0.63);
+  --shadow: inset 0 1px 0 #fff, 0 6px 28px rgba(68, 87, 101, 0.06);
+  --chip: #eceeef;
+  --accent: #191c1d;
+  --on-accent: #ffffff;
+  --serif: "Marcellus", Georgia, serif;
+  --sans: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+}
+:root[data-theme="dark"] {
+  --bg: #111314; --ink: #eef0f0; --ink-2: #b4babc; --ink-3: #7c8385; --line: #26292b;
+  --card: rgba(30, 33, 35, 0.72); --card-solid: #1c1f21; --card-edge: rgba(255,255,255,0.06);
+  --shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 6px 28px rgba(0,0,0,0.35);
+  --chip: #23272a; --accent: #eef0f0; --on-accent: #111314;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111314; --ink: #eef0f0; --ink-2: #b4babc; --ink-3: #7c8385; --line: #26292b;
+    --card: rgba(30, 33, 35, 0.72); --card-solid: #1c1f21; --card-edge: rgba(255,255,255,0.06);
+    --shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 6px 28px rgba(0,0,0,0.35);
+    --chip: #23272a; --accent: #eef0f0; --on-accent: #111314;
+  }
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--ink); font-family: var(--sans); letter-spacing: 0.04em; font-size: 14px; min-height: 100vh; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; letter-spacing: inherit; }
+
+/* ヘッダー */
+.top { display: flex; align-items: center; gap: 24px; padding: 16px 28px; }
+.brand { display: flex; align-items: center; gap: 10px; }
+.brand__mark { width: 30px; height: 30px; border-radius: 9px; background: var(--accent); color: var(--on-accent); display: grid; place-items: center; font-family: var(--serif); font-size: 15px; }
+.brand__name { font-family: var(--serif); font-size: 20px; letter-spacing: -0.02em; }
+.brand__sub { font-size: 10px; color: var(--ink-3); display: block; margin-top: -2px; }
+.top__nav { display: flex; gap: 20px; font-size: 13px; color: var(--ink-2); }
+.top__nav a { color: inherit; text-decoration: none; }
+.top__nav a.is-on { color: var(--ink); font-weight: 500; }
+.top__spacer { flex: 1; }
+.search { display: flex; align-items: center; gap: 8px; background: var(--card-solid); border: 1px solid var(--line); border-radius: 999px; padding: 5px 5px 5px 16px; width: 300px; max-width: 100%; }
+.search input { flex: 1; border: 0; outline: 0; background: none; color: var(--ink); font: inherit; font-size: 13px; }
+.search input::placeholder { color: var(--ink-3); }
+.round { width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: var(--on-accent); display: grid; place-items: center; flex-shrink: 0; }
+.theme { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; color: var(--ink-2); }
+
+/* EXPLORE 帯（カテゴリ） */
+.explore { display: flex; align-items: center; gap: 22px; padding: 10px 28px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow-x: auto; white-space: nowrap; font-size: 12px; color: var(--ink-2); }
+.explore__label { font-family: var(--serif); font-size: 11px; letter-spacing: 0.12em; color: var(--ink-3); }
+.explore button { display: inline-flex; align-items: center; gap: 6px; }
+.explore button.is-on { color: var(--ink); font-weight: 500; }
+.dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; }
+
+/* レイアウト */
+.layout { display: grid; grid-template-columns: 280px 1fr; gap: 24px; padding: 28px; max-width: 1360px; margin: 0 auto; }
+.panel { background: var(--card); border: 1px solid var(--card-edge); border-radius: 24px; box-shadow: var(--shadow); backdrop-filter: blur(12px); }
+
+/* サイドバー */
+.side { padding: 22px 18px; display: flex; flex-direction: column; gap: 18px; align-self: start; position: sticky; top: 20px; }
+.side__head { display: flex; align-items: baseline; justify-content: space-between; padding: 0 6px; }
+.side__title { font-size: 15px; font-weight: 700; }
+.side__en { font-family: var(--serif); font-size: 15px; color: var(--ink-3); }
+.cta { display: flex; align-items: center; justify-content: space-between; background: var(--accent); color: var(--on-accent); border-radius: 999px; padding: 8px 8px 8px 20px; font-size: 13px; font-weight: 500; }
+.cta .round { background: rgba(255,255,255,0.14); color: inherit; width: 28px; height: 28px; }
+:root[data-theme="dark"] .cta .round { background: rgba(0,0,0,0.12); }
+.spaces { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+.space { display: flex; align-items: center; gap: 12px; padding: 10px 10px; border-radius: 14px; cursor: pointer; }
+.space:hover { background: var(--chip); }
+.space.is-on { background: var(--card-solid); box-shadow: 0 2px 10px rgba(68,87,101,0.08); }
+.space__num { font-family: var(--serif); font-size: 12px; width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; color: var(--ink-2); flex-shrink: 0; }
+.space.is-on .space__num { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+.space__body { flex: 1; min-width: 0; }
+.space__cat { font-size: 10px; color: var(--ink-3); }
+.space__name { font-size: 13px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.space__count { font-size: 11px; color: var(--ink-3); }
+.side__foot { border-top: 1px solid var(--line); padding: 14px 6px 0; display: flex; flex-direction: column; gap: 10px; font-size: 12px; color: var(--ink-2); }
+.row { display: flex; align-items: center; justify-content: space-between; }
+.link-arrow { display: inline-flex; align-items: center; gap: 8px; }
+
+/* メイン */
+.main { display: flex; flex-direction: column; gap: 20px; min-width: 0; }
+.hero { padding: 30px 32px; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px; }
+.eyebrow { font-family: var(--serif); font-size: 13px; color: var(--ink-3); letter-spacing: 0.06em; }
+.hero h1 { font-size: 30px; font-weight: 700; letter-spacing: 0.02em; margin: 6px 0 8px; line-height: 1.35; }
+.hero p { color: var(--ink-2); font-size: 13px; }
+.tag { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; padding: 3px 10px; border-radius: 999px; background: var(--chip); color: var(--ink-2); margin-right: 6px; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.btn { border: 1px solid var(--line); background: var(--card-solid); border-radius: 999px; padding: 8px 16px; font-size: 12px; color: var(--ink-2); }
+.btn:hover { color: var(--ink); border-color: var(--ink-3); }
+.btn--ink { background: var(--accent); color: var(--on-accent); border-color: var(--accent); display: inline-flex; align-items: center; gap: 10px; padding: 6px 6px 6px 18px; }
+.btn--ink:hover { color: var(--on-accent); }
+.btn--ink .round { width: 24px; height: 24px; background: rgba(255,255,255,0.14); color: inherit; }
+
+.toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; }
+.seg { display: inline-flex; background: var(--chip); border-radius: 999px; padding: 3px; }
+.seg button { padding: 6px 14px; border-radius: 999px; font-size: 12px; color: var(--ink-2); }
+.seg button.is-on { background: var(--card-solid); color: var(--ink); box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+
+/* タブグループ */
+.group { padding: 8px 8px 8px; }
+.group__head { display: flex; align-items: center; justify-content: space-between; padding: 14px 18px 10px; }
+.group__title { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; }
+.group__en { font-family: var(--serif); font-size: 13px; color: var(--ink-3); font-weight: 400; }
+.tabs { list-style: none; }
+.tab { display: grid; grid-template-columns: 40px 28px 1fr auto; align-items: center; gap: 12px; padding: 12px 14px; border-top: 1px solid var(--line); }
+.tab:first-child { border-top: 0; }
+.tab:hover { background: var(--chip); border-radius: 14px; border-color: transparent; }
+.tab:hover + .tab { border-color: transparent; }
+.tab__no { font-family: var(--serif); font-size: 12px; width: 28px; height: 28px; border-radius: 50%; background: var(--accent); color: var(--on-accent); display: grid; place-items: center; }
+.fav { width: 28px; height: 28px; border-radius: 8px; background: var(--chip); display: grid; place-items: center; font-size: 12px; font-weight: 700; color: var(--ink-2); }
+.tab__body { min-width: 0; }
+.tab__meta { font-size: 10px; color: var(--ink-3); margin-bottom: 2px; }
+.tab__title { font-size: 13px; font-weight: 500; line-height: 1.6; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tab__chev { color: var(--ink-3); }
+
+@media (max-width: 860px) {
+  .layout { grid-template-columns: 1fr; padding: 16px; }
+  .side { position: static; }
+  .top { flex-wrap: wrap; padding: 14px 16px; gap: 12px; }
+  .top__nav { display: none; }
+  .search { width: 100%; }
+  .explore { padding: 10px 16px; }
+  .hero { padding: 24px 20px; }
+  .hero h1 { font-size: 24px; }
+  .tab { grid-template-columns: 28px 1fr auto; }
+  .tab__no { display: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="brand">
+    <div class="brand__mark">T</div>
+    <div><span class="brand__name">Tab Matomen</span><span class="brand__sub">タブまとめん改</span></div>
+  </div>
+  <nav class="top__nav">
+    <a href="#" class="is-on">スペース</a><a href="#">アーカイブ</a><a href="#">設定</a>
+  </nav>
+  <div class="top__spacer"></div>
+  <label class="search">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--ink-3)"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+    <input type="search" placeholder="タブのタイトルや URL で絞り込む">
+    <span class="round"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+  </label>
+  <button class="theme" id="themeBtn" type="button" title="ダークモード切り替え">◐</button>
+</header>
+
+<div class="explore">
+  <span class="explore__label">EXPLORE</span>
+  <button class="is-on">すべて</button>
+  <button><span class="dot" style="background:#5b7bd5"></span>仕事</button>
+  <button><span class="dot" style="background:#3fa37a"></span>個人開発</button>
+  <button><span class="dot" style="background:#d58a3f"></span>リサーチ</button>
+  <button><span class="dot" style="background:#b65bd5"></span>買い物</button>
+  <button><span class="dot" style="background:#8a9092"></span>未分類</button>
+</div>
+
+<div class="layout">
+  <aside class="panel side">
+    <div class="side__head"><span class="side__title">スペース</span><span class="side__en">Spaces</span></div>
+    <button class="cta" type="button">新しいスペースを作成 <span class="round">＋</span></button>
+    <ul class="spaces">
+      <li class="space is-on"><span class="space__num">01</span><div class="space__body"><div class="space__cat">個人開発</div><div class="space__name">タブまとめん改 リリース準備</div></div><span class="space__count">24</span></li>
+      <li class="space"><span class="space__num">02</span><div class="space__body"><div class="space__cat">仕事</div><div class="space__name">亀有香取神社 保守</div></div><span class="space__count">9</span></li>
+      <li class="space"><span class="space__num">03</span><div class="space__body"><div class="space__cat">リサーチ</div><div class="space__name">生成AI比較の下調べ</div></div><span class="space__count">17</span></li>
+      <li class="space"><span class="space__num">04</span><div class="space__body"><div class="space__cat">買い物</div><div class="space__name">キーボード候補</div></div><span class="space__count">6</span></li>
+    </ul>
+    <div class="side__foot">
+      <div class="row"><span>自動バックアップ</span><span>毎日</span></div>
+      <div class="row"><span>切り替え時に自動保存</span><span>オン</span></div>
+      <div class="row"><a class="link-arrow" href="#" style="color:inherit;text-decoration:none">書き出し・読み込み</a><span>›</span></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <section class="panel hero">
+      <div>
+        <div class="eyebrow">Space 01</div>
+        <h1>タブまとめん改 リリース準備</h1>
+        <p><span class="tag"><span class="dot" style="background:#3fa37a"></span>個人開発</span>24 タブ ・ 3 グループ ・ 最終保存 10/28 14:20</p>
+      </div>
+      <div class="actions">
+        <button class="btn">名前変更</button>
+        <button class="btn">アーカイブ</button>
+        <button class="btn btn--ink">今開いているタブを保存 <span class="round">›</span></button>
+      </div>
+    </section>
+
+    <div class="toolbar">
+      <div class="seg"><button class="is-on">リスト</button><button>カード</button></div>
+      <button class="btn">＋ タブグループを作成</button>
+    </div>
+
+    <section class="panel group">
+      <div class="group__head">
+        <div class="group__title"><span class="dot" style="background:#5b7bd5"></span>ストア申請<span class="group__en">Store</span></div>
+        <button class="btn">すべて開く</button>
+      </div>
+      <ol class="tabs">
+        <li class="tab"><span class="tab__no">01</span><span class="fav">C</span><div class="tab__body"><div class="tab__meta">chrome.google.com</div><div class="tab__title">Chrome ウェブストア デベロッパー ダッシュボード</div></div><span class="tab__chev">›</span></li>
+        <li class="tab"><span class="tab__no">02</span><span class="fav">D</span><div class="tab__body"><div class="tab__meta">developer.chrome.com</div><div class="tab__title">プライバシーに関する実践のフィールドの記入方法</div></div><span class="tab__chev">›</span></li>
+        <li class="tab"><span class="tab__no">03</span><span class="fav">G</span><div class="tab__body"><div class="tab__meta">github.com</div><div class="tab__title">privacy-policy.ja.md — タブまとめん改</div></div><span class="tab__chev">›</span></li>
+      </ol>
+    </section>
+
+    <section class="panel group">
+      <div class="group__head">
+        <div class="group__title"><span class="dot" style="background:#d58a3f"></span>多言語化<span class="group__en">i18n</span></div>
+        <button class="btn">すべて開く</button>
+      </div>
+      <ol class="tabs">
+        <li class="tab"><span class="tab__no">01</span><span class="fav">D</span><div class="tab__body"><div class="tab__meta">developer.chrome.com</div><div class="tab__title">chrome.i18n — Chrome Extensions API</div></div><span class="tab__chev">›</span></li>
+        <li class="tab"><span class="tab__no">02</span><span class="fav">M</span><div class="tab__body"><div class="tab__meta">developer.mozilla.org</div><div class="tab__title">Intl.DateTimeFormat - JavaScript | MDN</div></div><span class="tab__chev">›</span></li>
+      </ol>
+    </section>
+  </main>
+</div>
+
+<script>
+document.getElementById('themeBtn').addEventListener('click', () => {
+  const r = document.documentElement;
+  const dark = r.dataset.theme ? r.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  r.dataset.theme = dark ? 'light' : 'dark';
+});
+</script>
+</body>
+</html>
