@@ -2346,3 +2346,7 @@ body.sidebar-collapsed .sidebar-settings { min-width:32px;width:32px;padding:0; 
 .tab-card__pin { flex-shrink:0; border:0; background:none; cursor:pointer; font-size:13px; opacity:0; padding:4px; transition:opacity .15s; }
 .tab-card:hover .tab-card__pin, .tab-card:focus-within .tab-card__pin { opacity:.75; }
 .tab-card__pin:hover { opacity:1; }
+
+/* collapsed rail: stack the expand and settings buttons vertically so neither overflows the 48px rail */
+body.sidebar-collapsed .sidebar-controls { flex-direction:column; align-items:center; justify-content:flex-start; gap:6px; padding:8px 0; }
+body.sidebar-collapsed .sidebar-controls > * { flex-shrink:0; }

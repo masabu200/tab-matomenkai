@@ -39,6 +39,14 @@ const fs=require('fs'),path=require('path'),os=require('os'),http=require('http'
   assert.equal(await p.locator('#settingsDialog #workspaceSaveStatus').count(),0);
   await p.waitForFunction(()=>document.getElementById('workspaceSaveStatus').textContent.includes('案件A'));
   assert.equal(await p.locator('#workspaceSaveStatus').isVisible(),true);
+  // collapsed rail keeps the expand button on screen and usable
+  await p.locator('#toggleSidebar').click();
+  const collapsedBox=await p.locator('#toggleSidebar').boundingBox();
+  assert.ok(collapsedBox&&collapsedBox.x>=0&&collapsedBox.x+collapsedBox.width<=48,'expand button inside the 48px rail: '+JSON.stringify(collapsedBox));
+  const settingsBox=await p.locator('#openSettings').boundingBox();
+  assert.ok(settingsBox&&settingsBox.x>=0&&settingsBox.x+settingsBox.width<=48,'settings button inside the rail: '+JSON.stringify(settingsBox));
+  await p.locator('#toggleSidebar').click();
+  assert.equal(await p.locator('#toggleSidebar').getAttribute('aria-expanded'),'true');
   console.log('PASS save status visible beside the save button');
   // ショートカット: / で絞り込み、Esc で解除、⌘/Ctrl+K でスペース検索
   await p.locator('h2#spaceTitle').click();await p.keyboard.press('/');assert.equal(await p.evaluate(()=>document.activeElement.id),'searchInput');
