@@ -1,7 +1,7 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
 const i18n=require('./i18n-stub.cjs');
 // Run the pure part of space-share.js without DOM.
-const ctx={...i18n,URL,TextEncoder,TextDecoder,Blob,Response,CompressionStream,DecompressionStream,btoa,atob,document:{getElementById:()=>null},navigator:{}};
+const ctx={...i18n,URL,TextEncoder,TextDecoder,Blob,Response,CompressionStream,DecompressionStream,btoa,atob,document:{getElementById:()=>null,readyState:'complete'},navigator:{},setTimeout};
 vm.createContext(ctx);
 vm.runInContext(fs.readFileSync('extension/backup-validation.js','utf8')+'\n;globalThis.validateBackup=validateBackup;',ctx);
 vm.runInContext(fs.readFileSync('extension/space-share.js','utf8'),ctx);
