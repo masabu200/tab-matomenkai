@@ -292,3 +292,9 @@ Playwright 1.62 の `page.waitForFunction` に async 関数を渡すと、最初
 - Google Cloud で作成した「Chrome 拡張機能」種別クライアント（アイテムID = ストアID）を `manifest.json` の `oauth2` に設定。`drive.file` スコープのみ。
 - `tests/drive-backup.cjs` は、手動方式の検査で manifest から `oauth2` を外したふりをし、組み込み方式の検査は実 manifest で行うように変更。
 - 残り：同意画面の本番公開の確認と、実 Google での接続→保存→照合（DRIVE-02）。
+
+## 2026-10-28 DRIVE-02 進行：実 Chrome で組み込み認証の接続に成功
+
+- manifest に `key` を入れた直後、Chrome には同じ `extension/` フォルダが旧ID（`deenan…`、key 導入前の登録）と新ID（`ofpnbo…`）で二重登録され、旧IDのカードが「オフのままオンにできない」状態になった。Chrome の `Secure Preferences` の `extensions.settings` で両方の `path` が同一であることを確認して特定。旧カードを削除し、`extension/` を読み込み直して解消。
+- 直前に見えていた「Drive 設定が手動方式のまま・ボタンが効かない」は、この二重登録で古いままのページを見ていたことが原因。再発時に原因が分かるよう、`drive-settings.js` は初期化失敗時に状態欄へ理由を出す（`eb329c2`）。
+- 16:03、利用者の Chrome で組み込み方式（クライアントID入力なし）の「Googleドライブに接続」が成功し「接続しました。バックアップを保存できます。」を確認。残り：実保存と Drive 上の JSON の内容照合、1時間後の無操作再保存。
