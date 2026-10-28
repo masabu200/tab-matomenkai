@@ -47,9 +47,6 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
   await setState({installedAt:now-10*DAY,days:['a','b','c','d','e'],snoozeUntil:0,shown:0,done:false});
   page=await open();await page.locator('#reviewPrompt').waitFor();await page.locator('#reviewNever').click();await page.locator('#reviewPrompt').waitFor({state:'detached'});
   s=await state();assert.equal(s.done,true);
-  // the side panel page never shows it
-  await setState({installedAt:now-10*DAY,days:['a','b','c','d','e'],snoozeUntil:0,shown:0,done:false});
-  const panel=await context.newPage();await panel.goto(`chrome-extension://${id}/sidepanel.html`);await panel.waitForTimeout(2000);assert.equal(await panel.locator('#reviewPrompt').count(),0,'not in side panel');
-  console.log('PASS review prompt: install timestamp, active-day counting, trigger rules, later=14-day snooze, write opens store reviews URL and stops, never, max/done, not in side panel');
+  console.log('PASS review prompt: install timestamp, active-day counting, trigger rules, later=14-day snooze, write opens store reviews URL and stops, never, max/done');
  }finally{await context.close();fs.rmSync(dir,{recursive:true,force:true});}
 })().catch(e=>{console.error(e);process.exitCode=1});

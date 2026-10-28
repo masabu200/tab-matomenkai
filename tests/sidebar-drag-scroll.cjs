@@ -9,13 +9,7 @@ const fs=require('fs'),path=require('path'),assert=require('node:assert/strict')
   await page.waitForFunction(()=>g_dashboardWindowId!==null);
   await page.evaluate(async()=>{await saveData({categories:Array.from({length:30},(_,i)=>({id:'c'+i,name:'カテゴリー'+i})),spaces:Array.from({length:30},(_,i)=>({id:'s'+i,name:'スペース'+i,categoryId:'c'+i,tabs:[]})),windowActiveSpaces:{}})});
   await page.waitForSelector('[data-space-id="s29"]');
-  for(const mode of ['dashboard','panel']){
-   if(mode==='panel'){
-    page=await context.newPage();
-    await page.goto(`chrome-extension://${id}/sidepanel.html`);
-    await page.evaluate(()=>{chrome.sidePanel.getLayout=async()=>({side:'left'});document.documentElement.classList.add('left-layout-verified');document.querySelector('.app').hidden=false});
-    await page.setViewportSize({width:280,height:800});await page.waitForSelector('[data-space-id="s29"]');
-   }
+  for(const mode of ['dashboard']){
    const source=page.locator('[data-space-id="s20"]');await source.scrollIntoViewIfNeeded();
    const list=page.locator('#spaceList');const rect=await list.boundingBox();const start=await list.evaluate(el=>el.scrollTop);
    await source.evaluate(el=>{globalThis.dragData=new DataTransfer();el.dispatchEvent(new DragEvent('dragstart',{bubbles:true,dataTransfer:dragData}))});

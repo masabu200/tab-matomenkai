@@ -1,16 +1,12 @@
 'use strict';
-// Dashboard keeps its existing browser dialogs. A Side Panel uses an accessible
-// in-panel dialog because it has no ordinary tab for a browser modal dialog.
+// prompt/confirm はブラウザ標準のダイアログ。open はページ内のアクセシブルなダイアログ
+// （JSON 読み込み前の確認など、文面を長く見せたい場面で使う）。
 globalThis.DashboardDialogs = {
   prompt(message, initial = '') {
-    return document.body.classList.contains('sidebar-panel')
-      ? this.open(message, initial)
-      : Promise.resolve(window.prompt(message, initial));
+    return Promise.resolve(window.prompt(message, initial));
   },
   confirm(message) {
-    return document.body.classList.contains('sidebar-panel')
-      ? this.open(message)
-      : Promise.resolve(window.confirm(message));
+    return Promise.resolve(window.confirm(message));
   },
   open(message, initial) {
     if (document.getElementById('panelDialog')) return Promise.resolve(initial === undefined ? false : null);

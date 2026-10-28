@@ -17,7 +17,6 @@ Tab Matomen Kai 會依專案或工作將分頁儲存為「空間」，讓你在�
 - 復原：刪除或封存後可立即復原（Ctrl/⌘+Z）。
 - 複製 URL 清單：以 Markdown、標題 + URL 或僅 URL 的格式直接複製到剪貼簿。
 - 右鍵儲存：透過右鍵選單，將游標所在的頁面或連結儲存到任一空間。
-- 左側邊面板：在 Chrome 的側邊面板（左側位置）顯示左側欄，瀏覽網頁時始終可見。
 - 鍵盤：Ctrl/⌘+S 儲存，Ctrl/⌘+K 搜尋空間，/ 篩選分頁。
 - 備份：JSON 匯出/匯入、定期自動備份，以及手動備份到 Google 雲端硬碟。
 - 10 種語言：英文、日文、簡體中文、繁體中文、韓文、西班牙文、葡萄牙文（巴西）、德文、法文與義大利文。可在設定中切換。
@@ -30,7 +29,6 @@ Tab Matomen Kai 會依專案或工作將分頁儲存為「空間」，讓你在�
 - storage / unlimitedStorage：將空間與設定儲存在本機。
 - alarms：用於定期自動備份。
 - downloads：將 JSON 備份寫入「下載」資料夾。
-- sidePanel：在 Chrome 的側邊面板中顯示左側欄。
 - contextMenus：右鍵選單「儲存到 Tab Matomen Kai」。
 - identity：取得將備份儲存到 Google 雲端硬碟的授權（僅限 drive.file 範圍）。
 - 主機權限 googleapis.com：上傳至 Google Drive API。127.0.0.1：與使用者自己電腦上的選用本機 AI 整合伺服器通訊。

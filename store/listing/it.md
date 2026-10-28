@@ -17,7 +17,6 @@ Tab Matomen Kai salva le tue schede come «spazi», uno per progetto o attività
 - Annulla: annulla un'eliminazione o un'archiviazione subito dopo averla eseguita (Ctrl/⌘+Z).
 - Copia elenchi di URL: in Markdown, titolo + URL o solo URL, direttamente negli appunti.
 - Salvataggio con clic destro: salva la pagina o il link sotto il cursore in qualsiasi spazio dal menu contestuale.
-- Riquadro laterale sinistro: mostra la barra sinistra nel riquadro laterale di Chrome (posizione a sinistra) così resta visibile mentre navighi.
 - Tastiera: Ctrl/⌘+S salva, Ctrl/⌘+K cerca spazi, / filtra le schede.
 - Backup: esportazione/importazione JSON, backup automatici programmati e backup manuale su Google Drive.
 - 10 lingue: inglese, giapponese, cinese semplificato, cinese tradizionale, coreano, spagnolo, portoghese (Brasile), tedesco, francese e italiano. Cambia lingua nelle Impostazioni.
@@ -30,7 +29,6 @@ Tutto è memorizzato nell'archiviazione locale del tuo browser. Il backup su Goo
 - storage / unlimitedStorage: conservare spazi e impostazioni in locale.
 - alarms: backup automatici programmati.
 - downloads: scrivere i backup JSON nella cartella Download.
-- sidePanel: mostrare la barra sinistra nel riquadro laterale di Chrome.
 - contextMenus: il menu contestuale «Salva in Tab Matomen Kai».
 - identity: autorizzare il salvataggio dei backup su Google Drive (solo l'ambito drive.file).
 - Autorizzazione host googleapis.com: caricamento sull'API di Google Drive. 127.0.0.1: comunicazione con il server di integrazione IA locale facoltativo sul PC dell'utente.

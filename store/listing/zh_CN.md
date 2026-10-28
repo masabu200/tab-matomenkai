@@ -17,7 +17,6 @@ Tab Matomen Kai 会把标签页按项目或任务保存为“空间”，让你�
 - 撤销：删除或归档后可立即撤销（Ctrl/⌘+Z）。
 - 复制 URL 列表：以 Markdown、标题 + URL 或仅 URL 的格式直接复制到剪贴板。
 - 右键保存：通过右键菜单，将光标所在的页面或链接保存到任意空间。
-- 左侧边栏：在 Chrome 的侧边面板（左侧位置）中显示左侧栏，浏览网页时始终可见。
 - 键盘：Ctrl/⌘+S 保存，Ctrl/⌘+K 搜索空间，/ 筛选标签页。
 - 备份：JSON 导出/导入、定期自动备份，以及手动备份到 Google 云端硬盘。
 - 10 种语言：英语、日语、简体中文、繁体中文、韩语、西班牙语、葡萄牙语（巴西）、德语、法语和意大利语。可在设置中切换。
@@ -30,7 +29,6 @@ Tab Matomen Kai 会把标签页按项目或任务保存为“空间”，让你�
 - storage / unlimitedStorage：在本地保存空间和设置。
 - alarms：用于定期自动备份。
 - downloads：将 JSON 备份写入“下载”文件夹。
-- sidePanel：在 Chrome 的侧边面板中显示左侧栏。
 - contextMenus：右键菜单“保存到 Tab Matomen Kai”。
 - identity：获取将备份保存到 Google 云端硬盘的授权（仅限 drive.file 范围）。
 - 主机权限 googleapis.com：上传到 Google Drive API。127.0.0.1：与用户自己电脑上的可选本地 AI 集成服务器通信。

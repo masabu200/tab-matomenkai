@@ -17,7 +17,6 @@ Tab Matomen Kai enregistre vos onglets sous forme d'« espaces », un par projet
 - Annuler : annulez une suppression ou un archivage juste après (Ctrl/⌘+Z).
 - Copier des listes d'URL : en Markdown, titre + URL ou URL seules, directement dans le presse-papiers.
 - Enregistrement par clic droit : enregistrez la page ou le lien sous le curseur dans n'importe quel espace depuis le menu contextuel.
-- Panneau latéral gauche : affichez la barre de gauche dans le panneau latéral de Chrome (position gauche) pour qu'elle reste visible pendant la navigation.
 - Clavier : Ctrl/⌘+S enregistrer, Ctrl/⌘+K rechercher des espaces, / filtrer les onglets.
 - Sauvegarde : export/import JSON, sauvegardes automatiques planifiées et sauvegarde manuelle sur Google Drive.
 - 10 langues : anglais, japonais, chinois simplifié, chinois traditionnel, coréen, espagnol, portugais (Brésil), allemand, français et italien. Changez dans les Paramètres.
@@ -30,7 +29,6 @@ Tout est stocké dans le stockage local de votre navigateur. La sauvegarde sur G
 - storage / unlimitedStorage : conserver les espaces et les paramètres en local.
 - alarms : sauvegardes automatiques planifiées.
 - downloads : écrire les sauvegardes JSON dans le dossier Téléchargements.
-- sidePanel : afficher la barre de gauche dans le panneau latéral de Chrome.
 - contextMenus : le menu contextuel « Enregistrer dans Tab Matomen Kai ».
 - identity : autoriser l'enregistrement des sauvegardes sur Google Drive (portée drive.file uniquement).
 - Autorisation d'hôte googleapis.com : envoi vers l'API Google Drive. 127.0.0.1 : communication avec le serveur d'intégration d'IA local facultatif sur le PC de l'utilisateur.

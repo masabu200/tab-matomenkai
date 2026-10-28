@@ -7,7 +7,6 @@ const EXCLUDED_URL_PREFIXES = [
   'about:', 'javascript:', 'data:', 'file://',
 ];
 const STORAGE_KEY         = 'pwm_data';
-const IS_SIDEBAR_PANEL = document.body.classList.contains('sidebar-panel');
 const DASHBOARD_PAGE_URL = chrome.runtime.getURL('dashboard.html');
 const MESSAGE_DURATION_MS = 3500;
 const ERROR_MESSAGE_DURATION_MS = 8000;
@@ -944,7 +943,7 @@ async function switchToSpace(targetSpaceId) {
         });
       }
     }
-    if (!IS_SIDEBAR_PANEL) await closePreviousTabs();
+    await closePreviousTabs();
 
     const targetSpace = data.spaces.find((s) => s.id === targetSpaceId);
     if (targetSpace && targetSpace.tabs.length > 0) {
@@ -984,13 +983,6 @@ async function switchToSpace(targetSpaceId) {
           }
         }
       }
-    }
-    if (IS_SIDEBAR_PANEL) {
-      const remaining = (await getWindowTabs()).filter(t => !tabsToClose.some(old => old.id === t.id));
-      if (remaining.length === 0) {
-        await chrome.tabs.create({ windowId: g_dashboardWindowId, url: 'about:blank', active: true });
-      }
-      await closePreviousTabs();
     }
   } catch (err) {
     console.warn('[PWM] タブ操作エラー（ドラッグ中など）:', err);
@@ -3141,11 +3133,7 @@ async function init() {
   }
 
   try {
-    if (IS_SIDEBAR_PANEL) {
-      const ownerWindow = await chrome.windows.getCurrent();
-      g_dashboardWindowId = ownerWindow.id;
-    }
-    const currentTab = IS_SIDEBAR_PANEL ? null : await new Promise((resolve) => {
+    const currentTab = await new Promise((resolve) => {
       chrome.tabs.getCurrent((tab) => {
         void chrome.runtime.lastError; // getCurrent は基本失敗しないが念のため
         resolve(tab);

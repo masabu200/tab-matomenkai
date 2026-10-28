@@ -17,7 +17,6 @@ Tab Matomen Kai speichert deine Tabs als „Bereiche“, einen pro Projekt oder 
 - Rückgängig: Mache eine Löschung oder Archivierung direkt danach rückgängig (Ctrl/⌘+Z).
 - URL-Listen kopieren: als Markdown, Titel + URL oder nur URLs direkt in die Zwischenablage.
 - Speichern per Rechtsklick: Speichere die Seite oder den Link unter dem Mauszeiger über das Kontextmenü in einem beliebigen Bereich.
-- Linke Seitenleiste: Zeige die linke Leiste in der Seitenleiste von Chrome (linke Position) an, damit sie beim Surfen sichtbar bleibt.
 - Tastatur: Ctrl/⌘+S speichern, Ctrl/⌘+K Bereiche suchen, / Tabs filtern.
 - Sicherung: JSON-Export/-Import, geplante automatische Sicherungen und manuelle Sicherung in Google Drive.
 - 10 Sprachen: Englisch, Japanisch, Chinesisch (vereinfacht), Chinesisch (traditionell), Koreanisch, Spanisch, Portugiesisch (Brasilien), Deutsch, Französisch und Italienisch. Umschalten in den Einstellungen.
@@ -30,7 +29,6 @@ Alles wird im lokalen Speicher deines Browsers abgelegt. Die Sicherung in Google
 - storage / unlimitedStorage: Bereiche und Einstellungen lokal speichern.
 - alarms: geplante automatische Sicherungen.
 - downloads: JSON-Sicherungen in den Download-Ordner schreiben.
-- sidePanel: die linke Leiste in der Seitenleiste von Chrome anzeigen.
 - contextMenus: das Rechtsklick-Menü „In Tab Matomen Kai speichern“.
 - identity: die Berechtigung zum Speichern von Sicherungen in Google Drive einholen (nur der Bereich drive.file).
 - Host-Berechtigung googleapis.com: Hochladen in die Google-Drive-API. 127.0.0.1: Kommunikation mit dem optionalen lokalen KI-Integrationsserver auf dem eigenen PC des Nutzers.

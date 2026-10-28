@@ -217,11 +217,6 @@ body.theme-dark .sidebar .space-item--active .space-item__badge { background: #1
 .sidebar-settings { color: var(--rail-text); }
 .sidebar-toggle:hover { background: var(--rail-hover); }
 .sidebar-settings:hover { background: var(--rail-chip); }
-.sidebar-panel-launch { border-color: var(--surface-dark-line); background: var(--surface-dark-2); color: var(--rail-text); }
-.sidebar-panel-launch:hover { background: #33383a; }
-.sidebar-launch-status,
-.sidebar-launch-help { color: var(--rail-muted); }
-.sidebar-launch-help .btn,
 .workspace-tools .btn { color: var(--rail-text); border-color: var(--surface-dark-line); }
 .workspace-tools,
 .space-shortcuts,

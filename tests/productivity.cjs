@@ -15,8 +15,8 @@ const {chromium}=require('/Users/mugikura/node_modules/playwright');const UI=req
   await p.evaluate(()=>{globalThis.realSave=saveCurrentTabsToSpace;saveCurrentTabsToSpace=async()=>{throw Error('test failure')}});await choose('save');await p.waitForFunction(()=>document.getElementById('message').textContent.includes('切り替えを中止'));assert.equal(await p.evaluate(async()=>getActiveSpaceId(await loadData())),'a');await p.evaluate(()=>{saveCurrentTabsToSpace=realSave});console.log('PASS cancel and failed save keep current space');
   await choose('save');await UI.waitForAsync(p,async()=>getActiveSpaceId(await loadData())==='b'&&!g_isSwitching);assert.equal(await p.evaluate(async()=>(await loadData()).spaces.find(s=>s.id==='a').tabs[0].url),base+'/new');await p.waitForFunction(()=>document.getElementById('spaceShortcuts').textContent.includes('最近使ったスペース'));console.log('PASS save then switch and recent shortcut');
   await p.locator('#spaceList [data-space-id=a]').click();await p.locator('[data-choice=skip]').click();await UI.waitForAsync(p,async()=>getActiveSpaceId(await loadData())==='a'&&!g_isSwitching);
-  const panel=await context.newPage();await panel.goto(`chrome-extension://${id}/sidepanel.html`);await panel.evaluate(()=>{chrome.sidePanel.getLayout=async()=>({side:'left'});document.documentElement.classList.add('left-layout-verified');document.querySelector('.app').hidden=false});
+  const panel=p;
   for(const width of [280,360,430]){await panel.setViewportSize({width,height:800});await panel.waitForTimeout(250);await UI.openSettings(panel);await panel.locator('#editFavorites').click();assert.ok(await panel.evaluate(()=>productivityDialog.scrollWidth<=productivityDialog.clientWidth));await panel.screenshot({path:`evidence/productivity-${width}.png`});await panel.locator('#closeProductivity').click()}
-  console.log('PASS panel dialogs fit 280/360/430px');
+  console.log('PASS dialogs fit narrow dashboard 280/360/430px');
  }finally{await context.close();server.close();fs.rmSync(dir,{recursive:true,force:true})}
 })().catch(e=>{console.error(e);process.exitCode=1});

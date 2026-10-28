@@ -17,7 +17,6 @@ Tab Matomen Kai saves your tabs as "spaces", one per project or task, and lets y
 - Undo: take back a delete or archive right after it happens (Ctrl/⌘+Z).
 - Copy URL lists: Markdown, title + URL, or URLs only, straight to the clipboard.
 - Right-click save: save the page or link under your cursor into any space from the context menu.
-- Left side panel: show the left bar in Chrome's side panel (left position) so it stays visible while you browse.
 - Keyboard: Ctrl/⌘+S save, Ctrl/⌘+K search spaces, / filter tabs.
 - Backup: JSON export/import, scheduled automatic backups, and manual backup to Google Drive.
 - 10 languages: English, Japanese, Simplified Chinese, Traditional Chinese, Korean, Spanish, Portuguese (Brazil), German, French and Italian. Switch in Settings.
@@ -30,7 +29,6 @@ Everything is stored in your browser's local storage. Google Drive backup writes
 - storage / unlimitedStorage: keep spaces and settings locally.
 - alarms: scheduled automatic backups.
 - downloads: write JSON backups to the Downloads folder.
-- sidePanel: show the left bar in Chrome's side panel.
 - contextMenus: the "Save to Tab Matomen Kai" right-click menu.
 - identity: authorize saving backups to Google Drive (drive.file scope only).
 - Host permission googleapis.com: upload to the Google Drive API. 127.0.0.1: talk to the optional local AI integration server on the user's own PC.

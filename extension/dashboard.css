@@ -2061,15 +2061,14 @@ input {
 }
 
 /* A native left panel replaces the dashboard sidebar instead of duplicating it. */
-body.native-left-panel-open > .app > .sidebar { display:none; }
 
-/* Compact dashboard navigation. Native panel width remains Chrome controlled. */
-body:not(.sidebar-panel) .sidebar { width:220px;min-width:220px; }
+/* Compact dashboard navigation. */
+.sidebar { width:220px;min-width:220px; }
 .sidebar-controls { display:flex;justify-content:flex-end;flex-shrink:0;padding:6px 10px; }
 .sidebar-toggle { width:32px;height:32px;padding:0;border:0;border-radius:6px;background:transparent;color:var(--text-primary,#dce3fa);font-size:24px;cursor:pointer; }
 .sidebar-toggle:hover { background:rgba(128,144,190,.15); }
 .sidebar-toggle:focus-visible { outline:2px solid #90aaff;outline-offset:2px; }
-body.sidebar-collapsed:not(.sidebar-panel) .sidebar { width:48px;min-width:48px; }
+body.sidebar-collapsed .sidebar { width:48px;min-width:48px; }
 body.sidebar-collapsed .sidebar > :not(.sidebar-controls) { display:none!important; }
 body.sidebar-collapsed .sidebar-controls { padding:6px 8px; }
 
@@ -2107,19 +2106,6 @@ body.sidebar-collapsed .sidebar-toggle { padding:0;width:32px;min-width:32px;fon
 .tab-card__url { color:#5a6280; }
 body.theme-dark .tab-card__url { color:#b0bedc; }
 
-/* The panel launcher belongs to the left navigation, including its 48px rail. */
-.sidebar-controls { flex-wrap:wrap; }
-.sidebar-launcher { width:100%;min-width:0; }
-.sidebar-panel-launch { display:flex;align-items:center;justify-content:center;gap:7px;width:100%;min-height:40px;padding:7px 8px;border:1px solid #3b5992;border-radius:7px;background:#1d355d;color:#eef4ff;font-family:inherit;font-size:12px;font-weight:600;line-height:1.5;cursor:pointer; }
-.sidebar-panel-icon { font-size:22px;line-height:1;flex-shrink:0; }
-.sidebar-panel-label { font-size:12px;line-height:1.5; }
-.sidebar-panel-launch:hover { background:#294879; }
-.sidebar-panel-launch:focus-visible { outline:2px solid #9ebfff;outline-offset:2px; }
-.sidebar-launch-status { color:#d1def5;font-size:12px;line-height:1.5;padding-top:6px;overflow-wrap:anywhere; }
-.sidebar-launch-status:empty { display:none; }
-body.sidebar-collapsed .sidebar-panel-label { display:none; }
-body.sidebar-collapsed .sidebar-panel-launch { width:32px;min-height:36px;padding:4px; }
-body.sidebar-collapsed .sidebar-launch-status { position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%); }
 
 .sidebar-settings { display:inline-flex;align-items:center;justify-content:center;gap:5px;min-width:36px;height:34px;padding:0 7px;border:0;border-radius:6px;background:transparent;color:#e5edff;font:inherit;font-size:12px;cursor:pointer; }
 .sidebar-settings:hover { background:#26334e; }
@@ -2179,7 +2165,6 @@ body.sidebar-collapsed .sidebar-settings { min-width:32px;width:32px;padding:0; 
 .settings-workspace-actions { display:flex; flex-direction:column; gap:8px; }
 .settings-workspace-actions .btn { color:#e5edff; white-space:normal; }
 .settings-workspace-actions p { font-size:12px; line-height:1.5; overflow-wrap:anywhere; }
-.settings-dialog .sidebar-launcher { margin-top:12px; width:100%; }
 .nav-tab-preview { position:fixed; z-index:10000; padding:12px; border:0; border-radius:10px; background:#f5f8ff; color:#182541; box-shadow:0 5px 20px #0005; overflow:auto; }
 .nav-tab-preview[hidden] { display:none; }
 .nav-tab-preview h3 { font-size:13px; line-height:1.5; overflow-wrap:anywhere; margin:0 0 8px; }
@@ -2224,13 +2209,13 @@ body.sidebar-collapsed .sidebar-settings { min-width:32px;width:32px;padding:0; 
 }
 
 /* ============================================================
-   狭い幅（サイドパネル幅・小さいウィンドウ）: サイドバーを上に積む2段構成
+   狭い幅（小さいウィンドウ）: サイドバーを上に積む2段構成
 ============================================================ */
 @media (max-width: 640px) {
-  body:not(.sidebar-panel) .app {
+  .app {
     flex-direction: column;
   }
-  body:not(.sidebar-panel) .sidebar {
+  .sidebar {
     width: 100%;
     min-width: 0;
     height: auto;
@@ -2238,7 +2223,7 @@ body.sidebar-collapsed .sidebar-settings { min-width:32px;width:32px;padding:0; 
     border-right: none;
     border-bottom: 1px solid #1a1d2e;
   }
-  body:not(.sidebar-panel) .main {
+  .main {
     height: auto;
     flex: 1;
     min-height: 0;
@@ -2254,11 +2239,6 @@ body.sidebar-collapsed .sidebar-settings { min-width:32px;width:32px;padding:0; 
   }
 }
 
-/* サイドパネルの配置が右のときの案内 */
-.sidebar-launch-help { color:#d1def5; font-size:12px; line-height:1.5; padding-top:6px; overflow-wrap:anywhere; }
-.sidebar-launch-help p { margin:0 0 6px; }
-.sidebar-launch-help .btn { width:100%; color:#e5edff; border-color:#46516d; white-space:normal; }
-body.sidebar-collapsed .sidebar-launch-help { display:none; }
 
 /* ============================================================
    タブの一括操作バー
@@ -2318,3 +2298,10 @@ body.sidebar-collapsed .sidebar-launch-help { display:none; }
 .message { cursor: pointer; }
 .ai-settings > summary { cursor: pointer; font-size: 14px; font-weight: 600; padding: 6px 0; list-style: revert; }
 .ai-settings[open] > summary { margin-bottom: 4px; }
+
+/* ページ内の確認ダイアログ（DashboardDialogs.open） */
+.panel-dialog { width:calc(100% - 24px);max-width:380px;border:1px solid #3a4060;border-radius:12px;background:#161a27;color:#dce3fa;padding:20px; }
+.panel-dialog::backdrop { background:rgba(0,0,0,.55); }
+.panel-dialog label { display:block;white-space:pre-line;font-size:13px;line-height:1.6; }
+.panel-dialog input { width:100%;margin-top:12px;padding:10px;border:1px solid #46516d;border-radius:6px;background:#0f111a;color:#dce3fa;font:inherit; }
+.panel-dialog-actions { display:flex;justify-content:flex-end;gap:8px;margin-top:16px; }

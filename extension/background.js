@@ -22,12 +22,7 @@ async function pinAndMoveToFirst(tabId) {
   await chrome.tabs.move(tabId, { index: 0 });
 }
 
-chrome.action.onClicked.addListener(async (tab) => {
-  // Reopen the left panel directly without replacing the current website tab.
-  if (chrome.sidePanel?.open && tab?.windowId !== undefined) {
-    try { await chrome.sidePanel.open({windowId:tab.windowId}); return; }
-    catch { /* Keep the dashboard available if Chrome cannot open its panel. */ }
-  }
+chrome.action.onClicked.addListener(async () => {
   try {
     // 現在のウィンドウ内だけを検索（他ウィンドウのダッシュボードには飛ばない）
     const currentWindow = await chrome.windows.getCurrent();

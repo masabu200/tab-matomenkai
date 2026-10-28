@@ -17,7 +17,6 @@ Tab Matomen Kai guarda tus pestañas como «espacios», uno por proyecto o tarea
 - Deshacer: revierte una eliminación o un archivado justo después de hacerlo (Ctrl/⌘+Z).
 - Copiar listas de URL: en Markdown, título + URL o solo URL, directamente al portapapeles.
 - Guardar con clic derecho: guarda la página o el enlace bajo el cursor en cualquier espacio desde el menú contextual.
-- Panel lateral izquierdo: muestra la barra izquierda en el panel lateral de Chrome (posición izquierda) para que se mantenga visible mientras navegas.
 - Teclado: Ctrl/⌘+S guardar, Ctrl/⌘+K buscar espacios, / filtrar pestañas.
 - Copia de seguridad: exportación/importación en JSON, copias automáticas programadas y copia manual en Google Drive.
 - 10 idiomas: inglés, japonés, chino simplificado, chino tradicional, coreano, español, portugués (Brasil), alemán, francés e italiano. Cámbialo en Ajustes.
@@ -30,7 +29,6 @@ Todo se almacena en el almacenamiento local de tu navegador. La copia en Google 
 - storage / unlimitedStorage: conservar los espacios y los ajustes en local.
 - alarms: copias de seguridad automáticas programadas.
 - downloads: escribir las copias de seguridad en JSON en la carpeta Descargas.
-- sidePanel: mostrar la barra izquierda en el panel lateral de Chrome.
 - contextMenus: el menú contextual «Guardar en Tab Matomen Kai».
 - identity: autorizar el guardado de copias de seguridad en Google Drive (solo el ámbito drive.file).
 - Permiso de host googleapis.com: subir archivos a la API de Google Drive. 127.0.0.1: comunicarse con el servidor opcional de integración de IA local en el propio PC del usuario.

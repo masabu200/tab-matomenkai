@@ -42,9 +42,8 @@ const fs=require('fs'),path=require('path'),assert=require('node:assert/strict')
   await UI.inSettings(page,()=>page.locator('#restorePreviousTabs').click());await page.waitForFunction(()=>document.getElementById('message').textContent.includes('復元に失敗'));
   assert.deepEqual(await page.evaluate(async()=>(await getWindowTabs()).filter(isClosableTab).map(t=>t.url||t.pendingUrl)),urls);
   await page.evaluate(()=>{chrome.tabs.create=originalCreate});console.log('PASS restore failure retains current tabs');
-  const panel=await context.newPage();await panel.goto(`chrome-extension://${id}/sidepanel.html`);
-  await panel.evaluate(()=>{document.documentElement.classList.add('left-layout-verified');document.querySelector('.app').hidden=false;chrome.sidePanel.getLayout=async()=>({side:'left'})});
+  const panel=page;
   for(const width of [280,360,430]){await panel.setViewportSize({width,height:900});await panel.waitForTimeout(250);assert.ok(await panel.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await panel.screenshot({path:`evidence/workspace-tools-${width}.png`});}
-  assert.deepEqual(errors,[]);console.log('PASS panel widths 280/360/430 and no page errors');
+  assert.deepEqual(errors,[]);console.log('PASS narrow dashboard widths 280/360/430 and no page errors');
  }finally{await context.close();server.close();fs.rmSync(dir,{recursive:true,force:true})}
 })().catch(e=>{console.error(e);process.exitCode=1});

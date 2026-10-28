@@ -29,7 +29,7 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
   // dynamic messages use the override, with substitutions
   assert.equal(await page.evaluate(()=>t('m_f272b678d1',[3])),'Saved 3 tabs.');
   // a second page in the same profile paints English on first load (no flash of Japanese)
-  const other=await context.newPage();await other.goto(`chrome-extension://${id}/sidepanel.html`);
+  const other=await context.newPage();await other.goto(`chrome-extension://${id}/dashboard.html`);
   assert.equal(await other.evaluate(()=>document.documentElement.lang),'en');
   assert.equal(await other.evaluate(()=>I18n.current()),'en');await other.close();
   // the service worker follows the setting too

@@ -69,14 +69,6 @@ const fs=require('fs'),path=require('path'),os=require('os'),http=require('http'
   assert.equal(await p.evaluate(()=>getComputedStyle(document.querySelector('[data-group-id="g1"] .tab-group__body')).gridTemplateColumns.split(' ').length),3);
   await p.locator('#btnViewList').click();
   console.log('PASS narrow layout stacks sidebar, card view 1 column, restores at 1280');
-  // サイドパネルでは保存状態を検索欄の下に残す（メインは非表示のため）
-  const panel=await context.newPage();await panel.setViewportSize({width:360,height:800});await panel.goto(`chrome-extension://${id}/sidepanel.html`);
-  await panel.evaluate(()=>{chrome.sidePanel.getLayout=async()=>({side:'left'});document.documentElement.classList.add('left-layout-verified');document.querySelector('.app').hidden=false});
-  await panel.waitForFunction(()=>g_dashboardWindowId!==null);
-  assert.equal(await panel.locator('.workspace-tools #workspaceSaveStatus').count(),1);
-  await panel.waitForFunction(()=>document.getElementById('workspaceSaveStatus').textContent.includes('案件A'));
-  assert.ok(await panel.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
-  await panel.keyboard.press('/');assert.equal(await panel.evaluate(()=>document.activeElement.id),'spaceSearch');
-  assert.deepEqual(errors,[]);console.log('PASS panel keeps status under search; / focuses space search; no page errors');
+  assert.deepEqual(errors,[]);console.log('PASS no page errors');
  }finally{await context.close();server.close();fs.rmSync(dir,{recursive:true,force:true})}
 })().catch(e=>{console.error(e);process.exitCode=1});

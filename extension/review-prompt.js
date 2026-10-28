@@ -61,6 +61,6 @@ globalThis.ReviewPrompt = (() => {
   return {KEY, maybeShow, shouldShow, recordUse, storeUrl, MIN_INSTALL_DAYS, MIN_ACTIVE_DAYS, SNOOZE_DAYS, MAX_SHOWN};
 })();
 
-if (typeof document !== 'undefined' && !document.body.classList.contains('sidebar-panel')) {
+if (typeof document !== 'undefined') {
   setTimeout(() => { ReviewPrompt.maybeShow().catch(() => {}); }, 1500);
 }

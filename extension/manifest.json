@@ -36,15 +36,11 @@
     "downloads",
     "tabGroups",
     "unlimitedStorage",
-    "sidePanel",
     "identity",
     "contextMenus"
   ],
   "version": "1.2.1",
   "minimum_chrome_version": "116",
-  "side_panel": {
-    "default_path": "sidepanel.html"
-  },
   "host_permissions": [
     "http://127.0.0.1/*",
     "https://www.googleapis.com/*"

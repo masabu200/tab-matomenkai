@@ -3,7 +3,7 @@
   const trigger=document.createElement('button');trigger.id='openSettings';trigger.type='button';trigger.className='sidebar-settings';
   trigger.innerHTML=`<span aria-hidden="true">⚙</span><span class="settings-label">${t('m_6329f21c41')}</span>`;
   trigger.title=t('m_e438ffd26f');trigger.setAttribute('aria-label',t('m_56b6cd2c1a'));trigger.setAttribute('aria-haspopup','dialog');trigger.setAttribute('aria-controls','settingsDialog');
-  const controls=document.querySelector('.sidebar-controls');controls.insertBefore(trigger,controls.querySelector('.sidebar-launcher'));
+  const controls=document.querySelector('.sidebar-controls');controls.append(trigger);
   const dialog=document.createElement('dialog');dialog.id='settingsDialog';dialog.className='settings-dialog';dialog.setAttribute('aria-labelledby','settingsTitle');
   const header=document.createElement('div');header.className='settings-dialog-header';
   const heading=document.createElement('h2');heading.id='settingsTitle';heading.textContent=t('m_6329f21c41');

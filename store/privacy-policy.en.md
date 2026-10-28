@@ -25,7 +25,6 @@ Only the following features send data, and only when you explicitly trigger them
 - `storage` / `unlimitedStorage`: keep the data above locally.
 - `alarms`: scheduled automatic backups (local JSON export).
 - `downloads`: save JSON backups to your Downloads folder.
-- `sidePanel`: show the left bar in Chrome's side panel.
 - `contextMenus`: save from the right-click menu.
 - `identity`: authorize the Google Drive connection.
 - Content script on all sites: only detects the configured mouse button to return to the dashboard. It does not read or store page content.
