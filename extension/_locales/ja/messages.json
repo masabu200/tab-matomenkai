@@ -1614,5 +1614,11 @@
   },
   "messageDismissHint": {
     "message": "クリックで閉じる"
+  },
+  "driveAuthWaiting": {
+    "message": "Googleの許可画面を開いています。別ウィンドウで表示されることがあります。Chromeにログインしていない場合はログインを求められます。"
+  },
+  "driveAuthTimeout": {
+    "message": "Googleの許可が確認できませんでした。許可画面を閉じた場合や、Chromeにログインしていない場合は、ログイン後にもう一度「接続」を押してください。"
   }
 }

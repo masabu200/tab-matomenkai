@@ -1222,5 +1222,11 @@
   },
   "messageDismissHint": {
     "message": "Clique para fechar"
+  },
+  "driveAuthWaiting": {
+    "message": "Abrindo a tela de permissão do Google. Ela pode aparecer em outra janela. Se você não estiver conectado ao Chrome, será solicitado o login."
+  },
+  "driveAuthTimeout": {
+    "message": "Não foi possível confirmar a permissão do Google. Se você fechou a tela de permissão ou não está conectado ao Chrome, faça login e pressione Conectar novamente."
   }
 }

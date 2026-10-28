@@ -1213,5 +1213,11 @@
   },
   "messageDismissHint": {
     "message": "Cliquer pour fermer"
+  },
+  "driveAuthWaiting": {
+    "message": "Ouverture de l'écran d'autorisation Google. Il peut apparaître dans une autre fenêtre. Si vous n'êtes pas connecté à Chrome, une connexion vous sera demandée."
+  },
+  "driveAuthTimeout": {
+    "message": "Impossible de confirmer l'autorisation Google. Si vous avez fermé l'écran d'autorisation ou n'êtes pas connecté à Chrome, connectez-vous puis appuyez à nouveau sur Connecter."
   }
 }

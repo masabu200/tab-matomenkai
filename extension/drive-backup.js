@@ -18,10 +18,17 @@ globalThis.DriveBackup = (() => {
   }
 
   // ---------- builtin (chrome.identity.getAuthToken) ----------
+  const AUTH_TIMEOUT_MS = 120000;
   async function builtinToken(interactive) {
     let result;
-    try { result = await chrome.identity.getAuthToken({interactive, scopes:[scope]}); }
-    catch (error) { throw Error(interactive ? t('m_9e9943aa18') + (error?.message ? `（${error.message}）` : '') : t('m_1b162ecb08')); }
+    try {
+      const request = chrome.identity.getAuthToken({interactive, scopes:[scope]});
+      result = interactive
+        ? await Promise.race([request, new Promise((_, reject) => setTimeout(() => reject(Error(t('driveAuthTimeout'))), AUTH_TIMEOUT_MS))])
+        : await request;
+    }
+    catch (error) {
+      if (error?.message === t('driveAuthTimeout')) throw error; throw Error(interactive ? t('m_9e9943aa18') + (error?.message ? `（${error.message}）` : '') : t('m_1b162ecb08')); }
     const token = typeof result === 'string' ? result : result?.token;
     const granted = typeof result === 'string' ? [scope] : (result?.grantedScopes || [scope]);
     if (!token) throw Error(interactive ? t('m_9e9943aa18') : t('m_1b162ecb08'));

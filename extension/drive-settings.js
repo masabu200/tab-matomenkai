@@ -38,7 +38,7 @@
     try {await fn();await refresh();}catch(error){el('driveStatus').textContent=error.message;}
     finally{busy=false;section.querySelectorAll('button').forEach(b=>b.disabled=false);}
   });}
-  action('driveConnect',async()=>{await DriveBackup.connect(builtin?null:el('driveClientId').value.trim());el('driveStatus').textContent=t('m_e873b731b1');section.querySelector('details').open=false;});
+  action('driveConnect',async()=>{if(builtin)el('driveStatus').textContent=t('driveAuthWaiting');await DriveBackup.connect(builtin?null:el('driveClientId').value.trim());el('driveStatus').textContent=t('m_e873b731b1');section.querySelector('details').open=false;});
   action('driveSave',async()=>{const data=await loadData();await DriveBackup.save(data,getActiveSpaceId(data));el('driveStatus').textContent=t('m_f714e3e49d');});
   action('driveDisconnect',async()=>{await DriveBackup.disconnect();el('driveStatus').textContent=t('m_307c18ccd9');});
   refresh().then(async()=>{try{await DriveBackup.auth();el('driveStatus').textContent=t('m_23e782bfe8');}catch{}}).catch(()=>{el('driveStatus').textContent=t('m_26a4745b1e');});

@@ -1213,5 +1213,11 @@
   },
   "messageDismissHint": {
     "message": "Haz clic para cerrar"
+  },
+  "driveAuthWaiting": {
+    "message": "Abriendo la pantalla de permisos de Google. Puede aparecer en otra ventana. Si no has iniciado sesión en Chrome, se te pedirá que lo hagas."
+  },
+  "driveAuthTimeout": {
+    "message": "No se pudo confirmar el permiso de Google. Si cerraste la pantalla de permisos o no has iniciado sesión en Chrome, inicia sesión y pulsa Conectar de nuevo."
   }
 }

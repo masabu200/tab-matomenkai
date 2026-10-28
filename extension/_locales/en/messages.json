@@ -1222,5 +1222,11 @@
   },
   "messageDismissHint": {
     "message": "Click to dismiss"
+  },
+  "driveAuthWaiting": {
+    "message": "Opening Google's permission screen. It may appear in a separate window. If you are not signed in to Chrome, you will be asked to sign in."
+  },
+  "driveAuthTimeout": {
+    "message": "Could not confirm Google's permission. If you closed the permission screen or are not signed in to Chrome, sign in and press Connect again."
   }
 }

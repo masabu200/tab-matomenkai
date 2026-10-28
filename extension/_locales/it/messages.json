@@ -1222,5 +1222,11 @@
   },
   "messageDismissHint": {
     "message": "Fai clic per chiudere"
+  },
+  "driveAuthWaiting": {
+    "message": "Apertura della schermata di autorizzazione Google. Potrebbe comparire in un'altra finestra. Se non hai eseguito l'accesso a Chrome, ti verrà chiesto di accedere."
+  },
+  "driveAuthTimeout": {
+    "message": "Impossibile confermare l'autorizzazione di Google. Se hai chiuso la schermata di autorizzazione o non hai eseguito l'accesso a Chrome, accedi e premi di nuovo Connetti."
   }
 }

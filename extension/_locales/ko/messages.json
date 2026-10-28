@@ -1213,5 +1213,11 @@
   },
   "messageDismissHint": {
     "message": "클릭하여 닫기"
+  },
+  "driveAuthWaiting": {
+    "message": "Google 권한 화면을 여는 중이에요. 별도의 창에 표시될 수 있어요. Chrome에 로그인하지 않았다면 로그인을 요청해요."
+  },
+  "driveAuthTimeout": {
+    "message": "Google 권한을 확인할 수 없었어요. 권한 화면을 닫았거나 Chrome에 로그인하지 않았다면, 로그인 후 다시 \"연결\"을 눌러 주세요."
   }
 }
