@@ -49,5 +49,6 @@
     "http://127.0.0.1/*",
     "https://www.googleapis.com/*"
   ],
-  "default_locale": "en"
+  "default_locale": "en",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq4jdnO6hZZlEzigDIkeQx1RkJvoUbQJpSJ1hHjKkkOp8/8bJkBypXSbbfL13CLnrcg/asM5IuyV2BTueVoKVTA+PaMAlpnyAjsTGggwlnucYkJwTvc5QQQGV8y2Zf5ko0ryYZq7I3jlrgSePIU+K4WO2Mn5N6RPVn07b/2LOS1JoOR4j6Wu0W0QWNNSYfv6xh7mUPSUtFAd7T3GwlfgVH+Lc8gHRx7xOFtXN9LSSjKQCafvRfSRyWk9HLyn7Wr+oypo8YPqagPZ9Eh1b6a/9mxiZrRAomJ6A2GWznH96PY4Z/lCsebjI0HbDj62uLvZEocEDA/NjcU0S3UFE8moAiQIDAQAB"
 }

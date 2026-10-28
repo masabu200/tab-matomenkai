@@ -55,8 +55,13 @@ Googleドライブ接続は **2つの方式** を持ち、`extension/drive-backu
 - `extension/drive-settings.js`: builtin では手順 `<details>` を隠し、説明文 `#driveBuiltinHelp` を出す。
 - `tests/drive-backup.cjs`: manual（無操作更新・更新失敗）と builtin（拒否・接続・非対話取得・401・切断）をモックで検証。
 
+## 進捗（2026-10-28）
+
+- [x] manifest に `key` を追加（ストアの公開鍵）。計算した拡張IDはストアのアイテムID `ofpnbokbnlfjglogdhoegmiallanobdb` と一致。開発版も同じIDになる。
+- [ ] Google Cloud の「Chrome 拡張機能」クライアントを作成し、`oauth2.client_id` を manifest に設定。
+- [ ] 同意画面を本番に。
+
 ## 未完
 
-- manifest の `key` と `oauth2` の追加（公開鍵とクライアントIDは開発者のアカウントでしか取れない）。
 - 実 Google での往復確認（DRIVE-02）。
 - ストア掲載文の権限説明に `identity` の用途（Googleドライブへのバックアップ保存）を書く。

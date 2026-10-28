@@ -280,3 +280,9 @@ Playwright 1.62 の `page.waitForFunction` に async 関数を渡すと、最初
 - テスト：`tests/onboarding.cjs` 新規。`tests/left-only.cjs` と `tests/launcher.test.cjs` を「配置に関係なく開く・案内が無い」前提に書き換え。`tests/reused-sidebar.cjs` のフォーカス順の期待を折りたたみ対応に更新。
 - 補足：ダッシュボードのスペース名入力は `window.prompt`（ブラウザ標準）で、Playwright は未処理ダイアログを自動で閉じるため、テストでは `page.once('dialog', …)` で応答する。
 - i18n の保険：`chrome.i18n` がメッセージを返さない（拡張を再読み込みしていない等）場合は、カタログを直接読み込んで再描画するようにした。
+
+## 2026-10-28 DRIVE-01 続き：拡張IDをストアと統一
+
+- ストアの公開鍵を `manifest.json` の `key` に設定。SHA-256 から計算したIDがストアのアイテムID `ofpnbokbnlfjglogdhoegmiallanobdb` と一致することを確認。以後、開発版を読み込んでもIDはストアと同じになる。
+- 影響：Chrome で再読み込みするとIDが変わるため、保存データ・設定・Drive接続は別扱いになる。切り替え前にエクスポートし、切り替え後にインポートする。
+- 次：Google Cloud で「Chrome 拡張機能」種別のクライアント（アイテムID = 上記）を作り、`oauth2.client_id` を設定。同意画面を本番へ。
