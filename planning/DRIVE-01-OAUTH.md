@@ -58,7 +58,7 @@ Googleドライブ接続は **2つの方式** を持ち、`extension/drive-backu
 ## 進捗（2026-10-28）
 
 - [x] manifest に `key` を追加（ストアの公開鍵）。計算した拡張IDはストアのアイテムID `ofpnbokbnlfjglogdhoegmiallanobdb` と一致。開発版も同じIDになる。
-- [ ] Google Cloud の「Chrome 拡張機能」クライアントを作成し、`oauth2.client_id` を manifest に設定。
+- [x] Google Cloud の「Chrome 拡張機能」クライアントを作成し、`oauth2.client_id` を manifest に設定（2026-10-28）。設定画面は builtin 表示になる。
 - [ ] 同意画面を本番に。
 
 ## 未完

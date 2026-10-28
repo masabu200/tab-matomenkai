@@ -286,3 +286,9 @@ Playwright 1.62 の `page.waitForFunction` に async 関数を渡すと、最初
 - ストアの公開鍵を `manifest.json` の `key` に設定。SHA-256 から計算したIDがストアのアイテムID `ofpnbokbnlfjglogdhoegmiallanobdb` と一致することを確認。以後、開発版を読み込んでもIDはストアと同じになる。
 - 影響：Chrome で再読み込みするとIDが変わるため、保存データ・設定・Drive接続は別扱いになる。切り替え前にエクスポートし、切り替え後にインポートする。
 - 次：Google Cloud で「Chrome 拡張機能」種別のクライアント（アイテムID = 上記）を作り、`oauth2.client_id` を設定。同意画面を本番へ。
+
+## 2026-10-28 DRIVE-01 完了：manifest に oauth2 を設定
+
+- Google Cloud で作成した「Chrome 拡張機能」種別クライアント（アイテムID = ストアID）を `manifest.json` の `oauth2` に設定。`drive.file` スコープのみ。
+- `tests/drive-backup.cjs` は、手動方式の検査で manifest から `oauth2` を外したふりをし、組み込み方式の検査は実 manifest で行うように変更。
+- 残り：同意画面の本番公開の確認と、実 Google での接続→保存→照合（DRIVE-02）。

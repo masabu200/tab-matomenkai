@@ -9,8 +9,9 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
   const status=page=>page.locator('#driveStatus');
   const waitStatus=(page,text)=>page.waitForFunction(t=>document.querySelector('#driveStatus').textContent.includes(t),text);
 
-  // ---------- manual mode (user-supplied client ID) ----------
+  // ---------- manual mode (user-supplied client ID): simulate a build without oauth2 ----------
   let page=await context.newPage();
+  await page.addInitScript(()=>{const real=chrome.runtime.getManifest.bind(chrome.runtime);chrome.runtime.getManifest=()=>{const m={...real()};delete m.oauth2;return m};});
   await page.goto(`chrome-extension://${id}/dashboard.html`);await page.waitForFunction(()=>g_dashboardWindowId!==null);
   await page.evaluate(()=>{globalThis.authMode='ok';globalThis.authCalls=[];chrome.identity.launchWebAuthFlow=async({url,interactive})=>{const u=new URL(url);globalThis.authCalls.push({interactive,prompt:u.searchParams.get('prompt')});if(globalThis.authMode==='fail')throw new Error('silent failed');const token=globalThis.authMode==='renew'?'renewed-secret':'fixture-secret';return u.searchParams.get('redirect_uri')+'#'+new URLSearchParams({access_token:token,expires_in:'3600',scope:u.searchParams.get('scope'),state:globalThis.authMode==='wrong'?'wrong':u.searchParams.get('state')})};});
   assert.equal(await page.evaluate(()=>DriveBackup.mode()),'manual');
@@ -41,12 +42,10 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
   await page.setViewportSize({width:375,height:900});await page.locator('.drive-settings').scrollIntoViewIfNeeded();await page.screenshot({path:'evidence/drive-backup-settings.png'});
   await page.close();
 
-  // ---------- builtin mode (manifest oauth2 + chrome.identity.getAuthToken) ----------
+  // ---------- builtin mode (the real manifest carries oauth2; identity is mocked) ----------
   await worker.evaluate(()=>chrome.storage.local.remove('pwm_drive_connected'));
   page=await context.newPage();
   await page.addInitScript(()=>{
-    const real=chrome.runtime.getManifest.bind(chrome.runtime);
-    chrome.runtime.getManifest=()=>({...real(),oauth2:{client_id:'builtin-client.apps.googleusercontent.com',scopes:['https://www.googleapis.com/auth/drive.file']}});
     globalThis.tokenCalls=[];globalThis.removed=[];globalThis.tokenMode='ok';
     chrome.identity.getAuthToken=async({interactive,scopes})=>{globalThis.tokenCalls.push({interactive,scopes});if(globalThis.tokenMode==='deny')throw new Error('The user did not approve access.');return {token:globalThis.tokenMode==='second'?'builtin-token-2':'builtin-token',grantedScopes:scopes}};
     chrome.identity.removeCachedAuthToken=async({token})=>{globalThis.removed.push(token)};
