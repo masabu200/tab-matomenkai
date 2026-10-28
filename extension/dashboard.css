@@ -2321,3 +2321,28 @@ body.sidebar-collapsed .sidebar-settings { min-width:32px;width:32px;padding:0; 
 .auto-clean-trash__list li { display:flex; justify-content:space-between; align-items:center; gap:8px; font-size:12px; }
 .auto-clean-trash__list li span { overflow-wrap:anywhere; }
 .auto-clean-trash__empty { opacity:.7; }
+
+/* settings: wide, multi-column layout */
+.settings-dialog { width:min(1180px, calc(100vw - 48px)); max-width:none; max-height:calc(100dvh - 48px); padding:22px 24px; }
+.settings-grid { columns:320px 3; column-gap:18px; }
+.settings-card { break-inside:avoid; display:flex; flex-direction:column; gap:8px; margin:0 0 18px; padding:14px 16px; border:1px solid var(--surface-dark-line, #3a4152); border-radius:14px; }
+.settings-card h3 { margin:0 0 2px; font-size:14px; }
+.settings-card.ai-settings, .settings-card.language-settings { margin-top:0; }
+.settings-dialog .sidebar__backup.settings-card .sidebar__backup-row { margin-bottom:8px; }
+.settings-workspace-actions { display:flex; flex-direction:column; gap:8px; }
+@media (max-width: 720px) { .settings-dialog { width:calc(100vw - 24px); padding:16px; } .settings-grid { columns:1; } }
+.settings-dialog .sidebar__backup.settings-card { padding:14px 16px; border:1px solid var(--surface-dark-line, #3a4152); }
+.settings-workspace-card .settings-workspace-actions { padding:0; border:0; margin:0; }
+
+/* pinned tabs (shared by all spaces) */
+.pinned-tabs { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin:0 0 12px; padding:8px 12px; border:1px dashed var(--card-border, #d7d9de); border-radius:12px; }
+.pinned-tabs[hidden] { display:none; }
+.pinned-tabs__title { font-size:12px; font-weight:600; color:var(--text-secondary, #666); }
+.pinned-tabs__list { display:flex; gap:6px; flex-wrap:wrap; min-width:0; }
+.pinned-tab { display:flex; align-items:center; max-width:220px; border:1px solid var(--card-border, #d7d9de); border-radius:999px; background:var(--card-bg, #fff); }
+.pinned-tab__open { display:flex; align-items:center; gap:6px; min-width:0; padding:4px 4px 4px 10px; border:0; background:none; cursor:pointer; font-size:12px; color:inherit; }
+.pinned-tab__open span { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.pinned-tab__unpin { border:0; background:none; cursor:pointer; padding:4px 10px 4px 4px; font-size:13px; color:var(--text-secondary, #666); }
+.tab-card__pin { flex-shrink:0; border:0; background:none; cursor:pointer; font-size:13px; opacity:0; padding:4px; transition:opacity .15s; }
+.tab-card:hover .tab-card__pin, .tab-card:focus-within .tab-card__pin { opacity:.75; }
+.tab-card__pin:hover { opacity:1; }

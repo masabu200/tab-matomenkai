@@ -28,7 +28,7 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
   await other.close();
   // 3) settings order and advanced section collapsed
   await page.locator('#openSettings').click();
-  const order=await page.evaluate(()=>[...document.querySelectorAll('#settingsDialog > *')].map(e=>e.id||e.className).join('|'));
+  const order=await page.evaluate(()=>[...document.querySelectorAll('#settingsDialog .settings-grid > *')].map(e=>e.id||e.className).join('|'));
   assert.ok(order.indexOf('language-settings')<order.indexOf('sidebar__backup')&&order.indexOf('drive-settings')<order.indexOf('aiSettings'),order);
   assert.equal(await page.evaluate(()=>document.getElementById('aiSettings').open),false,'AI section collapsed by default');
   assert.equal(await page.locator('#aiConnectionToken').isVisible(),false);

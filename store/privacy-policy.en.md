@@ -1,16 +1,18 @@
 # Tab Matomen Kai Privacy Policy (draft)
 
-Last updated: 2026-10-28. Before publishing, fill in the operator name and contact and have the text reviewed as needed.
+Last updated: 2026-10-28.
 
 ## Operator
-- Name: [operator name]
-- Contact: [public support email]
+- Name: KWS
+- Address: Nishi-Shinjuku Mizuma Bldg. 2F, 3-3-13 Nishi-Shinjuku, Shinjuku-ku, Tokyo 160-0023, Japan
+- Contact: info@kw-s.jp
 
 ## Information we store
 Tab Matomen Kai (the "extension") stores the following only in your browser's local storage (`chrome.storage.local`):
 - Spaces, categories and tabs you save (titles, URLs, favicon URLs, tab group names and colors, order)
 - Settings (view mode, language, auto-backup interval, auto-save on switch, etc.)
-- Minimal usage records (the list of dates you used the dashboard, used to decide when to ask for a review; how many times the request was shown; whether you opted out)
+- Minimal usage records (the list of dates you used the dashboard, used to decide when to ask for a review; how many times the request was shown; whether you opted out; each space's last-used time for automatic tidying)
+- Spaces removed by automatic tidying (kept in a trash for 30 days, then deleted)
 
 This data is used only to make the extension work. It is not sent to the operator or any third-party server. There is no analytics or advertising measurement.
 

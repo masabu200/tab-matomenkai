@@ -482,6 +482,8 @@ async function getWindowTabs() {
 function isSavableTab(tab) {
   if (!tab) return false;
   if (g_dashboardTabId !== null && tab.id === g_dashboardTabId) return false;
+  // ピン留めタブは全スペース共通で開いたままにするので、スペースには保存しない
+  if (tab.pinned) return false;
   // 読み込み中のタブは url が空で pendingUrl だけ入っているので、そちらも見る
   return isSavableUrl(tab.pendingUrl || tab.url);
 }
@@ -491,6 +493,8 @@ function isClosableTab(tab) {
   if (g_dashboardTabId !== null && tab.id === g_dashboardTabId) return false;
   // The side panel has no tab ID; preserve every dashboard tab in its window.
   if (tab.url && tab.url.startsWith(DASHBOARD_PAGE_URL)) return false;
+  // ピン留めタブはスペースを切り替えても閉じない
+  if (tab.pinned) return false;
   return true;
 }
 
@@ -951,8 +955,10 @@ async function switchToSpace(targetSpaceId) {
       const groupTabIds = {}; // ourGroupId -> [chromeTabId, ...]
       (targetSpace.tabGroups || []).forEach((g) => { groupTabIds[g.id] = []; });
 
+      const pinnedOpen = new Set(allTabsNow.filter((t) => t.pinned).map((t) => t.pendingUrl || t.url));
       for (const savedTab of targetSpace.tabs) {
         if (!isRestorableUrl(savedTab.url)) continue;
+        if (savedTab.pinned && pinnedOpen.has(savedTab.url)) continue; // 既にピン留めで開いている
         const newTab = await new Promise((resolve) => {
           chrome.tabs.create({ url: savedTab.url, windowId: g_dashboardWindowId, active: false, pinned: savedTab.pinned || false }, (tab) => {
             void chrome.runtime.lastError;
@@ -2145,6 +2151,18 @@ function createTabCard(tab, originalIndex, groupColor = '', groupColorHex = '') 
   card.appendChild(checkbox);
   card.appendChild(favicon);
   card.appendChild(textWrap);
+  const pinBtn = document.createElement('button');
+  pinBtn.type      = 'button';
+  pinBtn.className = 'tab-card__pin';
+  pinBtn.textContent = '📌';
+  pinBtn.setAttribute('aria-label', t('pinTabLabel'));
+  pinBtn.title     = t('pinTabTitle');
+  pinBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (typeof PinnedTabs !== 'undefined') PinnedTabs.pinSaved(originalIndex);
+  });
+
+  card.appendChild(pinBtn);
   card.appendChild(archiveBtn);
   card.appendChild(deleteBtn);
 

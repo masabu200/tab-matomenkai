@@ -1330,5 +1330,26 @@
   },
   "autoCleanRestored": {
     "message": "\"$1\" ripristinato dal cestino."
+  },
+  "pinnedHeading": {
+    "message": "Fissate (tutti gli spazi)"
+  },
+  "pinTabLabel": {
+    "message": "Fissa questa scheda"
+  },
+  "pinTabTitle": {
+    "message": "Fissa: resta aperta quando cambi spazio"
+  },
+  "unpinTabLabel": {
+    "message": "Rimuovi fissaggio: $1"
+  },
+  "unpinTabTitle": {
+    "message": "Rimuovi fissaggio (entra nello spazio attuale al prossimo salvataggio)"
+  },
+  "pinnedMessage": {
+    "message": "\"$1\" fissata. Resta aperta quando cambi spazio."
+  },
+  "unpinnedMessage": {
+    "message": "Fissaggio rimosso."
   }
 }

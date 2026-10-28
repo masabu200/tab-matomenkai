@@ -1321,5 +1321,26 @@
   },
   "autoCleanRestored": {
     "message": "\"$1\"을(를) 휴지통에서 되돌렸어요."
+  },
+  "pinnedHeading": {
+    "message": "고정됨(모든 스페이스 공통)"
+  },
+  "pinTabLabel": {
+    "message": "이 탭 고정"
+  },
+  "pinTabTitle": {
+    "message": "고정: 스페이스를 전환해도 열어 둡니다"
+  },
+  "unpinTabLabel": {
+    "message": "고정 해제: $1"
+  },
+  "unpinTabTitle": {
+    "message": "고정 해제(다음에 저장하면 현재 스페이스에 들어가요)"
+  },
+  "pinnedMessage": {
+    "message": "\"$1\"을(를) 고정했어요. 스페이스를 전환해도 열려 있어요."
+  },
+  "unpinnedMessage": {
+    "message": "고정을 해제했어요."
   }
 }

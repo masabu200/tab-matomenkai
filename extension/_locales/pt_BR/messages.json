@@ -1330,5 +1330,26 @@
   },
   "autoCleanRestored": {
     "message": "\"$1\" foi restaurado da lixeira."
+  },
+  "pinnedHeading": {
+    "message": "Fixadas (todos os espaços)"
+  },
+  "pinTabLabel": {
+    "message": "Fixar esta guia"
+  },
+  "pinTabTitle": {
+    "message": "Fixar: manter aberta ao trocar de espaço"
+  },
+  "unpinTabLabel": {
+    "message": "Desafixar: $1"
+  },
+  "unpinTabTitle": {
+    "message": "Desafixar (entra no espaço atual na próxima vez que você salvar)"
+  },
+  "pinnedMessage": {
+    "message": "\"$1\" foi fixada. Ela fica aberta ao trocar de espaço."
+  },
+  "unpinnedMessage": {
+    "message": "Desafixada."
   }
 }

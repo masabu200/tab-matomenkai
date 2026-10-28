@@ -6,7 +6,7 @@
   const actions=document.createElement('div');actions.className='settings-workspace-actions';
   const tools=document.querySelector('.workspace-tools');
   for(const item of tools.querySelectorAll(':scope > button'))actions.append(item);
-  dialog.append(heading,actions);
+  const card=document.createElement('section');card.className='settings-workspace-card';card.append(heading,actions);dialog.append(card);
   // 保存状態（変更あり/保存済み）は設定に隠さず常に見える場所に置く:
   // メインヘッダーの保存ボタン横に置く。
   const status=document.getElementById('workspaceSaveStatus');

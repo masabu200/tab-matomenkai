@@ -48,6 +48,15 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
   assert.equal(await page.evaluate(()=>document.documentElement.lang),'ja');
   assert.equal(await page.evaluate(()=>localStorage.getItem('pwm_i18n_locale')),null);
   assert.equal(await worker.evaluate(()=>I18n.ready()),'ja');
+  // stale catalog (e.g. strings added after Chrome loaded the extension): page reloads once and shows them
+  await page.evaluate(()=>{localStorage.setItem('pwm_i18n_effective','ja');localStorage.setItem('pwm_i18n_messages','{}');localStorage.setItem('pwm_i18n_signature','stale');sessionStorage.removeItem('pwm_i18n_reloaded');});
+  await page.reload();await page.waitForFunction(()=>typeof g_dashboardWindowId!=='undefined'&&g_dashboardWindowId!==null);
+  await page.waitForFunction(()=>localStorage.getItem('pwm_i18n_signature')!=='stale');
+  await page.waitForFunction(()=>typeof g_dashboardWindowId!=='undefined'&&g_dashboardWindowId!==null);
+  await page.locator('#openSettings').click();
+  assert.match(await page.locator('.auto-clean-settings h3').innerText(),/使っていないスペース/);
+  assert.doesNotMatch(await page.locator('#settingsDialog').innerText(),/\bautoClean[A-Z]|\bm_[0-9a-f]{10}\b/);
+  await page.locator('#closeSettings').click();
   assert.deepEqual(errors,[]);
   console.log('PASS i18n: default ja; settings switch to en reloads with localized title/buttons/attributes/dynamic messages; second page and service worker follow; zh_CN; back to auto clears override; no page errors');
  }finally{await context.close();fs.rmSync(dir,{recursive:true,force:true});}

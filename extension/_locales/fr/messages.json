@@ -1321,5 +1321,26 @@
   },
   "autoCleanRestored": {
     "message": "« $1 » restauré depuis la corbeille."
+  },
+  "pinnedHeading": {
+    "message": "Épinglés (tous les espaces)"
+  },
+  "pinTabLabel": {
+    "message": "Épingler cet onglet"
+  },
+  "pinTabTitle": {
+    "message": "Épingler : rester ouvert en changeant d’espace"
+  },
+  "unpinTabLabel": {
+    "message": "Désépingler : $1"
+  },
+  "unpinTabTitle": {
+    "message": "Désépingler (rejoint l’espace actuel au prochain enregistrement)"
+  },
+  "pinnedMessage": {
+    "message": "« $1 » épinglé. Il reste ouvert quand vous changez d’espace."
+  },
+  "unpinnedMessage": {
+    "message": "Désépinglé."
   }
 }

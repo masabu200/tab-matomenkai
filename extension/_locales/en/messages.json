@@ -1330,5 +1330,26 @@
   },
   "autoCleanRestored": {
     "message": "Restored \"$1\" from the trash."
+  },
+  "pinnedHeading": {
+    "message": "Pinned (all spaces)"
+  },
+  "pinTabLabel": {
+    "message": "Pin this tab"
+  },
+  "pinTabTitle": {
+    "message": "Pin: keep it open when switching spaces"
+  },
+  "unpinTabLabel": {
+    "message": "Unpin: $1"
+  },
+  "unpinTabTitle": {
+    "message": "Unpin (it joins the current space the next time you save)"
+  },
+  "pinnedMessage": {
+    "message": "Pinned \"$1\". It stays open when you switch spaces."
+  },
+  "unpinnedMessage": {
+    "message": "Unpinned."
   }
 }

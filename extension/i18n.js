@@ -23,15 +23,23 @@ globalThis.I18n = (() => {
   }
   function browserLocale() { try { return normalize(chrome.i18n.getUILanguage()); } catch { return 'en'; } }
 
+  // The page paints synchronously from the last catalog we fetched (explicit choice or browser
+  // language). ready() always re-reads the catalog from the extension package, so strings added
+  // after Chrome loaded the extension (or after a manifest version that did not change) still show.
+  const LS_EFFECTIVE = 'pwm_i18n_effective', LS_SIGNATURE = 'pwm_i18n_signature';
+  let cachedSignature = '';
   if (hasLS) {
     try {
-      const code = localStorage.getItem(LS_LOCALE);
-      if (code && SUPPORTED.includes(code) && localStorage.getItem(LS_VERSION) === version()) {
+      const explicit = localStorage.getItem(LS_LOCALE);
+      const effective = localStorage.getItem(LS_EFFECTIVE);
+      const want = explicit && SUPPORTED.includes(explicit) ? explicit : browserLocale();
+      if (effective === want) {
         const parsed = JSON.parse(localStorage.getItem(LS_MESSAGES) || 'null');
-        if (parsed && typeof parsed === 'object') { override = code; messages = parsed; }
+        if (parsed && typeof parsed === 'object') { messages = parsed; cachedSignature = localStorage.getItem(LS_SIGNATURE) || ''; if (explicit === want) override = explicit; }
       }
-    } catch { override = null; messages = null; }
+    } catch { override = null; messages = null; cachedSignature = ''; }
   }
+  let lastSignature = cachedSignature;
 
   const format = (msg, subs) => msg.replace(/\$(\$|\d)/g, (m, x) => x === '$' ? '$' : (subs?.[Number(x) - 1] ?? ''));
   function t(key, subs) {
@@ -47,26 +55,31 @@ globalThis.I18n = (() => {
     if (!response.ok) throw Error('locale ' + code);
     return response.json();
   }
-  function cache(code, data) {
+  const signatureOf = data => { const keys = Object.keys(data); return keys.length + ':' + JSON.stringify(data).length; };
+  function cache(explicit, effective, data, signature) {
     if (!hasLS) return;
     try {
-      if (!code) { localStorage.removeItem(LS_LOCALE); localStorage.removeItem(LS_MESSAGES); localStorage.removeItem(LS_VERSION); return; }
-      localStorage.setItem(LS_LOCALE, code); localStorage.setItem(LS_MESSAGES, JSON.stringify(data)); localStorage.setItem(LS_VERSION, version());
+      if (explicit) localStorage.setItem(LS_LOCALE, explicit); else localStorage.removeItem(LS_LOCALE);
+      localStorage.setItem(LS_EFFECTIVE, effective); localStorage.setItem(LS_MESSAGES, JSON.stringify(data));
+      localStorage.setItem(LS_SIGNATURE, signature); localStorage.setItem(LS_VERSION, version());
     } catch {}
   }
   async function settingLanguage() {
     try { return ((await chrome.storage.local.get('pwm_settings')).pwm_settings || {}).language || 'auto'; } catch { return 'auto'; }
   }
-  // Sync in-memory + localStorage with the stored setting. Returns the effective locale.
-  // chrome.i18n only knows _locales from the moment the extension was loaded; when it has no
-  // messages (e.g. unpacked extension not reloaded after _locales appeared) fall back to fetching.
-  function nativeAvailable() { try { return !!chrome.i18n.getMessage('appName'); } catch { return false; } }
+  // Sync in-memory + localStorage with the stored setting and the catalog on disk.
+  // Returns the effective locale; signature() tells callers whether the catalog changed.
   async function ready() {
-    let code = await settingLanguage();
-    if (code === 'auto' && !nativeAvailable()) code = browserLocale();
-    if (code !== 'auto' && SUPPORTED.includes(code)) {
-      if (override !== code || !messages) { messages = await load(code); override = code; cache(code, messages); }
-    } else if (override || messages) { override = null; messages = null; cache(null); }
+    const code = await settingLanguage();
+    const explicit = code !== 'auto' && SUPPORTED.includes(code) ? code : null;
+    const effective = explicit || browserLocale();
+    let data;
+    try { data = await load(effective); } catch { data = null; }
+    if (data) {
+      messages = data; lastSignature = signatureOf(data);
+      cache(explicit, effective, data, lastSignature);
+    } else if (!explicit) { messages = null; }
+    override = explicit;
     return current();
   }
   async function setLanguage(code) {
@@ -76,6 +89,7 @@ globalThis.I18n = (() => {
     return ready();
   }
   const current = () => override || browserLocale();
+  const signature = () => lastSignature;
 
   function apply(root) {
     const scope = root || (typeof document !== 'undefined' ? document : null);
@@ -90,18 +104,21 @@ globalThis.I18n = (() => {
     if (scope === document) document.documentElement.lang = current().replace('_', '-');
   }
 
-  return {t, apply, ready, setLanguage, current, normalize, SUPPORTED, NAMES};
+  return {t, apply, ready, setLanguage, current, signature, normalize, SUPPORTED, NAMES};
 })();
 globalThis.t = I18n.t;
 
 if (typeof document !== 'undefined') {
   const painted = I18n.current();
+  const paintedSignature = I18n.signature();
   I18n.apply();
-  // If the stored setting disagrees with what was painted (first load after changing devices /
-  // importing settings), load it once and repaint by reloading. Guarded against loops.
+  // Repaint once by reloading when the language or the catalog differs from what was painted
+  // (setting changed elsewhere, or new strings shipped). Guarded against loops per catalog.
   I18n.ready().then(code => {
-    if (code === painted) return;
-    try { if (sessionStorage.getItem('pwm_i18n_reloaded') === code) return; sessionStorage.setItem('pwm_i18n_reloaded', code); } catch {}
+    const sig = I18n.signature();
+    if (code === painted && sig === paintedSignature) return;
+    const marker = code + '|' + sig;
+    try { if (sessionStorage.getItem('pwm_i18n_reloaded') === marker) { I18n.apply(); return; } sessionStorage.setItem('pwm_i18n_reloaded', marker); } catch {}
     location.reload();
   }).catch(() => {});
 }

@@ -1321,5 +1321,26 @@
   },
   "autoCleanRestored": {
     "message": "„$1“ aus dem Papierkorb wiederhergestellt."
+  },
+  "pinnedHeading": {
+    "message": "Angeheftet (alle Bereiche)"
+  },
+  "pinTabLabel": {
+    "message": "Diesen Tab anheften"
+  },
+  "pinTabTitle": {
+    "message": "Anheften: beim Wechseln des Bereichs geöffnet lassen"
+  },
+  "unpinTabLabel": {
+    "message": "Lösen: $1"
+  },
+  "unpinTabTitle": {
+    "message": "Lösen (wird beim nächsten Speichern dem aktuellen Bereich hinzugefügt)"
+  },
+  "pinnedMessage": {
+    "message": "„$1“ angeheftet. Bleibt beim Wechseln des Bereichs geöffnet."
+  },
+  "unpinnedMessage": {
+    "message": "Gelöst."
   }
 }

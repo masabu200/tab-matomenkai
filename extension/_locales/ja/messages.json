@@ -1722,5 +1722,26 @@
   },
   "autoCleanRestored": {
     "message": "「$1」をゴミ箱から戻しました。"
+  },
+  "pinnedHeading": {
+    "message": "ピン留め（全スペース共通）"
+  },
+  "pinTabLabel": {
+    "message": "このタブをピン留め"
+  },
+  "pinTabTitle": {
+    "message": "ピン留め：スペースを切り替えても開いたままにする"
+  },
+  "unpinTabLabel": {
+    "message": "ピン留めを外す: $1"
+  },
+  "unpinTabTitle": {
+    "message": "ピン留めを外す（次に保存すると今のスペースに入ります）"
+  },
+  "pinnedMessage": {
+    "message": "「$1」をピン留めしました。スペースを切り替えても開いたままです。"
+  },
+  "unpinnedMessage": {
+    "message": "ピン留めを外しました。"
   }
 }

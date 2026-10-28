@@ -27,7 +27,20 @@
     languageSelect.addEventListener('change',async()=>{languageSelect.disabled=true;try{await I18n.setLanguage(languageSelect.value);location.reload()}catch{languageSelect.disabled=false}});
   })();
   let previousFocus;
-  trigger.addEventListener('click',()=>{if(dialog.open)return;previousFocus=document.activeElement;notice.textContent='';dialog.showModal();close.focus()});
+  // Lay the sections out side by side: every block added by the other settings scripts is moved
+  // into a card inside a multi-column grid (idempotent, runs before each open).
+  const grid=document.createElement('div');grid.className='settings-grid';description.after(grid);
+  const fixed=new Set([header,description,grid,fileInput,notice]);
+  function layout(){
+    for(const node of [...dialog.children]){
+      if(fixed.has(node))continue;
+      if(node.classList.contains('settings-actions-title')){const card=document.createElement('section');card.className='settings-card';const next=node.nextElementSibling;card.append(node);if(next&&next.classList.contains('settings-workspace-actions'))card.append(next);grid.append(card);continue}
+      node.classList.add('settings-card');grid.append(node);
+    }
+    dialog.append(notice);
+  }
+  globalThis.SettingsLayout={layout};
+  trigger.addEventListener('click',()=>{if(dialog.open)return;previousFocus=document.activeElement;notice.textContent='';layout();dialog.showModal();close.focus()});
   close.addEventListener('click',()=>dialog.close());
   dialog.addEventListener('keydown',event=>{
     if(event.key==='Escape'){event.preventDefault();dialog.close();return}

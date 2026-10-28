@@ -1321,5 +1321,26 @@
   },
   "autoCleanRestored": {
     "message": "Se restauró \"$1\" desde la papelera."
+  },
+  "pinnedHeading": {
+    "message": "Fijadas (todos los espacios)"
+  },
+  "pinTabLabel": {
+    "message": "Fijar esta pestaña"
+  },
+  "pinTabTitle": {
+    "message": "Fijar: mantenerla abierta al cambiar de espacio"
+  },
+  "unpinTabLabel": {
+    "message": "Dejar de fijar: $1"
+  },
+  "unpinTabTitle": {
+    "message": "Dejar de fijar (se añadirá al espacio actual la próxima vez que guardes)"
+  },
+  "pinnedMessage": {
+    "message": "Se fijó \"$1\". Se mantiene abierta al cambiar de espacio."
+  },
+  "unpinnedMessage": {
+    "message": "Se dejó de fijar."
   }
 }

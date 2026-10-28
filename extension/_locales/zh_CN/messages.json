@@ -1321,5 +1321,26 @@
   },
   "autoCleanRestored": {
     "message": "已从回收站恢复“$1”。"
+  },
+  "pinnedHeading": {
+    "message": "已固定（所有空间共用）"
+  },
+  "pinTabLabel": {
+    "message": "固定此标签页"
+  },
+  "pinTabTitle": {
+    "message": "固定：切换空间时保持打开"
+  },
+  "unpinTabLabel": {
+    "message": "取消固定：$1"
+  },
+  "unpinTabTitle": {
+    "message": "取消固定（下次保存时会加入当前空间）"
+  },
+  "pinnedMessage": {
+    "message": "已固定“$1”。切换空间时会保持打开。"
+  },
+  "unpinnedMessage": {
+    "message": "已取消固定。"
   }
 }

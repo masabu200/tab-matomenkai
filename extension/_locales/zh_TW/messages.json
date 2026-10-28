@@ -1321,5 +1321,26 @@
   },
   "autoCleanRestored": {
     "message": "已從垃圾桶還原「$1」。"
+  },
+  "pinnedHeading": {
+    "message": "已固定（所有空間共用）"
+  },
+  "pinTabLabel": {
+    "message": "固定此分頁"
+  },
+  "pinTabTitle": {
+    "message": "固定：切換空間時保持開啟"
+  },
+  "unpinTabLabel": {
+    "message": "取消固定：$1"
+  },
+  "unpinTabTitle": {
+    "message": "取消固定（下次儲存時會加入目前空間）"
+  },
+  "pinnedMessage": {
+    "message": "已固定「$1」。切換空間時會保持開啟。"
+  },
+  "unpinnedMessage": {
+    "message": "已取消固定。"
   }
 }
