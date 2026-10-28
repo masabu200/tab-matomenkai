@@ -335,3 +335,10 @@ Playwright 1.62 の `page.waitForFunction` に async 関数を渡すと、最初
 - 症状：折りたたむと「›」（戻す）ボタンが見えず、元に戻せない。
 - 原因：サイドパネル廃止でランチャー要素が消え、設定ボタンが `.sidebar-controls` の末尾に入るようになった。折りたたみ時の幅48pxに「戻す」と「設定」が右寄せの横並びで入り、「戻す」が x=−25px に押し出されていた。
 - 修正：折りたたみ時は `.sidebar-controls` を縦並び・中央寄せに（`dashboard.css`）。`tests/ui-improvements.cjs` に、折りたたみ時に両ボタンが48px内にあり、押すと戻ることの検査を追加。
+
+## 2026-10-28 1.3.0 の提出用 ZIP
+
+- `manifest.json` の version を 1.3.0 に（ストアは前回より大きい番号のみ受け付ける）。
+- `tools/build-store-zip.sh` を追加。`extension/` から `dist/tab-matomenkai-<version>.zip` を作り、ZIP 内の manifest からだけ `key` を外す（ストアは `key` を含む manifest を拒否する）。`CHROMEWEBSTORE.md` と `.DS_Store` は除外。`dist/` は git 管理外。
+- 検証：ZIP を展開して別プロファイルで読み込み、起動・ダッシュボード表示・設定のカード6枚・Drive 組み込み方式・キー名の残りなし・エラーなしを確認。
+- アップロード：Chrome はウェブストアのページを拡張から操作させない仕様（"The extensions gallery cannot be scripted"）のため、自動アップロードはできない。利用者が手動でアップロードする。
