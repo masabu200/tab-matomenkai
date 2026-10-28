@@ -1219,5 +1219,8 @@
   },
   "driveAuthTimeout": {
     "message": "無法確認 Google 授權。若您關閉了授權畫面或尚未登入 Chrome，請登入後再按一次「連線」。"
+  },
+  "driveIdentityUnavailable": {
+    "message": "此 Chrome 無法使用 Google 驗證（identity API），已切換為手動設定。若重新載入擴充功能後仍未解決，請告訴我們。"
   }
 }

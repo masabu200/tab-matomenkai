@@ -17,10 +17,16 @@
     <p id="driveStatus" role="status">${t('m_7ea46c0315')}</p><p id="driveLastBackup"></p>`;
   document.getElementById('settingsDialog').append(section);
   const el = id => section.querySelector('#'+id);
-  el('driveRedirect').value = chrome.identity.getRedirectURL('drive');
-  const builtin = DriveBackup.mode() === 'builtin';
+  let setupError = '';
+  try { el('driveRedirect').value = chrome.identity.getRedirectURL('drive'); }
+  catch (error) { setupError = error?.message || String(error); }
+  let builtin = false;
+  try { builtin = DriveBackup.mode() === 'builtin'; }
+  catch (error) { setupError = setupError || error?.message || String(error); }
   el('driveBuiltinHelp').hidden = !builtin;
   el('driveManualSetup').hidden = builtin;
+  const hasOauth2 = !!chrome.runtime.getManifest().oauth2;
+  if (!builtin && hasOauth2) setupError = setupError || t('driveIdentityUnavailable');
   async function refresh() {
     const stored = await chrome.storage.local.get(['pwm_drive_client_id','pwm_drive_last_backup']);
     if (!el('driveClientId').value) el('driveClientId').value = stored.pwm_drive_client_id || '';
@@ -41,5 +47,5 @@
   action('driveConnect',async()=>{if(builtin)el('driveStatus').textContent=t('driveAuthWaiting');await DriveBackup.connect(builtin?null:el('driveClientId').value.trim());el('driveStatus').textContent=t('m_e873b731b1');section.querySelector('details').open=false;});
   action('driveSave',async()=>{const data=await loadData();await DriveBackup.save(data,getActiveSpaceId(data));el('driveStatus').textContent=t('m_f714e3e49d');});
   action('driveDisconnect',async()=>{await DriveBackup.disconnect();el('driveStatus').textContent=t('m_307c18ccd9');});
-  refresh().then(async()=>{try{await DriveBackup.auth();el('driveStatus').textContent=t('m_23e782bfe8');}catch{}}).catch(()=>{el('driveStatus').textContent=t('m_26a4745b1e');});
+  refresh().then(async()=>{if(setupError){el('driveStatus').textContent=setupError;return}try{await DriveBackup.auth();el('driveStatus').textContent=t('m_23e782bfe8');}catch{}}).catch(()=>{el('driveStatus').textContent=t('m_26a4745b1e');});
 })();

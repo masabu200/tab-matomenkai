@@ -1219,5 +1219,8 @@
   },
   "driveAuthTimeout": {
     "message": "Die Google-Berechtigung konnte nicht bestätigt werden. Wenn Sie die Berechtigungsseite geschlossen haben oder nicht in Chrome angemeldet sind, melden Sie sich an und klicken Sie erneut auf „Verbinden“."
+  },
+  "driveIdentityUnavailable": {
+    "message": "Die Google-Anmeldung (identity API) ist in diesem Chrome nicht verfügbar, daher wird die manuelle Einrichtung angezeigt. Wenn ein Neuladen der Erweiterung nicht hilft, sagen Sie uns Bescheid."
   }
 }

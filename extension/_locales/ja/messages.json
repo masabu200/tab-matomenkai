@@ -1620,5 +1620,8 @@
   },
   "driveAuthTimeout": {
     "message": "Googleの許可が確認できませんでした。許可画面を閉じた場合や、Chromeにログインしていない場合は、ログイン後にもう一度「接続」を押してください。"
+  },
+  "driveIdentityUnavailable": {
+    "message": "この Chrome では Google 認証（identity API）が使えないため、手動設定に切り替えています。拡張を再読み込みしても直らない場合は教えてください。"
   }
 }

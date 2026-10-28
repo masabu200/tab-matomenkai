@@ -1228,5 +1228,8 @@
   },
   "driveAuthTimeout": {
     "message": "Could not confirm Google's permission. If you closed the permission screen or are not signed in to Chrome, sign in and press Connect again."
+  },
+  "driveIdentityUnavailable": {
+    "message": "Google sign-in (identity API) is unavailable in this Chrome, so manual setup is shown. If reloading the extension does not fix it, let us know."
   }
 }

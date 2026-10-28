@@ -1228,5 +1228,8 @@
   },
   "driveAuthTimeout": {
     "message": "Impossibile confermare l'autorizzazione di Google. Se hai chiuso la schermata di autorizzazione o non hai eseguito l'accesso a Chrome, accedi e premi di nuovo Connetti."
+  },
+  "driveIdentityUnavailable": {
+    "message": "L'autenticazione Google (API identity) non è disponibile in questo Chrome, quindi viene mostrata la configurazione manuale. Se ricaricare l'estensione non risolve, faccelo sapere."
   }
 }
