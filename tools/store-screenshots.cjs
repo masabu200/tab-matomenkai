@@ -1,9 +1,10 @@
 // Captures Chrome Web Store screenshots (1280x800) from the real extension with demo data.
-// Usage: node tools/store-screenshots.cjs   → store/screenshots/<locale>/NN-*.png
+// Usage: node tools/store-screenshots.cjs   → store/screenshots/raw/<locale>/NN-*.png
+// (raw captures; tools/store-composite.cjs turns them into the listing images)
 const {chromium}=require('/Users/mugikura/node_modules/playwright');
 const fs=require('node:fs'),path=require('node:path'),os=require('node:os');
 const ROOT=path.resolve(__dirname,'..');
-const OUT=path.join(ROOT,'store','screenshots');
+const OUT=path.join(ROOT,'store','screenshots','raw');
 
 const DEMO={
  ja:{cats:[['c1','クライアント案件','#4a7ef8'],['c2','社内・学習','#4aaa5a']],spaces:[
@@ -22,11 +23,15 @@ const DEMO={
   ['s6',null,'Read later',[['Engineering blog','https://example.net/blog']],[]]],pinned:'Gmail',q:'project'},
 };
 
+const COLORS={'figma.com':'#a259ff','example.com':'#21759b','example.org':'#0f9d58','docs.google.com':'#4285f4','staging.example.com':'#f4b400','shop.example.com':'#ff6d00','dashboard.stripe.com':'#635bff','ads.google.com':'#34a853','developer.chrome.com':'#1a73e8','example.net':'#e91e63'};
+function fav(url){const host=new URL(url).hostname.replace(/^www\./,'');const color=COLORS[host]||'#607d8b';const letter=host[0].toUpperCase();
+ const svg=`<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><rect rx='8' width='32' height='32' fill='${color}'/><text x='16' y='22' font-family='Arial' font-size='18' font-weight='700' fill='white' text-anchor='middle'>${letter}</text></svg>`;
+ return 'data:image/svg+xml;base64,'+Buffer.from(svg).toString('base64');}
 function buildData(locale,winId){
  const d=DEMO[locale];const now=Date.now();
  const spaces=d.spaces.map(([id,cat,name,tabs,groups],i)=>({id,name,categoryId:cat,archived:false,color:'',createdAt:new Date(now-86400000*(20+i)).toISOString(),updatedAt:new Date(now-3600000*(i+1)).toISOString(),lastOpenedAt:new Date(now-3600000*(i+1)).toISOString(),favorite:i===0,
   tabGroups:groups.map(([gid,gname,color])=>({id:gid,name:gname,color,collapsed:false})),
-  tabs:tabs.map(([title,url],ti)=>{const g=groups.find(x=>x[3].includes(ti));return {title,url,favIconUrl:'',pinned:false,groupId:g?g[0]:null}})}));
+  tabs:tabs.map(([title,url],ti)=>{const g=groups.find(x=>x[3].includes(ti));return {title,url,favIconUrl:fav(url),pinned:false,groupId:g?g[0]:null}})}));
  return {categories:d.cats.map(([id,name,color])=>({id,name,color,parentId:null})),spaces,activeSpaceId:'s1',windowActiveSpaces:{[winId]:'s1'}};
 }
 
