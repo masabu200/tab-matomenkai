@@ -1273,5 +1273,53 @@
   },
   "driveSelectBackup": {
     "message": "請選擇要還原的備份。"
+  },
+  "autoCleanHeading": {
+    "message": "自動整理未使用的空間"
+  },
+  "autoCleanHelp": {
+    "message": "在所選期間內未開啟也未儲存的空間，會自動封存或刪除。刪除的空間可從垃圾桶還原。"
+  },
+  "autoCleanPeriodLabel": {
+    "message": "未使用期間"
+  },
+  "autoCleanDaysOption": {
+    "message": "$1 天"
+  },
+  "autoCleanActionLabel": {
+    "message": "執行的動作"
+  },
+  "autoCleanActionArchive": {
+    "message": "封存（建議）"
+  },
+  "autoCleanActionDelete": {
+    "message": "刪除（垃圾桶保留 30 天）"
+  },
+  "autoCleanExclusions": {
+    "message": "我的最愛、目前選取中的空間與已封存的空間不會被處理。"
+  },
+  "autoCleanRunNow": {
+    "message": "立即整理"
+  },
+  "autoCleanOffHint": {
+    "message": "選擇期間後即會啟用。"
+  },
+  "autoCleanRunResult": {
+    "message": "已整理：封存 $1 個、刪除 $2 個。"
+  },
+  "autoCleanLastResult": {
+    "message": "上次整理：$1（封存 $2 個、刪除 $3 個）"
+  },
+  "autoCleanTrashHeading": {
+    "message": "垃圾桶（$1 天後自動清除）"
+  },
+  "autoCleanTrashEmpty": {
+    "message": "垃圾桶是空的"
+  },
+  "autoCleanTrashItem": {
+    "message": "$1（$2 個分頁）· 刪除於 $3"
+  },
+  "autoCleanRestored": {
+    "message": "已從垃圾桶還原「$1」。"
   }
 }

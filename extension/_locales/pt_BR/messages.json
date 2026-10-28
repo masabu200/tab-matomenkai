@@ -1282,5 +1282,53 @@
   },
   "driveSelectBackup": {
     "message": "Selecione um backup para restaurar."
+  },
+  "autoCleanHeading": {
+    "message": "Organizar espaços não usados automaticamente"
+  },
+  "autoCleanHelp": {
+    "message": "Espaços que não foram abertos nem salvos no período escolhido são arquivados ou excluídos automaticamente. Os excluídos podem ser restaurados da lixeira."
+  },
+  "autoCleanPeriodLabel": {
+    "message": "Sem uso por"
+  },
+  "autoCleanDaysOption": {
+    "message": "$1 dias"
+  },
+  "autoCleanActionLabel": {
+    "message": "Ação"
+  },
+  "autoCleanActionArchive": {
+    "message": "Arquivar (recomendado)"
+  },
+  "autoCleanActionDelete": {
+    "message": "Excluir (30 dias na lixeira)"
+  },
+  "autoCleanExclusions": {
+    "message": "Favoritos, espaços selecionados no momento e espaços arquivados nunca são alterados."
+  },
+  "autoCleanRunNow": {
+    "message": "Organizar agora"
+  },
+  "autoCleanOffHint": {
+    "message": "Escolha um período para ativar."
+  },
+  "autoCleanRunResult": {
+    "message": "Concluído: $1 arquivados, $2 excluídos."
+  },
+  "autoCleanLastResult": {
+    "message": "Última execução: $1 ($2 arquivados, $3 excluídos)"
+  },
+  "autoCleanTrashHeading": {
+    "message": "Lixeira (esvaziada após $1 dias)"
+  },
+  "autoCleanTrashEmpty": {
+    "message": "A lixeira está vazia"
+  },
+  "autoCleanTrashItem": {
+    "message": "$1 ($2 guias) · excluído $3"
+  },
+  "autoCleanRestored": {
+    "message": "\"$1\" foi restaurado da lixeira."
   }
 }

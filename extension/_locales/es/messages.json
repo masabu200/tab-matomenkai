@@ -1273,5 +1273,53 @@
   },
   "driveSelectBackup": {
     "message": "Selecciona una copia para restaurar."
+  },
+  "autoCleanHeading": {
+    "message": "Ordenar automáticamente los espacios sin uso"
+  },
+  "autoCleanHelp": {
+    "message": "Los espacios que no se han abierto ni guardado durante el periodo elegido se archivan o eliminan automáticamente. Los eliminados pueden restaurarse desde la papelera."
+  },
+  "autoCleanPeriodLabel": {
+    "message": "Sin uso durante"
+  },
+  "autoCleanDaysOption": {
+    "message": "$1 días"
+  },
+  "autoCleanActionLabel": {
+    "message": "Acción"
+  },
+  "autoCleanActionArchive": {
+    "message": "Archivar (recomendado)"
+  },
+  "autoCleanActionDelete": {
+    "message": "Eliminar (30 días en la papelera)"
+  },
+  "autoCleanExclusions": {
+    "message": "Los favoritos, los espacios seleccionados ahora y los archivados nunca se tocan."
+  },
+  "autoCleanRunNow": {
+    "message": "Ordenar ahora"
+  },
+  "autoCleanOffHint": {
+    "message": "Elige un periodo para activarlo."
+  },
+  "autoCleanRunResult": {
+    "message": "Hecho: $1 archivados, $2 eliminados."
+  },
+  "autoCleanLastResult": {
+    "message": "Última ejecución: $1 ($2 archivados, $3 eliminados)"
+  },
+  "autoCleanTrashHeading": {
+    "message": "Papelera (se vacía a los $1 días)"
+  },
+  "autoCleanTrashEmpty": {
+    "message": "La papelera está vacía"
+  },
+  "autoCleanTrashItem": {
+    "message": "$1 ($2 pestañas) · eliminado $3"
+  },
+  "autoCleanRestored": {
+    "message": "Se restauró \"$1\" desde la papelera."
   }
 }

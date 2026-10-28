@@ -1273,5 +1273,53 @@
   },
   "driveSelectBackup": {
     "message": "请选择要恢复的备份。"
+  },
+  "autoCleanHeading": {
+    "message": "自动整理未使用的空间"
+  },
+  "autoCleanHelp": {
+    "message": "在所选期间内既未打开也未保存的空间，会被自动归档或删除。已删除的空间可从回收站恢复。"
+  },
+  "autoCleanPeriodLabel": {
+    "message": "未使用期间"
+  },
+  "autoCleanDaysOption": {
+    "message": "$1 天"
+  },
+  "autoCleanActionLabel": {
+    "message": "执行的操作"
+  },
+  "autoCleanActionArchive": {
+    "message": "归档（推荐）"
+  },
+  "autoCleanActionDelete": {
+    "message": "删除（在回收站保留 30 天）"
+  },
+  "autoCleanExclusions": {
+    "message": "收藏、当前选中的空间和已归档的空间不会被处理。"
+  },
+  "autoCleanRunNow": {
+    "message": "立即整理"
+  },
+  "autoCleanOffHint": {
+    "message": "选择期间后即可启用。"
+  },
+  "autoCleanRunResult": {
+    "message": "已整理：归档 $1 个，删除 $2 个。"
+  },
+  "autoCleanLastResult": {
+    "message": "上次整理：$1（归档 $2 个，删除 $3 个）"
+  },
+  "autoCleanTrashHeading": {
+    "message": "回收站（$1 天后自动清除）"
+  },
+  "autoCleanTrashEmpty": {
+    "message": "回收站为空"
+  },
+  "autoCleanTrashItem": {
+    "message": "$1（$2 个标签页）· 删除于 $3"
+  },
+  "autoCleanRestored": {
+    "message": "已从回收站恢复“$1”。"
   }
 }

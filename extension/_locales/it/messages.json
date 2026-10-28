@@ -1282,5 +1282,53 @@
   },
   "driveSelectBackup": {
     "message": "Seleziona un backup da ripristinare."
+  },
+  "autoCleanHeading": {
+    "message": "Riordina automaticamente gli spazi inutilizzati"
+  },
+  "autoCleanHelp": {
+    "message": "Gli spazi non aperti né salvati nel periodo scelto vengono archiviati o eliminati automaticamente. Quelli eliminati si possono ripristinare dal cestino."
+  },
+  "autoCleanPeriodLabel": {
+    "message": "Inutilizzato da"
+  },
+  "autoCleanDaysOption": {
+    "message": "$1 giorni"
+  },
+  "autoCleanActionLabel": {
+    "message": "Azione"
+  },
+  "autoCleanActionArchive": {
+    "message": "Archivia (consigliato)"
+  },
+  "autoCleanActionDelete": {
+    "message": "Elimina (30 giorni nel cestino)"
+  },
+  "autoCleanExclusions": {
+    "message": "Preferiti, spazi attualmente selezionati e spazi archiviati non vengono mai toccati."
+  },
+  "autoCleanRunNow": {
+    "message": "Riordina adesso"
+  },
+  "autoCleanOffHint": {
+    "message": "Scegli un periodo per attivarlo."
+  },
+  "autoCleanRunResult": {
+    "message": "Fatto: $1 archiviati, $2 eliminati."
+  },
+  "autoCleanLastResult": {
+    "message": "Ultima esecuzione: $1 ($2 archiviati, $3 eliminati)"
+  },
+  "autoCleanTrashHeading": {
+    "message": "Cestino (svuotato dopo $1 giorni)"
+  },
+  "autoCleanTrashEmpty": {
+    "message": "Il cestino è vuoto"
+  },
+  "autoCleanTrashItem": {
+    "message": "$1 ($2 schede) · eliminato $3"
+  },
+  "autoCleanRestored": {
+    "message": "\"$1\" ripristinato dal cestino."
   }
 }

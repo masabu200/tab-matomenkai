@@ -311,3 +311,13 @@ Playwright 1.62 の `page.waitForFunction` に async 関数を渡すと、最初
 - `extension/dashboard.js`：ファイルインポートの書き込み処理を `applyBackupData(parsed)` に切り出し、Drive 復元と共用。
 - テスト：`tests/drive-backup.cjs` にメモリ上の Drive 模擬（フォルダ検索・作成、一覧、削除、`alt=media`）を追加し、フォルダ作成・タグ・保持数2で最古削除・一覧表示・復元の取消/実行/取り消しを検証。テスト中に見つけた競合（一覧更新中に選択が消える）はテスト側で更新完了を待つよう修正。
 - 未対応：ページング（100件超）、復元時の「開いているタブ」への反映（データのみ置き換え）、バックグラウンド自動保存（AUTO-01）。
+
+## 2026-10-28 使っていないスペースの自動整理（期間選択・アーカイブ/削除・ゴミ箱）
+
+- 利用者の要望：「一定期間使っていないと削除、期間は選べるように」。
+- `extension/auto-clean.js`：純粋関数 `plan(data, settings, now)` / `apply(data, plan, now)` と、Web Lock `pwm-space-switch` 下で動く `run()`。「使った」は `lastOpenedAt` / `tabsSavedAt` / `updatedAt` / `createdAt` の最新。期間は 30/60/90/180/365 日（0=オフ）。動作は「アーカイブ（既定・おすすめ）」か「削除」。お気に入り・いずれかのウィンドウで選択中・アーカイブ済みは対象外。削除分は `pwm_trash` に入れ30日で自動消去、`restoreFromTrash()` で戻せる（ID 衝突時は別IDで復元、消えたカテゴリーは未分類へ）。
+- `extension/background.js`：`importScripts('auto-clean.js')`、アラーム `pwm-auto-clean`（6時間ごと、起動5分後）と `onStartup` で実行。`globalThis.pwmRunAutoClean` を公開。
+- `extension/auto-clean-settings.js`：設定ダイアログ（Drive の前）に期間・動作のセレクト、「今すぐ整理する」、前回結果、ゴミ箱一覧と「復元」。ダイアログを開き直したときと `pwm_trash` 等の変更時に再描画。
+- 設計判断：自動削除は取り返しがつかないので、既定をアーカイブにし、削除を選んでも30日はゴミ箱に残す。期間未設定（オフ）が初期値。
+- テスト：`tests/auto-clean.test.cjs`（plan/apply/purge の純粋ロジック。vm 越しの配列は `deepEqual` で prototype が異なるため JSON 経由で比較）、`tests/auto-clean.cjs`（オフの案内、30日アーカイブで選択中とお気に入りを除外、冪等、削除→ゴミ箱→復元、31日経過分の消去、アラーム登録）。
+- つまずき：復元直後に `storage.onChanged` 由来の再描画が状態欄を上書きしていたため、「前回の自動整理」を別の行（`#autoCleanLast`）に分離。

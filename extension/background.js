@@ -7,6 +7,7 @@
  */
 
 importScripts('i18n.js');
+importScripts('auto-clean.js');
 
 const DASHBOARD_URL = chrome.runtime.getURL('dashboard.html');
 const ALARM_NAME    = 'pwm-auto-backup';
@@ -323,4 +324,23 @@ if (chrome.contextMenus) {
     else if (result.reason === 'duplicate') await flashBadge(tabId, '＝', t('m_6f91f13005', [result.name]), '#7a8098');
     else await flashBadge(tabId, '×', t('m_a9276d6dfe'), '#d94040');
   });
+}
+
+
+// ============================================================
+// 未使用スペースの自動整理（AutoClean）
+// ============================================================
+const AUTO_CLEAN_ALARM = 'pwm-auto-clean';
+function setupAutoCleanAlarm() {
+  try { chrome.alarms.get(AUTO_CLEAN_ALARM, (existing) => { if (!existing) chrome.alarms.create(AUTO_CLEAN_ALARM, { delayInMinutes: 5, periodInMinutes: 360 }); }); } catch (e) { console.warn('[PWM] auto clean alarm', e); }
+}
+async function runAutoClean() {
+  try { return await AutoClean.run(); } catch (e) { console.warn('[PWM] auto clean', e); return null; }
+}
+globalThis.pwmRunAutoClean = runAutoClean;
+if (chrome.runtime?.onInstalled?.addListener) {
+  chrome.runtime.onInstalled.addListener(setupAutoCleanAlarm);
+  chrome.runtime.onStartup.addListener(setupAutoCleanAlarm);
+  chrome.runtime.onStartup.addListener(() => { runAutoClean(); });
+  chrome.alarms.onAlarm.addListener((alarm) => { if (alarm.name === AUTO_CLEAN_ALARM) runAutoClean(); });
 }

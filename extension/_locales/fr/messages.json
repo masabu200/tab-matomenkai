@@ -1273,5 +1273,53 @@
   },
   "driveSelectBackup": {
     "message": "Sélectionnez une sauvegarde à restaurer."
+  },
+  "autoCleanHeading": {
+    "message": "Ranger automatiquement les espaces inutilisés"
+  },
+  "autoCleanHelp": {
+    "message": "Les espaces ni ouverts ni enregistrés pendant la période choisie sont archivés ou supprimés automatiquement. Les espaces supprimés peuvent être restaurés depuis la corbeille."
+  },
+  "autoCleanPeriodLabel": {
+    "message": "Inutilisé depuis"
+  },
+  "autoCleanDaysOption": {
+    "message": "$1 jours"
+  },
+  "autoCleanActionLabel": {
+    "message": "Action"
+  },
+  "autoCleanActionArchive": {
+    "message": "Archiver (recommandé)"
+  },
+  "autoCleanActionDelete": {
+    "message": "Supprimer (30 jours dans la corbeille)"
+  },
+  "autoCleanExclusions": {
+    "message": "Les favoris, les espaces actuellement sélectionnés et les espaces archivés ne sont jamais concernés."
+  },
+  "autoCleanRunNow": {
+    "message": "Ranger maintenant"
+  },
+  "autoCleanOffHint": {
+    "message": "Choisissez une période pour l’activer."
+  },
+  "autoCleanRunResult": {
+    "message": "Terminé : $1 archivés, $2 supprimés."
+  },
+  "autoCleanLastResult": {
+    "message": "Dernière exécution : $1 ($2 archivés, $3 supprimés)"
+  },
+  "autoCleanTrashHeading": {
+    "message": "Corbeille (vidée après $1 jours)"
+  },
+  "autoCleanTrashEmpty": {
+    "message": "La corbeille est vide"
+  },
+  "autoCleanTrashItem": {
+    "message": "$1 ($2 onglets) · supprimé $3"
+  },
+  "autoCleanRestored": {
+    "message": "« $1 » restauré depuis la corbeille."
   }
 }

@@ -1674,5 +1674,53 @@
   },
   "driveSelectBackup": {
     "message": "復元するバックアップを選んでください。"
+  },
+  "autoCleanHeading": {
+    "message": "使っていないスペースの自動整理"
+  },
+  "autoCleanHelp": {
+    "message": "選んだ期間、開いても保存もしていないスペースを、自動でアーカイブまたは削除します。削除したスペースはゴミ箱から戻せます。"
+  },
+  "autoCleanPeriodLabel": {
+    "message": "未使用の期間"
+  },
+  "autoCleanDaysOption": {
+    "message": "$1日"
+  },
+  "autoCleanActionLabel": {
+    "message": "行う操作"
+  },
+  "autoCleanActionArchive": {
+    "message": "アーカイブする（おすすめ）"
+  },
+  "autoCleanActionDelete": {
+    "message": "削除する（30日間ゴミ箱に保持）"
+  },
+  "autoCleanExclusions": {
+    "message": "お気に入り、いま選択中のスペース、アーカイブ済みのスペースは対象外です。"
+  },
+  "autoCleanRunNow": {
+    "message": "今すぐ整理する"
+  },
+  "autoCleanOffHint": {
+    "message": "期間を選ぶと有効になります。"
+  },
+  "autoCleanRunResult": {
+    "message": "整理しました：アーカイブ $1 件、削除 $2 件。"
+  },
+  "autoCleanLastResult": {
+    "message": "前回の自動整理：$1（アーカイブ $2 件、削除 $3 件）"
+  },
+  "autoCleanTrashHeading": {
+    "message": "ゴミ箱（$1日で自動消去）"
+  },
+  "autoCleanTrashEmpty": {
+    "message": "ゴミ箱は空です"
+  },
+  "autoCleanTrashItem": {
+    "message": "$1（$2 タブ）· 削除 $3"
+  },
+  "autoCleanRestored": {
+    "message": "「$1」をゴミ箱から戻しました。"
   }
 }

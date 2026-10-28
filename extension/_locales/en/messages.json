@@ -1282,5 +1282,53 @@
   },
   "driveSelectBackup": {
     "message": "Select a backup to restore."
+  },
+  "autoCleanHeading": {
+    "message": "Tidy unused spaces automatically"
+  },
+  "autoCleanHelp": {
+    "message": "Spaces that have not been opened or saved for the chosen period are archived or deleted automatically. Deleted spaces can be restored from the trash."
+  },
+  "autoCleanPeriodLabel": {
+    "message": "Unused for"
+  },
+  "autoCleanDaysOption": {
+    "message": "$1 days"
+  },
+  "autoCleanActionLabel": {
+    "message": "Action"
+  },
+  "autoCleanActionArchive": {
+    "message": "Archive (recommended)"
+  },
+  "autoCleanActionDelete": {
+    "message": "Delete (kept in trash for 30 days)"
+  },
+  "autoCleanExclusions": {
+    "message": "Favorites, currently selected spaces and archived spaces are never touched."
+  },
+  "autoCleanRunNow": {
+    "message": "Tidy now"
+  },
+  "autoCleanOffHint": {
+    "message": "Choose a period to enable it."
+  },
+  "autoCleanRunResult": {
+    "message": "Done: archived $1, deleted $2."
+  },
+  "autoCleanLastResult": {
+    "message": "Last run: $1 (archived $2, deleted $3)"
+  },
+  "autoCleanTrashHeading": {
+    "message": "Trash (cleared after $1 days)"
+  },
+  "autoCleanTrashEmpty": {
+    "message": "The trash is empty"
+  },
+  "autoCleanTrashItem": {
+    "message": "$1 ($2 tabs) · deleted $3"
+  },
+  "autoCleanRestored": {
+    "message": "Restored \"$1\" from the trash."
   }
 }

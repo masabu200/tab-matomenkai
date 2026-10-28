@@ -1273,5 +1273,53 @@
   },
   "driveSelectBackup": {
     "message": "Wählen Sie eine Sicherung zum Wiederherstellen."
+  },
+  "autoCleanHeading": {
+    "message": "Ungenutzte Bereiche automatisch aufräumen"
+  },
+  "autoCleanHelp": {
+    "message": "Bereiche, die im gewählten Zeitraum weder geöffnet noch gespeichert wurden, werden automatisch archiviert oder gelöscht. Gelöschte Bereiche lassen sich aus dem Papierkorb wiederherstellen."
+  },
+  "autoCleanPeriodLabel": {
+    "message": "Ungenutzt seit"
+  },
+  "autoCleanDaysOption": {
+    "message": "$1 Tage"
+  },
+  "autoCleanActionLabel": {
+    "message": "Aktion"
+  },
+  "autoCleanActionArchive": {
+    "message": "Archivieren (empfohlen)"
+  },
+  "autoCleanActionDelete": {
+    "message": "Löschen (30 Tage im Papierkorb)"
+  },
+  "autoCleanExclusions": {
+    "message": "Favoriten, aktuell ausgewählte Bereiche und archivierte Bereiche bleiben unberührt."
+  },
+  "autoCleanRunNow": {
+    "message": "Jetzt aufräumen"
+  },
+  "autoCleanOffHint": {
+    "message": "Wählen Sie einen Zeitraum, um es zu aktivieren."
+  },
+  "autoCleanRunResult": {
+    "message": "Erledigt: $1 archiviert, $2 gelöscht."
+  },
+  "autoCleanLastResult": {
+    "message": "Letzter Lauf: $1 ($2 archiviert, $3 gelöscht)"
+  },
+  "autoCleanTrashHeading": {
+    "message": "Papierkorb (nach $1 Tagen geleert)"
+  },
+  "autoCleanTrashEmpty": {
+    "message": "Der Papierkorb ist leer"
+  },
+  "autoCleanTrashItem": {
+    "message": "$1 ($2 Tabs) · gelöscht $3"
+  },
+  "autoCleanRestored": {
+    "message": "„$1“ aus dem Papierkorb wiederhergestellt."
   }
 }

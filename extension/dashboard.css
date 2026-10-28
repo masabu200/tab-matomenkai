@@ -2312,3 +2312,12 @@ body.sidebar-collapsed .sidebar-settings { min-width:32px;width:32px;padding:0; 
 .drive-history { display:flex; flex-direction:column; gap:8px; margin-top:8px; }
 .drive-history__bar { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
 .drive-history select { width:100%; font-size:12px; border-radius:6px; padding:4px; }
+
+/* auto clean */
+.auto-clean-row { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.auto-clean-row select { font-size:13px; padding:4px 6px; border-radius:6px; }
+.auto-clean-trash h4 { margin:8px 0 4px; font-size:13px; }
+.auto-clean-trash__list { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:6px; max-height:180px; overflow:auto; }
+.auto-clean-trash__list li { display:flex; justify-content:space-between; align-items:center; gap:8px; font-size:12px; }
+.auto-clean-trash__list li span { overflow-wrap:anywhere; }
+.auto-clean-trash__empty { opacity:.7; }
