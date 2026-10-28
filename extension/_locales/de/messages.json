@@ -311,9 +311,6 @@
   "m_348b8cbfe6": {
     "message": "Es gibt keinen Bereich zum Speichern, daher ist Speichern auf diesem Bildschirm nicht möglich."
   },
-  "m_6c891ec97d": {
-    "message": "Die linke Leiste in der Seitenleiste öffnen (die Position der Chrome-Seitenleiste muss links sein)"
-  },
   "m_10432c2864": {
     "message": "Die linke Leiste in der Seitenleiste öffnen"
   },
@@ -373,12 +370,6 @@
   },
   "m_a7b8477445": {
     "message": "Tab Matomen Kai"
-  },
-  "m_2e57cc29ef": {
-    "message": "Damit die Leiste beim Surfen links sichtbar bleibt, stellen Sie in Chrome die „Position der Seitenleiste“ auf „Links“ und klicken Sie dann auf die Schaltfläche oben."
-  },
-  "m_22c2dc1788": {
-    "message": "Chrome-Einstellungen öffnen"
   },
   "m_5d208d1c21": {
     "message": "Tab Matomen"
@@ -980,14 +971,8 @@
   "m_91323fe947": {
     "message": "Die Seitenleiste ausklappen"
   },
-  "m_28e3b7ba50": {
-    "message": "Stellen Sie die Position der Chrome-Seitenleiste auf „Links“. Rechts wird sie nicht geöffnet."
-  },
   "m_2c14db7241": {
     "message": "Die linke Seitenleiste wurde geöffnet. Sie bleibt beim Surfen auf anderen Seiten sichtbar. Wenn Sie sie schließen, öffnen Sie sie über das Erweiterungssymbol in der Symbolleiste erneut."
-  },
-  "m_07a63337a6": {
-    "message": "Zum Erkennen der linken Position ist Chrome 141 oder neuer erforderlich."
   },
   "m_c5ed08a7f9": {
     "message": "Das Fenster wird noch vorbereitet. Bitte versuchen Sie es erneut."
@@ -1216,5 +1201,17 @@
   },
   "reviewThanks": {
     "message": "Vielen Dank!"
+  },
+  "guideCreateSpace": {
+    "message": "Ersten Bereich anlegen"
+  },
+  "guideSaveTabs": {
+    "message": "Jetzt geöffnete Tabs speichern"
+  },
+  "advancedLabel": {
+    "message": "Erweitert"
+  },
+  "messageDismissHint": {
+    "message": "Zum Schließen klicken"
   }
 }

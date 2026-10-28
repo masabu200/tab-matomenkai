@@ -10,6 +10,7 @@ const STORAGE_KEY         = 'pwm_data';
 const IS_SIDEBAR_PANEL = document.body.classList.contains('sidebar-panel');
 const DASHBOARD_PAGE_URL = chrome.runtime.getURL('dashboard.html');
 const MESSAGE_DURATION_MS = 3500;
+const ERROR_MESSAGE_DURATION_MS = 8000;
 
 // SVG アイコン（ハードコード定数のため innerHTML 使用可）
 const ICONS = {
@@ -294,12 +295,12 @@ function showMessage(text, type = 'success') {
   el.className = 'message';
   el.textContent = text;
   el.classList.add(type === 'error' ? 'message--error' : 'message--success');
+  el.setAttribute('role', type === 'error' ? 'alert' : 'status');
+  el.title = t('messageDismissHint');
   el.style.display = 'block';
-  g_messageTimer = setTimeout(() => {
-    el.style.display = 'none';
-    el.textContent = '';
-    el.className = 'message';
-  }, MESSAGE_DURATION_MS);
+  const hide = () => { el.style.display = 'none'; el.textContent = ''; el.className = 'message'; el.removeAttribute('title'); };
+  el.onclick = () => { if (g_messageTimer) { clearTimeout(g_messageTimer); g_messageTimer = null; } hide(); };
+  g_messageTimer = setTimeout(hide, type === 'error' ? ERROR_MESSAGE_DURATION_MS : MESSAGE_DURATION_MS);
 }
 
 // ============================================================

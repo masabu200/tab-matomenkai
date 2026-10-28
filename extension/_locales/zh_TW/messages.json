@@ -311,9 +311,6 @@
   "m_348b8cbfe6": {
     "message": "沒有可儲存的空間，因此無法在此畫面儲存。"
   },
-  "m_6c891ec97d": {
-    "message": "在側邊面板開啟左側欄（Chrome 的面板位置須設為左側）"
-  },
   "m_10432c2864": {
     "message": "在側邊面板開啟左側欄"
   },
@@ -373,12 +370,6 @@
   },
   "m_a7b8477445": {
     "message": "Tab Matomen Kai"
-  },
-  "m_2e57cc29ef": {
-    "message": "若要在瀏覽時持續顯示在左側，請先將 Chrome 的「側邊面板位置」設為「左側」，再按上方的按鈕。"
-  },
-  "m_22c2dc1788": {
-    "message": "開啟 Chrome 設定"
   },
   "m_5d208d1c21": {
     "message": "Tab Matomen"
@@ -980,14 +971,8 @@
   "m_91323fe947": {
     "message": "展開側邊欄"
   },
-  "m_28e3b7ba50": {
-    "message": "請將 Chrome 的側邊面板位置設為「左側」。無法在右側開啟。"
-  },
   "m_2c14db7241": {
     "message": "已開啟左側欄。瀏覽其他頁面時仍會持續顯示。若關閉，可從工具列的擴充功能圖示重新開啟。"
-  },
-  "m_07a63337a6": {
-    "message": "需要 Chrome 141 或更新版本才能偵測左側位置。"
   },
   "m_c5ed08a7f9": {
     "message": "視窗還在準備中。請再試一次。"
@@ -1216,5 +1201,17 @@
   },
   "reviewThanks": {
     "message": "謝謝您！"
+  },
+  "guideCreateSpace": {
+    "message": "建立第一個空間"
+  },
+  "guideSaveTabs": {
+    "message": "儲存目前開啟的分頁"
+  },
+  "advancedLabel": {
+    "message": "進階"
+  },
+  "messageDismissHint": {
+    "message": "點一下關閉"
   }
 }

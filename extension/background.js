@@ -24,11 +24,9 @@ async function pinAndMoveToFirst(tabId) {
 
 chrome.action.onClicked.addListener(async (tab) => {
   // Reopen the left panel directly without replacing the current website tab.
-  if (chrome.sidePanel?.getLayout && tab?.windowId !== undefined) {
-    try {
-      const {side} = await chrome.sidePanel.getLayout();
-      if (side === 'left') { await chrome.sidePanel.open({windowId:tab.windowId});return; }
-    } catch { /* Keep the dashboard available if Chrome cannot open its panel. */ }
+  if (chrome.sidePanel?.open && tab?.windowId !== undefined) {
+    try { await chrome.sidePanel.open({windowId:tab.windowId}); return; }
+    catch { /* Keep the dashboard available if Chrome cannot open its panel. */ }
   }
   try {
     // 現在のウィンドウ内だけを検索（他ウィンドウのダッシュボードには飛ばない）

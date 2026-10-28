@@ -28,8 +28,7 @@ categoryModal.addEventListener('keydown', event => {
   else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
 });
 
-// The native Chrome menu can also open the panel. Never render a second menu
-// on the right, even when that entry point bypasses the dashboard launcher.
+// The panel pairs with the dashboard of its window so the dashboard hides its own sidebar.
 let dashboardPort = null;
 function connectLeftDashboard() {
   if (g_dashboardWindowId === null || !document.documentElement.classList.contains('left-layout-verified')) return;
@@ -39,18 +38,7 @@ function connectLeftDashboard() {
 chrome.runtime.onMessage.addListener(message => {
   if (message.type === 'LEFT_PANEL_CONNECT' && message.windowId === g_dashboardWindowId) connectLeftDashboard();
 });
-async function enforceLeftPanel() {
-  if (!chrome.sidePanel?.getLayout) {
-    document.querySelector('.app').hidden = true;
-    return;
-  }
-  const {side} = await chrome.sidePanel.getLayout();
-  document.documentElement.classList.toggle('left-layout-verified', side === 'left');
-  document.querySelector('.app').hidden = side !== 'left';
-  if (side === 'left' && !dashboardPort) connectLeftDashboard();
-  if (side !== 'left' && chrome.sidePanel.close && g_dashboardWindowId !== null) {
-    await chrome.sidePanel.close({windowId:g_dashboardWindowId}).catch(() => {});
-  }
-}
-void enforceLeftPanel();
-setInterval(() => { void enforceLeftPanel(); }, 500);
+document.documentElement.classList.add('left-layout-verified');
+document.querySelector('.app').hidden = false;
+connectLeftDashboard();
+setInterval(() => { if (!dashboardPort) connectLeftDashboard(); }, 500);

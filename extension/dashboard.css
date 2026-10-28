@@ -2312,3 +2312,9 @@ body.sidebar-collapsed .sidebar-launch-help { display:none; }
 .review-prompt__actions { display:flex; flex-wrap:wrap; gap:8px; }
 .review-prompt .btn { font-size:12px; padding:6px 10px; }
 .review-prompt .btn--ghost { color:#cdd6f4; }
+
+/* onboarding actions */
+.empty-guide__action { margin-top: 16px; }
+.message { cursor: pointer; }
+.ai-settings > summary { cursor: pointer; font-size: 14px; font-weight: 600; padding: 6px 0; list-style: revert; }
+.ai-settings[open] > summary { margin-bottom: 4px; }

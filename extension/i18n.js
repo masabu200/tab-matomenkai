@@ -58,8 +58,12 @@ globalThis.I18n = (() => {
     try { return ((await chrome.storage.local.get('pwm_settings')).pwm_settings || {}).language || 'auto'; } catch { return 'auto'; }
   }
   // Sync in-memory + localStorage with the stored setting. Returns the effective locale.
+  // chrome.i18n only knows _locales from the moment the extension was loaded; when it has no
+  // messages (e.g. unpacked extension not reloaded after _locales appeared) fall back to fetching.
+  function nativeAvailable() { try { return !!chrome.i18n.getMessage('appName'); } catch { return false; } }
   async function ready() {
-    const code = await settingLanguage();
+    let code = await settingLanguage();
+    if (code === 'auto' && !nativeAvailable()) code = browserLocale();
     if (code !== 'auto' && SUPPORTED.includes(code)) {
       if (override !== code || !messages) { messages = await load(code); override = code; cache(code, messages); }
     } else if (override || messages) { override = null; messages = null; cache(null); }

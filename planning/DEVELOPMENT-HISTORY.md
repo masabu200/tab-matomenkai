@@ -270,3 +270,13 @@ Playwright 1.62 の `page.waitForFunction` に async 関数を渡すと、最初
 - 条件：インストールから3日以上、ダッシュボードを使った日が5日以上（日付の集合、操作回数ではない）、スヌーズ中でなく、表示は最大3回、「レビューを書く」または「今後表示しない」で終了。「あとで」は14日スヌーズ。ダッシュボードのみ（サイドパネルには出さない）。ダイアログが開いている間は出さない。
 - インストール時刻は `background.js` の `onInstalled` で `pwm_review.installedAt` に記録（上書きしない）。レビューURLは `chromewebstore.google.com/detail/<chrome.runtime.id>/reviews`（ストア配布版では runtime.id がアイテムID）。
 - テスト：`tests/review-prompt.cjs`（判定規則、スヌーズ、書く→ストアURLを開いて終了、今後表示しない、サイドパネル除外）。
+
+## 2026-10-28 BASE-03：初回案内・接続設定・エラー表示の整理
+
+- 初回案内：`extension/onboarding.js`。スペースが無いときの案内に「最初のスペースを作る」、空のスペースの案内に「今開いているタブを保存」のボタンを置き、説明を読まなくても次の操作に進めるようにした。
+- 接続設定：設定ダイアログの順を「言語 → 入出力・自動バックアップ → Googleドライブ → ローカルAI連携」にし、AI連携は `<details>` で既定折りたたみ（「上級者向け」）。折りたたみ中の要素にフォーカストラップが止まる不具合を `settings-dialog.js` で修正（閉じた details の中身を除外し summary を含める）。
+- エラー表示：エラーは8秒表示（成功は3.5秒）、`role="alert"`、クリックで閉じられる。
+- 利用者の指摘で撤去：「Chromeのサイドパネルの位置を左にしてください」「Chromeの設定を開く」など Chrome 側の設定を案内する文言・ボタン・配置チェックをすべて削除。ランチャーは配置に関係なくサイドパネルを開き、ツールバーのアイコンも同様。`sidepanel.js` の右配置時の自動クローズと `getLayout` 依存を外し、`minimum_chrome_version` を 116 に下げた。関連キー5件をカタログから削除。
+- テスト：`tests/onboarding.cjs` 新規。`tests/left-only.cjs` と `tests/launcher.test.cjs` を「配置に関係なく開く・案内が無い」前提に書き換え。`tests/reused-sidebar.cjs` のフォーカス順の期待を折りたたみ対応に更新。
+- 補足：ダッシュボードのスペース名入力は `window.prompt`（ブラウザ標準）で、Playwright は未処理ダイアログを自動で閉じるため、テストでは `page.once('dialog', …)` で応答する。
+- i18n の保険：`chrome.i18n` がメッセージを返さない（拡張を再読み込みしていない等）場合は、カタログを直接読み込んで再描画するようにした。

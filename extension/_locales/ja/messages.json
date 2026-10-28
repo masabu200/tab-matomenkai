@@ -415,10 +415,6 @@
     "message": "保存先のスペースがないため、この画面では保存できません。",
     "description": "dashboard-dialogs.js:60"
   },
-  "m_6c891ec97d": {
-    "message": "左バーをサイドパネルで開く（Chromeの配置設定は左）",
-    "description": "dashboard.html:title"
-  },
   "m_10432c2864": {
     "message": "左バーをサイドパネルで開く",
     "description": "dashboard.html:aria-label, dashboard.html:<span>"
@@ -498,14 +494,6 @@
   "m_a7b8477445": {
     "message": "タブまとめん改",
     "description": "dashboard.html:<title>"
-  },
-  "m_2e57cc29ef": {
-    "message": "ページ閲覧中も左に出しっぱなしにするには、Chromeの「サイドパネルの位置」を「左」にしてから上のボタンを押してください。",
-    "description": "dashboard.html:<p>"
-  },
-  "m_22c2dc1788": {
-    "message": "Chromeの設定を開く",
-    "description": "dashboard.html:<button>"
   },
   "m_5d208d1c21": {
     "message": "タブまとめん",
@@ -1307,17 +1295,9 @@
     "message": "サイドバーを展開する",
     "description": "sidebar-controls.js:30"
   },
-  "m_28e3b7ba50": {
-    "message": "Chromeのサイドパネルの位置を「左」にしてください。右側には開きません。",
-    "description": "sidepanel-launcher.js:3"
-  },
   "m_2c14db7241": {
     "message": "左サイドバーを開きました。別のページを開いても表示されたままです。閉じたときはツールバーの拡張アイコンで再表示できます。",
     "description": "sidepanel-launcher.js:4"
-  },
-  "m_07a63337a6": {
-    "message": "左配置を確認できるChrome 141以上が必要です。",
-    "description": "sidepanel-launcher.js:36"
   },
   "m_c5ed08a7f9": {
     "message": "ウィンドウの準備中です。もう一度お試しください。",
@@ -1622,5 +1602,17 @@
   "reviewThanks": {
     "message": "ありがとうございます！",
     "description": "review prompt after clicking write"
+  },
+  "guideCreateSpace": {
+    "message": "最初のスペースを作る"
+  },
+  "guideSaveTabs": {
+    "message": "今開いているタブを保存"
+  },
+  "advancedLabel": {
+    "message": "上級者向け"
+  },
+  "messageDismissHint": {
+    "message": "クリックで閉じる"
   }
 }

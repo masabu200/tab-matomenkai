@@ -32,7 +32,7 @@
   dialog.addEventListener('keydown',event=>{
     if(event.key==='Escape'){event.preventDefault();dialog.close();return}
     if(event.key!=='Tab')return;
-    const items=[...dialog.querySelectorAll('button,input,select,a[href]')].filter(el=>!el.disabled&&el.getClientRects().length);
+    const items=[...dialog.querySelectorAll('summary,button,input,select,a[href]')].filter(el=>!el.disabled&&el.getClientRects().length&&!(el.tagName!=='SUMMARY'&&el.closest('details:not([open])')));
     const first=items[0],last=items[items.length-1];
     if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus()}
     else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus()}

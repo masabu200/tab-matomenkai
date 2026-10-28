@@ -311,9 +311,6 @@
   "m_348b8cbfe6": {
     "message": "Não há espaço para salvar, então não é possível salvar nesta tela."
   },
-  "m_6c891ec97d": {
-    "message": "Abrir a barra esquerda no painel lateral (a posição do painel do Chrome deve ser à esquerda)"
-  },
   "m_10432c2864": {
     "message": "Abrir a barra esquerda no painel lateral"
   },
@@ -373,12 +370,6 @@
   },
   "m_a7b8477445": {
     "message": "Tab Matomen Kai"
-  },
-  "m_2e57cc29ef": {
-    "message": "Para mantê-lo visível à esquerda enquanto navega, defina a \"Posição do painel lateral\" do Chrome como \"Esquerda\" e depois pressione o botão acima."
-  },
-  "m_22c2dc1788": {
-    "message": "Abrir as configurações do Chrome"
   },
   "m_5d208d1c21": {
     "message": "Tab Matomen"
@@ -980,14 +971,8 @@
   "m_91323fe947": {
     "message": "Expandir a barra lateral"
   },
-  "m_28e3b7ba50": {
-    "message": "Defina a posição do painel lateral do Chrome como \"Esquerda\". Ele não abre à direita."
-  },
   "m_2c14db7241": {
     "message": "A barra lateral esquerda foi aberta. Ela permanece visível enquanto você navega em outras páginas. Se você fechá-la, reabra-a com o ícone da extensão na barra de ferramentas."
-  },
-  "m_07a63337a6": {
-    "message": "É necessário o Chrome 141 ou posterior para detectar a posição à esquerda."
   },
   "m_c5ed08a7f9": {
     "message": "A janela ainda está sendo preparada. Tente novamente."
@@ -1225,5 +1210,17 @@
   "reviewThanks": {
     "message": "Obrigado!",
     "description": "review prompt after clicking write"
+  },
+  "guideCreateSpace": {
+    "message": "Criar seu primeiro espaço"
+  },
+  "guideSaveTabs": {
+    "message": "Salvar as guias abertas agora"
+  },
+  "advancedLabel": {
+    "message": "Avançado"
+  },
+  "messageDismissHint": {
+    "message": "Clique para fechar"
   }
 }

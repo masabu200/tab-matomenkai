@@ -311,9 +311,6 @@
   "m_348b8cbfe6": {
     "message": "Il n'y a aucun espace où enregistrer : l'enregistrement est impossible sur cet écran."
   },
-  "m_6c891ec97d": {
-    "message": "Ouvrir la barre de gauche dans le panneau latéral (le panneau de Chrome doit être positionné à gauche)"
-  },
   "m_10432c2864": {
     "message": "Ouvrir la barre de gauche dans le panneau latéral"
   },
@@ -373,12 +370,6 @@
   },
   "m_a7b8477445": {
     "message": "Tab Matomen Kai"
-  },
-  "m_2e57cc29ef": {
-    "message": "Pour le garder visible à gauche pendant la navigation, réglez la « Position du panneau latéral » de Chrome sur « Gauche », puis appuyez sur le bouton ci-dessus."
-  },
-  "m_22c2dc1788": {
-    "message": "Ouvrir les paramètres de Chrome"
   },
   "m_5d208d1c21": {
     "message": "Tab Matomen"
@@ -980,14 +971,8 @@
   "m_91323fe947": {
     "message": "Développer la barre latérale"
   },
-  "m_28e3b7ba50": {
-    "message": "Réglez la position du panneau latéral de Chrome sur « Gauche ». Il ne s'ouvre pas à droite."
-  },
   "m_2c14db7241": {
     "message": "Barre latérale gauche ouverte. Elle reste visible pendant que vous naviguez sur d'autres pages. Si vous la fermez, rouvrez-la avec l'icône de l'extension dans la barre d'outils."
-  },
-  "m_07a63337a6": {
-    "message": "Chrome 141 ou une version ultérieure est nécessaire pour détecter la position à gauche."
   },
   "m_c5ed08a7f9": {
     "message": "La fenêtre n'est pas encore prête. Veuillez réessayer."
@@ -1216,5 +1201,17 @@
   },
   "reviewThanks": {
     "message": "Merci !"
+  },
+  "guideCreateSpace": {
+    "message": "Créer votre premier espace"
+  },
+  "guideSaveTabs": {
+    "message": "Enregistrer les onglets ouverts maintenant"
+  },
+  "advancedLabel": {
+    "message": "Avancé"
+  },
+  "messageDismissHint": {
+    "message": "Cliquer pour fermer"
   }
 }

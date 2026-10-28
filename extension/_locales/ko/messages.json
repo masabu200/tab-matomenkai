@@ -311,9 +311,6 @@
   "m_348b8cbfe6": {
     "message": "저장할 스페이스가 없어서 이 화면에서는 저장할 수 없어요."
   },
-  "m_6c891ec97d": {
-    "message": "측면 패널에서 왼쪽 바 열기 (Chrome의 패널 위치가 왼쪽이어야 해요)"
-  },
   "m_10432c2864": {
     "message": "측면 패널에서 왼쪽 바 열기"
   },
@@ -373,12 +370,6 @@
   },
   "m_a7b8477445": {
     "message": "Tab Matomen Kai"
-  },
-  "m_2e57cc29ef": {
-    "message": "탐색하는 동안 왼쪽에 계속 표시하려면 Chrome의 \"측면 패널 위치\"를 \"왼쪽\"으로 설정한 다음 위의 버튼을 누르세요."
-  },
-  "m_22c2dc1788": {
-    "message": "Chrome 설정 열기"
   },
   "m_5d208d1c21": {
     "message": "Tab Matomen"
@@ -980,14 +971,8 @@
   "m_91323fe947": {
     "message": "사이드바 펼치기"
   },
-  "m_28e3b7ba50": {
-    "message": "Chrome의 측면 패널 위치를 \"왼쪽\"으로 설정하세요. 오른쪽에서는 열리지 않아요."
-  },
   "m_2c14db7241": {
     "message": "왼쪽 사이드바를 열었어요. 다른 페이지를 탐색하는 동안에도 계속 표시돼요. 닫았다면 툴바의 확장 프로그램 아이콘으로 다시 여세요."
-  },
-  "m_07a63337a6": {
-    "message": "왼쪽 위치를 감지하려면 Chrome 141 이상이 필요해요."
   },
   "m_c5ed08a7f9": {
     "message": "창이 아직 준비 중이에요. 다시 시도해 주세요."
@@ -1216,5 +1201,17 @@
   },
   "reviewThanks": {
     "message": "감사합니다!"
+  },
+  "guideCreateSpace": {
+    "message": "첫 스페이스 만들기"
+  },
+  "guideSaveTabs": {
+    "message": "지금 열려 있는 탭 저장"
+  },
+  "advancedLabel": {
+    "message": "고급"
+  },
+  "messageDismissHint": {
+    "message": "클릭하여 닫기"
   }
 }

@@ -311,9 +311,6 @@
   "m_348b8cbfe6": {
     "message": "No hay un espacio donde guardar, por lo que no se puede guardar en esta pantalla."
   },
-  "m_6c891ec97d": {
-    "message": "Abrir la barra izquierda en el panel lateral (la posición del panel de Chrome debe ser la izquierda)"
-  },
   "m_10432c2864": {
     "message": "Abrir la barra izquierda en el panel lateral"
   },
@@ -373,12 +370,6 @@
   },
   "m_a7b8477445": {
     "message": "Tab Matomen Kai"
-  },
-  "m_2e57cc29ef": {
-    "message": "Para mantenerla visible a la izquierda mientras navegas, cambia la \"Posición del panel lateral\" de Chrome a \"Izquierda\" y pulsa el botón de arriba."
-  },
-  "m_22c2dc1788": {
-    "message": "Abrir la configuración de Chrome"
   },
   "m_5d208d1c21": {
     "message": "Tab Matomen"
@@ -980,14 +971,8 @@
   "m_91323fe947": {
     "message": "Expandir la barra lateral"
   },
-  "m_28e3b7ba50": {
-    "message": "Cambia la posición del panel lateral de Chrome a \"Izquierda\". No se abre en la derecha."
-  },
   "m_2c14db7241": {
     "message": "Se abrió la barra lateral izquierda. Permanece visible mientras navegas por otras páginas. Si la cierras, vuelve a abrirla con el icono de la extensión en la barra de herramientas."
-  },
-  "m_07a63337a6": {
-    "message": "Se requiere Chrome 141 o posterior para detectar la posición izquierda."
   },
   "m_c5ed08a7f9": {
     "message": "La ventana aún se está preparando. Inténtalo de nuevo."
@@ -1216,5 +1201,17 @@
   },
   "reviewThanks": {
     "message": "¡Gracias!"
+  },
+  "guideCreateSpace": {
+    "message": "Crear tu primer espacio"
+  },
+  "guideSaveTabs": {
+    "message": "Guardar las pestañas abiertas ahora"
+  },
+  "advancedLabel": {
+    "message": "Avanzado"
+  },
+  "messageDismissHint": {
+    "message": "Haz clic para cerrar"
   }
 }

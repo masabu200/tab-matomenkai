@@ -311,9 +311,6 @@
   "m_348b8cbfe6": {
     "message": "There is no space to save to, so saving is not possible on this screen."
   },
-  "m_6c891ec97d": {
-    "message": "Open the left bar in the side panel (Chrome's panel position must be left)"
-  },
   "m_10432c2864": {
     "message": "Open the left bar in the side panel"
   },
@@ -373,12 +370,6 @@
   },
   "m_a7b8477445": {
     "message": "Tab Matomen Kai"
-  },
-  "m_2e57cc29ef": {
-    "message": "To keep it visible on the left while browsing, set Chrome's \"Side panel position\" to \"Left\", then press the button above."
-  },
-  "m_22c2dc1788": {
-    "message": "Open Chrome settings"
   },
   "m_5d208d1c21": {
     "message": "Tab Matomen"
@@ -980,14 +971,8 @@
   "m_91323fe947": {
     "message": "Expand the sidebar"
   },
-  "m_28e3b7ba50": {
-    "message": "Set Chrome's side panel position to \"Left\". It does not open on the right."
-  },
   "m_2c14db7241": {
     "message": "Opened the left sidebar. It stays visible while you browse other pages. If you close it, reopen it with the extension icon in the toolbar."
-  },
-  "m_07a63337a6": {
-    "message": "Chrome 141 or later is required to detect the left position."
   },
   "m_c5ed08a7f9": {
     "message": "The window is still getting ready. Please try again."
@@ -1225,5 +1210,17 @@
   "reviewThanks": {
     "message": "Thank you!",
     "description": "review prompt after clicking write"
+  },
+  "guideCreateSpace": {
+    "message": "Create your first space"
+  },
+  "guideSaveTabs": {
+    "message": "Save the tabs that are open now"
+  },
+  "advancedLabel": {
+    "message": "Advanced"
+  },
+  "messageDismissHint": {
+    "message": "Click to dismiss"
   }
 }

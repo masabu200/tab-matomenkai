@@ -311,9 +311,6 @@
   "m_348b8cbfe6": {
     "message": "没有可保存的空间，因此无法在此界面保存。"
   },
-  "m_6c891ec97d": {
-    "message": "在侧边面板中打开左侧栏（Chrome 的面板位置需设为左侧）"
-  },
   "m_10432c2864": {
     "message": "在侧边面板中打开左侧栏"
   },
@@ -373,12 +370,6 @@
   },
   "m_a7b8477445": {
     "message": "Tab Matomen Kai"
-  },
-  "m_2e57cc29ef": {
-    "message": "若想浏览时让它一直显示在左侧，请先把 Chrome 的“侧边面板位置”设为“左侧”，再点击上方的按钮。"
-  },
-  "m_22c2dc1788": {
-    "message": "打开 Chrome 设置"
   },
   "m_5d208d1c21": {
     "message": "Tab Matomen"
@@ -980,14 +971,8 @@
   "m_91323fe947": {
     "message": "展开侧边栏"
   },
-  "m_28e3b7ba50": {
-    "message": "请将 Chrome 的侧边面板位置设为“左侧”。它不会在右侧打开。"
-  },
   "m_2c14db7241": {
     "message": "已打开左侧栏。浏览其他页面时它会一直显示。关闭后，可通过工具栏中的扩展程序图标重新打开。"
-  },
-  "m_07a63337a6": {
-    "message": "需要 Chrome 141 或更高版本才能检测左侧位置。"
   },
   "m_c5ed08a7f9": {
     "message": "窗口还在准备中。请重试。"
@@ -1216,5 +1201,17 @@
   },
   "reviewThanks": {
     "message": "谢谢！"
+  },
+  "guideCreateSpace": {
+    "message": "创建第一个空间"
+  },
+  "guideSaveTabs": {
+    "message": "保存当前打开的标签页"
+  },
+  "advancedLabel": {
+    "message": "高级"
+  },
+  "messageDismissHint": {
+    "message": "点击关闭"
   }
 }

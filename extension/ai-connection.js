@@ -2,8 +2,8 @@
 (() => {
   const base='http://127.0.0.1:47831';let token='',running=false,timer,proposals=[];
   const settings=document.getElementById('settingsDialog');
-  const section=document.createElement('section');section.className='ai-settings';
-  const title=document.createElement('h3');title.textContent=t('m_2ce01f81ad');
+  const section=document.createElement('details');section.className='ai-settings';section.id='aiSettings';
+  const title=document.createElement('summary');title.textContent=t('m_2ce01f81ad')+' · '+t('advancedLabel');
   const note=document.createElement('p');note.textContent=t('m_a8ce0201c4');
   const label=document.createElement('label');label.htmlFor='aiConnectionToken';label.textContent=t('m_a9356d61c7');
   const input=document.createElement('input');input.id='aiConnectionToken';input.type='password';input.autocomplete='off';input.placeholder=t('m_9dd838b6ab');
