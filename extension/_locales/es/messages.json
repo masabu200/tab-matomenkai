@@ -1222,5 +1222,56 @@
   },
   "driveIdentityUnavailable": {
     "message": "La autenticación de Google (API identity) no está disponible en este Chrome, así que se muestra la configuración manual. Si recargar la extensión no lo soluciona, avísanos."
+  },
+  "driveFolderName": {
+    "message": "Copias de seguridad de Tab Matomen Kai"
+  },
+  "driveFolderFailed": {
+    "message": "No se pudo crear la carpeta de copias de seguridad ($1)."
+  },
+  "driveListFailed": {
+    "message": "No se pudo obtener la lista de copias de seguridad ($1)."
+  },
+  "driveDownloadFailed": {
+    "message": "No se pudo descargar la copia de seguridad ($1)."
+  },
+  "driveKeepLabel": {
+    "message": "Copias que se conservan en Drive"
+  },
+  "driveKeepUnlimited": {
+    "message": "Sin límite"
+  },
+  "driveOpenFolder": {
+    "message": "Abrir la carpeta de Drive"
+  },
+  "driveRefreshList": {
+    "message": "Actualizar la lista de copias"
+  },
+  "driveBackupsEmpty": {
+    "message": "No hay copias de seguridad en Drive"
+  },
+  "driveBackupItem": {
+    "message": "$1 (espacios $2 / categorías $3)"
+  },
+  "driveRestoreButton": {
+    "message": "Restaurar la copia seleccionada"
+  },
+  "driveRestoreConfirm": {
+    "message": "¿Restaurar la copia de Drive \"$1\" ($2 espacios, $3 categorías)?\nLos datos actuales se guardan aparte y pueden recuperarse con \"Deshacer restauración\". Las pestañas abiertas no cambian."
+  },
+  "driveRestoreDone": {
+    "message": "Restaurado ($1 espacios / $2 categorías)."
+  },
+  "driveRestoreUndo": {
+    "message": "Deshacer restauración"
+  },
+  "driveRestoreUndone": {
+    "message": "Se volvió a los datos anteriores a la restauración."
+  },
+  "driveSavedPruned": {
+    "message": "Copia guardada en Google Drive ($1 copias antiguas eliminadas)."
+  },
+  "driveSelectBackup": {
+    "message": "Selecciona una copia para restaurar."
   }
 }

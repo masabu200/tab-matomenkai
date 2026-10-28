@@ -1623,5 +1623,56 @@
   },
   "driveIdentityUnavailable": {
     "message": "この Chrome では Google 認証（identity API）が使えないため、手動設定に切り替えています。拡張を再読み込みしても直らない場合は教えてください。"
+  },
+  "driveFolderName": {
+    "message": "タブまとめん改 バックアップ"
+  },
+  "driveFolderFailed": {
+    "message": "バックアップ用フォルダを作成できませんでした（$1）。"
+  },
+  "driveListFailed": {
+    "message": "バックアップ一覧を取得できませんでした（$1）。"
+  },
+  "driveDownloadFailed": {
+    "message": "バックアップを取得できませんでした（$1）。"
+  },
+  "driveKeepLabel": {
+    "message": "Drive に残す世代数"
+  },
+  "driveKeepUnlimited": {
+    "message": "無制限"
+  },
+  "driveOpenFolder": {
+    "message": "Drive のフォルダを開く"
+  },
+  "driveRefreshList": {
+    "message": "バックアップ一覧を更新"
+  },
+  "driveBackupsEmpty": {
+    "message": "Drive にバックアップはありません"
+  },
+  "driveBackupItem": {
+    "message": "$1（スペース $2 / カテゴリー $3）"
+  },
+  "driveRestoreButton": {
+    "message": "選んだバックアップに復元"
+  },
+  "driveRestoreConfirm": {
+    "message": "Drive のバックアップ「$1」（スペース $2 件、カテゴリー $3 件）に復元します。\n現在のデータは退避し、「復元を取り消す」で戻せます。開いているタブは変更しません。よろしいですか？"
+  },
+  "driveRestoreDone": {
+    "message": "復元しました（スペース $1 / カテゴリー $2）。"
+  },
+  "driveRestoreUndo": {
+    "message": "復元を取り消す"
+  },
+  "driveRestoreUndone": {
+    "message": "復元前のデータに戻しました。"
+  },
+  "driveSavedPruned": {
+    "message": "Googleドライブにバックアップを保存しました（古い $1 件を削除）。"
+  },
+  "driveSelectBackup": {
+    "message": "復元するバックアップを選んでください。"
   }
 }

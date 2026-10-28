@@ -6,10 +6,16 @@
 //  - manual: the user supplies their own web-application client ID (development / non-Chrome).
 //    The implicit-flow token lives only in chrome.storage.session and is renewed with a
 //    silent (prompt=none) launchWebAuthFlow when possible.
+// Files go into a dedicated folder (appProperties pwm=folder); each backup is a new file
+// tagged appProperties pwm=backup, and older ones beyond the keep count are deleted.
 globalThis.DriveBackup = (() => {
   const scope = 'https://www.googleapis.com/auth/drive.file';
+  const API = 'https://www.googleapis.com/drive/v3';
   const sessionKey = 'pwm_drive_auth';
   const connectedKey = 'pwm_drive_connected';
+  const folderKey = 'pwm_drive_folder_id';
+  const DEFAULT_KEEP = 30;
+  const safeId = id => /^[\w-]+$/.test(id || '');
 
   function mode() {
     const manifest = chrome.runtime.getManifest();
@@ -28,7 +34,9 @@ globalThis.DriveBackup = (() => {
         : await request;
     }
     catch (error) {
-      if (error?.message === t('driveAuthTimeout')) throw error; throw Error(interactive ? t('m_9e9943aa18') + (error?.message ? `（${error.message}）` : '') : t('m_1b162ecb08')); }
+      if (error?.message === t('driveAuthTimeout')) throw error;
+      throw Error(interactive ? t('m_9e9943aa18') + (error?.message ? `（${error.message}）` : '') : t('m_1b162ecb08'));
+    }
     const token = typeof result === 'string' ? result : result?.token;
     const granted = typeof result === 'string' ? [scope] : (result?.grantedScopes || [scope]);
     if (!token) throw Error(interactive ? t('m_9e9943aa18') : t('m_1b162ecb08'));
@@ -63,7 +71,7 @@ globalThis.DriveBackup = (() => {
     return value;
   }
 
-  // ---------- public ----------
+  // ---------- connection ----------
   async function connect(clientId) {
     if (mode() === 'builtin') {
       await builtinToken(true);
@@ -74,7 +82,6 @@ globalThis.DriveBackup = (() => {
     await manualFlow(clientId, false);
     await chrome.storage.local.set({pwm_drive_client_id: clientId, [connectedKey]: true});
   }
-
   // Returns {token}. Renews silently when it can; otherwise asks the user to reconnect.
   async function auth() {
     if (mode() === 'builtin') {
@@ -90,7 +97,6 @@ globalThis.DriveBackup = (() => {
     }
     throw Error(t('m_27298d6197'));
   }
-
   async function disconnect() {
     await chrome.storage.session.remove(sessionKey);
     await chrome.storage.local.remove(connectedKey);
@@ -102,12 +108,68 @@ globalThis.DriveBackup = (() => {
       } catch { /* nothing cached */ }
     }
   }
-
   async function invalidate(token) {
     if (mode() === 'builtin') { try { await chrome.identity.removeCachedAuthToken({token}); } catch {} }
     else await chrome.storage.session.remove(sessionKey);
   }
 
+  // ---------- Drive API helpers ----------
+  async function api(path, init, token) {
+    let response;
+    try {
+      response = await fetch(API + path, {...init, headers: {Authorization: `Bearer ${token}`, ...(init?.headers || {})}, signal: AbortSignal.timeout(30000)});
+    } catch { throw Error(t('m_551f37d20f')); }
+    if (response.status === 401) { await invalidate(token); throw Error(t('m_6d2d7cf526')); }
+    return response;
+  }
+  const q = s => encodeURIComponent(s);
+  async function ensureFolder(token) {
+    const cached = (await chrome.storage.local.get(folderKey))[folderKey];
+    if (safeId(cached)) {
+      const check = await api(`/files/${cached}?fields=id,trashed`, {}, token);
+      if (check.ok) { const f = await check.json(); if (!f.trashed) return cached; }
+    }
+    const found = await api(`/files?q=${q("mimeType='application/vnd.google-apps.folder' and trashed=false and appProperties has { key='pwm' and value='folder' }")}&fields=files(id)&pageSize=1`, {}, token);
+    if (found.ok) {
+      const {files} = await found.json();
+      if (safeId(files?.[0]?.id)) { await chrome.storage.local.set({[folderKey]: files[0].id}); return files[0].id; }
+    }
+    const created = await api('/files?fields=id', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({name: t('driveFolderName'), mimeType:'application/vnd.google-apps.folder', appProperties:{pwm:'folder'}})}, token);
+    if (!created.ok) throw Error(t('driveFolderFailed', [created.status]));
+    const folder = await created.json();
+    if (!safeId(folder.id)) throw Error(t('driveFolderFailed', ['?']));
+    await chrome.storage.local.set({[folderKey]: folder.id});
+    return folder.id;
+  }
+  async function listFiles(token) {
+    const response = await api(`/files?q=${q("appProperties has { key='pwm' and value='backup' } and trashed=false")}&orderBy=createdTime desc&pageSize=100&fields=files(id,name,createdTime,size,appProperties)`, {}, token);
+    if (!response.ok) throw Error(t('driveListFailed', [response.status]));
+    return ((await response.json()).files || []).filter(f => safeId(f.id));
+  }
+  async function keepCount() {
+    const settings = (await chrome.storage.local.get('pwm_settings')).pwm_settings || {};
+    const value = Number(settings.driveKeep);
+    return Number.isFinite(value) && value >= 0 && settings.driveKeep !== undefined ? value : DEFAULT_KEEP;
+  }
+  async function setKeepCount(value) {
+    const cur = (await chrome.storage.local.get('pwm_settings')).pwm_settings || {};
+    await chrome.storage.local.set({pwm_settings: {...cur, driveKeep: Math.max(0, Number(value) || 0)}});
+  }
+  // Deletes backups beyond the keep count (newest first). Never deletes the file just written. 0 = unlimited.
+  async function prune(token, keepId) {
+    const keep = await keepCount();
+    if (!keep) return 0;
+    const files = await listFiles(token);
+    const extra = files.slice(keep).filter(f => f.id !== keepId);
+    let removed = 0;
+    for (const file of extra) {
+      const response = await api(`/files/${file.id}`, {method:'DELETE'}, token);
+      if (response.ok || response.status === 404) removed++;
+    }
+    return removed;
+  }
+
+  // ---------- public operations ----------
   async function save(data, activeSpaceId) {
     return navigator.locks.request('pwm-drive-backup', {ifAvailable:true}, async lock => {
       if (!lock) throw Error(t('m_76e8f9b19a'));
@@ -115,9 +177,11 @@ globalThis.DriveBackup = (() => {
       const exportedAt = new Date().toISOString();
       const backup = {version:1, exportedAt, activeSpaceId, categories:data.categories || [], spaces:data.spaces || []};
       validateBackup(backup);
+      const folderId = await ensureFolder(credentials.token);
       const name = t('m_c62a99397a') + exportedAt.replace(/[:.]/g,'-') + '.json';
+      const metadata = {name, mimeType:'application/json', parents:[folderId], appProperties:{pwm:'backup', spaces:String(backup.spaces.length), categories:String(backup.categories.length), exportedAt}};
       const boundary = 'pwm_' + crypto.randomUUID();
-      const body = `--${boundary}\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n${JSON.stringify({name,mimeType:'application/json'})}\r\n--${boundary}\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n${JSON.stringify(backup,null,2)}\r\n--${boundary}--`;
+      const body = `--${boundary}\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n${JSON.stringify(metadata)}\r\n--${boundary}\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n${JSON.stringify(backup,null,2)}\r\n--${boundary}--`;
       let response;
       try {
         response = await fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id,name', {
@@ -127,11 +191,28 @@ globalThis.DriveBackup = (() => {
       if (response.status === 401) {await invalidate(credentials.token); throw Error(t('m_6d2d7cf526'));}
       if (!response.ok) throw Error(t('m_e5be1db2f7', [response.status]));
       const file = await response.json();
-      if (!/^[\w-]+$/.test(file.id || '')) throw Error(t('m_fd067b945c'));
-      const result = {id:file.id,name,exportedAt,url:`https://drive.google.com/file/d/${file.id}/view`};
+      if (!safeId(file.id)) throw Error(t('m_fd067b945c'));
+      const result = {id:file.id,name,exportedAt,folderId,url:`https://drive.google.com/file/d/${file.id}/view`,pruned:0};
       await chrome.storage.local.set({pwm_drive_last_backup:result});
+      try { result.pruned = await prune(credentials.token, file.id); } catch { result.pruned = 0; }
       return result;
     });
   }
-  return {mode,connect,auth,disconnect,save};
+  async function listBackups() {
+    const credentials = await auth();
+    return listFiles(credentials.token);
+  }
+  async function download(id) {
+    if (!safeId(id)) throw Error(t('driveDownloadFailed', ['?']));
+    const credentials = await auth();
+    const response = await api(`/files/${id}?alt=media`, {}, credentials.token);
+    if (!response.ok) throw Error(t('driveDownloadFailed', [response.status]));
+    const text = await response.text();
+    return validateBackup(JSON.parse(text.replace(/^﻿/, '')));
+  }
+  async function folderUrl() {
+    const id = (await chrome.storage.local.get(folderKey))[folderKey];
+    return safeId(id) ? `https://drive.google.com/drive/folders/${id}` : '';
+  }
+  return {mode,connect,auth,disconnect,save,listBackups,download,folderUrl,keepCount,setKeepCount,DEFAULT_KEEP};
 })();

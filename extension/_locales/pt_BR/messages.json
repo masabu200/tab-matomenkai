@@ -1231,5 +1231,56 @@
   },
   "driveIdentityUnavailable": {
     "message": "A autenticação do Google (API identity) não está disponível neste Chrome, então a configuração manual é exibida. Se recarregar a extensão não resolver, avise-nos."
+  },
+  "driveFolderName": {
+    "message": "Backups do Tab Matomen Kai"
+  },
+  "driveFolderFailed": {
+    "message": "Não foi possível criar a pasta de backup ($1)."
+  },
+  "driveListFailed": {
+    "message": "Não foi possível carregar a lista de backups ($1)."
+  },
+  "driveDownloadFailed": {
+    "message": "Não foi possível baixar o backup ($1)."
+  },
+  "driveKeepLabel": {
+    "message": "Backups mantidos no Drive"
+  },
+  "driveKeepUnlimited": {
+    "message": "Ilimitado"
+  },
+  "driveOpenFolder": {
+    "message": "Abrir a pasta do Drive"
+  },
+  "driveRefreshList": {
+    "message": "Atualizar lista de backups"
+  },
+  "driveBackupsEmpty": {
+    "message": "Nenhum backup no Drive"
+  },
+  "driveBackupItem": {
+    "message": "$1 (espaços $2 / categorias $3)"
+  },
+  "driveRestoreButton": {
+    "message": "Restaurar o backup selecionado"
+  },
+  "driveRestoreConfirm": {
+    "message": "Restaurar o backup do Drive \"$1\" ($2 espaços, $3 categorias)?\nSeus dados atuais ficam guardados e podem voltar com \"Desfazer restauração\". As guias abertas não são alteradas."
+  },
+  "driveRestoreDone": {
+    "message": "Restaurado ($1 espaços / $2 categorias)."
+  },
+  "driveRestoreUndo": {
+    "message": "Desfazer restauração"
+  },
+  "driveRestoreUndone": {
+    "message": "Voltou aos dados de antes da restauração."
+  },
+  "driveSavedPruned": {
+    "message": "Backup salvo no Google Drive ($1 backups antigos removidos)."
+  },
+  "driveSelectBackup": {
+    "message": "Selecione um backup para restaurar."
   }
 }

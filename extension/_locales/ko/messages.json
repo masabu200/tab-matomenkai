@@ -1222,5 +1222,56 @@
   },
   "driveIdentityUnavailable": {
     "message": "이 Chrome에서는 Google 인증(identity API)을 사용할 수 없어 수동 설정으로 전환했어요. 확장 프로그램을 다시 로드해도 해결되지 않으면 알려 주세요."
+  },
+  "driveFolderName": {
+    "message": "Tab Matomen Kai 백업"
+  },
+  "driveFolderFailed": {
+    "message": "백업 폴더를 만들 수 없었어요($1)."
+  },
+  "driveListFailed": {
+    "message": "백업 목록을 가져올 수 없었어요($1)."
+  },
+  "driveDownloadFailed": {
+    "message": "백업을 가져올 수 없었어요($1)."
+  },
+  "driveKeepLabel": {
+    "message": "Drive에 남길 백업 수"
+  },
+  "driveKeepUnlimited": {
+    "message": "무제한"
+  },
+  "driveOpenFolder": {
+    "message": "Drive 폴더 열기"
+  },
+  "driveRefreshList": {
+    "message": "백업 목록 새로고침"
+  },
+  "driveBackupsEmpty": {
+    "message": "Drive에 백업이 없어요"
+  },
+  "driveBackupItem": {
+    "message": "$1 (스페이스 $2 / 카테고리 $3)"
+  },
+  "driveRestoreButton": {
+    "message": "선택한 백업으로 복원"
+  },
+  "driveRestoreConfirm": {
+    "message": "Drive 백업 \"$1\"(스페이스 $2개, 카테고리 $3개)으로 복원할까요?\n현재 데이터는 따로 보관되며 \"복원 취소\"로 되돌릴 수 있어요. 열려 있는 탭은 변경되지 않아요."
+  },
+  "driveRestoreDone": {
+    "message": "복원했어요(스페이스 $1 / 카테고리 $2)."
+  },
+  "driveRestoreUndo": {
+    "message": "복원 취소"
+  },
+  "driveRestoreUndone": {
+    "message": "복원 전 데이터로 되돌렸어요."
+  },
+  "driveSavedPruned": {
+    "message": "Google 드라이브에 백업을 저장했어요(오래된 백업 $1개 삭제)."
+  },
+  "driveSelectBackup": {
+    "message": "복원할 백업을 선택해 주세요."
   }
 }

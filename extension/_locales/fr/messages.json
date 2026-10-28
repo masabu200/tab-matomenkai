@@ -1222,5 +1222,56 @@
   },
   "driveIdentityUnavailable": {
     "message": "L'authentification Google (API identity) n'est pas disponible dans ce Chrome ; la configuration manuelle est donc affichée. Si recharger l'extension ne résout rien, prévenez-nous."
+  },
+  "driveFolderName": {
+    "message": "Sauvegardes Tab Matomen Kai"
+  },
+  "driveFolderFailed": {
+    "message": "Impossible de créer le dossier de sauvegarde ($1)."
+  },
+  "driveListFailed": {
+    "message": "Impossible de charger la liste des sauvegardes ($1)."
+  },
+  "driveDownloadFailed": {
+    "message": "Impossible de télécharger la sauvegarde ($1)."
+  },
+  "driveKeepLabel": {
+    "message": "Sauvegardes conservées dans Drive"
+  },
+  "driveKeepUnlimited": {
+    "message": "Illimité"
+  },
+  "driveOpenFolder": {
+    "message": "Ouvrir le dossier Drive"
+  },
+  "driveRefreshList": {
+    "message": "Actualiser la liste des sauvegardes"
+  },
+  "driveBackupsEmpty": {
+    "message": "Aucune sauvegarde dans Drive"
+  },
+  "driveBackupItem": {
+    "message": "$1 (espaces $2 / catégories $3)"
+  },
+  "driveRestoreButton": {
+    "message": "Restaurer la sauvegarde sélectionnée"
+  },
+  "driveRestoreConfirm": {
+    "message": "Restaurer la sauvegarde Drive « $1 » ($2 espaces, $3 catégories) ?\nVos données actuelles sont mises de côté et peuvent être rétablies avec « Annuler la restauration ». Les onglets ouverts ne changent pas."
+  },
+  "driveRestoreDone": {
+    "message": "Restauré ($1 espaces / $2 catégories)."
+  },
+  "driveRestoreUndo": {
+    "message": "Annuler la restauration"
+  },
+  "driveRestoreUndone": {
+    "message": "Retour aux données d’avant la restauration."
+  },
+  "driveSavedPruned": {
+    "message": "Sauvegarde enregistrée dans Google Drive ($1 anciennes sauvegardes supprimées)."
+  },
+  "driveSelectBackup": {
+    "message": "Sélectionnez une sauvegarde à restaurer."
   }
 }

@@ -2305,3 +2305,10 @@ body.sidebar-collapsed .sidebar-settings { min-width:32px;width:32px;padding:0; 
 .panel-dialog label { display:block;white-space:pre-line;font-size:13px;line-height:1.6; }
 .panel-dialog input { width:100%;margin-top:12px;padding:10px;border:1px solid #46516d;border-radius:6px;background:#0f111a;color:#dce3fa;font:inherit; }
 .panel-dialog-actions { display:flex;justify-content:flex-end;gap:8px;margin-top:16px; }
+
+/* drive history */
+.drive-keep { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-top:8px; }
+.drive-keep select { font-size:13px; padding:4px 6px; border-radius:6px; }
+.drive-history { display:flex; flex-direction:column; gap:8px; margin-top:8px; }
+.drive-history__bar { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+.drive-history select { width:100%; font-size:12px; border-radius:6px; padding:4px; }

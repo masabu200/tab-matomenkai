@@ -1231,5 +1231,56 @@
   },
   "driveIdentityUnavailable": {
     "message": "L'autenticazione Google (API identity) non è disponibile in questo Chrome, quindi viene mostrata la configurazione manuale. Se ricaricare l'estensione non risolve, faccelo sapere."
+  },
+  "driveFolderName": {
+    "message": "Backup di Tab Matomen Kai"
+  },
+  "driveFolderFailed": {
+    "message": "Impossibile creare la cartella dei backup ($1)."
+  },
+  "driveListFailed": {
+    "message": "Impossibile caricare l'elenco dei backup ($1)."
+  },
+  "driveDownloadFailed": {
+    "message": "Impossibile scaricare il backup ($1)."
+  },
+  "driveKeepLabel": {
+    "message": "Backup da conservare in Drive"
+  },
+  "driveKeepUnlimited": {
+    "message": "Illimitati"
+  },
+  "driveOpenFolder": {
+    "message": "Apri la cartella Drive"
+  },
+  "driveRefreshList": {
+    "message": "Aggiorna elenco backup"
+  },
+  "driveBackupsEmpty": {
+    "message": "Nessun backup in Drive"
+  },
+  "driveBackupItem": {
+    "message": "$1 (spazi $2 / categorie $3)"
+  },
+  "driveRestoreButton": {
+    "message": "Ripristina il backup selezionato"
+  },
+  "driveRestoreConfirm": {
+    "message": "Ripristinare il backup Drive \"$1\" ($2 spazi, $3 categorie)?\nI dati attuali vengono messi da parte e possono tornare con \"Annulla ripristino\". Le schede aperte non cambiano."
+  },
+  "driveRestoreDone": {
+    "message": "Ripristinato ($1 spazi / $2 categorie)."
+  },
+  "driveRestoreUndo": {
+    "message": "Annulla ripristino"
+  },
+  "driveRestoreUndone": {
+    "message": "Tornati ai dati precedenti al ripristino."
+  },
+  "driveSavedPruned": {
+    "message": "Backup salvato su Google Drive ($1 backup precedenti rimossi)."
+  },
+  "driveSelectBackup": {
+    "message": "Seleziona un backup da ripristinare."
   }
 }

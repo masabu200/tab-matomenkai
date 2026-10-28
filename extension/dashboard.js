@@ -2614,6 +2614,22 @@ async function exportData() {
 
 function handleImportClick() { document.getElementById('importFileInput').click(); }
 
+// Writes a validated backup as the current data (shared by file import and Drive restore).
+async function applyBackupData(parsed) {
+  const newData = { activeSpaceId: parsed.activeSpaceId || null, windowActiveSpaces: parsed.windowActiveSpaces || {}, categories: Array.isArray(parsed.categories) ? parsed.categories : [], spaces: parsed.spaces };
+  newData.spaces.forEach((s) => {
+    if (!('categoryId' in s)) s.categoryId = null;
+    if (!('archived'   in s)) s.archived   = false;
+    if (!('color'      in s)) s.color      = '';
+  });
+  newData.categories.forEach((c) => {
+    if (!('color' in c)) c.color = '';
+  });
+  await saveData(newData);
+  await renderAll();
+  return { spaces: newData.spaces.length, categories: newData.categories.length };
+}
+
 async function handleImportFileSelected(event) {
   const file = event.target.files[0];
   event.target.value = '';
@@ -2627,18 +2643,8 @@ async function handleImportFileSelected(event) {
     const catCount   = Array.isArray(parsed.categories) ? parsed.categories.length : 0;
     const exportedAt = parsed.exportedAt ? formatDate(parsed.exportedAt) : t('m_75e9dd8f76');
     if (!await DashboardDialogs.open(t('m_efccfe8e49', [spaceCount, catCount, exportedAt]))) return;
-    const newData = { activeSpaceId: parsed.activeSpaceId || null, windowActiveSpaces: parsed.windowActiveSpaces || {}, categories: Array.isArray(parsed.categories) ? parsed.categories : [], spaces: parsed.spaces };
-    newData.spaces.forEach((s) => {
-      if (!('categoryId' in s)) s.categoryId = null;
-      if (!('archived'   in s)) s.archived   = false;
-      if (!('color'      in s)) s.color      = '';
-    });
-    newData.categories.forEach((c) => {
-      if (!('color' in c)) c.color = '';
-    });
-    await saveData(newData);
+    await applyBackupData(parsed);
     showMessage(t('m_ce1d0548a0', [spaceCount, catCount]), 'success');
-    await renderAll();
   } catch (err) {
     showMessage(err instanceof SyntaxError ? t('m_8df1c53c2e') : t('m_682e44dcfb', [err.message || '']), 'error');
     console.error('[PWM] handleImportFileSelected エラー:', err);

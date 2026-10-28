@@ -1222,5 +1222,56 @@
   },
   "driveIdentityUnavailable": {
     "message": "此 Chrome 无法使用 Google 身份验证（identity API），已切换为手动设置。若重新加载扩展后仍未解决，请告诉我们。"
+  },
+  "driveFolderName": {
+    "message": "Tab Matomen Kai 备份"
+  },
+  "driveFolderFailed": {
+    "message": "无法创建备份文件夹（$1）。"
+  },
+  "driveListFailed": {
+    "message": "无法获取备份列表（$1）。"
+  },
+  "driveDownloadFailed": {
+    "message": "无法获取备份（$1）。"
+  },
+  "driveKeepLabel": {
+    "message": "在云端硬盘中保留的份数"
+  },
+  "driveKeepUnlimited": {
+    "message": "不限"
+  },
+  "driveOpenFolder": {
+    "message": "打开云端硬盘文件夹"
+  },
+  "driveRefreshList": {
+    "message": "刷新备份列表"
+  },
+  "driveBackupsEmpty": {
+    "message": "云端硬盘中没有备份"
+  },
+  "driveBackupItem": {
+    "message": "$1（空间 $2 / 分类 $3）"
+  },
+  "driveRestoreButton": {
+    "message": "恢复所选备份"
+  },
+  "driveRestoreConfirm": {
+    "message": "要恢复云端硬盘备份“$1”（$2 个空间、$3 个分类）吗？\n当前数据会先保留，可通过“撤销恢复”找回。不会更改已打开的标签页。"
+  },
+  "driveRestoreDone": {
+    "message": "已恢复（空间 $1 / 分类 $2）。"
+  },
+  "driveRestoreUndo": {
+    "message": "撤销恢复"
+  },
+  "driveRestoreUndone": {
+    "message": "已恢复到还原前的数据。"
+  },
+  "driveSavedPruned": {
+    "message": "已将备份保存到 Google 云端硬盘（已删除 $1 个旧备份）。"
+  },
+  "driveSelectBackup": {
+    "message": "请选择要恢复的备份。"
   }
 }

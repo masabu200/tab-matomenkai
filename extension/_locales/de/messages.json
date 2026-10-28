@@ -1222,5 +1222,56 @@
   },
   "driveIdentityUnavailable": {
     "message": "Die Google-Anmeldung (identity API) ist in diesem Chrome nicht verfügbar, daher wird die manuelle Einrichtung angezeigt. Wenn ein Neuladen der Erweiterung nicht hilft, sagen Sie uns Bescheid."
+  },
+  "driveFolderName": {
+    "message": "Tab Matomen Kai Sicherungen"
+  },
+  "driveFolderFailed": {
+    "message": "Der Sicherungsordner konnte nicht erstellt werden ($1)."
+  },
+  "driveListFailed": {
+    "message": "Die Sicherungsliste konnte nicht geladen werden ($1)."
+  },
+  "driveDownloadFailed": {
+    "message": "Die Sicherung konnte nicht geladen werden ($1)."
+  },
+  "driveKeepLabel": {
+    "message": "In Drive behaltene Sicherungen"
+  },
+  "driveKeepUnlimited": {
+    "message": "Unbegrenzt"
+  },
+  "driveOpenFolder": {
+    "message": "Drive-Ordner öffnen"
+  },
+  "driveRefreshList": {
+    "message": "Sicherungsliste aktualisieren"
+  },
+  "driveBackupsEmpty": {
+    "message": "Keine Sicherungen in Drive"
+  },
+  "driveBackupItem": {
+    "message": "$1 (Bereiche $2 / Kategorien $3)"
+  },
+  "driveRestoreButton": {
+    "message": "Ausgewählte Sicherung wiederherstellen"
+  },
+  "driveRestoreConfirm": {
+    "message": "Die Drive-Sicherung „$1“ ($2 Bereiche, $3 Kategorien) wiederherstellen?\nIhre aktuellen Daten werden beiseitegelegt und können mit „Wiederherstellung rückgängig“ zurückgeholt werden. Offene Tabs bleiben unverändert."
+  },
+  "driveRestoreDone": {
+    "message": "Wiederhergestellt ($1 Bereiche / $2 Kategorien)."
+  },
+  "driveRestoreUndo": {
+    "message": "Wiederherstellung rückgängig"
+  },
+  "driveRestoreUndone": {
+    "message": "Zu den Daten vor der Wiederherstellung zurückgekehrt."
+  },
+  "driveSavedPruned": {
+    "message": "Sicherung in Google Drive gespeichert ($1 ältere Sicherungen entfernt)."
+  },
+  "driveSelectBackup": {
+    "message": "Wählen Sie eine Sicherung zum Wiederherstellen."
   }
 }

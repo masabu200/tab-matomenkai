@@ -1222,5 +1222,56 @@
   },
   "driveIdentityUnavailable": {
     "message": "此 Chrome 無法使用 Google 驗證（identity API），已切換為手動設定。若重新載入擴充功能後仍未解決，請告訴我們。"
+  },
+  "driveFolderName": {
+    "message": "Tab Matomen Kai 備份"
+  },
+  "driveFolderFailed": {
+    "message": "無法建立備份資料夾（$1）。"
+  },
+  "driveListFailed": {
+    "message": "無法取得備份清單（$1）。"
+  },
+  "driveDownloadFailed": {
+    "message": "無法取得備份（$1）。"
+  },
+  "driveKeepLabel": {
+    "message": "在雲端硬碟保留的份數"
+  },
+  "driveKeepUnlimited": {
+    "message": "不限"
+  },
+  "driveOpenFolder": {
+    "message": "開啟雲端硬碟資料夾"
+  },
+  "driveRefreshList": {
+    "message": "重新整理備份清單"
+  },
+  "driveBackupsEmpty": {
+    "message": "雲端硬碟中沒有備份"
+  },
+  "driveBackupItem": {
+    "message": "$1（空間 $2 / 分類 $3）"
+  },
+  "driveRestoreButton": {
+    "message": "還原所選備份"
+  },
+  "driveRestoreConfirm": {
+    "message": "要還原雲端硬碟備份「$1」（$2 個空間、$3 個分類）嗎？\n目前的資料會先保留，可用「取消還原」找回。不會變更已開啟的分頁。"
+  },
+  "driveRestoreDone": {
+    "message": "已還原（空間 $1 / 分類 $2）。"
+  },
+  "driveRestoreUndo": {
+    "message": "取消還原"
+  },
+  "driveRestoreUndone": {
+    "message": "已回到還原前的資料。"
+  },
+  "driveSavedPruned": {
+    "message": "已將備份儲存到 Google 雲端硬碟（已刪除 $1 個舊備份）。"
+  },
+  "driveSelectBackup": {
+    "message": "請選擇要還原的備份。"
   }
 }

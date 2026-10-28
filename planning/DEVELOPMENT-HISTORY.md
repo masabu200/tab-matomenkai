@@ -298,3 +298,16 @@ Playwright 1.62 の `page.waitForFunction` に async 関数を渡すと、最初
 - manifest に `key` を入れた直後、Chrome には同じ `extension/` フォルダが旧ID（`deenan…`、key 導入前の登録）と新ID（`ofpnbo…`）で二重登録され、旧IDのカードが「オフのままオンにできない」状態になった。Chrome の `Secure Preferences` の `extensions.settings` で両方の `path` が同一であることを確認して特定。旧カードを削除し、`extension/` を読み込み直して解消。
 - 直前に見えていた「Drive 設定が手動方式のまま・ボタンが効かない」は、この二重登録で古いままのページを見ていたことが原因。再発時に原因が分かるよう、`drive-settings.js` は初期化失敗時に状態欄へ理由を出す（`eb329c2`）。
 - 16:03、利用者の Chrome で組み込み方式（クライアントID入力なし）の「Googleドライブに接続」が成功し「接続しました。バックアップを保存できます。」を確認。残り：実保存と Drive 上の JSON の内容照合、1時間後の無操作再保存。
+
+## 2026-10-28 HIST-01/02 の一部：Drive の専用フォルダ・保持数・一覧・選択復元
+
+- 利用者の質問「どこに、どういうファイルで保存され、どう管理しているか」への回答として実装。従来はマイドライブ直下に日時付き JSON を無制限に増やすだけで、拡張は最後の1件しか覚えていなかった。
+- `extension/drive-backup.js`：
+  - 専用フォルダ（名前は言語別、`appProperties.pwm=folder` で識別）を初回に作成し、ID を `pwm_drive_folder_id` に保持。削除・ゴミ箱入りなら検索→再作成。
+  - 各バックアップに `appProperties`（`pwm=backup`、スペース数、カテゴリー数、exportedAt）を付けて保存。一覧はこのタグで検索するので、拡張が作ったファイルだけが対象（`drive.file` の範囲とも一致）。
+  - 保持数 `pwm_settings.driveKeep`（既定30、0=無制限）。保存後に古いものを削除。直前に保存したファイルは必ず残す。
+  - `listBackups()` / `download(id)`（`validateBackup` で検証）/ `folderUrl()`。
+- `extension/drive-settings.js`：保持数セレクト、Drive フォルダへのリンク、一覧（日時・件数）、「選んだバックアップに復元」、「復元を取り消す」。復元は確認ダイアログの後、現在データを `pwm_drive_restore_undo` に退避してから `applyBackupData()` で書き込む。取り消しは退避データを戻す。
+- `extension/dashboard.js`：ファイルインポートの書き込み処理を `applyBackupData(parsed)` に切り出し、Drive 復元と共用。
+- テスト：`tests/drive-backup.cjs` にメモリ上の Drive 模擬（フォルダ検索・作成、一覧、削除、`alt=media`）を追加し、フォルダ作成・タグ・保持数2で最古削除・一覧表示・復元の取消/実行/取り消しを検証。テスト中に見つけた競合（一覧更新中に選択が消える）はテスト側で更新完了を待つよう修正。
+- 未対応：ページング（100件超）、復元時の「開いているタブ」への反映（データのみ置き換え）、バックグラウンド自動保存（AUTO-01）。

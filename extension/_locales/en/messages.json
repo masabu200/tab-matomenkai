@@ -1231,5 +1231,56 @@
   },
   "driveIdentityUnavailable": {
     "message": "Google sign-in (identity API) is unavailable in this Chrome, so manual setup is shown. If reloading the extension does not fix it, let us know."
+  },
+  "driveFolderName": {
+    "message": "Tab Matomen Kai Backups"
+  },
+  "driveFolderFailed": {
+    "message": "Could not create the backup folder ($1)."
+  },
+  "driveListFailed": {
+    "message": "Could not load the backup list ($1)."
+  },
+  "driveDownloadFailed": {
+    "message": "Could not download the backup ($1)."
+  },
+  "driveKeepLabel": {
+    "message": "Backups to keep in Drive"
+  },
+  "driveKeepUnlimited": {
+    "message": "Unlimited"
+  },
+  "driveOpenFolder": {
+    "message": "Open the Drive folder"
+  },
+  "driveRefreshList": {
+    "message": "Refresh backup list"
+  },
+  "driveBackupsEmpty": {
+    "message": "No backups in Drive"
+  },
+  "driveBackupItem": {
+    "message": "$1 (spaces $2 / categories $3)"
+  },
+  "driveRestoreButton": {
+    "message": "Restore the selected backup"
+  },
+  "driveRestoreConfirm": {
+    "message": "Restore the Drive backup \"$1\" ($2 spaces, $3 categories)?\nYour current data is set aside and can be brought back with \"Undo restore\". Open tabs are not changed."
+  },
+  "driveRestoreDone": {
+    "message": "Restored ($1 spaces / $2 categories)."
+  },
+  "driveRestoreUndo": {
+    "message": "Undo restore"
+  },
+  "driveRestoreUndone": {
+    "message": "Returned to the data from before the restore."
+  },
+  "driveSavedPruned": {
+    "message": "Backup saved to Google Drive ($1 older backups removed)."
+  },
+  "driveSelectBackup": {
+    "message": "Select a backup to restore."
   }
 }
