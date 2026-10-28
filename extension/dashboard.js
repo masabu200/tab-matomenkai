@@ -23,16 +23,16 @@ const ICONS = {
 
 // テーマカラーパレット（空文字 = なし）
 const COLOR_PALETTE = [
-  { value: '',        label: 'なし'    },
-  { value: '#e05555', label: '赤'      },
-  { value: '#e07835', label: 'オレンジ' },
-  { value: '#c9a830', label: '黄'      },
-  { value: '#4aaa5a', label: '緑'      },
-  { value: '#2a9aa0', label: '青緑'    },
-  { value: '#4a7ef8', label: '青'      },
-  { value: '#8a50d8', label: '紫'      },
-  { value: '#d04878', label: 'ピンク'  },
-  { value: '#7a8098', label: 'グレー'  },
+  { value: '',        label: t('m_1a2e920ba7')    },
+  { value: '#e05555', label: t('m_72776ab68f')      },
+  { value: '#e07835', label: t('m_831166ef4b') },
+  { value: '#c9a830', label: t('m_7720f8ea0a')      },
+  { value: '#4aaa5a', label: t('m_f22758bf8f')      },
+  { value: '#2a9aa0', label: t('m_29e5ef1fa6')    },
+  { value: '#4a7ef8', label: t('m_845d1da87f')      },
+  { value: '#8a50d8', label: t('m_01caea5810')      },
+  { value: '#d04878', label: t('m_caaf2acdb2')  },
+  { value: '#7a8098', label: t('m_5378733ecf')  },
 ];
 // Chrome タブグループのカラー名 → hex マッピング（Chrome の実際の色に合わせる）
 const CHROME_GROUP_COLOR_MAP = {
@@ -49,15 +49,15 @@ const CHROME_GROUP_COLOR_MAP = {
 
 // タブグループ専用カラーパレット（Chrome 標準と同じ9色）
 const CHROME_GROUP_COLORS = [
-  { value: 'grey',   label: 'グレー',   hex: '#5f6368' },
-  { value: 'blue',   label: 'ブルー',   hex: '#1a73e8' },
-  { value: 'red',    label: 'レッド',   hex: '#d93025' },
-  { value: 'yellow', label: 'イエロー', hex: '#f9ab00' },
-  { value: 'green',  label: 'グリーン', hex: '#1e8e3e' },
-  { value: 'pink',   label: 'ピンク',   hex: '#e52592' },
-  { value: 'purple', label: 'パープル', hex: '#a142f4' },
-  { value: 'cyan',   label: 'シアン',   hex: '#129eaf' },
-  { value: 'orange', label: 'オレンジ', hex: '#e8710a' },
+  { value: 'grey',   label: t('m_5378733ecf'),   hex: '#5f6368' },
+  { value: 'blue',   label: t('m_96aea44a0c'),   hex: '#1a73e8' },
+  { value: 'red',    label: t('m_97397cc2e0'),   hex: '#d93025' },
+  { value: 'yellow', label: t('m_5cd070ae56'), hex: '#f9ab00' },
+  { value: 'green',  label: t('m_031e9b20e8'), hex: '#1e8e3e' },
+  { value: 'pink',   label: t('m_caaf2acdb2'),   hex: '#e52592' },
+  { value: 'purple', label: t('m_d96fea3531'), hex: '#a142f4' },
+  { value: 'cyan',   label: t('m_55018581ba'),   hex: '#129eaf' },
+  { value: 'orange', label: t('m_831166ef4b'), hex: '#e8710a' },
 ];
 
 /** Chrome カラー名 or hex → Chrome カラー名 */
@@ -156,7 +156,7 @@ function showColorPicker(anchorEl, current, onSelect, onSelectIcon, currentIcon)
     const uploadBtn = document.createElement('button');
     uploadBtn.type = 'button';
     uploadBtn.className = 'color-picker-upload-btn';
-    uploadBtn.textContent = '画像を設定';
+    uploadBtn.textContent = t('m_aabcb11957');
     uploadBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       const fileInput = document.createElement('input');
@@ -182,7 +182,7 @@ function showColorPicker(anchorEl, current, onSelect, onSelectIcon, currentIcon)
       const removeBtn = document.createElement('button');
       removeBtn.type = 'button';
       removeBtn.className = 'color-picker-remove-btn';
-      removeBtn.textContent = '画像を解除';
+      removeBtn.textContent = t('m_ace3472c03');
       removeBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         popup.remove();
@@ -364,10 +364,10 @@ async function saveData(data) {
 
 async function createCategory(name, color = '', parentId = null) {
   const trimmed = name.trim();
-  if (!trimmed) { showMessage('カテゴリー名を入力してください。', 'error'); return null; }
+  if (!trimmed) { showMessage(t('m_26dfc3aefe'), 'error'); return null; }
   const data = await loadData();
   if (data.categories.some((c) => c.name === trimmed)) {
-    showMessage(`「${trimmed}」というカテゴリーが既に存在します。`, 'error'); return null;
+    showMessage(t('m_39a49bde63', [trimmed]), 'error'); return null;
   }
   const newCat = { id: generateId(), name: trimmed, collapsed: false, color: color || '', parentId: parentId || null };
   data.categories.push(newCat);
@@ -377,10 +377,10 @@ async function createCategory(name, color = '', parentId = null) {
 
 async function renameCategory(categoryId, newName) {
   const trimmed = newName.trim();
-  if (!trimmed) { showMessage('カテゴリー名を入力してください。', 'error'); return false; }
+  if (!trimmed) { showMessage(t('m_26dfc3aefe'), 'error'); return false; }
   const data = await loadData();
   if (data.categories.some((c) => c.id !== categoryId && c.name === trimmed)) {
-    showMessage(`「${trimmed}」というカテゴリーが既に存在します。`, 'error'); return false;
+    showMessage(t('m_39a49bde63', [trimmed]), 'error'); return false;
   }
   const cat = data.categories.find((c) => c.id === categoryId);
   if (!cat) return false;
@@ -500,10 +500,10 @@ function isClosableTab(tab) {
 
 async function createSpace(name) {
   const trimmed = name.trim();
-  if (!trimmed) { showMessage('スペース名を入力してください。', 'error'); return null; }
+  if (!trimmed) { showMessage(t('m_629a6eefac'), 'error'); return null; }
   const data = await loadData();
   if (data.spaces.some((s) => s.name === trimmed)) {
-    showMessage(`「${trimmed}」という名前のスペースが既に存在します。`, 'error'); return null;
+    showMessage(t('m_29c082f9b5', [trimmed]), 'error'); return null;
   }
   const now      = new Date().toISOString();
   const newSpace = { id: generateId(), name: trimmed, createdAt: now, updatedAt: now, tabs: [], categoryId: null, archived: false, color: '' };
@@ -515,13 +515,13 @@ async function createSpace(name) {
 
 async function renameSpace(spaceId, newName) {
   const trimmed = newName.trim();
-  if (!trimmed) { showMessage('スペース名を入力してください。', 'error'); return false; }
+  if (!trimmed) { showMessage(t('m_629a6eefac'), 'error'); return false; }
   const data = await loadData();
   if (data.spaces.some((s) => s.id !== spaceId && s.name === trimmed)) {
-    showMessage(`「${trimmed}」という名前のスペースが既に存在します。`, 'error'); return false;
+    showMessage(t('m_29c082f9b5', [trimmed]), 'error'); return false;
   }
   const space = data.spaces.find((s) => s.id === spaceId);
-  if (!space) { showMessage('スペースが見つかりません。', 'error'); return false; }
+  if (!space) { showMessage(t('m_09648e447c'), 'error'); return false; }
   space.name      = trimmed;
   space.updatedAt = new Date().toISOString();
   await saveData(data);
@@ -531,7 +531,7 @@ async function renameSpace(spaceId, newName) {
 async function deleteSpace(spaceId) {
   const data = await loadData();
   const idx  = data.spaces.findIndex((s) => s.id === spaceId);
-  if (idx === -1) { showMessage('スペースが見つかりません。', 'error'); return null; }
+  if (idx === -1) { showMessage(t('m_09648e447c'), 'error'); return null; }
   const deletedName = data.spaces[idx].name;
   data.spaces.splice(idx, 1);
   if (data.windowActiveSpaces) {
@@ -716,7 +716,7 @@ async function createTabGroup(spaceId, name, color = '') {
   const space = data.spaces.find((s) => s.id === spaceId);
   if (!space) return null;
   if (!Array.isArray(space.tabGroups)) space.tabGroups = [];
-  const group = { id: generateId(), name: (name || '').trim() || '新しいグループ', color: color || '', collapsed: true }; // 新規グループは折りたたみで作成
+  const group = { id: generateId(), name: (name || '').trim() || t('m_42f0321630'), color: color || '', collapsed: true }; // 新規グループは折りたたみで作成
   space.tabGroups.push(group);
   space.updatedAt = new Date().toISOString();
   await saveData(data);
@@ -793,7 +793,7 @@ async function reorderTabGroup(spaceId, draggedGroupId, targetGroupId, insertBef
     await renderAll();
     applyGroupsToChromeTabs(spaceId).catch(() => {});
   } catch (err) {
-    showMessage('グループの並び替えに失敗しました。', 'error');
+    showMessage(t('m_d40bd34d6f'), 'error');
     console.error('[PWM] reorderTabGroup:', err);
   }
 }
@@ -827,7 +827,7 @@ async function reorderTab(spaceId, draggedIndex, targetIndex, insertBefore) {
     await renderAll();
     await applyGroupsToChromeTabs(spaceId).catch(() => {});
   } catch (err) {
-    showMessage('タブの並び替えに失敗しました。', 'error');
+    showMessage(t('m_f95e7d8675'), 'error');
     console.error('[PWM] reorderTab:', err);
   }
 }
@@ -1161,7 +1161,7 @@ function createCategorySection(category, activeSpaces, activeSpaceId, depth, all
     const addSubBtn = document.createElement('button');
     addSubBtn.type      = 'button';
     addSubBtn.className = 'cat-btn';
-    addSubBtn.title     = 'サブカテゴリーを追加';
+    addSubBtn.title     = t('m_3dfdf80d58');
     addSubBtn.appendChild(createIcon('folder'));
     addSubBtn.addEventListener('click', (e) => { e.stopPropagation(); handleCreateSubcategory(category.id, category.name); });
     actionsEl.appendChild(addSubBtn);
@@ -1170,7 +1170,7 @@ function createCategorySection(category, activeSpaces, activeSpaceId, depth, all
   const paletteBtn = document.createElement('button');
   paletteBtn.type      = 'button';
   paletteBtn.className = 'cat-btn';
-  paletteBtn.title     = 'カテゴリーの色を変更';
+  paletteBtn.title     = t('m_6ab1008863');
   paletteBtn.appendChild(createIcon('palette'));
   paletteBtn.addEventListener('click', (e) => {
     e.stopPropagation();
@@ -1192,14 +1192,14 @@ function createCategorySection(category, activeSpaces, activeSpaceId, depth, all
   const renameBtn = document.createElement('button');
   renameBtn.type      = 'button';
   renameBtn.className = 'cat-btn';
-  renameBtn.title     = 'カテゴリー名を変更';
+  renameBtn.title     = t('m_29f18064c3');
   renameBtn.appendChild(createIcon('edit'));
   renameBtn.addEventListener('click', (e) => { e.stopPropagation(); handleRenameCategory(category.id, category.name); });
 
   const deleteBtn = document.createElement('button');
   deleteBtn.type      = 'button';
   deleteBtn.className = 'cat-btn cat-btn--delete';
-  deleteBtn.title     = '削除（スペースは未分類へ）';
+  deleteBtn.title     = t('m_b3dd5064ba');
   deleteBtn.appendChild(createIcon('trash'));
   deleteBtn.addEventListener('click', (e) => { e.stopPropagation(); handleDeleteCategory(category.id, category.name); });
 
@@ -1304,7 +1304,7 @@ function createUncategorizedSection(spaces, activeSpaceId) {
 
   const nameEl = document.createElement('span');
   nameEl.className  = 'cat-group__name';
-  nameEl.textContent = '未分類';
+  nameEl.textContent = t('m_f4d781035f');
 
   const countEl = document.createElement('span');
   countEl.className  = 'cat-group__count';
@@ -1353,7 +1353,7 @@ function createArchiveSection(archivedSpaces, activeSpaceId, archiveColor = '') 
 
   const nameEl = document.createElement('span');
   nameEl.className  = 'cat-group__name';
-  nameEl.textContent = 'アーカイブ';
+  nameEl.textContent = t('m_c686c1a9dd');
   if (archiveColor) nameEl.style.color = archiveColor;
 
   const countEl = document.createElement('span');
@@ -1366,7 +1366,7 @@ function createArchiveSection(archivedSpaces, activeSpaceId, archiveColor = '') 
   const paletteBtn = document.createElement('button');
   paletteBtn.type      = 'button';
   paletteBtn.className = 'cat-btn';
-  paletteBtn.title     = 'アーカイブの色を変更';
+  paletteBtn.title     = t('m_1b31bc2d61');
   paletteBtn.appendChild(createIcon('palette'));
   paletteBtn.addEventListener('click', (e) => {
     e.stopPropagation();
@@ -1395,7 +1395,7 @@ function createArchiveSection(archivedSpaces, activeSpaceId, archiveColor = '') 
   if (archivedSpaces.length === 0) {
     const emptyEl = document.createElement('li');
     emptyEl.className   = 'archive-empty';
-    emptyEl.textContent = 'アーカイブはありません';
+    emptyEl.textContent = t('m_7234f5d4ed');
     spaceList.appendChild(emptyEl);
   } else {
     archivedSpaces.forEach((s) => spaceList.appendChild(createArchiveSpaceItem(s, s.id === activeSpaceId)));
@@ -1413,12 +1413,12 @@ function createArchiveSpaceItem(space, isActive) {
   li.setAttribute('role', 'button');
   li.setAttribute('tabindex', '0');
   li.setAttribute('aria-pressed', String(isActive));
-  li.title = `${space.name}（アーカイブ済み / ${space.tabs ? space.tabs.length : 0} タブ）`;
+  li.title = t('m_c922e46a12', [space.name, space.tabs ? space.tabs.length : 0]);
 
   // カラードット（表示のみ、クリックでも変更可）
   const colorDot = createColorDot(
     space.color || '',
-    'テーマカラー・アイコンを変更',
+    t('m_78380175c5'),
     (e) => showColorPicker(
       e.currentTarget,
       space.color || '',
@@ -1462,7 +1462,7 @@ function createSpaceListItem(space, isActive, categoryColor = '') {
   li.setAttribute('tabindex', '0');
   li.setAttribute('draggable', 'true');
   li.setAttribute('aria-pressed', String(isActive));
-  li.title = `${space.name}（${space.tabs ? space.tabs.length : 0} タブ）`;
+  li.title = t('m_b8901ba999', [space.name, space.tabs ? space.tabs.length : 0]);
 
   // スペースカラーをアクティブインジケーターに反映する（スペース色→カテゴリー色の順で優先）
   if (isActive) {
@@ -1484,7 +1484,7 @@ function createSpaceListItem(space, isActive, categoryColor = '') {
   }
   const colorDot = createColorDot(
     dotColor,
-    'テーマカラー・アイコンを変更',
+    t('m_78380175c5'),
     (e) => showColorPicker(
       e.currentTarget,
       space.color || '',
@@ -1567,11 +1567,11 @@ function createSpaceListItem(space, isActive, categoryColor = '') {
   return li;
 }
 
-const DEFAULT_DOCUMENT_TITLE = 'タブまとめん改';
+const DEFAULT_DOCUMENT_TITLE = t('m_a7b8477445');
 
 function updateDocumentTitle(activeSpace) {
   document.title = activeSpace
-    ? `${activeSpace.name} | ダッシュボード`
+    ? t('m_f76574e271', [activeSpace.name])
     : DEFAULT_DOCUMENT_TITLE;
 }
 
@@ -1588,7 +1588,7 @@ function renderMainArea(data) {
 
   if (!activeSpace) {
     const hasActive = data.spaces.some((s) => !s.archived);
-    spaceTitleEl.textContent     = hasActive ? 'スペースを選択してください' : 'まずスペースを作成してください';
+    spaceTitleEl.textContent     = hasActive ? t('m_0de3e408a2') : t('m_e17d188654');
     spaceActionsEl.style.display = 'none';
     mainControlsEl.style.display = 'none';
     noSpaceNoteEl.style.display  = 'block';
@@ -1618,7 +1618,7 @@ function renderMainArea(data) {
   if (badgeEl) {
     if (!isArchived) {
       const cat     = (data.categories || []).find((c) => c.id === activeSpace.categoryId);
-      const catName = cat ? cat.name : '未分類';
+      const catName = cat ? cat.name : t('m_f4d781035f');
       while (badgeEl.firstChild) badgeEl.removeChild(badgeEl.firstChild);
       badgeEl.appendChild(createIcon('folder'));
       badgeEl.appendChild(document.createTextNode(' ' + catName));
@@ -1657,7 +1657,7 @@ function createSpaceArchiveSection(archivedTabs, spaceId) {
 
   const nameEl = document.createElement('span');
   nameEl.className  = 'space-archive__name';
-  nameEl.textContent = 'アーカイブ';
+  nameEl.textContent = t('m_c686c1a9dd');
 
   const countEl = document.createElement('span');
   countEl.className  = 'space-archive__count';
@@ -1713,7 +1713,7 @@ function createSpaceArchiveSection(archivedTabs, spaceId) {
     const restoreBtn = document.createElement('button');
     restoreBtn.type      = 'button';
     restoreBtn.className = 'space-archive__restore';
-    restoreBtn.title     = 'アクティブなタブに戻す';
+    restoreBtn.title     = t('m_3009a0e43b');
     restoreBtn.textContent = '↩';
     restoreBtn.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -1724,7 +1724,7 @@ function createSpaceArchiveSection(archivedTabs, spaceId) {
     const delBtn = document.createElement('button');
     delBtn.type      = 'button';
     delBtn.className = 'space-archive__delete';
-    delBtn.title     = '完全削除';
+    delBtn.title     = t('m_da37848919');
     delBtn.textContent = '×';
     delBtn.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -1777,7 +1777,7 @@ function renderTabList(tabs, searchQuery, tabGroups, spaceId, archivedTabs) {
     if (tabs.length > 0) {
       const p = document.createElement('p');
       p.className   = 'empty-note';
-      p.textContent = `「${searchQuery}」に一致するタブが見つかりませんでした。`;
+      p.textContent = t('m_1816d78893', [searchQuery]);
       listEl.appendChild(p);
     }
     return;
@@ -1830,7 +1830,7 @@ function createUngroupedSection(tabItems, spaceId) {
   if (tabItems.length === 0) {
     const hint = document.createElement('p');
     hint.className   = 'tab-ungrouped__hint';
-    hint.textContent = 'ここにドロップするとグループを外せます';
+    hint.textContent = t('m_876cb3ca26');
     section.appendChild(hint);
   }
 
@@ -1876,7 +1876,7 @@ function createTabGroupSection(group, groupTabs, spaceId) {
 
   const nameEl = document.createElement('span');
   nameEl.className  = 'tab-group__name';
-  nameEl.textContent = group.name || '名称未設定グループ';
+  nameEl.textContent = group.name || t('m_bcbebef3cf');
   if (_grpHex) nameEl.style.color = _grpHex;
 
   const countEl = document.createElement('span');
@@ -1890,11 +1890,11 @@ function createTabGroupSection(group, groupTabs, spaceId) {
   const paletteBtn = document.createElement('button');
   paletteBtn.type      = 'button';
   paletteBtn.className = 'tab-group__action-btn';
-  paletteBtn.title     = 'グループの色を変更';
+  paletteBtn.title     = t('m_97edcdfb5e');
   paletteBtn.appendChild(createIcon('palette'));
   paletteBtn.addEventListener('click', (e) => {
     e.stopPropagation();
-    openTabGroupModal('グループの色を変更', group.name, group.color || '').then(async (result) => {
+    openTabGroupModal(t('m_97edcdfb5e'), group.name, group.color || '').then(async (result) => {
       if (!result) return;
       if (result.name) await renameTabGroup(spaceId, group.id, result.name);
       await setTabGroupColor(spaceId, group.id, result.color);
@@ -1907,7 +1907,7 @@ function createTabGroupSection(group, groupTabs, spaceId) {
   const renameBtn = document.createElement('button');
   renameBtn.type      = 'button';
   renameBtn.className = 'tab-group__action-btn';
-  renameBtn.title     = 'グループ名を変更';
+  renameBtn.title     = t('m_4ccd455653');
   renameBtn.appendChild(createIcon('edit'));
   renameBtn.addEventListener('click', (e) => {
     e.stopPropagation();
@@ -1918,7 +1918,7 @@ function createTabGroupSection(group, groupTabs, spaceId) {
   const deleteBtn = document.createElement('button');
   deleteBtn.type      = 'button';
   deleteBtn.className = 'tab-group__action-btn tab-group__action-btn--delete';
-  deleteBtn.title     = 'グループを削除（タブはグループなしに移動）';
+  deleteBtn.title     = t('m_73fd4c5de6');
   deleteBtn.appendChild(createIcon('trash'));
   deleteBtn.addEventListener('click', (e) => {
     e.stopPropagation();
@@ -1933,7 +1933,7 @@ function createTabGroupSection(group, groupTabs, spaceId) {
   const dragHandle = document.createElement('span');
   dragHandle.className  = 'tab-group__drag-handle';
   dragHandle.textContent = '⠿';
-  dragHandle.title       = 'ドラッグして並び替え';
+  dragHandle.title       = t('m_f32ff53372');
 
   header.appendChild(colorBar);
   header.appendChild(dragHandle);
@@ -1965,7 +1965,7 @@ function createTabGroupSection(group, groupTabs, spaceId) {
   if (groupTabs.length === 0) {
     const hint = document.createElement('p');
     hint.className   = 'tab-group__empty-hint';
-    hint.textContent = 'このグループにはタブがありません。タブをドラッグして追加できます';
+    hint.textContent = t('m_dcea25f949');
     body.appendChild(hint);
   } else {
     groupTabs.forEach(({ tab, originalIndex }) => {
@@ -2055,7 +2055,7 @@ function createTabCard(tab, originalIndex, groupColor = '', groupColorHex = '') 
   const card = document.createElement('div');
   card.className = 'tab-card';
   card.dataset.tabIndex = String(originalIndex);
-  card.title = `${tab.title || tab.url}\n${tab.url}\nクリックで開く / ドラッグでグループ移動`;
+  card.title = t('m_d3811d54bb', [tab.title || tab.url, tab.url]);
   card.setAttribute('draggable', 'true');
   const _cardColorHex = groupColorHex || toDisplayHex(groupColor);
   if (_cardColorHex) {
@@ -2088,8 +2088,8 @@ function createTabCard(tab, originalIndex, groupColor = '', groupColorHex = '') 
   checkbox.type      = 'checkbox';
   checkbox.className = 'tab-card__checkbox';
   checkbox.dataset.tabIndex = String(originalIndex);
-  checkbox.setAttribute('aria-label', `選択: ${tab.title || tab.url}`);
-  checkbox.title = 'クリックで選択、Shift+クリックで範囲選択';
+  checkbox.setAttribute('aria-label', t('m_05120d62af', [tab.title || tab.url]));
+  checkbox.title = t('m_f82fcc53cd');
 
   const favicon = document.createElement('img');
   favicon.className = 'tab-card__favicon';
@@ -2120,8 +2120,8 @@ function createTabCard(tab, originalIndex, groupColor = '', groupColorHex = '') 
   const archiveBtn = document.createElement('button');
   archiveBtn.type      = 'button';
   archiveBtn.className = 'tab-card__archive';
-  archiveBtn.setAttribute('aria-label', 'このタブをアーカイブ');
-  archiveBtn.title     = 'アーカイブ（タブバーに表示しない）';
+  archiveBtn.setAttribute('aria-label', t('m_4bed8152a4'));
+  archiveBtn.title     = t('m_cf45400a02');
   archiveBtn.appendChild(createIcon('archive'));
   archiveBtn.addEventListener('click', (e) => {
     e.stopPropagation();
@@ -2137,8 +2137,8 @@ function createTabCard(tab, originalIndex, groupColor = '', groupColorHex = '') 
   deleteBtn.type        = 'button';
   deleteBtn.className   = 'tab-card__delete';
   deleteBtn.textContent = '×';
-  deleteBtn.setAttribute('aria-label', 'このタブを削除');
-  deleteBtn.title = 'このタブを削除';
+  deleteBtn.setAttribute('aria-label', t('m_626612ea5e'));
+  deleteBtn.title = t('m_626612ea5e');
   deleteBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     card.style.opacity = '0.4';
@@ -2206,7 +2206,7 @@ async function renderAll() {
     renderSidebar(data);
     renderMainArea(data);
   } catch (err) {
-    showMessage('データの読み込みに失敗しました。', 'error');
+    showMessage(t('m_88c92c22d4'), 'error');
     console.error('[PWM] renderAll エラー:', err);
   }
 }
@@ -2216,15 +2216,15 @@ async function renderAll() {
 // ============================================================
 
 async function handleCreateSpace() {
-  const name = await DashboardDialogs.prompt('新しいスペースの名前を入力してください:');
+  const name = await DashboardDialogs.prompt(t('m_cd6a909d39'));
   if (name === null) return;
   try {
     const s = await createSpace(name);
     if (!s) return;
-    showMessage(`スペース「${s.name}」を作成しました。`, 'success');
+    showMessage(t('m_1cefe0ca30', [s.name]), 'success');
     await renderAll();
   } catch (err) {
-    showMessage('スペースの作成に失敗しました。', 'error');
+    showMessage(t('m_ed1eac911a'), 'error');
     console.error('[PWM] handleCreateSpace エラー:', err);
   }
 }
@@ -2233,14 +2233,14 @@ async function handleRenameSpace() {
   const data   = await loadData();
   const active = data.spaces.find((s) => s.id === getActiveSpaceId(data));
   if (!active) return;
-  const newName = await DashboardDialogs.prompt('新しいスペース名を入力してください:', active.name);
+  const newName = await DashboardDialogs.prompt(t('m_f2b265026b'), active.name);
   if (newName === null) return;
   try {
     if (!await renameSpace(active.id, newName)) return;
-    showMessage('スペース名を変更しました。', 'success');
+    showMessage(t('m_f2b748c88b'), 'success');
     await renderAll();
   } catch (err) {
-    showMessage('スペース名の変更に失敗しました。', 'error');
+    showMessage(t('m_c0e48c9028'), 'error');
     console.error('[PWM] handleRenameSpace エラー:', err);
   }
 }
@@ -2249,14 +2249,14 @@ async function handleDeleteSpace() {
   const data   = await loadData();
   const active = data.spaces.find((s) => s.id === getActiveSpaceId(data));
   if (!active) return;
-  if (!await DashboardDialogs.confirm(`スペース「${active.name}」を削除しますか？\n保存されているタブ情報もすべて削除されます。`)) return;
+  if (!await DashboardDialogs.confirm(t('m_f4f1d62806', [active.name]))) return;
   try {
     const result = await deleteSpace(active.id);
     if (!result) return;
-    showMessage(`スペース「${result.deletedName}」を削除しました。`, 'success');
+    showMessage(t('m_88dd8d49f3', [result.deletedName]), 'success');
     await renderAll();
   } catch (err) {
-    showMessage('スペースの削除に失敗しました。', 'error');
+    showMessage(t('m_89289d2423'), 'error');
     console.error('[PWM] handleDeleteSpace エラー:', err);
   }
 }
@@ -2265,13 +2265,13 @@ async function handleArchiveSpace() {
   const data   = await loadData();
   const active = data.spaces.find((s) => s.id === getActiveSpaceId(data));
   if (!active) return;
-  if (!await DashboardDialogs.confirm(`スペース「${active.name}」をアーカイブしますか？\nアーカイブ後もデータは保持され、復元できます。`)) return;
+  if (!await DashboardDialogs.confirm(t('m_7609ae5732', [active.name]))) return;
   try {
     if (!await archiveSpace(active.id)) return;
-    showMessage(`スペース「${active.name}」をアーカイブしました。`, 'success');
+    showMessage(t('m_ace51b281e', [active.name]), 'success');
     await renderAll();
   } catch (err) {
-    showMessage('アーカイブに失敗しました。', 'error');
+    showMessage(t('m_b4f5deb27f'), 'error');
     console.error('[PWM] handleArchiveSpace エラー:', err);
   }
 }
@@ -2282,10 +2282,10 @@ async function handleRestoreSpaceFromMain() {
   if (!active || !active.archived) return;
   try {
     if (!await unarchiveSpace(active.id)) return;
-    showMessage(`スペース「${active.name}」を復元しました。`, 'success');
+    showMessage(t('m_2551a4a971', [active.name]), 'success');
     await renderAll();
   } catch (err) {
-    showMessage('復元に失敗しました。', 'error');
+    showMessage(t('m_e82b7d25f2'), 'error');
     console.error('[PWM] handleRestoreSpaceFromMain エラー:', err);
   }
 }
@@ -2294,14 +2294,14 @@ async function handleDeletePermanentlyFromMain() {
   const data   = await loadData();
   const active = data.spaces.find((s) => s.id === getActiveSpaceId(data));
   if (!active) return;
-  if (!await DashboardDialogs.confirm(`スペース「${active.name}」を完全に削除しますか？\nこの操作は元に戻せません。`)) return;
+  if (!await DashboardDialogs.confirm(t('m_e95765e8a5', [active.name]))) return;
   try {
     const result = await deleteSpace(active.id);
     if (!result) return;
-    showMessage(`スペース「${result.deletedName}」を完全に削除しました。`, 'success');
+    showMessage(t('m_ca94b050f3', [result.deletedName]), 'success');
     await renderAll();
   } catch (err) {
-    showMessage('削除に失敗しました。', 'error');
+    showMessage(t('m_6e82f81122'), 'error');
     console.error('[PWM] handleDeletePermanentlyFromMain エラー:', err);
   }
 }
@@ -2319,18 +2319,18 @@ async function handleSaveTabs() {
   const data = await loadData();
   const activeSpaceId = getActiveSpaceId(data);
   if (!activeSpaceId) {
-    showMessage('スペースが選択されていません。スペースを選択または作成してください。', 'error'); return;
+    showMessage(t('m_507e16fe4e'), 'error'); return;
   }
   try {
     const count = await saveCurrentTabsToSpace(activeSpaceId);
-    if (count === -1) { showMessage('スペースが見つかりません。', 'error'); return; }
-    if (count === 0)  { showMessage('保存できるタブがありませんでした（chrome:// 系のタブは保存対象外です）。', 'error'); return; }
-    showMessage(`${count} 件のタブを保存しました。`, 'success');
+    if (count === -1) { showMessage(t('m_09648e447c'), 'error'); return; }
+    if (count === 0)  { showMessage(t('m_f351029a37'), 'error'); return; }
+    showMessage(t('m_f272b678d1', [count]), 'success');
     await renderAll();
     // Chrome タブバーにグループを即時反映
     applyGroupsToChromeTabs(activeSpaceId).catch(() => {});
   } catch (err) {
-    showMessage('タブの保存に失敗しました。', 'error');
+    showMessage(t('m_f38b273b38'), 'error');
     console.error('[PWM] handleSaveTabs エラー:', err);
   }
 }
@@ -2358,25 +2358,25 @@ async function confirmSpaceSwitch(data, targetSpaceId) {
 
   let message;
   if (!currentSpace) {
-    message = '現在開いているタブはどのスペースにも保存されていません。\n';
-    message += '切り替えると、これらのタブは保存されずに閉じられます。\n\n';
+    message = t('m_d48c02f761');
+    message += t('m_e92defc1cb');
   } else if (!autoSaveOnSwitch) {
-    message = '「切り替え時の自動保存」がオフです。\n';
-    message += `現在のタブは「${currentSpace.name}」に保存されず、閉じられます。\n\n`;
+    message = t('m_0fe3f5ec9d');
+    message += t('m_2bde3706ab', [currentSpace.name]);
   } else if (currentSpace.archived) {
-    message = 'アーカイブ済みのスペースから切り替えるため、現在のタブは保存されずに閉じられます。\n\n';
+    message = t('m_1ad7ff9d86');
   } else {
-    message = '現在開いているタブは保存されずに閉じられます。\n\n';
+    message = t('m_2bc14b7cca');
   }
-  message += `スペース「${targetName}」に切り替えますか？`;
+  message += t('m_be1598e030', [targetName]);
 
   const choice = await DashboardDialogs.chooseSwitch(message, !!currentSpace && !currentSpace.archived);
   if (choice === 'cancel') return false;
   if (choice === 'save') {
     try {
-      if (await saveCurrentTabsToSpace(currentSpaceId) < 0) throw new Error('保存先がありません');
+      if (await saveCurrentTabsToSpace(currentSpaceId) < 0) throw new Error(t('m_618731a7e3'));
     } catch (error) {
-      showMessage('保存に失敗したため、切り替えを中止しました。', 'error');
+      showMessage(t('m_c837ab2cde'), 'error');
       return false;
     }
   }
@@ -2435,7 +2435,7 @@ async function performSwitchSpace(targetSpaceId) {
       try {
         await WorkspaceTools.captureHistory(data);
       } catch (error) {
-        showMessage('切り替え前の履歴を保存できなかったため、切り替えを中止しました。', 'error');
+        showMessage(t('m_814259bda8'), 'error');
         break;
       }
       const spaceListEl = document.getElementById('spaceList');
@@ -2451,7 +2451,7 @@ async function performSwitchSpace(targetSpaceId) {
       try {
         const savedData = await switchToSpace(target);
         await Productivity.recordRecent(target);
-        showMessage(`スペース「${targetName}」に切り替えました。`, 'success');
+        showMessage(t('m_91c0550a7a', [targetName]), 'success');
         g_searchQuery = '';
         const searchInput = document.getElementById('searchInput');
         if (searchInput) searchInput.value = '';
@@ -2460,7 +2460,7 @@ async function performSwitchSpace(targetSpaceId) {
         renderSidebar(savedData);
         renderMainArea(savedData);
       } catch (err) {
-        showMessage('スペースの切り替えに失敗しました。', 'error');
+        showMessage(t('m_7db912ef11'), 'error');
         console.error('[PWM] handleSwitchSpace エラー:', err);
         await renderAll();
       } finally {
@@ -2491,7 +2491,7 @@ async function handleDeleteTab(originalIndex) {
     renderTabList(activeSpace.tabs, g_searchQuery);
     renderAll(); // サイドバーのバッジ数更新（await しない）
   } catch (err) {
-    showMessage('タブの削除に失敗しました。', 'error');
+    showMessage(t('m_b6afad9923'), 'error');
     console.error('[PWM] handleDeleteTab エラー:', err);
   }
 }
@@ -2521,11 +2521,11 @@ async function handleDropSpaceToCategory(spaceId, categoryId) {
     await moveSpaceToCategory(spaceId, categoryId);
     const catName = categoryId
       ? ((data.categories || []).find((c) => c.id === categoryId) || {}).name || categoryId
-      : '未分類';
-    showMessage(`「${space.name}」を「${catName}」に移動しました。`, 'success');
+      : t('m_f4d781035f');
+    showMessage(t('m_b623491f35', [space.name, catName]), 'success');
     await renderAll();
   } catch (err) {
-    showMessage('カテゴリーの移動に失敗しました。', 'error');
+    showMessage(t('m_2768c12413'), 'error');
     console.error('[PWM] handleDropSpaceToCategory エラー:', err);
   }
 }
@@ -2556,7 +2556,7 @@ async function reorderSpace(draggedSpaceId, targetSpaceId, insertBefore) {
     await saveData(data);
     await renderAll();
   } catch (err) {
-    showMessage('並び替えに失敗しました。', 'error');
+    showMessage(t('m_429435583a'), 'error');
     console.error('[PWM] reorderSpace エラー:', err);
   }
 }
@@ -2580,7 +2580,7 @@ async function reorderCategory(draggedCategoryId, targetCategoryId, insertBefore
     await saveData(data);
     await renderAll();
   } catch (err) {
-    showMessage('カテゴリーの並び替えに失敗しました。', 'error');
+    showMessage(t('m_c1460a0421'), 'error');
     console.error('[PWM] reorderCategory エラー:', err);
   }
 }
@@ -2612,9 +2612,9 @@ async function exportData() {
     a.href = url; a.download = `pwm-backup-${ts}.json`;
     document.body.appendChild(a); a.click(); document.body.removeChild(a);
     URL.revokeObjectURL(url);
-    showMessage(`エクスポート完了: ${backup.spaces.length} スペース / ${backup.categories.length} カテゴリー → pwm-backup-${ts}.json`, 'success');
+    showMessage(t('m_ddf26ce3ed', [backup.spaces.length, backup.categories.length, ts]), 'success');
   } catch (err) {
-    showMessage('エクスポートに失敗しました。', 'error');
+    showMessage(t('m_f693a2b833'), 'error');
     console.error('[PWM] exportData エラー:', err);
   }
 }
@@ -2628,12 +2628,12 @@ async function handleImportFileSelected(event) {
   try {
     const parsed = validateBackup(JSON.parse((await file.text()).replace(/^\uFEFF/, '')));
     if (!parsed || typeof parsed !== 'object' || !Array.isArray(parsed.spaces)) {
-      showMessage('ファイル形式が正しくありません。', 'error'); return;
+      showMessage(t('m_00de6b5511'), 'error'); return;
     }
     const spaceCount = parsed.spaces.length;
     const catCount   = Array.isArray(parsed.categories) ? parsed.categories.length : 0;
-    const exportedAt = parsed.exportedAt ? formatDate(parsed.exportedAt) : '不明';
-    if (!await DashboardDialogs.open(`バックアップファイルをインポートします。\n\n　スペース   : ${spaceCount} 件\n　カテゴリー : ${catCount} 件\n　作成日時   : ${exportedAt}\n\n現在のデータはすべて上書きされます。よろしいですか？`)) return;
+    const exportedAt = parsed.exportedAt ? formatDate(parsed.exportedAt) : t('m_75e9dd8f76');
+    if (!await DashboardDialogs.open(t('m_efccfe8e49', [spaceCount, catCount, exportedAt]))) return;
     const newData = { activeSpaceId: parsed.activeSpaceId || null, windowActiveSpaces: parsed.windowActiveSpaces || {}, categories: Array.isArray(parsed.categories) ? parsed.categories : [], spaces: parsed.spaces };
     newData.spaces.forEach((s) => {
       if (!('categoryId' in s)) s.categoryId = null;
@@ -2644,10 +2644,10 @@ async function handleImportFileSelected(event) {
       if (!('color' in c)) c.color = '';
     });
     await saveData(newData);
-    showMessage(`インポート完了: ${spaceCount} スペース / ${catCount} カテゴリー`, 'success');
+    showMessage(t('m_ce1d0548a0', [spaceCount, catCount]), 'success');
     await renderAll();
   } catch (err) {
-    showMessage(err instanceof SyntaxError ? 'JSON の解析に失敗しました。' : `インポートに失敗しました。${err.message || ''}`, 'error');
+    showMessage(err instanceof SyntaxError ? t('m_8df1c53c2e') : t('m_682e44dcfb', [err.message || '']), 'error');
     console.error('[PWM] handleImportFileSelected エラー:', err);
   }
 }
@@ -2656,7 +2656,7 @@ async function handleImportFileSelected(event) {
 // カテゴリーハンドラ
 // ============================================================
 
-function openCategoryCreateModal(title = 'カテゴリーを作成') {
+function openCategoryCreateModal(title = t('m_7406792479')) {
   return new Promise((resolve) => {
     const previousFocus = document.activeElement;
     const overlay   = document.getElementById('categoryModal');
@@ -2726,49 +2726,49 @@ async function handleCreateCategory() {
   try {
     const cat = await createCategory(result.name, result.color);
     if (!cat) return;
-    showMessage(`カテゴリー「${cat.name}」を作成しました。`, 'success');
+    showMessage(t('m_db96a9457a', [cat.name]), 'success');
     await renderAll();
   } catch (err) {
-    showMessage('カテゴリーの作成に失敗しました。', 'error');
+    showMessage(t('m_1dcd4efe17'), 'error');
     console.error('[PWM] handleCreateCategory エラー:', err);
   }
 }
 
 async function handleCreateSubcategory(parentId, parentName) {
-  const result = await openCategoryCreateModal(`「${parentName}」のサブカテゴリーを作成`);
+  const result = await openCategoryCreateModal(t('m_5c1ea7fb37', [parentName]));
   if (!result) return;
   try {
     const cat = await createCategory(result.name, result.color, parentId);
     if (!cat) return;
-    showMessage(`サブカテゴリー「${cat.name}」を作成しました。`, 'success');
+    showMessage(t('m_c961917824', [cat.name]), 'success');
     await renderAll();
   } catch (err) {
-    showMessage('サブカテゴリーの作成に失敗しました。', 'error');
+    showMessage(t('m_569633928e'), 'error');
     console.error('[PWM] handleCreateSubcategory エラー:', err);
   }
 }
 
 async function handleRenameCategory(categoryId, currentName) {
-  const newName = await DashboardDialogs.prompt('新しいカテゴリー名を入力してください:', currentName);
+  const newName = await DashboardDialogs.prompt(t('m_025af6c3cb'), currentName);
   if (newName === null) return;
   try {
     if (!await renameCategory(categoryId, newName)) return;
-    showMessage('カテゴリー名を変更しました。', 'success');
+    showMessage(t('m_f3b1a68d36'), 'success');
     await renderAll();
   } catch (err) {
-    showMessage('カテゴリー名の変更に失敗しました。', 'error');
+    showMessage(t('m_0f834403b5'), 'error');
     console.error('[PWM] handleRenameCategory エラー:', err);
   }
 }
 
 async function handleDeleteCategory(categoryId, categoryName) {
-  if (!await DashboardDialogs.confirm(`カテゴリー「${categoryName}」を削除しますか？\n中のスペースは「未分類」に移動します。`)) return;
+  if (!await DashboardDialogs.confirm(t('m_904330b1c2', [categoryName]))) return;
   try {
     await deleteCategory(categoryId);
-    showMessage(`カテゴリー「${categoryName}」を削除しました。`, 'success');
+    showMessage(t('m_482af4adff', [categoryName]), 'success');
     await renderAll();
   } catch (err) {
-    showMessage('カテゴリーの削除に失敗しました。', 'error');
+    showMessage(t('m_152585e380'), 'error');
     console.error('[PWM] handleDeleteCategory エラー:', err);
   }
 }
@@ -2791,40 +2791,40 @@ async function handleChangeCategoryForSpace() {
   const categories  = data.categories || [];
 
   const flatList = buildFlatCategoryList(categories);
-  let listStr = '0: 未分類\n';
+  let listStr = t('m_a8377443c2');
   flatList.forEach(({ cat, depth }, i) => {
     const indent = '　'.repeat(depth);
     const arrow = depth > 0 ? '└ ' : '';
-    listStr += `${i + 1}: ${indent}${arrow}${cat.name}${cat.id === activeSpace.categoryId ? ' ← 現在' : ''}\n`;
+    listStr += `${i + 1}: ${indent}${arrow}${cat.name}${cat.id === activeSpace.categoryId ? t('m_5d1ccf930a') : ''}\n`;
   });
-  listStr += `${flatList.length + 1}: ＋ 新しいカテゴリーを作成`;
+  listStr += t('m_248d1228f5', [flatList.length + 1]);
 
-  const input = await DashboardDialogs.prompt(`「${activeSpace.name}」のカテゴリーを選んでください（番号を入力）:\n\n${listStr}`);
+  const input = await DashboardDialogs.prompt(t('m_6f13eed82d', [activeSpace.name, listStr]));
   if (input === null) return;
   const num = parseInt(input.trim(), 10);
-  if (isNaN(num)) { showMessage('有効な番号を入力してください。', 'error'); return; }
+  if (isNaN(num)) { showMessage(t('m_db7a8db4a9'), 'error'); return; }
 
   try {
     if (num === 0) {
       await moveSpaceToCategory(activeSpaceId, null);
-      showMessage('「未分類」に移動しました。', 'success');
+      showMessage(t('m_62abac0149'), 'success');
     } else if (num >= 1 && num <= flatList.length) {
       const target = flatList[num - 1].cat;
       await moveSpaceToCategory(activeSpaceId, target.id);
-      showMessage(`カテゴリー「${target.name}」に移動しました。`, 'success');
+      showMessage(t('m_bab01b0a0b', [target.name]), 'success');
     } else if (num === flatList.length + 1) {
-      const newCatResult = await openCategoryCreateModal('新しいカテゴリーを作成');
+      const newCatResult = await openCategoryCreateModal(t('m_c35c527047'));
       if (!newCatResult) return;
       const newCat = await createCategory(newCatResult.name, newCatResult.color);
       if (!newCat) return;
       await moveSpaceToCategory(activeSpaceId, newCat.id);
-      showMessage(`カテゴリー「${newCat.name}」を作成して移動しました。`, 'success');
+      showMessage(t('m_936cd7f801', [newCat.name]), 'success');
     } else {
-      showMessage('有効な番号を入力してください。', 'error'); return;
+      showMessage(t('m_db7a8db4a9'), 'error'); return;
     }
     await renderAll();
   } catch (err) {
-    showMessage('カテゴリーの変更に失敗しました。', 'error');
+    showMessage(t('m_1f9b554bc9'), 'error');
     console.error('[PWM] handleChangeCategoryForSpace エラー:', err);
   }
 }
@@ -2921,7 +2921,7 @@ async function applyGroupsToChromeTabs(spaceId) {
 
 
 /** タブグループ作成・編集モーダル（Chrome 標準9色で選択） */
-function openTabGroupModal(title = 'グループを作成', initName = '', initColor = '') {
+function openTabGroupModal(title = t('m_49dbd7dc23'), initName = '', initColor = '') {
   return new Promise((resolve) => {
     const overlay   = document.getElementById('categoryModal');
     const nameInput = document.getElementById('categoryNameInput');
@@ -2940,7 +2940,7 @@ function openTabGroupModal(title = 'グループを作成', initName = '', initC
     noneBtn.className = 'modal__color-swatch modal__color-swatch--none' +
                         (!selectedColor ? ' modal__color-swatch--active' : '');
     noneBtn.textContent = '×';
-    noneBtn.title       = 'なし';
+    noneBtn.title       = t('m_1a2e920ba7');
     noneBtn.addEventListener('click', () => {
       grid.querySelectorAll('.modal__color-swatch').forEach((s) => s.classList.remove('modal__color-swatch--active'));
       noneBtn.classList.add('modal__color-swatch--active');
@@ -2993,43 +2993,43 @@ function openTabGroupModal(title = 'グループを作成', initName = '', initC
 async function handleCreateTabGroup() {
   const data    = await loadData();
   const spaceId = getActiveSpaceId(data);
-  if (!spaceId) { showMessage('スペースを選択してください。', 'error'); return; }
-  const result = await openTabGroupModal('グループを作成');
+  if (!spaceId) { showMessage(t('m_e94783b08f'), 'error'); return; }
+  const result = await openTabGroupModal(t('m_49dbd7dc23'));
   if (!result) return;
   try {
     const group = await createTabGroup(spaceId, result.name, result.color);
     if (!group) return;
-    showMessage(`グループ「${group.name}」を作成しました。`, 'success');
+    showMessage(t('m_637efb62a0', [group.name]), 'success');
     await renderAll();
   } catch (err) {
-    showMessage('グループの作成に失敗しました。', 'error');
+    showMessage(t('m_e5c17530ad'), 'error');
     console.error('[PWM] handleCreateTabGroup エラー:', err);
   }
 }
 
 async function handleRenameTabGroup(spaceId, groupId, currentName, currentColor) {
-  const result = await openTabGroupModal('グループを編集', currentName, currentColor);
+  const result = await openTabGroupModal(t('m_f648e8b5a9'), currentName, currentColor);
   if (!result) return;
   try {
     await renameTabGroup(spaceId, groupId, result.name || currentName);
     if (result.color !== undefined) await setTabGroupColor(spaceId, groupId, result.color);
-    showMessage('グループを更新しました。', 'success');
+    showMessage(t('m_c6df24a6c9'), 'success');
     await renderAll();
   } catch (err) {
-    showMessage('グループの更新に失敗しました。', 'error');
+    showMessage(t('m_762bfecbd7'), 'error');
     console.error('[PWM] handleRenameTabGroup エラー:', err);
   }
 }
 
 async function handleDeleteTabGroup(spaceId, groupId, groupName) {
-  if (!await DashboardDialogs.confirm(`グループ「${groupName}」を削除しますか？\nタブはグループなしになります。`)) return;
+  if (!await DashboardDialogs.confirm(t('m_6ab993caa7', [groupName]))) return;
   try {
     await deleteTabGroup(spaceId, groupId);
-    showMessage(`グループ「${groupName}」を削除しました。`, 'success');
+    showMessage(t('m_d06ff38c9c', [groupName]), 'success');
     await renderAll();
     applyGroupsToChromeTabs(spaceId).catch(() => {});
   } catch (err) {
-    showMessage('グループの削除に失敗しました。', 'error');
+    showMessage(t('m_ce516ef82e'), 'error');
     console.error('[PWM] handleDeleteTabGroup エラー:', err);
   }
 }
@@ -3040,7 +3040,7 @@ async function handleMoveTabToGroup(spaceId, tabIndex, groupId) {
     await renderAll();
     applyGroupsToChromeTabs(spaceId).catch(() => {});
   } catch (err) {
-    showMessage('タブの移動に失敗しました。', 'error');
+    showMessage(t('m_deccd3ca1c'), 'error');
     console.error('[PWM] handleMoveTabToGroup エラー:', err);
   }
 }
@@ -3055,7 +3055,7 @@ async function handleArchiveSpaceTab(tabIndex) {
     await archiveSpaceTab(sp.id, tabIndex);
     renderAll();
   } catch (err) {
-    showMessage('アーカイブに失敗しました。', 'error');
+    showMessage(t('m_b4f5deb27f'), 'error');
     console.error('[PWM] handleArchiveSpaceTab:', err);
   }
 }
@@ -3065,7 +3065,7 @@ async function handleUnarchiveSpaceTab(spaceId, archiveIndex) {
     await unarchiveSpaceTab(spaceId, archiveIndex);
     await renderAll();
   } catch (err) {
-    showMessage('復元に失敗しました。', 'error');
+    showMessage(t('m_e82b7d25f2'), 'error');
     console.error('[PWM] handleUnarchiveSpaceTab:', err);
   }
 }
@@ -3075,7 +3075,7 @@ async function handleDeleteArchivedSpaceTab(spaceId, archiveIndex) {
     await deleteArchivedSpaceTab(spaceId, archiveIndex);
     await renderAll();
   } catch (err) {
-    showMessage('削除に失敗しました。', 'error');
+    showMessage(t('m_6e82f81122'), 'error');
     console.error('[PWM] handleDeleteArchivedSpaceTab:', err);
   }
 }
@@ -3099,14 +3099,14 @@ function applyTheme(theme) {
       <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
     `;
     const btn = document.getElementById('btnToggleTheme');
-    if (btn) btn.title = 'ライトモードに切り替え';
+    if (btn) btn.title = t('m_9ab79d75a0');
   } else {
     document.body.classList.remove('theme-dark');
     icon.innerHTML = `
       <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
     `;
     const btn = document.getElementById('btnToggleTheme');
-    if (btn) btn.title = 'ダークモードに切り替え';
+    if (btn) btn.title = t('m_2aff1d2b6a');
   }
 }
 
@@ -3188,8 +3188,8 @@ async function init() {
         const label   = e.target.options[e.target.selectedIndex].text;
         showMessage(
           hours === 0
-            ? '自動バックアップをオフにしました。'
-            : `自動バックアップ: ${label} に設定しました。`,
+            ? t('m_a49e39c667')
+            : t('m_33ec021992', [label]),
           'success'
         );
       });
@@ -3205,8 +3205,8 @@ async function init() {
         await chrome.storage.local.set({ pwm_settings: { ...cur, autoSaveOnSwitch: enabled } });
         showMessage(
           enabled
-            ? '切り替え時の自動保存をオンにしました。'
-            : '切り替え時の自動保存をオフにしました。',
+            ? t('m_938dbc938d')
+            : t('m_4f8b8d9b2e'),
           'success'
         );
       });

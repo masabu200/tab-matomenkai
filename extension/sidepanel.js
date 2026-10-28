@@ -12,7 +12,7 @@ document.getElementById('openDashboard').addEventListener('click', async event =
     const existing = tabs.find(tab => tab.url?.startsWith(DASHBOARD_PAGE_URL));
     if (existing) await chrome.tabs.update(existing.id, { active: true });
     else await chrome.tabs.create({ windowId: g_dashboardWindowId, url: DASHBOARD_PAGE_URL, active: true });
-  } catch { showMessage('ダッシュボードを開けませんでした。再度お試しください。', 'error'); }
+  } catch { showMessage(t('m_99f2a39628'), 'error'); }
   finally { button.disabled = false; }
 });
 // Modal width/focus adapts to the narrow panel; category fields remain original.

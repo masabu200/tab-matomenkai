@@ -1,0 +1,1220 @@
+{
+  "m_2ce01f81ad": {
+    "message": "本機 AI 整合"
+  },
+  "m_a8ce0201c4": {
+    "message": "連線期間，空間標題、URL 與群組資訊會分享給這台電腦上的整合伺服器，不會分享網頁內容。"
+  },
+  "m_a9356d61c7": {
+    "message": "連線金鑰"
+  },
+  "m_9dd838b6ab": {
+    "message": "貼上整合伺服器的 .local/token"
+  },
+  "m_5119847c00": {
+    "message": "連線"
+  },
+  "m_092575584a": {
+    "message": "中斷連線"
+  },
+  "m_2e845bddec": {
+    "message": "檢視建議"
+  },
+  "m_463f7d5d30": {
+    "message": "還原上次整理"
+  },
+  "m_7ea46c0315": {
+    "message": "未連線"
+  },
+  "m_fb71a4e085": {
+    "message": "連線錯誤"
+  },
+  "m_9606bdda03": {
+    "message": "檢視建議（$1）"
+  },
+  "m_b5e969dec9": {
+    "message": "已連線 · $1 項建議"
+  },
+  "m_cda8d46d3f": {
+    "message": "無法連線："
+  },
+  "m_c4e07534d2": {
+    "message": "請貼上 64 個字元的連線金鑰"
+  },
+  "m_0b9939e1f9": {
+    "message": "已中斷連線"
+  },
+  "m_a9b2455ca6": {
+    "message": "AI 建議"
+  },
+  "m_1c7d43cb8f": {
+    "message": "套用所選變更"
+  },
+  "m_16661f1537": {
+    "message": "略過這項建議"
+  },
+  "m_3da5c18551": {
+    "message": "關閉"
+  },
+  "m_2fbbb892d1": {
+    "message": "已儲存的資料有變動，這項建議已無法套用。請向 AI 重新要求提案。"
+  },
+  "m_33dc0c7eef": {
+    "message": "已儲存的資料有變動，請重新要求提案。"
+  },
+  "m_4e265c1689": {
+    "message": "已套用 $1 項變更，未更動已開啟的分頁。"
+  },
+  "m_62157d9463": {
+    "message": "沒有可還原的整理紀錄"
+  },
+  "m_33b0b3d01c": {
+    "message": "之後又有變更，因此無法還原"
+  },
+  "m_b1c9392214": {
+    "message": "已還原為整理前的狀態"
+  },
+  "m_6aa1453553": {
+    "message": "變更請控制在 1 到 50 項之間"
+  },
+  "m_b96d769eac": {
+    "message": "找不到目標空間"
+  },
+  "m_2b707f3b85": {
+    "message": "變更格式無效"
+  },
+  "m_f7c288ba66": {
+    "message": "名稱須為 1–120 個字元"
+  },
+  "m_bd93ad1a6f": {
+    "message": "重新命名：$1 → $2"
+  },
+  "m_ebeb4c2304": {
+    "message": "找不到目的地分類"
+  },
+  "m_f4d781035f": {
+    "message": "未分類"
+  },
+  "m_42e0c95815": {
+    "message": "移動分類：$1 → $2"
+  },
+  "m_55a535bafa": {
+    "message": "只能新增 HTTP/HTTPS 的 URL"
+  },
+  "m_43c516fa6a": {
+    "message": "這個 URL 已儲存過了"
+  },
+  "m_39b67bcaf4": {
+    "message": "標題格式無效"
+  },
+  "m_03f6623a18": {
+    "message": "新增分頁：$1 ← $2"
+  },
+  "m_6a6f94972c": {
+    "message": "分頁位置無效"
+  },
+  "m_579a11d917": {
+    "message": "請選擇其他空間"
+  },
+  "m_46ba84410f": {
+    "message": "目標分頁的 URL 不符"
+  },
+  "m_8924020b2a": {
+    "message": "目的地已有相同的 URL"
+  },
+  "m_11b801d8a2": {
+    "message": "移動分頁：$1（$2 → $3）"
+  },
+  "m_42adb155e1": {
+    "message": "不支援的操作"
+  },
+  "m_4091966e8a": {
+    "message": "儲存到 Tab Matomen Kai"
+  },
+  "m_6079395160": {
+    "message": "尚無空間（請到儀表板建立）"
+  },
+  "m_2167649eea": {
+    "message": "開啟 Tab Matomen Kai"
+  },
+  "m_ecde74ef1b": {
+    "message": "已儲存到「$1」（$2 個分頁）"
+  },
+  "m_6f91f13005": {
+    "message": "「$1」中已儲存過了"
+  },
+  "m_a9276d6dfe": {
+    "message": "無法儲存。請到儀表板確認空間"
+  },
+  "m_56415d676e": {
+    "message": "備份內容無效，目前的資料未被更動。"
+  },
+  "m_a18e4bec39": {
+    "message": "分頁批次操作"
+  },
+  "m_f6365e7574": {
+    "message": "全選"
+  },
+  "m_e135253c38": {
+    "message": "已選 0 個"
+  },
+  "m_9a2cef5d5b": {
+    "message": "在此視窗開啟所選分頁"
+  },
+  "m_119daf93ee": {
+    "message": "開啟"
+  },
+  "m_2cb583698f": {
+    "message": "目的地空間"
+  },
+  "m_9a97fc3ae6": {
+    "message": "移動"
+  },
+  "m_71a12fb43e": {
+    "message": "要放入的群組"
+  },
+  "m_e70ecafd50": {
+    "message": "放入群組"
+  },
+  "m_ae75ae1d2a": {
+    "message": "複製格式"
+  },
+  "m_ce05fd6a61": {
+    "message": "標題與 URL"
+  },
+  "m_c257bec714": {
+    "message": "僅 URL"
+  },
+  "m_295cc5d596": {
+    "message": "複製所選分頁的清單（未選取時複製整個空間）"
+  },
+  "m_e94c210766": {
+    "message": "複製"
+  },
+  "m_a2307d9555": {
+    "message": "封存所選分頁"
+  },
+  "m_c686c1a9dd": {
+    "message": "封存"
+  },
+  "m_2fe1822ad4": {
+    "message": "刪除所選分頁"
+  },
+  "m_5cbdf1fd70": {
+    "message": "刪除"
+  },
+  "m_f0dc9f43d4": {
+    "message": "取消選取（Esc）"
+  },
+  "m_ec7ae06b09": {
+    "message": "取消"
+  },
+  "m_fca5a8dc9f": {
+    "message": "已選 $1 個"
+  },
+  "m_91f77f62c2": {
+    "message": "移至…"
+  },
+  "m_cda05ed8b5": {
+    "message": "群組…"
+  },
+  "m_7a137f933a": {
+    "message": "無群組"
+  },
+  "m_bcbebef3cf": {
+    "message": "未命名群組"
+  },
+  "m_4710908c81": {
+    "message": "新增群組…"
+  },
+  "m_e4de78fe6b": {
+    "message": "切換中無法使用。"
+  },
+  "m_37bb515e00": {
+    "message": "空間已變更，因此已取消。請重新選取。"
+  },
+  "m_5e3dfdc724": {
+    "message": "找不到所選的分頁。"
+  },
+  "m_fba383cf43": {
+    "message": "$1失敗。"
+  },
+  "m_481253a7af": {
+    "message": "已開啟 $1 個分頁。"
+  },
+  "m_8394e407bf": {
+    "message": "請選擇目的地空間。"
+  },
+  "m_72a6bd4fe9": {
+    "message": "沒有可作為目的地的空間。"
+  },
+  "m_33ad04a535": {
+    "message": "（目的地已有相同 URL，已略過 $1 個）"
+  },
+  "m_7c9bfe16e3": {
+    "message": "已將 $2 個分頁移至「$1」。$3"
+  },
+  "m_c19f04094f": {
+    "message": "請選擇群組。"
+  },
+  "m_42f0321630": {
+    "message": "新群組"
+  },
+  "m_80eb0a488d": {
+    "message": "移至群組"
+  },
+  "m_961c24d640": {
+    "message": "找不到群組。"
+  },
+  "m_d42ecb5149": {
+    "message": "已將 $1 個分頁放入「$2」。"
+  },
+  "m_2a8a7849b4": {
+    "message": "已將 $1 個分頁移出群組。"
+  },
+  "m_d97fff8023": {
+    "message": "沒有可複製的分頁。"
+  },
+  "m_fd05c05821": {
+    "message": "已將 $1 個分頁複製為$2。"
+  },
+  "m_b4a1f2d50c": {
+    "message": "無法複製到剪貼簿。"
+  },
+  "m_63b3f3287e": {
+    "message": "複製失敗。"
+  },
+  "m_b48b8f8f20": {
+    "message": "已封存 $1 個分頁。"
+  },
+  "m_cba9bbaa15": {
+    "message": "要刪除所選的 $1 個分頁嗎？此操作無法復原。"
+  },
+  "m_fae13af1e7": {
+    "message": "已刪除 $1 個分頁。"
+  },
+  "m_53884810b9": {
+    "message": "空間操作"
+  },
+  "m_269b0f92e4": {
+    "message": "取消"
+  },
+  "m_a530f556a0": {
+    "message": "切換空間"
+  },
+  "m_b538e73b7e": {
+    "message": "儲存後切換"
+  },
+  "m_f7c3004a90": {
+    "message": "不儲存直接切換"
+  },
+  "m_348b8cbfe6": {
+    "message": "沒有可儲存的空間，因此無法在此畫面儲存。"
+  },
+  "m_6c891ec97d": {
+    "message": "在側邊面板開啟左側欄（Chrome 的面板位置須設為左側）"
+  },
+  "m_10432c2864": {
+    "message": "在側邊面板開啟左側欄"
+  },
+  "m_72397565b9": {
+    "message": "切換深色模式"
+  },
+  "m_48e334a386": {
+    "message": "新增分類"
+  },
+  "m_53e842102c": {
+    "message": "將所有資料匯出為 JSON 檔"
+  },
+  "m_e44031674a": {
+    "message": "從 JSON 檔載入資料"
+  },
+  "m_da76e386a1": {
+    "message": "自動備份間隔"
+  },
+  "m_ce06239034": {
+    "message": "切換空間時自動儲存目前的分頁"
+  },
+  "m_54bcd667a4": {
+    "message": "變更分類"
+  },
+  "m_80022cdc79": {
+    "message": "重新命名空間"
+  },
+  "m_a9f0f1eba3": {
+    "message": "封存空間"
+  },
+  "m_65902d6ec2": {
+    "message": "刪除空間"
+  },
+  "m_a54c2c00ae": {
+    "message": "從封存還原"
+  },
+  "m_da37848919": {
+    "message": "永久刪除"
+  },
+  "m_6293e5e0a9": {
+    "message": "切換檢視"
+  },
+  "m_b4cf24ebe1": {
+    "message": "清單檢視"
+  },
+  "m_1e578fc996": {
+    "message": "卡片檢視"
+  },
+  "m_b1c9cf7a56": {
+    "message": "以分頁標題或 URL 篩選…"
+  },
+  "m_2eabfa845d": {
+    "message": "建立新的分頁群組"
+  },
+  "m_32dbab9f90": {
+    "message": "輸入分類名稱…"
+  },
+  "m_a7b8477445": {
+    "message": "Tab Matomen Kai"
+  },
+  "m_2e57cc29ef": {
+    "message": "若要在瀏覽時持續顯示在左側，請先將 Chrome 的「側邊面板位置」設為「左側」，再按上方的按鈕。"
+  },
+  "m_22c2dc1788": {
+    "message": "開啟 Chrome 設定"
+  },
+  "m_5d208d1c21": {
+    "message": "Tab Matomen"
+  },
+  "m_798f95db5d": {
+    "message": "Kai"
+  },
+  "m_fbc350db7c": {
+    "message": "＋ 空間"
+  },
+  "m_041f4ac575": {
+    "message": "＋ 分類"
+  },
+  "m_14095d67d9": {
+    "message": "尚無空間"
+  },
+  "m_b9e400d207": {
+    "message": "匯出"
+  },
+  "m_9eb51e84ba": {
+    "message": "匯入"
+  },
+  "m_2a81a2c8cc": {
+    "message": "自動備份"
+  },
+  "m_17b500293e": {
+    "message": "關閉"
+  },
+  "m_ca7c80cb81": {
+    "message": "每小時"
+  },
+  "m_d2fe3b7e6e": {
+    "message": "每 6 小時"
+  },
+  "m_d63043a388": {
+    "message": "每天"
+  },
+  "m_0ac73ac1aa": {
+    "message": "切換時自動儲存"
+  },
+  "m_c73d62d960": {
+    "message": "已封存"
+  },
+  "m_0de3e408a2": {
+    "message": "選擇空間"
+  },
+  "m_dd3cca7f34": {
+    "message": "分類"
+  },
+  "m_79338c0706": {
+    "message": "重新命名"
+  },
+  "m_442ee7eb76": {
+    "message": "還原"
+  },
+  "m_5839f00a0d": {
+    "message": "＋ 群組"
+  },
+  "m_ccd039eca2": {
+    "message": "儲存目前的分頁"
+  },
+  "m_aff97557b0": {
+    "message": "這個空間尚未儲存任何分頁"
+  },
+  "m_83d0565a6f": {
+    "message": "請開啟所有想儲存的分頁（這個儀表板分頁可以保持開啟）"
+  },
+  "m_fab476e40b": {
+    "message": "您的分頁會列在這裡"
+  },
+  "m_2e408b9c01": {
+    "message": "開始使用"
+  },
+  "m_3a09b3b90d": {
+    "message": "選好空間後，開啟所有想儲存的分頁"
+  },
+  "m_2884c23c94": {
+    "message": "下一個專案請建立新的空間，並以相同方式儲存"
+  },
+  "m_2061886749": {
+    "message": "點選側邊欄的空間名稱即可切換分頁"
+  },
+  "m_27131257d7": {
+    "message": "將空間拖曳到分類名稱上即可移動"
+  },
+  "m_7406792479": {
+    "message": "建立分類"
+  },
+  "m_121ae791f1": {
+    "message": "顏色"
+  },
+  "m_614f2eaaff": {
+    "message": "建立"
+  },
+  "m_1a2e920ba7": {
+    "message": "無"
+  },
+  "m_72776ab68f": {
+    "message": "紅色"
+  },
+  "m_831166ef4b": {
+    "message": "橘色"
+  },
+  "m_7720f8ea0a": {
+    "message": "黃色"
+  },
+  "m_f22758bf8f": {
+    "message": "綠色"
+  },
+  "m_29e5ef1fa6": {
+    "message": "藍綠色"
+  },
+  "m_845d1da87f": {
+    "message": "藍色"
+  },
+  "m_01caea5810": {
+    "message": "紫色"
+  },
+  "m_caaf2acdb2": {
+    "message": "粉紅色"
+  },
+  "m_5378733ecf": {
+    "message": "灰色"
+  },
+  "m_96aea44a0c": {
+    "message": "藍色"
+  },
+  "m_97397cc2e0": {
+    "message": "紅色"
+  },
+  "m_5cd070ae56": {
+    "message": "黃色"
+  },
+  "m_031e9b20e8": {
+    "message": "綠色"
+  },
+  "m_d96fea3531": {
+    "message": "紫色"
+  },
+  "m_55018581ba": {
+    "message": "青色"
+  },
+  "m_aabcb11957": {
+    "message": "設定圖片"
+  },
+  "m_ace3472c03": {
+    "message": "移除圖片"
+  },
+  "m_26dfc3aefe": {
+    "message": "請輸入分類名稱。"
+  },
+  "m_39a49bde63": {
+    "message": "已有名為「$1」的分類。"
+  },
+  "m_629a6eefac": {
+    "message": "請輸入空間名稱。"
+  },
+  "m_29c082f9b5": {
+    "message": "已有名為「$1」的空間。"
+  },
+  "m_09648e447c": {
+    "message": "找不到空間。"
+  },
+  "m_d40bd34d6f": {
+    "message": "重新排列群組失敗。"
+  },
+  "m_f95e7d8675": {
+    "message": "重新排列分頁失敗。"
+  },
+  "m_3dfdf80d58": {
+    "message": "新增子分類"
+  },
+  "m_6ab1008863": {
+    "message": "變更分類顏色"
+  },
+  "m_29f18064c3": {
+    "message": "重新命名分類"
+  },
+  "m_b3dd5064ba": {
+    "message": "刪除（空間會移至未分類）"
+  },
+  "m_1b31bc2d61": {
+    "message": "變更封存顏色"
+  },
+  "m_7234f5d4ed": {
+    "message": "沒有已封存的空間"
+  },
+  "m_c922e46a12": {
+    "message": "$1（已封存 / $2 個分頁）"
+  },
+  "m_78380175c5": {
+    "message": "變更主題顏色與圖示"
+  },
+  "m_b8901ba999": {
+    "message": "$1（$2 個分頁）"
+  },
+  "m_f76574e271": {
+    "message": "$1 | 儀表板"
+  },
+  "m_e17d188654": {
+    "message": "請先建立空間"
+  },
+  "m_3009a0e43b": {
+    "message": "回到使用中的分頁"
+  },
+  "m_1816d78893": {
+    "message": "沒有符合「$1」的分頁。"
+  },
+  "m_876cb3ca26": {
+    "message": "拖放到這裡即可移出群組"
+  },
+  "m_97edcdfb5e": {
+    "message": "變更群組顏色"
+  },
+  "m_4ccd455653": {
+    "message": "重新命名群組"
+  },
+  "m_73fd4c5de6": {
+    "message": "刪除群組（分頁會變成未分組）"
+  },
+  "m_f32ff53372": {
+    "message": "拖曳以重新排序"
+  },
+  "m_dcea25f949": {
+    "message": "這個群組沒有分頁。將分頁拖曳到這裡即可加入"
+  },
+  "m_d3811d54bb": {
+    "message": "$1\n$2\n點一下開啟 / 拖曳可在群組間移動"
+  },
+  "m_05120d62af": {
+    "message": "選取：$1"
+  },
+  "m_f82fcc53cd": {
+    "message": "點一下選取，Shift+點選可選取範圍"
+  },
+  "m_4bed8152a4": {
+    "message": "封存這個分頁"
+  },
+  "m_cf45400a02": {
+    "message": "封存（從分頁列隱藏）"
+  },
+  "m_626612ea5e": {
+    "message": "刪除這個分頁"
+  },
+  "m_88c92c22d4": {
+    "message": "載入資料失敗。"
+  },
+  "m_cd6a909d39": {
+    "message": "請輸入新空間的名稱："
+  },
+  "m_1cefe0ca30": {
+    "message": "已建立空間「$1」。"
+  },
+  "m_ed1eac911a": {
+    "message": "建立空間失敗。"
+  },
+  "m_f2b265026b": {
+    "message": "請輸入新的空間名稱："
+  },
+  "m_f2b748c88b": {
+    "message": "已重新命名空間。"
+  },
+  "m_c0e48c9028": {
+    "message": "重新命名空間失敗。"
+  },
+  "m_f4f1d62806": {
+    "message": "要刪除空間「$1」嗎？\n已儲存的所有分頁資訊也會一併刪除。"
+  },
+  "m_88dd8d49f3": {
+    "message": "已刪除空間「$1」。"
+  },
+  "m_89289d2423": {
+    "message": "刪除空間失敗。"
+  },
+  "m_7609ae5732": {
+    "message": "要封存空間「$1」嗎？\n資料會保留，之後可以還原。"
+  },
+  "m_ace51b281e": {
+    "message": "已封存空間「$1」。"
+  },
+  "m_b4f5deb27f": {
+    "message": "封存失敗。"
+  },
+  "m_2551a4a971": {
+    "message": "已還原空間「$1」。"
+  },
+  "m_e82b7d25f2": {
+    "message": "還原失敗。"
+  },
+  "m_e95765e8a5": {
+    "message": "要永久刪除空間「$1」嗎？\n此操作無法復原。"
+  },
+  "m_ca94b050f3": {
+    "message": "已永久刪除空間「$1」。"
+  },
+  "m_6e82f81122": {
+    "message": "刪除失敗。"
+  },
+  "m_507e16fe4e": {
+    "message": "尚未選擇空間。請選擇或建立空間。"
+  },
+  "m_f351029a37": {
+    "message": "沒有可儲存的分頁（無法儲存 chrome:// 頁面）。"
+  },
+  "m_f272b678d1": {
+    "message": "已儲存 $1 個分頁。"
+  },
+  "m_f38b273b38": {
+    "message": "儲存分頁失敗。"
+  },
+  "m_d48c02f761": {
+    "message": "目前開啟的分頁尚未儲存到任何空間。\n"
+  },
+  "m_e92defc1cb": {
+    "message": "若切換，這些分頁會在未儲存的情況下關閉。\n\n"
+  },
+  "m_0fe3f5ec9d": {
+    "message": "「切換時自動儲存」已關閉。\n"
+  },
+  "m_2bde3706ab": {
+    "message": "目前的分頁會在未儲存到「$1」的情況下關閉。\n\n"
+  },
+  "m_1ad7ff9d86": {
+    "message": "由於是從已封存的空間切換，目前的分頁會在未儲存的情況下關閉。\n\n"
+  },
+  "m_2bc14b7cca": {
+    "message": "目前開啟的分頁會在未儲存的情況下關閉。\n\n"
+  },
+  "m_be1598e030": {
+    "message": "要切換到空間「$1」嗎？"
+  },
+  "m_618731a7e3": {
+    "message": "沒有可儲存的目的地"
+  },
+  "m_c837ab2cde": {
+    "message": "因為儲存失敗，已取消切換。"
+  },
+  "m_814259bda8": {
+    "message": "因為無法儲存切換前的紀錄，已取消切換。"
+  },
+  "m_91c0550a7a": {
+    "message": "已切換到空間「$1」。"
+  },
+  "m_7db912ef11": {
+    "message": "切換空間失敗。"
+  },
+  "m_b6afad9923": {
+    "message": "刪除分頁失敗。"
+  },
+  "m_b623491f35": {
+    "message": "已將「$1」移至「$2」。"
+  },
+  "m_2768c12413": {
+    "message": "移動分類失敗。"
+  },
+  "m_429435583a": {
+    "message": "重新排序失敗。"
+  },
+  "m_c1460a0421": {
+    "message": "重新排列分類失敗。"
+  },
+  "m_ddf26ce3ed": {
+    "message": "匯出完成：$1 個空間 / $2 個分類 → pwm-backup-$3.json"
+  },
+  "m_f693a2b833": {
+    "message": "匯出失敗。"
+  },
+  "m_00de6b5511": {
+    "message": "檔案格式無效。"
+  },
+  "m_75e9dd8f76": {
+    "message": "未知"
+  },
+  "m_efccfe8e49": {
+    "message": "要匯入這個備份檔嗎？\n\n  空間數量：$1\n  分類數量：$2\n  建立時間：$3\n\n目前的所有資料都會被覆寫。要繼續嗎？"
+  },
+  "m_ce1d0548a0": {
+    "message": "匯入完成：$1 個空間 / $2 個分類"
+  },
+  "m_8df1c53c2e": {
+    "message": "解析 JSON 失敗。"
+  },
+  "m_682e44dcfb": {
+    "message": "匯入失敗。$1"
+  },
+  "m_db96a9457a": {
+    "message": "已建立分類「$1」。"
+  },
+  "m_1dcd4efe17": {
+    "message": "建立分類失敗。"
+  },
+  "m_5c1ea7fb37": {
+    "message": "建立「$1」的子分類"
+  },
+  "m_c961917824": {
+    "message": "已建立子分類「$1」。"
+  },
+  "m_569633928e": {
+    "message": "建立子分類失敗。"
+  },
+  "m_025af6c3cb": {
+    "message": "請輸入新的分類名稱："
+  },
+  "m_f3b1a68d36": {
+    "message": "已重新命名分類。"
+  },
+  "m_0f834403b5": {
+    "message": "重新命名分類失敗。"
+  },
+  "m_904330b1c2": {
+    "message": "要刪除分類「$1」嗎？\n其中的空間會移至「未分類」。"
+  },
+  "m_482af4adff": {
+    "message": "已刪除分類「$1」。"
+  },
+  "m_152585e380": {
+    "message": "刪除分類失敗。"
+  },
+  "m_a8377443c2": {
+    "message": "0：未分類\n"
+  },
+  "m_5d1ccf930a": {
+    "message": " ← 目前"
+  },
+  "m_248d1228f5": {
+    "message": "$1：＋ 建立新分類"
+  },
+  "m_6f13eed82d": {
+    "message": "請為「$1」選擇分類（輸入編號）：\n\n$2"
+  },
+  "m_db7a8db4a9": {
+    "message": "請輸入有效的數字。"
+  },
+  "m_62abac0149": {
+    "message": "已移至「未分類」。"
+  },
+  "m_bab01b0a0b": {
+    "message": "已移至分類「$1」。"
+  },
+  "m_c35c527047": {
+    "message": "建立新分類"
+  },
+  "m_936cd7f801": {
+    "message": "已建立分類「$1」並將空間移到該處。"
+  },
+  "m_1f9b554bc9": {
+    "message": "變更分類失敗。"
+  },
+  "m_49dbd7dc23": {
+    "message": "建立群組"
+  },
+  "m_e94783b08f": {
+    "message": "請選擇空間。"
+  },
+  "m_637efb62a0": {
+    "message": "已建立群組「$1」。"
+  },
+  "m_e5c17530ad": {
+    "message": "建立群組失敗。"
+  },
+  "m_f648e8b5a9": {
+    "message": "編輯群組"
+  },
+  "m_c6df24a6c9": {
+    "message": "已更新群組。"
+  },
+  "m_762bfecbd7": {
+    "message": "更新群組失敗。"
+  },
+  "m_6ab993caa7": {
+    "message": "要刪除群組「$1」嗎？\n其中的分頁會變成未分組。"
+  },
+  "m_d06ff38c9c": {
+    "message": "已刪除群組「$1」。"
+  },
+  "m_ce516ef82e": {
+    "message": "刪除群組失敗。"
+  },
+  "m_deccd3ca1c": {
+    "message": "移動分頁失敗。"
+  },
+  "m_9ab79d75a0": {
+    "message": "切換為淺色模式"
+  },
+  "m_2aff1d2b6a": {
+    "message": "切換為深色模式"
+  },
+  "m_a49e39c667": {
+    "message": "已關閉自動備份。"
+  },
+  "m_33ec021992": {
+    "message": "自動備份已設為：$1。"
+  },
+  "m_938dbc938d": {
+    "message": "已開啟切換時自動儲存。"
+  },
+  "m_4f8b8d9b2e": {
+    "message": "已關閉切換時自動儲存。"
+  },
+  "m_b3afead7ff": {
+    "message": "儲存目前的分頁（$1S）"
+  },
+  "m_910348bd6b": {
+    "message": "新增一個分頁"
+  },
+  "m_2f9e6135b4": {
+    "message": "編輯我的最愛"
+  },
+  "m_f4c69f0508": {
+    "message": "請選擇"
+  },
+  "m_51a3053d75": {
+    "message": "沒有可新增的網頁。"
+  },
+  "m_53f079d16f": {
+    "message": "請先建立空間。"
+  },
+  "m_ae3ecc7ed2": {
+    "message": "要新增的分頁"
+  },
+  "m_e63bc2f7aa": {
+    "message": "目的地空間"
+  },
+  "m_6d5cd75875": {
+    "message": "新增"
+  },
+  "m_85ccd53d0e": {
+    "message": "無法讀取分頁"
+  },
+  "m_31d3cc3310": {
+    "message": "目的地已儲存過這個 URL。"
+  },
+  "m_ddb65d86ef": {
+    "message": "已將 1 個分頁新增到「$1」。"
+  },
+  "m_9fbca578c5": {
+    "message": "無法新增。請確認分頁與目的地。"
+  },
+  "m_4004b8f1db": {
+    "message": "無法讀取分頁。"
+  },
+  "m_4648287945": {
+    "message": "無法儲存我的最愛。"
+  },
+  "m_03c994e60e": {
+    "message": "建立空間後即可登錄我的最愛。"
+  },
+  "m_a2c6ae915e": {
+    "message": "無法載入我的最愛。"
+  },
+  "m_296dad2d72": {
+    "message": "我的最愛"
+  },
+  "m_c1b61fe80e": {
+    "message": "最近的空間"
+  },
+  "m_ec351de08b": {
+    "message": "已儲存分頁的預覽"
+  },
+  "m_fa9f222dca": {
+    "message": "無法開啟分頁。"
+  },
+  "m_c9ebf4c3f7": {
+    "message": "沒有已儲存的分頁"
+  },
+  "m_6329f21c41": {
+    "message": "設定"
+  },
+  "m_e438ffd26f": {
+    "message": "設定（匯入/匯出、備份、自動儲存）"
+  },
+  "m_56b6cd2c1a": {
+    "message": "開啟設定"
+  },
+  "m_00820b1780": {
+    "message": "關閉設定"
+  },
+  "m_bf10ec5ff4": {
+    "message": "變更的設定會立即儲存。匯入會覆寫目前已儲存的資料。"
+  },
+  "m_c32d6516f4": {
+    "message": "‹ 關閉"
+  },
+  "m_74f34a1534": {
+    "message": "‹ 收合"
+  },
+  "m_0a57aeec9d": {
+    "message": "關閉側邊欄"
+  },
+  "m_0b845075d6": {
+    "message": "收合側邊欄"
+  },
+  "m_2c2e1923ea": {
+    "message": "關閉（可從工具列的擴充功能圖示重新開啟）"
+  },
+  "m_6264a3f76a": {
+    "message": "無法關閉。請再試一次。"
+  },
+  "m_91323fe947": {
+    "message": "展開側邊欄"
+  },
+  "m_28e3b7ba50": {
+    "message": "請將 Chrome 的側邊面板位置設為「左側」。無法在右側開啟。"
+  },
+  "m_2c14db7241": {
+    "message": "已開啟左側欄。瀏覽其他頁面時仍會持續顯示。若關閉，可從工具列的擴充功能圖示重新開啟。"
+  },
+  "m_07a63337a6": {
+    "message": "需要 Chrome 141 或更新版本才能偵測左側位置。"
+  },
+  "m_c5ed08a7f9": {
+    "message": "視窗還在準備中。請再試一次。"
+  },
+  "m_14ae9512a4": {
+    "message": "無法開啟側邊欄。請再試一次。"
+  },
+  "m_89da984b3c": {
+    "message": "Tab Matomen Kai — 左側欄"
+  },
+  "m_2e759e9300": {
+    "message": "開啟儀表板"
+  },
+  "m_99f2a39628": {
+    "message": "無法開啟儀表板。請再試一次。"
+  },
+  "m_c7f325f13f": {
+    "message": "復原"
+  },
+  "m_41852537df": {
+    "message": "切換中無法復原。"
+  },
+  "m_88291348ad": {
+    "message": "找不到空間，因此無法復原。"
+  },
+  "m_9c5b54b484": {
+    "message": "之後又有變更，因此已取消復原。"
+  },
+  "m_7e6b5ba160": {
+    "message": "已復原。"
+  },
+  "m_a89f5a6dd5": {
+    "message": "無法復原。"
+  },
+  "m_64c1599a05": {
+    "message": "已刪除 1 個分頁。"
+  },
+  "m_bd0d74ffbc": {
+    "message": "已封存 1 個分頁。"
+  },
+  "m_429855c857": {
+    "message": "搜尋專案與空間"
+  },
+  "m_2437c7c79c": {
+    "message": "還原先前的配置"
+  },
+  "m_d0b101161c": {
+    "message": "沒有切換前的紀錄"
+  },
+  "m_c030b56060": {
+    "message": "儲存失敗：請再儲存一次"
+  },
+  "m_0a14601b8e": {
+    "message": "請選擇要儲存的空間"
+  },
+  "m_aa9e381e6f": {
+    "message": "有未儲存的變更"
+  },
+  "m_74e30e9189": {
+    "message": "已儲存"
+  },
+  "m_3b69257cb0": {
+    "message": " · 已封存"
+  },
+  "m_d34e19303a": {
+    "message": "沒有符合的空間"
+  },
+  "m_3881f5d6ed": {
+    "message": "無法判斷儲存狀態"
+  },
+  "m_97aa22defa": {
+    "message": "還原先前的分頁配置。目前的配置也會保留在紀錄中。頁面上尚未送出的輸入內容無法還原。"
+  },
+  "m_9ea03093db": {
+    "message": "已還原先前的分頁配置。"
+  },
+  "m_9930817c6f": {
+    "message": "還原失敗。請確認紀錄後再試一次。"
+  },
+  "m_6644f06197": {
+    "message": "儲存中…"
+  },
+  "appName": {
+    "message": "Tab Matomen Kai"
+  },
+  "appDescription": {
+    "message": "為每個專案建立一個空間，並在同一個 Chrome 視窗中切換各組分頁。"
+  },
+  "actionTitle": {
+    "message": "開啟 Tab Matomen Kai"
+  },
+  "onboardingClickSave": {
+    "message": "請點選上方的「儲存目前的分頁」按鈕"
+  },
+  "onboardingClickNewSpace": {
+    "message": "請點選左側的「＋ 空間」並輸入專案名稱"
+  },
+  "onboardingSaveExplained": {
+    "message": "點選「儲存目前的分頁」即可儲存分頁"
+  },
+  "restoreHistoryTitle": {
+    "message": "先前的配置（$1）。會保留到瀏覽器關閉為止"
+  },
+  "m_9e9943aa18": {
+    "message": "尚未授予 Google 的存取權。"
+  },
+  "m_1b162ecb08": {
+    "message": "請連線到 Google 雲端硬碟。"
+  },
+  "m_38e08f6f72": {
+    "message": "無法確認儲存備份的權限。"
+  },
+  "m_063e83e937": {
+    "message": "連線已取消。"
+  },
+  "m_cbe501233e": {
+    "message": "驗證的重新導向不相符。"
+  },
+  "m_195c611c2a": {
+    "message": "無法驗證身分。請重新連線。"
+  },
+  "m_210231350f": {
+    "message": "請輸入 OAuth 用戶端 ID。"
+  },
+  "m_27298d6197": {
+    "message": "請連線到 Google 雲端硬碟。若連線已過期，需要重新連線。"
+  },
+  "m_76e8f9b19a": {
+    "message": "另一個視窗正在儲存備份。"
+  },
+  "m_c62a99397a": {
+    "message": "TabMatomenKai_"
+  },
+  "m_551f37d20f": {
+    "message": "無法確認結果。請先檢查 Google 雲端硬碟，再重試。"
+  },
+  "m_6d2d7cf526": {
+    "message": "連線已過期。請重新連線到 Google 雲端硬碟。"
+  },
+  "m_e5be1db2f7": {
+    "message": "無法儲存（$1）。請確認已啟用 Google Drive API、已授予權限，且儲存空間足夠。"
+  },
+  "m_fd067b945c": {
+    "message": "無法確認儲存位置。請檢查 Google 雲端硬碟。"
+  },
+  "m_e756be4d47": {
+    "message": "備份到 Google 雲端硬碟"
+  },
+  "m_5ea424f93b": {
+    "message": "將您的空間、分類與分頁以附有時間戳記的 JSON 檔儲存到「我的雲端硬碟」。"
+  },
+  "m_6b5763bf71": {
+    "message": "按下「連線到 Google 雲端硬碟」會開啟 Google 的授權畫面。允許後，Chrome 會保留連線，並在過期時自動更新。"
+  },
+  "m_7b5914be86": {
+    "message": "首次連線設定"
+  },
+  "m_e6720a68da": {
+    "message": "請在 Google Cloud 啟用 Drive API，並建立 OAuth 用戶端（網頁應用程式）。將下列 URL 登錄為已授權的重新導向 URI。"
+  },
+  "m_f5da3ecf70": {
+    "message": "重新導向 URI"
+  },
+  "m_d80926d454": {
+    "message": "OAuth 用戶端 ID"
+  },
+  "m_dc59c3eb54": {
+    "message": "不需要用戶端密鑰。若發布狀態為測試，請將您使用的 Google 帳戶新增為測試使用者。"
+  },
+  "m_a8a3126796": {
+    "message": "連線到 Google 雲端硬碟"
+  },
+  "m_4c23d9e46d": {
+    "message": "立即備份"
+  },
+  "m_4d138770f9": {
+    "message": "中斷此瀏覽器的連線"
+  },
+  "m_c64f38ecfa": {
+    "message": "開啟最近一次備份"
+  },
+  "m_81d7efe6b9": {
+    "message": "上次儲存：$1 "
+  },
+  "m_f11b0168dc": {
+    "message": "處理中…"
+  },
+  "m_e873b731b1": {
+    "message": "已連線。現在可以儲存備份了。"
+  },
+  "m_f714e3e49d": {
+    "message": "已將備份儲存到 Google 雲端硬碟。"
+  },
+  "m_307c18ccd9": {
+    "message": "已中斷此瀏覽器的連線。已儲存的檔案仍會保留在雲端硬碟。"
+  },
+  "m_23e782bfe8": {
+    "message": "已連線"
+  },
+  "m_26a4745b1e": {
+    "message": "無法載入設定。請重新開啟此畫面。"
+  },
+  "languageHeading": {
+    "message": "語言"
+  },
+  "languageAuto": {
+    "message": "依瀏覽器語言（$1）"
+  },
+  "languageHelp": {
+    "message": "變更顯示語言會重新載入畫面。"
+  },
+  "reviewTitle": {
+    "message": "Tab Matomen Kai 對您有幫助嗎？"
+  },
+  "reviewBody": {
+    "message": "如果有，歡迎到 Chrome 線上應用程式商店留下評論，這對開發很有幫助。"
+  },
+  "reviewWrite": {
+    "message": "撰寫評論"
+  },
+  "reviewLater": {
+    "message": "稍後再說"
+  },
+  "reviewNever": {
+    "message": "不再顯示"
+  },
+  "reviewThanks": {
+    "message": "謝謝您！"
+  }
+}

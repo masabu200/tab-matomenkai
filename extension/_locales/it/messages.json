@@ -1,0 +1,1229 @@
+{
+  "m_2ce01f81ad": {
+    "message": "Integrazione IA locale"
+  },
+  "m_a8ce0201c4": {
+    "message": "Mentre è attiva la connessione, i titoli, gli URL e le informazioni sui gruppi degli spazi vengono condivisi con il server di integrazione su questo PC. Il contenuto delle pagine non viene mai condiviso."
+  },
+  "m_a9356d61c7": {
+    "message": "Chiave di connessione"
+  },
+  "m_9dd838b6ab": {
+    "message": "Incolla il file .local/token del server di integrazione"
+  },
+  "m_5119847c00": {
+    "message": "Connetti"
+  },
+  "m_092575584a": {
+    "message": "Disconnetti"
+  },
+  "m_2e845bddec": {
+    "message": "Visualizza suggerimenti"
+  },
+  "m_463f7d5d30": {
+    "message": "Annulla l'ultima riorganizzazione"
+  },
+  "m_7ea46c0315": {
+    "message": "Non connesso"
+  },
+  "m_fb71a4e085": {
+    "message": "Errore di connessione"
+  },
+  "m_9606bdda03": {
+    "message": "Visualizza suggerimenti ($1)"
+  },
+  "m_b5e969dec9": {
+    "message": "Connesso · $1 suggerimenti"
+  },
+  "m_cda8d46d3f": {
+    "message": "Impossibile connettersi: "
+  },
+  "m_c4e07534d2": {
+    "message": "Incolla la chiave di connessione di 64 caratteri"
+  },
+  "m_0b9939e1f9": {
+    "message": "Disconnesso"
+  },
+  "m_a9b2455ca6": {
+    "message": "Suggerimenti dell'IA"
+  },
+  "m_1c7d43cb8f": {
+    "message": "Applica le modifiche selezionate"
+  },
+  "m_16661f1537": {
+    "message": "Ignora questo suggerimento"
+  },
+  "m_3da5c18551": {
+    "message": "Chiudi"
+  },
+  "m_2fbbb892d1": {
+    "message": "I dati salvati sono cambiati, quindi questo suggerimento non può più essere applicato. Chiedi all'IA una nuova proposta."
+  },
+  "m_33dc0c7eef": {
+    "message": "I dati salvati sono cambiati. Richiedi una nuova proposta."
+  },
+  "m_4e265c1689": {
+    "message": "Applicate $1 modifiche. Le schede aperte non sono state modificate."
+  },
+  "m_62157d9463": {
+    "message": "Nessuna cronologia di riorganizzazione da annullare"
+  },
+  "m_33b0b3d01c": {
+    "message": "Impossibile annullare perché sono state apportate modifiche in seguito"
+  },
+  "m_b1c9392214": {
+    "message": "Ripristinato lo stato precedente alla riorganizzazione"
+  },
+  "m_6aa1453553": {
+    "message": "Mantieni le modifiche tra 1 e 50"
+  },
+  "m_b96d769eac": {
+    "message": "Spazio di destinazione non trovato"
+  },
+  "m_2b707f3b85": {
+    "message": "Formato della modifica non valido"
+  },
+  "m_f7c288ba66": {
+    "message": "I nomi devono contenere da 1 a 120 caratteri"
+  },
+  "m_bd93ad1a6f": {
+    "message": "Rinomina: $1 → $2"
+  },
+  "m_ebeb4c2304": {
+    "message": "Categoria di destinazione non trovata"
+  },
+  "m_f4d781035f": {
+    "message": "Senza categoria"
+  },
+  "m_42e0c95815": {
+    "message": "Sposta categoria: $1 → $2"
+  },
+  "m_55a535bafa": {
+    "message": "È possibile aggiungere solo URL HTTP/HTTPS"
+  },
+  "m_43c516fa6a": {
+    "message": "Questo URL è già salvato"
+  },
+  "m_39b67bcaf4": {
+    "message": "Formato del titolo non valido"
+  },
+  "m_03f6623a18": {
+    "message": "Aggiungi scheda: $1 ← $2"
+  },
+  "m_6a6f94972c": {
+    "message": "Posizione della scheda non valida"
+  },
+  "m_579a11d917": {
+    "message": "Scegli uno spazio diverso"
+  },
+  "m_46ba84410f": {
+    "message": "L'URL della scheda di destinazione non corrisponde"
+  },
+  "m_8924020b2a": {
+    "message": "La destinazione contiene già lo stesso URL"
+  },
+  "m_11b801d8a2": {
+    "message": "Sposta scheda: $1 ($2 → $3)"
+  },
+  "m_42adb155e1": {
+    "message": "Operazione non supportata"
+  },
+  "m_4091966e8a": {
+    "message": "Salva in Tab Matomen Kai"
+  },
+  "m_6079395160": {
+    "message": "Nessuno spazio ancora (creane uno nella dashboard)"
+  },
+  "m_2167649eea": {
+    "message": "Apri Tab Matomen Kai"
+  },
+  "m_ecde74ef1b": {
+    "message": "Salvato in \"$1\" ($2 schede)"
+  },
+  "m_6f91f13005": {
+    "message": "Già salvato in \"$1\""
+  },
+  "m_a9276d6dfe": {
+    "message": "Impossibile salvare. Controlla lo spazio nella dashboard"
+  },
+  "m_56415d676e": {
+    "message": "Il contenuto del backup non è valido. I dati attuali non sono stati modificati."
+  },
+  "m_a18e4bec39": {
+    "message": "Azioni multiple sulle schede"
+  },
+  "m_f6365e7574": {
+    "message": "Seleziona tutto"
+  },
+  "m_e135253c38": {
+    "message": "0 selezionate"
+  },
+  "m_9a2cef5d5b": {
+    "message": "Apri le schede selezionate in questa finestra"
+  },
+  "m_119daf93ee": {
+    "message": "Apri"
+  },
+  "m_2cb583698f": {
+    "message": "Spazio di destinazione"
+  },
+  "m_9a97fc3ae6": {
+    "message": "Sposta"
+  },
+  "m_71a12fb43e": {
+    "message": "Gruppo in cui inserirle"
+  },
+  "m_e70ecafd50": {
+    "message": "Nel gruppo"
+  },
+  "m_ae75ae1d2a": {
+    "message": "Formato di copia"
+  },
+  "m_ce05fd6a61": {
+    "message": "Titolo e URL"
+  },
+  "m_c257bec714": {
+    "message": "Solo URL"
+  },
+  "m_295cc5d596": {
+    "message": "Copia un elenco delle schede selezionate (o dell'intero spazio se nessuna è selezionata)"
+  },
+  "m_e94c210766": {
+    "message": "Copia"
+  },
+  "m_a2307d9555": {
+    "message": "Archivia le schede selezionate"
+  },
+  "m_c686c1a9dd": {
+    "message": "Archivia"
+  },
+  "m_2fe1822ad4": {
+    "message": "Elimina le schede selezionate"
+  },
+  "m_5cbdf1fd70": {
+    "message": "Elimina"
+  },
+  "m_f0dc9f43d4": {
+    "message": "Deseleziona (Esc)"
+  },
+  "m_ec7ae06b09": {
+    "message": "Deseleziona"
+  },
+  "m_fca5a8dc9f": {
+    "message": "$1 selezionate"
+  },
+  "m_91f77f62c2": {
+    "message": "Sposta in…"
+  },
+  "m_cda05ed8b5": {
+    "message": "Gruppo…"
+  },
+  "m_7a137f933a": {
+    "message": "Nessun gruppo"
+  },
+  "m_bcbebef3cf": {
+    "message": "Gruppo senza nome"
+  },
+  "m_4710908c81": {
+    "message": "Nuovo gruppo…"
+  },
+  "m_e4de78fe6b": {
+    "message": "Non disponibile durante il cambio."
+  },
+  "m_37bb515e00": {
+    "message": "Annullato perché lo spazio è cambiato. Seleziona di nuovo."
+  },
+  "m_5e3dfdc724": {
+    "message": "Impossibile trovare le schede selezionate."
+  },
+  "m_fba383cf43": {
+    "message": "$1 non riuscito."
+  },
+  "m_481253a7af": {
+    "message": "Aperte $1 schede."
+  },
+  "m_8394e407bf": {
+    "message": "Scegli uno spazio di destinazione."
+  },
+  "m_72a6bd4fe9": {
+    "message": "Non c'è nessuno spazio di destinazione."
+  },
+  "m_33ad04a535": {
+    "message": " ($1 con lo stesso URL sono state saltate perché la destinazione le contiene già)"
+  },
+  "m_7c9bfe16e3": {
+    "message": "Spostate $2 schede in \"$1\".$3"
+  },
+  "m_c19f04094f": {
+    "message": "Scegli un gruppo."
+  },
+  "m_42f0321630": {
+    "message": "Nuovo gruppo"
+  },
+  "m_80eb0a488d": {
+    "message": "Sposta nel gruppo"
+  },
+  "m_961c24d640": {
+    "message": "Gruppo non trovato."
+  },
+  "m_d42ecb5149": {
+    "message": "Inserite $1 schede in \"$2\"."
+  },
+  "m_2a8a7849b4": {
+    "message": "Rimosse $1 schede dal gruppo."
+  },
+  "m_d97fff8023": {
+    "message": "Non ci sono schede da copiare."
+  },
+  "m_fd05c05821": {
+    "message": "Copiate $1 schede come $2."
+  },
+  "m_b4a1f2d50c": {
+    "message": "Impossibile copiare negli appunti."
+  },
+  "m_63b3f3287e": {
+    "message": "Copia non riuscita."
+  },
+  "m_b48b8f8f20": {
+    "message": "Archiviate $1 schede."
+  },
+  "m_cba9bbaa15": {
+    "message": "Eliminare le $1 schede selezionate? L'operazione non può essere annullata."
+  },
+  "m_fae13af1e7": {
+    "message": "Eliminate $1 schede."
+  },
+  "m_53884810b9": {
+    "message": "Azioni sullo spazio"
+  },
+  "m_269b0f92e4": {
+    "message": "Annulla"
+  },
+  "m_a530f556a0": {
+    "message": "Cambia spazio"
+  },
+  "m_b538e73b7e": {
+    "message": "Salva e cambia"
+  },
+  "m_f7c3004a90": {
+    "message": "Cambia senza salvare"
+  },
+  "m_348b8cbfe6": {
+    "message": "Non c'è nessuno spazio in cui salvare, quindi in questa schermata non è possibile salvare."
+  },
+  "m_6c891ec97d": {
+    "message": "Apri la barra sinistra nel riquadro laterale (la posizione del riquadro in Chrome deve essere a sinistra)"
+  },
+  "m_10432c2864": {
+    "message": "Apri la barra sinistra nel riquadro laterale"
+  },
+  "m_72397565b9": {
+    "message": "Attiva/disattiva la modalità scura"
+  },
+  "m_48e334a386": {
+    "message": "Aggiungi una categoria"
+  },
+  "m_53e842102c": {
+    "message": "Esporta tutti i dati in un file JSON"
+  },
+  "m_e44031674a": {
+    "message": "Carica i dati da un file JSON"
+  },
+  "m_da76e386a1": {
+    "message": "Intervallo di backup automatico"
+  },
+  "m_ce06239034": {
+    "message": "Salva automaticamente le schede attuali quando si cambia spazio"
+  },
+  "m_54bcd667a4": {
+    "message": "Cambia categoria"
+  },
+  "m_80022cdc79": {
+    "message": "Rinomina spazio"
+  },
+  "m_a9f0f1eba3": {
+    "message": "Archivia spazio"
+  },
+  "m_65902d6ec2": {
+    "message": "Elimina spazio"
+  },
+  "m_a54c2c00ae": {
+    "message": "Ripristina dall'archivio"
+  },
+  "m_da37848919": {
+    "message": "Elimina definitivamente"
+  },
+  "m_6293e5e0a9": {
+    "message": "Cambia visualizzazione"
+  },
+  "m_b4cf24ebe1": {
+    "message": "Visualizzazione a elenco"
+  },
+  "m_1e578fc996": {
+    "message": "Visualizzazione a schede"
+  },
+  "m_b1c9cf7a56": {
+    "message": "Filtra per titolo o URL della scheda…"
+  },
+  "m_2eabfa845d": {
+    "message": "Crea un nuovo gruppo di schede"
+  },
+  "m_32dbab9f90": {
+    "message": "Inserisci il nome della categoria…"
+  },
+  "m_a7b8477445": {
+    "message": "Tab Matomen Kai"
+  },
+  "m_2e57cc29ef": {
+    "message": "Per tenerlo sempre visibile a sinistra mentre navighi, imposta la \"Posizione del riquadro laterale\" di Chrome su \"Sinistra\", quindi premi il pulsante qui sopra."
+  },
+  "m_22c2dc1788": {
+    "message": "Apri le impostazioni di Chrome"
+  },
+  "m_5d208d1c21": {
+    "message": "Tab Matomen"
+  },
+  "m_798f95db5d": {
+    "message": "Kai"
+  },
+  "m_fbc350db7c": {
+    "message": "＋ Spazio"
+  },
+  "m_041f4ac575": {
+    "message": "＋ Categoria"
+  },
+  "m_14095d67d9": {
+    "message": "Nessuno spazio ancora"
+  },
+  "m_b9e400d207": {
+    "message": "Esporta"
+  },
+  "m_9eb51e84ba": {
+    "message": "Importa"
+  },
+  "m_2a81a2c8cc": {
+    "message": "Backup automatico"
+  },
+  "m_17b500293e": {
+    "message": "Disattivato"
+  },
+  "m_ca7c80cb81": {
+    "message": "Ogni ora"
+  },
+  "m_d2fe3b7e6e": {
+    "message": "Ogni 6 ore"
+  },
+  "m_d63043a388": {
+    "message": "Ogni giorno"
+  },
+  "m_0ac73ac1aa": {
+    "message": "Salvataggio automatico al cambio"
+  },
+  "m_c73d62d960": {
+    "message": "Archiviato"
+  },
+  "m_0de3e408a2": {
+    "message": "Seleziona uno spazio"
+  },
+  "m_dd3cca7f34": {
+    "message": "Categoria"
+  },
+  "m_79338c0706": {
+    "message": "Rinomina"
+  },
+  "m_442ee7eb76": {
+    "message": "Ripristina"
+  },
+  "m_5839f00a0d": {
+    "message": "＋ Gruppo"
+  },
+  "m_ccd039eca2": {
+    "message": "Salva le schede attuali"
+  },
+  "m_aff97557b0": {
+    "message": "Nessuna scheda è ancora stata salvata in questo spazio"
+  },
+  "m_83d0565a6f": {
+    "message": "Apri tutte le schede che vuoi salvare (la scheda della dashboard può restare aperta)"
+  },
+  "m_fab476e40b": {
+    "message": "Le tue schede verranno elencate qui"
+  },
+  "m_2e408b9c01": {
+    "message": "Per iniziare"
+  },
+  "m_3a09b3b90d": {
+    "message": "Con quello spazio selezionato, apri tutte le schede che vuoi salvare"
+  },
+  "m_2884c23c94": {
+    "message": "Per il progetto successivo, crea un nuovo spazio e salva allo stesso modo"
+  },
+  "m_2061886749": {
+    "message": "Clicca sul nome di uno spazio nella barra laterale per cambiare schede"
+  },
+  "m_27131257d7": {
+    "message": "Trascina uno spazio sul nome di una categoria per spostarlo"
+  },
+  "m_7406792479": {
+    "message": "Crea una categoria"
+  },
+  "m_121ae791f1": {
+    "message": "Colore"
+  },
+  "m_614f2eaaff": {
+    "message": "Crea"
+  },
+  "m_1a2e920ba7": {
+    "message": "Nessuno"
+  },
+  "m_72776ab68f": {
+    "message": "Rosso"
+  },
+  "m_831166ef4b": {
+    "message": "Arancione"
+  },
+  "m_7720f8ea0a": {
+    "message": "Giallo"
+  },
+  "m_f22758bf8f": {
+    "message": "Verde"
+  },
+  "m_29e5ef1fa6": {
+    "message": "Verde acqua"
+  },
+  "m_845d1da87f": {
+    "message": "Blu"
+  },
+  "m_01caea5810": {
+    "message": "Viola"
+  },
+  "m_caaf2acdb2": {
+    "message": "Rosa"
+  },
+  "m_5378733ecf": {
+    "message": "Grigio"
+  },
+  "m_96aea44a0c": {
+    "message": "Blu"
+  },
+  "m_97397cc2e0": {
+    "message": "Rosso"
+  },
+  "m_5cd070ae56": {
+    "message": "Giallo"
+  },
+  "m_031e9b20e8": {
+    "message": "Verde"
+  },
+  "m_d96fea3531": {
+    "message": "Viola"
+  },
+  "m_55018581ba": {
+    "message": "Ciano"
+  },
+  "m_aabcb11957": {
+    "message": "Imposta immagine"
+  },
+  "m_ace3472c03": {
+    "message": "Rimuovi immagine"
+  },
+  "m_26dfc3aefe": {
+    "message": "Inserisci il nome della categoria."
+  },
+  "m_39a49bde63": {
+    "message": "Esiste già una categoria chiamata \"$1\"."
+  },
+  "m_629a6eefac": {
+    "message": "Inserisci il nome dello spazio."
+  },
+  "m_29c082f9b5": {
+    "message": "Esiste già uno spazio chiamato \"$1\"."
+  },
+  "m_09648e447c": {
+    "message": "Spazio non trovato."
+  },
+  "m_d40bd34d6f": {
+    "message": "Impossibile riordinare i gruppi."
+  },
+  "m_f95e7d8675": {
+    "message": "Impossibile riordinare le schede."
+  },
+  "m_3dfdf80d58": {
+    "message": "Aggiungi una sottocategoria"
+  },
+  "m_6ab1008863": {
+    "message": "Cambia il colore della categoria"
+  },
+  "m_29f18064c3": {
+    "message": "Rinomina categoria"
+  },
+  "m_b3dd5064ba": {
+    "message": "Elimina (gli spazi vengono spostati in Senza categoria)"
+  },
+  "m_1b31bc2d61": {
+    "message": "Cambia il colore dell'archivio"
+  },
+  "m_7234f5d4ed": {
+    "message": "Nessuno spazio archiviato"
+  },
+  "m_c922e46a12": {
+    "message": "$1 (archiviato / $2 schede)"
+  },
+  "m_78380175c5": {
+    "message": "Cambia colore del tema e icona"
+  },
+  "m_b8901ba999": {
+    "message": "$1 ($2 schede)"
+  },
+  "m_f76574e271": {
+    "message": "$1 | Dashboard"
+  },
+  "m_e17d188654": {
+    "message": "Crea prima uno spazio"
+  },
+  "m_3009a0e43b": {
+    "message": "Torna alla scheda attiva"
+  },
+  "m_1816d78893": {
+    "message": "Nessuna scheda corrisponde a \"$1\"."
+  },
+  "m_876cb3ca26": {
+    "message": "Rilascia qui per rimuovere dal gruppo"
+  },
+  "m_97edcdfb5e": {
+    "message": "Cambia il colore del gruppo"
+  },
+  "m_4ccd455653": {
+    "message": "Rinomina gruppo"
+  },
+  "m_73fd4c5de6": {
+    "message": "Elimina gruppo (le schede restano senza gruppo)"
+  },
+  "m_f32ff53372": {
+    "message": "Trascina per riordinare"
+  },
+  "m_dcea25f949": {
+    "message": "Questo gruppo non contiene schede. Trascina qui le schede per aggiungerle"
+  },
+  "m_d3811d54bb": {
+    "message": "$1\n$2\nClicca per aprire / trascina per spostare tra i gruppi"
+  },
+  "m_05120d62af": {
+    "message": "Seleziona: $1"
+  },
+  "m_f82fcc53cd": {
+    "message": "Clicca per selezionare, Maiusc+clic per selezionare un intervallo"
+  },
+  "m_4bed8152a4": {
+    "message": "Archivia questa scheda"
+  },
+  "m_cf45400a02": {
+    "message": "Archivia (nascondi dalla barra delle schede)"
+  },
+  "m_626612ea5e": {
+    "message": "Elimina questa scheda"
+  },
+  "m_88c92c22d4": {
+    "message": "Impossibile caricare i dati."
+  },
+  "m_cd6a909d39": {
+    "message": "Inserisci un nome per il nuovo spazio:"
+  },
+  "m_1cefe0ca30": {
+    "message": "Spazio \"$1\" creato."
+  },
+  "m_ed1eac911a": {
+    "message": "Impossibile creare lo spazio."
+  },
+  "m_f2b265026b": {
+    "message": "Inserisci un nuovo nome per lo spazio:"
+  },
+  "m_f2b748c88b": {
+    "message": "Spazio rinominato."
+  },
+  "m_c0e48c9028": {
+    "message": "Impossibile rinominare lo spazio."
+  },
+  "m_f4f1d62806": {
+    "message": "Eliminare lo spazio \"$1\"?\nVerranno eliminate anche tutte le informazioni sulle schede salvate."
+  },
+  "m_88dd8d49f3": {
+    "message": "Spazio \"$1\" eliminato."
+  },
+  "m_89289d2423": {
+    "message": "Impossibile eliminare lo spazio."
+  },
+  "m_7609ae5732": {
+    "message": "Archiviare lo spazio \"$1\"?\nI suoi dati vengono conservati e potranno essere ripristinati in seguito."
+  },
+  "m_ace51b281e": {
+    "message": "Spazio \"$1\" archiviato."
+  },
+  "m_b4f5deb27f": {
+    "message": "Impossibile archiviare."
+  },
+  "m_2551a4a971": {
+    "message": "Spazio \"$1\" ripristinato."
+  },
+  "m_e82b7d25f2": {
+    "message": "Impossibile ripristinare."
+  },
+  "m_e95765e8a5": {
+    "message": "Eliminare definitivamente lo spazio \"$1\"?\nL'operazione non può essere annullata."
+  },
+  "m_ca94b050f3": {
+    "message": "Spazio \"$1\" eliminato definitivamente."
+  },
+  "m_6e82f81122": {
+    "message": "Impossibile eliminare."
+  },
+  "m_507e16fe4e": {
+    "message": "Nessuno spazio selezionato. Seleziona o crea uno spazio."
+  },
+  "m_f351029a37": {
+    "message": "Non c'erano schede da salvare (le pagine chrome:// non possono essere salvate)."
+  },
+  "m_f272b678d1": {
+    "message": "Salvate $1 schede."
+  },
+  "m_f38b273b38": {
+    "message": "Impossibile salvare le schede."
+  },
+  "m_d48c02f761": {
+    "message": "Le schede attualmente aperte non sono salvate in nessuno spazio.\n"
+  },
+  "m_e92defc1cb": {
+    "message": "Se cambi, queste schede verranno chiuse senza essere salvate.\n\n"
+  },
+  "m_0fe3f5ec9d": {
+    "message": "Il \"Salvataggio automatico al cambio\" è disattivato.\n"
+  },
+  "m_2bde3706ab": {
+    "message": "Le schede attuali verranno chiuse senza essere salvate in \"$1\".\n\n"
+  },
+  "m_1ad7ff9d86": {
+    "message": "Poiché stai cambiando da uno spazio archiviato, le schede attuali verranno chiuse senza essere salvate.\n\n"
+  },
+  "m_2bc14b7cca": {
+    "message": "Le schede attualmente aperte verranno chiuse senza essere salvate.\n\n"
+  },
+  "m_be1598e030": {
+    "message": "Passare allo spazio \"$1\"?"
+  },
+  "m_618731a7e3": {
+    "message": "Nessuna destinazione in cui salvare"
+  },
+  "m_c837ab2cde": {
+    "message": "Cambio annullato perché il salvataggio non è riuscito."
+  },
+  "m_814259bda8": {
+    "message": "Cambio annullato perché non è stato possibile salvare la cronologia precedente al cambio."
+  },
+  "m_91c0550a7a": {
+    "message": "Passato allo spazio \"$1\"."
+  },
+  "m_7db912ef11": {
+    "message": "Impossibile cambiare spazio."
+  },
+  "m_b6afad9923": {
+    "message": "Impossibile eliminare la scheda."
+  },
+  "m_b623491f35": {
+    "message": "\"$1\" spostato in \"$2\"."
+  },
+  "m_2768c12413": {
+    "message": "Impossibile spostare la categoria."
+  },
+  "m_429435583a": {
+    "message": "Impossibile riordinare."
+  },
+  "m_c1460a0421": {
+    "message": "Impossibile riordinare le categorie."
+  },
+  "m_ddf26ce3ed": {
+    "message": "Esportazione completata: $1 spazi / $2 categorie → pwm-backup-$3.json"
+  },
+  "m_f693a2b833": {
+    "message": "Esportazione non riuscita."
+  },
+  "m_00de6b5511": {
+    "message": "Il formato del file non è valido."
+  },
+  "m_75e9dd8f76": {
+    "message": "Sconosciuto"
+  },
+  "m_efccfe8e49": {
+    "message": "Importare questo file di backup?\n\n  Spazi      : $1\n  Categorie  : $2\n  Creato     : $3\n\nTutti i dati attuali verranno sovrascritti. Continuare?"
+  },
+  "m_ce1d0548a0": {
+    "message": "Importazione completata: $1 spazi / $2 categorie"
+  },
+  "m_8df1c53c2e": {
+    "message": "Impossibile analizzare il JSON."
+  },
+  "m_682e44dcfb": {
+    "message": "Importazione non riuscita. $1"
+  },
+  "m_db96a9457a": {
+    "message": "Categoria \"$1\" creata."
+  },
+  "m_1dcd4efe17": {
+    "message": "Impossibile creare la categoria."
+  },
+  "m_5c1ea7fb37": {
+    "message": "Crea una sottocategoria di \"$1\""
+  },
+  "m_c961917824": {
+    "message": "Sottocategoria \"$1\" creata."
+  },
+  "m_569633928e": {
+    "message": "Impossibile creare la sottocategoria."
+  },
+  "m_025af6c3cb": {
+    "message": "Inserisci un nuovo nome per la categoria:"
+  },
+  "m_f3b1a68d36": {
+    "message": "Categoria rinominata."
+  },
+  "m_0f834403b5": {
+    "message": "Impossibile rinominare la categoria."
+  },
+  "m_904330b1c2": {
+    "message": "Eliminare la categoria \"$1\"?\nGli spazi al suo interno verranno spostati in \"Senza categoria\"."
+  },
+  "m_482af4adff": {
+    "message": "Categoria \"$1\" eliminata."
+  },
+  "m_152585e380": {
+    "message": "Impossibile eliminare la categoria."
+  },
+  "m_a8377443c2": {
+    "message": "0: Senza categoria\n"
+  },
+  "m_5d1ccf930a": {
+    "message": " ← attuale"
+  },
+  "m_248d1228f5": {
+    "message": "$1: ＋ Crea una nuova categoria"
+  },
+  "m_6f13eed82d": {
+    "message": "Scegli una categoria per \"$1\" (inserisci un numero):\n\n$2"
+  },
+  "m_db7a8db4a9": {
+    "message": "Inserisci un numero valido."
+  },
+  "m_62abac0149": {
+    "message": "Spostato in \"Senza categoria\"."
+  },
+  "m_bab01b0a0b": {
+    "message": "Spostato nella categoria \"$1\"."
+  },
+  "m_c35c527047": {
+    "message": "Crea una nuova categoria"
+  },
+  "m_936cd7f801": {
+    "message": "Categoria \"$1\" creata e spazio spostato al suo interno."
+  },
+  "m_1f9b554bc9": {
+    "message": "Impossibile cambiare la categoria."
+  },
+  "m_49dbd7dc23": {
+    "message": "Crea un gruppo"
+  },
+  "m_e94783b08f": {
+    "message": "Seleziona uno spazio."
+  },
+  "m_637efb62a0": {
+    "message": "Gruppo \"$1\" creato."
+  },
+  "m_e5c17530ad": {
+    "message": "Impossibile creare il gruppo."
+  },
+  "m_f648e8b5a9": {
+    "message": "Modifica gruppo"
+  },
+  "m_c6df24a6c9": {
+    "message": "Gruppo aggiornato."
+  },
+  "m_762bfecbd7": {
+    "message": "Impossibile aggiornare il gruppo."
+  },
+  "m_6ab993caa7": {
+    "message": "Eliminare il gruppo \"$1\"?\nLe sue schede resteranno senza gruppo."
+  },
+  "m_d06ff38c9c": {
+    "message": "Gruppo \"$1\" eliminato."
+  },
+  "m_ce516ef82e": {
+    "message": "Impossibile eliminare il gruppo."
+  },
+  "m_deccd3ca1c": {
+    "message": "Impossibile spostare la scheda."
+  },
+  "m_9ab79d75a0": {
+    "message": "Passa alla modalità chiara"
+  },
+  "m_2aff1d2b6a": {
+    "message": "Passa alla modalità scura"
+  },
+  "m_a49e39c667": {
+    "message": "Backup automatico disattivato."
+  },
+  "m_33ec021992": {
+    "message": "Backup automatico impostato su: $1."
+  },
+  "m_938dbc938d": {
+    "message": "Salvataggio automatico al cambio attivato."
+  },
+  "m_4f8b8d9b2e": {
+    "message": "Salvataggio automatico al cambio disattivato."
+  },
+  "m_b3afead7ff": {
+    "message": "Salva le schede attuali ($1S)"
+  },
+  "m_910348bd6b": {
+    "message": "Aggiungi una scheda"
+  },
+  "m_2f9e6135b4": {
+    "message": "Modifica preferiti"
+  },
+  "m_f4c69f0508": {
+    "message": "Seleziona"
+  },
+  "m_51a3053d75": {
+    "message": "Non ci sono pagine web da aggiungere."
+  },
+  "m_53f079d16f": {
+    "message": "Crea prima uno spazio."
+  },
+  "m_ae3ecc7ed2": {
+    "message": "Scheda da aggiungere"
+  },
+  "m_e63bc2f7aa": {
+    "message": "Spazio di destinazione"
+  },
+  "m_6d5cd75875": {
+    "message": "Aggiungi"
+  },
+  "m_85ccd53d0e": {
+    "message": "Impossibile leggere le schede"
+  },
+  "m_31d3cc3310": {
+    "message": "Questo URL è già salvato nella destinazione."
+  },
+  "m_ddb65d86ef": {
+    "message": "Aggiunta 1 scheda a \"$1\"."
+  },
+  "m_9fbca578c5": {
+    "message": "Impossibile aggiungere. Controlla la scheda e la destinazione."
+  },
+  "m_4004b8f1db": {
+    "message": "Impossibile leggere le schede."
+  },
+  "m_4648287945": {
+    "message": "Impossibile salvare i preferiti."
+  },
+  "m_03c994e60e": {
+    "message": "Potrai registrare i preferiti dopo aver creato uno spazio."
+  },
+  "m_a2c6ae915e": {
+    "message": "Impossibile caricare i preferiti."
+  },
+  "m_296dad2d72": {
+    "message": "Preferiti"
+  },
+  "m_c1b61fe80e": {
+    "message": "Spazi recenti"
+  },
+  "m_ec351de08b": {
+    "message": "Anteprima delle schede salvate"
+  },
+  "m_fa9f222dca": {
+    "message": "Impossibile aprire la scheda."
+  },
+  "m_c9ebf4c3f7": {
+    "message": "Nessuna scheda salvata"
+  },
+  "m_6329f21c41": {
+    "message": "Impostazioni"
+  },
+  "m_e438ffd26f": {
+    "message": "Impostazioni (importazione/esportazione, backup, salvataggio automatico)"
+  },
+  "m_56b6cd2c1a": {
+    "message": "Apri le impostazioni"
+  },
+  "m_00820b1780": {
+    "message": "Chiudi le impostazioni"
+  },
+  "m_bf10ec5ff4": {
+    "message": "Le impostazioni modificate vengono salvate subito. L'importazione sovrascrive i dati attualmente salvati."
+  },
+  "m_c32d6516f4": {
+    "message": "‹ Chiudi"
+  },
+  "m_74f34a1534": {
+    "message": "‹ Comprimi"
+  },
+  "m_0a57aeec9d": {
+    "message": "Chiudi la barra laterale"
+  },
+  "m_0b845075d6": {
+    "message": "Comprimi la barra laterale"
+  },
+  "m_2c2e1923ea": {
+    "message": "Chiudi (riapri con l'icona dell'estensione nella barra degli strumenti)"
+  },
+  "m_6264a3f76a": {
+    "message": "Impossibile chiudere. Riprova."
+  },
+  "m_91323fe947": {
+    "message": "Espandi la barra laterale"
+  },
+  "m_28e3b7ba50": {
+    "message": "Imposta la posizione del riquadro laterale di Chrome su \"Sinistra\". Non si apre sulla destra."
+  },
+  "m_2c14db7241": {
+    "message": "Barra laterale sinistra aperta. Resta visibile mentre navighi su altre pagine. Se la chiudi, riaprila con l'icona dell'estensione nella barra degli strumenti."
+  },
+  "m_07a63337a6": {
+    "message": "Per rilevare la posizione a sinistra è necessario Chrome 141 o versione successiva."
+  },
+  "m_c5ed08a7f9": {
+    "message": "La finestra si sta ancora preparando. Riprova."
+  },
+  "m_14ae9512a4": {
+    "message": "Impossibile aprire la barra laterale. Riprova."
+  },
+  "m_89da984b3c": {
+    "message": "Tab Matomen Kai — Barra sinistra"
+  },
+  "m_2e759e9300": {
+    "message": "Apri la dashboard"
+  },
+  "m_99f2a39628": {
+    "message": "Impossibile aprire la dashboard. Riprova."
+  },
+  "m_c7f325f13f": {
+    "message": "Annulla"
+  },
+  "m_41852537df": {
+    "message": "Impossibile annullare durante il cambio."
+  },
+  "m_88291348ad": {
+    "message": "Impossibile annullare perché lo spazio non è stato trovato."
+  },
+  "m_9c5b54b484": {
+    "message": "Annullamento interrotto perché sono state apportate modifiche in seguito."
+  },
+  "m_7e6b5ba160": {
+    "message": "Annullato."
+  },
+  "m_a89f5a6dd5": {
+    "message": "Impossibile annullare."
+  },
+  "m_64c1599a05": {
+    "message": "Eliminata 1 scheda."
+  },
+  "m_bd0d74ffbc": {
+    "message": "Archiviata 1 scheda."
+  },
+  "m_429855c857": {
+    "message": "Cerca progetti e spazi"
+  },
+  "m_2437c7c79c": {
+    "message": "Ripristina la disposizione precedente"
+  },
+  "m_d0b101161c": {
+    "message": "Nessuna cronologia precedente al cambio"
+  },
+  "m_c030b56060": {
+    "message": "Salvataggio non riuscito: salva di nuovo"
+  },
+  "m_0a14601b8e": {
+    "message": "Seleziona uno spazio in cui salvare"
+  },
+  "m_aa9e381e6f": {
+    "message": "Modifiche non salvate"
+  },
+  "m_74e30e9189": {
+    "message": "Salvato"
+  },
+  "m_3b69257cb0": {
+    "message": " · Archiviato"
+  },
+  "m_d34e19303a": {
+    "message": "Nessuno spazio corrispondente"
+  },
+  "m_3881f5d6ed": {
+    "message": "Impossibile determinare lo stato di salvataggio"
+  },
+  "m_97aa22defa": {
+    "message": "Ripristina la disposizione precedente delle schede. Anche la disposizione attuale viene conservata nella cronologia. I dati non inviati inseriti nelle pagine non possono essere ripristinati."
+  },
+  "m_9ea03093db": {
+    "message": "Disposizione precedente delle schede ripristinata."
+  },
+  "m_9930817c6f": {
+    "message": "Ripristino non riuscito. Controlla la cronologia e riprova."
+  },
+  "m_6644f06197": {
+    "message": "Salvataggio in corso…"
+  },
+  "appName": {
+    "message": "Tab Matomen Kai"
+  },
+  "appDescription": {
+    "message": "Crea uno spazio per ogni progetto e passa da un gruppo di schede all'altro nella stessa finestra di Chrome."
+  },
+  "actionTitle": {
+    "message": "Apri Tab Matomen Kai"
+  },
+  "onboardingClickSave": {
+    "message": "Clicca il pulsante \"Salva le schede attuali\" qui sopra"
+  },
+  "onboardingClickNewSpace": {
+    "message": "Clicca \"＋ Spazio\" a sinistra e inserisci il nome di un progetto"
+  },
+  "onboardingSaveExplained": {
+    "message": "Clicca \"Salva le schede attuali\" per salvare le schede"
+  },
+  "restoreHistoryTitle": {
+    "message": "Disposizione precedente ($1). Conservata fino alla chiusura del browser"
+  },
+  "m_9e9943aa18": {
+    "message": "L'accesso a Google non è stato concesso."
+  },
+  "m_1b162ecb08": {
+    "message": "Connettiti a Google Drive."
+  },
+  "m_38e08f6f72": {
+    "message": "Impossibile verificare l'autorizzazione a salvare i backup."
+  },
+  "m_063e83e937": {
+    "message": "La connessione è stata annullata."
+  },
+  "m_cbe501233e": {
+    "message": "Il reindirizzamento dell'autenticazione non corrisponde."
+  },
+  "m_195c611c2a": {
+    "message": "Impossibile verificare l'autenticazione. Connettiti di nuovo."
+  },
+  "m_210231350f": {
+    "message": "Inserisci un ID client OAuth."
+  },
+  "m_27298d6197": {
+    "message": "Connettiti a Google Drive. Se la connessione è scaduta, devi riconnetterti."
+  },
+  "m_76e8f9b19a": {
+    "message": "Un backup è in corso di salvataggio da un'altra finestra."
+  },
+  "m_c62a99397a": {
+    "message": "TabMatomenKai_"
+  },
+  "m_551f37d20f": {
+    "message": "Impossibile verificare il risultato. Controlla Google Drive prima di riprovare."
+  },
+  "m_6d2d7cf526": {
+    "message": "La connessione è scaduta. Riconnettiti a Google Drive."
+  },
+  "m_e5be1db2f7": {
+    "message": "Impossibile salvare ($1). Verifica che l'API di Google Drive sia abilitata, che l'autorizzazione sia stata concessa e che ci sia spazio di archiviazione disponibile."
+  },
+  "m_fd067b945c": {
+    "message": "Impossibile verificare la destinazione. Controlla Google Drive."
+  },
+  "m_e756be4d47": {
+    "message": "Esegui il backup su Google Drive"
+  },
+  "m_5ea424f93b": {
+    "message": "Salva i tuoi spazi, le categorie e le schede in Il mio Drive come file JSON con data e ora."
+  },
+  "m_6b5763bf71": {
+    "message": "Premi \"Connetti a Google Drive\" per aprire la schermata di autorizzazione di Google. Dopo aver consentito l'accesso, Chrome mantiene la connessione e la rinnova automaticamente alla scadenza."
+  },
+  "m_7b5914be86": {
+    "message": "Configurazione della prima connessione"
+  },
+  "m_e6720a68da": {
+    "message": "Abilita l'API di Drive in Google Cloud e crea un client OAuth (applicazione web). Registra il seguente URL come URI di reindirizzamento autorizzato."
+  },
+  "m_f5da3ecf70": {
+    "message": "URI di reindirizzamento"
+  },
+  "m_d80926d454": {
+    "message": "ID client OAuth"
+  },
+  "m_dc59c3eb54": {
+    "message": "Non serve alcun client secret. Se lo stato di pubblicazione è di test, aggiungi come utente di test l'account Google che usi."
+  },
+  "m_a8a3126796": {
+    "message": "Connetti a Google Drive"
+  },
+  "m_4c23d9e46d": {
+    "message": "Esegui il backup ora"
+  },
+  "m_4d138770f9": {
+    "message": "Disconnetti questo browser"
+  },
+  "m_c64f38ecfa": {
+    "message": "Apri l'ultimo backup"
+  },
+  "m_81d7efe6b9": {
+    "message": "Ultimo salvataggio: $1 "
+  },
+  "m_f11b0168dc": {
+    "message": "Operazione in corso…"
+  },
+  "m_e873b731b1": {
+    "message": "Connesso. Ora puoi salvare i backup."
+  },
+  "m_f714e3e49d": {
+    "message": "Backup salvato su Google Drive."
+  },
+  "m_307c18ccd9": {
+    "message": "Questo browser è stato disconnesso. I file salvati restano su Drive."
+  },
+  "m_23e782bfe8": {
+    "message": "Connesso"
+  },
+  "m_26a4745b1e": {
+    "message": "Impossibile caricare le impostazioni. Riapri questa schermata."
+  },
+  "languageHeading": {
+    "message": "Lingua",
+    "description": "settings section heading"
+  },
+  "languageAuto": {
+    "message": "Segui la lingua del browser ($1)",
+    "description": "language select option; $1 = detected language name"
+  },
+  "languageHelp": {
+    "message": "Cambiando la lingua di visualizzazione, la schermata viene ricaricata.",
+    "description": "settings help text"
+  },
+  "reviewTitle": {
+    "message": "Tab Matomen Kai ti è utile?",
+    "description": "review prompt title"
+  },
+  "reviewBody": {
+    "message": "In tal caso, una recensione sul Chrome Web Store significherebbe molto e aiuta lo sviluppo.",
+    "description": "review prompt body"
+  },
+  "reviewWrite": {
+    "message": "Scrivi una recensione",
+    "description": "review prompt button"
+  },
+  "reviewLater": {
+    "message": "Più tardi",
+    "description": "review prompt button"
+  },
+  "reviewNever": {
+    "message": "Non mostrare più",
+    "description": "review prompt button"
+  },
+  "reviewThanks": {
+    "message": "Grazie!",
+    "description": "review prompt after clicking write"
+  }
+}

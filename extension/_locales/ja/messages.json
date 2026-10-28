@@ -1,0 +1,1626 @@
+{
+  "m_2ce01f81ad": {
+    "message": "ローカルAI連携",
+    "description": "ai-connection.js:6"
+  },
+  "m_a8ce0201c4": {
+    "message": "接続中はスペースのタイトル・URL・グループ情報をPC内の連携サーバーに共有します。ページ本文は共有しません。",
+    "description": "ai-connection.js:7"
+  },
+  "m_a9356d61c7": {
+    "message": "接続キー",
+    "description": "ai-connection.js:8"
+  },
+  "m_9dd838b6ab": {
+    "message": "連携サーバーの .local/token を貼り付け",
+    "description": "ai-connection.js:9"
+  },
+  "m_5119847c00": {
+    "message": "接続",
+    "description": "ai-connection.js:10"
+  },
+  "m_092575584a": {
+    "message": "切断",
+    "description": "ai-connection.js:10"
+  },
+  "m_2e845bddec": {
+    "message": "整理案を見る",
+    "description": "ai-connection.js:10"
+  },
+  "m_463f7d5d30": {
+    "message": "前の整理状態に戻す",
+    "description": "ai-connection.js:10"
+  },
+  "m_7ea46c0315": {
+    "message": "未接続",
+    "description": "ai-connection.js:11"
+  },
+  "m_fb71a4e085": {
+    "message": "接続エラー",
+    "description": "ai-connection.js:14"
+  },
+  "m_9606bdda03": {
+    "message": "整理案を見る（$1件）",
+    "description": "ai-connection.js:24"
+  },
+  "m_b5e969dec9": {
+    "message": "接続中 · 整理案 $1件",
+    "description": "ai-connection.js:24"
+  },
+  "m_cda8d46d3f": {
+    "message": "接続できません：",
+    "description": "ai-connection.js:25"
+  },
+  "m_c4e07534d2": {
+    "message": "64文字の接続キーを貼り付けてください",
+    "description": "ai-connection.js:29"
+  },
+  "m_0b9939e1f9": {
+    "message": "切断しました",
+    "description": "ai-connection.js:33, ai-connection.js:75"
+  },
+  "m_a9b2455ca6": {
+    "message": "AIの整理案",
+    "description": "ai-connection.js:38"
+  },
+  "m_1c7d43cb8f": {
+    "message": "選んだ変更を適用",
+    "description": "ai-connection.js:40"
+  },
+  "m_16661f1537": {
+    "message": "この案を却下",
+    "description": "ai-connection.js:40"
+  },
+  "m_3da5c18551": {
+    "message": "閉じる",
+    "description": "ai-connection.js:40, productivity.js:11, settings-dialog.js:10, undo.js:12"
+  },
+  "m_2fbbb892d1": {
+    "message": "保存内容が変わりました。この案は適用できません。AIへ再提案を依頼してください。",
+    "description": "ai-connection.js:43"
+  },
+  "m_33dc0c7eef": {
+    "message": "保存内容が変わりました。再提案してください。",
+    "description": "ai-connection.js:53"
+  },
+  "m_4e265c1689": {
+    "message": "$1件を適用しました。開いているタブは変更していません。",
+    "description": "ai-connection.js:57"
+  },
+  "m_62157d9463": {
+    "message": "戻せる整理履歴がありません",
+    "description": "ai-connection.js:66"
+  },
+  "m_33b0b3d01c": {
+    "message": "適用後に変更があるため戻せません",
+    "description": "ai-connection.js:67"
+  },
+  "m_b1c9392214": {
+    "message": "整理前の状態に戻しました",
+    "description": "ai-connection.js:68"
+  },
+  "m_6aa1453553": {
+    "message": "変更は1〜50件にしてください",
+    "description": "ai-proposals.js:20"
+  },
+  "m_b96d769eac": {
+    "message": "対象スペースがありません",
+    "description": "ai-proposals.js:22"
+  },
+  "m_2b707f3b85": {
+    "message": "変更形式が不正です",
+    "description": "ai-proposals.js:24"
+  },
+  "m_f7c288ba66": {
+    "message": "名前は1〜120文字です",
+    "description": "ai-proposals.js:27"
+  },
+  "m_bd93ad1a6f": {
+    "message": "名前変更：$1 → $2",
+    "description": "ai-proposals.js:28"
+  },
+  "m_ebeb4c2304": {
+    "message": "移動先カテゴリーがありません",
+    "description": "ai-proposals.js:30"
+  },
+  "m_f4d781035f": {
+    "message": "未分類",
+    "description": "ai-proposals.js:31, dashboard.js:1307, dashboard.js:1621, dashboard.js:2524"
+  },
+  "m_42e0c95815": {
+    "message": "カテゴリー移動：$1 → $2",
+    "description": "ai-proposals.js:31"
+  },
+  "m_55a535bafa": {
+    "message": "追加できるURLはHTTP/HTTPSです",
+    "description": "ai-proposals.js:33"
+  },
+  "m_43c516fa6a": {
+    "message": "同じURLが保存されています",
+    "description": "ai-proposals.js:34"
+  },
+  "m_39b67bcaf4": {
+    "message": "タイトル形式が不正です",
+    "description": "ai-proposals.js:35"
+  },
+  "m_03f6623a18": {
+    "message": "タブ追加：$1 ← $2",
+    "description": "ai-proposals.js:36"
+  },
+  "m_6a6f94972c": {
+    "message": "タブ位置が不正です",
+    "description": "ai-proposals.js:38"
+  },
+  "m_579a11d917": {
+    "message": "別のスペースを指定してください",
+    "description": "ai-proposals.js:39"
+  },
+  "m_46ba84410f": {
+    "message": "対象タブのURLが一致しません",
+    "description": "ai-proposals.js:40"
+  },
+  "m_8924020b2a": {
+    "message": "移動先に同じURLがあります",
+    "description": "ai-proposals.js:41"
+  },
+  "m_11b801d8a2": {
+    "message": "タブ移動：$1（$2 → $3）",
+    "description": "ai-proposals.js:42"
+  },
+  "m_42adb155e1": {
+    "message": "未対応の操作です",
+    "description": "ai-proposals.js:43"
+  },
+  "m_4091966e8a": {
+    "message": "タブまとめん改に保存",
+    "description": "background.js:256"
+  },
+  "m_6079395160": {
+    "message": "スペースがありません（ダッシュボードで作成）",
+    "description": "background.js:258"
+  },
+  "m_2167649eea": {
+    "message": "タブまとめん改 を開く",
+    "description": "background.js:304"
+  },
+  "m_ecde74ef1b": {
+    "message": "「$1」に保存しました（$2枚）",
+    "description": "background.js:319"
+  },
+  "m_6f91f13005": {
+    "message": "「$1」に保存済みです",
+    "description": "background.js:320"
+  },
+  "m_a9276d6dfe": {
+    "message": "保存できませんでした。ダッシュボードでスペースを確認してください",
+    "description": "background.js:321"
+  },
+  "m_56415d676e": {
+    "message": "バックアップの内容が不正です。現在のデータは変更していません。",
+    "description": "backup-validation.js:4"
+  },
+  "m_a18e4bec39": {
+    "message": "タブの一括操作",
+    "description": "bulk-actions.js:12"
+  },
+  "m_f6365e7574": {
+    "message": "全選択",
+    "description": "bulk-actions.js:13"
+  },
+  "m_e135253c38": {
+    "message": "0件選択",
+    "description": "bulk-actions.js:13, bulk-actions.js:39"
+  },
+  "m_9a2cef5d5b": {
+    "message": "選択したタブをこのウィンドウで開く",
+    "description": "bulk-actions.js:13"
+  },
+  "m_119daf93ee": {
+    "message": "開く",
+    "description": "bulk-actions.js:13, bulk-actions.js:123"
+  },
+  "m_2cb583698f": {
+    "message": "移動先のスペース",
+    "description": "bulk-actions.js:13"
+  },
+  "m_9a97fc3ae6": {
+    "message": "移動",
+    "description": "bulk-actions.js:13, bulk-actions.js:134"
+  },
+  "m_71a12fb43e": {
+    "message": "入れるグループ",
+    "description": "bulk-actions.js:13"
+  },
+  "m_e70ecafd50": {
+    "message": "グループへ",
+    "description": "bulk-actions.js:13"
+  },
+  "m_ae75ae1d2a": {
+    "message": "コピーの形式",
+    "description": "bulk-actions.js:13"
+  },
+  "m_ce05fd6a61": {
+    "message": "タイトルとURL",
+    "description": "bulk-actions.js:13, bulk-actions.js:188"
+  },
+  "m_c257bec714": {
+    "message": "URLのみ",
+    "description": "bulk-actions.js:13, bulk-actions.js:188"
+  },
+  "m_295cc5d596": {
+    "message": "選択したタブ（未選択ならスペース全体）の一覧をコピー",
+    "description": "bulk-actions.js:13"
+  },
+  "m_e94c210766": {
+    "message": "コピー",
+    "description": "bulk-actions.js:13"
+  },
+  "m_a2307d9555": {
+    "message": "選択したタブをアーカイブ",
+    "description": "bulk-actions.js:13"
+  },
+  "m_c686c1a9dd": {
+    "message": "アーカイブ",
+    "description": "dashboard.html:<button>, sidepanel.html:<button>"
+  },
+  "m_2fe1822ad4": {
+    "message": "選択したタブを削除",
+    "description": "bulk-actions.js:13"
+  },
+  "m_5cbdf1fd70": {
+    "message": "削除",
+    "description": "dashboard.html:<button>, sidepanel.html:<button>"
+  },
+  "m_f0dc9f43d4": {
+    "message": "選択を解除（Esc）",
+    "description": "bulk-actions.js:13"
+  },
+  "m_ec7ae06b09": {
+    "message": "解除",
+    "description": "bulk-actions.js:13"
+  },
+  "m_fca5a8dc9f": {
+    "message": "$1件選択",
+    "description": "bulk-actions.js:39"
+  },
+  "m_91f77f62c2": {
+    "message": "移動先…",
+    "description": "bulk-actions.js:54"
+  },
+  "m_cda05ed8b5": {
+    "message": "グループ…",
+    "description": "bulk-actions.js:58"
+  },
+  "m_7a137f933a": {
+    "message": "グループなし",
+    "description": "bulk-actions.js:58"
+  },
+  "m_bcbebef3cf": {
+    "message": "名称未設定グループ",
+    "description": "bulk-actions.js:59, bulk-actions.js:168, dashboard.js:1879"
+  },
+  "m_4710908c81": {
+    "message": "新しいグループ…",
+    "description": "bulk-actions.js:60"
+  },
+  "m_e4de78fe6b": {
+    "message": "切り替え中は操作できません。",
+    "description": "bulk-actions.js:107"
+  },
+  "m_37bb515e00": {
+    "message": "スペースが切り替わったため中止しました。選択し直してください。",
+    "description": "bulk-actions.js:112"
+  },
+  "m_5e3dfdc724": {
+    "message": "選択したタブが見つかりません。",
+    "description": "bulk-actions.js:114"
+  },
+  "m_fba383cf43": {
+    "message": "$1に失敗しました。",
+    "description": "bulk-actions.js:120"
+  },
+  "m_481253a7af": {
+    "message": "$1枚のタブを開きました。",
+    "description": "bulk-actions.js:129"
+  },
+  "m_8394e407bf": {
+    "message": "移動先のスペースを選んでください。",
+    "description": "bulk-actions.js:133"
+  },
+  "m_72a6bd4fe9": {
+    "message": "移動先のスペースがありません。",
+    "description": "bulk-actions.js:136"
+  },
+  "m_33ad04a535": {
+    "message": "（同じURLの$1枚は移動先に保存済みのため除外）",
+    "description": "bulk-actions.js:147"
+  },
+  "m_7c9bfe16e3": {
+    "message": "「$1」へ$2枚移動しました。$3",
+    "description": "bulk-actions.js:147"
+  },
+  "m_c19f04094f": {
+    "message": "入れるグループを選んでください。",
+    "description": "bulk-actions.js:152"
+  },
+  "m_42f0321630": {
+    "message": "新しいグループ",
+    "description": "bulk-actions.js:156, dashboard.js:719"
+  },
+  "m_80eb0a488d": {
+    "message": "グループ移動",
+    "description": "bulk-actions.js:162"
+  },
+  "m_961c24d640": {
+    "message": "グループが見つかりません。",
+    "description": "bulk-actions.js:164"
+  },
+  "m_d42ecb5149": {
+    "message": "$1枚を「$2」に入れました。",
+    "description": "bulk-actions.js:168"
+  },
+  "m_2a8a7849b4": {
+    "message": "$1枚をグループから外しました。",
+    "description": "bulk-actions.js:168"
+  },
+  "m_d97fff8023": {
+    "message": "コピーするタブがありません。",
+    "description": "bulk-actions.js:187"
+  },
+  "m_fd05c05821": {
+    "message": "$1件を$2でコピーしました。",
+    "description": "bulk-actions.js:189"
+  },
+  "m_b4a1f2d50c": {
+    "message": "クリップボードにコピーできませんでした。",
+    "description": "bulk-actions.js:190"
+  },
+  "m_63b3f3287e": {
+    "message": "コピーに失敗しました。",
+    "description": "bulk-actions.js:191"
+  },
+  "m_b48b8f8f20": {
+    "message": "$1枚をアーカイブしました。",
+    "description": "bulk-actions.js:201, bulk-actions.js:202"
+  },
+  "m_cba9bbaa15": {
+    "message": "選択した$1枚のタブを削除します。元に戻せません。よろしいですか？",
+    "description": "bulk-actions.js:206"
+  },
+  "m_fae13af1e7": {
+    "message": "$1枚のタブを削除しました。",
+    "description": "bulk-actions.js:212, bulk-actions.js:213"
+  },
+  "m_53884810b9": {
+    "message": "スペースの操作",
+    "description": "compact-navigation.js:5"
+  },
+  "m_269b0f92e4": {
+    "message": "キャンセル",
+    "description": "dashboard.html:<button>, sidepanel.html:<button>"
+  },
+  "m_a530f556a0": {
+    "message": "スペースを切り替える",
+    "description": "dashboard-dialogs.js:52"
+  },
+  "m_b538e73b7e": {
+    "message": "保存して切り替える",
+    "description": "dashboard-dialogs.js:56"
+  },
+  "m_f7c3004a90": {
+    "message": "保存せず切り替える",
+    "description": "dashboard-dialogs.js:56"
+  },
+  "m_348b8cbfe6": {
+    "message": "保存先のスペースがないため、この画面では保存できません。",
+    "description": "dashboard-dialogs.js:60"
+  },
+  "m_6c891ec97d": {
+    "message": "左バーをサイドパネルで開く（Chromeの配置設定は左）",
+    "description": "dashboard.html:title"
+  },
+  "m_10432c2864": {
+    "message": "左バーをサイドパネルで開く",
+    "description": "dashboard.html:aria-label, dashboard.html:<span>"
+  },
+  "m_72397565b9": {
+    "message": "ダークモード切り替え",
+    "description": "dashboard.html:title, sidepanel.html:title"
+  },
+  "m_48e334a386": {
+    "message": "カテゴリーを追加",
+    "description": "dashboard.html:title, sidepanel.html:title"
+  },
+  "m_53e842102c": {
+    "message": "全データを JSON ファイルに書き出す",
+    "description": "dashboard.html:title, sidepanel.html:title"
+  },
+  "m_e44031674a": {
+    "message": "JSON ファイルからデータを読み込む",
+    "description": "dashboard.html:title, sidepanel.html:title"
+  },
+  "m_da76e386a1": {
+    "message": "自動バックアップの間隔",
+    "description": "dashboard.html:title, sidepanel.html:title"
+  },
+  "m_ce06239034": {
+    "message": "スペース切り替え時に現在のタブを自動保存する",
+    "description": "dashboard.html:title, sidepanel.html:title"
+  },
+  "m_54bcd667a4": {
+    "message": "カテゴリーを変更",
+    "description": "dashboard.html:title, sidepanel.html:title"
+  },
+  "m_80022cdc79": {
+    "message": "スペース名を変更",
+    "description": "dashboard.html:title, sidepanel.html:title"
+  },
+  "m_a9f0f1eba3": {
+    "message": "スペースをアーカイブ",
+    "description": "dashboard.html:title, sidepanel.html:title"
+  },
+  "m_65902d6ec2": {
+    "message": "スペースを削除",
+    "description": "dashboard.html:title, sidepanel.html:title"
+  },
+  "m_a54c2c00ae": {
+    "message": "アーカイブから復元",
+    "description": "dashboard.html:title, sidepanel.html:title"
+  },
+  "m_da37848919": {
+    "message": "完全削除",
+    "description": "dashboard.html:title, dashboard.html:<button>, sidepanel.html:title, sidepanel.html:<button>"
+  },
+  "m_6293e5e0a9": {
+    "message": "表示切り替え",
+    "description": "dashboard.html:title, sidepanel.html:title"
+  },
+  "m_b4cf24ebe1": {
+    "message": "リスト表示",
+    "description": "dashboard.html:title, sidepanel.html:title"
+  },
+  "m_1e578fc996": {
+    "message": "カード表示",
+    "description": "dashboard.html:title, sidepanel.html:title"
+  },
+  "m_b1c9cf7a56": {
+    "message": "タブのタイトルや URL で絞り込む…",
+    "description": "dashboard.html:placeholder, sidepanel.html:placeholder"
+  },
+  "m_2eabfa845d": {
+    "message": "新しいタブグループを作成",
+    "description": "dashboard.html:title, sidepanel.html:title"
+  },
+  "m_32dbab9f90": {
+    "message": "カテゴリー名を入力…",
+    "description": "dashboard.html:placeholder, sidepanel.html:placeholder"
+  },
+  "m_a7b8477445": {
+    "message": "タブまとめん改",
+    "description": "dashboard.html:<title>"
+  },
+  "m_2e57cc29ef": {
+    "message": "ページ閲覧中も左に出しっぱなしにするには、Chromeの「サイドパネルの位置」を「左」にしてから上のボタンを押してください。",
+    "description": "dashboard.html:<p>"
+  },
+  "m_22c2dc1788": {
+    "message": "Chromeの設定を開く",
+    "description": "dashboard.html:<button>"
+  },
+  "m_5d208d1c21": {
+    "message": "タブまとめん",
+    "description": "dashboard.html:<span>, sidepanel.html:<span>"
+  },
+  "m_798f95db5d": {
+    "message": "改",
+    "description": "dashboard.html:<span>, sidepanel.html:<span>"
+  },
+  "m_fbc350db7c": {
+    "message": "＋ スペース",
+    "description": "dashboard.html:<button>, sidepanel.html:<button>"
+  },
+  "m_041f4ac575": {
+    "message": "＋ カテゴリー",
+    "description": "dashboard.html:<button>, sidepanel.html:<button>"
+  },
+  "m_14095d67d9": {
+    "message": "スペースがまだありません",
+    "description": "dashboard.html:<p>, sidepanel.html:<p>"
+  },
+  "m_b9e400d207": {
+    "message": "エクスポート",
+    "description": "dashboard.html:<button>, sidepanel.html:<button>"
+  },
+  "m_9eb51e84ba": {
+    "message": "インポート",
+    "description": "dashboard.html:<button>, sidepanel.html:<button>"
+  },
+  "m_2a81a2c8cc": {
+    "message": "自動バックアップ",
+    "description": "dashboard.html:<label>, sidepanel.html:<label>"
+  },
+  "m_17b500293e": {
+    "message": "オフ",
+    "description": "dashboard.html:<option>, sidepanel.html:<option>"
+  },
+  "m_ca7c80cb81": {
+    "message": "毎時",
+    "description": "dashboard.html:<option>, sidepanel.html:<option>"
+  },
+  "m_d2fe3b7e6e": {
+    "message": "6時間ごと",
+    "description": "dashboard.html:<option>, sidepanel.html:<option>"
+  },
+  "m_d63043a388": {
+    "message": "毎日",
+    "description": "dashboard.html:<option>, sidepanel.html:<option>"
+  },
+  "m_0ac73ac1aa": {
+    "message": "切り替え時に自動保存",
+    "description": "dashboard.html:<label>, sidepanel.html:<label>"
+  },
+  "m_c73d62d960": {
+    "message": "アーカイブ済み",
+    "description": "dashboard.html:<span>, sidepanel.html:<span>"
+  },
+  "m_0de3e408a2": {
+    "message": "スペースを選択してください",
+    "description": "dashboard.html:<h2>, sidepanel.html:<h2>"
+  },
+  "m_dd3cca7f34": {
+    "message": "カテゴリー",
+    "description": "dashboard.html:<button>, sidepanel.html:<button>"
+  },
+  "m_79338c0706": {
+    "message": "名前変更",
+    "description": "dashboard.html:<button>, sidepanel.html:<button>"
+  },
+  "m_442ee7eb76": {
+    "message": "復元",
+    "description": "dashboard.html:<button>, sidepanel.html:<button>"
+  },
+  "m_5839f00a0d": {
+    "message": "＋ グループ",
+    "description": "dashboard.html:<button>, sidepanel.html:<button>"
+  },
+  "m_ccd039eca2": {
+    "message": "現在のタブを保存",
+    "description": "dashboard.html:<button>, sidepanel.html:<button>"
+  },
+  "m_aff97557b0": {
+    "message": "このスペースにはまだタブが保存されていません",
+    "description": "dashboard.html:<p>, sidepanel.html:<p>"
+  },
+  "m_83d0565a6f": {
+    "message": "保存したいタブをすべて開く（このダッシュボードタブはそのままで OK）",
+    "description": "dashboard.html:<li>, sidepanel.html:<li>"
+  },
+  "m_fab476e40b": {
+    "message": "タブ一覧がここに表示されます",
+    "description": "dashboard.html:<li>, sidepanel.html:<li>"
+  },
+  "m_2e408b9c01": {
+    "message": "はじめかた",
+    "description": "dashboard.html:<p>, sidepanel.html:<p>"
+  },
+  "m_3a09b3b90d": {
+    "message": "そのスペースが選ばれた状態で、保存したいタブをすべて開く",
+    "description": "dashboard.html:<li>, sidepanel.html:<li>"
+  },
+  "m_2884c23c94": {
+    "message": "次の案件は新しいスペースを作って同じ手順で保存する",
+    "description": "dashboard.html:<li>, sidepanel.html:<li>"
+  },
+  "m_2061886749": {
+    "message": "サイドバーのスペース名をクリックするとタブが切り替わる",
+    "description": "dashboard.html:<li>, sidepanel.html:<li>"
+  },
+  "m_27131257d7": {
+    "message": "スペースをドラッグしてカテゴリー名の上にドロップすると移動できる",
+    "description": "dashboard.html:<li>, sidepanel.html:<li>"
+  },
+  "m_7406792479": {
+    "message": "カテゴリーを作成",
+    "description": "dashboard.html:<h3>, sidepanel.html:<h3>"
+  },
+  "m_121ae791f1": {
+    "message": "カラー",
+    "description": "dashboard.html:<div>, sidepanel.html:<div>"
+  },
+  "m_614f2eaaff": {
+    "message": "作成",
+    "description": "dashboard.html:<button>, sidepanel.html:<button>"
+  },
+  "m_1a2e920ba7": {
+    "message": "なし",
+    "description": "dashboard.js:26, dashboard.js:2943"
+  },
+  "m_72776ab68f": {
+    "message": "赤",
+    "description": "dashboard.js:27"
+  },
+  "m_831166ef4b": {
+    "message": "オレンジ",
+    "description": "dashboard.js:28, dashboard.js:60"
+  },
+  "m_7720f8ea0a": {
+    "message": "黄",
+    "description": "dashboard.js:29"
+  },
+  "m_f22758bf8f": {
+    "message": "緑",
+    "description": "dashboard.js:30"
+  },
+  "m_29e5ef1fa6": {
+    "message": "青緑",
+    "description": "dashboard.js:31"
+  },
+  "m_845d1da87f": {
+    "message": "青",
+    "description": "dashboard.js:32"
+  },
+  "m_01caea5810": {
+    "message": "紫",
+    "description": "dashboard.js:33"
+  },
+  "m_caaf2acdb2": {
+    "message": "ピンク",
+    "description": "dashboard.js:34, dashboard.js:57"
+  },
+  "m_5378733ecf": {
+    "message": "グレー",
+    "description": "dashboard.js:35, dashboard.js:52"
+  },
+  "m_96aea44a0c": {
+    "message": "ブルー",
+    "description": "dashboard.js:53"
+  },
+  "m_97397cc2e0": {
+    "message": "レッド",
+    "description": "dashboard.js:54"
+  },
+  "m_5cd070ae56": {
+    "message": "イエロー",
+    "description": "dashboard.js:55"
+  },
+  "m_031e9b20e8": {
+    "message": "グリーン",
+    "description": "dashboard.js:56"
+  },
+  "m_d96fea3531": {
+    "message": "パープル",
+    "description": "dashboard.js:58"
+  },
+  "m_55018581ba": {
+    "message": "シアン",
+    "description": "dashboard.js:59"
+  },
+  "m_aabcb11957": {
+    "message": "画像を設定",
+    "description": "dashboard.js:159"
+  },
+  "m_ace3472c03": {
+    "message": "画像を解除",
+    "description": "dashboard.js:185"
+  },
+  "m_26dfc3aefe": {
+    "message": "カテゴリー名を入力してください。",
+    "description": "dashboard.js:367, dashboard.js:380"
+  },
+  "m_39a49bde63": {
+    "message": "「$1」というカテゴリーが既に存在します。",
+    "description": "dashboard.js:370, dashboard.js:383"
+  },
+  "m_629a6eefac": {
+    "message": "スペース名を入力してください。",
+    "description": "dashboard.js:503, dashboard.js:518"
+  },
+  "m_29c082f9b5": {
+    "message": "「$1」という名前のスペースが既に存在します。",
+    "description": "dashboard.js:506, dashboard.js:521"
+  },
+  "m_09648e447c": {
+    "message": "スペースが見つかりません。",
+    "description": "dashboard.js:524, dashboard.js:534, dashboard.js:2326"
+  },
+  "m_d40bd34d6f": {
+    "message": "グループの並び替えに失敗しました。",
+    "description": "dashboard.js:796"
+  },
+  "m_f95e7d8675": {
+    "message": "タブの並び替えに失敗しました。",
+    "description": "dashboard.js:830"
+  },
+  "m_3dfdf80d58": {
+    "message": "サブカテゴリーを追加",
+    "description": "dashboard.js:1164"
+  },
+  "m_6ab1008863": {
+    "message": "カテゴリーの色を変更",
+    "description": "dashboard.js:1173"
+  },
+  "m_29f18064c3": {
+    "message": "カテゴリー名を変更",
+    "description": "dashboard.js:1195"
+  },
+  "m_b3dd5064ba": {
+    "message": "削除（スペースは未分類へ）",
+    "description": "dashboard.js:1202"
+  },
+  "m_1b31bc2d61": {
+    "message": "アーカイブの色を変更",
+    "description": "dashboard.js:1369"
+  },
+  "m_7234f5d4ed": {
+    "message": "アーカイブはありません",
+    "description": "dashboard.js:1398"
+  },
+  "m_c922e46a12": {
+    "message": "$1（アーカイブ済み / $2 タブ）",
+    "description": "dashboard.js:1416"
+  },
+  "m_78380175c5": {
+    "message": "テーマカラー・アイコンを変更",
+    "description": "dashboard.js:1421, dashboard.js:1487"
+  },
+  "m_b8901ba999": {
+    "message": "$1（$2 タブ）",
+    "description": "dashboard.js:1465, readability.js:12"
+  },
+  "m_f76574e271": {
+    "message": "$1 | ダッシュボード",
+    "description": "dashboard.js:1574"
+  },
+  "m_e17d188654": {
+    "message": "まずスペースを作成してください",
+    "description": "dashboard.js:1591"
+  },
+  "m_3009a0e43b": {
+    "message": "アクティブなタブに戻す",
+    "description": "dashboard.js:1716"
+  },
+  "m_1816d78893": {
+    "message": "「$1」に一致するタブが見つかりませんでした。",
+    "description": "dashboard.js:1780"
+  },
+  "m_876cb3ca26": {
+    "message": "ここにドロップするとグループを外せます",
+    "description": "dashboard.js:1833"
+  },
+  "m_97edcdfb5e": {
+    "message": "グループの色を変更",
+    "description": "dashboard.js:1893, dashboard.js:1897"
+  },
+  "m_4ccd455653": {
+    "message": "グループ名を変更",
+    "description": "dashboard.js:1910"
+  },
+  "m_73fd4c5de6": {
+    "message": "グループを削除（タブはグループなしに移動）",
+    "description": "dashboard.js:1921"
+  },
+  "m_f32ff53372": {
+    "message": "ドラッグして並び替え",
+    "description": "dashboard.js:1936"
+  },
+  "m_dcea25f949": {
+    "message": "このグループにはタブがありません。タブをドラッグして追加できます",
+    "description": "dashboard.js:1968"
+  },
+  "m_d3811d54bb": {
+    "message": "$1\n$2\nクリックで開く / ドラッグでグループ移動",
+    "description": "dashboard.js:2058"
+  },
+  "m_05120d62af": {
+    "message": "選択: $1",
+    "description": "dashboard.js:2091"
+  },
+  "m_f82fcc53cd": {
+    "message": "クリックで選択、Shift+クリックで範囲選択",
+    "description": "dashboard.js:2092"
+  },
+  "m_4bed8152a4": {
+    "message": "このタブをアーカイブ",
+    "description": "dashboard.js:2123"
+  },
+  "m_cf45400a02": {
+    "message": "アーカイブ（タブバーに表示しない）",
+    "description": "dashboard.js:2124"
+  },
+  "m_626612ea5e": {
+    "message": "このタブを削除",
+    "description": "dashboard.js:2140, dashboard.js:2141"
+  },
+  "m_88c92c22d4": {
+    "message": "データの読み込みに失敗しました。",
+    "description": "dashboard.js:2209"
+  },
+  "m_cd6a909d39": {
+    "message": "新しいスペースの名前を入力してください:",
+    "description": "dashboard.js:2219"
+  },
+  "m_1cefe0ca30": {
+    "message": "スペース「$1」を作成しました。",
+    "description": "dashboard.js:2224"
+  },
+  "m_ed1eac911a": {
+    "message": "スペースの作成に失敗しました。",
+    "description": "dashboard.js:2227"
+  },
+  "m_f2b265026b": {
+    "message": "新しいスペース名を入力してください:",
+    "description": "dashboard.js:2236"
+  },
+  "m_f2b748c88b": {
+    "message": "スペース名を変更しました。",
+    "description": "dashboard.js:2240"
+  },
+  "m_c0e48c9028": {
+    "message": "スペース名の変更に失敗しました。",
+    "description": "dashboard.js:2243"
+  },
+  "m_f4f1d62806": {
+    "message": "スペース「$1」を削除しますか？\n保存されているタブ情報もすべて削除されます。",
+    "description": "dashboard.js:2252"
+  },
+  "m_88dd8d49f3": {
+    "message": "スペース「$1」を削除しました。",
+    "description": "dashboard.js:2256"
+  },
+  "m_89289d2423": {
+    "message": "スペースの削除に失敗しました。",
+    "description": "dashboard.js:2259"
+  },
+  "m_7609ae5732": {
+    "message": "スペース「$1」をアーカイブしますか？\nアーカイブ後もデータは保持され、復元できます。",
+    "description": "dashboard.js:2268"
+  },
+  "m_ace51b281e": {
+    "message": "スペース「$1」をアーカイブしました。",
+    "description": "dashboard.js:2271"
+  },
+  "m_b4f5deb27f": {
+    "message": "アーカイブに失敗しました。",
+    "description": "dashboard.js:2274, dashboard.js:3058"
+  },
+  "m_2551a4a971": {
+    "message": "スペース「$1」を復元しました。",
+    "description": "dashboard.js:2285"
+  },
+  "m_e82b7d25f2": {
+    "message": "復元に失敗しました。",
+    "description": "dashboard.js:2288, dashboard.js:3068"
+  },
+  "m_e95765e8a5": {
+    "message": "スペース「$1」を完全に削除しますか？\nこの操作は元に戻せません。",
+    "description": "dashboard.js:2297"
+  },
+  "m_ca94b050f3": {
+    "message": "スペース「$1」を完全に削除しました。",
+    "description": "dashboard.js:2301"
+  },
+  "m_6e82f81122": {
+    "message": "削除に失敗しました。",
+    "description": "dashboard.js:2304, dashboard.js:3078"
+  },
+  "m_507e16fe4e": {
+    "message": "スペースが選択されていません。スペースを選択または作成してください。",
+    "description": "dashboard.js:2322"
+  },
+  "m_f351029a37": {
+    "message": "保存できるタブがありませんでした（chrome:// 系のタブは保存対象外です）。",
+    "description": "dashboard.js:2327"
+  },
+  "m_f272b678d1": {
+    "message": "$1 件のタブを保存しました。",
+    "description": "dashboard.js:2328"
+  },
+  "m_f38b273b38": {
+    "message": "タブの保存に失敗しました。",
+    "description": "dashboard.js:2333"
+  },
+  "m_d48c02f761": {
+    "message": "現在開いているタブはどのスペースにも保存されていません。\n",
+    "description": "dashboard.js:2361"
+  },
+  "m_e92defc1cb": {
+    "message": "切り替えると、これらのタブは保存されずに閉じられます。\n\n",
+    "description": "dashboard.js:2362"
+  },
+  "m_0fe3f5ec9d": {
+    "message": "「切り替え時の自動保存」がオフです。\n",
+    "description": "dashboard.js:2364"
+  },
+  "m_2bde3706ab": {
+    "message": "現在のタブは「$1」に保存されず、閉じられます。\n\n",
+    "description": "dashboard.js:2365"
+  },
+  "m_1ad7ff9d86": {
+    "message": "アーカイブ済みのスペースから切り替えるため、現在のタブは保存されずに閉じられます。\n\n",
+    "description": "dashboard.js:2367"
+  },
+  "m_2bc14b7cca": {
+    "message": "現在開いているタブは保存されずに閉じられます。\n\n",
+    "description": "dashboard.js:2369"
+  },
+  "m_be1598e030": {
+    "message": "スペース「$1」に切り替えますか？",
+    "description": "dashboard.js:2371"
+  },
+  "m_618731a7e3": {
+    "message": "保存先がありません",
+    "description": "dashboard.js:2377, productivity.js:35"
+  },
+  "m_c837ab2cde": {
+    "message": "保存に失敗したため、切り替えを中止しました。",
+    "description": "dashboard.js:2379"
+  },
+  "m_814259bda8": {
+    "message": "切り替え前の履歴を保存できなかったため、切り替えを中止しました。",
+    "description": "dashboard.js:2438"
+  },
+  "m_91c0550a7a": {
+    "message": "スペース「$1」に切り替えました。",
+    "description": "dashboard.js:2454"
+  },
+  "m_7db912ef11": {
+    "message": "スペースの切り替えに失敗しました。",
+    "description": "dashboard.js:2463"
+  },
+  "m_b6afad9923": {
+    "message": "タブの削除に失敗しました。",
+    "description": "dashboard.js:2494"
+  },
+  "m_b623491f35": {
+    "message": "「$1」を「$2」に移動しました。",
+    "description": "dashboard.js:2525"
+  },
+  "m_2768c12413": {
+    "message": "カテゴリーの移動に失敗しました。",
+    "description": "dashboard.js:2528"
+  },
+  "m_429435583a": {
+    "message": "並び替えに失敗しました。",
+    "description": "dashboard.js:2559"
+  },
+  "m_c1460a0421": {
+    "message": "カテゴリーの並び替えに失敗しました。",
+    "description": "dashboard.js:2583"
+  },
+  "m_ddf26ce3ed": {
+    "message": "エクスポート完了: $1 スペース / $2 カテゴリー → pwm-backup-$3.json",
+    "description": "dashboard.js:2615"
+  },
+  "m_f693a2b833": {
+    "message": "エクスポートに失敗しました。",
+    "description": "dashboard.js:2617"
+  },
+  "m_00de6b5511": {
+    "message": "ファイル形式が正しくありません。",
+    "description": "dashboard.js:2631"
+  },
+  "m_75e9dd8f76": {
+    "message": "不明",
+    "description": "dashboard.js:2635"
+  },
+  "m_efccfe8e49": {
+    "message": "バックアップファイルをインポートします。\n\n　スペース   : $1 件\n　カテゴリー : $2 件\n　作成日時   : $3\n\n現在のデータはすべて上書きされます。よろしいですか？",
+    "description": "dashboard.js:2636"
+  },
+  "m_ce1d0548a0": {
+    "message": "インポート完了: $1 スペース / $2 カテゴリー",
+    "description": "dashboard.js:2647"
+  },
+  "m_8df1c53c2e": {
+    "message": "JSON の解析に失敗しました。",
+    "description": "dashboard.js:2650"
+  },
+  "m_682e44dcfb": {
+    "message": "インポートに失敗しました。$1",
+    "description": "dashboard.js:2650"
+  },
+  "m_db96a9457a": {
+    "message": "カテゴリー「$1」を作成しました。",
+    "description": "dashboard.js:2729"
+  },
+  "m_1dcd4efe17": {
+    "message": "カテゴリーの作成に失敗しました。",
+    "description": "dashboard.js:2732"
+  },
+  "m_5c1ea7fb37": {
+    "message": "「$1」のサブカテゴリーを作成",
+    "description": "dashboard.js:2738"
+  },
+  "m_c961917824": {
+    "message": "サブカテゴリー「$1」を作成しました。",
+    "description": "dashboard.js:2743"
+  },
+  "m_569633928e": {
+    "message": "サブカテゴリーの作成に失敗しました。",
+    "description": "dashboard.js:2746"
+  },
+  "m_025af6c3cb": {
+    "message": "新しいカテゴリー名を入力してください:",
+    "description": "dashboard.js:2752"
+  },
+  "m_f3b1a68d36": {
+    "message": "カテゴリー名を変更しました。",
+    "description": "dashboard.js:2756"
+  },
+  "m_0f834403b5": {
+    "message": "カテゴリー名の変更に失敗しました。",
+    "description": "dashboard.js:2759"
+  },
+  "m_904330b1c2": {
+    "message": "カテゴリー「$1」を削除しますか？\n中のスペースは「未分類」に移動します。",
+    "description": "dashboard.js:2765"
+  },
+  "m_482af4adff": {
+    "message": "カテゴリー「$1」を削除しました。",
+    "description": "dashboard.js:2768"
+  },
+  "m_152585e380": {
+    "message": "カテゴリーの削除に失敗しました。",
+    "description": "dashboard.js:2771"
+  },
+  "m_a8377443c2": {
+    "message": "0: 未分類\n",
+    "description": "dashboard.js:2794"
+  },
+  "m_5d1ccf930a": {
+    "message": " ← 現在",
+    "description": "dashboard.js:2798"
+  },
+  "m_248d1228f5": {
+    "message": "$1: ＋ 新しいカテゴリーを作成",
+    "description": "dashboard.js:2800"
+  },
+  "m_6f13eed82d": {
+    "message": "「$1」のカテゴリーを選んでください（番号を入力）:\n\n$2",
+    "description": "dashboard.js:2802"
+  },
+  "m_db7a8db4a9": {
+    "message": "有効な番号を入力してください。",
+    "description": "dashboard.js:2805, dashboard.js:2823"
+  },
+  "m_62abac0149": {
+    "message": "「未分類」に移動しました。",
+    "description": "dashboard.js:2810"
+  },
+  "m_bab01b0a0b": {
+    "message": "カテゴリー「$1」に移動しました。",
+    "description": "dashboard.js:2814"
+  },
+  "m_c35c527047": {
+    "message": "新しいカテゴリーを作成",
+    "description": "dashboard.js:2816"
+  },
+  "m_936cd7f801": {
+    "message": "カテゴリー「$1」を作成して移動しました。",
+    "description": "dashboard.js:2821"
+  },
+  "m_1f9b554bc9": {
+    "message": "カテゴリーの変更に失敗しました。",
+    "description": "dashboard.js:2827"
+  },
+  "m_49dbd7dc23": {
+    "message": "グループを作成",
+    "description": "dashboard.js:2924, dashboard.js:2997"
+  },
+  "m_e94783b08f": {
+    "message": "スペースを選択してください。",
+    "description": "dashboard.js:2996"
+  },
+  "m_637efb62a0": {
+    "message": "グループ「$1」を作成しました。",
+    "description": "dashboard.js:3002"
+  },
+  "m_e5c17530ad": {
+    "message": "グループの作成に失敗しました。",
+    "description": "dashboard.js:3005"
+  },
+  "m_f648e8b5a9": {
+    "message": "グループを編集",
+    "description": "dashboard.js:3011"
+  },
+  "m_c6df24a6c9": {
+    "message": "グループを更新しました。",
+    "description": "dashboard.js:3016"
+  },
+  "m_762bfecbd7": {
+    "message": "グループの更新に失敗しました。",
+    "description": "dashboard.js:3019"
+  },
+  "m_6ab993caa7": {
+    "message": "グループ「$1」を削除しますか？\nタブはグループなしになります。",
+    "description": "dashboard.js:3025"
+  },
+  "m_d06ff38c9c": {
+    "message": "グループ「$1」を削除しました。",
+    "description": "dashboard.js:3028"
+  },
+  "m_ce516ef82e": {
+    "message": "グループの削除に失敗しました。",
+    "description": "dashboard.js:3032"
+  },
+  "m_deccd3ca1c": {
+    "message": "タブの移動に失敗しました。",
+    "description": "dashboard.js:3043"
+  },
+  "m_9ab79d75a0": {
+    "message": "ライトモードに切り替え",
+    "description": "dashboard.js:3102"
+  },
+  "m_2aff1d2b6a": {
+    "message": "ダークモードに切り替え",
+    "description": "dashboard.js:3109"
+  },
+  "m_a49e39c667": {
+    "message": "自動バックアップをオフにしました。",
+    "description": "dashboard.js:3191"
+  },
+  "m_33ec021992": {
+    "message": "自動バックアップ: $1 に設定しました。",
+    "description": "dashboard.js:3192"
+  },
+  "m_938dbc938d": {
+    "message": "切り替え時の自動保存をオンにしました。",
+    "description": "dashboard.js:3208"
+  },
+  "m_4f8b8d9b2e": {
+    "message": "切り替え時の自動保存をオフにしました。",
+    "description": "dashboard.js:3209"
+  },
+  "m_b3afead7ff": {
+    "message": "現在のタブを保存（$1S）",
+    "description": "keyboard-shortcuts.js:14"
+  },
+  "m_910348bd6b": {
+    "message": "タブを1枚追加",
+    "description": "productivity.js:5, productivity.js:24"
+  },
+  "m_2f9e6135b4": {
+    "message": "お気に入りを編集",
+    "description": "productivity.js:5, productivity.js:46"
+  },
+  "m_f4c69f0508": {
+    "message": "選択してください",
+    "description": "productivity.js:17"
+  },
+  "m_51a3053d75": {
+    "message": "追加できるWebページがありません。",
+    "description": "productivity.js:23"
+  },
+  "m_53f079d16f": {
+    "message": "先にスペースを作成してください。",
+    "description": "productivity.js:23"
+  },
+  "m_ae3ecc7ed2": {
+    "message": "追加するタブ",
+    "description": "productivity.js:26"
+  },
+  "m_e63bc2f7aa": {
+    "message": "追加先のスペース",
+    "description": "productivity.js:27"
+  },
+  "m_6d5cd75875": {
+    "message": "追加する",
+    "description": "productivity.js:28"
+  },
+  "m_85ccd53d0e": {
+    "message": "タブを取得できません",
+    "description": "productivity.js:34"
+  },
+  "m_31d3cc3310": {
+    "message": "このURLは追加先に保存済みです。",
+    "description": "productivity.js:36"
+  },
+  "m_ddb65d86ef": {
+    "message": "「$1」に1枚追加しました。",
+    "description": "productivity.js:38"
+  },
+  "m_9fbca578c5": {
+    "message": "追加できませんでした。タブと追加先を確認してください。",
+    "description": "productivity.js:40"
+  },
+  "m_4004b8f1db": {
+    "message": "タブを取得できませんでした。",
+    "description": "productivity.js:42"
+  },
+  "m_4648287945": {
+    "message": "お気に入りを保存できませんでした。",
+    "description": "productivity.js:53"
+  },
+  "m_03c994e60e": {
+    "message": "スペースを作成すると登録できます。",
+    "description": "productivity.js:57"
+  },
+  "m_a2c6ae915e": {
+    "message": "お気に入りを読み込めませんでした。",
+    "description": "productivity.js:58"
+  },
+  "m_296dad2d72": {
+    "message": "お気に入り",
+    "description": "productivity.js:65"
+  },
+  "m_c1b61fe80e": {
+    "message": "最近使ったスペース",
+    "description": "productivity.js:65"
+  },
+  "m_ec351de08b": {
+    "message": "保存タブのプレビュー",
+    "description": "readability.js:3"
+  },
+  "m_fa9f222dca": {
+    "message": "タブを開けませんでした。",
+    "description": "readability.js:22"
+  },
+  "m_c9ebf4c3f7": {
+    "message": "保存されたタブはありません",
+    "description": "readability.js:24"
+  },
+  "m_6329f21c41": {
+    "message": "設定",
+    "description": "settings-dialog.js:4, settings-dialog.js:9"
+  },
+  "m_e438ffd26f": {
+    "message": "設定（入出力・バックアップ・自動保存）",
+    "description": "settings-dialog.js:5"
+  },
+  "m_56b6cd2c1a": {
+    "message": "設定を開く",
+    "description": "settings-dialog.js:5"
+  },
+  "m_00820b1780": {
+    "message": "設定を閉じる",
+    "description": "settings-dialog.js:10"
+  },
+  "m_bf10ec5ff4": {
+    "message": "変更した設定はその場で保存されます。インポートすると現在の保存データが上書きされます。",
+    "description": "settings-dialog.js:11"
+  },
+  "m_c32d6516f4": {
+    "message": "‹ 閉じる",
+    "description": "sidebar-controls.js:11"
+  },
+  "m_74f34a1534": {
+    "message": "‹ 折りたたむ",
+    "description": "sidebar-controls.js:11, sidebar-controls.js:28"
+  },
+  "m_0a57aeec9d": {
+    "message": "サイドバーを閉じる",
+    "description": "sidebar-controls.js:12"
+  },
+  "m_0b845075d6": {
+    "message": "サイドバーを折りたたむ",
+    "description": "sidebar-controls.js:12, sidebar-controls.js:13, sidebar-controls.js:30"
+  },
+  "m_2c2e1923ea": {
+    "message": "閉じる（ツールバーの拡張アイコンで再表示）",
+    "description": "sidebar-controls.js:13"
+  },
+  "m_6264a3f76a": {
+    "message": "閉じられませんでした。もう一度お試しください。",
+    "description": "sidebar-controls.js:24"
+  },
+  "m_91323fe947": {
+    "message": "サイドバーを展開する",
+    "description": "sidebar-controls.js:30"
+  },
+  "m_28e3b7ba50": {
+    "message": "Chromeのサイドパネルの位置を「左」にしてください。右側には開きません。",
+    "description": "sidepanel-launcher.js:3"
+  },
+  "m_2c14db7241": {
+    "message": "左サイドバーを開きました。別のページを開いても表示されたままです。閉じたときはツールバーの拡張アイコンで再表示できます。",
+    "description": "sidepanel-launcher.js:4"
+  },
+  "m_07a63337a6": {
+    "message": "左配置を確認できるChrome 141以上が必要です。",
+    "description": "sidepanel-launcher.js:36"
+  },
+  "m_c5ed08a7f9": {
+    "message": "ウィンドウの準備中です。もう一度お試しください。",
+    "description": "sidepanel-launcher.js:41"
+  },
+  "m_14ae9512a4": {
+    "message": "サイドバーを開けませんでした。もう一度お試しください。",
+    "description": "sidepanel-launcher.js:51"
+  },
+  "m_89da984b3c": {
+    "message": "タブまとめん改 — 左バー",
+    "description": "sidepanel.html:<title>"
+  },
+  "m_2e759e9300": {
+    "message": "ダッシュボードを開く",
+    "description": "sidepanel.html:<button>"
+  },
+  "m_99f2a39628": {
+    "message": "ダッシュボードを開けませんでした。再度お試しください。",
+    "description": "sidepanel.js:15"
+  },
+  "m_c7f325f13f": {
+    "message": "元に戻す",
+    "description": "undo.js:11"
+  },
+  "m_41852537df": {
+    "message": "切り替え中は戻せません。",
+    "description": "undo.js:36"
+  },
+  "m_88291348ad": {
+    "message": "スペースが見つからないため戻せません。",
+    "description": "undo.js:40"
+  },
+  "m_9c5b54b484": {
+    "message": "その後に変更があったため、元に戻すのを中止しました。",
+    "description": "undo.js:41"
+  },
+  "m_7e6b5ba160": {
+    "message": "元に戻しました。",
+    "description": "undo.js:44"
+  },
+  "m_a89f5a6dd5": {
+    "message": "元に戻せませんでした。",
+    "description": "undo.js:46"
+  },
+  "m_64c1599a05": {
+    "message": "タブを1枚削除しました。",
+    "description": "undo.js:54"
+  },
+  "m_bd0d74ffbc": {
+    "message": "タブを1枚アーカイブしました。",
+    "description": "undo.js:55"
+  },
+  "m_429855c857": {
+    "message": "案件・スペースを検索",
+    "description": "workspace-tools.js:4"
+  },
+  "m_2437c7c79c": {
+    "message": "前の構成に戻す",
+    "description": "workspace-tools.js:8"
+  },
+  "m_d0b101161c": {
+    "message": "切り替え前の履歴はありません",
+    "description": "workspace-tools.js:23"
+  },
+  "m_c030b56060": {
+    "message": "保存失敗：もう一度保存してください",
+    "description": "workspace-tools.js:27"
+  },
+  "m_0a14601b8e": {
+    "message": "保存先のスペースを選択してください",
+    "description": "workspace-tools.js:27"
+  },
+  "m_aa9e381e6f": {
+    "message": "変更あり",
+    "description": "workspace-tools.js:27"
+  },
+  "m_74e30e9189": {
+    "message": "保存済み",
+    "description": "workspace-tools.js:27"
+  },
+  "m_3b69257cb0": {
+    "message": " · アーカイブ",
+    "description": "workspace-tools.js:36"
+  },
+  "m_d34e19303a": {
+    "message": "一致するスペースはありません",
+    "description": "workspace-tools.js:39"
+  },
+  "m_3881f5d6ed": {
+    "message": "保存状態を確認できません",
+    "description": "workspace-tools.js:41"
+  },
+  "m_97aa22defa": {
+    "message": "前のタブ構成に戻します。現在の構成も履歴に残します。ページ内の未送信の入力内容は復元できません。",
+    "description": "workspace-tools.js:54"
+  },
+  "m_9ea03093db": {
+    "message": "前のタブ構成に戻しました。",
+    "description": "workspace-tools.js:78"
+  },
+  "m_9930817c6f": {
+    "message": "復元に失敗しました。履歴を確認して再度お試しください。",
+    "description": "workspace-tools.js:79"
+  },
+  "m_6644f06197": {
+    "message": "保存中…",
+    "description": "workspace-tools.js:86"
+  },
+  "appName": {
+    "message": "タブまとめん改",
+    "description": "manifest name"
+  },
+  "appDescription": {
+    "message": "案件ごとにスペースを作り、同じChromeウィンドウ内でタブ構成を切り替えられる拡張機能です。",
+    "description": "manifest description"
+  },
+  "actionTitle": {
+    "message": "タブまとめん改 を開く",
+    "description": "toolbar button title"
+  },
+  "onboardingClickSave": {
+    "message": "上の「現在のタブを保存」ボタンをクリック",
+    "description": "onboarding step"
+  },
+  "onboardingClickNewSpace": {
+    "message": "左の「＋ スペース」をクリックして案件名を入力",
+    "description": "onboarding step"
+  },
+  "onboardingSaveExplained": {
+    "message": "「現在のタブを保存」をクリックするとタブが保存される",
+    "description": "onboarding step"
+  },
+  "restoreHistoryTitle": {
+    "message": "直前の構成（$1）。ブラウザ終了まで保持",
+    "description": "workspace-tools.js restore button title; $1 = time"
+  },
+  "m_9e9943aa18": {
+    "message": "Googleへのアクセスが許可されませんでした。",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_1b162ecb08": {
+    "message": "Googleドライブに接続してください。",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_38e08f6f72": {
+    "message": "バックアップの保存権限を確認できません。",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_063e83e937": {
+    "message": "接続がキャンセルされました。",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_cbe501233e": {
+    "message": "認証の戻り先が一致しません。",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_195c611c2a": {
+    "message": "認証を確認できません。もう一度接続してください。",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_210231350f": {
+    "message": "OAuthクライアントIDを入力してください。",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_27298d6197": {
+    "message": "Googleドライブに接続してください。接続期限が切れた場合は再接続が必要です。",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_76e8f9b19a": {
+    "message": "別の画面でバックアップを保存中です。",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_c62a99397a": {
+    "message": "タブまとめん改_",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_551f37d20f": {
+    "message": "保存結果を確認できませんでした。再試行する前にGoogleドライブを確認してください。",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_6d2d7cf526": {
+    "message": "接続期限が切れました。Googleドライブに再接続してください。",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_e5be1db2f7": {
+    "message": "保存できませんでした（$1）。Google Drive APIの有効化・保存権限・空き容量を確認してください。",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_fd067b945c": {
+    "message": "保存先を確認できませんでした。Googleドライブを確認してください。",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_e756be4d47": {
+    "message": "Googleドライブにバックアップ",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_5ea424f93b": {
+    "message": "保存済みのスペース・カテゴリー・タブを、マイドライブに日時付きのJSONで保存します。",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_6b5763bf71": {
+    "message": "「Googleドライブに接続」を押すとGoogleの許可画面が開きます。許可後はChromeが接続を保ち、期限切れ時も自動で更新します。",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_7b5914be86": {
+    "message": "初回の接続設定",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_e6720a68da": {
+    "message": "Google CloudでDrive APIを有効にし、OAuthクライアント（ウェブアプリケーション）を作成してください。承認済みリダイレクトURIには次のURLを登録します。",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_f5da3ecf70": {
+    "message": "リダイレクトURI",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_d80926d454": {
+    "message": "OAuthクライアントID",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_dc59c3eb54": {
+    "message": "クライアントシークレットは不要です。テスト公開の場合は、利用するGoogleアカウントをテストユーザーに登録してください。",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_a8a3126796": {
+    "message": "Googleドライブに接続",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_4c23d9e46d": {
+    "message": "今すぐバックアップ",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_4d138770f9": {
+    "message": "このブラウザの接続を解除",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_c64f38ecfa": {
+    "message": "前回のバックアップを開く",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_81d7efe6b9": {
+    "message": "最終保存：$1 ",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_f11b0168dc": {
+    "message": "処理中…",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_e873b731b1": {
+    "message": "接続しました。バックアップを保存できます。",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_f714e3e49d": {
+    "message": "Googleドライブにバックアップを保存しました。",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_307c18ccd9": {
+    "message": "このブラウザの接続を解除しました。保存済みのファイルは残ります。",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_23e782bfe8": {
+    "message": "接続中",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "m_26a4745b1e": {
+    "message": "設定を読み込めませんでした。画面を開き直してください。",
+    "description": "drive-backup.js / drive-settings.js"
+  },
+  "languageHeading": {
+    "message": "言語",
+    "description": "settings section heading"
+  },
+  "languageAuto": {
+    "message": "ブラウザの言語に合わせる（$1）",
+    "description": "language select option; $1 = detected language name"
+  },
+  "languageHelp": {
+    "message": "表示言語を変更すると画面を読み込み直します。",
+    "description": "settings help text"
+  },
+  "reviewTitle": {
+    "message": "タブまとめん改はお役に立っていますか？",
+    "description": "review prompt title"
+  },
+  "reviewBody": {
+    "message": "よろしければ Chrome ウェブストアでレビューをお願いします。開発の大きな励みになります。",
+    "description": "review prompt body"
+  },
+  "reviewWrite": {
+    "message": "レビューを書く",
+    "description": "review prompt button"
+  },
+  "reviewLater": {
+    "message": "あとで",
+    "description": "review prompt button"
+  },
+  "reviewNever": {
+    "message": "今後表示しない",
+    "description": "review prompt button"
+  },
+  "reviewThanks": {
+    "message": "ありがとうございます！",
+    "description": "review prompt after clicking write"
+  }
+}

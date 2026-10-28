@@ -1,6 +1,6 @@
 'use strict';
 (() => {
-  const preview=document.createElement('section');preview.id='navigationFullTitle';preview.className='nav-tab-preview';preview.hidden=true;preview.setAttribute('aria-label','保存タブのプレビュー');document.body.append(preview);
+  const preview=document.createElement('section');preview.id='navigationFullTitle';preview.className='nav-tab-preview';preview.hidden=true;preview.setAttribute('aria-label',t('m_ec351de08b'));document.body.append(preview);
   let owner=null,openTimer,closeTimer,sequence=0;
   function hide(){clearTimeout(openTimer);clearTimeout(closeTimer);++sequence;if(owner)owner.removeAttribute('aria-describedby');owner=null;preview.hidden=true}
   function position(row){const r=row.getBoundingClientRect();const width=Math.min(340,innerWidth-24);preview.style.width=width+'px';preview.style.maxHeight=Math.max(100,Math.min(360,innerHeight-24))+'px';preview.style.left=Math.max(12,Math.min(r.right+8,innerWidth-width-12))+'px';preview.style.top=Math.max(12,Math.min(r.top,innerHeight-preview.offsetHeight-12))+'px'}
@@ -9,7 +9,7 @@
     try{
       if(row.dataset.spaceId){
         const data=await loadData();if(seq!==sequence)return;const space=data.spaces.find(s=>s.id===row.dataset.spaceId);if(!space)return;
-        const heading=document.createElement('h3');heading.textContent=`${space.name}（${space.tabs?.length||0} タブ）`;preview.append(heading);
+        const heading=document.createElement('h3');heading.textContent=t('m_b8901ba999', [space.name, space.tabs?.length||0]);preview.append(heading);
         const list=document.createElement('div');list.className='nav-tab-preview-list';
         for(const tab of space.tabs||[]){
           const button=document.createElement('button');button.type='button';button.className='nav-tab-preview-item';
@@ -19,9 +19,9 @@
           if(iconUrl){icon.src=iconUrl;icon.referrerPolicy='no-referrer';icon.addEventListener('error',()=>icon.replaceWith(fallback),{once:true})}
           const text=document.createElement('div');text.className='nav-tab-preview-text';text.append(title,site);button.append(iconUrl?icon:fallback,text);
           button.disabled=!isRestorableUrl(tab.url);
-          button.addEventListener('click',async event=>{event.stopPropagation();try{await chrome.tabs.create({windowId:g_dashboardWindowId,url:tab.url,active:true});hide()}catch{showMessage('タブを開けませんでした。','error')}});list.append(button);
+          button.addEventListener('click',async event=>{event.stopPropagation();try{await chrome.tabs.create({windowId:g_dashboardWindowId,url:tab.url,active:true});hide()}catch{showMessage(t('m_fa9f222dca'),'error')}});list.append(button);
         }
-        if(!list.children.length)list.textContent='保存されたタブはありません';preview.append(list);
+        if(!list.children.length)list.textContent=t('m_c9ebf4c3f7');preview.append(list);
       }else{preview.textContent=row.dataset.fullTitle||row.title||'';}
       if(seq!==sequence)return;owner=row;preview.hidden=false;row.setAttribute('aria-describedby',preview.id);position(row);
     }catch{hide()}

@@ -8,9 +8,9 @@
   button.id = 'toggleSidebar';
   button.type = 'button';
   button.className = 'sidebar-toggle';
-  button.textContent = panel ? '‹ 閉じる' : '‹ 折りたたむ';
-  button.setAttribute('aria-label', panel ? 'サイドバーを閉じる' : 'サイドバーを折りたたむ');
-  button.title = panel ? '閉じる（ツールバーの拡張アイコンで再表示）' : 'サイドバーを折りたたむ';
+  button.textContent = panel ? t('m_c32d6516f4') : t('m_74f34a1534');
+  button.setAttribute('aria-label', panel ? t('m_0a57aeec9d') : t('m_0b845075d6'));
+  button.title = panel ? t('m_2c2e1923ea') : t('m_0b845075d6');
   if (!panel) { sidebar.id = 'dashboardSidebar';button.setAttribute('aria-controls',sidebar.id);button.setAttribute('aria-expanded','true'); }
   controls.append(button);
   const launcher = sidebar.querySelector('.sidebar-launcher');
@@ -21,13 +21,13 @@
     if (panel) {
       if (g_dashboardWindowId === null) return;
       try { await chrome.sidePanel.close({windowId:g_dashboardWindowId}); }
-      catch { showMessage('閉じられませんでした。もう一度お試しください。','error'); }
+      catch { showMessage(t('m_6264a3f76a'),'error'); }
       return;
     }
     const collapsed = document.body.classList.toggle('sidebar-collapsed');
-    button.textContent = collapsed ? '›' : '‹ 折りたたむ';
+    button.textContent = collapsed ? '›' : t('m_74f34a1534');
     button.setAttribute('aria-expanded',String(!collapsed));
-    button.setAttribute('aria-label',collapsed ? 'サイドバーを展開する' : 'サイドバーを折りたたむ');
+    button.setAttribute('aria-label',collapsed ? t('m_91323fe947') : t('m_0b845075d6'));
     button.title = button.getAttribute('aria-label');
     button.focus();
   });

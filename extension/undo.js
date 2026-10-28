@@ -8,8 +8,8 @@ const Undo = (() => {
   let record = null, timer = null;
   const toast = document.createElement('div'); toast.id = 'undoToast'; toast.className = 'undo-toast'; toast.hidden = true; toast.setAttribute('role', 'status'); toast.setAttribute('aria-live', 'polite');
   const text = document.createElement('span'); text.className = 'undo-toast__text';
-  const button = document.createElement('button'); button.type = 'button'; button.id = 'undoButton'; button.className = 'btn btn--primary'; button.textContent = '元に戻す';
-  const close = document.createElement('button'); close.type = 'button'; close.className = 'undo-toast__close'; close.setAttribute('aria-label', '閉じる'); close.textContent = '×';
+  const button = document.createElement('button'); button.type = 'button'; button.id = 'undoButton'; button.className = 'btn btn--primary'; button.textContent = t('m_c7f325f13f');
+  const close = document.createElement('button'); close.type = 'button'; close.className = 'undo-toast__close'; close.setAttribute('aria-label', t('m_3da5c18551')); close.textContent = '×';
   toast.append(text, button, close); document.body.append(toast);
   function hide() { clearTimeout(timer); timer = null; toast.hidden = true; record = null; }
   close.addEventListener('click', hide);
@@ -33,17 +33,17 @@ const Undo = (() => {
   async function apply() {
     if (!record) return false;
     const current = record; hide();
-    if (g_isSwitching) { showMessage('切り替え中は戻せません。', 'error'); return false; }
+    if (g_isSwitching) { showMessage(t('m_41852537df'), 'error'); return false; }
     try {
       return await navigator.locks.request('pwm-space-switch', async () => {
         const data = await loadData(); const space = data.spaces.find(s => s.id === current.spaceId);
-        if (!space) { showMessage('スペースが見つからないため戻せません。', 'error'); return false; }
-        if (space.updatedAt !== current.updatedAt) { showMessage('その後に変更があったため、元に戻すのを中止しました。', 'error'); return false; }
+        if (!space) { showMessage(t('m_88291348ad'), 'error'); return false; }
+        if (space.updatedAt !== current.updatedAt) { showMessage(t('m_9c5b54b484'), 'error'); return false; }
         space.tabs = clone(current.tabs); space.archivedTabs = clone(current.archivedTabs); space.updatedAt = new Date().toISOString();
         await saveData(data); await renderAll(); applyGroupsToChromeTabs(space.id).catch(() => {});
-        showMessage('元に戻しました。', 'success'); return true;
+        showMessage(t('m_7e6b5ba160'), 'success'); return true;
       });
-    } catch (error) { showMessage('元に戻せませんでした。', 'error'); console.error('[PWM] undo', error); return false; }
+    } catch (error) { showMessage(t('m_a89f5a6dd5'), 'error'); console.error('[PWM] undo', error); return false; }
   }
   button.addEventListener('click', apply);
   const editable = node => !!node && (node.isContentEditable || ['INPUT','TEXTAREA','SELECT'].includes(node.tagName));
@@ -51,7 +51,7 @@ const Undo = (() => {
     if ((event.metaKey || event.ctrlKey) && !event.shiftKey && !event.altKey && event.key.toLowerCase() === 'z' && record && !editable(document.activeElement) && !document.querySelector('dialog[open]')) { event.preventDefault(); apply(); }
   });
   // カード単体の削除・アーカイブも戻せるように、既存ハンドラを包む
-  if (typeof handleDeleteTab === 'function') { const original = handleDeleteTab; handleDeleteTab = async function(index) { const snap = await snapshotActive(); await original(index); await offer('タブを1枚削除しました。', snap); }; }
-  if (typeof handleArchiveSpaceTab === 'function') { const original = handleArchiveSpaceTab; handleArchiveSpaceTab = async function(index) { const snap = await snapshotActive(); await original(index); await offer('タブを1枚アーカイブしました。', snap); }; }
+  if (typeof handleDeleteTab === 'function') { const original = handleDeleteTab; handleDeleteTab = async function(index) { const snap = await snapshotActive(); await original(index); await offer(t('m_64c1599a05'), snap); }; }
+  if (typeof handleArchiveSpaceTab === 'function') { const original = handleArchiveSpaceTab; handleArchiveSpaceTab = async function(index) { const snap = await snapshotActive(); await original(index); await offer(t('m_bd0d74ffbc'), snap); }; }
   return { snapshotActive, snapshotOf, offer, apply, hide, get pending() { return record; } };
 })();

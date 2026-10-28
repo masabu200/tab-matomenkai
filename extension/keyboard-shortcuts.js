@@ -11,7 +11,7 @@
   const visible=el=>!!el&&el.getClientRects().length>0;
   const dialogOpen=()=>!!document.querySelector('dialog[open]')||[...document.querySelectorAll('.modal-overlay')].some(visible);
   const saveButton=document.getElementById('btnSaveTabs');
-  if(saveButton)saveButton.title=`現在のタブを保存（${modLabel}S）`;
+  if(saveButton)saveButton.title=t('m_b3afead7ff', [modLabel]);
   const spaceSearch=()=>document.getElementById('spaceSearch');
   const tabFilter=()=>document.getElementById('searchInput');
   function focusField(el){if(!visible(el))return false;el.focus();el.select?.();return true}

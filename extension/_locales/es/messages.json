@@ -1,0 +1,1220 @@
+{
+  "m_2ce01f81ad": {
+    "message": "Integración con IA local"
+  },
+  "m_a8ce0201c4": {
+    "message": "Mientras esté conectada, los títulos de los espacios, las URL y la información de los grupos se comparten con el servidor de integración de este PC. El contenido de las páginas nunca se comparte."
+  },
+  "m_a9356d61c7": {
+    "message": "Clave de conexión"
+  },
+  "m_9dd838b6ab": {
+    "message": "Pega el .local/token del servidor de integración"
+  },
+  "m_5119847c00": {
+    "message": "Conectar"
+  },
+  "m_092575584a": {
+    "message": "Desconectar"
+  },
+  "m_2e845bddec": {
+    "message": "Ver sugerencias"
+  },
+  "m_463f7d5d30": {
+    "message": "Deshacer la última reorganización"
+  },
+  "m_7ea46c0315": {
+    "message": "Sin conexión"
+  },
+  "m_fb71a4e085": {
+    "message": "Error de conexión"
+  },
+  "m_9606bdda03": {
+    "message": "Ver sugerencias ($1)"
+  },
+  "m_b5e969dec9": {
+    "message": "Conectado · $1 sugerencias"
+  },
+  "m_cda8d46d3f": {
+    "message": "No se puede conectar: "
+  },
+  "m_c4e07534d2": {
+    "message": "Pega la clave de conexión de 64 caracteres"
+  },
+  "m_0b9939e1f9": {
+    "message": "Desconectado"
+  },
+  "m_a9b2455ca6": {
+    "message": "Sugerencias de IA"
+  },
+  "m_1c7d43cb8f": {
+    "message": "Aplicar los cambios seleccionados"
+  },
+  "m_16661f1537": {
+    "message": "Descartar esta sugerencia"
+  },
+  "m_3da5c18551": {
+    "message": "Cerrar"
+  },
+  "m_2fbbb892d1": {
+    "message": "Los datos guardados han cambiado, por lo que esta sugerencia ya no se puede aplicar. Solicita una nueva propuesta a la IA."
+  },
+  "m_33dc0c7eef": {
+    "message": "Los datos guardados han cambiado. Solicita una nueva propuesta."
+  },
+  "m_4e265c1689": {
+    "message": "Se aplicaron $1 cambios. Las pestañas abiertas no se modificaron."
+  },
+  "m_62157d9463": {
+    "message": "No hay historial de reorganización que deshacer"
+  },
+  "m_33b0b3d01c": {
+    "message": "No se puede deshacer porque se hicieron cambios después"
+  },
+  "m_b1c9392214": {
+    "message": "Se restauró el estado anterior a la reorganización"
+  },
+  "m_6aa1453553": {
+    "message": "Mantén entre 1 y 50 cambios"
+  },
+  "m_b96d769eac": {
+    "message": "No se encontró el espacio de destino"
+  },
+  "m_2b707f3b85": {
+    "message": "Formato de cambio no válido"
+  },
+  "m_f7c288ba66": {
+    "message": "Los nombres deben tener entre 1 y 120 caracteres"
+  },
+  "m_bd93ad1a6f": {
+    "message": "Cambiar nombre: $1 → $2"
+  },
+  "m_ebeb4c2304": {
+    "message": "No se encontró la categoría de destino"
+  },
+  "m_f4d781035f": {
+    "message": "Sin categoría"
+  },
+  "m_42e0c95815": {
+    "message": "Mover de categoría: $1 → $2"
+  },
+  "m_55a535bafa": {
+    "message": "Solo se pueden añadir URL HTTP/HTTPS"
+  },
+  "m_43c516fa6a": {
+    "message": "Esta URL ya está guardada"
+  },
+  "m_39b67bcaf4": {
+    "message": "Formato de título no válido"
+  },
+  "m_03f6623a18": {
+    "message": "Añadir pestaña: $1 ← $2"
+  },
+  "m_6a6f94972c": {
+    "message": "Posición de pestaña no válida"
+  },
+  "m_579a11d917": {
+    "message": "Elige un espacio distinto"
+  },
+  "m_46ba84410f": {
+    "message": "La URL de la pestaña de destino no coincide"
+  },
+  "m_8924020b2a": {
+    "message": "El destino ya tiene la misma URL"
+  },
+  "m_11b801d8a2": {
+    "message": "Mover pestaña: $1 ($2 → $3)"
+  },
+  "m_42adb155e1": {
+    "message": "Operación no compatible"
+  },
+  "m_4091966e8a": {
+    "message": "Guardar en Tab Matomen Kai"
+  },
+  "m_6079395160": {
+    "message": "Aún no hay espacios (crea uno en el panel principal)"
+  },
+  "m_2167649eea": {
+    "message": "Abrir Tab Matomen Kai"
+  },
+  "m_ecde74ef1b": {
+    "message": "Guardado en \"$1\" ($2 pestañas)"
+  },
+  "m_6f91f13005": {
+    "message": "Ya está guardado en \"$1\""
+  },
+  "m_a9276d6dfe": {
+    "message": "No se pudo guardar. Revisa el espacio en el panel principal"
+  },
+  "m_56415d676e": {
+    "message": "El contenido de la copia de seguridad no es válido. Tus datos actuales no se modificaron."
+  },
+  "m_a18e4bec39": {
+    "message": "Acciones en bloque con pestañas"
+  },
+  "m_f6365e7574": {
+    "message": "Seleccionar todo"
+  },
+  "m_e135253c38": {
+    "message": "0 seleccionadas"
+  },
+  "m_9a2cef5d5b": {
+    "message": "Abrir las pestañas seleccionadas en esta ventana"
+  },
+  "m_119daf93ee": {
+    "message": "Abrir"
+  },
+  "m_2cb583698f": {
+    "message": "Espacio de destino"
+  },
+  "m_9a97fc3ae6": {
+    "message": "Mover"
+  },
+  "m_71a12fb43e": {
+    "message": "Grupo donde incluirlas"
+  },
+  "m_e70ecafd50": {
+    "message": "Al grupo"
+  },
+  "m_ae75ae1d2a": {
+    "message": "Formato de copia"
+  },
+  "m_ce05fd6a61": {
+    "message": "Título y URL"
+  },
+  "m_c257bec714": {
+    "message": "Solo URL"
+  },
+  "m_295cc5d596": {
+    "message": "Copiar una lista de las pestañas seleccionadas (o de todo el espacio si no hay ninguna seleccionada)"
+  },
+  "m_e94c210766": {
+    "message": "Copiar"
+  },
+  "m_a2307d9555": {
+    "message": "Archivar las pestañas seleccionadas"
+  },
+  "m_c686c1a9dd": {
+    "message": "Archivar"
+  },
+  "m_2fe1822ad4": {
+    "message": "Eliminar las pestañas seleccionadas"
+  },
+  "m_5cbdf1fd70": {
+    "message": "Eliminar"
+  },
+  "m_f0dc9f43d4": {
+    "message": "Borrar la selección (Esc)"
+  },
+  "m_ec7ae06b09": {
+    "message": "Borrar"
+  },
+  "m_fca5a8dc9f": {
+    "message": "$1 seleccionadas"
+  },
+  "m_91f77f62c2": {
+    "message": "Mover a…"
+  },
+  "m_cda05ed8b5": {
+    "message": "Grupo…"
+  },
+  "m_7a137f933a": {
+    "message": "Sin grupo"
+  },
+  "m_bcbebef3cf": {
+    "message": "Grupo sin nombre"
+  },
+  "m_4710908c81": {
+    "message": "Nuevo grupo…"
+  },
+  "m_e4de78fe6b": {
+    "message": "No disponible durante el cambio."
+  },
+  "m_37bb515e00": {
+    "message": "Cancelado porque el espacio cambió. Vuelve a seleccionar."
+  },
+  "m_5e3dfdc724": {
+    "message": "No se encontraron las pestañas seleccionadas."
+  },
+  "m_fba383cf43": {
+    "message": "$1 falló."
+  },
+  "m_481253a7af": {
+    "message": "Se abrieron $1 pestañas."
+  },
+  "m_8394e407bf": {
+    "message": "Elige un espacio de destino."
+  },
+  "m_72a6bd4fe9": {
+    "message": "No hay espacio de destino."
+  },
+  "m_33ad04a535": {
+    "message": " (se omitieron $1 con la misma URL porque el destino ya las tiene)"
+  },
+  "m_7c9bfe16e3": {
+    "message": "Se movieron $2 pestañas a \"$1\".$3"
+  },
+  "m_c19f04094f": {
+    "message": "Elige un grupo."
+  },
+  "m_42f0321630": {
+    "message": "Nuevo grupo"
+  },
+  "m_80eb0a488d": {
+    "message": "Mover al grupo"
+  },
+  "m_961c24d640": {
+    "message": "No se encontró el grupo."
+  },
+  "m_d42ecb5149": {
+    "message": "Se incluyeron $1 pestañas en \"$2\"."
+  },
+  "m_2a8a7849b4": {
+    "message": "Se quitaron $1 pestañas de su grupo."
+  },
+  "m_d97fff8023": {
+    "message": "No hay pestañas que copiar."
+  },
+  "m_fd05c05821": {
+    "message": "Se copiaron $1 pestañas como $2."
+  },
+  "m_b4a1f2d50c": {
+    "message": "No se pudo copiar al portapapeles."
+  },
+  "m_63b3f3287e": {
+    "message": "Error al copiar."
+  },
+  "m_b48b8f8f20": {
+    "message": "Se archivaron $1 pestañas."
+  },
+  "m_cba9bbaa15": {
+    "message": "¿Eliminar las $1 pestañas seleccionadas? Esta acción no se puede deshacer."
+  },
+  "m_fae13af1e7": {
+    "message": "Se eliminaron $1 pestañas."
+  },
+  "m_53884810b9": {
+    "message": "Acciones del espacio"
+  },
+  "m_269b0f92e4": {
+    "message": "Cancelar"
+  },
+  "m_a530f556a0": {
+    "message": "Cambiar de espacio"
+  },
+  "m_b538e73b7e": {
+    "message": "Guardar y cambiar"
+  },
+  "m_f7c3004a90": {
+    "message": "Cambiar sin guardar"
+  },
+  "m_348b8cbfe6": {
+    "message": "No hay un espacio donde guardar, por lo que no se puede guardar en esta pantalla."
+  },
+  "m_6c891ec97d": {
+    "message": "Abrir la barra izquierda en el panel lateral (la posición del panel de Chrome debe ser la izquierda)"
+  },
+  "m_10432c2864": {
+    "message": "Abrir la barra izquierda en el panel lateral"
+  },
+  "m_72397565b9": {
+    "message": "Alternar el modo oscuro"
+  },
+  "m_48e334a386": {
+    "message": "Añadir una categoría"
+  },
+  "m_53e842102c": {
+    "message": "Exportar todos los datos a un archivo JSON"
+  },
+  "m_e44031674a": {
+    "message": "Cargar datos desde un archivo JSON"
+  },
+  "m_da76e386a1": {
+    "message": "Intervalo de copia de seguridad automática"
+  },
+  "m_ce06239034": {
+    "message": "Guardar automáticamente las pestañas actuales al cambiar de espacio"
+  },
+  "m_54bcd667a4": {
+    "message": "Cambiar de categoría"
+  },
+  "m_80022cdc79": {
+    "message": "Cambiar nombre del espacio"
+  },
+  "m_a9f0f1eba3": {
+    "message": "Archivar espacio"
+  },
+  "m_65902d6ec2": {
+    "message": "Eliminar espacio"
+  },
+  "m_a54c2c00ae": {
+    "message": "Restaurar desde el archivo"
+  },
+  "m_da37848919": {
+    "message": "Eliminar definitivamente"
+  },
+  "m_6293e5e0a9": {
+    "message": "Cambiar vista"
+  },
+  "m_b4cf24ebe1": {
+    "message": "Vista de lista"
+  },
+  "m_1e578fc996": {
+    "message": "Vista de tarjetas"
+  },
+  "m_b1c9cf7a56": {
+    "message": "Filtrar por título o URL de la pestaña…"
+  },
+  "m_2eabfa845d": {
+    "message": "Crear un grupo de pestañas nuevo"
+  },
+  "m_32dbab9f90": {
+    "message": "Escribe el nombre de una categoría…"
+  },
+  "m_a7b8477445": {
+    "message": "Tab Matomen Kai"
+  },
+  "m_2e57cc29ef": {
+    "message": "Para mantenerla visible a la izquierda mientras navegas, cambia la \"Posición del panel lateral\" de Chrome a \"Izquierda\" y pulsa el botón de arriba."
+  },
+  "m_22c2dc1788": {
+    "message": "Abrir la configuración de Chrome"
+  },
+  "m_5d208d1c21": {
+    "message": "Tab Matomen"
+  },
+  "m_798f95db5d": {
+    "message": "Kai"
+  },
+  "m_fbc350db7c": {
+    "message": "＋ Espacio"
+  },
+  "m_041f4ac575": {
+    "message": "＋ Categoría"
+  },
+  "m_14095d67d9": {
+    "message": "Aún no hay espacios"
+  },
+  "m_b9e400d207": {
+    "message": "Exportar"
+  },
+  "m_9eb51e84ba": {
+    "message": "Importar"
+  },
+  "m_2a81a2c8cc": {
+    "message": "Copia de seguridad automática"
+  },
+  "m_17b500293e": {
+    "message": "Desactivada"
+  },
+  "m_ca7c80cb81": {
+    "message": "Cada hora"
+  },
+  "m_d2fe3b7e6e": {
+    "message": "Cada 6 horas"
+  },
+  "m_d63043a388": {
+    "message": "Diaria"
+  },
+  "m_0ac73ac1aa": {
+    "message": "Guardado automático al cambiar"
+  },
+  "m_c73d62d960": {
+    "message": "Archivados"
+  },
+  "m_0de3e408a2": {
+    "message": "Selecciona un espacio"
+  },
+  "m_dd3cca7f34": {
+    "message": "Categoría"
+  },
+  "m_79338c0706": {
+    "message": "Cambiar nombre"
+  },
+  "m_442ee7eb76": {
+    "message": "Restaurar"
+  },
+  "m_5839f00a0d": {
+    "message": "＋ Grupo"
+  },
+  "m_ccd039eca2": {
+    "message": "Guardar pestañas actuales"
+  },
+  "m_aff97557b0": {
+    "message": "Aún no se han guardado pestañas en este espacio"
+  },
+  "m_83d0565a6f": {
+    "message": "Abre todas las pestañas que quieras guardar (esta pestaña del panel principal puede seguir abierta)"
+  },
+  "m_fab476e40b": {
+    "message": "Tus pestañas aparecerán aquí"
+  },
+  "m_2e408b9c01": {
+    "message": "Primeros pasos"
+  },
+  "m_3a09b3b90d": {
+    "message": "Con ese espacio seleccionado, abre todas las pestañas que quieras guardar"
+  },
+  "m_2884c23c94": {
+    "message": "Para el siguiente proyecto, crea un espacio nuevo y guarda de la misma forma"
+  },
+  "m_2061886749": {
+    "message": "Haz clic en el nombre de un espacio de la barra lateral para cambiar de pestañas"
+  },
+  "m_27131257d7": {
+    "message": "Arrastra un espacio sobre el nombre de una categoría para moverlo"
+  },
+  "m_7406792479": {
+    "message": "Crear una categoría"
+  },
+  "m_121ae791f1": {
+    "message": "Color"
+  },
+  "m_614f2eaaff": {
+    "message": "Crear"
+  },
+  "m_1a2e920ba7": {
+    "message": "Ninguno"
+  },
+  "m_72776ab68f": {
+    "message": "Rojo"
+  },
+  "m_831166ef4b": {
+    "message": "Naranja"
+  },
+  "m_7720f8ea0a": {
+    "message": "Amarillo"
+  },
+  "m_f22758bf8f": {
+    "message": "Verde"
+  },
+  "m_29e5ef1fa6": {
+    "message": "Verde azulado"
+  },
+  "m_845d1da87f": {
+    "message": "Azul"
+  },
+  "m_01caea5810": {
+    "message": "Morado"
+  },
+  "m_caaf2acdb2": {
+    "message": "Rosa"
+  },
+  "m_5378733ecf": {
+    "message": "Gris"
+  },
+  "m_96aea44a0c": {
+    "message": "Azul"
+  },
+  "m_97397cc2e0": {
+    "message": "Rojo"
+  },
+  "m_5cd070ae56": {
+    "message": "Amarillo"
+  },
+  "m_031e9b20e8": {
+    "message": "Verde"
+  },
+  "m_d96fea3531": {
+    "message": "Morado"
+  },
+  "m_55018581ba": {
+    "message": "Cian"
+  },
+  "m_aabcb11957": {
+    "message": "Establecer imagen"
+  },
+  "m_ace3472c03": {
+    "message": "Quitar imagen"
+  },
+  "m_26dfc3aefe": {
+    "message": "Escribe un nombre de categoría."
+  },
+  "m_39a49bde63": {
+    "message": "Ya existe una categoría llamada \"$1\"."
+  },
+  "m_629a6eefac": {
+    "message": "Escribe un nombre de espacio."
+  },
+  "m_29c082f9b5": {
+    "message": "Ya existe un espacio llamado \"$1\"."
+  },
+  "m_09648e447c": {
+    "message": "No se encontró el espacio."
+  },
+  "m_d40bd34d6f": {
+    "message": "Error al reordenar los grupos."
+  },
+  "m_f95e7d8675": {
+    "message": "Error al reordenar las pestañas."
+  },
+  "m_3dfdf80d58": {
+    "message": "Añadir una subcategoría"
+  },
+  "m_6ab1008863": {
+    "message": "Cambiar el color de la categoría"
+  },
+  "m_29f18064c3": {
+    "message": "Cambiar nombre de la categoría"
+  },
+  "m_b3dd5064ba": {
+    "message": "Eliminar (los espacios pasan a Sin categoría)"
+  },
+  "m_1b31bc2d61": {
+    "message": "Cambiar el color del archivo"
+  },
+  "m_7234f5d4ed": {
+    "message": "No hay espacios archivados"
+  },
+  "m_c922e46a12": {
+    "message": "$1 (archivado / $2 pestañas)"
+  },
+  "m_78380175c5": {
+    "message": "Cambiar el color del tema y el icono"
+  },
+  "m_b8901ba999": {
+    "message": "$1 ($2 pestañas)"
+  },
+  "m_f76574e271": {
+    "message": "$1 | Panel principal"
+  },
+  "m_e17d188654": {
+    "message": "Crea primero un espacio"
+  },
+  "m_3009a0e43b": {
+    "message": "Volver a la pestaña activa"
+  },
+  "m_1816d78893": {
+    "message": "Ninguna pestaña coincide con \"$1\"."
+  },
+  "m_876cb3ca26": {
+    "message": "Suelta aquí para quitar del grupo"
+  },
+  "m_97edcdfb5e": {
+    "message": "Cambiar el color del grupo"
+  },
+  "m_4ccd455653": {
+    "message": "Cambiar nombre del grupo"
+  },
+  "m_73fd4c5de6": {
+    "message": "Eliminar grupo (las pestañas quedan sin grupo)"
+  },
+  "m_f32ff53372": {
+    "message": "Arrastra para reordenar"
+  },
+  "m_dcea25f949": {
+    "message": "Este grupo no tiene pestañas. Arrastra pestañas aquí para añadirlas"
+  },
+  "m_d3811d54bb": {
+    "message": "$1\n$2\nHaz clic para abrir / arrastra para mover entre grupos"
+  },
+  "m_05120d62af": {
+    "message": "Seleccionar: $1"
+  },
+  "m_f82fcc53cd": {
+    "message": "Clic para seleccionar, Shift+clic para seleccionar un rango"
+  },
+  "m_4bed8152a4": {
+    "message": "Archivar esta pestaña"
+  },
+  "m_cf45400a02": {
+    "message": "Archivar (ocultar de la barra de pestañas)"
+  },
+  "m_626612ea5e": {
+    "message": "Eliminar esta pestaña"
+  },
+  "m_88c92c22d4": {
+    "message": "Error al cargar los datos."
+  },
+  "m_cd6a909d39": {
+    "message": "Escribe un nombre para el nuevo espacio:"
+  },
+  "m_1cefe0ca30": {
+    "message": "Se creó el espacio \"$1\"."
+  },
+  "m_ed1eac911a": {
+    "message": "Error al crear el espacio."
+  },
+  "m_f2b265026b": {
+    "message": "Escribe el nuevo nombre del espacio:"
+  },
+  "m_f2b748c88b": {
+    "message": "Se cambió el nombre del espacio."
+  },
+  "m_c0e48c9028": {
+    "message": "Error al cambiar el nombre del espacio."
+  },
+  "m_f4f1d62806": {
+    "message": "¿Eliminar el espacio \"$1\"?\nTambién se eliminará toda la información de pestañas guardada."
+  },
+  "m_88dd8d49f3": {
+    "message": "Se eliminó el espacio \"$1\"."
+  },
+  "m_89289d2423": {
+    "message": "Error al eliminar el espacio."
+  },
+  "m_7609ae5732": {
+    "message": "¿Archivar el espacio \"$1\"?\nSus datos se conservan y se podrán restaurar más tarde."
+  },
+  "m_ace51b281e": {
+    "message": "Se archivó el espacio \"$1\"."
+  },
+  "m_b4f5deb27f": {
+    "message": "Error al archivar."
+  },
+  "m_2551a4a971": {
+    "message": "Se restauró el espacio \"$1\"."
+  },
+  "m_e82b7d25f2": {
+    "message": "Error al restaurar."
+  },
+  "m_e95765e8a5": {
+    "message": "¿Eliminar definitivamente el espacio \"$1\"?\nEsta acción no se puede deshacer."
+  },
+  "m_ca94b050f3": {
+    "message": "Se eliminó definitivamente el espacio \"$1\"."
+  },
+  "m_6e82f81122": {
+    "message": "Error al eliminar."
+  },
+  "m_507e16fe4e": {
+    "message": "No hay ningún espacio seleccionado. Selecciona o crea un espacio."
+  },
+  "m_f351029a37": {
+    "message": "No había pestañas que guardar (las páginas chrome:// no se pueden guardar)."
+  },
+  "m_f272b678d1": {
+    "message": "Se guardaron $1 pestañas."
+  },
+  "m_f38b273b38": {
+    "message": "Error al guardar las pestañas."
+  },
+  "m_d48c02f761": {
+    "message": "Las pestañas abiertas actualmente no están guardadas en ningún espacio.\n"
+  },
+  "m_e92defc1cb": {
+    "message": "Si cambias, estas pestañas se cerrarán sin guardarse.\n\n"
+  },
+  "m_0fe3f5ec9d": {
+    "message": "\"Guardado automático al cambiar\" está desactivado.\n"
+  },
+  "m_2bde3706ab": {
+    "message": "Las pestañas actuales se cerrarán sin guardarse en \"$1\".\n\n"
+  },
+  "m_1ad7ff9d86": {
+    "message": "Como estás cambiando desde un espacio archivado, las pestañas actuales se cerrarán sin guardarse.\n\n"
+  },
+  "m_2bc14b7cca": {
+    "message": "Las pestañas abiertas actualmente se cerrarán sin guardarse.\n\n"
+  },
+  "m_be1598e030": {
+    "message": "¿Cambiar al espacio \"$1\"?"
+  },
+  "m_618731a7e3": {
+    "message": "No hay destino donde guardar"
+  },
+  "m_c837ab2cde": {
+    "message": "Se canceló el cambio porque falló el guardado."
+  },
+  "m_814259bda8": {
+    "message": "Se canceló el cambio porque no se pudo guardar el historial previo al cambio."
+  },
+  "m_91c0550a7a": {
+    "message": "Se cambió al espacio \"$1\"."
+  },
+  "m_7db912ef11": {
+    "message": "Error al cambiar de espacio."
+  },
+  "m_b6afad9923": {
+    "message": "Error al eliminar la pestaña."
+  },
+  "m_b623491f35": {
+    "message": "Se movió \"$1\" a \"$2\"."
+  },
+  "m_2768c12413": {
+    "message": "Error al mover la categoría."
+  },
+  "m_429435583a": {
+    "message": "Error al reordenar."
+  },
+  "m_c1460a0421": {
+    "message": "Error al reordenar las categorías."
+  },
+  "m_ddf26ce3ed": {
+    "message": "Exportación completada: $1 espacios / $2 categorías → pwm-backup-$3.json"
+  },
+  "m_f693a2b833": {
+    "message": "Error al exportar."
+  },
+  "m_00de6b5511": {
+    "message": "El formato del archivo no es válido."
+  },
+  "m_75e9dd8f76": {
+    "message": "Desconocido"
+  },
+  "m_efccfe8e49": {
+    "message": "¿Importar este archivo de copia de seguridad?\n\n  Espacios    : $1\n  Categorías  : $2\n  Creado      : $3\n\nSe sobrescribirán todos los datos actuales. ¿Continuar?"
+  },
+  "m_ce1d0548a0": {
+    "message": "Importación completada: $1 espacios / $2 categorías"
+  },
+  "m_8df1c53c2e": {
+    "message": "Error al analizar el JSON."
+  },
+  "m_682e44dcfb": {
+    "message": "Error al importar. $1"
+  },
+  "m_db96a9457a": {
+    "message": "Se creó la categoría \"$1\"."
+  },
+  "m_1dcd4efe17": {
+    "message": "Error al crear la categoría."
+  },
+  "m_5c1ea7fb37": {
+    "message": "Crear una subcategoría de \"$1\""
+  },
+  "m_c961917824": {
+    "message": "Se creó la subcategoría \"$1\"."
+  },
+  "m_569633928e": {
+    "message": "Error al crear la subcategoría."
+  },
+  "m_025af6c3cb": {
+    "message": "Escribe el nuevo nombre de la categoría:"
+  },
+  "m_f3b1a68d36": {
+    "message": "Se cambió el nombre de la categoría."
+  },
+  "m_0f834403b5": {
+    "message": "Error al cambiar el nombre de la categoría."
+  },
+  "m_904330b1c2": {
+    "message": "¿Eliminar la categoría \"$1\"?\nLos espacios que contiene pasarán a \"Sin categoría\"."
+  },
+  "m_482af4adff": {
+    "message": "Se eliminó la categoría \"$1\"."
+  },
+  "m_152585e380": {
+    "message": "Error al eliminar la categoría."
+  },
+  "m_a8377443c2": {
+    "message": "0: Sin categoría\n"
+  },
+  "m_5d1ccf930a": {
+    "message": " ← actual"
+  },
+  "m_248d1228f5": {
+    "message": "$1: ＋ Crear una categoría nueva"
+  },
+  "m_6f13eed82d": {
+    "message": "Elige una categoría para \"$1\" (escribe un número):\n\n$2"
+  },
+  "m_db7a8db4a9": {
+    "message": "Escribe un número válido."
+  },
+  "m_62abac0149": {
+    "message": "Movido a \"Sin categoría\"."
+  },
+  "m_bab01b0a0b": {
+    "message": "Movido a la categoría \"$1\"."
+  },
+  "m_c35c527047": {
+    "message": "Crear una categoría nueva"
+  },
+  "m_936cd7f801": {
+    "message": "Se creó la categoría \"$1\" y se movió el espacio a ella."
+  },
+  "m_1f9b554bc9": {
+    "message": "Error al cambiar de categoría."
+  },
+  "m_49dbd7dc23": {
+    "message": "Crear un grupo"
+  },
+  "m_e94783b08f": {
+    "message": "Selecciona un espacio."
+  },
+  "m_637efb62a0": {
+    "message": "Se creó el grupo \"$1\"."
+  },
+  "m_e5c17530ad": {
+    "message": "Error al crear el grupo."
+  },
+  "m_f648e8b5a9": {
+    "message": "Editar grupo"
+  },
+  "m_c6df24a6c9": {
+    "message": "Grupo actualizado."
+  },
+  "m_762bfecbd7": {
+    "message": "Error al actualizar el grupo."
+  },
+  "m_6ab993caa7": {
+    "message": "¿Eliminar el grupo \"$1\"?\nSus pestañas quedarán sin grupo."
+  },
+  "m_d06ff38c9c": {
+    "message": "Se eliminó el grupo \"$1\"."
+  },
+  "m_ce516ef82e": {
+    "message": "Error al eliminar el grupo."
+  },
+  "m_deccd3ca1c": {
+    "message": "Error al mover la pestaña."
+  },
+  "m_9ab79d75a0": {
+    "message": "Cambiar al modo claro"
+  },
+  "m_2aff1d2b6a": {
+    "message": "Cambiar al modo oscuro"
+  },
+  "m_a49e39c667": {
+    "message": "Copia de seguridad automática desactivada."
+  },
+  "m_33ec021992": {
+    "message": "Copia de seguridad automática configurada: $1."
+  },
+  "m_938dbc938d": {
+    "message": "Guardado automático al cambiar activado."
+  },
+  "m_4f8b8d9b2e": {
+    "message": "Guardado automático al cambiar desactivado."
+  },
+  "m_b3afead7ff": {
+    "message": "Guardar pestañas actuales ($1S)"
+  },
+  "m_910348bd6b": {
+    "message": "Añadir una pestaña"
+  },
+  "m_2f9e6135b4": {
+    "message": "Editar favoritos"
+  },
+  "m_f4c69f0508": {
+    "message": "Selecciona"
+  },
+  "m_51a3053d75": {
+    "message": "No hay páginas web que añadir."
+  },
+  "m_53f079d16f": {
+    "message": "Crea primero un espacio."
+  },
+  "m_ae3ecc7ed2": {
+    "message": "Pestaña que añadir"
+  },
+  "m_e63bc2f7aa": {
+    "message": "Espacio de destino"
+  },
+  "m_6d5cd75875": {
+    "message": "Añadir"
+  },
+  "m_85ccd53d0e": {
+    "message": "No se pueden leer las pestañas"
+  },
+  "m_31d3cc3310": {
+    "message": "Esta URL ya está guardada en el destino."
+  },
+  "m_ddb65d86ef": {
+    "message": "Se añadió 1 pestaña a \"$1\"."
+  },
+  "m_9fbca578c5": {
+    "message": "No se pudo añadir. Revisa la pestaña y el destino."
+  },
+  "m_4004b8f1db": {
+    "message": "No se pudieron leer las pestañas."
+  },
+  "m_4648287945": {
+    "message": "No se pudieron guardar los favoritos."
+  },
+  "m_03c994e60e": {
+    "message": "Podrás registrar favoritos después de crear un espacio."
+  },
+  "m_a2c6ae915e": {
+    "message": "No se pudieron cargar los favoritos."
+  },
+  "m_296dad2d72": {
+    "message": "Favoritos"
+  },
+  "m_c1b61fe80e": {
+    "message": "Espacios recientes"
+  },
+  "m_ec351de08b": {
+    "message": "Vista previa de pestañas guardadas"
+  },
+  "m_fa9f222dca": {
+    "message": "No se pudo abrir la pestaña."
+  },
+  "m_c9ebf4c3f7": {
+    "message": "No hay pestañas guardadas"
+  },
+  "m_6329f21c41": {
+    "message": "Configuración"
+  },
+  "m_e438ffd26f": {
+    "message": "Configuración (importar/exportar, copia de seguridad, guardado automático)"
+  },
+  "m_56b6cd2c1a": {
+    "message": "Abrir la configuración"
+  },
+  "m_00820b1780": {
+    "message": "Cerrar la configuración"
+  },
+  "m_bf10ec5ff4": {
+    "message": "Los cambios de configuración se guardan al instante. Al importar se sobrescriben los datos guardados actualmente."
+  },
+  "m_c32d6516f4": {
+    "message": "‹ Cerrar"
+  },
+  "m_74f34a1534": {
+    "message": "‹ Contraer"
+  },
+  "m_0a57aeec9d": {
+    "message": "Cerrar la barra lateral"
+  },
+  "m_0b845075d6": {
+    "message": "Contraer la barra lateral"
+  },
+  "m_2c2e1923ea": {
+    "message": "Cerrar (vuelve a abrirla con el icono de la extensión en la barra de herramientas)"
+  },
+  "m_6264a3f76a": {
+    "message": "No se pudo cerrar. Inténtalo de nuevo."
+  },
+  "m_91323fe947": {
+    "message": "Expandir la barra lateral"
+  },
+  "m_28e3b7ba50": {
+    "message": "Cambia la posición del panel lateral de Chrome a \"Izquierda\". No se abre en la derecha."
+  },
+  "m_2c14db7241": {
+    "message": "Se abrió la barra lateral izquierda. Permanece visible mientras navegas por otras páginas. Si la cierras, vuelve a abrirla con el icono de la extensión en la barra de herramientas."
+  },
+  "m_07a63337a6": {
+    "message": "Se requiere Chrome 141 o posterior para detectar la posición izquierda."
+  },
+  "m_c5ed08a7f9": {
+    "message": "La ventana aún se está preparando. Inténtalo de nuevo."
+  },
+  "m_14ae9512a4": {
+    "message": "No se pudo abrir la barra lateral. Inténtalo de nuevo."
+  },
+  "m_89da984b3c": {
+    "message": "Tab Matomen Kai — Barra izquierda"
+  },
+  "m_2e759e9300": {
+    "message": "Abrir el panel principal"
+  },
+  "m_99f2a39628": {
+    "message": "No se pudo abrir el panel principal. Inténtalo de nuevo."
+  },
+  "m_c7f325f13f": {
+    "message": "Deshacer"
+  },
+  "m_41852537df": {
+    "message": "No se puede deshacer durante el cambio."
+  },
+  "m_88291348ad": {
+    "message": "No se puede deshacer porque no se encontró el espacio."
+  },
+  "m_9c5b54b484": {
+    "message": "Se canceló la acción de deshacer porque se hicieron cambios después."
+  },
+  "m_7e6b5ba160": {
+    "message": "Deshecho."
+  },
+  "m_a89f5a6dd5": {
+    "message": "No se pudo deshacer."
+  },
+  "m_64c1599a05": {
+    "message": "Se eliminó 1 pestaña."
+  },
+  "m_bd0d74ffbc": {
+    "message": "Se archivó 1 pestaña."
+  },
+  "m_429855c857": {
+    "message": "Buscar proyectos y espacios"
+  },
+  "m_2437c7c79c": {
+    "message": "Restaurar la disposición anterior"
+  },
+  "m_d0b101161c": {
+    "message": "No hay historial previo al cambio"
+  },
+  "m_c030b56060": {
+    "message": "Error al guardar: vuelve a guardar"
+  },
+  "m_0a14601b8e": {
+    "message": "Selecciona un espacio donde guardar"
+  },
+  "m_aa9e381e6f": {
+    "message": "Cambios sin guardar"
+  },
+  "m_74e30e9189": {
+    "message": "Guardado"
+  },
+  "m_3b69257cb0": {
+    "message": " · Archivado"
+  },
+  "m_d34e19303a": {
+    "message": "Ningún espacio coincide"
+  },
+  "m_3881f5d6ed": {
+    "message": "No se puede determinar el estado de guardado"
+  },
+  "m_97aa22defa": {
+    "message": "Restaura la disposición de pestañas anterior. La disposición actual también se conserva en el historial. No se puede recuperar lo que estaba escrito y sin enviar en las páginas."
+  },
+  "m_9ea03093db": {
+    "message": "Se restauró la disposición de pestañas anterior."
+  },
+  "m_9930817c6f": {
+    "message": "Error al restaurar. Revisa el historial e inténtalo de nuevo."
+  },
+  "m_6644f06197": {
+    "message": "Guardando…"
+  },
+  "appName": {
+    "message": "Tab Matomen Kai"
+  },
+  "appDescription": {
+    "message": "Crea un espacio para cada proyecto y cambia entre conjuntos de pestañas dentro de la misma ventana de Chrome."
+  },
+  "actionTitle": {
+    "message": "Abrir Tab Matomen Kai"
+  },
+  "onboardingClickSave": {
+    "message": "Haz clic en el botón \"Guardar pestañas actuales\" de arriba"
+  },
+  "onboardingClickNewSpace": {
+    "message": "Haz clic en \"＋ Espacio\" a la izquierda y escribe el nombre de un proyecto"
+  },
+  "onboardingSaveExplained": {
+    "message": "Haz clic en \"Guardar pestañas actuales\" para guardar las pestañas"
+  },
+  "restoreHistoryTitle": {
+    "message": "Disposición anterior ($1). Se conserva hasta que se cierre el navegador"
+  },
+  "m_9e9943aa18": {
+    "message": "No se concedió acceso a Google."
+  },
+  "m_1b162ecb08": {
+    "message": "Conéctate a Google Drive."
+  },
+  "m_38e08f6f72": {
+    "message": "No se pudo confirmar el permiso para guardar copias de seguridad."
+  },
+  "m_063e83e937": {
+    "message": "Se canceló la conexión."
+  },
+  "m_cbe501233e": {
+    "message": "La redirección de autenticación no coincide."
+  },
+  "m_195c611c2a": {
+    "message": "No se pudo verificar la autenticación. Vuelve a conectar."
+  },
+  "m_210231350f": {
+    "message": "Introduce un ID de cliente de OAuth."
+  },
+  "m_27298d6197": {
+    "message": "Conéctate a Google Drive. Si la conexión caducó, deberás volver a conectar."
+  },
+  "m_76e8f9b19a": {
+    "message": "Se está guardando una copia de seguridad desde otra ventana."
+  },
+  "m_c62a99397a": {
+    "message": "TabMatomenKai_"
+  },
+  "m_551f37d20f": {
+    "message": "No se pudo confirmar el resultado. Revisa Google Drive antes de volver a intentarlo."
+  },
+  "m_6d2d7cf526": {
+    "message": "La conexión caducó. Vuelve a conectar con Google Drive."
+  },
+  "m_e5be1db2f7": {
+    "message": "No se pudo guardar ($1). Comprueba que la Drive API esté habilitada, que se haya concedido el permiso y que haya espacio de almacenamiento disponible."
+  },
+  "m_fd067b945c": {
+    "message": "No se pudo confirmar el destino. Revisa Google Drive."
+  },
+  "m_e756be4d47": {
+    "message": "Copia de seguridad en Google Drive"
+  },
+  "m_5ea424f93b": {
+    "message": "Guarda tus espacios, categorías y pestañas en Mi unidad como un archivo JSON con marca de fecha y hora."
+  },
+  "m_6b5763bf71": {
+    "message": "Pulsa \"Conectar con Google Drive\" para abrir la pantalla de permisos de Google. Tras permitirlo, Chrome mantiene la conexión y la renueva automáticamente cuando caduca."
+  },
+  "m_7b5914be86": {
+    "message": "Configuración de la primera conexión"
+  },
+  "m_e6720a68da": {
+    "message": "Habilita la Drive API en Google Cloud y crea un cliente de OAuth (aplicación web). Registra la siguiente URL como URI de redirección autorizado."
+  },
+  "m_f5da3ecf70": {
+    "message": "URI de redirección"
+  },
+  "m_d80926d454": {
+    "message": "ID de cliente de OAuth"
+  },
+  "m_dc59c3eb54": {
+    "message": "No se necesita ningún secreto de cliente. Si el estado de publicación es de prueba, añade como usuario de prueba la cuenta de Google que utilices."
+  },
+  "m_a8a3126796": {
+    "message": "Conectar con Google Drive"
+  },
+  "m_4c23d9e46d": {
+    "message": "Hacer copia ahora"
+  },
+  "m_4d138770f9": {
+    "message": "Desconectar este navegador"
+  },
+  "m_c64f38ecfa": {
+    "message": "Abrir la última copia de seguridad"
+  },
+  "m_81d7efe6b9": {
+    "message": "Último guardado: $1 "
+  },
+  "m_f11b0168dc": {
+    "message": "Procesando…"
+  },
+  "m_e873b731b1": {
+    "message": "Conectado. Ya puedes guardar copias de seguridad."
+  },
+  "m_f714e3e49d": {
+    "message": "Copia de seguridad guardada en Google Drive."
+  },
+  "m_307c18ccd9": {
+    "message": "Este navegador se desconectó. Los archivos guardados permanecen en Drive."
+  },
+  "m_23e782bfe8": {
+    "message": "Conectado"
+  },
+  "m_26a4745b1e": {
+    "message": "No se pudo cargar la configuración. Vuelve a abrir esta pantalla."
+  },
+  "languageHeading": {
+    "message": "Idioma"
+  },
+  "languageAuto": {
+    "message": "Usar el idioma del navegador ($1)"
+  },
+  "languageHelp": {
+    "message": "Al cambiar el idioma de la interfaz se recarga la pantalla."
+  },
+  "reviewTitle": {
+    "message": "¿Te está ayudando Tab Matomen Kai?"
+  },
+  "reviewBody": {
+    "message": "Si es así, una reseña en la Chrome Web Store nos ayudaría mucho y contribuye al desarrollo."
+  },
+  "reviewWrite": {
+    "message": "Escribir una reseña"
+  },
+  "reviewLater": {
+    "message": "Más tarde"
+  },
+  "reviewNever": {
+    "message": "No volver a mostrar"
+  },
+  "reviewThanks": {
+    "message": "¡Gracias!"
+  }
+}

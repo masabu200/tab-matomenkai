@@ -1,0 +1,1229 @@
+{
+  "m_2ce01f81ad": {
+    "message": "Integração com IA local"
+  },
+  "m_a8ce0201c4": {
+    "message": "Enquanto estiver conectado, os títulos dos espaços, as URLs e as informações dos grupos são compartilhados com o servidor de integração neste PC. O conteúdo das páginas nunca é compartilhado."
+  },
+  "m_a9356d61c7": {
+    "message": "Chave de conexão"
+  },
+  "m_9dd838b6ab": {
+    "message": "Cole o .local/token do servidor de integração"
+  },
+  "m_5119847c00": {
+    "message": "Conectar"
+  },
+  "m_092575584a": {
+    "message": "Desconectar"
+  },
+  "m_2e845bddec": {
+    "message": "Ver sugestões"
+  },
+  "m_463f7d5d30": {
+    "message": "Reverter a última reorganização"
+  },
+  "m_7ea46c0315": {
+    "message": "Não conectado"
+  },
+  "m_fb71a4e085": {
+    "message": "Erro de conexão"
+  },
+  "m_9606bdda03": {
+    "message": "Ver sugestões ($1)"
+  },
+  "m_b5e969dec9": {
+    "message": "Conectado · $1 sugestões"
+  },
+  "m_cda8d46d3f": {
+    "message": "Não foi possível conectar: "
+  },
+  "m_c4e07534d2": {
+    "message": "Cole a chave de conexão de 64 caracteres"
+  },
+  "m_0b9939e1f9": {
+    "message": "Desconectado"
+  },
+  "m_a9b2455ca6": {
+    "message": "Sugestões da IA"
+  },
+  "m_1c7d43cb8f": {
+    "message": "Aplicar as alterações selecionadas"
+  },
+  "m_16661f1537": {
+    "message": "Descartar esta sugestão"
+  },
+  "m_3da5c18551": {
+    "message": "Fechar"
+  },
+  "m_2fbbb892d1": {
+    "message": "Os dados salvos foram alterados, então esta sugestão não pode mais ser aplicada. Peça uma nova proposta à IA."
+  },
+  "m_33dc0c7eef": {
+    "message": "Os dados salvos foram alterados. Solicite uma nova proposta."
+  },
+  "m_4e265c1689": {
+    "message": "$1 alterações aplicadas. As guias abertas não foram modificadas."
+  },
+  "m_62157d9463": {
+    "message": "Não há histórico de reorganização para reverter"
+  },
+  "m_33b0b3d01c": {
+    "message": "Não é possível reverter porque houve alterações depois"
+  },
+  "m_b1c9392214": {
+    "message": "Revertido para o estado anterior à reorganização"
+  },
+  "m_6aa1453553": {
+    "message": "Mantenha entre 1 e 50 alterações"
+  },
+  "m_b96d769eac": {
+    "message": "Espaço de destino não encontrado"
+  },
+  "m_2b707f3b85": {
+    "message": "Formato de alteração inválido"
+  },
+  "m_f7c288ba66": {
+    "message": "Os nomes devem ter de 1 a 120 caracteres"
+  },
+  "m_bd93ad1a6f": {
+    "message": "Renomear: $1 → $2"
+  },
+  "m_ebeb4c2304": {
+    "message": "Categoria de destino não encontrada"
+  },
+  "m_f4d781035f": {
+    "message": "Sem categoria"
+  },
+  "m_42e0c95815": {
+    "message": "Mover categoria: $1 → $2"
+  },
+  "m_55a535bafa": {
+    "message": "Somente URLs HTTP/HTTPS podem ser adicionadas"
+  },
+  "m_43c516fa6a": {
+    "message": "Esta URL já está salva"
+  },
+  "m_39b67bcaf4": {
+    "message": "Formato de título inválido"
+  },
+  "m_03f6623a18": {
+    "message": "Adicionar guia: $1 ← $2"
+  },
+  "m_6a6f94972c": {
+    "message": "Posição da guia inválida"
+  },
+  "m_579a11d917": {
+    "message": "Escolha um espaço diferente"
+  },
+  "m_46ba84410f": {
+    "message": "A URL da guia de destino não corresponde"
+  },
+  "m_8924020b2a": {
+    "message": "O destino já tem a mesma URL"
+  },
+  "m_11b801d8a2": {
+    "message": "Mover guia: $1 ($2 → $3)"
+  },
+  "m_42adb155e1": {
+    "message": "Operação não compatível"
+  },
+  "m_4091966e8a": {
+    "message": "Salvar no Tab Matomen Kai"
+  },
+  "m_6079395160": {
+    "message": "Ainda não há espaços (crie um no painel)"
+  },
+  "m_2167649eea": {
+    "message": "Abrir o Tab Matomen Kai"
+  },
+  "m_ecde74ef1b": {
+    "message": "Salvo em \"$1\" ($2 guias)"
+  },
+  "m_6f91f13005": {
+    "message": "Já salvo em \"$1\""
+  },
+  "m_a9276d6dfe": {
+    "message": "Não foi possível salvar. Verifique o espaço no painel"
+  },
+  "m_56415d676e": {
+    "message": "O conteúdo do backup é inválido. Seus dados atuais não foram alterados."
+  },
+  "m_a18e4bec39": {
+    "message": "Ações em lote para guias"
+  },
+  "m_f6365e7574": {
+    "message": "Selecionar tudo"
+  },
+  "m_e135253c38": {
+    "message": "0 selecionadas"
+  },
+  "m_9a2cef5d5b": {
+    "message": "Abrir as guias selecionadas nesta janela"
+  },
+  "m_119daf93ee": {
+    "message": "Abrir"
+  },
+  "m_2cb583698f": {
+    "message": "Espaço de destino"
+  },
+  "m_9a97fc3ae6": {
+    "message": "Mover"
+  },
+  "m_71a12fb43e": {
+    "message": "Grupo de destino"
+  },
+  "m_e70ecafd50": {
+    "message": "Para o grupo"
+  },
+  "m_ae75ae1d2a": {
+    "message": "Formato da cópia"
+  },
+  "m_ce05fd6a61": {
+    "message": "Título e URL"
+  },
+  "m_c257bec714": {
+    "message": "Somente URLs"
+  },
+  "m_295cc5d596": {
+    "message": "Copiar uma lista das guias selecionadas (ou do espaço inteiro se nenhuma estiver selecionada)"
+  },
+  "m_e94c210766": {
+    "message": "Copiar"
+  },
+  "m_a2307d9555": {
+    "message": "Arquivar as guias selecionadas"
+  },
+  "m_c686c1a9dd": {
+    "message": "Arquivar"
+  },
+  "m_2fe1822ad4": {
+    "message": "Excluir as guias selecionadas"
+  },
+  "m_5cbdf1fd70": {
+    "message": "Excluir"
+  },
+  "m_f0dc9f43d4": {
+    "message": "Limpar seleção (Esc)"
+  },
+  "m_ec7ae06b09": {
+    "message": "Limpar"
+  },
+  "m_fca5a8dc9f": {
+    "message": "$1 selecionadas"
+  },
+  "m_91f77f62c2": {
+    "message": "Mover para…"
+  },
+  "m_cda05ed8b5": {
+    "message": "Grupo…"
+  },
+  "m_7a137f933a": {
+    "message": "Sem grupo"
+  },
+  "m_bcbebef3cf": {
+    "message": "Grupo sem título"
+  },
+  "m_4710908c81": {
+    "message": "Novo grupo…"
+  },
+  "m_e4de78fe6b": {
+    "message": "Indisponível durante a troca."
+  },
+  "m_37bb515e00": {
+    "message": "Cancelado porque o espaço mudou. Selecione novamente."
+  },
+  "m_5e3dfdc724": {
+    "message": "Não foi possível encontrar as guias selecionadas."
+  },
+  "m_fba383cf43": {
+    "message": "$1 falhou."
+  },
+  "m_481253a7af": {
+    "message": "$1 guias abertas."
+  },
+  "m_8394e407bf": {
+    "message": "Escolha um espaço de destino."
+  },
+  "m_72a6bd4fe9": {
+    "message": "Não há espaço de destino."
+  },
+  "m_33ad04a535": {
+    "message": " ($1 com a mesma URL foram ignoradas porque o destino já as tem)"
+  },
+  "m_7c9bfe16e3": {
+    "message": "$2 guias movidas para \"$1\".$3"
+  },
+  "m_c19f04094f": {
+    "message": "Escolha um grupo."
+  },
+  "m_42f0321630": {
+    "message": "Novo grupo"
+  },
+  "m_80eb0a488d": {
+    "message": "Mover para o grupo"
+  },
+  "m_961c24d640": {
+    "message": "Grupo não encontrado."
+  },
+  "m_d42ecb5149": {
+    "message": "$1 guias colocadas em \"$2\"."
+  },
+  "m_2a8a7849b4": {
+    "message": "$1 guias removidas do grupo."
+  },
+  "m_d97fff8023": {
+    "message": "Não há guias para copiar."
+  },
+  "m_fd05c05821": {
+    "message": "$1 guias copiadas como $2."
+  },
+  "m_b4a1f2d50c": {
+    "message": "Não foi possível copiar para a área de transferência."
+  },
+  "m_63b3f3287e": {
+    "message": "Falha ao copiar."
+  },
+  "m_b48b8f8f20": {
+    "message": "$1 guias arquivadas."
+  },
+  "m_cba9bbaa15": {
+    "message": "Excluir as $1 guias selecionadas? Esta ação não pode ser desfeita."
+  },
+  "m_fae13af1e7": {
+    "message": "$1 guias excluídas."
+  },
+  "m_53884810b9": {
+    "message": "Ações do espaço"
+  },
+  "m_269b0f92e4": {
+    "message": "Cancelar"
+  },
+  "m_a530f556a0": {
+    "message": "Trocar de espaço"
+  },
+  "m_b538e73b7e": {
+    "message": "Salvar e trocar"
+  },
+  "m_f7c3004a90": {
+    "message": "Trocar sem salvar"
+  },
+  "m_348b8cbfe6": {
+    "message": "Não há espaço para salvar, então não é possível salvar nesta tela."
+  },
+  "m_6c891ec97d": {
+    "message": "Abrir a barra esquerda no painel lateral (a posição do painel do Chrome deve ser à esquerda)"
+  },
+  "m_10432c2864": {
+    "message": "Abrir a barra esquerda no painel lateral"
+  },
+  "m_72397565b9": {
+    "message": "Alternar modo escuro"
+  },
+  "m_48e334a386": {
+    "message": "Adicionar uma categoria"
+  },
+  "m_53e842102c": {
+    "message": "Exportar todos os dados para um arquivo JSON"
+  },
+  "m_e44031674a": {
+    "message": "Carregar dados de um arquivo JSON"
+  },
+  "m_da76e386a1": {
+    "message": "Intervalo do backup automático"
+  },
+  "m_ce06239034": {
+    "message": "Salvar automaticamente as guias atuais ao trocar de espaço"
+  },
+  "m_54bcd667a4": {
+    "message": "Alterar categoria"
+  },
+  "m_80022cdc79": {
+    "message": "Renomear espaço"
+  },
+  "m_a9f0f1eba3": {
+    "message": "Arquivar espaço"
+  },
+  "m_65902d6ec2": {
+    "message": "Excluir espaço"
+  },
+  "m_a54c2c00ae": {
+    "message": "Restaurar do arquivo"
+  },
+  "m_da37848919": {
+    "message": "Excluir permanentemente"
+  },
+  "m_6293e5e0a9": {
+    "message": "Alternar visualização"
+  },
+  "m_b4cf24ebe1": {
+    "message": "Visualização em lista"
+  },
+  "m_1e578fc996": {
+    "message": "Visualização em cartões"
+  },
+  "m_b1c9cf7a56": {
+    "message": "Filtrar por título ou URL da guia…"
+  },
+  "m_2eabfa845d": {
+    "message": "Criar um novo grupo de guias"
+  },
+  "m_32dbab9f90": {
+    "message": "Digite o nome da categoria…"
+  },
+  "m_a7b8477445": {
+    "message": "Tab Matomen Kai"
+  },
+  "m_2e57cc29ef": {
+    "message": "Para mantê-lo visível à esquerda enquanto navega, defina a \"Posição do painel lateral\" do Chrome como \"Esquerda\" e depois pressione o botão acima."
+  },
+  "m_22c2dc1788": {
+    "message": "Abrir as configurações do Chrome"
+  },
+  "m_5d208d1c21": {
+    "message": "Tab Matomen"
+  },
+  "m_798f95db5d": {
+    "message": "Kai"
+  },
+  "m_fbc350db7c": {
+    "message": "＋ Espaço"
+  },
+  "m_041f4ac575": {
+    "message": "＋ Categoria"
+  },
+  "m_14095d67d9": {
+    "message": "Ainda não há espaços"
+  },
+  "m_b9e400d207": {
+    "message": "Exportar"
+  },
+  "m_9eb51e84ba": {
+    "message": "Importar"
+  },
+  "m_2a81a2c8cc": {
+    "message": "Backup automático"
+  },
+  "m_17b500293e": {
+    "message": "Desativado"
+  },
+  "m_ca7c80cb81": {
+    "message": "A cada hora"
+  },
+  "m_d2fe3b7e6e": {
+    "message": "A cada 6 horas"
+  },
+  "m_d63043a388": {
+    "message": "Diariamente"
+  },
+  "m_0ac73ac1aa": {
+    "message": "Salvar automaticamente ao trocar"
+  },
+  "m_c73d62d960": {
+    "message": "Arquivados"
+  },
+  "m_0de3e408a2": {
+    "message": "Selecione um espaço"
+  },
+  "m_dd3cca7f34": {
+    "message": "Categoria"
+  },
+  "m_79338c0706": {
+    "message": "Renomear"
+  },
+  "m_442ee7eb76": {
+    "message": "Restaurar"
+  },
+  "m_5839f00a0d": {
+    "message": "＋ Grupo"
+  },
+  "m_ccd039eca2": {
+    "message": "Salvar guias atuais"
+  },
+  "m_aff97557b0": {
+    "message": "Nenhuma guia foi salva neste espaço ainda"
+  },
+  "m_83d0565a6f": {
+    "message": "Abra todas as guias que deseja salvar (esta guia do painel pode continuar aberta)"
+  },
+  "m_fab476e40b": {
+    "message": "Suas guias aparecerão aqui"
+  },
+  "m_2e408b9c01": {
+    "message": "Primeiros passos"
+  },
+  "m_3a09b3b90d": {
+    "message": "Com esse espaço selecionado, abra todas as guias que deseja salvar"
+  },
+  "m_2884c23c94": {
+    "message": "Para o próximo projeto, crie um novo espaço e salve da mesma forma"
+  },
+  "m_2061886749": {
+    "message": "Clique no nome de um espaço na barra lateral para trocar de guias"
+  },
+  "m_27131257d7": {
+    "message": "Arraste um espaço até o nome de uma categoria para movê-lo"
+  },
+  "m_7406792479": {
+    "message": "Criar uma categoria"
+  },
+  "m_121ae791f1": {
+    "message": "Cor"
+  },
+  "m_614f2eaaff": {
+    "message": "Criar"
+  },
+  "m_1a2e920ba7": {
+    "message": "Nenhuma"
+  },
+  "m_72776ab68f": {
+    "message": "Vermelho"
+  },
+  "m_831166ef4b": {
+    "message": "Laranja"
+  },
+  "m_7720f8ea0a": {
+    "message": "Amarelo"
+  },
+  "m_f22758bf8f": {
+    "message": "Verde"
+  },
+  "m_29e5ef1fa6": {
+    "message": "Verde-azulado"
+  },
+  "m_845d1da87f": {
+    "message": "Azul"
+  },
+  "m_01caea5810": {
+    "message": "Roxo"
+  },
+  "m_caaf2acdb2": {
+    "message": "Rosa"
+  },
+  "m_5378733ecf": {
+    "message": "Cinza"
+  },
+  "m_96aea44a0c": {
+    "message": "Azul"
+  },
+  "m_97397cc2e0": {
+    "message": "Vermelho"
+  },
+  "m_5cd070ae56": {
+    "message": "Amarelo"
+  },
+  "m_031e9b20e8": {
+    "message": "Verde"
+  },
+  "m_d96fea3531": {
+    "message": "Roxo"
+  },
+  "m_55018581ba": {
+    "message": "Ciano"
+  },
+  "m_aabcb11957": {
+    "message": "Definir imagem"
+  },
+  "m_ace3472c03": {
+    "message": "Remover imagem"
+  },
+  "m_26dfc3aefe": {
+    "message": "Digite um nome de categoria."
+  },
+  "m_39a49bde63": {
+    "message": "Já existe uma categoria chamada \"$1\"."
+  },
+  "m_629a6eefac": {
+    "message": "Digite um nome de espaço."
+  },
+  "m_29c082f9b5": {
+    "message": "Já existe um espaço chamado \"$1\"."
+  },
+  "m_09648e447c": {
+    "message": "Espaço não encontrado."
+  },
+  "m_d40bd34d6f": {
+    "message": "Falha ao reordenar os grupos."
+  },
+  "m_f95e7d8675": {
+    "message": "Falha ao reordenar as guias."
+  },
+  "m_3dfdf80d58": {
+    "message": "Adicionar uma subcategoria"
+  },
+  "m_6ab1008863": {
+    "message": "Alterar cor da categoria"
+  },
+  "m_29f18064c3": {
+    "message": "Renomear categoria"
+  },
+  "m_b3dd5064ba": {
+    "message": "Excluir (os espaços vão para Sem categoria)"
+  },
+  "m_1b31bc2d61": {
+    "message": "Alterar cor dos arquivados"
+  },
+  "m_7234f5d4ed": {
+    "message": "Nenhum espaço arquivado"
+  },
+  "m_c922e46a12": {
+    "message": "$1 (arquivado / $2 guias)"
+  },
+  "m_78380175c5": {
+    "message": "Alterar cor do tema e ícone"
+  },
+  "m_b8901ba999": {
+    "message": "$1 ($2 guias)"
+  },
+  "m_f76574e271": {
+    "message": "$1 | Painel"
+  },
+  "m_e17d188654": {
+    "message": "Crie um espaço primeiro"
+  },
+  "m_3009a0e43b": {
+    "message": "Voltar à guia ativa"
+  },
+  "m_1816d78893": {
+    "message": "Nenhuma guia corresponde a \"$1\"."
+  },
+  "m_876cb3ca26": {
+    "message": "Solte aqui para remover do grupo"
+  },
+  "m_97edcdfb5e": {
+    "message": "Alterar cor do grupo"
+  },
+  "m_4ccd455653": {
+    "message": "Renomear grupo"
+  },
+  "m_73fd4c5de6": {
+    "message": "Excluir grupo (as guias ficam sem grupo)"
+  },
+  "m_f32ff53372": {
+    "message": "Arraste para reordenar"
+  },
+  "m_dcea25f949": {
+    "message": "Este grupo não tem guias. Arraste guias até aqui para adicioná-las"
+  },
+  "m_d3811d54bb": {
+    "message": "$1\n$2\nClique para abrir / arraste para mover entre grupos"
+  },
+  "m_05120d62af": {
+    "message": "Selecionar: $1"
+  },
+  "m_f82fcc53cd": {
+    "message": "Clique para selecionar, Shift+clique para selecionar um intervalo"
+  },
+  "m_4bed8152a4": {
+    "message": "Arquivar esta guia"
+  },
+  "m_cf45400a02": {
+    "message": "Arquivar (ocultar da barra de guias)"
+  },
+  "m_626612ea5e": {
+    "message": "Excluir esta guia"
+  },
+  "m_88c92c22d4": {
+    "message": "Falha ao carregar os dados."
+  },
+  "m_cd6a909d39": {
+    "message": "Digite um nome para o novo espaço:"
+  },
+  "m_1cefe0ca30": {
+    "message": "Espaço \"$1\" criado."
+  },
+  "m_ed1eac911a": {
+    "message": "Falha ao criar o espaço."
+  },
+  "m_f2b265026b": {
+    "message": "Digite um novo nome para o espaço:"
+  },
+  "m_f2b748c88b": {
+    "message": "Espaço renomeado."
+  },
+  "m_c0e48c9028": {
+    "message": "Falha ao renomear o espaço."
+  },
+  "m_f4f1d62806": {
+    "message": "Excluir o espaço \"$1\"?\nTodas as informações das guias salvas também serão excluídas."
+  },
+  "m_88dd8d49f3": {
+    "message": "Espaço \"$1\" excluído."
+  },
+  "m_89289d2423": {
+    "message": "Falha ao excluir o espaço."
+  },
+  "m_7609ae5732": {
+    "message": "Arquivar o espaço \"$1\"?\nOs dados são mantidos e podem ser restaurados depois."
+  },
+  "m_ace51b281e": {
+    "message": "Espaço \"$1\" arquivado."
+  },
+  "m_b4f5deb27f": {
+    "message": "Falha ao arquivar."
+  },
+  "m_2551a4a971": {
+    "message": "Espaço \"$1\" restaurado."
+  },
+  "m_e82b7d25f2": {
+    "message": "Falha ao restaurar."
+  },
+  "m_e95765e8a5": {
+    "message": "Excluir permanentemente o espaço \"$1\"?\nEsta ação não pode ser desfeita."
+  },
+  "m_ca94b050f3": {
+    "message": "Espaço \"$1\" excluído permanentemente."
+  },
+  "m_6e82f81122": {
+    "message": "Falha ao excluir."
+  },
+  "m_507e16fe4e": {
+    "message": "Nenhum espaço selecionado. Selecione ou crie um espaço."
+  },
+  "m_f351029a37": {
+    "message": "Não havia guias para salvar (páginas chrome:// não podem ser salvas)."
+  },
+  "m_f272b678d1": {
+    "message": "$1 guias salvas."
+  },
+  "m_f38b273b38": {
+    "message": "Falha ao salvar as guias."
+  },
+  "m_d48c02f761": {
+    "message": "As guias abertas no momento não estão salvas em nenhum espaço.\n"
+  },
+  "m_e92defc1cb": {
+    "message": "Se você trocar, estas guias serão fechadas sem serem salvas.\n\n"
+  },
+  "m_0fe3f5ec9d": {
+    "message": "\"Salvar automaticamente ao trocar\" está desativado.\n"
+  },
+  "m_2bde3706ab": {
+    "message": "As guias atuais serão fechadas sem serem salvas em \"$1\".\n\n"
+  },
+  "m_1ad7ff9d86": {
+    "message": "Como você está saindo de um espaço arquivado, as guias atuais serão fechadas sem serem salvas.\n\n"
+  },
+  "m_2bc14b7cca": {
+    "message": "As guias abertas no momento serão fechadas sem serem salvas.\n\n"
+  },
+  "m_be1598e030": {
+    "message": "Trocar para o espaço \"$1\"?"
+  },
+  "m_618731a7e3": {
+    "message": "Nenhum destino para salvar"
+  },
+  "m_c837ab2cde": {
+    "message": "A troca foi cancelada porque o salvamento falhou."
+  },
+  "m_814259bda8": {
+    "message": "A troca foi cancelada porque não foi possível salvar o histórico anterior à troca."
+  },
+  "m_91c0550a7a": {
+    "message": "Trocado para o espaço \"$1\"."
+  },
+  "m_7db912ef11": {
+    "message": "Falha ao trocar de espaço."
+  },
+  "m_b6afad9923": {
+    "message": "Falha ao excluir a guia."
+  },
+  "m_b623491f35": {
+    "message": "\"$1\" movido para \"$2\"."
+  },
+  "m_2768c12413": {
+    "message": "Falha ao mover a categoria."
+  },
+  "m_429435583a": {
+    "message": "Falha ao reordenar."
+  },
+  "m_c1460a0421": {
+    "message": "Falha ao reordenar as categorias."
+  },
+  "m_ddf26ce3ed": {
+    "message": "Exportação concluída: $1 espaços / $2 categorias → pwm-backup-$3.json"
+  },
+  "m_f693a2b833": {
+    "message": "Falha na exportação."
+  },
+  "m_00de6b5511": {
+    "message": "O formato do arquivo é inválido."
+  },
+  "m_75e9dd8f76": {
+    "message": "Desconhecido"
+  },
+  "m_efccfe8e49": {
+    "message": "Importar este arquivo de backup?\n\n  Espaços     : $1\n  Categorias  : $2\n  Criado em   : $3\n\nTodos os dados atuais serão sobrescritos. Continuar?"
+  },
+  "m_ce1d0548a0": {
+    "message": "Importação concluída: $1 espaços / $2 categorias"
+  },
+  "m_8df1c53c2e": {
+    "message": "Falha ao analisar o JSON."
+  },
+  "m_682e44dcfb": {
+    "message": "Falha na importação. $1"
+  },
+  "m_db96a9457a": {
+    "message": "Categoria \"$1\" criada."
+  },
+  "m_1dcd4efe17": {
+    "message": "Falha ao criar a categoria."
+  },
+  "m_5c1ea7fb37": {
+    "message": "Criar uma subcategoria de \"$1\""
+  },
+  "m_c961917824": {
+    "message": "Subcategoria \"$1\" criada."
+  },
+  "m_569633928e": {
+    "message": "Falha ao criar a subcategoria."
+  },
+  "m_025af6c3cb": {
+    "message": "Digite um novo nome para a categoria:"
+  },
+  "m_f3b1a68d36": {
+    "message": "Categoria renomeada."
+  },
+  "m_0f834403b5": {
+    "message": "Falha ao renomear a categoria."
+  },
+  "m_904330b1c2": {
+    "message": "Excluir a categoria \"$1\"?\nOs espaços dentro dela serão movidos para \"Sem categoria\"."
+  },
+  "m_482af4adff": {
+    "message": "Categoria \"$1\" excluída."
+  },
+  "m_152585e380": {
+    "message": "Falha ao excluir a categoria."
+  },
+  "m_a8377443c2": {
+    "message": "0: Sem categoria\n"
+  },
+  "m_5d1ccf930a": {
+    "message": " ← atual"
+  },
+  "m_248d1228f5": {
+    "message": "$1: ＋ Criar uma nova categoria"
+  },
+  "m_6f13eed82d": {
+    "message": "Escolha uma categoria para \"$1\" (digite um número):\n\n$2"
+  },
+  "m_db7a8db4a9": {
+    "message": "Digite um número válido."
+  },
+  "m_62abac0149": {
+    "message": "Movido para \"Sem categoria\"."
+  },
+  "m_bab01b0a0b": {
+    "message": "Movido para a categoria \"$1\"."
+  },
+  "m_c35c527047": {
+    "message": "Criar uma nova categoria"
+  },
+  "m_936cd7f801": {
+    "message": "Categoria \"$1\" criada e o espaço foi movido para ela."
+  },
+  "m_1f9b554bc9": {
+    "message": "Falha ao alterar a categoria."
+  },
+  "m_49dbd7dc23": {
+    "message": "Criar um grupo"
+  },
+  "m_e94783b08f": {
+    "message": "Selecione um espaço."
+  },
+  "m_637efb62a0": {
+    "message": "Grupo \"$1\" criado."
+  },
+  "m_e5c17530ad": {
+    "message": "Falha ao criar o grupo."
+  },
+  "m_f648e8b5a9": {
+    "message": "Editar grupo"
+  },
+  "m_c6df24a6c9": {
+    "message": "Grupo atualizado."
+  },
+  "m_762bfecbd7": {
+    "message": "Falha ao atualizar o grupo."
+  },
+  "m_6ab993caa7": {
+    "message": "Excluir o grupo \"$1\"?\nAs guias dele ficarão sem grupo."
+  },
+  "m_d06ff38c9c": {
+    "message": "Grupo \"$1\" excluído."
+  },
+  "m_ce516ef82e": {
+    "message": "Falha ao excluir o grupo."
+  },
+  "m_deccd3ca1c": {
+    "message": "Falha ao mover a guia."
+  },
+  "m_9ab79d75a0": {
+    "message": "Mudar para o modo claro"
+  },
+  "m_2aff1d2b6a": {
+    "message": "Mudar para o modo escuro"
+  },
+  "m_a49e39c667": {
+    "message": "Backup automático desativado."
+  },
+  "m_33ec021992": {
+    "message": "Backup automático definido como: $1."
+  },
+  "m_938dbc938d": {
+    "message": "Salvar automaticamente ao trocar ativado."
+  },
+  "m_4f8b8d9b2e": {
+    "message": "Salvar automaticamente ao trocar desativado."
+  },
+  "m_b3afead7ff": {
+    "message": "Salvar guias atuais ($1S)"
+  },
+  "m_910348bd6b": {
+    "message": "Adicionar uma guia"
+  },
+  "m_2f9e6135b4": {
+    "message": "Editar favoritos"
+  },
+  "m_f4c69f0508": {
+    "message": "Selecione"
+  },
+  "m_51a3053d75": {
+    "message": "Não há páginas da web para adicionar."
+  },
+  "m_53f079d16f": {
+    "message": "Crie um espaço primeiro."
+  },
+  "m_ae3ecc7ed2": {
+    "message": "Guia a adicionar"
+  },
+  "m_e63bc2f7aa": {
+    "message": "Espaço de destino"
+  },
+  "m_6d5cd75875": {
+    "message": "Adicionar"
+  },
+  "m_85ccd53d0e": {
+    "message": "Não foi possível ler as guias"
+  },
+  "m_31d3cc3310": {
+    "message": "Esta URL já está salva no destino."
+  },
+  "m_ddb65d86ef": {
+    "message": "1 guia adicionada a \"$1\"."
+  },
+  "m_9fbca578c5": {
+    "message": "Não foi possível adicionar. Verifique a guia e o destino."
+  },
+  "m_4004b8f1db": {
+    "message": "Não foi possível ler as guias."
+  },
+  "m_4648287945": {
+    "message": "Não foi possível salvar os favoritos."
+  },
+  "m_03c994e60e": {
+    "message": "Você pode cadastrar favoritos depois de criar um espaço."
+  },
+  "m_a2c6ae915e": {
+    "message": "Não foi possível carregar os favoritos."
+  },
+  "m_296dad2d72": {
+    "message": "Favoritos"
+  },
+  "m_c1b61fe80e": {
+    "message": "Espaços recentes"
+  },
+  "m_ec351de08b": {
+    "message": "Visualização das guias salvas"
+  },
+  "m_fa9f222dca": {
+    "message": "Não foi possível abrir a guia."
+  },
+  "m_c9ebf4c3f7": {
+    "message": "Nenhuma guia salva"
+  },
+  "m_6329f21c41": {
+    "message": "Configurações"
+  },
+  "m_e438ffd26f": {
+    "message": "Configurações (importação/exportação, backup, salvamento automático)"
+  },
+  "m_56b6cd2c1a": {
+    "message": "Abrir configurações"
+  },
+  "m_00820b1780": {
+    "message": "Fechar configurações"
+  },
+  "m_bf10ec5ff4": {
+    "message": "As configurações alteradas são salvas imediatamente. A importação sobrescreve os dados salvos atualmente."
+  },
+  "m_c32d6516f4": {
+    "message": "‹ Fechar"
+  },
+  "m_74f34a1534": {
+    "message": "‹ Recolher"
+  },
+  "m_0a57aeec9d": {
+    "message": "Fechar a barra lateral"
+  },
+  "m_0b845075d6": {
+    "message": "Recolher a barra lateral"
+  },
+  "m_2c2e1923ea": {
+    "message": "Fechar (reabra com o ícone da extensão na barra de ferramentas)"
+  },
+  "m_6264a3f76a": {
+    "message": "Não foi possível fechar. Tente novamente."
+  },
+  "m_91323fe947": {
+    "message": "Expandir a barra lateral"
+  },
+  "m_28e3b7ba50": {
+    "message": "Defina a posição do painel lateral do Chrome como \"Esquerda\". Ele não abre à direita."
+  },
+  "m_2c14db7241": {
+    "message": "A barra lateral esquerda foi aberta. Ela permanece visível enquanto você navega em outras páginas. Se você fechá-la, reabra-a com o ícone da extensão na barra de ferramentas."
+  },
+  "m_07a63337a6": {
+    "message": "É necessário o Chrome 141 ou posterior para detectar a posição à esquerda."
+  },
+  "m_c5ed08a7f9": {
+    "message": "A janela ainda está sendo preparada. Tente novamente."
+  },
+  "m_14ae9512a4": {
+    "message": "Não foi possível abrir a barra lateral. Tente novamente."
+  },
+  "m_89da984b3c": {
+    "message": "Tab Matomen Kai — Barra esquerda"
+  },
+  "m_2e759e9300": {
+    "message": "Abrir painel"
+  },
+  "m_99f2a39628": {
+    "message": "Não foi possível abrir o painel. Tente novamente."
+  },
+  "m_c7f325f13f": {
+    "message": "Desfazer"
+  },
+  "m_41852537df": {
+    "message": "Não é possível desfazer durante a troca."
+  },
+  "m_88291348ad": {
+    "message": "Não é possível desfazer porque o espaço não foi encontrado."
+  },
+  "m_9c5b54b484": {
+    "message": "A ação de desfazer foi cancelada porque houve alterações depois."
+  },
+  "m_7e6b5ba160": {
+    "message": "Desfeito."
+  },
+  "m_a89f5a6dd5": {
+    "message": "Não foi possível desfazer."
+  },
+  "m_64c1599a05": {
+    "message": "1 guia excluída."
+  },
+  "m_bd0d74ffbc": {
+    "message": "1 guia arquivada."
+  },
+  "m_429855c857": {
+    "message": "Pesquisar projetos e espaços"
+  },
+  "m_2437c7c79c": {
+    "message": "Restaurar layout anterior"
+  },
+  "m_d0b101161c": {
+    "message": "Sem histórico anterior à troca"
+  },
+  "m_c030b56060": {
+    "message": "Falha ao salvar: salve novamente"
+  },
+  "m_0a14601b8e": {
+    "message": "Selecione um espaço para salvar"
+  },
+  "m_aa9e381e6f": {
+    "message": "Alterações não salvas"
+  },
+  "m_74e30e9189": {
+    "message": "Salvo"
+  },
+  "m_3b69257cb0": {
+    "message": " · Arquivado"
+  },
+  "m_d34e19303a": {
+    "message": "Nenhum espaço correspondente"
+  },
+  "m_3881f5d6ed": {
+    "message": "Não foi possível determinar o status de salvamento"
+  },
+  "m_97aa22defa": {
+    "message": "Restaura o layout de guias anterior. O layout atual também é mantido no histórico. O que foi digitado nas páginas e não enviado não pode ser restaurado."
+  },
+  "m_9ea03093db": {
+    "message": "Layout de guias anterior restaurado."
+  },
+  "m_9930817c6f": {
+    "message": "Falha ao restaurar. Verifique o histórico e tente novamente."
+  },
+  "m_6644f06197": {
+    "message": "Salvando…"
+  },
+  "appName": {
+    "message": "Tab Matomen Kai"
+  },
+  "appDescription": {
+    "message": "Crie um espaço para cada projeto e alterne entre conjuntos de guias na mesma janela do Chrome."
+  },
+  "actionTitle": {
+    "message": "Abrir o Tab Matomen Kai"
+  },
+  "onboardingClickSave": {
+    "message": "Clique no botão \"Salvar guias atuais\" acima"
+  },
+  "onboardingClickNewSpace": {
+    "message": "Clique em \"＋ Espaço\" à esquerda e digite o nome de um projeto"
+  },
+  "onboardingSaveExplained": {
+    "message": "Clique em \"Salvar guias atuais\" para salvar as guias"
+  },
+  "restoreHistoryTitle": {
+    "message": "Layout anterior ($1). Mantido até o navegador ser fechado"
+  },
+  "m_9e9943aa18": {
+    "message": "O acesso ao Google não foi concedido."
+  },
+  "m_1b162ecb08": {
+    "message": "Conecte-se ao Google Drive."
+  },
+  "m_38e08f6f72": {
+    "message": "Não foi possível confirmar a permissão para salvar backups."
+  },
+  "m_063e83e937": {
+    "message": "A conexão foi cancelada."
+  },
+  "m_cbe501233e": {
+    "message": "O redirecionamento da autenticação não corresponde."
+  },
+  "m_195c611c2a": {
+    "message": "Não foi possível verificar a autenticação. Conecte-se novamente."
+  },
+  "m_210231350f": {
+    "message": "Digite um ID de cliente OAuth."
+  },
+  "m_27298d6197": {
+    "message": "Conecte-se ao Google Drive. Se a conexão expirou, é preciso reconectar."
+  },
+  "m_76e8f9b19a": {
+    "message": "Um backup está sendo salvo a partir de outra janela."
+  },
+  "m_c62a99397a": {
+    "message": "TabMatomenKai_"
+  },
+  "m_551f37d20f": {
+    "message": "Não foi possível confirmar o resultado. Verifique o Google Drive antes de tentar novamente."
+  },
+  "m_6d2d7cf526": {
+    "message": "A conexão expirou. Reconecte-se ao Google Drive."
+  },
+  "m_e5be1db2f7": {
+    "message": "Não foi possível salvar ($1). Verifique se a Drive API está ativada, se a permissão foi concedida e se há espaço de armazenamento disponível."
+  },
+  "m_fd067b945c": {
+    "message": "Não foi possível confirmar o destino. Verifique o Google Drive."
+  },
+  "m_e756be4d47": {
+    "message": "Fazer backup no Google Drive"
+  },
+  "m_5ea424f93b": {
+    "message": "Salva seus espaços, categorias e guias em Meu Drive como um arquivo JSON com data e hora."
+  },
+  "m_6b5763bf71": {
+    "message": "Pressione \"Conectar ao Google Drive\" para abrir a tela de permissão do Google. Depois que você permitir, o Chrome mantém a conexão e a renova automaticamente quando expirar."
+  },
+  "m_7b5914be86": {
+    "message": "Configuração da primeira conexão"
+  },
+  "m_e6720a68da": {
+    "message": "Ative a Drive API no Google Cloud e crie um cliente OAuth (Aplicativo da Web). Registre a URL a seguir como URI de redirecionamento autorizado."
+  },
+  "m_f5da3ecf70": {
+    "message": "URI de redirecionamento"
+  },
+  "m_d80926d454": {
+    "message": "ID do cliente OAuth"
+  },
+  "m_dc59c3eb54": {
+    "message": "Não é necessário um segredo do cliente. Se o status de publicação for de teste, adicione a conta do Google que você usa como usuário de teste."
+  },
+  "m_a8a3126796": {
+    "message": "Conectar ao Google Drive"
+  },
+  "m_4c23d9e46d": {
+    "message": "Fazer backup agora"
+  },
+  "m_4d138770f9": {
+    "message": "Desconectar este navegador"
+  },
+  "m_c64f38ecfa": {
+    "message": "Abrir o último backup"
+  },
+  "m_81d7efe6b9": {
+    "message": "Último salvamento: $1 "
+  },
+  "m_f11b0168dc": {
+    "message": "Processando…"
+  },
+  "m_e873b731b1": {
+    "message": "Conectado. Agora você já pode salvar backups."
+  },
+  "m_f714e3e49d": {
+    "message": "Backup salvo no Google Drive."
+  },
+  "m_307c18ccd9": {
+    "message": "Este navegador foi desconectado. Os arquivos salvos permanecem no Drive."
+  },
+  "m_23e782bfe8": {
+    "message": "Conectado"
+  },
+  "m_26a4745b1e": {
+    "message": "Não foi possível carregar as configurações. Reabra esta tela."
+  },
+  "languageHeading": {
+    "message": "Idioma",
+    "description": "settings section heading"
+  },
+  "languageAuto": {
+    "message": "Acompanhar o idioma do navegador ($1)",
+    "description": "language select option; $1 = detected language name"
+  },
+  "languageHelp": {
+    "message": "Alterar o idioma de exibição recarrega a tela.",
+    "description": "settings help text"
+  },
+  "reviewTitle": {
+    "message": "O Tab Matomen Kai está ajudando você?",
+    "description": "review prompt title"
+  },
+  "reviewBody": {
+    "message": "Se sim, uma avaliação na Chrome Web Store ajudaria muito e apoia o desenvolvimento.",
+    "description": "review prompt body"
+  },
+  "reviewWrite": {
+    "message": "Escrever uma avaliação",
+    "description": "review prompt button"
+  },
+  "reviewLater": {
+    "message": "Mais tarde",
+    "description": "review prompt button"
+  },
+  "reviewNever": {
+    "message": "Não mostrar novamente",
+    "description": "review prompt button"
+  },
+  "reviewThanks": {
+    "message": "Obrigado!",
+    "description": "review prompt after clicking write"
+  }
+}

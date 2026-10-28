@@ -2,7 +2,7 @@
 // Keep everyday navigation visible; occasional actions live in Settings.
 (() => {
   const dialog=document.getElementById('settingsDialog');
-  const heading=document.createElement('h3');heading.textContent='スペースの操作';heading.className='settings-actions-title';
+  const heading=document.createElement('h3');heading.textContent=t('m_53884810b9');heading.className='settings-actions-title';
   const actions=document.createElement('div');actions.className='settings-workspace-actions';
   const tools=document.querySelector('.workspace-tools');
   for(const item of tools.querySelectorAll(':scope > button'))actions.append(item);

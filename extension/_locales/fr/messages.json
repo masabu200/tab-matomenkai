@@ -1,0 +1,1220 @@
+{
+  "m_2ce01f81ad": {
+    "message": "Intégration IA locale"
+  },
+  "m_a8ce0201c4": {
+    "message": "Tant que la connexion est active, les titres des espaces, les URL et les informations de groupe sont partagés avec le serveur d'intégration de ce PC. Le contenu des pages n'est jamais partagé."
+  },
+  "m_a9356d61c7": {
+    "message": "Clé de connexion"
+  },
+  "m_9dd838b6ab": {
+    "message": "Collez le .local/token du serveur d'intégration"
+  },
+  "m_5119847c00": {
+    "message": "Se connecter"
+  },
+  "m_092575584a": {
+    "message": "Se déconnecter"
+  },
+  "m_2e845bddec": {
+    "message": "Voir les suggestions"
+  },
+  "m_463f7d5d30": {
+    "message": "Annuler la dernière réorganisation"
+  },
+  "m_7ea46c0315": {
+    "message": "Non connecté"
+  },
+  "m_fb71a4e085": {
+    "message": "Erreur de connexion"
+  },
+  "m_9606bdda03": {
+    "message": "Voir les suggestions ($1)"
+  },
+  "m_b5e969dec9": {
+    "message": "Connecté · $1 suggestions"
+  },
+  "m_cda8d46d3f": {
+    "message": "Connexion impossible : "
+  },
+  "m_c4e07534d2": {
+    "message": "Collez la clé de connexion de 64 caractères"
+  },
+  "m_0b9939e1f9": {
+    "message": "Déconnecté"
+  },
+  "m_a9b2455ca6": {
+    "message": "Suggestions de l'IA"
+  },
+  "m_1c7d43cb8f": {
+    "message": "Appliquer les modifications sélectionnées"
+  },
+  "m_16661f1537": {
+    "message": "Ignorer cette suggestion"
+  },
+  "m_3da5c18551": {
+    "message": "Fermer"
+  },
+  "m_2fbbb892d1": {
+    "message": "Les données enregistrées ont changé : cette suggestion ne peut plus être appliquée. Demandez une nouvelle proposition à l'IA."
+  },
+  "m_33dc0c7eef": {
+    "message": "Les données enregistrées ont changé. Veuillez demander une nouvelle proposition."
+  },
+  "m_4e265c1689": {
+    "message": "$1 modifications appliquées. Les onglets ouverts n'ont pas été modifiés."
+  },
+  "m_62157d9463": {
+    "message": "Aucun historique de réorganisation à annuler"
+  },
+  "m_33b0b3d01c": {
+    "message": "Annulation impossible car des modifications ont été faites depuis"
+  },
+  "m_b1c9392214": {
+    "message": "État antérieur à la réorganisation rétabli"
+  },
+  "m_6aa1453553": {
+    "message": "Veuillez limiter les modifications à un nombre compris entre 1 et 50"
+  },
+  "m_b96d769eac": {
+    "message": "Espace cible introuvable"
+  },
+  "m_2b707f3b85": {
+    "message": "Format de modification non valide"
+  },
+  "m_f7c288ba66": {
+    "message": "Les noms doivent comporter de 1 à 120 caractères"
+  },
+  "m_bd93ad1a6f": {
+    "message": "Renommer : $1 → $2"
+  },
+  "m_ebeb4c2304": {
+    "message": "Catégorie de destination introuvable"
+  },
+  "m_f4d781035f": {
+    "message": "Sans catégorie"
+  },
+  "m_42e0c95815": {
+    "message": "Déplacer la catégorie : $1 → $2"
+  },
+  "m_55a535bafa": {
+    "message": "Seules les URL HTTP/HTTPS peuvent être ajoutées"
+  },
+  "m_43c516fa6a": {
+    "message": "Cette URL est déjà enregistrée"
+  },
+  "m_39b67bcaf4": {
+    "message": "Format de titre non valide"
+  },
+  "m_03f6623a18": {
+    "message": "Ajouter un onglet : $1 ← $2"
+  },
+  "m_6a6f94972c": {
+    "message": "Position d'onglet non valide"
+  },
+  "m_579a11d917": {
+    "message": "Veuillez choisir un autre espace"
+  },
+  "m_46ba84410f": {
+    "message": "L'URL de l'onglet cible ne correspond pas"
+  },
+  "m_8924020b2a": {
+    "message": "La destination contient déjà la même URL"
+  },
+  "m_11b801d8a2": {
+    "message": "Déplacer l'onglet : $1 ($2 → $3)"
+  },
+  "m_42adb155e1": {
+    "message": "Opération non prise en charge"
+  },
+  "m_4091966e8a": {
+    "message": "Enregistrer dans Tab Matomen Kai"
+  },
+  "m_6079395160": {
+    "message": "Aucun espace pour l'instant (créez-en un dans le tableau de bord)"
+  },
+  "m_2167649eea": {
+    "message": "Ouvrir Tab Matomen Kai"
+  },
+  "m_ecde74ef1b": {
+    "message": "Enregistré dans « $1 » ($2 onglets)"
+  },
+  "m_6f91f13005": {
+    "message": "Déjà enregistré dans « $1 »"
+  },
+  "m_a9276d6dfe": {
+    "message": "Enregistrement impossible. Vérifiez l'espace dans le tableau de bord"
+  },
+  "m_56415d676e": {
+    "message": "Le contenu de la sauvegarde n'est pas valide. Vos données actuelles n'ont pas été modifiées."
+  },
+  "m_a18e4bec39": {
+    "message": "Actions groupées sur les onglets"
+  },
+  "m_f6365e7574": {
+    "message": "Tout sélectionner"
+  },
+  "m_e135253c38": {
+    "message": "0 sélectionné"
+  },
+  "m_9a2cef5d5b": {
+    "message": "Ouvrir les onglets sélectionnés dans cette fenêtre"
+  },
+  "m_119daf93ee": {
+    "message": "Ouvrir"
+  },
+  "m_2cb583698f": {
+    "message": "Espace de destination"
+  },
+  "m_9a97fc3ae6": {
+    "message": "Déplacer"
+  },
+  "m_71a12fb43e": {
+    "message": "Groupe de destination"
+  },
+  "m_e70ecafd50": {
+    "message": "Vers le groupe"
+  },
+  "m_ae75ae1d2a": {
+    "message": "Format de copie"
+  },
+  "m_ce05fd6a61": {
+    "message": "Titre et URL"
+  },
+  "m_c257bec714": {
+    "message": "URL uniquement"
+  },
+  "m_295cc5d596": {
+    "message": "Copier la liste des onglets sélectionnés (ou de tout l'espace si aucun n'est sélectionné)"
+  },
+  "m_e94c210766": {
+    "message": "Copier"
+  },
+  "m_a2307d9555": {
+    "message": "Archiver les onglets sélectionnés"
+  },
+  "m_c686c1a9dd": {
+    "message": "Archiver"
+  },
+  "m_2fe1822ad4": {
+    "message": "Supprimer les onglets sélectionnés"
+  },
+  "m_5cbdf1fd70": {
+    "message": "Supprimer"
+  },
+  "m_f0dc9f43d4": {
+    "message": "Effacer la sélection (Échap)"
+  },
+  "m_ec7ae06b09": {
+    "message": "Effacer"
+  },
+  "m_fca5a8dc9f": {
+    "message": "$1 sélectionnés"
+  },
+  "m_91f77f62c2": {
+    "message": "Déplacer vers…"
+  },
+  "m_cda05ed8b5": {
+    "message": "Groupe…"
+  },
+  "m_7a137f933a": {
+    "message": "Aucun groupe"
+  },
+  "m_bcbebef3cf": {
+    "message": "Groupe sans titre"
+  },
+  "m_4710908c81": {
+    "message": "Nouveau groupe…"
+  },
+  "m_e4de78fe6b": {
+    "message": "Indisponible pendant le changement d'espace."
+  },
+  "m_37bb515e00": {
+    "message": "Annulé car l'espace a changé. Veuillez sélectionner à nouveau."
+  },
+  "m_5e3dfdc724": {
+    "message": "Les onglets sélectionnés sont introuvables."
+  },
+  "m_fba383cf43": {
+    "message": "Échec : $1."
+  },
+  "m_481253a7af": {
+    "message": "$1 onglets ouverts."
+  },
+  "m_8394e407bf": {
+    "message": "Veuillez choisir un espace de destination."
+  },
+  "m_72a6bd4fe9": {
+    "message": "Il n'y a aucun espace de destination."
+  },
+  "m_33ad04a535": {
+    "message": " ($1 avec la même URL ont été ignorés car la destination les contient déjà)"
+  },
+  "m_7c9bfe16e3": {
+    "message": "$2 onglets déplacés vers « $1 ».$3"
+  },
+  "m_c19f04094f": {
+    "message": "Veuillez choisir un groupe."
+  },
+  "m_42f0321630": {
+    "message": "Nouveau groupe"
+  },
+  "m_80eb0a488d": {
+    "message": "Déplacer vers le groupe"
+  },
+  "m_961c24d640": {
+    "message": "Groupe introuvable."
+  },
+  "m_d42ecb5149": {
+    "message": "$1 onglets placés dans « $2 »."
+  },
+  "m_2a8a7849b4": {
+    "message": "$1 onglets retirés de leur groupe."
+  },
+  "m_d97fff8023": {
+    "message": "Aucun onglet à copier."
+  },
+  "m_fd05c05821": {
+    "message": "$1 onglets copiés au format $2."
+  },
+  "m_b4a1f2d50c": {
+    "message": "Impossible de copier dans le presse-papiers."
+  },
+  "m_63b3f3287e": {
+    "message": "Échec de la copie."
+  },
+  "m_b48b8f8f20": {
+    "message": "$1 onglets archivés."
+  },
+  "m_cba9bbaa15": {
+    "message": "Supprimer les $1 onglets sélectionnés ? Cette action est irréversible."
+  },
+  "m_fae13af1e7": {
+    "message": "$1 onglets supprimés."
+  },
+  "m_53884810b9": {
+    "message": "Actions sur l'espace"
+  },
+  "m_269b0f92e4": {
+    "message": "Annuler"
+  },
+  "m_a530f556a0": {
+    "message": "Changer d'espace"
+  },
+  "m_b538e73b7e": {
+    "message": "Enregistrer et changer"
+  },
+  "m_f7c3004a90": {
+    "message": "Changer sans enregistrer"
+  },
+  "m_348b8cbfe6": {
+    "message": "Il n'y a aucun espace où enregistrer : l'enregistrement est impossible sur cet écran."
+  },
+  "m_6c891ec97d": {
+    "message": "Ouvrir la barre de gauche dans le panneau latéral (le panneau de Chrome doit être positionné à gauche)"
+  },
+  "m_10432c2864": {
+    "message": "Ouvrir la barre de gauche dans le panneau latéral"
+  },
+  "m_72397565b9": {
+    "message": "Basculer le mode sombre"
+  },
+  "m_48e334a386": {
+    "message": "Ajouter une catégorie"
+  },
+  "m_53e842102c": {
+    "message": "Exporter toutes les données dans un fichier JSON"
+  },
+  "m_e44031674a": {
+    "message": "Charger les données depuis un fichier JSON"
+  },
+  "m_da76e386a1": {
+    "message": "Intervalle de sauvegarde automatique"
+  },
+  "m_ce06239034": {
+    "message": "Enregistrer automatiquement les onglets actuels lors du changement d'espace"
+  },
+  "m_54bcd667a4": {
+    "message": "Changer de catégorie"
+  },
+  "m_80022cdc79": {
+    "message": "Renommer l'espace"
+  },
+  "m_a9f0f1eba3": {
+    "message": "Archiver l'espace"
+  },
+  "m_65902d6ec2": {
+    "message": "Supprimer l'espace"
+  },
+  "m_a54c2c00ae": {
+    "message": "Restaurer depuis les archives"
+  },
+  "m_da37848919": {
+    "message": "Supprimer définitivement"
+  },
+  "m_6293e5e0a9": {
+    "message": "Changer d'affichage"
+  },
+  "m_b4cf24ebe1": {
+    "message": "Affichage en liste"
+  },
+  "m_1e578fc996": {
+    "message": "Affichage en cartes"
+  },
+  "m_b1c9cf7a56": {
+    "message": "Filtrer par titre ou URL d'onglet…"
+  },
+  "m_2eabfa845d": {
+    "message": "Créer un groupe d'onglets"
+  },
+  "m_32dbab9f90": {
+    "message": "Saisissez un nom de catégorie…"
+  },
+  "m_a7b8477445": {
+    "message": "Tab Matomen Kai"
+  },
+  "m_2e57cc29ef": {
+    "message": "Pour le garder visible à gauche pendant la navigation, réglez la « Position du panneau latéral » de Chrome sur « Gauche », puis appuyez sur le bouton ci-dessus."
+  },
+  "m_22c2dc1788": {
+    "message": "Ouvrir les paramètres de Chrome"
+  },
+  "m_5d208d1c21": {
+    "message": "Tab Matomen"
+  },
+  "m_798f95db5d": {
+    "message": "Kai"
+  },
+  "m_fbc350db7c": {
+    "message": "＋ Espace"
+  },
+  "m_041f4ac575": {
+    "message": "＋ Catégorie"
+  },
+  "m_14095d67d9": {
+    "message": "Aucun espace pour l'instant"
+  },
+  "m_b9e400d207": {
+    "message": "Exporter"
+  },
+  "m_9eb51e84ba": {
+    "message": "Importer"
+  },
+  "m_2a81a2c8cc": {
+    "message": "Sauvegarde automatique"
+  },
+  "m_17b500293e": {
+    "message": "Désactivée"
+  },
+  "m_ca7c80cb81": {
+    "message": "Toutes les heures"
+  },
+  "m_d2fe3b7e6e": {
+    "message": "Toutes les 6 heures"
+  },
+  "m_d63043a388": {
+    "message": "Tous les jours"
+  },
+  "m_0ac73ac1aa": {
+    "message": "Enregistrement auto au changement"
+  },
+  "m_c73d62d960": {
+    "message": "Archives"
+  },
+  "m_0de3e408a2": {
+    "message": "Sélectionnez un espace"
+  },
+  "m_dd3cca7f34": {
+    "message": "Catégorie"
+  },
+  "m_79338c0706": {
+    "message": "Renommer"
+  },
+  "m_442ee7eb76": {
+    "message": "Restaurer"
+  },
+  "m_5839f00a0d": {
+    "message": "＋ Groupe"
+  },
+  "m_ccd039eca2": {
+    "message": "Enregistrer les onglets actuels"
+  },
+  "m_aff97557b0": {
+    "message": "Aucun onglet n'a encore été enregistré dans cet espace"
+  },
+  "m_83d0565a6f": {
+    "message": "Ouvrez tous les onglets que vous souhaitez enregistrer (cet onglet du tableau de bord peut rester ouvert)"
+  },
+  "m_fab476e40b": {
+    "message": "Vos onglets seront listés ici"
+  },
+  "m_2e408b9c01": {
+    "message": "Prise en main"
+  },
+  "m_3a09b3b90d": {
+    "message": "Une fois cet espace sélectionné, ouvrez tous les onglets que vous souhaitez enregistrer"
+  },
+  "m_2884c23c94": {
+    "message": "Pour le projet suivant, créez un nouvel espace et enregistrez de la même façon"
+  },
+  "m_2061886749": {
+    "message": "Cliquez sur le nom d'un espace dans la barre latérale pour changer d'onglets"
+  },
+  "m_27131257d7": {
+    "message": "Faites glisser un espace sur le nom d'une catégorie pour l'y déplacer"
+  },
+  "m_7406792479": {
+    "message": "Créer une catégorie"
+  },
+  "m_121ae791f1": {
+    "message": "Couleur"
+  },
+  "m_614f2eaaff": {
+    "message": "Créer"
+  },
+  "m_1a2e920ba7": {
+    "message": "Aucune"
+  },
+  "m_72776ab68f": {
+    "message": "Rouge"
+  },
+  "m_831166ef4b": {
+    "message": "Orange"
+  },
+  "m_7720f8ea0a": {
+    "message": "Jaune"
+  },
+  "m_f22758bf8f": {
+    "message": "Vert"
+  },
+  "m_29e5ef1fa6": {
+    "message": "Turquoise"
+  },
+  "m_845d1da87f": {
+    "message": "Bleu"
+  },
+  "m_01caea5810": {
+    "message": "Violet"
+  },
+  "m_caaf2acdb2": {
+    "message": "Rose"
+  },
+  "m_5378733ecf": {
+    "message": "Gris"
+  },
+  "m_96aea44a0c": {
+    "message": "Bleu"
+  },
+  "m_97397cc2e0": {
+    "message": "Rouge"
+  },
+  "m_5cd070ae56": {
+    "message": "Jaune"
+  },
+  "m_031e9b20e8": {
+    "message": "Vert"
+  },
+  "m_d96fea3531": {
+    "message": "Violet"
+  },
+  "m_55018581ba": {
+    "message": "Cyan"
+  },
+  "m_aabcb11957": {
+    "message": "Définir l'image"
+  },
+  "m_ace3472c03": {
+    "message": "Supprimer l'image"
+  },
+  "m_26dfc3aefe": {
+    "message": "Veuillez saisir un nom de catégorie."
+  },
+  "m_39a49bde63": {
+    "message": "Une catégorie nommée « $1 » existe déjà."
+  },
+  "m_629a6eefac": {
+    "message": "Veuillez saisir un nom d'espace."
+  },
+  "m_29c082f9b5": {
+    "message": "Un espace nommé « $1 » existe déjà."
+  },
+  "m_09648e447c": {
+    "message": "Espace introuvable."
+  },
+  "m_d40bd34d6f": {
+    "message": "Échec de la réorganisation des groupes."
+  },
+  "m_f95e7d8675": {
+    "message": "Échec de la réorganisation des onglets."
+  },
+  "m_3dfdf80d58": {
+    "message": "Ajouter une sous-catégorie"
+  },
+  "m_6ab1008863": {
+    "message": "Changer la couleur de la catégorie"
+  },
+  "m_29f18064c3": {
+    "message": "Renommer la catégorie"
+  },
+  "m_b3dd5064ba": {
+    "message": "Supprimer (les espaces passent dans Sans catégorie)"
+  },
+  "m_1b31bc2d61": {
+    "message": "Changer la couleur des archives"
+  },
+  "m_7234f5d4ed": {
+    "message": "Aucun espace archivé"
+  },
+  "m_c922e46a12": {
+    "message": "$1 (archivé / $2 onglets)"
+  },
+  "m_78380175c5": {
+    "message": "Changer la couleur du thème et l'icône"
+  },
+  "m_b8901ba999": {
+    "message": "$1 ($2 onglets)"
+  },
+  "m_f76574e271": {
+    "message": "$1 | Tableau de bord"
+  },
+  "m_e17d188654": {
+    "message": "Créez d'abord un espace"
+  },
+  "m_3009a0e43b": {
+    "message": "Revenir à l'onglet actif"
+  },
+  "m_1816d78893": {
+    "message": "Aucun onglet ne correspond à « $1 »."
+  },
+  "m_876cb3ca26": {
+    "message": "Déposez ici pour retirer du groupe"
+  },
+  "m_97edcdfb5e": {
+    "message": "Changer la couleur du groupe"
+  },
+  "m_4ccd455653": {
+    "message": "Renommer le groupe"
+  },
+  "m_73fd4c5de6": {
+    "message": "Supprimer le groupe (les onglets sortent du groupe)"
+  },
+  "m_f32ff53372": {
+    "message": "Faire glisser pour réorganiser"
+  },
+  "m_dcea25f949": {
+    "message": "Ce groupe ne contient aucun onglet. Faites glisser des onglets ici pour les ajouter"
+  },
+  "m_d3811d54bb": {
+    "message": "$1\n$2\nCliquer pour ouvrir / faire glisser pour déplacer entre les groupes"
+  },
+  "m_05120d62af": {
+    "message": "Sélectionner : $1"
+  },
+  "m_f82fcc53cd": {
+    "message": "Cliquez pour sélectionner, Maj+clic pour sélectionner une plage"
+  },
+  "m_4bed8152a4": {
+    "message": "Archiver cet onglet"
+  },
+  "m_cf45400a02": {
+    "message": "Archiver (masquer de la barre d'onglets)"
+  },
+  "m_626612ea5e": {
+    "message": "Supprimer cet onglet"
+  },
+  "m_88c92c22d4": {
+    "message": "Échec du chargement des données."
+  },
+  "m_cd6a909d39": {
+    "message": "Saisissez un nom pour le nouvel espace :"
+  },
+  "m_1cefe0ca30": {
+    "message": "Espace « $1 » créé."
+  },
+  "m_ed1eac911a": {
+    "message": "Échec de la création de l'espace."
+  },
+  "m_f2b265026b": {
+    "message": "Saisissez un nouveau nom d'espace :"
+  },
+  "m_f2b748c88b": {
+    "message": "Espace renommé."
+  },
+  "m_c0e48c9028": {
+    "message": "Échec du renommage de l'espace."
+  },
+  "m_f4f1d62806": {
+    "message": "Supprimer l'espace « $1 » ?\nToutes les informations d'onglets enregistrées seront également supprimées."
+  },
+  "m_88dd8d49f3": {
+    "message": "Espace « $1 » supprimé."
+  },
+  "m_89289d2423": {
+    "message": "Échec de la suppression de l'espace."
+  },
+  "m_7609ae5732": {
+    "message": "Archiver l'espace « $1 » ?\nSes données sont conservées et pourront être restaurées plus tard."
+  },
+  "m_ace51b281e": {
+    "message": "Espace « $1 » archivé."
+  },
+  "m_b4f5deb27f": {
+    "message": "Échec de l'archivage."
+  },
+  "m_2551a4a971": {
+    "message": "Espace « $1 » restauré."
+  },
+  "m_e82b7d25f2": {
+    "message": "Échec de la restauration."
+  },
+  "m_e95765e8a5": {
+    "message": "Supprimer définitivement l'espace « $1 » ?\nCette action est irréversible."
+  },
+  "m_ca94b050f3": {
+    "message": "Espace « $1 » supprimé définitivement."
+  },
+  "m_6e82f81122": {
+    "message": "Échec de la suppression."
+  },
+  "m_507e16fe4e": {
+    "message": "Aucun espace n'est sélectionné. Sélectionnez ou créez un espace."
+  },
+  "m_f351029a37": {
+    "message": "Aucun onglet à enregistrer (les pages chrome:// ne peuvent pas être enregistrées)."
+  },
+  "m_f272b678d1": {
+    "message": "$1 onglets enregistrés."
+  },
+  "m_f38b273b38": {
+    "message": "Échec de l'enregistrement des onglets."
+  },
+  "m_d48c02f761": {
+    "message": "Les onglets actuellement ouverts ne sont enregistrés dans aucun espace.\n"
+  },
+  "m_e92defc1cb": {
+    "message": "Si vous changez d'espace, ces onglets seront fermés sans être enregistrés.\n\n"
+  },
+  "m_0fe3f5ec9d": {
+    "message": "« Enregistrement auto au changement » est désactivé.\n"
+  },
+  "m_2bde3706ab": {
+    "message": "Les onglets actuels seront fermés sans être enregistrés dans « $1 ».\n\n"
+  },
+  "m_1ad7ff9d86": {
+    "message": "Comme vous quittez un espace archivé, les onglets actuels seront fermés sans être enregistrés.\n\n"
+  },
+  "m_2bc14b7cca": {
+    "message": "Les onglets actuellement ouverts seront fermés sans être enregistrés.\n\n"
+  },
+  "m_be1598e030": {
+    "message": "Passer à l'espace « $1 » ?"
+  },
+  "m_618731a7e3": {
+    "message": "Aucune destination où enregistrer"
+  },
+  "m_c837ab2cde": {
+    "message": "Le changement d'espace a été annulé car l'enregistrement a échoué."
+  },
+  "m_814259bda8": {
+    "message": "Le changement d'espace a été annulé car l'historique d'avant le changement n'a pas pu être enregistré."
+  },
+  "m_91c0550a7a": {
+    "message": "Passage à l'espace « $1 » effectué."
+  },
+  "m_7db912ef11": {
+    "message": "Échec du changement d'espace."
+  },
+  "m_b6afad9923": {
+    "message": "Échec de la suppression de l'onglet."
+  },
+  "m_b623491f35": {
+    "message": "« $1 » déplacé vers « $2 »."
+  },
+  "m_2768c12413": {
+    "message": "Échec du déplacement de la catégorie."
+  },
+  "m_429435583a": {
+    "message": "Échec de la réorganisation."
+  },
+  "m_c1460a0421": {
+    "message": "Échec de la réorganisation des catégories."
+  },
+  "m_ddf26ce3ed": {
+    "message": "Exportation terminée : $1 espaces / $2 catégories → pwm-backup-$3.json"
+  },
+  "m_f693a2b833": {
+    "message": "Échec de l'exportation."
+  },
+  "m_00de6b5511": {
+    "message": "Le format du fichier n'est pas valide."
+  },
+  "m_75e9dd8f76": {
+    "message": "Inconnu"
+  },
+  "m_efccfe8e49": {
+    "message": "Importer ce fichier de sauvegarde ?\n\n  Espaces     : $1\n  Catégories  : $2\n  Créé le     : $3\n\nToutes les données actuelles seront écrasées. Continuer ?"
+  },
+  "m_ce1d0548a0": {
+    "message": "Importation terminée : $1 espaces / $2 catégories"
+  },
+  "m_8df1c53c2e": {
+    "message": "Échec de l'analyse du JSON."
+  },
+  "m_682e44dcfb": {
+    "message": "Échec de l'importation. $1"
+  },
+  "m_db96a9457a": {
+    "message": "Catégorie « $1 » créée."
+  },
+  "m_1dcd4efe17": {
+    "message": "Échec de la création de la catégorie."
+  },
+  "m_5c1ea7fb37": {
+    "message": "Créer une sous-catégorie de « $1 »"
+  },
+  "m_c961917824": {
+    "message": "Sous-catégorie « $1 » créée."
+  },
+  "m_569633928e": {
+    "message": "Échec de la création de la sous-catégorie."
+  },
+  "m_025af6c3cb": {
+    "message": "Saisissez un nouveau nom de catégorie :"
+  },
+  "m_f3b1a68d36": {
+    "message": "Catégorie renommée."
+  },
+  "m_0f834403b5": {
+    "message": "Échec du renommage de la catégorie."
+  },
+  "m_904330b1c2": {
+    "message": "Supprimer la catégorie « $1 » ?\nLes espaces qu'elle contient passeront dans « Sans catégorie »."
+  },
+  "m_482af4adff": {
+    "message": "Catégorie « $1 » supprimée."
+  },
+  "m_152585e380": {
+    "message": "Échec de la suppression de la catégorie."
+  },
+  "m_a8377443c2": {
+    "message": "0 : Sans catégorie\n"
+  },
+  "m_5d1ccf930a": {
+    "message": " ← actuelle"
+  },
+  "m_248d1228f5": {
+    "message": "$1 : ＋ Créer une nouvelle catégorie"
+  },
+  "m_6f13eed82d": {
+    "message": "Choisissez une catégorie pour « $1 » (saisissez un numéro) :\n\n$2"
+  },
+  "m_db7a8db4a9": {
+    "message": "Veuillez saisir un numéro valide."
+  },
+  "m_62abac0149": {
+    "message": "Déplacé vers « Sans catégorie »."
+  },
+  "m_bab01b0a0b": {
+    "message": "Déplacé vers la catégorie « $1 »."
+  },
+  "m_c35c527047": {
+    "message": "Créer une nouvelle catégorie"
+  },
+  "m_936cd7f801": {
+    "message": "Catégorie « $1 » créée et espace déplacé dedans."
+  },
+  "m_1f9b554bc9": {
+    "message": "Échec du changement de catégorie."
+  },
+  "m_49dbd7dc23": {
+    "message": "Créer un groupe"
+  },
+  "m_e94783b08f": {
+    "message": "Veuillez sélectionner un espace."
+  },
+  "m_637efb62a0": {
+    "message": "Groupe « $1 » créé."
+  },
+  "m_e5c17530ad": {
+    "message": "Échec de la création du groupe."
+  },
+  "m_f648e8b5a9": {
+    "message": "Modifier le groupe"
+  },
+  "m_c6df24a6c9": {
+    "message": "Groupe mis à jour."
+  },
+  "m_762bfecbd7": {
+    "message": "Échec de la mise à jour du groupe."
+  },
+  "m_6ab993caa7": {
+    "message": "Supprimer le groupe « $1 » ?\nSes onglets sortiront du groupe."
+  },
+  "m_d06ff38c9c": {
+    "message": "Groupe « $1 » supprimé."
+  },
+  "m_ce516ef82e": {
+    "message": "Échec de la suppression du groupe."
+  },
+  "m_deccd3ca1c": {
+    "message": "Échec du déplacement de l'onglet."
+  },
+  "m_9ab79d75a0": {
+    "message": "Passer en mode clair"
+  },
+  "m_2aff1d2b6a": {
+    "message": "Passer en mode sombre"
+  },
+  "m_a49e39c667": {
+    "message": "Sauvegarde automatique désactivée."
+  },
+  "m_33ec021992": {
+    "message": "Sauvegarde automatique réglée sur : $1."
+  },
+  "m_938dbc938d": {
+    "message": "Enregistrement auto au changement activé."
+  },
+  "m_4f8b8d9b2e": {
+    "message": "Enregistrement auto au changement désactivé."
+  },
+  "m_b3afead7ff": {
+    "message": "Enregistrer les onglets actuels ($1S)"
+  },
+  "m_910348bd6b": {
+    "message": "Ajouter un onglet"
+  },
+  "m_2f9e6135b4": {
+    "message": "Modifier les favoris"
+  },
+  "m_f4c69f0508": {
+    "message": "Veuillez sélectionner"
+  },
+  "m_51a3053d75": {
+    "message": "Il n'y a aucune page web à ajouter."
+  },
+  "m_53f079d16f": {
+    "message": "Créez d'abord un espace."
+  },
+  "m_ae3ecc7ed2": {
+    "message": "Onglet à ajouter"
+  },
+  "m_e63bc2f7aa": {
+    "message": "Espace de destination"
+  },
+  "m_6d5cd75875": {
+    "message": "Ajouter"
+  },
+  "m_85ccd53d0e": {
+    "message": "Impossible de lire les onglets"
+  },
+  "m_31d3cc3310": {
+    "message": "Cette URL est déjà enregistrée dans la destination."
+  },
+  "m_ddb65d86ef": {
+    "message": "1 onglet ajouté à « $1 »."
+  },
+  "m_9fbca578c5": {
+    "message": "Ajout impossible. Vérifiez l'onglet et la destination."
+  },
+  "m_4004b8f1db": {
+    "message": "Impossible de lire les onglets."
+  },
+  "m_4648287945": {
+    "message": "Impossible d'enregistrer les favoris."
+  },
+  "m_03c994e60e": {
+    "message": "Vous pourrez enregistrer des favoris après avoir créé un espace."
+  },
+  "m_a2c6ae915e": {
+    "message": "Impossible de charger les favoris."
+  },
+  "m_296dad2d72": {
+    "message": "Favoris"
+  },
+  "m_c1b61fe80e": {
+    "message": "Espaces récents"
+  },
+  "m_ec351de08b": {
+    "message": "Aperçu des onglets enregistrés"
+  },
+  "m_fa9f222dca": {
+    "message": "Impossible d'ouvrir l'onglet."
+  },
+  "m_c9ebf4c3f7": {
+    "message": "Aucun onglet enregistré"
+  },
+  "m_6329f21c41": {
+    "message": "Paramètres"
+  },
+  "m_e438ffd26f": {
+    "message": "Paramètres (import/export, sauvegarde, enregistrement auto)"
+  },
+  "m_56b6cd2c1a": {
+    "message": "Ouvrir les paramètres"
+  },
+  "m_00820b1780": {
+    "message": "Fermer les paramètres"
+  },
+  "m_bf10ec5ff4": {
+    "message": "Les paramètres modifiés sont enregistrés immédiatement. L'importation écrase les données actuellement enregistrées."
+  },
+  "m_c32d6516f4": {
+    "message": "‹ Fermer"
+  },
+  "m_74f34a1534": {
+    "message": "‹ Réduire"
+  },
+  "m_0a57aeec9d": {
+    "message": "Fermer la barre latérale"
+  },
+  "m_0b845075d6": {
+    "message": "Réduire la barre latérale"
+  },
+  "m_2c2e1923ea": {
+    "message": "Fermer (rouvrir avec l'icône de l'extension dans la barre d'outils)"
+  },
+  "m_6264a3f76a": {
+    "message": "Fermeture impossible. Veuillez réessayer."
+  },
+  "m_91323fe947": {
+    "message": "Développer la barre latérale"
+  },
+  "m_28e3b7ba50": {
+    "message": "Réglez la position du panneau latéral de Chrome sur « Gauche ». Il ne s'ouvre pas à droite."
+  },
+  "m_2c14db7241": {
+    "message": "Barre latérale gauche ouverte. Elle reste visible pendant que vous naviguez sur d'autres pages. Si vous la fermez, rouvrez-la avec l'icône de l'extension dans la barre d'outils."
+  },
+  "m_07a63337a6": {
+    "message": "Chrome 141 ou une version ultérieure est nécessaire pour détecter la position à gauche."
+  },
+  "m_c5ed08a7f9": {
+    "message": "La fenêtre n'est pas encore prête. Veuillez réessayer."
+  },
+  "m_14ae9512a4": {
+    "message": "Impossible d'ouvrir la barre latérale. Veuillez réessayer."
+  },
+  "m_89da984b3c": {
+    "message": "Tab Matomen Kai — Barre de gauche"
+  },
+  "m_2e759e9300": {
+    "message": "Ouvrir le tableau de bord"
+  },
+  "m_99f2a39628": {
+    "message": "Impossible d'ouvrir le tableau de bord. Veuillez réessayer."
+  },
+  "m_c7f325f13f": {
+    "message": "Annuler"
+  },
+  "m_41852537df": {
+    "message": "Annulation impossible pendant le changement d'espace."
+  },
+  "m_88291348ad": {
+    "message": "Annulation impossible car l'espace est introuvable."
+  },
+  "m_9c5b54b484": {
+    "message": "Annulation interrompue car des modifications ont été faites depuis."
+  },
+  "m_7e6b5ba160": {
+    "message": "Action annulée."
+  },
+  "m_a89f5a6dd5": {
+    "message": "Impossible d'annuler."
+  },
+  "m_64c1599a05": {
+    "message": "1 onglet supprimé."
+  },
+  "m_bd0d74ffbc": {
+    "message": "1 onglet archivé."
+  },
+  "m_429855c857": {
+    "message": "Rechercher des projets et des espaces"
+  },
+  "m_2437c7c79c": {
+    "message": "Restaurer la disposition précédente"
+  },
+  "m_d0b101161c": {
+    "message": "Aucun historique d'avant le changement"
+  },
+  "m_c030b56060": {
+    "message": "Échec de l'enregistrement : veuillez enregistrer à nouveau"
+  },
+  "m_0a14601b8e": {
+    "message": "Sélectionnez un espace où enregistrer"
+  },
+  "m_aa9e381e6f": {
+    "message": "Modifications non enregistrées"
+  },
+  "m_74e30e9189": {
+    "message": "Enregistré"
+  },
+  "m_3b69257cb0": {
+    "message": " · Archivé"
+  },
+  "m_d34e19303a": {
+    "message": "Aucun espace correspondant"
+  },
+  "m_3881f5d6ed": {
+    "message": "Impossible de déterminer l'état d'enregistrement"
+  },
+  "m_97aa22defa": {
+    "message": "Restaurer la disposition d'onglets précédente. La disposition actuelle est aussi conservée dans l'historique. Les saisies non envoyées sur les pages ne peuvent pas être restaurées."
+  },
+  "m_9ea03093db": {
+    "message": "Disposition d'onglets précédente restaurée."
+  },
+  "m_9930817c6f": {
+    "message": "Échec de la restauration. Vérifiez l'historique et réessayez."
+  },
+  "m_6644f06197": {
+    "message": "Enregistrement…"
+  },
+  "appName": {
+    "message": "Tab Matomen Kai"
+  },
+  "appDescription": {
+    "message": "Créez un espace par projet et passez d'un jeu d'onglets à l'autre dans la même fenêtre Chrome."
+  },
+  "actionTitle": {
+    "message": "Ouvrir Tab Matomen Kai"
+  },
+  "onboardingClickSave": {
+    "message": "Cliquez sur le bouton « Enregistrer les onglets actuels » ci-dessus"
+  },
+  "onboardingClickNewSpace": {
+    "message": "Cliquez sur « ＋ Espace » à gauche et saisissez un nom de projet"
+  },
+  "onboardingSaveExplained": {
+    "message": "Cliquez sur « Enregistrer les onglets actuels » pour enregistrer les onglets"
+  },
+  "restoreHistoryTitle": {
+    "message": "Disposition précédente ($1). Conservée jusqu'à la fermeture du navigateur"
+  },
+  "m_9e9943aa18": {
+    "message": "L'accès à Google n'a pas été accordé."
+  },
+  "m_1b162ecb08": {
+    "message": "Connectez-vous à Google Drive."
+  },
+  "m_38e08f6f72": {
+    "message": "Impossible de confirmer l'autorisation d'enregistrer des sauvegardes."
+  },
+  "m_063e83e937": {
+    "message": "La connexion a été annulée."
+  },
+  "m_cbe501233e": {
+    "message": "La redirection d'authentification ne correspond pas."
+  },
+  "m_195c611c2a": {
+    "message": "Impossible de vérifier l'authentification. Veuillez vous reconnecter."
+  },
+  "m_210231350f": {
+    "message": "Saisissez un ID client OAuth."
+  },
+  "m_27298d6197": {
+    "message": "Connectez-vous à Google Drive. Si la connexion a expiré, vous devez vous reconnecter."
+  },
+  "m_76e8f9b19a": {
+    "message": "Une sauvegarde est en cours d'enregistrement depuis une autre fenêtre."
+  },
+  "m_c62a99397a": {
+    "message": "TabMatomenKai_"
+  },
+  "m_551f37d20f": {
+    "message": "Impossible de confirmer le résultat. Vérifiez Google Drive avant de réessayer."
+  },
+  "m_6d2d7cf526": {
+    "message": "La connexion a expiré. Reconnectez-vous à Google Drive."
+  },
+  "m_e5be1db2f7": {
+    "message": "Enregistrement impossible ($1). Vérifiez que l'API Google Drive (Drive API) est activée, que l'autorisation a été accordée et qu'il reste de l'espace de stockage."
+  },
+  "m_fd067b945c": {
+    "message": "Impossible de confirmer la destination. Vérifiez Google Drive."
+  },
+  "m_e756be4d47": {
+    "message": "Sauvegarder sur Google Drive"
+  },
+  "m_5ea424f93b": {
+    "message": "Enregistre vos espaces, catégories et onglets dans Mon Drive sous forme de fichier JSON horodaté."
+  },
+  "m_6b5763bf71": {
+    "message": "Appuyez sur « Se connecter à Google Drive » pour ouvrir l'écran d'autorisation de Google. Une fois l'accès autorisé, Chrome conserve la connexion et la renouvelle automatiquement à son expiration."
+  },
+  "m_7b5914be86": {
+    "message": "Configuration de la première connexion"
+  },
+  "m_e6720a68da": {
+    "message": "Activez la Drive API dans Google Cloud et créez un client OAuth (application Web). Enregistrez l'URL suivante comme URI de redirection autorisé."
+  },
+  "m_f5da3ecf70": {
+    "message": "URI de redirection"
+  },
+  "m_d80926d454": {
+    "message": "ID client OAuth"
+  },
+  "m_dc59c3eb54": {
+    "message": "Aucun secret client n'est nécessaire. Si l'état de publication est « Test », ajoutez le compte Google que vous utilisez comme utilisateur test."
+  },
+  "m_a8a3126796": {
+    "message": "Se connecter à Google Drive"
+  },
+  "m_4c23d9e46d": {
+    "message": "Sauvegarder maintenant"
+  },
+  "m_4d138770f9": {
+    "message": "Déconnecter ce navigateur"
+  },
+  "m_c64f38ecfa": {
+    "message": "Ouvrir la dernière sauvegarde"
+  },
+  "m_81d7efe6b9": {
+    "message": "Dernière sauvegarde : $1 "
+  },
+  "m_f11b0168dc": {
+    "message": "En cours…"
+  },
+  "m_e873b731b1": {
+    "message": "Connecté. Vous pouvez maintenant enregistrer des sauvegardes."
+  },
+  "m_f714e3e49d": {
+    "message": "Sauvegarde enregistrée sur Google Drive."
+  },
+  "m_307c18ccd9": {
+    "message": "Ce navigateur est déconnecté. Les fichiers enregistrés restent dans Drive."
+  },
+  "m_23e782bfe8": {
+    "message": "Connecté"
+  },
+  "m_26a4745b1e": {
+    "message": "Impossible de charger les paramètres. Veuillez rouvrir cet écran."
+  },
+  "languageHeading": {
+    "message": "Langue"
+  },
+  "languageAuto": {
+    "message": "Suivre la langue du navigateur ($1)"
+  },
+  "languageHelp": {
+    "message": "Changer la langue d'affichage recharge l'écran."
+  },
+  "reviewTitle": {
+    "message": "Tab Matomen Kai vous est-il utile ?"
+  },
+  "reviewBody": {
+    "message": "Si oui, un avis sur le Chrome Web Store nous aiderait beaucoup et soutient le développement."
+  },
+  "reviewWrite": {
+    "message": "Écrire un avis"
+  },
+  "reviewLater": {
+    "message": "Plus tard"
+  },
+  "reviewNever": {
+    "message": "Ne plus afficher"
+  },
+  "reviewThanks": {
+    "message": "Merci !"
+  }
+}

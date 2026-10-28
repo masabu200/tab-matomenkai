@@ -1,0 +1,1229 @@
+{
+  "m_2ce01f81ad": {
+    "message": "Local AI integration"
+  },
+  "m_a8ce0201c4": {
+    "message": "While connected, space titles, URLs and group info are shared with the integration server on this PC. Page contents are never shared."
+  },
+  "m_a9356d61c7": {
+    "message": "Connection key"
+  },
+  "m_9dd838b6ab": {
+    "message": "Paste the integration server's .local/token"
+  },
+  "m_5119847c00": {
+    "message": "Connect"
+  },
+  "m_092575584a": {
+    "message": "Disconnect"
+  },
+  "m_2e845bddec": {
+    "message": "View suggestions"
+  },
+  "m_463f7d5d30": {
+    "message": "Revert last reorganization"
+  },
+  "m_7ea46c0315": {
+    "message": "Not connected"
+  },
+  "m_fb71a4e085": {
+    "message": "Connection error"
+  },
+  "m_9606bdda03": {
+    "message": "View suggestions ($1)"
+  },
+  "m_b5e969dec9": {
+    "message": "Connected · $1 suggestions"
+  },
+  "m_cda8d46d3f": {
+    "message": "Cannot connect: "
+  },
+  "m_c4e07534d2": {
+    "message": "Paste the 64-character connection key"
+  },
+  "m_0b9939e1f9": {
+    "message": "Disconnected"
+  },
+  "m_a9b2455ca6": {
+    "message": "AI suggestions"
+  },
+  "m_1c7d43cb8f": {
+    "message": "Apply selected changes"
+  },
+  "m_16661f1537": {
+    "message": "Dismiss this suggestion"
+  },
+  "m_3da5c18551": {
+    "message": "Close"
+  },
+  "m_2fbbb892d1": {
+    "message": "Saved data has changed, so this suggestion can no longer be applied. Ask the AI for a new proposal."
+  },
+  "m_33dc0c7eef": {
+    "message": "Saved data has changed. Please request a new proposal."
+  },
+  "m_4e265c1689": {
+    "message": "Applied $1 changes. Open tabs were not modified."
+  },
+  "m_62157d9463": {
+    "message": "No reorganization history to revert"
+  },
+  "m_33b0b3d01c": {
+    "message": "Cannot revert because changes were made afterwards"
+  },
+  "m_b1c9392214": {
+    "message": "Reverted to the state before reorganization"
+  },
+  "m_6aa1453553": {
+    "message": "Please keep changes between 1 and 50"
+  },
+  "m_b96d769eac": {
+    "message": "Target space not found"
+  },
+  "m_2b707f3b85": {
+    "message": "Invalid change format"
+  },
+  "m_f7c288ba66": {
+    "message": "Names must be 1–120 characters"
+  },
+  "m_bd93ad1a6f": {
+    "message": "Rename: $1 → $2"
+  },
+  "m_ebeb4c2304": {
+    "message": "Destination category not found"
+  },
+  "m_f4d781035f": {
+    "message": "Uncategorized"
+  },
+  "m_42e0c95815": {
+    "message": "Move category: $1 → $2"
+  },
+  "m_55a535bafa": {
+    "message": "Only HTTP/HTTPS URLs can be added"
+  },
+  "m_43c516fa6a": {
+    "message": "This URL is already saved"
+  },
+  "m_39b67bcaf4": {
+    "message": "Invalid title format"
+  },
+  "m_03f6623a18": {
+    "message": "Add tab: $1 ← $2"
+  },
+  "m_6a6f94972c": {
+    "message": "Invalid tab position"
+  },
+  "m_579a11d917": {
+    "message": "Please choose a different space"
+  },
+  "m_46ba84410f": {
+    "message": "The target tab's URL does not match"
+  },
+  "m_8924020b2a": {
+    "message": "The destination already has the same URL"
+  },
+  "m_11b801d8a2": {
+    "message": "Move tab: $1 ($2 → $3)"
+  },
+  "m_42adb155e1": {
+    "message": "Unsupported operation"
+  },
+  "m_4091966e8a": {
+    "message": "Save to Tab Matomen Kai"
+  },
+  "m_6079395160": {
+    "message": "No spaces yet (create one in the dashboard)"
+  },
+  "m_2167649eea": {
+    "message": "Open Tab Matomen Kai"
+  },
+  "m_ecde74ef1b": {
+    "message": "Saved to \"$1\" ($2 tabs)"
+  },
+  "m_6f91f13005": {
+    "message": "Already saved in \"$1\""
+  },
+  "m_a9276d6dfe": {
+    "message": "Could not save. Check the space in the dashboard"
+  },
+  "m_56415d676e": {
+    "message": "The backup content is invalid. Your current data was not changed."
+  },
+  "m_a18e4bec39": {
+    "message": "Bulk tab actions"
+  },
+  "m_f6365e7574": {
+    "message": "Select all"
+  },
+  "m_e135253c38": {
+    "message": "0 selected"
+  },
+  "m_9a2cef5d5b": {
+    "message": "Open the selected tabs in this window"
+  },
+  "m_119daf93ee": {
+    "message": "Open"
+  },
+  "m_2cb583698f": {
+    "message": "Destination space"
+  },
+  "m_9a97fc3ae6": {
+    "message": "Move"
+  },
+  "m_71a12fb43e": {
+    "message": "Group to put them in"
+  },
+  "m_e70ecafd50": {
+    "message": "To group"
+  },
+  "m_ae75ae1d2a": {
+    "message": "Copy format"
+  },
+  "m_ce05fd6a61": {
+    "message": "Title and URL"
+  },
+  "m_c257bec714": {
+    "message": "URLs only"
+  },
+  "m_295cc5d596": {
+    "message": "Copy a list of the selected tabs (or the whole space if none are selected)"
+  },
+  "m_e94c210766": {
+    "message": "Copy"
+  },
+  "m_a2307d9555": {
+    "message": "Archive the selected tabs"
+  },
+  "m_c686c1a9dd": {
+    "message": "Archive"
+  },
+  "m_2fe1822ad4": {
+    "message": "Delete the selected tabs"
+  },
+  "m_5cbdf1fd70": {
+    "message": "Delete"
+  },
+  "m_f0dc9f43d4": {
+    "message": "Clear selection (Esc)"
+  },
+  "m_ec7ae06b09": {
+    "message": "Clear"
+  },
+  "m_fca5a8dc9f": {
+    "message": "$1 selected"
+  },
+  "m_91f77f62c2": {
+    "message": "Move to…"
+  },
+  "m_cda05ed8b5": {
+    "message": "Group…"
+  },
+  "m_7a137f933a": {
+    "message": "No group"
+  },
+  "m_bcbebef3cf": {
+    "message": "Untitled group"
+  },
+  "m_4710908c81": {
+    "message": "New group…"
+  },
+  "m_e4de78fe6b": {
+    "message": "Not available while switching."
+  },
+  "m_37bb515e00": {
+    "message": "Cancelled because the space changed. Please select again."
+  },
+  "m_5e3dfdc724": {
+    "message": "The selected tabs could not be found."
+  },
+  "m_fba383cf43": {
+    "message": "$1 failed."
+  },
+  "m_481253a7af": {
+    "message": "Opened $1 tabs."
+  },
+  "m_8394e407bf": {
+    "message": "Please choose a destination space."
+  },
+  "m_72a6bd4fe9": {
+    "message": "There is no destination space."
+  },
+  "m_33ad04a535": {
+    "message": " ($1 with the same URL were skipped because the destination already has them)"
+  },
+  "m_7c9bfe16e3": {
+    "message": "Moved $2 tabs to \"$1\".$3"
+  },
+  "m_c19f04094f": {
+    "message": "Please choose a group."
+  },
+  "m_42f0321630": {
+    "message": "New group"
+  },
+  "m_80eb0a488d": {
+    "message": "Move to group"
+  },
+  "m_961c24d640": {
+    "message": "Group not found."
+  },
+  "m_d42ecb5149": {
+    "message": "Put $1 tabs into \"$2\"."
+  },
+  "m_2a8a7849b4": {
+    "message": "Removed $1 tabs from their group."
+  },
+  "m_d97fff8023": {
+    "message": "There are no tabs to copy."
+  },
+  "m_fd05c05821": {
+    "message": "Copied $1 tabs as $2."
+  },
+  "m_b4a1f2d50c": {
+    "message": "Could not copy to the clipboard."
+  },
+  "m_63b3f3287e": {
+    "message": "Copy failed."
+  },
+  "m_b48b8f8f20": {
+    "message": "Archived $1 tabs."
+  },
+  "m_cba9bbaa15": {
+    "message": "Delete the $1 selected tabs? This cannot be undone."
+  },
+  "m_fae13af1e7": {
+    "message": "Deleted $1 tabs."
+  },
+  "m_53884810b9": {
+    "message": "Space actions"
+  },
+  "m_269b0f92e4": {
+    "message": "Cancel"
+  },
+  "m_a530f556a0": {
+    "message": "Switch space"
+  },
+  "m_b538e73b7e": {
+    "message": "Save and switch"
+  },
+  "m_f7c3004a90": {
+    "message": "Switch without saving"
+  },
+  "m_348b8cbfe6": {
+    "message": "There is no space to save to, so saving is not possible on this screen."
+  },
+  "m_6c891ec97d": {
+    "message": "Open the left bar in the side panel (Chrome's panel position must be left)"
+  },
+  "m_10432c2864": {
+    "message": "Open the left bar in the side panel"
+  },
+  "m_72397565b9": {
+    "message": "Toggle dark mode"
+  },
+  "m_48e334a386": {
+    "message": "Add a category"
+  },
+  "m_53e842102c": {
+    "message": "Export all data to a JSON file"
+  },
+  "m_e44031674a": {
+    "message": "Load data from a JSON file"
+  },
+  "m_da76e386a1": {
+    "message": "Auto-backup interval"
+  },
+  "m_ce06239034": {
+    "message": "Automatically save the current tabs when switching spaces"
+  },
+  "m_54bcd667a4": {
+    "message": "Change category"
+  },
+  "m_80022cdc79": {
+    "message": "Rename space"
+  },
+  "m_a9f0f1eba3": {
+    "message": "Archive space"
+  },
+  "m_65902d6ec2": {
+    "message": "Delete space"
+  },
+  "m_a54c2c00ae": {
+    "message": "Restore from archive"
+  },
+  "m_da37848919": {
+    "message": "Delete permanently"
+  },
+  "m_6293e5e0a9": {
+    "message": "Switch view"
+  },
+  "m_b4cf24ebe1": {
+    "message": "List view"
+  },
+  "m_1e578fc996": {
+    "message": "Card view"
+  },
+  "m_b1c9cf7a56": {
+    "message": "Filter by tab title or URL…"
+  },
+  "m_2eabfa845d": {
+    "message": "Create a new tab group"
+  },
+  "m_32dbab9f90": {
+    "message": "Enter a category name…"
+  },
+  "m_a7b8477445": {
+    "message": "Tab Matomen Kai"
+  },
+  "m_2e57cc29ef": {
+    "message": "To keep it visible on the left while browsing, set Chrome's \"Side panel position\" to \"Left\", then press the button above."
+  },
+  "m_22c2dc1788": {
+    "message": "Open Chrome settings"
+  },
+  "m_5d208d1c21": {
+    "message": "Tab Matomen"
+  },
+  "m_798f95db5d": {
+    "message": "Kai"
+  },
+  "m_fbc350db7c": {
+    "message": "＋ Space"
+  },
+  "m_041f4ac575": {
+    "message": "＋ Category"
+  },
+  "m_14095d67d9": {
+    "message": "No spaces yet"
+  },
+  "m_b9e400d207": {
+    "message": "Export"
+  },
+  "m_9eb51e84ba": {
+    "message": "Import"
+  },
+  "m_2a81a2c8cc": {
+    "message": "Auto backup"
+  },
+  "m_17b500293e": {
+    "message": "Off"
+  },
+  "m_ca7c80cb81": {
+    "message": "Hourly"
+  },
+  "m_d2fe3b7e6e": {
+    "message": "Every 6 hours"
+  },
+  "m_d63043a388": {
+    "message": "Daily"
+  },
+  "m_0ac73ac1aa": {
+    "message": "Auto-save on switch"
+  },
+  "m_c73d62d960": {
+    "message": "Archived"
+  },
+  "m_0de3e408a2": {
+    "message": "Select a space"
+  },
+  "m_dd3cca7f34": {
+    "message": "Category"
+  },
+  "m_79338c0706": {
+    "message": "Rename"
+  },
+  "m_442ee7eb76": {
+    "message": "Restore"
+  },
+  "m_5839f00a0d": {
+    "message": "＋ Group"
+  },
+  "m_ccd039eca2": {
+    "message": "Save current tabs"
+  },
+  "m_aff97557b0": {
+    "message": "No tabs have been saved to this space yet"
+  },
+  "m_83d0565a6f": {
+    "message": "Open all the tabs you want to save (this dashboard tab can stay open)"
+  },
+  "m_fab476e40b": {
+    "message": "Your tabs will be listed here"
+  },
+  "m_2e408b9c01": {
+    "message": "Getting started"
+  },
+  "m_3a09b3b90d": {
+    "message": "With that space selected, open all the tabs you want to save"
+  },
+  "m_2884c23c94": {
+    "message": "For the next project, create a new space and save the same way"
+  },
+  "m_2061886749": {
+    "message": "Click a space name in the sidebar to switch tabs"
+  },
+  "m_27131257d7": {
+    "message": "Drag a space onto a category name to move it"
+  },
+  "m_7406792479": {
+    "message": "Create a category"
+  },
+  "m_121ae791f1": {
+    "message": "Color"
+  },
+  "m_614f2eaaff": {
+    "message": "Create"
+  },
+  "m_1a2e920ba7": {
+    "message": "None"
+  },
+  "m_72776ab68f": {
+    "message": "Red"
+  },
+  "m_831166ef4b": {
+    "message": "Orange"
+  },
+  "m_7720f8ea0a": {
+    "message": "Yellow"
+  },
+  "m_f22758bf8f": {
+    "message": "Green"
+  },
+  "m_29e5ef1fa6": {
+    "message": "Teal"
+  },
+  "m_845d1da87f": {
+    "message": "Blue"
+  },
+  "m_01caea5810": {
+    "message": "Purple"
+  },
+  "m_caaf2acdb2": {
+    "message": "Pink"
+  },
+  "m_5378733ecf": {
+    "message": "Grey"
+  },
+  "m_96aea44a0c": {
+    "message": "Blue"
+  },
+  "m_97397cc2e0": {
+    "message": "Red"
+  },
+  "m_5cd070ae56": {
+    "message": "Yellow"
+  },
+  "m_031e9b20e8": {
+    "message": "Green"
+  },
+  "m_d96fea3531": {
+    "message": "Purple"
+  },
+  "m_55018581ba": {
+    "message": "Cyan"
+  },
+  "m_aabcb11957": {
+    "message": "Set image"
+  },
+  "m_ace3472c03": {
+    "message": "Remove image"
+  },
+  "m_26dfc3aefe": {
+    "message": "Please enter a category name."
+  },
+  "m_39a49bde63": {
+    "message": "A category named \"$1\" already exists."
+  },
+  "m_629a6eefac": {
+    "message": "Please enter a space name."
+  },
+  "m_29c082f9b5": {
+    "message": "A space named \"$1\" already exists."
+  },
+  "m_09648e447c": {
+    "message": "Space not found."
+  },
+  "m_d40bd34d6f": {
+    "message": "Failed to reorder groups."
+  },
+  "m_f95e7d8675": {
+    "message": "Failed to reorder tabs."
+  },
+  "m_3dfdf80d58": {
+    "message": "Add a subcategory"
+  },
+  "m_6ab1008863": {
+    "message": "Change category color"
+  },
+  "m_29f18064c3": {
+    "message": "Rename category"
+  },
+  "m_b3dd5064ba": {
+    "message": "Delete (spaces move to Uncategorized)"
+  },
+  "m_1b31bc2d61": {
+    "message": "Change archive color"
+  },
+  "m_7234f5d4ed": {
+    "message": "No archived spaces"
+  },
+  "m_c922e46a12": {
+    "message": "$1 (archived / $2 tabs)"
+  },
+  "m_78380175c5": {
+    "message": "Change theme color and icon"
+  },
+  "m_b8901ba999": {
+    "message": "$1 ($2 tabs)"
+  },
+  "m_f76574e271": {
+    "message": "$1 | Dashboard"
+  },
+  "m_e17d188654": {
+    "message": "Create a space first"
+  },
+  "m_3009a0e43b": {
+    "message": "Back to the active tab"
+  },
+  "m_1816d78893": {
+    "message": "No tabs match \"$1\"."
+  },
+  "m_876cb3ca26": {
+    "message": "Drop here to remove from the group"
+  },
+  "m_97edcdfb5e": {
+    "message": "Change group color"
+  },
+  "m_4ccd455653": {
+    "message": "Rename group"
+  },
+  "m_73fd4c5de6": {
+    "message": "Delete group (tabs become ungrouped)"
+  },
+  "m_f32ff53372": {
+    "message": "Drag to reorder"
+  },
+  "m_dcea25f949": {
+    "message": "This group has no tabs. Drag tabs here to add them"
+  },
+  "m_d3811d54bb": {
+    "message": "$1\n$2\nClick to open / drag to move between groups"
+  },
+  "m_05120d62af": {
+    "message": "Select: $1"
+  },
+  "m_f82fcc53cd": {
+    "message": "Click to select, Shift+click to select a range"
+  },
+  "m_4bed8152a4": {
+    "message": "Archive this tab"
+  },
+  "m_cf45400a02": {
+    "message": "Archive (hide from the tab bar)"
+  },
+  "m_626612ea5e": {
+    "message": "Delete this tab"
+  },
+  "m_88c92c22d4": {
+    "message": "Failed to load data."
+  },
+  "m_cd6a909d39": {
+    "message": "Enter a name for the new space:"
+  },
+  "m_1cefe0ca30": {
+    "message": "Created space \"$1\"."
+  },
+  "m_ed1eac911a": {
+    "message": "Failed to create the space."
+  },
+  "m_f2b265026b": {
+    "message": "Enter a new space name:"
+  },
+  "m_f2b748c88b": {
+    "message": "Space renamed."
+  },
+  "m_c0e48c9028": {
+    "message": "Failed to rename the space."
+  },
+  "m_f4f1d62806": {
+    "message": "Delete space \"$1\"?\nAll saved tab information will be deleted as well."
+  },
+  "m_88dd8d49f3": {
+    "message": "Deleted space \"$1\"."
+  },
+  "m_89289d2423": {
+    "message": "Failed to delete the space."
+  },
+  "m_7609ae5732": {
+    "message": "Archive space \"$1\"?\nIts data is kept and can be restored later."
+  },
+  "m_ace51b281e": {
+    "message": "Archived space \"$1\"."
+  },
+  "m_b4f5deb27f": {
+    "message": "Failed to archive."
+  },
+  "m_2551a4a971": {
+    "message": "Restored space \"$1\"."
+  },
+  "m_e82b7d25f2": {
+    "message": "Failed to restore."
+  },
+  "m_e95765e8a5": {
+    "message": "Permanently delete space \"$1\"?\nThis cannot be undone."
+  },
+  "m_ca94b050f3": {
+    "message": "Permanently deleted space \"$1\"."
+  },
+  "m_6e82f81122": {
+    "message": "Failed to delete."
+  },
+  "m_507e16fe4e": {
+    "message": "No space is selected. Select or create a space."
+  },
+  "m_f351029a37": {
+    "message": "There were no tabs to save (chrome:// pages cannot be saved)."
+  },
+  "m_f272b678d1": {
+    "message": "Saved $1 tabs."
+  },
+  "m_f38b273b38": {
+    "message": "Failed to save tabs."
+  },
+  "m_d48c02f761": {
+    "message": "The tabs currently open are not saved in any space.\n"
+  },
+  "m_e92defc1cb": {
+    "message": "If you switch, these tabs will be closed without being saved.\n\n"
+  },
+  "m_0fe3f5ec9d": {
+    "message": "\"Auto-save on switch\" is off.\n"
+  },
+  "m_2bde3706ab": {
+    "message": "The current tabs will be closed without being saved to \"$1\".\n\n"
+  },
+  "m_1ad7ff9d86": {
+    "message": "Because you are switching from an archived space, the current tabs will be closed without being saved.\n\n"
+  },
+  "m_2bc14b7cca": {
+    "message": "The tabs currently open will be closed without being saved.\n\n"
+  },
+  "m_be1598e030": {
+    "message": "Switch to space \"$1\"?"
+  },
+  "m_618731a7e3": {
+    "message": "No destination to save to"
+  },
+  "m_c837ab2cde": {
+    "message": "Switching was cancelled because saving failed."
+  },
+  "m_814259bda8": {
+    "message": "Switching was cancelled because the pre-switch history could not be saved."
+  },
+  "m_91c0550a7a": {
+    "message": "Switched to space \"$1\"."
+  },
+  "m_7db912ef11": {
+    "message": "Failed to switch spaces."
+  },
+  "m_b6afad9923": {
+    "message": "Failed to delete the tab."
+  },
+  "m_b623491f35": {
+    "message": "Moved \"$1\" to \"$2\"."
+  },
+  "m_2768c12413": {
+    "message": "Failed to move the category."
+  },
+  "m_429435583a": {
+    "message": "Failed to reorder."
+  },
+  "m_c1460a0421": {
+    "message": "Failed to reorder categories."
+  },
+  "m_ddf26ce3ed": {
+    "message": "Export complete: $1 spaces / $2 categories → pwm-backup-$3.json"
+  },
+  "m_f693a2b833": {
+    "message": "Export failed."
+  },
+  "m_00de6b5511": {
+    "message": "The file format is invalid."
+  },
+  "m_75e9dd8f76": {
+    "message": "Unknown"
+  },
+  "m_efccfe8e49": {
+    "message": "Import this backup file?\n\n  Spaces     : $1\n  Categories : $2\n  Created    : $3\n\nAll current data will be overwritten. Continue?"
+  },
+  "m_ce1d0548a0": {
+    "message": "Import complete: $1 spaces / $2 categories"
+  },
+  "m_8df1c53c2e": {
+    "message": "Failed to parse the JSON."
+  },
+  "m_682e44dcfb": {
+    "message": "Import failed. $1"
+  },
+  "m_db96a9457a": {
+    "message": "Created category \"$1\"."
+  },
+  "m_1dcd4efe17": {
+    "message": "Failed to create the category."
+  },
+  "m_5c1ea7fb37": {
+    "message": "Create a subcategory of \"$1\""
+  },
+  "m_c961917824": {
+    "message": "Created subcategory \"$1\"."
+  },
+  "m_569633928e": {
+    "message": "Failed to create the subcategory."
+  },
+  "m_025af6c3cb": {
+    "message": "Enter a new category name:"
+  },
+  "m_f3b1a68d36": {
+    "message": "Category renamed."
+  },
+  "m_0f834403b5": {
+    "message": "Failed to rename the category."
+  },
+  "m_904330b1c2": {
+    "message": "Delete category \"$1\"?\nSpaces inside it will move to \"Uncategorized\"."
+  },
+  "m_482af4adff": {
+    "message": "Deleted category \"$1\"."
+  },
+  "m_152585e380": {
+    "message": "Failed to delete the category."
+  },
+  "m_a8377443c2": {
+    "message": "0: Uncategorized\n"
+  },
+  "m_5d1ccf930a": {
+    "message": " ← current"
+  },
+  "m_248d1228f5": {
+    "message": "$1: ＋ Create a new category"
+  },
+  "m_6f13eed82d": {
+    "message": "Choose a category for \"$1\" (enter a number):\n\n$2"
+  },
+  "m_db7a8db4a9": {
+    "message": "Please enter a valid number."
+  },
+  "m_62abac0149": {
+    "message": "Moved to \"Uncategorized\"."
+  },
+  "m_bab01b0a0b": {
+    "message": "Moved to category \"$1\"."
+  },
+  "m_c35c527047": {
+    "message": "Create a new category"
+  },
+  "m_936cd7f801": {
+    "message": "Created category \"$1\" and moved the space there."
+  },
+  "m_1f9b554bc9": {
+    "message": "Failed to change the category."
+  },
+  "m_49dbd7dc23": {
+    "message": "Create a group"
+  },
+  "m_e94783b08f": {
+    "message": "Please select a space."
+  },
+  "m_637efb62a0": {
+    "message": "Created group \"$1\"."
+  },
+  "m_e5c17530ad": {
+    "message": "Failed to create the group."
+  },
+  "m_f648e8b5a9": {
+    "message": "Edit group"
+  },
+  "m_c6df24a6c9": {
+    "message": "Group updated."
+  },
+  "m_762bfecbd7": {
+    "message": "Failed to update the group."
+  },
+  "m_6ab993caa7": {
+    "message": "Delete group \"$1\"?\nIts tabs will become ungrouped."
+  },
+  "m_d06ff38c9c": {
+    "message": "Deleted group \"$1\"."
+  },
+  "m_ce516ef82e": {
+    "message": "Failed to delete the group."
+  },
+  "m_deccd3ca1c": {
+    "message": "Failed to move the tab."
+  },
+  "m_9ab79d75a0": {
+    "message": "Switch to light mode"
+  },
+  "m_2aff1d2b6a": {
+    "message": "Switch to dark mode"
+  },
+  "m_a49e39c667": {
+    "message": "Auto backup turned off."
+  },
+  "m_33ec021992": {
+    "message": "Auto backup set to: $1."
+  },
+  "m_938dbc938d": {
+    "message": "Auto-save on switch turned on."
+  },
+  "m_4f8b8d9b2e": {
+    "message": "Auto-save on switch turned off."
+  },
+  "m_b3afead7ff": {
+    "message": "Save current tabs ($1S)"
+  },
+  "m_910348bd6b": {
+    "message": "Add one tab"
+  },
+  "m_2f9e6135b4": {
+    "message": "Edit favorites"
+  },
+  "m_f4c69f0508": {
+    "message": "Please select"
+  },
+  "m_51a3053d75": {
+    "message": "There are no web pages to add."
+  },
+  "m_53f079d16f": {
+    "message": "Create a space first."
+  },
+  "m_ae3ecc7ed2": {
+    "message": "Tab to add"
+  },
+  "m_e63bc2f7aa": {
+    "message": "Destination space"
+  },
+  "m_6d5cd75875": {
+    "message": "Add"
+  },
+  "m_85ccd53d0e": {
+    "message": "Cannot read tabs"
+  },
+  "m_31d3cc3310": {
+    "message": "This URL is already saved in the destination."
+  },
+  "m_ddb65d86ef": {
+    "message": "Added 1 tab to \"$1\"."
+  },
+  "m_9fbca578c5": {
+    "message": "Could not add. Check the tab and the destination."
+  },
+  "m_4004b8f1db": {
+    "message": "Could not read the tabs."
+  },
+  "m_4648287945": {
+    "message": "Could not save favorites."
+  },
+  "m_03c994e60e": {
+    "message": "You can register favorites after creating a space."
+  },
+  "m_a2c6ae915e": {
+    "message": "Could not load favorites."
+  },
+  "m_296dad2d72": {
+    "message": "Favorites"
+  },
+  "m_c1b61fe80e": {
+    "message": "Recent spaces"
+  },
+  "m_ec351de08b": {
+    "message": "Saved tab preview"
+  },
+  "m_fa9f222dca": {
+    "message": "Could not open the tab."
+  },
+  "m_c9ebf4c3f7": {
+    "message": "No saved tabs"
+  },
+  "m_6329f21c41": {
+    "message": "Settings"
+  },
+  "m_e438ffd26f": {
+    "message": "Settings (import/export, backup, auto-save)"
+  },
+  "m_56b6cd2c1a": {
+    "message": "Open settings"
+  },
+  "m_00820b1780": {
+    "message": "Close settings"
+  },
+  "m_bf10ec5ff4": {
+    "message": "Changed settings are saved immediately. Importing overwrites the currently saved data."
+  },
+  "m_c32d6516f4": {
+    "message": "‹ Close"
+  },
+  "m_74f34a1534": {
+    "message": "‹ Collapse"
+  },
+  "m_0a57aeec9d": {
+    "message": "Close the sidebar"
+  },
+  "m_0b845075d6": {
+    "message": "Collapse the sidebar"
+  },
+  "m_2c2e1923ea": {
+    "message": "Close (reopen with the extension icon in the toolbar)"
+  },
+  "m_6264a3f76a": {
+    "message": "Could not close. Please try again."
+  },
+  "m_91323fe947": {
+    "message": "Expand the sidebar"
+  },
+  "m_28e3b7ba50": {
+    "message": "Set Chrome's side panel position to \"Left\". It does not open on the right."
+  },
+  "m_2c14db7241": {
+    "message": "Opened the left sidebar. It stays visible while you browse other pages. If you close it, reopen it with the extension icon in the toolbar."
+  },
+  "m_07a63337a6": {
+    "message": "Chrome 141 or later is required to detect the left position."
+  },
+  "m_c5ed08a7f9": {
+    "message": "The window is still getting ready. Please try again."
+  },
+  "m_14ae9512a4": {
+    "message": "Could not open the sidebar. Please try again."
+  },
+  "m_89da984b3c": {
+    "message": "Tab Matomen Kai — Left bar"
+  },
+  "m_2e759e9300": {
+    "message": "Open dashboard"
+  },
+  "m_99f2a39628": {
+    "message": "Could not open the dashboard. Please try again."
+  },
+  "m_c7f325f13f": {
+    "message": "Undo"
+  },
+  "m_41852537df": {
+    "message": "Cannot undo while switching."
+  },
+  "m_88291348ad": {
+    "message": "Cannot undo because the space was not found."
+  },
+  "m_9c5b54b484": {
+    "message": "Undo was cancelled because changes were made afterwards."
+  },
+  "m_7e6b5ba160": {
+    "message": "Undone."
+  },
+  "m_a89f5a6dd5": {
+    "message": "Could not undo."
+  },
+  "m_64c1599a05": {
+    "message": "Deleted 1 tab."
+  },
+  "m_bd0d74ffbc": {
+    "message": "Archived 1 tab."
+  },
+  "m_429855c857": {
+    "message": "Search projects and spaces"
+  },
+  "m_2437c7c79c": {
+    "message": "Restore previous layout"
+  },
+  "m_d0b101161c": {
+    "message": "No pre-switch history"
+  },
+  "m_c030b56060": {
+    "message": "Save failed: please save again"
+  },
+  "m_0a14601b8e": {
+    "message": "Select a space to save to"
+  },
+  "m_aa9e381e6f": {
+    "message": "Unsaved changes"
+  },
+  "m_74e30e9189": {
+    "message": "Saved"
+  },
+  "m_3b69257cb0": {
+    "message": " · Archived"
+  },
+  "m_d34e19303a": {
+    "message": "No matching spaces"
+  },
+  "m_3881f5d6ed": {
+    "message": "Cannot determine save status"
+  },
+  "m_97aa22defa": {
+    "message": "Restore the previous tab layout. The current layout is also kept in history. Unsent input on pages cannot be restored."
+  },
+  "m_9ea03093db": {
+    "message": "Restored the previous tab layout."
+  },
+  "m_9930817c6f": {
+    "message": "Restore failed. Check the history and try again."
+  },
+  "m_6644f06197": {
+    "message": "Saving…"
+  },
+  "appName": {
+    "message": "Tab Matomen Kai"
+  },
+  "appDescription": {
+    "message": "Create a space for each project and switch between tab sets inside the same Chrome window."
+  },
+  "actionTitle": {
+    "message": "Open Tab Matomen Kai"
+  },
+  "onboardingClickSave": {
+    "message": "Click the \"Save current tabs\" button above"
+  },
+  "onboardingClickNewSpace": {
+    "message": "Click \"＋ Space\" on the left and enter a project name"
+  },
+  "onboardingSaveExplained": {
+    "message": "Click \"Save current tabs\" to save the tabs"
+  },
+  "restoreHistoryTitle": {
+    "message": "Previous layout ($1). Kept until the browser closes"
+  },
+  "m_9e9943aa18": {
+    "message": "Access to Google was not granted."
+  },
+  "m_1b162ecb08": {
+    "message": "Connect to Google Drive."
+  },
+  "m_38e08f6f72": {
+    "message": "Could not confirm permission to save backups."
+  },
+  "m_063e83e937": {
+    "message": "The connection was cancelled."
+  },
+  "m_cbe501233e": {
+    "message": "The authentication redirect does not match."
+  },
+  "m_195c611c2a": {
+    "message": "Could not verify the authentication. Please connect again."
+  },
+  "m_210231350f": {
+    "message": "Enter an OAuth client ID."
+  },
+  "m_27298d6197": {
+    "message": "Connect to Google Drive. If the connection expired, you need to reconnect."
+  },
+  "m_76e8f9b19a": {
+    "message": "A backup is being saved from another window."
+  },
+  "m_c62a99397a": {
+    "message": "TabMatomenKai_"
+  },
+  "m_551f37d20f": {
+    "message": "Could not confirm the result. Check Google Drive before retrying."
+  },
+  "m_6d2d7cf526": {
+    "message": "The connection expired. Reconnect to Google Drive."
+  },
+  "m_e5be1db2f7": {
+    "message": "Could not save ($1). Check that the Google Drive API is enabled, permission was granted and storage is available."
+  },
+  "m_fd067b945c": {
+    "message": "Could not confirm the destination. Check Google Drive."
+  },
+  "m_e756be4d47": {
+    "message": "Back up to Google Drive"
+  },
+  "m_5ea424f93b": {
+    "message": "Saves your spaces, categories and tabs to My Drive as a timestamped JSON file."
+  },
+  "m_6b5763bf71": {
+    "message": "Press \"Connect to Google Drive\" to open Google's permission screen. After you allow it, Chrome keeps the connection and renews it automatically when it expires."
+  },
+  "m_7b5914be86": {
+    "message": "First-time connection setup"
+  },
+  "m_e6720a68da": {
+    "message": "Enable the Drive API in Google Cloud and create an OAuth client (Web application). Register the following URL as an authorized redirect URI."
+  },
+  "m_f5da3ecf70": {
+    "message": "Redirect URI"
+  },
+  "m_d80926d454": {
+    "message": "OAuth client ID"
+  },
+  "m_dc59c3eb54": {
+    "message": "No client secret is needed. For a test publishing status, add the Google account you use as a test user."
+  },
+  "m_a8a3126796": {
+    "message": "Connect to Google Drive"
+  },
+  "m_4c23d9e46d": {
+    "message": "Back up now"
+  },
+  "m_4d138770f9": {
+    "message": "Disconnect this browser"
+  },
+  "m_c64f38ecfa": {
+    "message": "Open the last backup"
+  },
+  "m_81d7efe6b9": {
+    "message": "Last saved: $1 "
+  },
+  "m_f11b0168dc": {
+    "message": "Working…"
+  },
+  "m_e873b731b1": {
+    "message": "Connected. You can save backups now."
+  },
+  "m_f714e3e49d": {
+    "message": "Backup saved to Google Drive."
+  },
+  "m_307c18ccd9": {
+    "message": "Disconnected this browser. Saved files remain in Drive."
+  },
+  "m_23e782bfe8": {
+    "message": "Connected"
+  },
+  "m_26a4745b1e": {
+    "message": "Could not load settings. Please reopen this screen."
+  },
+  "languageHeading": {
+    "message": "Language",
+    "description": "settings section heading"
+  },
+  "languageAuto": {
+    "message": "Match the browser language ($1)",
+    "description": "language select option; $1 = detected language name"
+  },
+  "languageHelp": {
+    "message": "Changing the display language reloads the screen.",
+    "description": "settings help text"
+  },
+  "reviewTitle": {
+    "message": "Is Tab Matomen Kai helping you?",
+    "description": "review prompt title"
+  },
+  "reviewBody": {
+    "message": "If so, a review on the Chrome Web Store would mean a lot and helps development.",
+    "description": "review prompt body"
+  },
+  "reviewWrite": {
+    "message": "Write a review",
+    "description": "review prompt button"
+  },
+  "reviewLater": {
+    "message": "Later",
+    "description": "review prompt button"
+  },
+  "reviewNever": {
+    "message": "Don't show again",
+    "description": "review prompt button"
+  },
+  "reviewThanks": {
+    "message": "Thank you!",
+    "description": "review prompt after clicking write"
+  }
+}

@@ -6,6 +6,8 @@
  * - chrome.alarms で定期自動バックアップを実行する
  */
 
+importScripts('i18n.js');
+
 const DASHBOARD_URL = chrome.runtime.getURL('dashboard.html');
 const ALARM_NAME    = 'pwm-auto-backup';
 const DATA_KEY      = 'pwm_data';
@@ -87,6 +89,13 @@ async function registerExistingDashboards() {
   await saveDashboardTabIds(ids);
 }
 chrome.runtime.onInstalled.addListener(registerExistingDashboards);
+// First-use timestamp for the review prompt (never overwritten).
+chrome.runtime.onInstalled.addListener(async () => {
+  try {
+    const current = (await chrome.storage.local.get('pwm_review')).pwm_review;
+    if (!current || !current.installedAt) await chrome.storage.local.set({pwm_review: {...(current || {}), installedAt: Date.now()}});
+  } catch (e) { console.warn('[PWM] review state', e); }
+});
 chrome.runtime.onStartup.addListener(registerExistingDashboards);
 
 // ============================================================
@@ -249,13 +258,14 @@ function createMenu(props) {
   return new Promise((resolve) => { chrome.contextMenus.create(props, () => { void chrome.runtime.lastError; resolve(); }); });
 }
 async function rebuildContextMenus() {
+  try { await I18n.ready(); } catch {}
   if (!chrome.contextMenus) return;
   await new Promise((resolve) => chrome.contextMenus.removeAll(() => { void chrome.runtime.lastError; resolve(); }));
   const result = await chrome.storage.local.get(DATA_KEY);
   const spaces = ((result[DATA_KEY] && result[DATA_KEY].spaces) || []).filter((s) => s && !s.archived && typeof s.name === 'string');
-  await createMenu({ id: MENU_ROOT, title: 'タブまとめん改に保存', contexts: MENU_CONTEXTS, documentUrlPatterns: MENU_URLS });
+  await createMenu({ id: MENU_ROOT, title: t('m_4091966e8a'), contexts: MENU_CONTEXTS, documentUrlPatterns: MENU_URLS });
   if (spaces.length === 0) {
-    await createMenu({ id: MENU_PREFIX + 'none', parentId: MENU_ROOT, title: 'スペースがありません（ダッシュボードで作成）', enabled: false, contexts: MENU_CONTEXTS, documentUrlPatterns: MENU_URLS });
+    await createMenu({ id: MENU_PREFIX + 'none', parentId: MENU_ROOT, title: t('m_6079395160'), enabled: false, contexts: MENU_CONTEXTS, documentUrlPatterns: MENU_URLS });
     return;
   }
   // Chrome のメニューが長くなりすぎないよう 60 件まで
@@ -270,7 +280,7 @@ function scheduleMenuRebuild() {
 try {
   chrome.runtime.onInstalled.addListener(scheduleMenuRebuild);
   chrome.runtime.onStartup.addListener(scheduleMenuRebuild);
-  chrome.storage.onChanged.addListener((changes, area) => { if (area === 'local' && changes[DATA_KEY]) scheduleMenuRebuild(); });
+  chrome.storage.onChanged.addListener((changes, area) => { if (area === 'local' && (changes[DATA_KEY] || changes[SETTINGS_KEY])) scheduleMenuRebuild(); });
 } catch (e) { /* 最小限のモック環境では登録しない */ }
 scheduleMenuRebuild();
 
@@ -301,7 +311,7 @@ async function flashBadge(tabId, text, title, color) {
     await chrome.action.setTitle({ tabId, title });
     setTimeout(() => {
       chrome.action.setBadgeText({ tabId, text: '' }).catch(() => {});
-      chrome.action.setTitle({ tabId, title: 'タブまとめん改 を開く' }).catch(() => {});
+      chrome.action.setTitle({ tabId, title: t('m_2167649eea') }).catch(() => {});
     }, 2500);
   } catch { /* タブが閉じられた場合など */ }
 }
@@ -316,8 +326,8 @@ if (chrome.contextMenus) {
     const title = isLink ? (info.linkText || info.linkUrl) : ((tab && tab.title) || url);
     const result = await saveTabToSpace(spaceId, { url, title, favIconUrl: isLink ? '' : ((tab && tab.favIconUrl) || '') }).catch((e) => ({ ok: false, reason: String(e) }));
     const tabId = tab && tab.id;
-    if (result.ok) await flashBadge(tabId, '✓', `「${result.name}」に保存しました（${result.count}枚）`, '#2f9e63');
-    else if (result.reason === 'duplicate') await flashBadge(tabId, '＝', `「${result.name}」に保存済みです`, '#7a8098');
-    else await flashBadge(tabId, '×', '保存できませんでした。ダッシュボードでスペースを確認してください', '#d94040');
+    if (result.ok) await flashBadge(tabId, '✓', t('m_ecde74ef1b', [result.name, result.count]), '#2f9e63');
+    else if (result.reason === 'duplicate') await flashBadge(tabId, '＝', t('m_6f91f13005', [result.name]), '#7a8098');
+    else await flashBadge(tabId, '×', t('m_a9276d6dfe'), '#d94040');
   });
 }

@@ -1,0 +1,1220 @@
+{
+  "m_2ce01f81ad": {
+    "message": "本地 AI 联动"
+  },
+  "m_a8ce0201c4": {
+    "message": "连接期间，空间标题、URL 和标签组信息会共享给本机上的联动服务器。网页内容绝不会被共享。"
+  },
+  "m_a9356d61c7": {
+    "message": "连接密钥"
+  },
+  "m_9dd838b6ab": {
+    "message": "粘贴联动服务器的 .local/token"
+  },
+  "m_5119847c00": {
+    "message": "连接"
+  },
+  "m_092575584a": {
+    "message": "断开连接"
+  },
+  "m_2e845bddec": {
+    "message": "查看建议"
+  },
+  "m_463f7d5d30": {
+    "message": "撤销上次整理"
+  },
+  "m_7ea46c0315": {
+    "message": "未连接"
+  },
+  "m_fb71a4e085": {
+    "message": "连接错误"
+  },
+  "m_9606bdda03": {
+    "message": "查看建议（$1）"
+  },
+  "m_b5e969dec9": {
+    "message": "已连接 · $1 条建议"
+  },
+  "m_cda8d46d3f": {
+    "message": "无法连接："
+  },
+  "m_c4e07534d2": {
+    "message": "请粘贴 64 位的连接密钥"
+  },
+  "m_0b9939e1f9": {
+    "message": "已断开连接"
+  },
+  "m_a9b2455ca6": {
+    "message": "AI 建议"
+  },
+  "m_1c7d43cb8f": {
+    "message": "应用所选更改"
+  },
+  "m_16661f1537": {
+    "message": "忽略此建议"
+  },
+  "m_3da5c18551": {
+    "message": "关闭"
+  },
+  "m_2fbbb892d1": {
+    "message": "已保存的数据发生了变化，此建议无法再应用。请让 AI 重新提出建议。"
+  },
+  "m_33dc0c7eef": {
+    "message": "已保存的数据发生了变化，请重新获取建议。"
+  },
+  "m_4e265c1689": {
+    "message": "已应用 $1 项更改。未改动已打开的标签页。"
+  },
+  "m_62157d9463": {
+    "message": "没有可撤销的整理记录"
+  },
+  "m_33b0b3d01c": {
+    "message": "之后又有更改，无法撤销"
+  },
+  "m_b1c9392214": {
+    "message": "已恢复到整理前的状态"
+  },
+  "m_6aa1453553": {
+    "message": "更改数量请控制在 1 到 50 之间"
+  },
+  "m_b96d769eac": {
+    "message": "找不到目标空间"
+  },
+  "m_2b707f3b85": {
+    "message": "更改格式无效"
+  },
+  "m_f7c288ba66": {
+    "message": "名称长度需在 1–120 个字符之间"
+  },
+  "m_bd93ad1a6f": {
+    "message": "重命名：$1 → $2"
+  },
+  "m_ebeb4c2304": {
+    "message": "找不到目标分类"
+  },
+  "m_f4d781035f": {
+    "message": "未分类"
+  },
+  "m_42e0c95815": {
+    "message": "移动分类：$1 → $2"
+  },
+  "m_55a535bafa": {
+    "message": "只能添加 HTTP/HTTPS 的 URL"
+  },
+  "m_43c516fa6a": {
+    "message": "此 URL 已保存"
+  },
+  "m_39b67bcaf4": {
+    "message": "标题格式无效"
+  },
+  "m_03f6623a18": {
+    "message": "添加标签页：$1 ← $2"
+  },
+  "m_6a6f94972c": {
+    "message": "标签页位置无效"
+  },
+  "m_579a11d917": {
+    "message": "请选择其他空间"
+  },
+  "m_46ba84410f": {
+    "message": "目标标签页的 URL 不一致"
+  },
+  "m_8924020b2a": {
+    "message": "目标位置已有相同的 URL"
+  },
+  "m_11b801d8a2": {
+    "message": "移动标签页：$1（$2 → $3）"
+  },
+  "m_42adb155e1": {
+    "message": "不支持的操作"
+  },
+  "m_4091966e8a": {
+    "message": "保存到 Tab Matomen Kai"
+  },
+  "m_6079395160": {
+    "message": "还没有空间（请在仪表板中创建）"
+  },
+  "m_2167649eea": {
+    "message": "打开 Tab Matomen Kai"
+  },
+  "m_ecde74ef1b": {
+    "message": "已保存到“$1”（$2 个标签页）"
+  },
+  "m_6f91f13005": {
+    "message": "“$1”中已保存过"
+  },
+  "m_a9276d6dfe": {
+    "message": "无法保存。请在仪表板中确认空间"
+  },
+  "m_56415d676e": {
+    "message": "备份内容无效。当前数据未被更改。"
+  },
+  "m_a18e4bec39": {
+    "message": "标签页批量操作"
+  },
+  "m_f6365e7574": {
+    "message": "全选"
+  },
+  "m_e135253c38": {
+    "message": "已选 0 项"
+  },
+  "m_9a2cef5d5b": {
+    "message": "在当前窗口中打开所选标签页"
+  },
+  "m_119daf93ee": {
+    "message": "打开"
+  },
+  "m_2cb583698f": {
+    "message": "目标空间"
+  },
+  "m_9a97fc3ae6": {
+    "message": "移动"
+  },
+  "m_71a12fb43e": {
+    "message": "要放入的组"
+  },
+  "m_e70ecafd50": {
+    "message": "放入组"
+  },
+  "m_ae75ae1d2a": {
+    "message": "复制格式"
+  },
+  "m_ce05fd6a61": {
+    "message": "标题和 URL"
+  },
+  "m_c257bec714": {
+    "message": "仅 URL"
+  },
+  "m_295cc5d596": {
+    "message": "复制所选标签页的列表（未选择时复制整个空间）"
+  },
+  "m_e94c210766": {
+    "message": "复制"
+  },
+  "m_a2307d9555": {
+    "message": "归档所选标签页"
+  },
+  "m_c686c1a9dd": {
+    "message": "归档"
+  },
+  "m_2fe1822ad4": {
+    "message": "删除所选标签页"
+  },
+  "m_5cbdf1fd70": {
+    "message": "删除"
+  },
+  "m_f0dc9f43d4": {
+    "message": "取消选择（Esc）"
+  },
+  "m_ec7ae06b09": {
+    "message": "取消选择"
+  },
+  "m_fca5a8dc9f": {
+    "message": "已选 $1 项"
+  },
+  "m_91f77f62c2": {
+    "message": "移动到…"
+  },
+  "m_cda05ed8b5": {
+    "message": "放入组…"
+  },
+  "m_7a137f933a": {
+    "message": "无组"
+  },
+  "m_bcbebef3cf": {
+    "message": "未命名的组"
+  },
+  "m_4710908c81": {
+    "message": "新建组…"
+  },
+  "m_e4de78fe6b": {
+    "message": "切换过程中无法使用。"
+  },
+  "m_37bb515e00": {
+    "message": "空间已变化，操作已取消。请重新选择。"
+  },
+  "m_5e3dfdc724": {
+    "message": "找不到所选的标签页。"
+  },
+  "m_fba383cf43": {
+    "message": "$1失败。"
+  },
+  "m_481253a7af": {
+    "message": "已打开 $1 个标签页。"
+  },
+  "m_8394e407bf": {
+    "message": "请选择目标空间。"
+  },
+  "m_72a6bd4fe9": {
+    "message": "没有可用的目标空间。"
+  },
+  "m_33ad04a535": {
+    "message": " （因目标位置已有相同 URL，已跳过 $1 个）"
+  },
+  "m_7c9bfe16e3": {
+    "message": "已将 $2 个标签页移动到“$1”。$3"
+  },
+  "m_c19f04094f": {
+    "message": "请选择一个组。"
+  },
+  "m_42f0321630": {
+    "message": "新建组"
+  },
+  "m_80eb0a488d": {
+    "message": "移动到组"
+  },
+  "m_961c24d640": {
+    "message": "找不到该组。"
+  },
+  "m_d42ecb5149": {
+    "message": "已将 $1 个标签页放入“$2”。"
+  },
+  "m_2a8a7849b4": {
+    "message": "已将 $1 个标签页移出所在组。"
+  },
+  "m_d97fff8023": {
+    "message": "没有可复制的标签页。"
+  },
+  "m_fd05c05821": {
+    "message": "已将 $1 个标签页复制为$2。"
+  },
+  "m_b4a1f2d50c": {
+    "message": "无法复制到剪贴板。"
+  },
+  "m_63b3f3287e": {
+    "message": "复制失败。"
+  },
+  "m_b48b8f8f20": {
+    "message": "已归档 $1 个标签页。"
+  },
+  "m_cba9bbaa15": {
+    "message": "要删除所选的 $1 个标签页吗？此操作无法撤销。"
+  },
+  "m_fae13af1e7": {
+    "message": "已删除 $1 个标签页。"
+  },
+  "m_53884810b9": {
+    "message": "空间操作"
+  },
+  "m_269b0f92e4": {
+    "message": "取消"
+  },
+  "m_a530f556a0": {
+    "message": "切换空间"
+  },
+  "m_b538e73b7e": {
+    "message": "保存并切换"
+  },
+  "m_f7c3004a90": {
+    "message": "不保存直接切换"
+  },
+  "m_348b8cbfe6": {
+    "message": "没有可保存的空间，因此无法在此界面保存。"
+  },
+  "m_6c891ec97d": {
+    "message": "在侧边面板中打开左侧栏（Chrome 的面板位置需设为左侧）"
+  },
+  "m_10432c2864": {
+    "message": "在侧边面板中打开左侧栏"
+  },
+  "m_72397565b9": {
+    "message": "切换深色模式"
+  },
+  "m_48e334a386": {
+    "message": "添加分类"
+  },
+  "m_53e842102c": {
+    "message": "将所有数据导出为 JSON 文件"
+  },
+  "m_e44031674a": {
+    "message": "从 JSON 文件导入数据"
+  },
+  "m_da76e386a1": {
+    "message": "自动备份间隔"
+  },
+  "m_ce06239034": {
+    "message": "切换空间时自动保存当前标签页"
+  },
+  "m_54bcd667a4": {
+    "message": "更改分类"
+  },
+  "m_80022cdc79": {
+    "message": "重命名空间"
+  },
+  "m_a9f0f1eba3": {
+    "message": "归档空间"
+  },
+  "m_65902d6ec2": {
+    "message": "删除空间"
+  },
+  "m_a54c2c00ae": {
+    "message": "从归档中恢复"
+  },
+  "m_da37848919": {
+    "message": "永久删除"
+  },
+  "m_6293e5e0a9": {
+    "message": "切换视图"
+  },
+  "m_b4cf24ebe1": {
+    "message": "列表视图"
+  },
+  "m_1e578fc996": {
+    "message": "卡片视图"
+  },
+  "m_b1c9cf7a56": {
+    "message": "按标签页标题或 URL 筛选…"
+  },
+  "m_2eabfa845d": {
+    "message": "新建标签组"
+  },
+  "m_32dbab9f90": {
+    "message": "输入分类名称…"
+  },
+  "m_a7b8477445": {
+    "message": "Tab Matomen Kai"
+  },
+  "m_2e57cc29ef": {
+    "message": "若想浏览时让它一直显示在左侧，请先把 Chrome 的“侧边面板位置”设为“左侧”，再点击上方的按钮。"
+  },
+  "m_22c2dc1788": {
+    "message": "打开 Chrome 设置"
+  },
+  "m_5d208d1c21": {
+    "message": "Tab Matomen"
+  },
+  "m_798f95db5d": {
+    "message": "Kai"
+  },
+  "m_fbc350db7c": {
+    "message": "＋ 空间"
+  },
+  "m_041f4ac575": {
+    "message": "＋ 分类"
+  },
+  "m_14095d67d9": {
+    "message": "还没有空间"
+  },
+  "m_b9e400d207": {
+    "message": "导出"
+  },
+  "m_9eb51e84ba": {
+    "message": "导入"
+  },
+  "m_2a81a2c8cc": {
+    "message": "自动备份"
+  },
+  "m_17b500293e": {
+    "message": "关闭"
+  },
+  "m_ca7c80cb81": {
+    "message": "每小时"
+  },
+  "m_d2fe3b7e6e": {
+    "message": "每 6 小时"
+  },
+  "m_d63043a388": {
+    "message": "每天"
+  },
+  "m_0ac73ac1aa": {
+    "message": "切换时自动保存"
+  },
+  "m_c73d62d960": {
+    "message": "已归档"
+  },
+  "m_0de3e408a2": {
+    "message": "请选择空间"
+  },
+  "m_dd3cca7f34": {
+    "message": "分类"
+  },
+  "m_79338c0706": {
+    "message": "重命名"
+  },
+  "m_442ee7eb76": {
+    "message": "恢复"
+  },
+  "m_5839f00a0d": {
+    "message": "＋ 组"
+  },
+  "m_ccd039eca2": {
+    "message": "保存当前标签页"
+  },
+  "m_aff97557b0": {
+    "message": "此空间还没有保存任何标签页"
+  },
+  "m_83d0565a6f": {
+    "message": "打开所有想保存的标签页（此仪表板标签页可以保持打开）"
+  },
+  "m_fab476e40b": {
+    "message": "你的标签页将列在这里"
+  },
+  "m_2e408b9c01": {
+    "message": "快速入门"
+  },
+  "m_3a09b3b90d": {
+    "message": "选中该空间后，打开所有想保存的标签页"
+  },
+  "m_2884c23c94": {
+    "message": "下一个项目，请新建一个空间，用同样的方法保存"
+  },
+  "m_2061886749": {
+    "message": "点击侧边栏中的空间名称即可切换标签页"
+  },
+  "m_27131257d7": {
+    "message": "将空间拖到分类名称上即可移动"
+  },
+  "m_7406792479": {
+    "message": "创建分类"
+  },
+  "m_121ae791f1": {
+    "message": "颜色"
+  },
+  "m_614f2eaaff": {
+    "message": "创建"
+  },
+  "m_1a2e920ba7": {
+    "message": "无"
+  },
+  "m_72776ab68f": {
+    "message": "红色"
+  },
+  "m_831166ef4b": {
+    "message": "橙色"
+  },
+  "m_7720f8ea0a": {
+    "message": "黄色"
+  },
+  "m_f22758bf8f": {
+    "message": "绿色"
+  },
+  "m_29e5ef1fa6": {
+    "message": "青绿色"
+  },
+  "m_845d1da87f": {
+    "message": "蓝色"
+  },
+  "m_01caea5810": {
+    "message": "紫色"
+  },
+  "m_caaf2acdb2": {
+    "message": "粉色"
+  },
+  "m_5378733ecf": {
+    "message": "灰色"
+  },
+  "m_96aea44a0c": {
+    "message": "蓝色"
+  },
+  "m_97397cc2e0": {
+    "message": "红色"
+  },
+  "m_5cd070ae56": {
+    "message": "黄色"
+  },
+  "m_031e9b20e8": {
+    "message": "绿色"
+  },
+  "m_d96fea3531": {
+    "message": "紫色"
+  },
+  "m_55018581ba": {
+    "message": "青色"
+  },
+  "m_aabcb11957": {
+    "message": "设置图片"
+  },
+  "m_ace3472c03": {
+    "message": "移除图片"
+  },
+  "m_26dfc3aefe": {
+    "message": "请输入分类名称。"
+  },
+  "m_39a49bde63": {
+    "message": "已存在名为“$1”的分类。"
+  },
+  "m_629a6eefac": {
+    "message": "请输入空间名称。"
+  },
+  "m_29c082f9b5": {
+    "message": "已存在名为“$1”的空间。"
+  },
+  "m_09648e447c": {
+    "message": "找不到该空间。"
+  },
+  "m_d40bd34d6f": {
+    "message": "调整组的顺序失败。"
+  },
+  "m_f95e7d8675": {
+    "message": "调整标签页的顺序失败。"
+  },
+  "m_3dfdf80d58": {
+    "message": "添加子分类"
+  },
+  "m_6ab1008863": {
+    "message": "更改分类颜色"
+  },
+  "m_29f18064c3": {
+    "message": "重命名分类"
+  },
+  "m_b3dd5064ba": {
+    "message": "删除（其中的空间将移到“未分类”）"
+  },
+  "m_1b31bc2d61": {
+    "message": "更改归档颜色"
+  },
+  "m_7234f5d4ed": {
+    "message": "没有已归档的空间"
+  },
+  "m_c922e46a12": {
+    "message": "$1（已归档 / $2 个标签页）"
+  },
+  "m_78380175c5": {
+    "message": "更改主题颜色和图标"
+  },
+  "m_b8901ba999": {
+    "message": "$1（$2 个标签页）"
+  },
+  "m_f76574e271": {
+    "message": "$1 | 仪表板"
+  },
+  "m_e17d188654": {
+    "message": "请先创建空间"
+  },
+  "m_3009a0e43b": {
+    "message": "返回当前标签页"
+  },
+  "m_1816d78893": {
+    "message": "没有与“$1”匹配的标签页。"
+  },
+  "m_876cb3ca26": {
+    "message": "拖放到这里即可移出该组"
+  },
+  "m_97edcdfb5e": {
+    "message": "更改组颜色"
+  },
+  "m_4ccd455653": {
+    "message": "重命名组"
+  },
+  "m_73fd4c5de6": {
+    "message": "删除组（其中的标签页将变为未分组）"
+  },
+  "m_f32ff53372": {
+    "message": "拖动以调整顺序"
+  },
+  "m_dcea25f949": {
+    "message": "此组中没有标签页。把标签页拖到这里即可添加"
+  },
+  "m_d3811d54bb": {
+    "message": "$1\n$2\n点击打开 / 拖动可在组之间移动"
+  },
+  "m_05120d62af": {
+    "message": "选择：$1"
+  },
+  "m_f82fcc53cd": {
+    "message": "点击选择，Shift+点击可选择一个范围"
+  },
+  "m_4bed8152a4": {
+    "message": "归档此标签页"
+  },
+  "m_cf45400a02": {
+    "message": "归档（从标签栏中隐藏）"
+  },
+  "m_626612ea5e": {
+    "message": "删除此标签页"
+  },
+  "m_88c92c22d4": {
+    "message": "加载数据失败。"
+  },
+  "m_cd6a909d39": {
+    "message": "请输入新空间的名称："
+  },
+  "m_1cefe0ca30": {
+    "message": "已创建空间“$1”。"
+  },
+  "m_ed1eac911a": {
+    "message": "创建空间失败。"
+  },
+  "m_f2b265026b": {
+    "message": "请输入新的空间名称："
+  },
+  "m_f2b748c88b": {
+    "message": "空间已重命名。"
+  },
+  "m_c0e48c9028": {
+    "message": "重命名空间失败。"
+  },
+  "m_f4f1d62806": {
+    "message": "要删除空间“$1”吗？\n已保存的所有标签页信息也会一并删除。"
+  },
+  "m_88dd8d49f3": {
+    "message": "已删除空间“$1”。"
+  },
+  "m_89289d2423": {
+    "message": "删除空间失败。"
+  },
+  "m_7609ae5732": {
+    "message": "要归档空间“$1”吗？\n数据会保留，之后可以恢复。"
+  },
+  "m_ace51b281e": {
+    "message": "已归档空间“$1”。"
+  },
+  "m_b4f5deb27f": {
+    "message": "归档失败。"
+  },
+  "m_2551a4a971": {
+    "message": "已恢复空间“$1”。"
+  },
+  "m_e82b7d25f2": {
+    "message": "恢复失败。"
+  },
+  "m_e95765e8a5": {
+    "message": "要永久删除空间“$1”吗？\n此操作无法撤销。"
+  },
+  "m_ca94b050f3": {
+    "message": "已永久删除空间“$1”。"
+  },
+  "m_6e82f81122": {
+    "message": "删除失败。"
+  },
+  "m_507e16fe4e": {
+    "message": "未选择空间。请选择或创建一个空间。"
+  },
+  "m_f351029a37": {
+    "message": "没有可保存的标签页（chrome:// 页面无法保存）。"
+  },
+  "m_f272b678d1": {
+    "message": "已保存 $1 个标签页。"
+  },
+  "m_f38b273b38": {
+    "message": "保存标签页失败。"
+  },
+  "m_d48c02f761": {
+    "message": "当前打开的标签页没有保存到任何空间。\n"
+  },
+  "m_e92defc1cb": {
+    "message": "如果切换，这些标签页将在未保存的情况下被关闭。\n\n"
+  },
+  "m_0fe3f5ec9d": {
+    "message": "“切换时自动保存”已关闭。\n"
+  },
+  "m_2bde3706ab": {
+    "message": "当前标签页不会保存到“$1”，将直接被关闭。\n\n"
+  },
+  "m_1ad7ff9d86": {
+    "message": "由于是从已归档的空间切换，当前标签页将在未保存的情况下被关闭。\n\n"
+  },
+  "m_2bc14b7cca": {
+    "message": "当前打开的标签页将在未保存的情况下被关闭。\n\n"
+  },
+  "m_be1598e030": {
+    "message": "要切换到空间“$1”吗？"
+  },
+  "m_618731a7e3": {
+    "message": "没有可保存的位置"
+  },
+  "m_c837ab2cde": {
+    "message": "由于保存失败，已取消切换。"
+  },
+  "m_814259bda8": {
+    "message": "由于无法保存切换前的历史记录，已取消切换。"
+  },
+  "m_91c0550a7a": {
+    "message": "已切换到空间“$1”。"
+  },
+  "m_7db912ef11": {
+    "message": "切换空间失败。"
+  },
+  "m_b6afad9923": {
+    "message": "删除标签页失败。"
+  },
+  "m_b623491f35": {
+    "message": "已将“$1”移动到“$2”。"
+  },
+  "m_2768c12413": {
+    "message": "移动分类失败。"
+  },
+  "m_429435583a": {
+    "message": "调整顺序失败。"
+  },
+  "m_c1460a0421": {
+    "message": "调整分类顺序失败。"
+  },
+  "m_ddf26ce3ed": {
+    "message": "导出完成：$1 个空间 / $2 个分类 → pwm-backup-$3.json"
+  },
+  "m_f693a2b833": {
+    "message": "导出失败。"
+  },
+  "m_00de6b5511": {
+    "message": "文件格式无效。"
+  },
+  "m_75e9dd8f76": {
+    "message": "未知"
+  },
+  "m_efccfe8e49": {
+    "message": "要导入此备份文件吗？\n\n  空间数　: $1\n  分类数　: $2\n  创建时间: $3\n\n当前所有数据都将被覆盖。要继续吗？"
+  },
+  "m_ce1d0548a0": {
+    "message": "导入完成：$1 个空间 / $2 个分类"
+  },
+  "m_8df1c53c2e": {
+    "message": "解析 JSON 失败。"
+  },
+  "m_682e44dcfb": {
+    "message": "导入失败。$1"
+  },
+  "m_db96a9457a": {
+    "message": "已创建分类“$1”。"
+  },
+  "m_1dcd4efe17": {
+    "message": "创建分类失败。"
+  },
+  "m_5c1ea7fb37": {
+    "message": "创建“$1”的子分类"
+  },
+  "m_c961917824": {
+    "message": "已创建子分类“$1”。"
+  },
+  "m_569633928e": {
+    "message": "创建子分类失败。"
+  },
+  "m_025af6c3cb": {
+    "message": "请输入新的分类名称："
+  },
+  "m_f3b1a68d36": {
+    "message": "分类已重命名。"
+  },
+  "m_0f834403b5": {
+    "message": "重命名分类失败。"
+  },
+  "m_904330b1c2": {
+    "message": "要删除分类“$1”吗？\n其中的空间将移到“未分类”。"
+  },
+  "m_482af4adff": {
+    "message": "已删除分类“$1”。"
+  },
+  "m_152585e380": {
+    "message": "删除分类失败。"
+  },
+  "m_a8377443c2": {
+    "message": "0：未分类\n"
+  },
+  "m_5d1ccf930a": {
+    "message": " ← 当前"
+  },
+  "m_248d1228f5": {
+    "message": "$1：＋ 新建分类"
+  },
+  "m_6f13eed82d": {
+    "message": "请为“$1”选择分类（输入编号）：\n\n$2"
+  },
+  "m_db7a8db4a9": {
+    "message": "请输入有效的编号。"
+  },
+  "m_62abac0149": {
+    "message": "已移到“未分类”。"
+  },
+  "m_bab01b0a0b": {
+    "message": "已移到分类“$1”。"
+  },
+  "m_c35c527047": {
+    "message": "新建分类"
+  },
+  "m_936cd7f801": {
+    "message": "已创建分类“$1”并将该空间移入其中。"
+  },
+  "m_1f9b554bc9": {
+    "message": "更改分类失败。"
+  },
+  "m_49dbd7dc23": {
+    "message": "创建组"
+  },
+  "m_e94783b08f": {
+    "message": "请选择空间。"
+  },
+  "m_637efb62a0": {
+    "message": "已创建组“$1”。"
+  },
+  "m_e5c17530ad": {
+    "message": "创建组失败。"
+  },
+  "m_f648e8b5a9": {
+    "message": "编辑组"
+  },
+  "m_c6df24a6c9": {
+    "message": "组已更新。"
+  },
+  "m_762bfecbd7": {
+    "message": "更新组失败。"
+  },
+  "m_6ab993caa7": {
+    "message": "要删除组“$1”吗？\n其中的标签页将变为未分组。"
+  },
+  "m_d06ff38c9c": {
+    "message": "已删除组“$1”。"
+  },
+  "m_ce516ef82e": {
+    "message": "删除组失败。"
+  },
+  "m_deccd3ca1c": {
+    "message": "移动标签页失败。"
+  },
+  "m_9ab79d75a0": {
+    "message": "切换到浅色模式"
+  },
+  "m_2aff1d2b6a": {
+    "message": "切换到深色模式"
+  },
+  "m_a49e39c667": {
+    "message": "已关闭自动备份。"
+  },
+  "m_33ec021992": {
+    "message": "自动备份已设为：$1。"
+  },
+  "m_938dbc938d": {
+    "message": "已开启切换时自动保存。"
+  },
+  "m_4f8b8d9b2e": {
+    "message": "已关闭切换时自动保存。"
+  },
+  "m_b3afead7ff": {
+    "message": "保存当前标签页（$1S）"
+  },
+  "m_910348bd6b": {
+    "message": "添加一个标签页"
+  },
+  "m_2f9e6135b4": {
+    "message": "编辑收藏"
+  },
+  "m_f4c69f0508": {
+    "message": "请选择"
+  },
+  "m_51a3053d75": {
+    "message": "没有可添加的网页。"
+  },
+  "m_53f079d16f": {
+    "message": "请先创建空间。"
+  },
+  "m_ae3ecc7ed2": {
+    "message": "要添加的标签页"
+  },
+  "m_e63bc2f7aa": {
+    "message": "目标空间"
+  },
+  "m_6d5cd75875": {
+    "message": "添加"
+  },
+  "m_85ccd53d0e": {
+    "message": "无法读取标签页"
+  },
+  "m_31d3cc3310": {
+    "message": "目标位置已保存过此 URL。"
+  },
+  "m_ddb65d86ef": {
+    "message": "已向“$1”添加 1 个标签页。"
+  },
+  "m_9fbca578c5": {
+    "message": "无法添加。请检查标签页和目标位置。"
+  },
+  "m_4004b8f1db": {
+    "message": "无法读取标签页。"
+  },
+  "m_4648287945": {
+    "message": "无法保存收藏。"
+  },
+  "m_03c994e60e": {
+    "message": "创建空间后即可登记收藏。"
+  },
+  "m_a2c6ae915e": {
+    "message": "无法加载收藏。"
+  },
+  "m_296dad2d72": {
+    "message": "收藏"
+  },
+  "m_c1b61fe80e": {
+    "message": "最近的空间"
+  },
+  "m_ec351de08b": {
+    "message": "已保存标签页预览"
+  },
+  "m_fa9f222dca": {
+    "message": "无法打开该标签页。"
+  },
+  "m_c9ebf4c3f7": {
+    "message": "没有已保存的标签页"
+  },
+  "m_6329f21c41": {
+    "message": "设置"
+  },
+  "m_e438ffd26f": {
+    "message": "设置（导入/导出、备份、自动保存）"
+  },
+  "m_56b6cd2c1a": {
+    "message": "打开设置"
+  },
+  "m_00820b1780": {
+    "message": "关闭设置"
+  },
+  "m_bf10ec5ff4": {
+    "message": "更改的设置会立即保存。导入会覆盖当前已保存的数据。"
+  },
+  "m_c32d6516f4": {
+    "message": "‹ 关闭"
+  },
+  "m_74f34a1534": {
+    "message": "‹ 收起"
+  },
+  "m_0a57aeec9d": {
+    "message": "关闭侧边栏"
+  },
+  "m_0b845075d6": {
+    "message": "收起侧边栏"
+  },
+  "m_2c2e1923ea": {
+    "message": "关闭（可通过工具栏中的扩展程序图标重新打开）"
+  },
+  "m_6264a3f76a": {
+    "message": "无法关闭。请重试。"
+  },
+  "m_91323fe947": {
+    "message": "展开侧边栏"
+  },
+  "m_28e3b7ba50": {
+    "message": "请将 Chrome 的侧边面板位置设为“左侧”。它不会在右侧打开。"
+  },
+  "m_2c14db7241": {
+    "message": "已打开左侧栏。浏览其他页面时它会一直显示。关闭后，可通过工具栏中的扩展程序图标重新打开。"
+  },
+  "m_07a63337a6": {
+    "message": "需要 Chrome 141 或更高版本才能检测左侧位置。"
+  },
+  "m_c5ed08a7f9": {
+    "message": "窗口还在准备中。请重试。"
+  },
+  "m_14ae9512a4": {
+    "message": "无法打开侧边栏。请重试。"
+  },
+  "m_89da984b3c": {
+    "message": "Tab Matomen Kai — 左侧栏"
+  },
+  "m_2e759e9300": {
+    "message": "打开仪表板"
+  },
+  "m_99f2a39628": {
+    "message": "无法打开仪表板。请重试。"
+  },
+  "m_c7f325f13f": {
+    "message": "撤销"
+  },
+  "m_41852537df": {
+    "message": "切换过程中无法撤销。"
+  },
+  "m_88291348ad": {
+    "message": "找不到该空间，无法撤销。"
+  },
+  "m_9c5b54b484": {
+    "message": "之后又有更改，撤销已取消。"
+  },
+  "m_7e6b5ba160": {
+    "message": "已撤销。"
+  },
+  "m_a89f5a6dd5": {
+    "message": "无法撤销。"
+  },
+  "m_64c1599a05": {
+    "message": "已删除 1 个标签页。"
+  },
+  "m_bd0d74ffbc": {
+    "message": "已归档 1 个标签页。"
+  },
+  "m_429855c857": {
+    "message": "搜索项目和空间"
+  },
+  "m_2437c7c79c": {
+    "message": "恢复之前的布局"
+  },
+  "m_d0b101161c": {
+    "message": "没有切换前的历史记录"
+  },
+  "m_c030b56060": {
+    "message": "保存失败：请重新保存"
+  },
+  "m_0a14601b8e": {
+    "message": "请选择要保存到的空间"
+  },
+  "m_aa9e381e6f": {
+    "message": "有未保存的更改"
+  },
+  "m_74e30e9189": {
+    "message": "已保存"
+  },
+  "m_3b69257cb0": {
+    "message": " · 已归档"
+  },
+  "m_d34e19303a": {
+    "message": "没有匹配的空间"
+  },
+  "m_3881f5d6ed": {
+    "message": "无法确定保存状态"
+  },
+  "m_97aa22defa": {
+    "message": "恢复之前的标签页布局。当前布局也会保留在历史记录中。页面上尚未提交的输入内容无法恢复。"
+  },
+  "m_9ea03093db": {
+    "message": "已恢复之前的标签页布局。"
+  },
+  "m_9930817c6f": {
+    "message": "恢复失败。请检查历史记录后重试。"
+  },
+  "m_6644f06197": {
+    "message": "正在保存…"
+  },
+  "appName": {
+    "message": "Tab Matomen Kai"
+  },
+  "appDescription": {
+    "message": "为每个项目创建一个空间，在同一个 Chrome 窗口内切换不同的标签页组合。"
+  },
+  "actionTitle": {
+    "message": "打开 Tab Matomen Kai"
+  },
+  "onboardingClickSave": {
+    "message": "点击上方的“保存当前标签页”按钮"
+  },
+  "onboardingClickNewSpace": {
+    "message": "点击左侧的“＋ 空间”，输入项目名称"
+  },
+  "onboardingSaveExplained": {
+    "message": "点击“保存当前标签页”即可保存标签页"
+  },
+  "restoreHistoryTitle": {
+    "message": "之前的布局（$1）。保留到浏览器关闭为止"
+  },
+  "m_9e9943aa18": {
+    "message": "未获得 Google 的访问授权。"
+  },
+  "m_1b162ecb08": {
+    "message": "请连接 Google 云端硬盘。"
+  },
+  "m_38e08f6f72": {
+    "message": "无法确认保存备份的权限。"
+  },
+  "m_063e83e937": {
+    "message": "连接已取消。"
+  },
+  "m_cbe501233e": {
+    "message": "身份验证的重定向不一致。"
+  },
+  "m_195c611c2a": {
+    "message": "无法验证身份。请重新连接。"
+  },
+  "m_210231350f": {
+    "message": "请输入 OAuth 客户端 ID。"
+  },
+  "m_27298d6197": {
+    "message": "请连接 Google 云端硬盘。如果连接已过期，需要重新连接。"
+  },
+  "m_76e8f9b19a": {
+    "message": "另一个窗口正在保存备份。"
+  },
+  "m_c62a99397a": {
+    "message": "TabMatomenKai_"
+  },
+  "m_551f37d20f": {
+    "message": "无法确认结果。重试前请先检查 Google 云端硬盘。"
+  },
+  "m_6d2d7cf526": {
+    "message": "连接已过期。请重新连接 Google 云端硬盘。"
+  },
+  "m_e5be1db2f7": {
+    "message": "无法保存（$1）。请确认已启用 Google Drive API、已授予权限，并且存储空间充足。"
+  },
+  "m_fd067b945c": {
+    "message": "无法确认保存位置。请检查 Google 云端硬盘。"
+  },
+  "m_e756be4d47": {
+    "message": "备份到 Google 云端硬盘"
+  },
+  "m_5ea424f93b": {
+    "message": "将你的空间、分类和标签页以带时间戳的 JSON 文件保存到“我的云端硬盘”。"
+  },
+  "m_6b5763bf71": {
+    "message": "点击“连接 Google 云端硬盘”，会打开 Google 的授权页面。允许后，Chrome 会保持连接，并在过期时自动续期。"
+  },
+  "m_7b5914be86": {
+    "message": "首次连接设置"
+  },
+  "m_e6720a68da": {
+    "message": "请在 Google Cloud 中启用 Drive API，并创建 OAuth 客户端（Web 应用）。将下面的 URL 登记为已获授权的重定向 URI。"
+  },
+  "m_f5da3ecf70": {
+    "message": "重定向 URI"
+  },
+  "m_d80926d454": {
+    "message": "OAuth 客户端 ID"
+  },
+  "m_dc59c3eb54": {
+    "message": "无需客户端密钥。如果发布状态为测试，请把你使用的 Google 帐号添加为测试用户。"
+  },
+  "m_a8a3126796": {
+    "message": "连接 Google 云端硬盘"
+  },
+  "m_4c23d9e46d": {
+    "message": "立即备份"
+  },
+  "m_4d138770f9": {
+    "message": "断开此浏览器的连接"
+  },
+  "m_c64f38ecfa": {
+    "message": "打开最近的备份"
+  },
+  "m_81d7efe6b9": {
+    "message": "上次保存：$1 "
+  },
+  "m_f11b0168dc": {
+    "message": "处理中…"
+  },
+  "m_e873b731b1": {
+    "message": "已连接。现在可以保存备份了。"
+  },
+  "m_f714e3e49d": {
+    "message": "备份已保存到 Google 云端硬盘。"
+  },
+  "m_307c18ccd9": {
+    "message": "已断开此浏览器的连接。已保存的文件仍保留在云端硬盘中。"
+  },
+  "m_23e782bfe8": {
+    "message": "已连接"
+  },
+  "m_26a4745b1e": {
+    "message": "无法加载设置。请重新打开此界面。"
+  },
+  "languageHeading": {
+    "message": "语言"
+  },
+  "languageAuto": {
+    "message": "跟随浏览器语言（$1）"
+  },
+  "languageHelp": {
+    "message": "更改显示语言后，界面会重新加载。"
+  },
+  "reviewTitle": {
+    "message": "Tab Matomen Kai 对你有帮助吗？"
+  },
+  "reviewBody": {
+    "message": "如果有帮助，欢迎在 Chrome 应用商店留下评价，这对开发是很大的支持。"
+  },
+  "reviewWrite": {
+    "message": "撰写评价"
+  },
+  "reviewLater": {
+    "message": "稍后再说"
+  },
+  "reviewNever": {
+    "message": "不再显示"
+  },
+  "reviewThanks": {
+    "message": "谢谢！"
+  }
+}

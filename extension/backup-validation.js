@@ -1,7 +1,7 @@
 'use strict';
 function validateBackup(data) {
   const object = v => v !== null && typeof v === 'object' && !Array.isArray(v);
-  const fail = () => { throw new Error('バックアップの内容が不正です。現在のデータは変更していません。'); };
+  const fail = () => { throw new Error(t('m_56415d676e')); };
   const ids = items => {
     const seen = new Set();
     for (const item of items) {

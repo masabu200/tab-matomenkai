@@ -245,3 +245,28 @@ Playwright 1.62 の `page.waitForFunction` に async 関数を渡すと、最初
 ## 2026-10-26 Chromeの読み込み元をプロジェクト内 extension/ に統一
 
 利用者のChromeは10月14日に Downloads へ展開したコピーを読み込み続けており、今日の修正が反映されていなかった（「ホバーで高さが変わる」が直らない原因）。拡張IDがフォルダパスから決まることを使って特定（画面のID `kfpomnf…` が Downloads のパスから計算したIDと一致）。エクスポート→古い拡張を削除→プロジェクトの `extension/` を読み込み→インポートで切り替え、ホバーの修正が反映されたことを確認した。新ID `hclimckp…`。設定値・表示モード・Drive接続・AI接続キーは引き継がれないため再設定が必要。
+
+## 2026-10-28 DRIVE-01：一般配布用の Google 認証方式
+
+- 設計を `planning/DRIVE-01-OAUTH.md` に記録。本命は manifest の `oauth2`（Chrome 拡張機能種別クライアント）＋ `chrome.identity.getAuthToken`。拡張IDを `key` で固定する必要がある。
+- `extension/drive-backup.js` を二方式に書き換え：`mode()` が manifest を見て builtin / manual を自動選択。builtin は Chrome がトークンを保持・更新し拡張側は何も保存しない。401 では `removeCachedAuthToken` 後に非対話で再取得。manual（従来の自前クライアントID）は期限切れ時に `prompt=none` の非対話フローで無操作更新を試み、失敗時だけ再接続を案内。
+- `extension/drive-settings.js`：builtin ではクライアントID入力の手順を隠し説明文を出す。
+- `tests/drive-backup.cjs` を両方式に拡張（PASS）。実 Google での往復（DRIVE-02）と manifest への `key`/`oauth2` 追加は開発者のアカウント操作が必要なため未実施。
+
+## 2026-10-28 多言語化（10言語）とストア掲載文
+
+- 利用者の要望：英語圏・中国語圏・スペイン語圏・欧州を含む世界向けに UI とストア説明文を多言語化する。
+- 仕組み：`extension/i18n.js`（`I18n` と `t()`）。既定はブラウザ UI 言語（`chrome.i18n.getMessage`、同期）。設定で言語を選ぶと `pwm_settings.language` に保存し、ページは `localStorage` に写したカタログを同期で読んで初回描画から切り替わる。Service Worker は `I18n.ready()` で追従（右クリックメニューを再構築）。`default_locale` は `en`、manifest の name/description/action title は `__MSG_*__`。
+- 変換：`tools/i18n-extract.mjs` が acorn で JS をパースし、日本語を含む文字列リテラル／テンプレートを `t('m_<ハッシュ>', [...])` に、HTML を含む文字列は内部の日本語だけ `${t()}` に、HTML のテキストと属性は `data-i18n` / `data-i18n-attr` に書き換える。キーは文面のハッシュなので同文は自動で共有。コメントと `console.*` は対象外。再実行しても 0 件（冪等）。
+- つまずき：(1) テンプレートの式の中に日本語リテラルが入る入れ子で編集範囲が重なり構文が壊れた → 外側だけ書き換えて次パスで内側を処理する反復に変更。(2) HTML で変換済みのテキストを再び `<span>` で包んで無限に入れ子になった → `data-i18n` 済みの親と属性をスキップ。(3) DRIVE-01 の変更を保つため巻き戻さなかった Drive 2ファイルのキーがカタログから抜けた → 元の文面からハッシュを再計算して復元（33件）。(4) オンボーディングの `<strong>` 混在文が3断片に割れていた → 1文にまとめ直し。(5) 文字列連結だった「直前の構成（時刻）。…」を `$1` 付きの1メッセージに。
+- カタログ：ja 406件を正本に、en は手作業、zh_CN / zh_TW / ko / es / pt_BR / de / fr / it はサブエージェントで並行翻訳し、キー・プレースホルダー一致を機械検査。製品名は Latin 表記 "Tab Matomen Kai" で統一（要判断）。
+- UI：設定ダイアログ先頭に「言語」セレクト（ブラウザに合わせる＋10言語）。変更で再読み込み。
+- テスト：`tests/i18n.cjs`（既定 ja → en → zh_CN → auto、第2ページと SW の追従、属性・動的文言）、`tests/i18n-catalog.test.cjs`（全ロケールのキー／プレースホルダー一致、manifest の `__MSG__`、ソースに未変換の日本語が無いこと）。既存の vm 系ユニットテストには `tests/i18n-stub.cjs` で `t`/`importScripts` を供給。
+- ストア掲載文：`store/listing/<言語>.md`（名前・概要・詳細・権限説明）。`identity` と `contextMenus` の用途を明記。
+
+## 2026-10-28 レビュー促進（extension/review-prompt.js）
+
+- 利用者の要望：ストアレビューを促す仕組み。
+- 条件：インストールから3日以上、ダッシュボードを使った日が5日以上（日付の集合、操作回数ではない）、スヌーズ中でなく、表示は最大3回、「レビューを書く」または「今後表示しない」で終了。「あとで」は14日スヌーズ。ダッシュボードのみ（サイドパネルには出さない）。ダイアログが開いている間は出さない。
+- インストール時刻は `background.js` の `onInstalled` で `pwm_review.installedAt` に記録（上書きしない）。レビューURLは `chromewebstore.google.com/detail/<chrome.runtime.id>/reviews`（ストア配布版では runtime.id がアイテムID）。
+- テスト：`tests/review-prompt.cjs`（判定規則、スヌーズ、書く→ストアURLを開いて終了、今後表示しない、サイドパネル除外）。

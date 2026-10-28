@@ -2298,3 +2298,17 @@ body.sidebar-collapsed .sidebar-launch-help { display:none; }
 .undo-toast__close { border:0; background:transparent; color:#aab5cf; font-size:16px; line-height:1; cursor:pointer; padding:4px; }
 .undo-toast__close:hover { color:#fff; }
 .undo-toast :focus-visible { outline:2px solid #9ebfff; outline-offset:2px; }
+
+/* language settings */
+.language-settings { margin:12px 0 4px; }
+.language-settings h3 { margin:0 0 6px; font-size:13px; }
+.language-settings select { max-width:100%; font-size:13px; padding:4px 6px; border-radius:6px; }
+.settings-help { margin:6px 0 0; font-size:12px; opacity:.75; }
+
+/* review prompt */
+.review-prompt { position:fixed; right:20px; bottom:20px; z-index:10000; width:min(360px, calc(100vw - 32px)); padding:14px 16px; border-radius:12px; background:#1c2234; color:#eef3ff; box-shadow:0 10px 28px rgba(0,0,0,.35); font-size:13px; }
+.review-prompt__title { margin:0 0 6px; font-size:14px; font-weight:600; }
+.review-prompt__body { margin:0 0 10px; line-height:1.5; opacity:.9; }
+.review-prompt__actions { display:flex; flex-wrap:wrap; gap:8px; }
+.review-prompt .btn { font-size:12px; padding:6px 10px; }
+.review-prompt .btn--ghost { color:#cdd6f4; }

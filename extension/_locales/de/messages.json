@@ -1,0 +1,1220 @@
+{
+  "m_2ce01f81ad": {
+    "message": "Lokale KI-Anbindung"
+  },
+  "m_a8ce0201c4": {
+    "message": "Solange die Verbindung besteht, werden Bereichstitel, URLs und Gruppeninformationen an den Integrationsserver auf diesem PC übermittelt. Seiteninhalte werden nie weitergegeben."
+  },
+  "m_a9356d61c7": {
+    "message": "Verbindungsschlüssel"
+  },
+  "m_9dd838b6ab": {
+    "message": "Die .local/token des Integrationsservers einfügen"
+  },
+  "m_5119847c00": {
+    "message": "Verbinden"
+  },
+  "m_092575584a": {
+    "message": "Trennen"
+  },
+  "m_2e845bddec": {
+    "message": "Vorschläge ansehen"
+  },
+  "m_463f7d5d30": {
+    "message": "Letzte Neuordnung rückgängig machen"
+  },
+  "m_7ea46c0315": {
+    "message": "Nicht verbunden"
+  },
+  "m_fb71a4e085": {
+    "message": "Verbindungsfehler"
+  },
+  "m_9606bdda03": {
+    "message": "Vorschläge ansehen ($1)"
+  },
+  "m_b5e969dec9": {
+    "message": "Verbunden · $1 Vorschläge"
+  },
+  "m_cda8d46d3f": {
+    "message": "Verbindung nicht möglich: "
+  },
+  "m_c4e07534d2": {
+    "message": "Den 64-stelligen Verbindungsschlüssel einfügen"
+  },
+  "m_0b9939e1f9": {
+    "message": "Getrennt"
+  },
+  "m_a9b2455ca6": {
+    "message": "KI-Vorschläge"
+  },
+  "m_1c7d43cb8f": {
+    "message": "Ausgewählte Änderungen anwenden"
+  },
+  "m_16661f1537": {
+    "message": "Diesen Vorschlag verwerfen"
+  },
+  "m_3da5c18551": {
+    "message": "Schließen"
+  },
+  "m_2fbbb892d1": {
+    "message": "Die gespeicherten Daten haben sich geändert, daher kann dieser Vorschlag nicht mehr angewendet werden. Bitten Sie die KI um einen neuen Vorschlag."
+  },
+  "m_33dc0c7eef": {
+    "message": "Die gespeicherten Daten haben sich geändert. Bitte fordern Sie einen neuen Vorschlag an."
+  },
+  "m_4e265c1689": {
+    "message": "$1 Änderungen angewendet. Geöffnete Tabs wurden nicht verändert."
+  },
+  "m_62157d9463": {
+    "message": "Kein Neuordnungsverlauf zum Rückgängigmachen vorhanden"
+  },
+  "m_33b0b3d01c": {
+    "message": "Rückgängigmachen nicht möglich, da danach Änderungen vorgenommen wurden"
+  },
+  "m_b1c9392214": {
+    "message": "Zustand vor der Neuordnung wiederhergestellt"
+  },
+  "m_6aa1453553": {
+    "message": "Bitte zwischen 1 und 50 Änderungen angeben"
+  },
+  "m_b96d769eac": {
+    "message": "Zielbereich nicht gefunden"
+  },
+  "m_2b707f3b85": {
+    "message": "Ungültiges Änderungsformat"
+  },
+  "m_f7c288ba66": {
+    "message": "Namen müssen 1–120 Zeichen lang sein"
+  },
+  "m_bd93ad1a6f": {
+    "message": "Umbenennen: $1 → $2"
+  },
+  "m_ebeb4c2304": {
+    "message": "Zielkategorie nicht gefunden"
+  },
+  "m_f4d781035f": {
+    "message": "Ohne Kategorie"
+  },
+  "m_42e0c95815": {
+    "message": "Kategorie verschieben: $1 → $2"
+  },
+  "m_55a535bafa": {
+    "message": "Es können nur HTTP/HTTPS-URLs hinzugefügt werden"
+  },
+  "m_43c516fa6a": {
+    "message": "Diese URL ist bereits gespeichert"
+  },
+  "m_39b67bcaf4": {
+    "message": "Ungültiges Titelformat"
+  },
+  "m_03f6623a18": {
+    "message": "Tab hinzufügen: $1 ← $2"
+  },
+  "m_6a6f94972c": {
+    "message": "Ungültige Tab-Position"
+  },
+  "m_579a11d917": {
+    "message": "Bitte wählen Sie einen anderen Bereich"
+  },
+  "m_46ba84410f": {
+    "message": "Die URL des Ziel-Tabs stimmt nicht überein"
+  },
+  "m_8924020b2a": {
+    "message": "Das Ziel enthält dieselbe URL bereits"
+  },
+  "m_11b801d8a2": {
+    "message": "Tab verschieben: $1 ($2 → $3)"
+  },
+  "m_42adb155e1": {
+    "message": "Nicht unterstützter Vorgang"
+  },
+  "m_4091966e8a": {
+    "message": "In Tab Matomen Kai speichern"
+  },
+  "m_6079395160": {
+    "message": "Noch keine Bereiche (im Dashboard anlegen)"
+  },
+  "m_2167649eea": {
+    "message": "Tab Matomen Kai öffnen"
+  },
+  "m_ecde74ef1b": {
+    "message": "In „$1“ gespeichert ($2 Tabs)"
+  },
+  "m_6f91f13005": {
+    "message": "Bereits in „$1“ gespeichert"
+  },
+  "m_a9276d6dfe": {
+    "message": "Speichern nicht möglich. Prüfen Sie den Bereich im Dashboard"
+  },
+  "m_56415d676e": {
+    "message": "Der Inhalt der Sicherung ist ungültig. Ihre aktuellen Daten wurden nicht geändert."
+  },
+  "m_a18e4bec39": {
+    "message": "Tab-Sammelaktionen"
+  },
+  "m_f6365e7574": {
+    "message": "Alle auswählen"
+  },
+  "m_e135253c38": {
+    "message": "0 ausgewählt"
+  },
+  "m_9a2cef5d5b": {
+    "message": "Die ausgewählten Tabs in diesem Fenster öffnen"
+  },
+  "m_119daf93ee": {
+    "message": "Öffnen"
+  },
+  "m_2cb583698f": {
+    "message": "Zielbereich"
+  },
+  "m_9a97fc3ae6": {
+    "message": "Verschieben"
+  },
+  "m_71a12fb43e": {
+    "message": "Zielgruppe"
+  },
+  "m_e70ecafd50": {
+    "message": "In Gruppe"
+  },
+  "m_ae75ae1d2a": {
+    "message": "Kopierformat"
+  },
+  "m_ce05fd6a61": {
+    "message": "Titel und URL"
+  },
+  "m_c257bec714": {
+    "message": "Nur URLs"
+  },
+  "m_295cc5d596": {
+    "message": "Liste der ausgewählten Tabs kopieren (ohne Auswahl den gesamten Bereich)"
+  },
+  "m_e94c210766": {
+    "message": "Kopieren"
+  },
+  "m_a2307d9555": {
+    "message": "Die ausgewählten Tabs archivieren"
+  },
+  "m_c686c1a9dd": {
+    "message": "Archivieren"
+  },
+  "m_2fe1822ad4": {
+    "message": "Die ausgewählten Tabs löschen"
+  },
+  "m_5cbdf1fd70": {
+    "message": "Löschen"
+  },
+  "m_f0dc9f43d4": {
+    "message": "Auswahl aufheben (Esc)"
+  },
+  "m_ec7ae06b09": {
+    "message": "Aufheben"
+  },
+  "m_fca5a8dc9f": {
+    "message": "$1 ausgewählt"
+  },
+  "m_91f77f62c2": {
+    "message": "Verschieben nach …"
+  },
+  "m_cda05ed8b5": {
+    "message": "Gruppe …"
+  },
+  "m_7a137f933a": {
+    "message": "Keine Gruppe"
+  },
+  "m_bcbebef3cf": {
+    "message": "Unbenannte Gruppe"
+  },
+  "m_4710908c81": {
+    "message": "Neue Gruppe …"
+  },
+  "m_e4de78fe6b": {
+    "message": "Beim Wechseln nicht verfügbar."
+  },
+  "m_37bb515e00": {
+    "message": "Abgebrochen, da sich der Bereich geändert hat. Bitte erneut auswählen."
+  },
+  "m_5e3dfdc724": {
+    "message": "Die ausgewählten Tabs wurden nicht gefunden."
+  },
+  "m_fba383cf43": {
+    "message": "$1 fehlgeschlagen."
+  },
+  "m_481253a7af": {
+    "message": "$1 Tabs geöffnet."
+  },
+  "m_8394e407bf": {
+    "message": "Bitte wählen Sie einen Zielbereich."
+  },
+  "m_72a6bd4fe9": {
+    "message": "Es gibt keinen Zielbereich."
+  },
+  "m_33ad04a535": {
+    "message": " ($1 mit derselben URL wurden übersprungen, da das Ziel sie bereits enthält)"
+  },
+  "m_7c9bfe16e3": {
+    "message": "$2 Tabs nach „$1“ verschoben.$3"
+  },
+  "m_c19f04094f": {
+    "message": "Bitte wählen Sie eine Gruppe."
+  },
+  "m_42f0321630": {
+    "message": "Neue Gruppe"
+  },
+  "m_80eb0a488d": {
+    "message": "In Gruppe verschieben"
+  },
+  "m_961c24d640": {
+    "message": "Gruppe nicht gefunden."
+  },
+  "m_d42ecb5149": {
+    "message": "$1 Tabs in „$2“ eingefügt."
+  },
+  "m_2a8a7849b4": {
+    "message": "$1 Tabs aus ihrer Gruppe entfernt."
+  },
+  "m_d97fff8023": {
+    "message": "Es gibt keine Tabs zum Kopieren."
+  },
+  "m_fd05c05821": {
+    "message": "$1 Tabs als $2 kopiert."
+  },
+  "m_b4a1f2d50c": {
+    "message": "Kopieren in die Zwischenablage nicht möglich."
+  },
+  "m_63b3f3287e": {
+    "message": "Kopieren fehlgeschlagen."
+  },
+  "m_b48b8f8f20": {
+    "message": "$1 Tabs archiviert."
+  },
+  "m_cba9bbaa15": {
+    "message": "Die $1 ausgewählten Tabs löschen? Dies kann nicht rückgängig gemacht werden."
+  },
+  "m_fae13af1e7": {
+    "message": "$1 Tabs gelöscht."
+  },
+  "m_53884810b9": {
+    "message": "Bereichsaktionen"
+  },
+  "m_269b0f92e4": {
+    "message": "Abbrechen"
+  },
+  "m_a530f556a0": {
+    "message": "Bereich wechseln"
+  },
+  "m_b538e73b7e": {
+    "message": "Speichern und wechseln"
+  },
+  "m_f7c3004a90": {
+    "message": "Ohne Speichern wechseln"
+  },
+  "m_348b8cbfe6": {
+    "message": "Es gibt keinen Bereich zum Speichern, daher ist Speichern auf diesem Bildschirm nicht möglich."
+  },
+  "m_6c891ec97d": {
+    "message": "Die linke Leiste in der Seitenleiste öffnen (die Position der Chrome-Seitenleiste muss links sein)"
+  },
+  "m_10432c2864": {
+    "message": "Die linke Leiste in der Seitenleiste öffnen"
+  },
+  "m_72397565b9": {
+    "message": "Dunkelmodus umschalten"
+  },
+  "m_48e334a386": {
+    "message": "Kategorie hinzufügen"
+  },
+  "m_53e842102c": {
+    "message": "Alle Daten in eine JSON-Datei exportieren"
+  },
+  "m_e44031674a": {
+    "message": "Daten aus einer JSON-Datei laden"
+  },
+  "m_da76e386a1": {
+    "message": "Intervall der automatischen Sicherung"
+  },
+  "m_ce06239034": {
+    "message": "Beim Wechseln des Bereichs die aktuellen Tabs automatisch speichern"
+  },
+  "m_54bcd667a4": {
+    "message": "Kategorie ändern"
+  },
+  "m_80022cdc79": {
+    "message": "Bereich umbenennen"
+  },
+  "m_a9f0f1eba3": {
+    "message": "Bereich archivieren"
+  },
+  "m_65902d6ec2": {
+    "message": "Bereich löschen"
+  },
+  "m_a54c2c00ae": {
+    "message": "Aus dem Archiv wiederherstellen"
+  },
+  "m_da37848919": {
+    "message": "Endgültig löschen"
+  },
+  "m_6293e5e0a9": {
+    "message": "Ansicht wechseln"
+  },
+  "m_b4cf24ebe1": {
+    "message": "Listenansicht"
+  },
+  "m_1e578fc996": {
+    "message": "Kartenansicht"
+  },
+  "m_b1c9cf7a56": {
+    "message": "Nach Tab-Titel oder URL filtern …"
+  },
+  "m_2eabfa845d": {
+    "message": "Neue Tabgruppe erstellen"
+  },
+  "m_32dbab9f90": {
+    "message": "Kategoriename eingeben …"
+  },
+  "m_a7b8477445": {
+    "message": "Tab Matomen Kai"
+  },
+  "m_2e57cc29ef": {
+    "message": "Damit die Leiste beim Surfen links sichtbar bleibt, stellen Sie in Chrome die „Position der Seitenleiste“ auf „Links“ und klicken Sie dann auf die Schaltfläche oben."
+  },
+  "m_22c2dc1788": {
+    "message": "Chrome-Einstellungen öffnen"
+  },
+  "m_5d208d1c21": {
+    "message": "Tab Matomen"
+  },
+  "m_798f95db5d": {
+    "message": "Kai"
+  },
+  "m_fbc350db7c": {
+    "message": "＋ Bereich"
+  },
+  "m_041f4ac575": {
+    "message": "＋ Kategorie"
+  },
+  "m_14095d67d9": {
+    "message": "Noch keine Bereiche"
+  },
+  "m_b9e400d207": {
+    "message": "Exportieren"
+  },
+  "m_9eb51e84ba": {
+    "message": "Importieren"
+  },
+  "m_2a81a2c8cc": {
+    "message": "Automatische Sicherung"
+  },
+  "m_17b500293e": {
+    "message": "Aus"
+  },
+  "m_ca7c80cb81": {
+    "message": "Stündlich"
+  },
+  "m_d2fe3b7e6e": {
+    "message": "Alle 6 Stunden"
+  },
+  "m_d63043a388": {
+    "message": "Täglich"
+  },
+  "m_0ac73ac1aa": {
+    "message": "Beim Wechsel automatisch speichern"
+  },
+  "m_c73d62d960": {
+    "message": "Archiviert"
+  },
+  "m_0de3e408a2": {
+    "message": "Bereich auswählen"
+  },
+  "m_dd3cca7f34": {
+    "message": "Kategorie"
+  },
+  "m_79338c0706": {
+    "message": "Umbenennen"
+  },
+  "m_442ee7eb76": {
+    "message": "Wiederherstellen"
+  },
+  "m_5839f00a0d": {
+    "message": "＋ Gruppe"
+  },
+  "m_ccd039eca2": {
+    "message": "Aktuelle Tabs speichern"
+  },
+  "m_aff97557b0": {
+    "message": "In diesem Bereich wurden noch keine Tabs gespeichert"
+  },
+  "m_83d0565a6f": {
+    "message": "Öffnen Sie alle Tabs, die Sie speichern möchten (dieser Dashboard-Tab kann geöffnet bleiben)"
+  },
+  "m_fab476e40b": {
+    "message": "Ihre Tabs werden hier aufgelistet"
+  },
+  "m_2e408b9c01": {
+    "message": "Erste Schritte"
+  },
+  "m_3a09b3b90d": {
+    "message": "Öffnen Sie bei ausgewähltem Bereich alle Tabs, die Sie speichern möchten"
+  },
+  "m_2884c23c94": {
+    "message": "Legen Sie für das nächste Projekt einen neuen Bereich an und speichern Sie auf dieselbe Weise"
+  },
+  "m_2061886749": {
+    "message": "Klicken Sie in der Seitenleiste auf einen Bereichsnamen, um die Tabs zu wechseln"
+  },
+  "m_27131257d7": {
+    "message": "Ziehen Sie einen Bereich auf einen Kategorienamen, um ihn zu verschieben"
+  },
+  "m_7406792479": {
+    "message": "Kategorie erstellen"
+  },
+  "m_121ae791f1": {
+    "message": "Farbe"
+  },
+  "m_614f2eaaff": {
+    "message": "Erstellen"
+  },
+  "m_1a2e920ba7": {
+    "message": "Keine"
+  },
+  "m_72776ab68f": {
+    "message": "Rot"
+  },
+  "m_831166ef4b": {
+    "message": "Orange"
+  },
+  "m_7720f8ea0a": {
+    "message": "Gelb"
+  },
+  "m_f22758bf8f": {
+    "message": "Grün"
+  },
+  "m_29e5ef1fa6": {
+    "message": "Türkis"
+  },
+  "m_845d1da87f": {
+    "message": "Blau"
+  },
+  "m_01caea5810": {
+    "message": "Lila"
+  },
+  "m_caaf2acdb2": {
+    "message": "Rosa"
+  },
+  "m_5378733ecf": {
+    "message": "Grau"
+  },
+  "m_96aea44a0c": {
+    "message": "Blau"
+  },
+  "m_97397cc2e0": {
+    "message": "Rot"
+  },
+  "m_5cd070ae56": {
+    "message": "Gelb"
+  },
+  "m_031e9b20e8": {
+    "message": "Grün"
+  },
+  "m_d96fea3531": {
+    "message": "Lila"
+  },
+  "m_55018581ba": {
+    "message": "Cyan"
+  },
+  "m_aabcb11957": {
+    "message": "Bild festlegen"
+  },
+  "m_ace3472c03": {
+    "message": "Bild entfernen"
+  },
+  "m_26dfc3aefe": {
+    "message": "Bitte geben Sie einen Kategorienamen ein."
+  },
+  "m_39a49bde63": {
+    "message": "Eine Kategorie namens „$1“ existiert bereits."
+  },
+  "m_629a6eefac": {
+    "message": "Bitte geben Sie einen Bereichsnamen ein."
+  },
+  "m_29c082f9b5": {
+    "message": "Ein Bereich namens „$1“ existiert bereits."
+  },
+  "m_09648e447c": {
+    "message": "Bereich nicht gefunden."
+  },
+  "m_d40bd34d6f": {
+    "message": "Die Gruppen konnten nicht neu geordnet werden."
+  },
+  "m_f95e7d8675": {
+    "message": "Die Tabs konnten nicht neu geordnet werden."
+  },
+  "m_3dfdf80d58": {
+    "message": "Unterkategorie hinzufügen"
+  },
+  "m_6ab1008863": {
+    "message": "Kategoriefarbe ändern"
+  },
+  "m_29f18064c3": {
+    "message": "Kategorie umbenennen"
+  },
+  "m_b3dd5064ba": {
+    "message": "Löschen (Bereiche wandern zu „Ohne Kategorie“)"
+  },
+  "m_1b31bc2d61": {
+    "message": "Archivfarbe ändern"
+  },
+  "m_7234f5d4ed": {
+    "message": "Keine archivierten Bereiche"
+  },
+  "m_c922e46a12": {
+    "message": "$1 (archiviert / $2 Tabs)"
+  },
+  "m_78380175c5": {
+    "message": "Designfarbe und Symbol ändern"
+  },
+  "m_b8901ba999": {
+    "message": "$1 ($2 Tabs)"
+  },
+  "m_f76574e271": {
+    "message": "$1 | Dashboard"
+  },
+  "m_e17d188654": {
+    "message": "Legen Sie zuerst einen Bereich an"
+  },
+  "m_3009a0e43b": {
+    "message": "Zurück zum aktiven Tab"
+  },
+  "m_1816d78893": {
+    "message": "Keine Tabs passen zu „$1“."
+  },
+  "m_876cb3ca26": {
+    "message": "Hier ablegen, um aus der Gruppe zu entfernen"
+  },
+  "m_97edcdfb5e": {
+    "message": "Gruppenfarbe ändern"
+  },
+  "m_4ccd455653": {
+    "message": "Gruppe umbenennen"
+  },
+  "m_73fd4c5de6": {
+    "message": "Gruppe löschen (Tabs werden gruppenlos)"
+  },
+  "m_f32ff53372": {
+    "message": "Zum Umsortieren ziehen"
+  },
+  "m_dcea25f949": {
+    "message": "Diese Gruppe enthält keine Tabs. Ziehen Sie Tabs hierher, um sie hinzuzufügen"
+  },
+  "m_d3811d54bb": {
+    "message": "$1\n$2\nKlicken zum Öffnen / Ziehen, um zwischen Gruppen zu verschieben"
+  },
+  "m_05120d62af": {
+    "message": "Auswählen: $1"
+  },
+  "m_f82fcc53cd": {
+    "message": "Klicken zum Auswählen, Umschalt+Klick für einen Bereich"
+  },
+  "m_4bed8152a4": {
+    "message": "Diesen Tab archivieren"
+  },
+  "m_cf45400a02": {
+    "message": "Archivieren (in der Tab-Leiste ausblenden)"
+  },
+  "m_626612ea5e": {
+    "message": "Diesen Tab löschen"
+  },
+  "m_88c92c22d4": {
+    "message": "Die Daten konnten nicht geladen werden."
+  },
+  "m_cd6a909d39": {
+    "message": "Geben Sie einen Namen für den neuen Bereich ein:"
+  },
+  "m_1cefe0ca30": {
+    "message": "Bereich „$1“ erstellt."
+  },
+  "m_ed1eac911a": {
+    "message": "Der Bereich konnte nicht erstellt werden."
+  },
+  "m_f2b265026b": {
+    "message": "Geben Sie einen neuen Bereichsnamen ein:"
+  },
+  "m_f2b748c88b": {
+    "message": "Bereich umbenannt."
+  },
+  "m_c0e48c9028": {
+    "message": "Der Bereich konnte nicht umbenannt werden."
+  },
+  "m_f4f1d62806": {
+    "message": "Bereich „$1“ löschen?\nAlle gespeicherten Tab-Informationen werden ebenfalls gelöscht."
+  },
+  "m_88dd8d49f3": {
+    "message": "Bereich „$1“ gelöscht."
+  },
+  "m_89289d2423": {
+    "message": "Der Bereich konnte nicht gelöscht werden."
+  },
+  "m_7609ae5732": {
+    "message": "Bereich „$1“ archivieren?\nDie Daten bleiben erhalten und können später wiederhergestellt werden."
+  },
+  "m_ace51b281e": {
+    "message": "Bereich „$1“ archiviert."
+  },
+  "m_b4f5deb27f": {
+    "message": "Archivieren fehlgeschlagen."
+  },
+  "m_2551a4a971": {
+    "message": "Bereich „$1“ wiederhergestellt."
+  },
+  "m_e82b7d25f2": {
+    "message": "Wiederherstellen fehlgeschlagen."
+  },
+  "m_e95765e8a5": {
+    "message": "Bereich „$1“ endgültig löschen?\nDies kann nicht rückgängig gemacht werden."
+  },
+  "m_ca94b050f3": {
+    "message": "Bereich „$1“ endgültig gelöscht."
+  },
+  "m_6e82f81122": {
+    "message": "Löschen fehlgeschlagen."
+  },
+  "m_507e16fe4e": {
+    "message": "Es ist kein Bereich ausgewählt. Wählen Sie einen Bereich aus oder legen Sie einen an."
+  },
+  "m_f351029a37": {
+    "message": "Es gab keine Tabs zum Speichern (chrome://-Seiten können nicht gespeichert werden)."
+  },
+  "m_f272b678d1": {
+    "message": "$1 Tabs gespeichert."
+  },
+  "m_f38b273b38": {
+    "message": "Die Tabs konnten nicht gespeichert werden."
+  },
+  "m_d48c02f761": {
+    "message": "Die aktuell geöffneten Tabs sind in keinem Bereich gespeichert.\n"
+  },
+  "m_e92defc1cb": {
+    "message": "Wenn Sie wechseln, werden diese Tabs ungespeichert geschlossen.\n\n"
+  },
+  "m_0fe3f5ec9d": {
+    "message": "„Beim Wechsel automatisch speichern“ ist ausgeschaltet.\n"
+  },
+  "m_2bde3706ab": {
+    "message": "Die aktuellen Tabs werden geschlossen, ohne in „$1“ gespeichert zu werden.\n\n"
+  },
+  "m_1ad7ff9d86": {
+    "message": "Da Sie von einem archivierten Bereich wechseln, werden die aktuellen Tabs ungespeichert geschlossen.\n\n"
+  },
+  "m_2bc14b7cca": {
+    "message": "Die aktuell geöffneten Tabs werden ungespeichert geschlossen.\n\n"
+  },
+  "m_be1598e030": {
+    "message": "Zu Bereich „$1“ wechseln?"
+  },
+  "m_618731a7e3": {
+    "message": "Kein Speicherziel vorhanden"
+  },
+  "m_c837ab2cde": {
+    "message": "Der Wechsel wurde abgebrochen, da das Speichern fehlgeschlagen ist."
+  },
+  "m_814259bda8": {
+    "message": "Der Wechsel wurde abgebrochen, da der Verlauf vor dem Wechsel nicht gespeichert werden konnte."
+  },
+  "m_91c0550a7a": {
+    "message": "Zu Bereich „$1“ gewechselt."
+  },
+  "m_7db912ef11": {
+    "message": "Der Bereichswechsel ist fehlgeschlagen."
+  },
+  "m_b6afad9923": {
+    "message": "Der Tab konnte nicht gelöscht werden."
+  },
+  "m_b623491f35": {
+    "message": "„$1“ nach „$2“ verschoben."
+  },
+  "m_2768c12413": {
+    "message": "Die Kategorie konnte nicht verschoben werden."
+  },
+  "m_429435583a": {
+    "message": "Neuordnung fehlgeschlagen."
+  },
+  "m_c1460a0421": {
+    "message": "Die Kategorien konnten nicht neu geordnet werden."
+  },
+  "m_ddf26ce3ed": {
+    "message": "Export abgeschlossen: $1 Bereiche / $2 Kategorien → pwm-backup-$3.json"
+  },
+  "m_f693a2b833": {
+    "message": "Export fehlgeschlagen."
+  },
+  "m_00de6b5511": {
+    "message": "Das Dateiformat ist ungültig."
+  },
+  "m_75e9dd8f76": {
+    "message": "Unbekannt"
+  },
+  "m_efccfe8e49": {
+    "message": "Diese Sicherungsdatei importieren?\n\n  Bereiche   : $1\n  Kategorien : $2\n  Erstellt   : $3\n\nAlle aktuellen Daten werden überschrieben. Fortfahren?"
+  },
+  "m_ce1d0548a0": {
+    "message": "Import abgeschlossen: $1 Bereiche / $2 Kategorien"
+  },
+  "m_8df1c53c2e": {
+    "message": "Das JSON konnte nicht gelesen werden."
+  },
+  "m_682e44dcfb": {
+    "message": "Import fehlgeschlagen. $1"
+  },
+  "m_db96a9457a": {
+    "message": "Kategorie „$1“ erstellt."
+  },
+  "m_1dcd4efe17": {
+    "message": "Die Kategorie konnte nicht erstellt werden."
+  },
+  "m_5c1ea7fb37": {
+    "message": "Unterkategorie von „$1“ erstellen"
+  },
+  "m_c961917824": {
+    "message": "Unterkategorie „$1“ erstellt."
+  },
+  "m_569633928e": {
+    "message": "Die Unterkategorie konnte nicht erstellt werden."
+  },
+  "m_025af6c3cb": {
+    "message": "Geben Sie einen neuen Kategorienamen ein:"
+  },
+  "m_f3b1a68d36": {
+    "message": "Kategorie umbenannt."
+  },
+  "m_0f834403b5": {
+    "message": "Die Kategorie konnte nicht umbenannt werden."
+  },
+  "m_904330b1c2": {
+    "message": "Kategorie „$1“ löschen?\nDie darin enthaltenen Bereiche wandern zu „Ohne Kategorie“."
+  },
+  "m_482af4adff": {
+    "message": "Kategorie „$1“ gelöscht."
+  },
+  "m_152585e380": {
+    "message": "Die Kategorie konnte nicht gelöscht werden."
+  },
+  "m_a8377443c2": {
+    "message": "0: Ohne Kategorie\n"
+  },
+  "m_5d1ccf930a": {
+    "message": " ← aktuell"
+  },
+  "m_248d1228f5": {
+    "message": "$1: ＋ Neue Kategorie erstellen"
+  },
+  "m_6f13eed82d": {
+    "message": "Wählen Sie eine Kategorie für „$1“ (Nummer eingeben):\n\n$2"
+  },
+  "m_db7a8db4a9": {
+    "message": "Bitte geben Sie eine gültige Nummer ein."
+  },
+  "m_62abac0149": {
+    "message": "Nach „Ohne Kategorie“ verschoben."
+  },
+  "m_bab01b0a0b": {
+    "message": "In Kategorie „$1“ verschoben."
+  },
+  "m_c35c527047": {
+    "message": "Neue Kategorie erstellen"
+  },
+  "m_936cd7f801": {
+    "message": "Kategorie „$1“ erstellt und den Bereich dorthin verschoben."
+  },
+  "m_1f9b554bc9": {
+    "message": "Die Kategorie konnte nicht geändert werden."
+  },
+  "m_49dbd7dc23": {
+    "message": "Gruppe erstellen"
+  },
+  "m_e94783b08f": {
+    "message": "Bitte wählen Sie einen Bereich aus."
+  },
+  "m_637efb62a0": {
+    "message": "Gruppe „$1“ erstellt."
+  },
+  "m_e5c17530ad": {
+    "message": "Die Gruppe konnte nicht erstellt werden."
+  },
+  "m_f648e8b5a9": {
+    "message": "Gruppe bearbeiten"
+  },
+  "m_c6df24a6c9": {
+    "message": "Gruppe aktualisiert."
+  },
+  "m_762bfecbd7": {
+    "message": "Die Gruppe konnte nicht aktualisiert werden."
+  },
+  "m_6ab993caa7": {
+    "message": "Gruppe „$1“ löschen?\nIhre Tabs werden gruppenlos."
+  },
+  "m_d06ff38c9c": {
+    "message": "Gruppe „$1“ gelöscht."
+  },
+  "m_ce516ef82e": {
+    "message": "Die Gruppe konnte nicht gelöscht werden."
+  },
+  "m_deccd3ca1c": {
+    "message": "Der Tab konnte nicht verschoben werden."
+  },
+  "m_9ab79d75a0": {
+    "message": "Zum Hellmodus wechseln"
+  },
+  "m_2aff1d2b6a": {
+    "message": "Zum Dunkelmodus wechseln"
+  },
+  "m_a49e39c667": {
+    "message": "Automatische Sicherung ausgeschaltet."
+  },
+  "m_33ec021992": {
+    "message": "Automatische Sicherung eingestellt auf: $1."
+  },
+  "m_938dbc938d": {
+    "message": "Automatisches Speichern beim Wechsel eingeschaltet."
+  },
+  "m_4f8b8d9b2e": {
+    "message": "Automatisches Speichern beim Wechsel ausgeschaltet."
+  },
+  "m_b3afead7ff": {
+    "message": "Aktuelle Tabs speichern ($1S)"
+  },
+  "m_910348bd6b": {
+    "message": "Einen Tab hinzufügen"
+  },
+  "m_2f9e6135b4": {
+    "message": "Favoriten bearbeiten"
+  },
+  "m_f4c69f0508": {
+    "message": "Bitte auswählen"
+  },
+  "m_51a3053d75": {
+    "message": "Es gibt keine Webseiten zum Hinzufügen."
+  },
+  "m_53f079d16f": {
+    "message": "Legen Sie zuerst einen Bereich an."
+  },
+  "m_ae3ecc7ed2": {
+    "message": "Tab zum Hinzufügen"
+  },
+  "m_e63bc2f7aa": {
+    "message": "Zielbereich"
+  },
+  "m_6d5cd75875": {
+    "message": "Hinzufügen"
+  },
+  "m_85ccd53d0e": {
+    "message": "Tabs können nicht gelesen werden"
+  },
+  "m_31d3cc3310": {
+    "message": "Diese URL ist im Ziel bereits gespeichert."
+  },
+  "m_ddb65d86ef": {
+    "message": "1 Tab zu „$1“ hinzugefügt."
+  },
+  "m_9fbca578c5": {
+    "message": "Hinzufügen nicht möglich. Prüfen Sie den Tab und das Ziel."
+  },
+  "m_4004b8f1db": {
+    "message": "Die Tabs konnten nicht gelesen werden."
+  },
+  "m_4648287945": {
+    "message": "Die Favoriten konnten nicht gespeichert werden."
+  },
+  "m_03c994e60e": {
+    "message": "Sie können Favoriten registrieren, nachdem Sie einen Bereich angelegt haben."
+  },
+  "m_a2c6ae915e": {
+    "message": "Die Favoriten konnten nicht geladen werden."
+  },
+  "m_296dad2d72": {
+    "message": "Favoriten"
+  },
+  "m_c1b61fe80e": {
+    "message": "Zuletzt verwendete Bereiche"
+  },
+  "m_ec351de08b": {
+    "message": "Vorschau gespeicherter Tabs"
+  },
+  "m_fa9f222dca": {
+    "message": "Der Tab konnte nicht geöffnet werden."
+  },
+  "m_c9ebf4c3f7": {
+    "message": "Keine gespeicherten Tabs"
+  },
+  "m_6329f21c41": {
+    "message": "Einstellungen"
+  },
+  "m_e438ffd26f": {
+    "message": "Einstellungen (Import/Export, Sicherung, automatisches Speichern)"
+  },
+  "m_56b6cd2c1a": {
+    "message": "Einstellungen öffnen"
+  },
+  "m_00820b1780": {
+    "message": "Einstellungen schließen"
+  },
+  "m_bf10ec5ff4": {
+    "message": "Geänderte Einstellungen werden sofort gespeichert. Ein Import überschreibt die aktuell gespeicherten Daten."
+  },
+  "m_c32d6516f4": {
+    "message": "‹ Schließen"
+  },
+  "m_74f34a1534": {
+    "message": "‹ Einklappen"
+  },
+  "m_0a57aeec9d": {
+    "message": "Die Seitenleiste schließen"
+  },
+  "m_0b845075d6": {
+    "message": "Die Seitenleiste einklappen"
+  },
+  "m_2c2e1923ea": {
+    "message": "Schließen (erneut öffnen über das Erweiterungssymbol in der Symbolleiste)"
+  },
+  "m_6264a3f76a": {
+    "message": "Schließen nicht möglich. Bitte versuchen Sie es erneut."
+  },
+  "m_91323fe947": {
+    "message": "Die Seitenleiste ausklappen"
+  },
+  "m_28e3b7ba50": {
+    "message": "Stellen Sie die Position der Chrome-Seitenleiste auf „Links“. Rechts wird sie nicht geöffnet."
+  },
+  "m_2c14db7241": {
+    "message": "Die linke Seitenleiste wurde geöffnet. Sie bleibt beim Surfen auf anderen Seiten sichtbar. Wenn Sie sie schließen, öffnen Sie sie über das Erweiterungssymbol in der Symbolleiste erneut."
+  },
+  "m_07a63337a6": {
+    "message": "Zum Erkennen der linken Position ist Chrome 141 oder neuer erforderlich."
+  },
+  "m_c5ed08a7f9": {
+    "message": "Das Fenster wird noch vorbereitet. Bitte versuchen Sie es erneut."
+  },
+  "m_14ae9512a4": {
+    "message": "Die Seitenleiste konnte nicht geöffnet werden. Bitte versuchen Sie es erneut."
+  },
+  "m_89da984b3c": {
+    "message": "Tab Matomen Kai — Linke Leiste"
+  },
+  "m_2e759e9300": {
+    "message": "Dashboard öffnen"
+  },
+  "m_99f2a39628": {
+    "message": "Das Dashboard konnte nicht geöffnet werden. Bitte versuchen Sie es erneut."
+  },
+  "m_c7f325f13f": {
+    "message": "Rückgängig"
+  },
+  "m_41852537df": {
+    "message": "Beim Wechseln kann nicht rückgängig gemacht werden."
+  },
+  "m_88291348ad": {
+    "message": "Rückgängigmachen nicht möglich, da der Bereich nicht gefunden wurde."
+  },
+  "m_9c5b54b484": {
+    "message": "Rückgängigmachen abgebrochen, da danach Änderungen vorgenommen wurden."
+  },
+  "m_7e6b5ba160": {
+    "message": "Rückgängig gemacht."
+  },
+  "m_a89f5a6dd5": {
+    "message": "Rückgängigmachen nicht möglich."
+  },
+  "m_64c1599a05": {
+    "message": "1 Tab gelöscht."
+  },
+  "m_bd0d74ffbc": {
+    "message": "1 Tab archiviert."
+  },
+  "m_429855c857": {
+    "message": "Projekte und Bereiche durchsuchen"
+  },
+  "m_2437c7c79c": {
+    "message": "Vorheriges Layout wiederherstellen"
+  },
+  "m_d0b101161c": {
+    "message": "Kein Verlauf vor dem Wechsel"
+  },
+  "m_c030b56060": {
+    "message": "Speichern fehlgeschlagen: bitte erneut speichern"
+  },
+  "m_0a14601b8e": {
+    "message": "Wählen Sie einen Bereich zum Speichern"
+  },
+  "m_aa9e381e6f": {
+    "message": "Nicht gespeicherte Änderungen"
+  },
+  "m_74e30e9189": {
+    "message": "Gespeichert"
+  },
+  "m_3b69257cb0": {
+    "message": " · Archiviert"
+  },
+  "m_d34e19303a": {
+    "message": "Keine passenden Bereiche"
+  },
+  "m_3881f5d6ed": {
+    "message": "Speicherstatus nicht feststellbar"
+  },
+  "m_97aa22defa": {
+    "message": "Das vorherige Tab-Layout wiederherstellen. Das aktuelle Layout bleibt ebenfalls im Verlauf. Nicht gesendete Eingaben auf Seiten können nicht wiederhergestellt werden."
+  },
+  "m_9ea03093db": {
+    "message": "Das vorherige Tab-Layout wurde wiederhergestellt."
+  },
+  "m_9930817c6f": {
+    "message": "Wiederherstellung fehlgeschlagen. Prüfen Sie den Verlauf und versuchen Sie es erneut."
+  },
+  "m_6644f06197": {
+    "message": "Wird gespeichert …"
+  },
+  "appName": {
+    "message": "Tab Matomen Kai"
+  },
+  "appDescription": {
+    "message": "Legen Sie für jedes Projekt einen Bereich an und wechseln Sie im selben Chrome-Fenster zwischen Tab-Sets."
+  },
+  "actionTitle": {
+    "message": "Tab Matomen Kai öffnen"
+  },
+  "onboardingClickSave": {
+    "message": "Klicken Sie oben auf die Schaltfläche „Aktuelle Tabs speichern“"
+  },
+  "onboardingClickNewSpace": {
+    "message": "Klicken Sie links auf „＋ Bereich“ und geben Sie einen Projektnamen ein"
+  },
+  "onboardingSaveExplained": {
+    "message": "Klicken Sie auf „Aktuelle Tabs speichern“, um die Tabs zu sichern"
+  },
+  "restoreHistoryTitle": {
+    "message": "Vorheriges Layout ($1). Bleibt bis zum Schließen des Browsers erhalten"
+  },
+  "m_9e9943aa18": {
+    "message": "Der Zugriff auf Google wurde nicht gewährt."
+  },
+  "m_1b162ecb08": {
+    "message": "Mit Google Drive verbinden."
+  },
+  "m_38e08f6f72": {
+    "message": "Die Berechtigung zum Speichern von Sicherungen konnte nicht bestätigt werden."
+  },
+  "m_063e83e937": {
+    "message": "Die Verbindung wurde abgebrochen."
+  },
+  "m_cbe501233e": {
+    "message": "Die Weiterleitung der Authentifizierung stimmt nicht überein."
+  },
+  "m_195c611c2a": {
+    "message": "Die Authentifizierung konnte nicht überprüft werden. Bitte verbinden Sie erneut."
+  },
+  "m_210231350f": {
+    "message": "Geben Sie eine OAuth-Client-ID ein."
+  },
+  "m_27298d6197": {
+    "message": "Mit Google Drive verbinden. Wenn die Verbindung abgelaufen ist, müssen Sie sie erneut herstellen."
+  },
+  "m_76e8f9b19a": {
+    "message": "In einem anderen Fenster wird gerade eine Sicherung gespeichert."
+  },
+  "m_c62a99397a": {
+    "message": "TabMatomenKai_"
+  },
+  "m_551f37d20f": {
+    "message": "Das Ergebnis konnte nicht bestätigt werden. Prüfen Sie Google Drive, bevor Sie es erneut versuchen."
+  },
+  "m_6d2d7cf526": {
+    "message": "Die Verbindung ist abgelaufen. Verbinden Sie sich erneut mit Google Drive."
+  },
+  "m_e5be1db2f7": {
+    "message": "Speichern nicht möglich ($1). Prüfen Sie, ob die Google Drive API aktiviert ist, die Berechtigung erteilt wurde und Speicherplatz vorhanden ist."
+  },
+  "m_fd067b945c": {
+    "message": "Das Ziel konnte nicht bestätigt werden. Prüfen Sie Google Drive."
+  },
+  "m_e756be4d47": {
+    "message": "In Google Drive sichern"
+  },
+  "m_5ea424f93b": {
+    "message": "Speichert Ihre Bereiche, Kategorien und Tabs als JSON-Datei mit Zeitstempel in „Meine Ablage“."
+  },
+  "m_6b5763bf71": {
+    "message": "Klicken Sie auf „Mit Google Drive verbinden“, um den Berechtigungsbildschirm von Google zu öffnen. Nach Ihrer Zustimmung behält Chrome die Verbindung bei und erneuert sie bei Ablauf automatisch."
+  },
+  "m_7b5914be86": {
+    "message": "Einrichtung der ersten Verbindung"
+  },
+  "m_e6720a68da": {
+    "message": "Aktivieren Sie die Drive API in Google Cloud und erstellen Sie einen OAuth-Client (Webanwendung). Registrieren Sie die folgende URL als autorisierten Weiterleitungs-URI."
+  },
+  "m_f5da3ecf70": {
+    "message": "Weiterleitungs-URI"
+  },
+  "m_d80926d454": {
+    "message": "OAuth-Client-ID"
+  },
+  "m_dc59c3eb54": {
+    "message": "Ein Client-Secret ist nicht erforderlich. Fügen Sie bei Veröffentlichungsstatus „Test“ das verwendete Google-Konto als Testnutzer hinzu."
+  },
+  "m_a8a3126796": {
+    "message": "Mit Google Drive verbinden"
+  },
+  "m_4c23d9e46d": {
+    "message": "Jetzt sichern"
+  },
+  "m_4d138770f9": {
+    "message": "Diesen Browser trennen"
+  },
+  "m_c64f38ecfa": {
+    "message": "Letzte Sicherung öffnen"
+  },
+  "m_81d7efe6b9": {
+    "message": "Zuletzt gespeichert: $1 "
+  },
+  "m_f11b0168dc": {
+    "message": "In Arbeit …"
+  },
+  "m_e873b731b1": {
+    "message": "Verbunden. Sie können jetzt Sicherungen speichern."
+  },
+  "m_f714e3e49d": {
+    "message": "Sicherung in Google Drive gespeichert."
+  },
+  "m_307c18ccd9": {
+    "message": "Dieser Browser wurde getrennt. Gespeicherte Dateien bleiben in Drive erhalten."
+  },
+  "m_23e782bfe8": {
+    "message": "Verbunden"
+  },
+  "m_26a4745b1e": {
+    "message": "Die Einstellungen konnten nicht geladen werden. Bitte öffnen Sie diesen Bildschirm erneut."
+  },
+  "languageHeading": {
+    "message": "Sprache"
+  },
+  "languageAuto": {
+    "message": "Der Browsersprache folgen ($1)"
+  },
+  "languageHelp": {
+    "message": "Beim Ändern der Anzeigesprache wird der Bildschirm neu geladen."
+  },
+  "reviewTitle": {
+    "message": "Hilft Ihnen Tab Matomen Kai?"
+  },
+  "reviewBody": {
+    "message": "Falls ja, würden wir uns sehr über eine Bewertung im Chrome Web Store freuen. Sie unterstützt die Weiterentwicklung."
+  },
+  "reviewWrite": {
+    "message": "Bewertung schreiben"
+  },
+  "reviewLater": {
+    "message": "Später"
+  },
+  "reviewNever": {
+    "message": "Nicht mehr anzeigen"
+  },
+  "reviewThanks": {
+    "message": "Vielen Dank!"
+  }
+}

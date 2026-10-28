@@ -1,7 +1,7 @@
 'use strict';
 const panelStatus = document.getElementById('verticalTabsStatus');
-const leftOnlyMessage = 'Chromeのサイドパネルの位置を「左」にしてください。右側には開きません。';
-const openedMessage = '左サイドバーを開きました。別のページを開いても表示されたままです。閉じたときはツールバーの拡張アイコンで再表示できます。';
+const leftOnlyMessage = t('m_28e3b7ba50');
+const openedMessage = t('m_2c14db7241');
 // Chromeの配置が右のときの案内（dashboard.html の #panelPlacementHelp）
 const placementHelp = document.getElementById('panelPlacementHelp');
 const chromeSettingsButton = document.getElementById('openChromePanelSettings');
@@ -33,12 +33,12 @@ async function syncLeftSidebar() {
 }
 document.getElementById('openVerticalTabs').addEventListener('click', async () => {
   if (!chrome.sidePanel?.getLayout) {
-    panelStatus.textContent = '左配置を確認できるChrome 141以上が必要です。';
+    panelStatus.textContent = t('m_07a63337a6');
     return;
   }
   const ownerWindowId = g_dashboardWindowId;
   if (ownerWindowId === null) {
-    panelStatus.textContent = 'ウィンドウの準備中です。もう一度お試しください。';
+    panelStatus.textContent = t('m_c5ed08a7f9');
     return;
   }
   try {
@@ -48,7 +48,7 @@ document.getElementById('openVerticalTabs').addEventListener('click', async () =
     panelStatus.textContent = openedMessage;
     if (placementHelp) placementHelp.hidden = true;
     await syncLeftSidebar();
-  } catch { panelStatus.textContent = 'サイドバーを開けませんでした。もう一度お試しください。'; }
+  } catch { panelStatus.textContent = t('m_14ae9512a4'); }
 });
 window.addEventListener('focus', syncLeftSidebar);
 window.addEventListener('focus', refreshPlacementHelp); // Chrome設定から戻ってきたら案内を更新

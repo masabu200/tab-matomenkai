@@ -1,11 +1,11 @@
 'use strict';
 const WorkspaceTools = (() => {
   const box = document.createElement('section'); box.className = 'workspace-tools';
-  const search = document.createElement('input'); search.type = 'search'; search.id = 'spaceSearch'; search.placeholder = '案件・スペースを検索'; search.setAttribute('aria-label', search.placeholder);
+  const search = document.createElement('input'); search.type = 'search'; search.id = 'spaceSearch'; search.placeholder = t('m_429855c857'); search.setAttribute('aria-label', search.placeholder);
   const results = document.createElement('div'); results.id = 'spaceSearchResults'; results.hidden = true;
   const status = document.createElement('p'); status.id = 'workspaceSaveStatus'; status.setAttribute('role','status');
-  const save = document.createElement('button'); save.type = 'button'; save.className = 'btn btn--ghost'; save.textContent = '現在のタブを保存';
-  const restore = document.createElement('button'); restore.type = 'button'; restore.id = 'restorePreviousTabs'; restore.className = 'btn btn--ghost'; restore.textContent = '前の構成に戻す'; restore.disabled = true;
+  const save = document.createElement('button'); save.type = 'button'; save.className = 'btn btn--ghost'; save.textContent = t('m_ccd039eca2');
+  const restore = document.createElement('button'); restore.type = 'button'; restore.id = 'restorePreviousTabs'; restore.className = 'btn btn--ghost'; restore.textContent = t('m_2437c7c79c'); restore.disabled = true;
   box.append(search,results,status,save,restore);
   document.querySelector('.sidebar__create').after(box);
   let timer, sequence = 0, failure = false, busy = false;
@@ -20,11 +20,11 @@ const WorkspaceTools = (() => {
       const history = (await chrome.storage.session.get(key()))[key()];
       if (seq !== sequence) return;
       restore.disabled = !history;
-      restore.title = history ? '直前の構成（'+new Date(history.createdAt).toLocaleTimeString('ja-JP')+'）。ブラウザ終了まで保持' : '切り替え前の履歴はありません';
+      restore.title = history ? t('restoreHistoryTitle', [new Date(history.createdAt).toLocaleTimeString(I18n.current().replace('_','-'))]) : t('m_d0b101161c');
       const active = data.spaces.find(s=>s.id===getActiveSpaceId(data));
       save.disabled = !active || active.archived;
       const dirty = active && signature(active.tabs || []) !== signature(tabs);
-      status.textContent = failure ? '保存失敗：もう一度保存してください' : !active ? '保存先のスペースを選択してください' : `${active.name}：${dirty ? '変更あり' : '保存済み'}${active.tabsSavedAt ? ' · '+new Date(active.tabsSavedAt).toLocaleTimeString('ja-JP',{hour:'2-digit',minute:'2-digit'}) : ''}`;
+      status.textContent = failure ? t('m_c030b56060') : !active ? t('m_0a14601b8e') : `${active.name}：${dirty ? t('m_aa9e381e6f') : t('m_74e30e9189')}${active.tabsSavedAt ? ' · '+new Date(active.tabsSavedAt).toLocaleTimeString('ja-JP',{hour:'2-digit',minute:'2-digit'}) : ''}`;
       const query = search.value.trim().toLocaleLowerCase();
       results.replaceChildren(); results.hidden = !query;
       document.getElementById('spaceList').hidden = !!query;
@@ -33,12 +33,12 @@ const WorkspaceTools = (() => {
         const matches = data.spaces.filter(s=>`${s.name} ${categories.get(s.categoryId)||''}`.toLocaleLowerCase().includes(query));
         for (const s of matches) {
           const button = document.createElement('button'); button.type = 'button'; button.className = 'space-search-result';
-          button.textContent = `${s.name}\n${categories.get(s.categoryId)||'未分類'}${s.archived?' · アーカイブ':''}`;
+          button.textContent = `${s.name}\n${categories.get(s.categoryId)||t('m_f4d781035f')}${s.archived?t('m_3b69257cb0'):''}`;
           button.addEventListener('click',()=>s.archived?handleViewArchivedSpace(s.id):handleSwitchSpace(s.id)); results.append(button);
         }
-        if (!matches.length) results.textContent = '一致するスペースはありません';
+        if (!matches.length) results.textContent = t('m_d34e19303a');
       }
-    } catch { status.textContent = '保存状態を確認できません'; }
+    } catch { status.textContent = t('m_3881f5d6ed'); }
   }
   async function captureHistory(data) {
     const tabs = (await getWindowTabs()).filter(isClosableTab).map(t=>({url:t.pendingUrl||t.url,pinned:!!t.pinned,active:!!t.active,groupId:t.groupId}));
@@ -51,7 +51,7 @@ const WorkspaceTools = (() => {
     // 確認ダイアログ中の再クリックで復元が二度走らないよう、先に多重実行を止める
     busy=true; restore.disabled=true;
     try {
-    if (!await DashboardDialogs.confirm('前のタブ構成に戻します。現在の構成も履歴に残します。ページ内の未送信の入力内容は復元できません。')) return;
+    if (!await DashboardDialogs.confirm(t('m_97aa22defa'))) return;
     await navigator.locks.request('pwm-space-switch',async()=>{
       busy=true; g_isSwitching=true; restore.disabled=true;
       try {
@@ -75,15 +75,15 @@ const WorkspaceTools = (() => {
         if(old.length)await chrome.tabs.remove(old.map(t=>t.id));
         const active=created.find(t=>t.source.active)||created[0]; await chrome.tabs.update(active.id,{active:true});
         setActiveSpaceId(data,data.spaces.some(s=>s.id===history.spaceId)?history.spaceId:null); await saveData(data);
-        await renderAll();showMessage('前のタブ構成に戻しました。','success');
-      }catch(error){console.error(error);showMessage('復元に失敗しました。履歴を確認して再度お試しください。','error');}
+        await renderAll();showMessage(t('m_9ea03093db'),'success');
+      }catch(error){console.error(error);showMessage(t('m_9930817c6f'),'error');}
       finally{g_isSwitching=false;}
     });
     } finally { busy=false; schedule(); }
   });
   const originalSave = saveCurrentTabsToSpace;
   saveCurrentTabsToSpace = async function(id) {
-    busy=true; status.textContent='保存中…';
+    busy=true; status.textContent=t('m_6644f06197');
     try { const result=await originalSave(id); failure=false;return result; }
     catch(error){failure=true;throw error;}
     finally{busy=false;schedule();}
