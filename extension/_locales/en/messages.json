@@ -1430,5 +1430,47 @@
   },
   "shareSettingsHelp": {
     "message": "For handing over a project or sharing tab sets with your team. Export only the spaces you choose; the recipient adds them."
+  },
+  "driveAutoHeading": {
+    "message": "Automatic backup"
+  },
+  "driveAutoHelp": {
+    "message": "Saves to Google Drive automatically, only when something changed. Keeps working after Chrome restarts."
+  },
+  "driveAutoEnable": {
+    "message": "Use automatic backup"
+  },
+  "driveAutoIntervalLabel": {
+    "message": "Save at most"
+  },
+  "driveAutoEvery": {
+    "message": "every $1 h"
+  },
+  "driveAutoRunNow": {
+    "message": "Run automatic backup now"
+  },
+  "driveAutoOff": {
+    "message": "Automatic backup is off."
+  },
+  "driveAutoWaiting": {
+    "message": "Will save automatically after your next change."
+  },
+  "driveAutoLast": {
+    "message": "Last automatic backup: $1"
+  },
+  "driveAutoRetrying": {
+    "message": "Automatic backup failed ($1). Retrying at $2."
+  },
+  "driveAutoPaused": {
+    "message": "Automatic backup paused after repeated failures ($1). Check your settings and turn it on again."
+  },
+  "driveAutoNeedsReconnect": {
+    "message": "Automatic backup is stopped because the Google Drive connection ended. Press \"Connect to Google Drive\"."
+  },
+  "driveAutoLocked": {
+    "message": "A Pro feature (coming soon). Manual backup and restore stay free as before."
+  },
+  "driveAutoBadgeTitle": {
+    "message": "Tab Matomen Kai: check automatic backup"
   }
 }

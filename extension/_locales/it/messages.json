@@ -1429,5 +1429,47 @@
   },
   "shareSettingsHelp": {
     "message": "Per passare un progetto o condividere schede con il team. Esporta solo gli spazi scelti; chi li riceve li aggiunge."
+  },
+  "driveAutoHeading": {
+    "message": "Backup automatico"
+  },
+  "driveAutoHelp": {
+    "message": "Salva automaticamente su Google Drive, solo quando ci sono modifiche. Continua anche dopo il riavvio di Chrome."
+  },
+  "driveAutoEnable": {
+    "message": "Usa il backup automatico"
+  },
+  "driveAutoIntervalLabel": {
+    "message": "Salva al massimo"
+  },
+  "driveAutoEvery": {
+    "message": "ogni $1 h"
+  },
+  "driveAutoRunNow": {
+    "message": "Esegui ora il backup automatico"
+  },
+  "driveAutoOff": {
+    "message": "Il backup automatico è disattivato."
+  },
+  "driveAutoWaiting": {
+    "message": "Salverà automaticamente dopo la prossima modifica."
+  },
+  "driveAutoLast": {
+    "message": "Ultimo backup automatico: $1"
+  },
+  "driveAutoRetrying": {
+    "message": "Backup automatico non riuscito ($1). Nuovo tentativo alle $2."
+  },
+  "driveAutoPaused": {
+    "message": "Backup automatico sospeso dopo errori ripetuti ($1). Controlla le impostazioni e riattivalo."
+  },
+  "driveAutoNeedsReconnect": {
+    "message": "Il backup automatico è fermo perché la connessione a Google Drive è terminata. Premi \"Connetti a Google Drive\"."
+  },
+  "driveAutoLocked": {
+    "message": "Funzione Pro (in arrivo). Backup e ripristino manuali restano gratuiti."
+  },
+  "driveAutoBadgeTitle": {
+    "message": "Tab Matomen Kai: controlla il backup automatico"
   }
 }

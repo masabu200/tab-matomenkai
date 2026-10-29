@@ -1420,5 +1420,47 @@
   },
   "shareSettingsHelp": {
     "message": "Zum Übergeben eines Projekts oder Teilen von Tabs mit dem Team. Exportieren Sie nur ausgewählte Bereiche; Empfänger fügen sie hinzu."
+  },
+  "driveAutoHeading": {
+    "message": "Automatische Sicherung"
+  },
+  "driveAutoHelp": {
+    "message": "Speichert automatisch in Google Drive, nur wenn sich etwas geändert hat. Läuft auch nach einem Chrome-Neustart weiter."
+  },
+  "driveAutoEnable": {
+    "message": "Automatische Sicherung verwenden"
+  },
+  "driveAutoIntervalLabel": {
+    "message": "Höchstens speichern"
+  },
+  "driveAutoEvery": {
+    "message": "alle $1 Std."
+  },
+  "driveAutoRunNow": {
+    "message": "Automatische Sicherung jetzt ausführen"
+  },
+  "driveAutoOff": {
+    "message": "Die automatische Sicherung ist aus."
+  },
+  "driveAutoWaiting": {
+    "message": "Speichert nach Ihrer nächsten Änderung automatisch."
+  },
+  "driveAutoLast": {
+    "message": "Letzte automatische Sicherung: $1"
+  },
+  "driveAutoRetrying": {
+    "message": "Automatische Sicherung fehlgeschlagen ($1). Neuer Versuch um $2."
+  },
+  "driveAutoPaused": {
+    "message": "Automatische Sicherung nach wiederholten Fehlern pausiert ($1). Prüfen Sie die Einstellungen und schalten Sie sie wieder ein."
+  },
+  "driveAutoNeedsReconnect": {
+    "message": "Die automatische Sicherung ist gestoppt, weil die Verbindung zu Google Drive beendet wurde. Klicken Sie auf „Mit Google Drive verbinden“."
+  },
+  "driveAutoLocked": {
+    "message": "Pro-Funktion (in Vorbereitung). Manuelles Sichern und Wiederherstellen bleibt kostenlos."
+  },
+  "driveAutoBadgeTitle": {
+    "message": "Tab Matomen Kai: Automatische Sicherung prüfen"
   }
 }

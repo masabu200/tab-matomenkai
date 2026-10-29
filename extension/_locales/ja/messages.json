@@ -1821,5 +1821,47 @@
   },
   "shareSettingsHelp": {
     "message": "案件の引き継ぎや、チームへのタブ一覧の共有に。選んだスペースだけを書き出し、受け取った側は追加で読み込めます。"
+  },
+  "driveAutoHeading": {
+    "message": "自動バックアップ"
+  },
+  "driveAutoHelp": {
+    "message": "変更があったときだけ、Google ドライブに自動で保存します。Chrome を再起動しても続きます。"
+  },
+  "driveAutoEnable": {
+    "message": "自動バックアップを使う"
+  },
+  "driveAutoIntervalLabel": {
+    "message": "保存の間隔"
+  },
+  "driveAutoEvery": {
+    "message": "$1時間ごと"
+  },
+  "driveAutoRunNow": {
+    "message": "今すぐ自動保存を実行"
+  },
+  "driveAutoOff": {
+    "message": "自動バックアップはオフです。"
+  },
+  "driveAutoWaiting": {
+    "message": "次の変更のあと、自動で保存します。"
+  },
+  "driveAutoLast": {
+    "message": "前回の自動保存：$1"
+  },
+  "driveAutoRetrying": {
+    "message": "自動保存に失敗しました（$1）。$2 に再試行します。"
+  },
+  "driveAutoPaused": {
+    "message": "自動保存の失敗が続いたため一時停止しました（$1）。設定を確認して、自動バックアップを入れ直してください。"
+  },
+  "driveAutoNeedsReconnect": {
+    "message": "Google ドライブとの接続が切れたため、自動保存を止めています。「Googleドライブに接続」を押してください。"
+  },
+  "driveAutoLocked": {
+    "message": "Pro 版の機能です（提供準備中）。手動のバックアップと復元は、これまでどおり無料で使えます。"
+  },
+  "driveAutoBadgeTitle": {
+    "message": "タブまとめん改：自動バックアップを確認してください"
   }
 }

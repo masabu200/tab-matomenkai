@@ -2364,3 +2364,12 @@ body.sidebar-collapsed .sidebar-controls > * { flex-shrink:0; }
 .share-preview ul { margin:6px 0 8px 18px; font-size:13px; line-height:1.7; }
 .share-preview__title { font-size:13px; font-weight:700; }
 .share-status { font-size:13px; min-height:1.4em; }
+
+/* drive auto backup (Pro) */
+.drive-auto { display:flex; flex-direction:column; gap:8px; margin:6px 0 4px; padding:12px; border:1px solid var(--surface-dark-line, #3a4152); border-radius:12px; }
+.drive-auto__head { display:flex; align-items:center; gap:8px; font-size:13px; }
+.pro-badge { font-size:11px; font-weight:800; letter-spacing:.04em; padding:2px 8px; border-radius:999px; background:#ff9e3d; color:#1b1206; }
+.drive-auto__toggle { display:flex; align-items:center; gap:8px; font-size:13px; }
+.drive-auto__row { display:flex; align-items:center; gap:8px; flex-wrap:wrap; font-size:13px; }
+.drive-auto__row select { font-size:13px; padding:4px 6px; border-radius:6px; }
+.drive-auto--locked .drive-auto__toggle, .drive-auto--locked .drive-auto__row, .drive-auto--locked #driveAutoRunNow { opacity:.45; }

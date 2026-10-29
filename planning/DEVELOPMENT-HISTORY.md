@@ -361,3 +361,17 @@ Playwright 1.62 の `page.waitForFunction` に async 関数を渡すと、最初
 - 概要（タイトル下の一文）はダッシュボードで編集できず manifest の description から出るため、`_locales/ja|en` の appDescription を更新。次のパッケージ（1.4.0）で反映。
 - 無料・有料の方針（計画書3節）：1.3.0 で無料公開した機能（Drive の選択復元を含む）は後から有料にしない。有料の柱は Drive への自動保存（AUTO-01/02）と PC 間同期（SYNC-01）。スペース単位の共有は集客の入口として無料。
 - 確認事項として利用者に回答：スペース単位の書き出し・読み込みは実装済み（1.4.0 で公開）、スペース単位の Drive バックアップ／復元は未対応、課金の仕組みは未実装。
+
+## 2026-10-29 AUTO-01：Google ドライブへの自動保存（Pro）
+
+- 方針：有料の柱なので、決済（PAY-01〜05）ができるまではストア版で使えないようにする（無料で出すと「公開済み機能は有料にしない」方針と衝突するため）。
+- `extension/entitlements.js`：`Entitlements.has(feature)`。いまは `chrome.management.getSelf().installType === 'development'`（パッケージ化していない読み込み）のときだけ Pro を有効にする。PAY-04 で購入確認に置き換える前提で、呼び出し側は変えずに済む形。
+- `extension/drive-auto.js`（Service Worker で動く）：
+  - 15分ごとのアラーム `pwm-drive-auto` で判定。状態は `pwm_drive_auto` に保存するので Chrome の再起動後も続く。
+  - 判定順：オフ → Pro でない → 未接続 → 再接続待ち → 失敗続きで停止 → 再試行待ち → 変更なし（スペースとカテゴリーの SHA-256 が前回と同じ）→ 編集直後（最後の変更から5分待つ）→ 間隔内（1/6/24時間）→ 保存。
+  - 失敗時は 15分から倍々で最大24時間まで待って再試行し、8回続いたら停止。認証切れは再試行せずに止め、ツールバーのアイコンに「!」を出す。再接続（`pwm_drive_connected` が true になる）で解除。
+  - 同時実行は `DriveBackup.save` の Web Lock で1つに制限。保存先・世代管理は手動保存と共通（専用フォルダ、保持数）。
+- `extension/background.js`：`backup-validation.js` / `drive-backup.js` / `entitlements.js` / `drive-auto.js` を読み込み、`DriveAuto.install()`。設定画面の「今すぐ自動保存を実行」はメッセージ `DRIVE_AUTO_RUN_NOW` で Service Worker 側を動かす。
+- `extension/drive-auto-settings.js`：Drive カード内に「自動バックアップ（Pro）」欄（オン/オフ、間隔、今すぐ実行、状態）。ストア版では無効化して「Pro 版の機能です（提供準備中）。手動のバックアップと復元はこれまでどおり無料」と表示。
+- テスト：`tests/drive-auto.test.cjs`（判定順・再試行間隔・ハッシュ）、`tests/drive-auto.cjs`（実際の Service Worker で、開発版の Pro 判定、アラーム、待機、変更時のみ保存、間隔、サーバーエラーからの回復、認証切れでの停止とバッジ、再接続で解除、設定画面、ストア版では無効）。
+- 未対応（AUTO-02 の残り）：長期間操作がないときの認証更新の実機確認、保持容量の表示、Chrome の通知での知らせ（`notifications` 権限を増やさないため、いまはバッジのみ）。

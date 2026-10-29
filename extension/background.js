@@ -8,6 +8,7 @@
 
 importScripts('i18n.js');
 importScripts('auto-clean.js');
+importScripts('backup-validation.js', 'drive-backup.js', 'entitlements.js', 'drive-auto.js');
 
 const DASHBOARD_URL = chrome.runtime.getURL('dashboard.html');
 const ALARM_NAME    = 'pwm-auto-backup';
@@ -343,4 +344,18 @@ if (chrome.runtime?.onInstalled?.addListener) {
   chrome.runtime.onStartup.addListener(setupAutoCleanAlarm);
   chrome.runtime.onStartup.addListener(() => { runAutoClean(); });
   chrome.alarms.onAlarm.addListener((alarm) => { if (alarm.name === AUTO_CLEAN_ALARM) runAutoClean(); });
+}
+
+
+// ============================================================
+// Google ドライブへの自動保存（Pro・AUTO-01）
+// ============================================================
+if (chrome.runtime?.onInstalled?.addListener && typeof DriveAuto !== 'undefined') {
+  DriveAuto.install();
+  globalThis.pwmDriveAutoTick = (options) => DriveAuto.tick(options);
+  chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
+    if (message?.type !== 'DRIVE_AUTO_RUN_NOW') return;
+    DriveAuto.tick({force: true}).then(r => sendResponse({action: r.action, error: r.error || ''})).catch(e => sendResponse({action: 'failed', error: e.message}));
+    return true;
+  });
 }

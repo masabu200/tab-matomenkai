@@ -1420,5 +1420,47 @@
   },
   "shareSettingsHelp": {
     "message": "Para traspasar un proyecto o compartir pestañas con tu equipo. Exporta solo los espacios elegidos; quien los recibe los añade."
+  },
+  "driveAutoHeading": {
+    "message": "Copia automática"
+  },
+  "driveAutoHelp": {
+    "message": "Guarda en Google Drive automáticamente, solo cuando hay cambios. Sigue funcionando tras reiniciar Chrome."
+  },
+  "driveAutoEnable": {
+    "message": "Usar copia automática"
+  },
+  "driveAutoIntervalLabel": {
+    "message": "Guardar como máximo"
+  },
+  "driveAutoEvery": {
+    "message": "cada $1 h"
+  },
+  "driveAutoRunNow": {
+    "message": "Ejecutar copia automática ahora"
+  },
+  "driveAutoOff": {
+    "message": "La copia automática está desactivada."
+  },
+  "driveAutoWaiting": {
+    "message": "Se guardará automáticamente tras tu próximo cambio."
+  },
+  "driveAutoLast": {
+    "message": "Última copia automática: $1"
+  },
+  "driveAutoRetrying": {
+    "message": "Falló la copia automática ($1). Se reintentará a las $2."
+  },
+  "driveAutoPaused": {
+    "message": "La copia automática se pausó tras varios fallos ($1). Revisa la configuración y vuelve a activarla."
+  },
+  "driveAutoNeedsReconnect": {
+    "message": "La copia automática se detuvo porque terminó la conexión con Google Drive. Pulsa \"Conectar con Google Drive\"."
+  },
+  "driveAutoLocked": {
+    "message": "Función Pro (próximamente). La copia y restauración manuales siguen siendo gratuitas."
+  },
+  "driveAutoBadgeTitle": {
+    "message": "Tab Matomen Kai: revisa la copia automática"
   }
 }

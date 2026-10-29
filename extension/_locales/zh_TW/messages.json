@@ -1420,5 +1420,47 @@
   },
   "shareSettingsHelp": {
     "message": "適合交接專案或與團隊分享分頁。只匯出所選空間，接收方可追加匯入。"
+  },
+  "driveAutoHeading": {
+    "message": "自動備份"
+  },
+  "driveAutoHelp": {
+    "message": "僅在有變更時自動儲存到 Google 雲端硬碟。重新啟動 Chrome 後仍會繼續。"
+  },
+  "driveAutoEnable": {
+    "message": "使用自動備份"
+  },
+  "driveAutoIntervalLabel": {
+    "message": "儲存間隔"
+  },
+  "driveAutoEvery": {
+    "message": "每 $1 小時"
+  },
+  "driveAutoRunNow": {
+    "message": "立即執行自動備份"
+  },
+  "driveAutoOff": {
+    "message": "自動備份已關閉。"
+  },
+  "driveAutoWaiting": {
+    "message": "下次變更後將自動儲存。"
+  },
+  "driveAutoLast": {
+    "message": "上次自動備份：$1"
+  },
+  "driveAutoRetrying": {
+    "message": "自動備份失敗（$1）。將於 $2 重試。"
+  },
+  "driveAutoPaused": {
+    "message": "因連續失敗，自動備份已暫停（$1）。請檢查設定後重新開啟。"
+  },
+  "driveAutoNeedsReconnect": {
+    "message": "與 Google 雲端硬碟的連線已中斷，自動備份已停止。請按「連線至 Google 雲端硬碟」。"
+  },
+  "driveAutoLocked": {
+    "message": "Pro 版功能（即將推出）。手動備份與還原仍可免費使用。"
+  },
+  "driveAutoBadgeTitle": {
+    "message": "Tab Matomen Kai：請檢查自動備份"
   }
 }

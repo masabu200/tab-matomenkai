@@ -1420,5 +1420,47 @@
   },
   "shareSettingsHelp": {
     "message": "프로젝트 인수인계나 팀과의 탭 공유에. 선택한 스페이스만 내보내고, 받는 쪽은 추가로 가져올 수 있어요."
+  },
+  "driveAutoHeading": {
+    "message": "자동 백업"
+  },
+  "driveAutoHelp": {
+    "message": "변경이 있을 때만 Google 드라이브에 자동으로 저장해요. Chrome을 다시 시작해도 계속돼요."
+  },
+  "driveAutoEnable": {
+    "message": "자동 백업 사용"
+  },
+  "driveAutoIntervalLabel": {
+    "message": "저장 간격"
+  },
+  "driveAutoEvery": {
+    "message": "$1시간마다"
+  },
+  "driveAutoRunNow": {
+    "message": "지금 자동 백업 실행"
+  },
+  "driveAutoOff": {
+    "message": "자동 백업이 꺼져 있어요."
+  },
+  "driveAutoWaiting": {
+    "message": "다음 변경 후 자동으로 저장해요."
+  },
+  "driveAutoLast": {
+    "message": "마지막 자동 백업: $1"
+  },
+  "driveAutoRetrying": {
+    "message": "자동 백업에 실패했어요($1). $2에 다시 시도해요."
+  },
+  "driveAutoPaused": {
+    "message": "실패가 계속되어 자동 백업을 일시 중지했어요($1). 설정을 확인하고 다시 켜 주세요."
+  },
+  "driveAutoNeedsReconnect": {
+    "message": "Google 드라이브 연결이 끊겨 자동 백업을 멈췄어요. \"Google 드라이브에 연결\"을 눌러 주세요."
+  },
+  "driveAutoLocked": {
+    "message": "Pro 기능이에요(준비 중). 수동 백업과 복원은 지금처럼 무료예요."
+  },
+  "driveAutoBadgeTitle": {
+    "message": "Tab Matomen Kai: 자동 백업을 확인하세요"
   }
 }

@@ -1420,5 +1420,47 @@
   },
   "shareSettingsHelp": {
     "message": "Pour transmettre un projet ou partager des onglets avec l’équipe. Exportez seulement les espaces choisis ; le destinataire les ajoute."
+  },
+  "driveAutoHeading": {
+    "message": "Sauvegarde automatique"
+  },
+  "driveAutoHelp": {
+    "message": "Enregistre automatiquement dans Google Drive, uniquement en cas de changement. Continue après un redémarrage de Chrome."
+  },
+  "driveAutoEnable": {
+    "message": "Utiliser la sauvegarde automatique"
+  },
+  "driveAutoIntervalLabel": {
+    "message": "Enregistrer au plus"
+  },
+  "driveAutoEvery": {
+    "message": "toutes les $1 h"
+  },
+  "driveAutoRunNow": {
+    "message": "Lancer la sauvegarde automatique maintenant"
+  },
+  "driveAutoOff": {
+    "message": "La sauvegarde automatique est désactivée."
+  },
+  "driveAutoWaiting": {
+    "message": "Enregistrera automatiquement après votre prochaine modification."
+  },
+  "driveAutoLast": {
+    "message": "Dernière sauvegarde automatique : $1"
+  },
+  "driveAutoRetrying": {
+    "message": "Échec de la sauvegarde automatique ($1). Nouvel essai à $2."
+  },
+  "driveAutoPaused": {
+    "message": "Sauvegarde automatique suspendue après plusieurs échecs ($1). Vérifiez les réglages puis réactivez-la."
+  },
+  "driveAutoNeedsReconnect": {
+    "message": "La sauvegarde automatique est arrêtée car la connexion à Google Drive a pris fin. Appuyez sur « Se connecter à Google Drive »."
+  },
+  "driveAutoLocked": {
+    "message": "Fonction Pro (bientôt disponible). La sauvegarde et la restauration manuelles restent gratuites."
+  },
+  "driveAutoBadgeTitle": {
+    "message": "Tab Matomen Kai : vérifiez la sauvegarde automatique"
   }
 }
