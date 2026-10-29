@@ -1412,8 +1412,8 @@
     "description": "manifest name"
   },
   "appDescription": {
-    "message": "案件ごとにスペースを作り、同じChromeウィンドウ内でタブ構成を切り替えられる拡張機能です。",
-    "description": "manifest description"
+    "message": "案件ごとにタブをまるごと保存・切り替え。ピン留め、一括操作、右クリック保存、Googleドライブのバックアップで、タブ地獄から抜け出す拡張機能。",
+    "description": "manifest description (store summary, max 132)"
   },
   "actionTitle": {
     "message": "タブまとめん改 を開く",

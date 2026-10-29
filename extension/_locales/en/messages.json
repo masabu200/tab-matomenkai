@@ -1059,7 +1059,8 @@
     "message": "Tab Matomen Kai"
   },
   "appDescription": {
-    "message": "Create a space for each project and switch between tab sets inside the same Chrome window."
+    "message": "Save and switch whole tab sets per project. Pinned tabs, bulk actions, right-click save and Google Drive backup end tab overload.",
+    "description": "manifest description (store summary, max 132)"
   },
   "actionTitle": {
     "message": "Open Tab Matomen Kai"
