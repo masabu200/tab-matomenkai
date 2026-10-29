@@ -1471,5 +1471,26 @@
   },
   "driveAutoNoResponse": {
     "message": "沒有回應。請重新載入擴充功能後再試。"
+  },
+  "paletteHeading": {
+    "message": "主題（配色）"
+  },
+  "paletteHelp": {
+    "message": "選擇儀表板的配色，可與淺色／深色模式搭配使用。"
+  },
+  "paletteStandard": {
+    "message": "標準（墨色）"
+  },
+  "palettePink": {
+    "message": "粉紅（可愛）"
+  },
+  "paletteBeige": {
+    "message": "米色（沉穩）"
+  },
+  "paletteMint": {
+    "message": "薄荷（清新）"
+  },
+  "paletteNavy": {
+    "message": "海軍藍（俐落）"
   }
 }

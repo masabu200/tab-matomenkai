@@ -1480,5 +1480,26 @@
   },
   "driveAutoNoResponse": {
     "message": "Sem resposta. Recarregue a extensão e tente novamente."
+  },
+  "paletteHeading": {
+    "message": "Tema (cores)"
+  },
+  "paletteHelp": {
+    "message": "Escolha as cores do painel. Funciona junto com o modo claro/escuro."
+  },
+  "paletteStandard": {
+    "message": "Padrão (carvão)"
+  },
+  "palettePink": {
+    "message": "Rosa (fofo)"
+  },
+  "paletteBeige": {
+    "message": "Bege (calmo)"
+  },
+  "paletteMint": {
+    "message": "Menta (refrescante)"
+  },
+  "paletteNavy": {
+    "message": "Azul-marinho (sóbrio)"
   }
 }

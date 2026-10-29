@@ -17,7 +17,25 @@
   const languageSelect=document.createElement('select');languageSelect.id='languageSelect';languageSelect.setAttribute('aria-label',t('languageHeading'));
   const languageHelp=document.createElement('p');languageHelp.className='settings-help';languageHelp.textContent=t('languageHelp');
   language.append(languageTitle,languageSelect,languageHelp);
-  dialog.append(header,description,language,footer,fileInput,notice);document.body.append(dialog);
+  // Colour theme: one radio per palette with a small preview of rail / page / card / accent.
+  const palette=document.createElement('section');palette.className='palette-settings';
+  const paletteTitle=document.createElement('h3');paletteTitle.id='paletteHeading';paletteTitle.textContent=t('paletteHeading');
+  const paletteOptions=document.createElement('div');paletteOptions.className='palette-options';paletteOptions.setAttribute('role','radiogroup');paletteOptions.setAttribute('aria-labelledby','paletteHeading');
+  for(const item of ThemePalette.LIST){
+    const option=document.createElement('label');option.className='palette-option';
+    const radio=document.createElement('input');radio.type='radio';radio.name='palette';radio.value=item.id;radio.checked=item.id===ThemePalette.get();
+    const [rail,bg,card,accent]=item.preview;
+    const swatch=document.createElement('span');swatch.className='palette-swatch';swatch.setAttribute('aria-hidden','true');
+    swatch.style.cssText=`--sw-rail:${rail};--sw-bg:${bg};--sw-card:${card};--sw-accent:${accent}`;
+    swatch.innerHTML='<span class="palette-swatch__rail"></span><span class="palette-swatch__main"><span class="palette-swatch__card"></span><span class="palette-swatch__accent"></span></span>';
+    const name=document.createElement('span');name.className='palette-option__name';name.textContent=t(item.label);
+    option.append(radio,swatch,name);paletteOptions.append(option);
+    radio.addEventListener('change',()=>{if(radio.checked)ThemePalette.set(item.id).catch(()=>{})});
+  }
+  document.addEventListener('pwm-palette-change',event=>{for(const radio of paletteOptions.querySelectorAll('input'))radio.checked=radio.value===event.detail});
+  const paletteHelp=document.createElement('p');paletteHelp.className='settings-help';paletteHelp.textContent=t('paletteHelp');
+  palette.append(paletteTitle,paletteOptions,paletteHelp);
+  dialog.append(header,description,language,palette,footer,fileInput,notice);document.body.append(dialog);
   (async()=>{
     let browserCode='en';try{browserCode=I18n.normalize(chrome.i18n.getUILanguage())}catch{}
     const auto=new Option(t('languageAuto',[I18n.NAMES[browserCode]||browserCode]),'auto');languageSelect.append(auto);

@@ -1471,5 +1471,26 @@
   },
   "driveAutoNoResponse": {
     "message": "Aucune réponse. Rechargez l’extension et réessayez."
+  },
+  "paletteHeading": {
+    "message": "Thème (couleurs)"
+  },
+  "paletteHelp": {
+    "message": "Choisissez les couleurs du tableau de bord. Se combine avec le mode clair/sombre."
+  },
+  "paletteStandard": {
+    "message": "Standard (anthracite)"
+  },
+  "palettePink": {
+    "message": "Rose (mignon)"
+  },
+  "paletteBeige": {
+    "message": "Beige (apaisant)"
+  },
+  "paletteMint": {
+    "message": "Menthe (frais)"
+  },
+  "paletteNavy": {
+    "message": "Bleu marine (net)"
   }
 }

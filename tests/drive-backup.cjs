@@ -114,7 +114,7 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
   assert.equal(await page.locator('#driveRestoreUndo').isVisible(),true);
   await page.locator('#driveRestoreUndo').click();await waitStatus(page,'復元前のデータに戻しました');
   data=await worker.evaluate(async()=>(await chrome.storage.local.get('pwm_data')).pwm_data);assert.deepEqual(data.spaces.map(s=>s.name),['現在A','現在B']);
-  assert.equal(await page.locator('#driveRestoreUndo').isHidden(),true);
+  await page.locator('#driveRestoreUndo').waitFor({state:'hidden',timeout:3000}); // refresh() hides it right after the status text is set
   // 401 -> cached token removed, then the next save gets a fresh token silently
   uploadStatus=401;await page.locator('#driveSave').click();await waitStatus(page,'再接続');assert.deepEqual(await page.evaluate(()=>removed),['builtin-token']);
   uploadStatus=200;await page.evaluate(()=>tokenMode='second');expectToken='builtin-token-2';await page.locator('#driveSave').click();await waitStatus(page,'保存しました');

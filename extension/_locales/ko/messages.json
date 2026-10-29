@@ -1471,5 +1471,26 @@
   },
   "driveAutoNoResponse": {
     "message": "응답이 없어요. 확장 프로그램을 다시 로드한 뒤 다시 시도하세요."
+  },
+  "paletteHeading": {
+    "message": "테마(색상)"
+  },
+  "paletteHelp": {
+    "message": "대시보드 색상을 선택합니다. 라이트/다크 전환과 함께 사용할 수 있습니다."
+  },
+  "paletteStandard": {
+    "message": "기본(먹색)"
+  },
+  "palettePink": {
+    "message": "핑크(귀여움)"
+  },
+  "paletteBeige": {
+    "message": "베이지(차분함)"
+  },
+  "paletteMint": {
+    "message": "민트(산뜻함)"
+  },
+  "paletteNavy": {
+    "message": "네이비(단정함)"
   }
 }

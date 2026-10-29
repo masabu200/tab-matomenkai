@@ -1872,5 +1872,26 @@
   },
   "driveAutoNoResponse": {
     "message": "応答がありませんでした。拡張を再読み込みしてから、もう一度お試しください。"
+  },
+  "paletteHeading": {
+    "message": "テーマ（配色）"
+  },
+  "paletteHelp": {
+    "message": "ダッシュボードの配色を選べます。ライト／ダークの切り替えと組み合わせて使えます。"
+  },
+  "paletteStandard": {
+    "message": "標準（墨色）"
+  },
+  "palettePink": {
+    "message": "ピンク（かわいい）"
+  },
+  "paletteBeige": {
+    "message": "ベージュ（落ち着いた）"
+  },
+  "paletteMint": {
+    "message": "ミント（さわやか）"
+  },
+  "paletteNavy": {
+    "message": "ネイビー（きりっと）"
   }
 }

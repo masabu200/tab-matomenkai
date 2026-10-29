@@ -1480,5 +1480,26 @@
   },
   "driveAutoNoResponse": {
     "message": "Nessuna risposta. Ricarica l’estensione e riprova."
+  },
+  "paletteHeading": {
+    "message": "Tema (colori)"
+  },
+  "paletteHelp": {
+    "message": "Scegli i colori della dashboard. Si combina con la modalità chiara/scura."
+  },
+  "paletteStandard": {
+    "message": "Standard (antracite)"
+  },
+  "palettePink": {
+    "message": "Rosa (carino)"
+  },
+  "paletteBeige": {
+    "message": "Beige (rilassante)"
+  },
+  "paletteMint": {
+    "message": "Menta (fresco)"
+  },
+  "paletteNavy": {
+    "message": "Blu navy (deciso)"
   }
 }

@@ -1,0 +1,533 @@
+/* ============================================================
+   テーマ（配色）の着せ替え層
+   <html data-theme-palette="pink"> などで CSS 変数のセットを差し替える。
+   標準（墨色）は theme-refined.css の値そのまま。ライト／ダークは body.theme-dark との組み合わせ。
+   配置・サイズ・余白は変えない。文字色は背景に対して 4.5:1 以上になるように選んでいる。
+============================================================ */
+
+/* -------------------------------------------------------
+   theme-refined.css で色を直書きしていた箇所を変数に置き換える
+   （既定値は標準テーマの見た目と同じ）
+------------------------------------------------------- */
+:root {
+  --ink-ring: rgba(25, 28, 29, 0.10);
+  --bubble-bg: #ffffff;
+  --bubble-text: #191c1d;
+  --bubble-muted: #5f6668;
+  --bubble-hover: #eceeef;
+  --rail-chip-fade: rgba(42, 46, 48, 0);
+}
+body.theme-dark {
+  --ink-ring: rgba(238, 240, 240, 0.12);
+  --bubble-bg: #26292b;
+  --bubble-text: #eef0f0;
+  --bubble-muted: #b4babc;
+  --bubble-hover: #33383a;
+}
+.search-input:focus { box-shadow: 0 0 0 3px var(--ink-ring); }
+body.theme-dark .search-input:focus { box-shadow: 0 0 0 3px var(--ink-ring); }
+.modal__input:focus { box-shadow: 0 0 0 3px var(--ink-ring); }
+.bulk-bar--active { box-shadow: 0 0 0 1px var(--ink-ring) inset; }
+.sidebar .cat-group__actions { background: linear-gradient(to right, var(--rail-chip-fade), var(--rail-chip) 22%); }
+body.theme-dark .sidebar .space-item--active .space-item__badge { background: var(--rail-active-text) !important; color: var(--rail-active-bg) !important; }
+.sidebar__empty,
+.archive-empty,
+.cat-group--archive .cat-group__name,
+.space-item--archived .space-item__name { color: var(--rail-muted); }
+.color-dot { border-color: var(--rail-muted); }
+/* 吹き出し（ナビの全文表示・タブ一覧のプレビュー） */
+.nav-full-title,
+.nav-tab-preview { background: var(--bubble-bg); color: var(--bubble-text); }
+.nav-tab-preview-item { color: var(--bubble-text); }
+.nav-tab-preview-item:hover,
+.nav-tab-preview-item:focus-visible { background: var(--bubble-hover); outline-color: var(--bubble-text); }
+.nav-tab-preview-item small,
+.nav-tab-preview-item .nav-tab-preview-fallback { color: var(--bubble-muted); }
+
+/* -------------------------------------------------------
+   ピンク（かわいい）
+------------------------------------------------------- */
+html[data-theme-palette="pink"] {
+  --body-bg: #fdf3f7;
+  --body-color: #3b1d2a;
+  --main-bg: #fdf3f7;
+  --header-bg: rgba(255, 250, 252, 0.82);
+  --header-border: #f3d9e4;
+  --text-primary: #3b1d2a;
+  --text-secondary: #714457;
+  --text-tertiary: #8a5468;
+  --card-bg: #ffffff;
+  --card-border: #f3dce6;
+  --card-hover-border: #e9bfd1;
+  --card-hover-shadow: rgba(184, 51, 106, 0.12);
+  --card-text-title: #3b1d2a;
+  --card-text-url: #8a5468;
+  --search-bg: #ffffff;
+  --search-border: #f0d3df;
+  --search-focus-bg: #ffffff;
+  --search-text: #3b1d2a;
+  --btn-ghost-border: #f0d3df;
+  --btn-ghost-color: #714457;
+  --btn-ghost-hover-bg: #fbe6ee;
+  --btn-ghost-hover-border: #e3b3c7;
+  --tab-group-bg: rgba(255, 255, 255, 0.82);
+  --tab-group-border: #f3dce6;
+  --tab-group-body-bg: #fff8fb;
+  --tab-group-action-hover: #fbe6ee;
+  --tab-group-action-color: #8a5468;
+  --badge-bg: #fbe6ee;
+  --badge-border: #f3d3e0;
+  --badge-color: #714457;
+  --empty-guide-title: #3b1d2a;
+  --modal-bg: #ffffff;
+  --modal-border: #f3dce6;
+  --modal-text: #3b1d2a;
+  --modal-input-bg: #fdf3f7;
+  --modal-input-border: #f0d3df;
+  --ink: #b8336a;
+  --ink-hover: #9c2a59;
+  --on-ink: #ffffff;
+  --ink-ring: rgba(184, 51, 106, 0.18);
+  --card-shadow: inset 0 1px 0 #ffffff, 0 6px 28px rgba(184, 51, 106, 0.08);
+  --rail-bg: #7a2a4c;
+  --rail-line: #8d3559;
+  --rail-text: #fff2f7;
+  --rail-muted: #f6c9da;
+  --rail-chip: #923a60;
+  --rail-chip-fade: rgba(146, 58, 96, 0);
+  --rail-hover: rgba(255, 255, 255, 0.08);
+  --rail-active-bg: #fde7ef;
+  --rail-active-text: #6a2241;
+  --surface-dark: #6a2442;
+  --surface-dark-2: #7d2f50;
+  --surface-dark-line: #9a4a6c;
+  --bubble-bg: #ffffff;
+  --bubble-text: #3b1d2a;
+  --bubble-muted: #714457;
+  --bubble-hover: #fbe6ee;
+}
+html[data-theme-palette="pink"] body.theme-dark {
+  --body-bg: #1b1216;
+  --body-color: #ead3dc;
+  --main-bg: #1b1216;
+  --header-bg: rgba(39, 27, 33, 0.86);
+  --header-border: #33222a;
+  --text-primary: #fbecf2;
+  --text-secondary: #e3bccb;
+  --text-tertiary: #c495a8;
+  --card-bg: #271b21;
+  --card-border: #3a2730;
+  --card-hover-border: #55394a;
+  --card-hover-shadow: rgba(0, 0, 0, 0.4);
+  --card-text-title: #fbecf2;
+  --card-text-url: #c495a8;
+  --search-bg: #271b21;
+  --search-border: #3a2730;
+  --search-focus-bg: #2c1f26;
+  --search-text: #fbecf2;
+  --btn-ghost-border: #3a2730;
+  --btn-ghost-color: #e3bccb;
+  --btn-ghost-hover-bg: #33222b;
+  --btn-ghost-hover-border: #55394a;
+  --tab-group-bg: rgba(41, 28, 35, 0.88);
+  --tab-group-border: #3a2730;
+  --tab-group-body-bg: #21161b;
+  --tab-group-action-hover: #33222b;
+  --tab-group-action-color: #c495a8;
+  --badge-bg: #33222b;
+  --badge-border: #3a2730;
+  --badge-color: #e3bccb;
+  --empty-guide-title: #fbecf2;
+  --modal-bg: #271b21;
+  --modal-border: #3a2730;
+  --modal-text: #fbecf2;
+  --modal-input-bg: #33222b;
+  --modal-input-border: #55394a;
+  --ink: #f7a3c4;
+  --ink-hover: #fbbdd5;
+  --on-ink: #2b0f1c;
+  --ink-ring: rgba(247, 163, 196, 0.18);
+  --card-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 6px 28px rgba(0, 0, 0, 0.4);
+  --rail-bg: #13090e;
+  --rail-line: #2a1820;
+  --rail-chip: #3a2030;
+  --rail-chip-fade: rgba(58, 32, 48, 0);
+  --surface-dark: #2b1922;
+  --surface-dark-2: #3a2330;
+  --surface-dark-line: #5a3a4a;
+  --bubble-bg: #3a2330;
+  --bubble-text: #fbecf2;
+  --bubble-muted: #e3bccb;
+  --bubble-hover: #4a2d3d;
+}
+
+/* -------------------------------------------------------
+   ベージュ（落ち着いた）
+------------------------------------------------------- */
+html[data-theme-palette="beige"] {
+  --body-bg: #f6f1e9;
+  --body-color: #2e2820;
+  --main-bg: #f6f1e9;
+  --header-bg: rgba(255, 253, 249, 0.82);
+  --header-border: #e6dccd;
+  --text-primary: #2e2820;
+  --text-secondary: #5b5142;
+  --text-tertiary: #6e6352;
+  --card-bg: #fffdf9;
+  --card-border: #e8dfd2;
+  --card-hover-border: #d6c8b5;
+  --card-hover-shadow: rgba(107, 82, 54, 0.12);
+  --card-text-title: #2e2820;
+  --card-text-url: #6e6352;
+  --search-bg: #fffdf9;
+  --search-border: #e3d8c8;
+  --search-focus-bg: #fffdf9;
+  --search-text: #2e2820;
+  --btn-ghost-border: #e3d8c8;
+  --btn-ghost-color: #5b5142;
+  --btn-ghost-hover-bg: #efe7da;
+  --btn-ghost-hover-border: #d2c3ad;
+  --tab-group-bg: rgba(255, 253, 249, 0.82);
+  --tab-group-border: #e8dfd2;
+  --tab-group-body-bg: #faf6ef;
+  --tab-group-action-hover: #efe7da;
+  --tab-group-action-color: #6e6352;
+  --badge-bg: #efe7da;
+  --badge-border: #e3d8c8;
+  --badge-color: #5b5142;
+  --empty-guide-title: #2e2820;
+  --modal-bg: #fffdf9;
+  --modal-border: #e8dfd2;
+  --modal-text: #2e2820;
+  --modal-input-bg: #f6f1e9;
+  --modal-input-border: #e3d8c8;
+  --ink: #6b5236;
+  --ink-hover: #57422b;
+  --on-ink: #ffffff;
+  --ink-ring: rgba(107, 82, 54, 0.16);
+  --card-shadow: inset 0 1px 0 #ffffff, 0 6px 28px rgba(107, 82, 54, 0.07);
+  --rail-bg: #3d3329;
+  --rail-line: #4b4034;
+  --rail-text: #f5eee4;
+  --rail-muted: #d6c8b5;
+  --rail-chip: #54473a;
+  --rail-chip-fade: rgba(84, 71, 58, 0);
+  --rail-hover: rgba(255, 255, 255, 0.07);
+  --rail-active-bg: #f6f1e9;
+  --rail-active-text: #3d3329;
+  --surface-dark: #3a3027;
+  --surface-dark-2: #473b30;
+  --surface-dark-line: #64574a;
+  --bubble-bg: #fffdf9;
+  --bubble-text: #2e2820;
+  --bubble-muted: #5b5142;
+  --bubble-hover: #efe7da;
+}
+html[data-theme-palette="beige"] body.theme-dark {
+  --body-bg: #17140f;
+  --body-color: #ddd3c4;
+  --main-bg: #17140f;
+  --header-bg: rgba(34, 30, 24, 0.86);
+  --header-border: #2d271f;
+  --text-primary: #f3ece1;
+  --text-secondary: #d4c7b4;
+  --text-tertiary: #b0a28d;
+  --card-bg: #221e18;
+  --card-border: #332c23;
+  --card-hover-border: #4a4034;
+  --card-hover-shadow: rgba(0, 0, 0, 0.4);
+  --card-text-title: #f3ece1;
+  --card-text-url: #b0a28d;
+  --search-bg: #221e18;
+  --search-border: #332c23;
+  --search-focus-bg: #27221b;
+  --search-text: #f3ece1;
+  --btn-ghost-border: #332c23;
+  --btn-ghost-color: #d4c7b4;
+  --btn-ghost-hover-bg: #2d271f;
+  --btn-ghost-hover-border: #4a4034;
+  --tab-group-bg: rgba(36, 31, 25, 0.88);
+  --tab-group-border: #332c23;
+  --tab-group-body-bg: #1c1914;
+  --tab-group-action-hover: #2d271f;
+  --tab-group-action-color: #b0a28d;
+  --badge-bg: #2d271f;
+  --badge-border: #332c23;
+  --badge-color: #d4c7b4;
+  --empty-guide-title: #f3ece1;
+  --modal-bg: #221e18;
+  --modal-border: #332c23;
+  --modal-text: #f3ece1;
+  --modal-input-bg: #2d271f;
+  --modal-input-border: #4a4034;
+  --ink: #e0c9a6;
+  --ink-hover: #ead8bd;
+  --on-ink: #241c12;
+  --ink-ring: rgba(224, 201, 166, 0.16);
+  --card-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 6px 28px rgba(0, 0, 0, 0.4);
+  --rail-bg: #0f0d0a;
+  --rail-line: #26211a;
+  --rail-chip: #2d271f;
+  --rail-chip-fade: rgba(45, 39, 31, 0);
+  --surface-dark: #26211a;
+  --surface-dark-2: #322b22;
+  --surface-dark-line: #4f4537;
+  --bubble-bg: #322b22;
+  --bubble-text: #f3ece1;
+  --bubble-muted: #d4c7b4;
+  --bubble-hover: #40372c;
+}
+
+/* -------------------------------------------------------
+   ミント（さわやか）
+------------------------------------------------------- */
+html[data-theme-palette="mint"] {
+  --body-bg: #eff8f5;
+  --body-color: #14302a;
+  --main-bg: #eff8f5;
+  --header-bg: rgba(250, 255, 253, 0.82);
+  --header-border: #d4e9e2;
+  --text-primary: #14302a;
+  --text-secondary: #3d5e56;
+  --text-tertiary: #4f7068;
+  --card-bg: #ffffff;
+  --card-border: #d8ebe4;
+  --card-hover-border: #b5dccf;
+  --card-hover-shadow: rgba(27, 117, 96, 0.12);
+  --card-text-title: #14302a;
+  --card-text-url: #4f7068;
+  --search-bg: #ffffff;
+  --search-border: #d0e6de;
+  --search-focus-bg: #ffffff;
+  --search-text: #14302a;
+  --btn-ghost-border: #d0e6de;
+  --btn-ghost-color: #3d5e56;
+  --btn-ghost-hover-bg: #e1f1eb;
+  --btn-ghost-hover-border: #a9d2c4;
+  --tab-group-bg: rgba(255, 255, 255, 0.82);
+  --tab-group-border: #d8ebe4;
+  --tab-group-body-bg: #f6fbf9;
+  --tab-group-action-hover: #e1f1eb;
+  --tab-group-action-color: #4f7068;
+  --badge-bg: #e1f1eb;
+  --badge-border: #d0e6de;
+  --badge-color: #3d5e56;
+  --empty-guide-title: #14302a;
+  --modal-bg: #ffffff;
+  --modal-border: #d8ebe4;
+  --modal-text: #14302a;
+  --modal-input-bg: #eff8f5;
+  --modal-input-border: #d0e6de;
+  --ink: #1b7560;
+  --ink-hover: #155f4e;
+  --on-ink: #ffffff;
+  --ink-ring: rgba(27, 117, 96, 0.16);
+  --card-shadow: inset 0 1px 0 #ffffff, 0 6px 28px rgba(27, 117, 96, 0.07);
+  --rail-bg: #174a3f;
+  --rail-line: #1f5a4c;
+  --rail-text: #eafaf4;
+  --rail-muted: #b5dccf;
+  --rail-chip: #21604f;
+  --rail-chip-fade: rgba(33, 96, 79, 0);
+  --rail-hover: rgba(255, 255, 255, 0.07);
+  --rail-active-bg: #eff8f5;
+  --rail-active-text: #174a3f;
+  --surface-dark: #163f36;
+  --surface-dark-2: #1d4c42;
+  --surface-dark-line: #3a6b5f;
+  --bubble-bg: #ffffff;
+  --bubble-text: #14302a;
+  --bubble-muted: #3d5e56;
+  --bubble-hover: #e1f1eb;
+}
+html[data-theme-palette="mint"] body.theme-dark {
+  --body-bg: #0e1715;
+  --body-color: #cfe5dd;
+  --main-bg: #0e1715;
+  --header-bg: rgba(23, 34, 31, 0.86);
+  --header-border: #1d2c28;
+  --text-primary: #e8f6f1;
+  --text-secondary: #b4d4ca;
+  --text-tertiary: #8fb4a8;
+  --card-bg: #17221f;
+  --card-border: #23332e;
+  --card-hover-border: #345048;
+  --card-hover-shadow: rgba(0, 0, 0, 0.4);
+  --card-text-title: #e8f6f1;
+  --card-text-url: #8fb4a8;
+  --search-bg: #17221f;
+  --search-border: #23332e;
+  --search-focus-bg: #1b2724;
+  --search-text: #e8f6f1;
+  --btn-ghost-border: #23332e;
+  --btn-ghost-color: #b4d4ca;
+  --btn-ghost-hover-bg: #1e2d29;
+  --btn-ghost-hover-border: #345048;
+  --tab-group-bg: rgba(25, 37, 34, 0.88);
+  --tab-group-border: #23332e;
+  --tab-group-body-bg: #121c19;
+  --tab-group-action-hover: #1e2d29;
+  --tab-group-action-color: #8fb4a8;
+  --badge-bg: #1e2d29;
+  --badge-border: #23332e;
+  --badge-color: #b4d4ca;
+  --empty-guide-title: #e8f6f1;
+  --modal-bg: #17221f;
+  --modal-border: #23332e;
+  --modal-text: #e8f6f1;
+  --modal-input-bg: #1e2d29;
+  --modal-input-border: #345048;
+  --ink: #86d8c0;
+  --ink-hover: #a3e4d1;
+  --on-ink: #0b231c;
+  --ink-ring: rgba(134, 216, 192, 0.16);
+  --card-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 6px 28px rgba(0, 0, 0, 0.4);
+  --rail-bg: #08100e;
+  --rail-line: #17221f;
+  --rail-chip: #1c2d28;
+  --rail-chip-fade: rgba(28, 45, 40, 0);
+  --surface-dark: #16231f;
+  --surface-dark-2: #1f302b;
+  --surface-dark-line: #36524a;
+  --bubble-bg: #1f302b;
+  --bubble-text: #e8f6f1;
+  --bubble-muted: #b4d4ca;
+  --bubble-hover: #2a3f39;
+}
+
+/* -------------------------------------------------------
+   ネイビー（きりっと）
+------------------------------------------------------- */
+html[data-theme-palette="navy"] {
+  --body-bg: #f1f4f9;
+  --body-color: #14203a;
+  --main-bg: #f1f4f9;
+  --header-bg: rgba(255, 255, 255, 0.82);
+  --header-border: #dae1ee;
+  --text-primary: #14203a;
+  --text-secondary: #3e4c68;
+  --text-tertiary: #55627c;
+  --card-bg: #ffffff;
+  --card-border: #dde3ef;
+  --card-hover-border: #bcc8de;
+  --card-hover-shadow: rgba(31, 59, 112, 0.12);
+  --card-text-title: #14203a;
+  --card-text-url: #55627c;
+  --search-bg: #ffffff;
+  --search-border: #d6deec;
+  --search-focus-bg: #ffffff;
+  --search-text: #14203a;
+  --btn-ghost-border: #d6deec;
+  --btn-ghost-color: #3e4c68;
+  --btn-ghost-hover-bg: #e5eaf4;
+  --btn-ghost-hover-border: #b3c0d8;
+  --tab-group-bg: rgba(255, 255, 255, 0.82);
+  --tab-group-border: #dde3ef;
+  --tab-group-body-bg: #f7f9fc;
+  --tab-group-action-hover: #e5eaf4;
+  --tab-group-action-color: #55627c;
+  --badge-bg: #e5eaf4;
+  --badge-border: #d6deec;
+  --badge-color: #3e4c68;
+  --empty-guide-title: #14203a;
+  --modal-bg: #ffffff;
+  --modal-border: #dde3ef;
+  --modal-text: #14203a;
+  --modal-input-bg: #f1f4f9;
+  --modal-input-border: #d6deec;
+  --ink: #1f3b70;
+  --ink-hover: #182f5a;
+  --on-ink: #ffffff;
+  --ink-ring: rgba(31, 59, 112, 0.16);
+  --card-shadow: inset 0 1px 0 #ffffff, 0 6px 28px rgba(31, 59, 112, 0.07);
+  --rail-bg: #162a52;
+  --rail-line: #203766;
+  --rail-text: #eef3fc;
+  --rail-muted: #b9c7e2;
+  --rail-chip: #24396a;
+  --rail-chip-fade: rgba(36, 57, 106, 0);
+  --rail-hover: rgba(255, 255, 255, 0.07);
+  --rail-active-bg: #f1f4f9;
+  --rail-active-text: #162a52;
+  --surface-dark: #16264a;
+  --surface-dark-2: #1e3159;
+  --surface-dark-line: #3c5384;
+  --bubble-bg: #ffffff;
+  --bubble-text: #14203a;
+  --bubble-muted: #3e4c68;
+  --bubble-hover: #e5eaf4;
+}
+html[data-theme-palette="navy"] body.theme-dark {
+  --body-bg: #0c1220;
+  --body-color: #cdd7ea;
+  --main-bg: #0c1220;
+  --header-bg: rgba(21, 29, 48, 0.86);
+  --header-border: #1b2540;
+  --text-primary: #eaf0fb;
+  --text-secondary: #bac7e0;
+  --text-tertiary: #94a3c2;
+  --card-bg: #151d30;
+  --card-border: #212c46;
+  --card-hover-border: #33426a;
+  --card-hover-shadow: rgba(0, 0, 0, 0.4);
+  --card-text-title: #eaf0fb;
+  --card-text-url: #94a3c2;
+  --search-bg: #151d30;
+  --search-border: #212c46;
+  --search-focus-bg: #182136;
+  --search-text: #eaf0fb;
+  --btn-ghost-border: #212c46;
+  --btn-ghost-color: #bac7e0;
+  --btn-ghost-hover-bg: #1b2540;
+  --btn-ghost-hover-border: #33426a;
+  --tab-group-bg: rgba(23, 31, 51, 0.88);
+  --tab-group-border: #212c46;
+  --tab-group-body-bg: #10182a;
+  --tab-group-action-hover: #1b2540;
+  --tab-group-action-color: #94a3c2;
+  --badge-bg: #1b2540;
+  --badge-border: #212c46;
+  --badge-color: #bac7e0;
+  --empty-guide-title: #eaf0fb;
+  --modal-bg: #151d30;
+  --modal-border: #212c46;
+  --modal-text: #eaf0fb;
+  --modal-input-bg: #1b2540;
+  --modal-input-border: #33426a;
+  --ink: #9bb7ee;
+  --ink-hover: #b5caf3;
+  --on-ink: #0d1730;
+  --ink-ring: rgba(155, 183, 238, 0.16);
+  --card-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 6px 28px rgba(0, 0, 0, 0.4);
+  --rail-bg: #070b15;
+  --rail-line: #151d30;
+  --rail-chip: #1b2742;
+  --rail-chip-fade: rgba(27, 39, 66, 0);
+  --surface-dark: #151e33;
+  --surface-dark-2: #1e2942;
+  --surface-dark-line: #364869;
+  --bubble-bg: #1e2942;
+  --bubble-text: #eaf0fb;
+  --bubble-muted: #bac7e0;
+  --bubble-hover: #2a3757;
+}
+
+/* -------------------------------------------------------
+   設定ダイアログの「テーマ」カード（色見本つきの選択肢）
+------------------------------------------------------- */
+/* サイドバーから移したバックアップ欄は sticky のままだと、上のカードが伸びたとき重なるので通常配置に戻す */
+.settings-dialog .sidebar__backup { position: static; }
+.palette-options { display: grid; grid-template-columns: repeat(auto-fill, minmax(124px, 1fr)); gap: 8px; margin: 0; padding: 0; border: 0; }
+.palette-option { position: relative; display: flex; flex-direction: column; gap: 6px; padding: 8px; border: 1px solid var(--surface-dark-line); border-radius: 12px; cursor: pointer; color: var(--rail-text); font-size: 12px; line-height: 1.4; }
+.palette-option:hover { background: var(--surface-dark-2); }
+.palette-option input { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; }
+.palette-option:has(input:checked) { border-color: var(--rail-text); box-shadow: 0 0 0 1px var(--rail-text) inset; }
+.palette-option:has(input:focus-visible) { outline: 2px solid var(--rail-text); outline-offset: 2px; }
+.palette-option__name { display: flex; align-items: baseline; gap: 6px; }
+.palette-option__name::before { content: ''; flex-shrink: 0; width: 8px; height: 8px; border: 1.5px solid currentColor; border-radius: 50%; }
+.palette-option:has(input:checked) .palette-option__name::before { background: currentColor; }
+.palette-swatch { display: grid; grid-template-columns: 22% 1fr; height: 46px; overflow: hidden; border-radius: 8px; background: var(--sw-bg); box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12); }
+.palette-swatch__rail { background: var(--sw-rail); }
+.palette-swatch__main { display: flex; flex-direction: column; justify-content: center; gap: 4px; padding: 6px; }
+.palette-swatch__card { height: 10px; border-radius: 3px; background: var(--sw-card); box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06); }
+.palette-swatch__accent { width: 46%; height: 8px; border-radius: 999px; background: var(--sw-accent); }

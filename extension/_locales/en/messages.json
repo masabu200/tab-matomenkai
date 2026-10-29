@@ -1481,5 +1481,26 @@
   },
   "driveAutoNoResponse": {
     "message": "No response. Reload the extension and try again."
+  },
+  "paletteHeading": {
+    "message": "Theme (colors)"
+  },
+  "paletteHelp": {
+    "message": "Choose the dashboard colors. Works together with the light/dark switch."
+  },
+  "paletteStandard": {
+    "message": "Standard (charcoal)"
+  },
+  "palettePink": {
+    "message": "Pink (cute)"
+  },
+  "paletteBeige": {
+    "message": "Beige (calm)"
+  },
+  "paletteMint": {
+    "message": "Mint (fresh)"
+  },
+  "paletteNavy": {
+    "message": "Navy (crisp)"
   }
 }

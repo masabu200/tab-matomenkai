@@ -1471,5 +1471,26 @@
   },
   "driveAutoNoResponse": {
     "message": "没有响应。请重新加载扩展程序后再试。"
+  },
+  "paletteHeading": {
+    "message": "主题（配色）"
+  },
+  "paletteHelp": {
+    "message": "选择仪表板的配色，可与浅色/深色模式搭配使用。"
+  },
+  "paletteStandard": {
+    "message": "标准（墨色）"
+  },
+  "palettePink": {
+    "message": "粉色（可爱）"
+  },
+  "paletteBeige": {
+    "message": "米色（沉稳）"
+  },
+  "paletteMint": {
+    "message": "薄荷（清新）"
+  },
+  "paletteNavy": {
+    "message": "藏青（干练）"
   }
 }

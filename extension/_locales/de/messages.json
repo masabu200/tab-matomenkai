@@ -1471,5 +1471,26 @@
   },
   "driveAutoNoResponse": {
     "message": "Keine Antwort. Laden Sie die Erweiterung neu und versuchen Sie es erneut."
+  },
+  "paletteHeading": {
+    "message": "Design (Farben)"
+  },
+  "paletteHelp": {
+    "message": "Wähle die Farben des Dashboards. Lässt sich mit dem Hell-/Dunkelmodus kombinieren."
+  },
+  "paletteStandard": {
+    "message": "Standard (Anthrazit)"
+  },
+  "palettePink": {
+    "message": "Rosa (verspielt)"
+  },
+  "paletteBeige": {
+    "message": "Beige (ruhig)"
+  },
+  "paletteMint": {
+    "message": "Mint (frisch)"
+  },
+  "paletteNavy": {
+    "message": "Marineblau (klar)"
   }
 }
