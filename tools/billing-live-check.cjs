@@ -30,7 +30,7 @@ const fs=require('fs'),path=require('path'),os=require('os'),assert=require('nod
   await checkout.getByText('Tab Matomen Kai Pro').first().waitFor();
   await checkout.getByText(/300/).first().waitFor();
   await checkout.waitForTimeout(3000); // let the skeleton finish rendering
-  await checkout.screenshot({path:'evidence/billing-checkout-test.png'});
+  await checkout.screenshot({path:'evidence/billing-checkout.png'});
   console.log('PASS buy opens Stripe Checkout for Tab Matomen Kai Pro, ¥300');
   await checkout.close();
   if(canceledId){

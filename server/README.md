@@ -23,7 +23,13 @@ Stripe Checkout（Managed Payments）で Pro 版の**買い切り**（¥300・�
 
 Webhook は同じイベントの二重受信（event id で判定）と、古いイベントの後着（`created` で判定）を無視します。
 
-## 現在の設定（2026-10-29、テストモード）
+## 現在の設定（2026-10-29、**本番**）
+
+- **本番で販売中の状態**：Managed Payments 有効（すぐに使用可能）、商品 `prod_VWvwZkdKxGJYk9`、価格 `price_1UVs4TRvCR021e0tup1AvrcH`（¥300・1回限り）、Webhook `we_1UVs6LRvCR021e0ts6OOkLii`（3イベント）、鍵2つは本番用に登録済み。設定画面から本番の決済画面が開くことを確認済み（`evidence/billing-checkout-live.png`）。
+- 本番で実際に購入した確認はまだ（1回買って、すぐ返金して確かめるとよい）。
+- テストモードに戻すときは、`STRIPE_PRICE_ID` をテストの価格にし、鍵2つをテスト用に入れ直して deploy。
+
+### テストモードのときの記録
 
 - Worker：`https://tab-matomen-billing.kws-toolskws-toolskws-toolskws-tools.workers.dev`（workers.dev のサブドメインは `kws-toolskws-toolskws-toolskws-tools`。`kws-tools` は使用済みだった）
 - Stripe サンドボックスの Webhook：`tab-matomen-billing`（`we_1UVqXXRvCR021e0t6BObkUay`、6イベント：買い切りの3つ＋月額時代の3つ）

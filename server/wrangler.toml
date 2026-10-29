@@ -11,7 +11,7 @@ preview_urls = false
 [vars]
 ALLOWED_ORIGINS = "chrome-extension://ofpnbokbnlfjglogdhoegmiallanobdb"
 PUBLIC_URL = "https://tab-matomen-billing.kws-toolskws-toolskws-toolskws-tools.workers.dev"
-STRIPE_PRICE_ID = "price_1UVrm8RvCR021e0thuj2pT6t"
+STRIPE_PRICE_ID = "price_1UVs4TRvCR021e0tup1AvrcH"
 MANAGED_PAYMENTS = "true"
 
 [[kv_namespaces]]
