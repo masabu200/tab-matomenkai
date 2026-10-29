@@ -50,6 +50,12 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
   // refunded at the server → Pro off on the next check
   await worker.evaluate(()=>{server.down=false;server.pro=false;server.status='refunded'});
   assert.deepEqual(await st({force:true}),{pro:false,reason:'not-purchased',status:'refunded'});
+  // "not purchased" is re-checked after 10 minutes (a fresh purchase can take a minute to land), Pro is kept for 6 hours
+  const before=(await worker.evaluate(()=>server.calls)).length;
+  await worker.evaluate(()=>Entitlements.reset());await st();
+  assert.equal((await worker.evaluate(()=>server.calls)).length,before,'not-purchased served from cache within 10 minutes');
+  await worker.evaluate(()=>{Entitlements.reset();return Entitlements.status({now:Date.now()+11*60000})});
+  assert.equal((await worker.evaluate(()=>server.calls)).length,before+1,'re-checked after 10 minutes');
   // auto backup follows the entitlement
   await worker.evaluate(()=>chrome.storage.local.set({pwm_drive_connected:true,pwm_drive_auto:{enabled:true,intervalHours:6}}));
   assert.equal((await worker.evaluate(()=>pwmDriveAutoTick({force:true}))).action,'not-entitled');

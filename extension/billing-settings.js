@@ -84,11 +84,20 @@
     el('billingIdInput').value = ''; say(t('billingIdApplied'));
     await render(true); window.dispatchEvent(new CustomEvent('pwm-entitlement-changed'));
   });
-  // Coming back from the Stripe tab: check once, so the user rarely needs the button.
+  // Coming back from the Stripe tab: check right away, then keep checking for a while, because a
+  // purchase can take about a minute to reach the server's storage. Stops as soon as Pro shows up.
+  const RETURN_CHECKS = 12, RETURN_INTERVAL_MS = 10000;
+  let returnTimer = 0;
+  async function checkAfterReturn(left) {
+    clearTimeout(returnTimer);
+    const s = await render(true).catch(() => null);
+    window.dispatchEvent(new CustomEvent('pwm-entitlement-changed'));
+    if (s && !s.pro && left > 1 && document.visibilityState === 'visible') returnTimer = setTimeout(() => checkAfterReturn(left - 1), RETURN_INTERVAL_MS);
+  }
   document.addEventListener('visibilitychange', () => {
     if (document.visibilityState !== 'visible' || !awaitingReturn) return;
     awaitingReturn = false;
-    render(true).then(() => window.dispatchEvent(new CustomEvent('pwm-entitlement-changed'))).catch(() => {});
+    checkAfterReturn(RETURN_CHECKS);
   });
   dialog.addEventListener('toggle', () => { if (dialog.open) render().catch(() => {}); });
   render().catch(() => {});

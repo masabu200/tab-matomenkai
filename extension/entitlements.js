@@ -9,6 +9,9 @@ globalThis.Entitlements = (() => {
   const ACCOUNT_KEY = 'pwm_account_id';
   const CACHE_KEY = 'pwm_entitlement';
   const FRESH_MS = 6 * 3600000;
+  // "Not purchased" is re-checked sooner: a purchase can take about a minute to reach the server's storage.
+  const NOT_PURCHASED_FRESH_MS = 10 * 60000;
+  const freshFor = record => (record?.pro ? FRESH_MS : NOT_PURCHASED_FRESH_MS);
   const OFFLINE_GRACE_MS = 7 * 86400000;
   const ACCOUNT_RE = /^[0-9a-f]{64}$/;
   let cached = null;
@@ -56,7 +59,7 @@ globalThis.Entitlements = (() => {
     } catch {}
     if (!available()) return {pro: false, reason: 'unavailable'};
     const last = (await chrome.storage.local.get(CACHE_KEY))[CACHE_KEY];
-    if (!force && last && now - last.checkedAt < FRESH_MS) return {...last, reason: last.pro ? 'purchased' : 'not-purchased'};
+    if (!force && last && now - last.checkedAt < freshFor(last)) return {...last, reason: last.pro ? 'purchased' : 'not-purchased'};
     try {
       const record = await fromServer(now);
       return {...record, reason: record.pro ? 'purchased' : 'not-purchased'};
@@ -68,7 +71,7 @@ globalThis.Entitlements = (() => {
   }
 
   async function status(options) {
-    if (!cached || options?.force || Date.now() - cached.at > FRESH_MS) cached = {...(await resolve(options)), at: Date.now()};
+    if (!cached || options?.force || Date.now() - cached.at > freshFor(cached)) cached = {...(await resolve(options)), at: Date.now()};
     return cached;
   }
   async function has(feature) { return PRO_FEATURES.includes(feature) && (await status()).pro; }
@@ -81,5 +84,5 @@ globalThis.Entitlements = (() => {
   async function checkoutUrl() { return (await post('/v1/checkout', await accountId())).url; }
   async function portalUrl() { return (await post('/v1/portal', await accountId())).url; }
 
-  return {PRO_FEATURES, available, accountId, setAccountId, status, has, reset, refresh, checkoutUrl, portalUrl, FRESH_MS, OFFLINE_GRACE_MS};
+  return {PRO_FEATURES, available, accountId, setAccountId, status, has, reset, refresh, checkoutUrl, portalUrl, FRESH_MS, NOT_PURCHASED_FRESH_MS, OFFLINE_GRACE_MS};
 })();
