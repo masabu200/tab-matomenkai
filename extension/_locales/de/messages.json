@@ -1628,5 +1628,17 @@
   "reviewSettingsHelp": {
     "message": "Wenn sie Ihnen gefällt, unterstützt eine Bewertung im Chrome Web Store die Entwicklung. Fehler und Wünsche gern per E-Mail.",
     "description": "review prompt"
+  },
+  "billingLegalNote": {
+    "message": "Bitte lies vor dem Kauf die Nutzungsbedingungen und die Anbieterangaben."
+  },
+  "billingLegalTerms": {
+    "message": "Nutzungsbedingungen"
+  },
+  "billingLegalTokushoho": {
+    "message": "Anbieterangaben (Japanisch)"
+  },
+  "billingLegalPrivacy": {
+    "message": "Datenschutzerklärung"
   }
 }

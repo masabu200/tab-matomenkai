@@ -1628,5 +1628,17 @@
   "reviewSettingsHelp": {
     "message": "如果喜歡，在 Chrome 線上應用程式商店評分是對開發的支持。問題與建議請透過電子郵件寄送。",
     "description": "review prompt"
+  },
+  "billingLegalNote": {
+    "message": "購買前，請閱讀使用條款與商業資訊揭露。"
+  },
+  "billingLegalTerms": {
+    "message": "使用條款"
+  },
+  "billingLegalTokushoho": {
+    "message": "商業資訊揭露（日文）"
+  },
+  "billingLegalPrivacy": {
+    "message": "隱私權政策"
   }
 }

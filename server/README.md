@@ -70,14 +70,35 @@ chrome.storage.local.set({pwm_billing_live_test: true})
 ```
 テスト用カード `4242 4242 4242 4242` で購入し、Pro になること、解約の予約、Pro に戻ることを確かめます。終わったら `chrome.storage.local.remove('pwm_billing_live_test')` で戻します。
 
-### 5. 本番へ切り替える前に
-- Stripe を本番モードにして、価格・Webhook・秘密鍵を本番用に入れ直す。
-- プライバシーポリシーに「Pro 版の利用時だけ、購入 ID を購入記録サーバーに送る」旨を追記する（`store/privacy-policy.*.md`）。
-- 特定商取引法の表記に、価格・支払時期・解約方法を記入する（`store/tokushoho.ja.md`）。
+### 5. 本番（ライブモード）への切り替え
+テストモードと同じ形を本番にもう一度作り、Worker の3つの値を入れ替えます。下の 1〜3 は Stripe の管理画面（右上のテスト環境の切り替えを**オフ**）で行います。
+
+1. **Managed Payments の確認**：設定 → Managed Payments が本番で有効か確認する。テストの決済画面は「Link を通じて販売」と出ていたので、テストでは有効。本番では審査や申込みが別に要る場合がある。
+2. **商品と価格**：商品カタログ → 商品を作成。テストと同じにする。
+   - 名前 `Tab Matomen Kai Pro`、説明 `Automatic Google Drive backup for Tab Matomen Kai (Chrome extension).`
+   - 税コード `txcd_10103000`（Software as a service (SaaS) - personal use）
+   - 価格 ¥300・継続・毎月。作成後に価格 ID（`price_...`）を控える。
+3. **Webhook**：開発者 → Webhook → 送信先を追加。URL は `https://tab-matomen-billing.kws-toolskws-toolskws-toolskws-tools.workers.dev/v1/webhook`、イベントは上の4つ。カスタマーポータル（設定 → Billing → カスタマーポータル）で、解約と支払い方法の変更が許可されているかも確認する。
+4. **Worker の値を入れ替える**（`server` フォルダで実行。鍵は聞かれたら貼り付け）：
+   - `wrangler.toml` の `STRIPE_PRICE_ID` を本番の価格 ID に書き換える。
+   ```bash
+   npx -y -p node@22 -p wrangler@4 -- wrangler secret put STRIPE_SECRET_KEY
+   npx -y -p node@22 -p wrangler@4 -- wrangler secret put STRIPE_WEBHOOK_SECRET
+   npx -y -p node@22 -p wrangler@4 -- wrangler deploy
+   ```
+   本番の秘密鍵は `sk_live_...`（開発者 → API キー）、署名シークレットは 3 で作った送信先の `whsec_...`。
+5. **確認**：`node tools/billing-live-check.cjs` で、設定画面から本番の決済画面（`cs_live_`）が開くことを確かめる。実際に1回購入して Pro になること、すぐ解約・返金できることを確かめると確実。
+6. **テストのデータ**：KV に残るテストの購入記録は本番の購入 ID と重ならないので消さなくてよい。テストモードの Webhook は止めておく（テストモードの送信先を「無効」に）。
+
+### 6. 公開前の書類
+- 利用規約・特定商取引法に基づく表記・プライバシーポリシーは `store/terms.*.md`・`store/tokushoho.ja.md`・`store/privacy-policy.*.md` が正本。編集したら `node tools/build-legal.cjs` で `server/public/` を作り直し、`wrangler deploy` する。公開先は Worker の `/terms`・`/tokushoho`・`/privacy`（英語は `/en/terms`・`/en/privacy`）。拡張機能の設定の「Pro 版」からリンクしている。
+- Chrome ウェブストアのダッシュボードで、プライバシーポリシーの URL に `/privacy` を入れ、「アプリ内購入あり」を選ぶ。
 - 国内の消費税の扱いと海外売上の申告区分を税理士に確認する（`planning/PAY-01-PROVIDERS.md`）。
+- 特商法の表記に、運営統括責任者の氏名と電話番号を出している（Webの相棒の表記と同じ）。省略して「請求があれば遅滞なく開示」とするかは、必要なら専門家に確認する。
 
 ## テスト
 ```bash
 node --test tests/billing-worker.test.mjs   # サーバー（署名・状態の反映・順序・CORS）
 node tests/billing.cjs                       # 拡張機能（購入・確認・解約・オフライン猶予・ID の引き継ぎ）
+node tools/billing-live-check.cjs [購入ID]   # 本物のサーバーと Stripe（テストモード）に対して、設定画面から購入・規約リンク・ポータルを確認（テスト一式には含めない）
 ```

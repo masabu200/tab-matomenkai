@@ -1628,5 +1628,17 @@
   "reviewSettingsHelp": {
     "message": "마음에 드셨다면 Chrome 웹 스토어 평가가 개발에 큰 힘이 됩니다. 버그와 요청은 이메일로 받습니다.",
     "description": "review prompt"
+  },
+  "billingLegalNote": {
+    "message": "구매하기 전에 이용약관과 상거래 정보 고지를 확인해 주세요."
+  },
+  "billingLegalTerms": {
+    "message": "이용약관"
+  },
+  "billingLegalTokushoho": {
+    "message": "상거래 정보 고지(일본어)"
+  },
+  "billingLegalPrivacy": {
+    "message": "개인정보 처리방침"
   }
 }

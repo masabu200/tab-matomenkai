@@ -17,3 +17,9 @@ MANAGED_PAYMENTS = "true"
 [[kv_namespaces]]
 binding = "BILLING"
 id = "d64bccbe884241da9ea30a69be884d8e"
+
+# Public legal pages (privacy, terms, 特商法) built from store/*.md by tools/build-legal.cjs
+[assets]
+directory = "./public"
+html_handling = "auto-trailing-slash"
+not_found_handling = "none"

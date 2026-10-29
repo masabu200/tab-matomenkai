@@ -2425,3 +2425,8 @@ body.theme-dark .space-create__error { color: #ff9a8f; }
 .space-create__help { margin: 0; font-size: 12px; line-height: 1.6; color: var(--text-secondary); }
 .space-create .modal__footer { margin-top: 4px; padding: 14px 22px 18px; }
 .space-create .modal__color-swatch--none { background: var(--modal-input-bg); color: var(--text-secondary); border-color: var(--modal-input-border); }
+/* Pro card: the buy button is the main action (light on the grey dialog); legal links readable on dark */
+.billing-actions #billingBuy { background: var(--rail-text, #e8eaeb); color: var(--surface-dark, #1f2224); border: 1px solid var(--rail-text, #e8eaeb); }
+.billing-actions #billingBuy:hover { filter: brightness(0.94); }
+.billing-legal a { color: var(--rail-text, #e8eaeb); text-decoration: underline; text-underline-offset: 2px; white-space: nowrap; }
+.billing-legal a:focus-visible { outline: 2px solid var(--rail-text, #e8eaeb); outline-offset: 2px; border-radius: 2px; }

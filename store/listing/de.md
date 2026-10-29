@@ -24,6 +24,9 @@ Tab Matomen Kai speichert deine Tabs als „Bereiche“, einen pro Projekt oder 
 ■ Deine Daten
 Alles wird im lokalen Speicher deines Browsers abgelegt. Die Sicherung in Google Drive schreibt nur dann in dein eigenes Drive, wenn du auf „Verbinden“ und „Jetzt sichern“ klickst. Nichts von dem, was du aufrufst, wird irgendwohin gesendet.
 
+■ Pro-Version
+Die meisten Funktionen sind kostenlos. Die Pro-Version (300 ¥ pro Monat) bietet automatische Sicherungen in Google Drive. Kauf und Kündigung unter Einstellungen → Pro. Zur Prüfung des Kaufs wird nur eine zufällige Kauf-ID deiner Installation an unseren Server gesendet (kein Name, keine E-Mail, keine Browserdaten). Die Zahlung wickelt Stripe ab; als Verkäufer wird Link angezeigt.
+
 ## Begründung der Berechtigungen (für das Entwickler-Dashboard)
 - tabs / tabGroups: Die geöffneten Tabs und Tab-Gruppen lesen, um sie als Bereiche zu speichern und wiederherzustellen.
 - storage / unlimitedStorage: Bereiche und Einstellungen lokal speichern.

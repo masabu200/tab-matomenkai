@@ -77,6 +77,8 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
   await page.waitForFunction(()=>document.getElementById('billingStatus').textContent.includes('無料版'));
   assert.equal(await page.locator('#billingBuy').isVisible(),true);
   assert.equal(await page.locator('#billingManage').isVisible(),false,'nothing to manage before buying');
+  assert.equal(await page.locator('#billingLegal').isVisible(),true,'terms / 特商法 / privacy links next to the buy button');
+  assert.deepEqual(await page.locator('#billingLegal a').evaluateAll(a=>a.map(x=>x.getAttribute('href'))),['https://billing.example/terms','https://billing.example/tokushoho','https://billing.example/privacy']);
   assert.match(await page.locator('#driveAutoStatus').textContent(),/設定の「Pro 版」から購入/);
   // buy → opens Stripe Checkout with this install's id
   await page.locator('#billingBuy').click();

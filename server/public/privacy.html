@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>タブまとめん改 プライバシーポリシー</title>
+<style>
+:root { color-scheme: light dark; --bg: #f5f6f6; --card: #fff; --text: #191c1d; --muted: #4a5052; --line: #e3e6e7; --link: #1f5fbf; }
+@media (prefers-color-scheme: dark) { :root { --bg: #111314; --card: #1c1f21; --text: #eef0f0; --muted: #b4babc; --line: #2a2e30; --link: #8db7ff; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.8 system-ui, -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; }
+main { max-width: 820px; margin: 0 auto; padding: 32px 16px 64px; }
+article { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 28px 24px; }
+h1 { font-size: 24px; line-height: 1.4; margin: 0 0 12px; }
+h2 { font-size: 18px; margin: 32px 0 8px; padding-top: 16px; border-top: 1px solid var(--line); }
+h3 { font-size: 16px; margin: 20px 0 4px; }
+p, li { color: var(--text); }
+ul, ol { padding-left: 1.4em; }
+a { color: var(--link); overflow-wrap: anywhere; }
+code { font-size: 0.9em; background: var(--bg); padding: 1px 5px; border-radius: 4px; overflow-wrap: anywhere; }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+th, td { text-align: left; vertical-align: top; padding: 12px 10px; border-bottom: 1px solid var(--line); }
+th { width: 30%; color: var(--muted); font-weight: 600; }
+@media (max-width: 600px) { th, td { display: block; width: 100%; } th { border-bottom: 0; padding-bottom: 0; } }
+.lang { text-align: right; margin: 0 0 12px; }
+nav { margin-top: 24px; font-size: 14px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 16px; }
+</style>
+</head>
+<body>
+<main>
+<p class="lang"><a href="/en/privacy">English</a></p>
+<article>
+<h1>タブまとめん改 プライバシーポリシー</h1>
+<p>制定日: 2026年10月28日（最終更新日: 2026年10月29日）</p>
+<p>KWS（以下「当方」）は、Chrome 拡張機能「タブまとめん改」（以下「本拡張」）と、その有料版（以下「Pro 版」）の提供にあたり、個人情報の保護に関する法律その他の法令を守り、利用者の情報を次のとおり取り扱います。</p>
+<h2>1. 事業者</h2>
+<ul>
+<li>名称: KWS（運営統括責任者: 麦倉 優聡）</li>
+<li>所在地: 〒160-0023 東京都新宿区西新宿3丁目3番13号 西新宿水間ビル2F</li>
+<li>連絡先: <a href="mailto:info@kw-s.jp">info@kw-s.jp</a>（受付時間 10:00〜18:00／土日祝を除く）</li>
+</ul>
+<h2>2. お使いのブラウザの中だけに保存する情報</h2>
+<p>本拡張は、次の情報をお使いの Chrome の中（<code>chrome.storage.local</code>）にだけ保存します。当方を含む第三者のサーバーへは送りません。</p>
+<ul>
+<li>保存したスペース・カテゴリー・タブ（タイトル、URL、ファビコンの URL、タブグループの名前と色、並び順）</li>
+<li>設定（表示の仕方、言語、テーマ、自動バックアップの間隔、切り替え時の自動保存など）</li>
+<li>最小限の利用の記録（レビューのお願いを出す時期を決めるための「使った日」の一覧と表示回数・表示しない設定、自動整理のための各スペースの最終利用日時）</li>
+<li>自動整理で削除したスペース（ゴミ箱。30日後に自動で消去）</li>
+</ul>
+<p>アクセス解析や広告のための計測は行っていません。</p>
+<h2>3. 外部へ送る情報</h2>
+<p>本拡張が外部へ情報を送るのは、次の場合に限ります。</p>
+<h3>Google ドライブへのバックアップ</h3>
+<ul>
+<li>「Google ドライブに接続」を押して許可すると、「今すぐバックアップ」を押したとき、また Pro 版の自動バックアップを有効にした場合は設定した間隔ごとに、保存データ（スペース・カテゴリー・タブ）を JSON ファイルとして<strong>あなた自身の Google ドライブ</strong>に書き込みます。</li>
+<li>求める権限は <code>drive.file</code>（本拡張が作ったファイルだけを扱える権限）です。ほかのファイルは読みません。</li>
+<li>認証は Chrome と Google が管理し、当方がその情報を受け取ることはありません。接続はいつでも設定から解除できます。</li>
+</ul>
+<h3>Pro 版の購入と購入状況の確認</h3>
+<ul>
+<li>Pro 版の購入状況を確かめるため、本拡張はインストールごとに作るランダムな文字列（以下「購入 ID」。64桁の英数字）を、当方の購入記録サーバー（Cloudflare, Inc. の Cloudflare Workers 上で動作）に送ります。名前、メールアドレス、閲覧履歴、保存したタブは送りません。</li>
+<li>購入 ID は Chrome の同期ストレージ（<code>chrome.storage.sync</code>）に保存され、同じ Google アカウントで同期している Chrome の間で共有されます。</li>
+<li>購入の手続きと支払いは Stripe, Inc. と、その関連会社で販売者となる Link, LLC（以下「決済事業者」）の画面で行います。メールアドレス、カード番号などの支払い情報は決済事業者が直接受け取り、各社のプライバシーポリシーに従って扱います。<strong>当方はカード番号を受け取りません。</strong></li>
+<li>購入記録サーバーには、購入 ID と結び付けて、決済事業者の顧客 ID・契約 ID・契約の状態（有効、解約予約、解約済みなど）と期間の終了日を保存します。当方は、決済事業者の管理画面で、購入者の名前・メールアドレス・国と、取引の記録を確認できます。</li>
+</ul>
+<h3>ローカル AI 連携（任意・上級者向け）</h3>
+<ul>
+<li>接続キーを入力して接続した場合だけ、あなたの PC の中で動く連携サーバー（<code>127.0.0.1</code>）に、スペースのタイトル・URL・グループの情報を送ります。ページの本文は送りません。インターネット上のサーバーには送りません。</li>
+</ul>
+<h3>レビューのお願い・お問い合わせ</h3>
+<ul>
+<li>「レビューを書く」は Chrome ウェブストアのページを開くだけで、情報は送りません。「ご意見を送る」はメールソフトを開くだけで、送信するかどうかはあなたが決めます。</li>
+</ul>
+<h2>4. 利用目的</h2>
+<p>当方が受け取る情報（購入記録サーバーの情報、決済事業者から受け取る情報、お問い合わせの内容）は、次の目的でだけ使います。</p>
+<ul>
+<li>Pro 版の提供、購入状況の確認、解約・返金などの手続き</li>
+<li>お問い合わせへの回答とサポート</li>
+<li>法令に基づく帳簿の作成・保存、不正な利用への対応</li>
+</ul>
+<h2>5. 第三者への提供</h2>
+<p>法令に基づく場合を除き、あらかじめ同意を得ずに第三者へ個人情報を提供しません。上に書いた決済事業者（Stripe, Inc.・Link, LLC）とサーバーの提供元（Cloudflare, Inc.）には、各サービスの提供に必要な範囲でだけ情報を預けます。これらの事業者は日本の外（主に米国）にある場合があり、各社の定める方針と米国等の法令に従って情報を扱います。</p>
+<h2>6. 安全管理</h2>
+<p>購入記録サーバーへの通信は暗号化（HTTPS）しています。決済事業者からの通知は署名を確かめてから受け付け、管理に使う鍵は当方だけが扱える場所に保管します。</p>
+<h2>7. 保存期間と削除</h2>
+<ul>
+<li>本拡張をアンインストールすると、ブラウザの中に保存したデータはすべて消えます。</li>
+<li>Google ドライブ上のバックアップは、あなたのドライブで削除してください。Google アカウントへのアクセス許可は、Google アカウントの「セキュリティ」→「サードパーティ製のアプリとサービス」からいつでも取り消せます。</li>
+<li>購入記録サーバーの情報と決済の記録は、契約の終了後も、法令で求められる期間（帳簿の保存期間など）は保存します。それ以外の削除を希望する場合は、購入 ID（設定の「Pro 版」→「購入 ID」に表示）を添えて下記へご連絡ください。</li>
+</ul>
+<h2>8. 開示・訂正・利用停止のご請求</h2>
+<p>ご本人から、保有する個人情報の開示・訂正・利用停止などのご請求があった場合は、ご本人であることを確かめたうえで、法令に従って対応します。下記の窓口へご連絡ください。</p>
+<h2>9. 変更</h2>
+<p>内容を変更する場合は、本ページと Chrome ウェブストアの掲載情報を更新し、更新日を書き換えます。重要な変更は、拡張機能の画面でもお知らせします。</p>
+<h2>10. お問い合わせ窓口</h2>
+<p>KWS（運営統括責任者: 麦倉 優聡）<br>〒160-0023 東京都新宿区西新宿3丁目3番13号 西新宿水間ビル2F<br>メール: <a href="mailto:info@kw-s.jp">info@kw-s.jp</a>（受付時間 10:00〜18:00／土日祝を除く）</p>
+</article>
+<nav><a href="/terms">利用規約</a><a href="/privacy">プライバシーポリシー</a><a href="/tokushoho">特定商取引法に基づく表記</a></nav>
+</main>
+</body>
+</html>

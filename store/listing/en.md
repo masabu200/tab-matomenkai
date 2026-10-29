@@ -44,6 +44,10 @@ Save the tabs of each project or task as a "space", then switch the whole set wi
 Everything you save stays in your own Chrome (chrome.storage.local). Nothing you browse is sent anywhere.
 Google Drive backup writes to your own Drive only when you connect and save, and the extension can access only the files it created.
 
+■ Pro edition
+Most features are free. The Pro edition (¥300 per month) adds automatic backup to Google Drive. Buy or cancel it under Settings → Pro edition. To check your purchase, only a random purchase ID created for your installation is sent to our purchase record server (no name, email or browsing data). Payment is handled by Stripe, with Link shown as the seller.
+Terms of use, commercial disclosure and privacy policy are linked from Settings → Pro edition.
+
 ## Permission justifications (dashboard "Privacy practices")
 - tabs / tabGroups: read the open tabs and tab groups to save and restore them as spaces.
 - storage / unlimitedStorage: keep spaces and settings locally.

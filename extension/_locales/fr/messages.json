@@ -1628,5 +1628,17 @@
   "reviewSettingsHelp": {
     "message": "Si elle vous plaît, une note sur le Chrome Web Store soutient le développement. Bugs et demandes par e-mail.",
     "description": "review prompt"
+  },
+  "billingLegalNote": {
+    "message": "Avant l’achat, veuillez lire les conditions d’utilisation et les mentions commerciales."
+  },
+  "billingLegalTerms": {
+    "message": "Conditions d’utilisation"
+  },
+  "billingLegalTokushoho": {
+    "message": "Mentions commerciales (en japonais)"
+  },
+  "billingLegalPrivacy": {
+    "message": "Politique de confidentialité"
   }
 }

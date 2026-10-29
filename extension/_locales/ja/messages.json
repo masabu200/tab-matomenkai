@@ -2027,5 +2027,17 @@
   "reviewSettingsHelp": {
     "message": "気に入っていただけたら、Chrome ウェブストアでの評価が開発の支えになります。不具合や要望はメールで受け付けています。",
     "description": "review prompt"
+  },
+  "billingLegalNote": {
+    "message": "ご購入の前に、利用規約と特定商取引法に基づく表記をご確認ください。"
+  },
+  "billingLegalTerms": {
+    "message": "利用規約"
+  },
+  "billingLegalTokushoho": {
+    "message": "特定商取引法に基づく表記"
+  },
+  "billingLegalPrivacy": {
+    "message": "プライバシーポリシー"
   }
 }

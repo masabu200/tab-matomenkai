@@ -1,40 +1,66 @@
-# Tab Matomen Kai Privacy Policy (draft)
+# Tab Matomen Kai Privacy Policy
 
-Last updated: 2026-10-28.
+Effective: October 28, 2026 (last updated: October 29, 2026)
 
-## Operator
-- Name: KWS
+KWS ("we") provides the Chrome extension Tab Matomen Kai (the "extension") and its paid edition (the "Pro edition"). This policy explains what information is handled and how. The Japanese version prevails where the two differ.
+
+## 1. Operator
+- Name: KWS (responsible person: 麦倉 優聡 (Mugikura))
 - Address: Nishi-Shinjuku Mizuma Bldg. 2F, 3-3-13 Nishi-Shinjuku, Shinjuku-ku, Tokyo 160-0023, Japan
-- Contact: info@kw-s.jp
+- Contact: info@kw-s.jp (10:00–18:00 JST, weekdays)
 
-## Information we store
-Tab Matomen Kai (the "extension") stores the following only in your browser's local storage (`chrome.storage.local`):
+## 2. Information kept only in your browser
+The extension stores the following only inside your Chrome (`chrome.storage.local`). It is not sent to us or any third-party server.
 - Spaces, categories and tabs you save (titles, URLs, favicon URLs, tab group names and colors, order)
-- Settings (view mode, language, auto-backup interval, auto-save on switch, etc.)
-- Minimal usage records (the list of dates you used the dashboard, used to decide when to ask for a review; how many times the request was shown; whether you opted out; each space's last-used time for automatic tidying)
+- Settings (view mode, language, theme, auto-backup interval, auto-save on switch, etc.)
+- Minimal usage records (the dates you used the dashboard and how often the review request was shown, used to time that request; each space's last-used time for automatic tidying)
 - Spaces removed by automatic tidying (kept in a trash for 30 days, then deleted)
 
-This data is used only to make the extension work. It is not sent to the operator or any third-party server. There is no analytics or advertising measurement.
+There is no analytics or advertising measurement.
 
-## Data sent to external services
-Only the following features send data, and only when you explicitly trigger them.
-- **Backup to Google Drive**: when you press "Connect to Google Drive" and "Back up now", your saved data (spaces, categories, tabs) is written as a JSON file to your own Google Drive. The extension requests the `drive.file` scope only (files the extension itself created). Chrome manages the authentication token; the extension never sends it anywhere. You can disconnect at any time in Settings.
-- **Local AI integration (optional, advanced)**: only if you enter a connection key and connect, space titles, URLs and group information are sent to an integration server running on your own computer (`127.0.0.1`). Page contents are never sent. Nothing is sent to servers on the internet.
-- **Review request**: "Write a review" only opens the Chrome Web Store page; no data is sent.
+## 3. Information sent outside your browser
 
-## Browser permissions
-- `tabs` / `tabGroups`: save and restore open tabs and tab groups.
-- `storage` / `unlimitedStorage`: keep the data above locally.
-- `alarms`: scheduled automatic backups (local JSON export).
-- `downloads`: save JSON backups to your Downloads folder.
-- `contextMenus`: save from the right-click menu.
-- `identity`: authorize the Google Drive connection.
-- Content script on all sites: only detects the configured mouse button to return to the dashboard. It does not read or store page content.
+### Backup to Google Drive
+- After you press "Connect Google Drive" and allow access, the extension writes your saved data (spaces, categories, tabs) as a JSON file to **your own Google Drive** when you press "Back up now", and — if you turn on the Pro edition's automatic backup — at the interval you choose.
+- The only permission requested is `drive.file` (access to files the extension itself created). Other files are never read.
+- Sign-in is handled by Chrome and Google; we never receive it. You can disconnect at any time in the settings.
 
-## Deleting your data
-- Uninstalling the extension deletes all locally stored data.
-- Delete backup files in your Google Drive yourself.
-- You can revoke the extension's access to your Google account at any time under Google Account > Security > Third-party apps.
+### Buying the Pro edition and checking the purchase
+- To check whether the Pro edition has been bought, the extension sends a random string created for each installation (the "purchase ID", 64 hexadecimal characters) to our purchase record server, which runs on Cloudflare Workers (Cloudflare, Inc.). Your name, email address, browsing history and saved tabs are not sent.
+- The purchase ID is kept in Chrome's sync storage (`chrome.storage.sync`), so it is shared between your Chrome browsers signed in with the same Google account.
+- Checkout and payment take place on pages of Stripe, Inc. and its affiliate Link, LLC, which acts as the seller (the "payment providers"). Your email address and card details go directly to the payment providers and are handled under their privacy policies. **We never receive your card number.**
+- The purchase record server keeps, linked to the purchase ID, the payment provider's customer ID, subscription ID, subscription status (active, cancellation scheduled, canceled, etc.) and the end of the current period. In the payment provider's dashboard we can see the buyer's name, email address, country and transaction records.
 
-## Changes
-If this policy changes, this page and the Chrome Web Store listing will be updated.
+### Local AI connection (optional, for advanced users)
+- Only after you enter a connection key and connect, the extension sends space titles, URLs and group information to a helper running on your own computer (`127.0.0.1`). Page contents are not sent, and nothing is sent to servers on the internet.
+
+### Review request and feedback
+- "Write a review" only opens the Chrome Web Store page. "Send feedback" only opens your email app; you decide whether to send anything.
+
+## 4. Purposes
+Information we receive (from the purchase record server, from the payment providers, and in your messages) is used only to:
+- provide the Pro edition, check purchases, and handle cancellations and refunds;
+- answer questions and provide support;
+- keep the accounting records required by law and deal with misuse.
+
+## 5. Sharing
+We do not share personal information with third parties without your consent, except where required by law. The payment providers (Stripe, Inc. and Link, LLC) and the server provider (Cloudflare, Inc.) receive information only as needed to provide their services. They may be located outside Japan (mainly in the United States) and handle information under their own policies and the laws of those countries.
+
+## 6. Security
+Traffic to the purchase record server is encrypted (HTTPS). Notifications from the payment providers are accepted only after their signature is verified, and the keys used to manage the service are stored where only we can access them.
+
+## 7. Retention and deletion
+- Uninstalling the extension deletes all data stored in your browser.
+- Delete backup files in your own Google Drive. You can revoke the extension's access to your Google account at any time under Google Account → Security → Third-party apps & services.
+- Purchase records and payment records are kept after a subscription ends for as long as the law requires (for example, for accounting). To ask for other deletion, contact us with your purchase ID (shown under Settings → Pro edition → Purchase ID).
+
+## 8. Requests about your information
+If you ask us to disclose, correct or stop using personal information we hold about you, we will respond as required by law after confirming your identity. Please use the contact below.
+
+## 9. Changes
+When this policy changes, we update this page and the Chrome Web Store listing and change the date above. Important changes are also announced in the extension.
+
+## 10. Contact
+KWS (responsible person: 麦倉 優聡 (Mugikura))
+Nishi-Shinjuku Mizuma Bldg. 2F, 3-3-13 Nishi-Shinjuku, Shinjuku-ku, Tokyo 160-0023, Japan
+info@kw-s.jp (10:00–18:00 JST, weekdays)

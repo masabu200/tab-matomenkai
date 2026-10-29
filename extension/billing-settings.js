@@ -15,6 +15,10 @@
       <button type="button" class="btn btn--ghost" id="billingManage">${t('billingManage')}</button>
     </div>
     <p id="billingResult" class="settings-help" role="status"></p>
+    <p class="settings-help billing-legal" id="billingLegal">${t('billingLegalNote')}<br>
+      <a id="billingTerms" target="_blank" rel="noopener">${t('billingLegalTerms')}</a> ·
+      <a id="billingTokushoho" target="_blank" rel="noopener">${t('billingLegalTokushoho')}</a> ·
+      <a id="billingPrivacy" target="_blank" rel="noopener">${t('billingLegalPrivacy')}</a></p>
     <details class="billing-id"><summary>${t('billingIdHeading')}</summary>
       <p class="settings-help">${t('billingIdHelp')}</p>
       <div class="billing-id__row"><code id="billingId"></code><button type="button" class="btn btn--ghost" id="billingIdCopy">${t('billingIdCopy')}</button></div>
@@ -26,6 +30,12 @@
   const el = id => section.querySelector('#' + id);
   const date = ms => new Date(ms).toLocaleDateString(I18n.current().replace('_', '-'));
   const say = text => { el('billingResult').textContent = text; };
+  // Terms, 特商法 and privacy pages are served by the billing worker (built from store/*.md).
+  const base = String(globalThis.BillingConfig?.apiBase || '').replace(/\/$/, '');
+  const prefix = I18n.current() === 'ja' ? '' : '/en';
+  el('billingTerms').href = `${base}${prefix}/terms`;
+  el('billingTokushoho').href = `${base}/tokushoho`;
+  el('billingPrivacy').href = `${base}${prefix}/privacy`;
 
   function describe(s) {
     if (s.reason === 'development') return t('billingStatusDev');
@@ -44,6 +54,7 @@
     el('billingCheck').hidden = !live;
     el('billingManage').hidden = !live || s.status === 'none';
     section.querySelector('.billing-id').hidden = !live;
+    el('billingLegal').hidden = !live;
     if (live) el('billingId').textContent = await Entitlements.accountId();
     return s;
   }
