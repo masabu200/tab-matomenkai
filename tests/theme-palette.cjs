@@ -39,11 +39,11 @@ const fs=require('fs'),path=require('path'),os=require('os'),assert=require('nod
   const pink=await style();
   assert.equal(pink.bg,'rgb(253, 243, 247)');assert.equal(pink.rail,'rgb(122, 42, 76)');assert.equal(pink.primary,'rgb(184, 51, 106)');
   assert.notEqual(pink.title,standard.title);
-  assert.equal(await p.evaluate(()=>getComputedStyle(document.getElementById('settingsDialog')).backgroundColor),'rgb(106, 36, 66)','settings dialog follows the theme');
+  assert.equal(await p.evaluate(()=>getComputedStyle(document.getElementById('settingsDialog')).backgroundColor),'rgb(31, 34, 36)','settings dialog stays standard grey in every theme');
   assert.equal(await worker.evaluate(async()=>(await chrome.storage.local.get('pwm_settings')).pwm_settings.palette),'pink');
   assert.equal(await p.evaluate(()=>localStorage.getItem('pwm_palette')),'pink');
   await p.keyboard.press('Escape');
-  console.log('PASS settings theme card: 5 swatches after language, picking pink recolors page/rail/button/dialog and saves pwm_settings.palette');
+  console.log('PASS settings theme card: 5 swatches after language, picking pink recolors page/rail/button (dialog stays grey) and saves pwm_settings.palette');
   // 3) 再読み込み: <body> ができた時点ですでにピンク（ちらつきなし）
   await load();
   assert.deepEqual(await p.evaluate(()=>window.__firstPaint),{palette:'pink',dark:false});
@@ -54,6 +54,7 @@ const fs=require('fs'),path=require('path'),os=require('os'),assert=require('nod
   await p.locator('#btnToggleTheme').click();
   await p.waitForTimeout(400);
   const pinkDark=await style();assert.equal(pinkDark.dark,true);assert.equal(pinkDark.bg,'rgb(27, 18, 22)');assert.equal(pinkDark.primary,'rgb(247, 163, 196)');
+  assert.equal(await p.evaluate(()=>getComputedStyle(document.getElementById('settingsDialog')).backgroundColor),'rgb(31, 34, 36)','settings dialog stays standard grey in dark too');
   await p.waitForFunction(()=>localStorage.getItem('pwm_theme_dark')==='1');
   await load();
   assert.deepEqual(await p.evaluate(()=>window.__firstPaint),{palette:'pink',dark:true});

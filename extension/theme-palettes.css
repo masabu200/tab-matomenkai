@@ -517,6 +517,32 @@ html[data-theme-palette="navy"] body.theme-dark {
 ------------------------------------------------------- */
 /* サイドバーから移したバックアップ欄は sticky のままだと、上のカードが伸びたとき重なるので通常配置に戻す */
 .settings-dialog .sidebar__backup { position: static; }
+/* 設定ダイアログはどのテーマでも標準のグレーのまま（変数をダイアログ自身で標準値に戻す） */
+.settings-dialog {
+  --ink: #191c1d;
+  --ink-hover: #33383a;
+  --on-ink: #ffffff;
+  --ink-ring: rgba(25, 28, 29, 0.10);
+  --rail-bg: #191c1d;
+  --rail-line: #2a2e30;
+  --rail-text: #e8eaeb;
+  --rail-muted: #a9afb1;
+  --rail-chip: #2a2e30;
+  --rail-hover: rgba(255, 255, 255, 0.06);
+  --rail-active-bg: #f5f6f6;
+  --rail-active-text: #191c1d;
+  --surface-dark: #1f2224;
+  --surface-dark-2: #26292b;
+  --surface-dark-line: #3a3f42;
+}
+body.theme-dark .settings-dialog {
+  --ink: #eef0f0;
+  --ink-hover: #d4d8d9;
+  --on-ink: #111314;
+  --ink-ring: rgba(238, 240, 240, 0.12);
+  --rail-bg: #0c0e0f;
+  --rail-line: #1f2224;
+}
 .palette-options { display: grid; grid-template-columns: repeat(auto-fill, minmax(124px, 1fr)); gap: 8px; margin: 0; padding: 0; border: 0; }
 .palette-option { position: relative; display: flex; flex-direction: column; gap: 6px; padding: 8px; border: 1px solid var(--surface-dark-line); border-radius: 12px; cursor: pointer; color: var(--rail-text); font-size: 12px; line-height: 1.4; }
 .palette-option:hover { background: var(--surface-dark-2); }
