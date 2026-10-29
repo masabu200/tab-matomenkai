@@ -1564,5 +1564,23 @@
   },
   "driveAutoLockedBuy": {
     "message": "這是 Pro 版功能。可在設定的「Pro 版」中購買。手動備份與還原依然免費。"
+  },
+  "spaceCreateTitle": {
+    "message": "建立空間"
+  },
+  "spaceCreateName": {
+    "message": "空間名稱"
+  },
+  "spaceCreateNamePlaceholder": {
+    "message": "例如：專案 A"
+  },
+  "spaceCreateCategory": {
+    "message": "所屬分類"
+  },
+  "spaceCreateImage": {
+    "message": "圖示圖片"
+  },
+  "spaceCreateImageHelp": {
+    "message": "圖片會裁切成正方形並以小尺寸儲存。未選擇圖片時會顯示顏色圓點。"
   }
 }

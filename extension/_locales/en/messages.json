@@ -1574,5 +1574,23 @@
   },
   "driveAutoLockedBuy": {
     "message": "This is a Pro feature. Get Pro in the “Pro” section of Settings. Manual backup and restore stay free."
+  },
+  "spaceCreateTitle": {
+    "message": "Create a space"
+  },
+  "spaceCreateName": {
+    "message": "Space name"
+  },
+  "spaceCreateNamePlaceholder": {
+    "message": "e.g. Project A"
+  },
+  "spaceCreateCategory": {
+    "message": "Category"
+  },
+  "spaceCreateImage": {
+    "message": "Icon image"
+  },
+  "spaceCreateImageHelp": {
+    "message": "The image is cropped to a square and saved small. Without an image, the colour dot is shown."
   }
 }

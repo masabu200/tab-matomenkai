@@ -502,7 +502,7 @@ function isClosableTab(tab) {
 // スペース CRUD
 // ============================================================
 
-async function createSpace(name) {
+async function createSpace(name, options = {}) {
   const trimmed = name.trim();
   if (!trimmed) { showMessage(t('m_629a6eefac'), 'error'); return null; }
   const data = await loadData();
@@ -510,7 +510,9 @@ async function createSpace(name) {
     showMessage(t('m_29c082f9b5', [trimmed]), 'error'); return null;
   }
   const now      = new Date().toISOString();
-  const newSpace = { id: generateId(), name: trimmed, createdAt: now, updatedAt: now, tabs: [], categoryId: null, archived: false, color: '' };
+  const categoryId = options.categoryId && data.categories.some((c) => c.id === options.categoryId) ? options.categoryId : null;
+  const newSpace = { id: generateId(), name: trimmed, createdAt: now, updatedAt: now, tabs: [], categoryId, archived: false, color: options.color || '' };
+  if (options.icon) newSpace.icon = options.icon;
   data.spaces.push(newSpace);
   if (!getActiveSpaceId(data)) setActiveSpaceId(data, newSpace.id);
   await saveData(data);
@@ -2227,10 +2229,10 @@ async function renderAll() {
 // ============================================================
 
 async function handleCreateSpace() {
-  const name = await DashboardDialogs.prompt(t('m_cd6a909d39'));
-  if (name === null) return;
+  const result = await SpaceCreateDialog.open();
+  if (!result) return;
   try {
-    const s = await createSpace(name);
+    const s = await createSpace(result.name, result);
     if (!s) return;
     showMessage(t('m_1cefe0ca30', [s.name]), 'success');
     await renderAll();

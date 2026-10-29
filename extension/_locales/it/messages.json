@@ -1573,5 +1573,23 @@
   },
   "driveAutoLockedBuy": {
     "message": "È una funzione Pro. Passa a Pro nella sezione «Pro» delle Impostazioni. Backup e ripristino manuali restano gratuiti."
+  },
+  "spaceCreateTitle": {
+    "message": "Crea uno spazio"
+  },
+  "spaceCreateName": {
+    "message": "Nome dello spazio"
+  },
+  "spaceCreateNamePlaceholder": {
+    "message": "es. Progetto A"
+  },
+  "spaceCreateCategory": {
+    "message": "Categoria"
+  },
+  "spaceCreateImage": {
+    "message": "Immagine dell’icona"
+  },
+  "spaceCreateImageHelp": {
+    "message": "L’immagine viene ritagliata in quadrato e salvata in piccolo. Senza immagine viene mostrato il punto colorato."
   }
 }

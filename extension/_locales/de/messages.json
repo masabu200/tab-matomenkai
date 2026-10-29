@@ -1564,5 +1564,23 @@
   },
   "driveAutoLockedBuy": {
     "message": "Dies ist eine Pro-Funktion. Hol dir Pro im Bereich „Pro“ der Einstellungen. Manuelles Sichern und Wiederherstellen bleibt kostenlos."
+  },
+  "spaceCreateTitle": {
+    "message": "Bereich erstellen"
+  },
+  "spaceCreateName": {
+    "message": "Name des Bereichs"
+  },
+  "spaceCreateNamePlaceholder": {
+    "message": "z. B. Projekt A"
+  },
+  "spaceCreateCategory": {
+    "message": "Kategorie"
+  },
+  "spaceCreateImage": {
+    "message": "Symbolbild"
+  },
+  "spaceCreateImageHelp": {
+    "message": "Das Bild wird quadratisch zugeschnitten und klein gespeichert. Ohne Bild wird der Farbpunkt angezeigt."
   }
 }

@@ -2386,3 +2386,25 @@ body.sidebar-collapsed .sidebar-controls > * { flex-shrink:0; }
 .billing-id__row { display:flex; gap:8px; align-items:center; margin:6px 0; }
 .billing-id__row code { font-size:11px; word-break:break-all; flex:1; }
 .billing-id__row input { flex:1; font-family:ui-monospace,monospace; font-size:12px; }
+
+/* スペース作成モーダル（space-create-dialog.js）：名前・カテゴリー・カラー・画像を一度に設定 */
+.space-create-dialog { width: min(440px, calc(100vw - 32px)); max-height: calc(100dvh - 32px); margin: auto; padding: 0; border: 1px solid var(--modal-border); border-radius: 20px; background: var(--modal-bg); color: var(--modal-text); box-shadow: 0 20px 56px rgba(25, 28, 29, 0.22); overflow: auto; }
+.space-create-dialog::backdrop { background: rgba(17, 19, 20, 0.45); }
+.space-create { display: flex; flex-direction: column; }
+.space-create .modal__title { margin: 0; padding: 18px 22px 14px; font-size: 16px; }
+.space-create__field { display: flex; flex-direction: column; gap: 8px; padding: 14px 22px 0; }
+.space-create__field:last-of-type { padding-bottom: 18px; }
+.space-create__label { font-size: 12px; font-weight: 700; color: var(--text-secondary); }
+.space-create__select { appearance: auto; cursor: pointer; }
+.space-create__error { margin: 0; min-height: 0; font-size: 12px; color: #c0392b; }
+.space-create__error:empty { display: none; }
+body.theme-dark .space-create__error { color: #ff9a8f; }
+.space-create .modal__color-grid { grid-template-columns: repeat(auto-fill, 32px); gap: 10px; }
+.space-create .modal__color-swatch--active { border-color: var(--modal-bg); box-shadow: 0 0 0 2px var(--modal-text); }
+.space-create .modal__color-swatch:focus-visible { outline: 2px solid var(--modal-text); outline-offset: 3px; }
+.space-create__icon-row { display: flex; align-items: center; gap: 10px; }
+.space-create__preview { flex-shrink: 0; width: 40px; height: 40px; border-radius: 10px; border: 1px solid var(--modal-input-border); }
+.space-create__preview--empty { background: var(--modal-input-bg); }
+.space-create__help { margin: 0; font-size: 12px; line-height: 1.6; color: var(--text-secondary); }
+.space-create .modal__footer { margin-top: 4px; padding: 14px 22px 18px; }
+.space-create .modal__color-swatch--none { background: var(--modal-input-bg); color: var(--text-secondary); border-color: var(--modal-input-border); }

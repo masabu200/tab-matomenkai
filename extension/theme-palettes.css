@@ -557,3 +557,8 @@ body.theme-dark .settings-dialog {
 .palette-swatch__main { display: flex; flex-direction: column; justify-content: center; gap: 4px; padding: 6px; }
 .palette-swatch__card { height: 10px; border-radius: 3px; background: var(--sw-card); box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06); }
 .palette-swatch__accent { width: 46%; height: 8px; border-radius: 999px; background: var(--sw-accent); }
+
+/* 設定・折りたたみボタンはサイドバーの一番下（スクロールしても下端に残る） */
+.sidebar > .sidebar-controls { position: sticky; bottom: 0; z-index: 2; margin-top: auto; justify-content: space-between; align-items: center; border-top: 1px solid var(--rail-line); background: var(--rail-bg); }
+.sidebar > .sidebar-controls .sidebar-settings { order: -1; }
+body.sidebar-collapsed .sidebar > .sidebar-controls { flex-direction: column-reverse; justify-content: flex-start; border-top: 0; }

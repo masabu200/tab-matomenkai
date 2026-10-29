@@ -1564,5 +1564,23 @@
   },
   "driveAutoLockedBuy": {
     "message": "Es una función Pro. Obtén Pro en la sección «Pro» de Ajustes. La copia y la restauración manuales siguen siendo gratis."
+  },
+  "spaceCreateTitle": {
+    "message": "Crear un espacio"
+  },
+  "spaceCreateName": {
+    "message": "Nombre del espacio"
+  },
+  "spaceCreateNamePlaceholder": {
+    "message": "p. ej., Proyecto A"
+  },
+  "spaceCreateCategory": {
+    "message": "Categoría"
+  },
+  "spaceCreateImage": {
+    "message": "Imagen del icono"
+  },
+  "spaceCreateImageHelp": {
+    "message": "La imagen se recorta en cuadrado y se guarda en tamaño pequeño. Sin imagen, se muestra el punto de color."
   }
 }

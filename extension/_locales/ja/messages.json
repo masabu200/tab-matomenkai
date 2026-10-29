@@ -1965,5 +1965,23 @@
   },
   "driveAutoLockedBuy": {
     "message": "Pro 版の機能です。設定の「Pro 版」から購入できます。手動のバックアップと復元は、これまでどおり無料です。"
+  },
+  "spaceCreateTitle": {
+    "message": "スペースを作成"
+  },
+  "spaceCreateName": {
+    "message": "スペース名"
+  },
+  "spaceCreateNamePlaceholder": {
+    "message": "例：案件A"
+  },
+  "spaceCreateCategory": {
+    "message": "所属するカテゴリー"
+  },
+  "spaceCreateImage": {
+    "message": "アイコン画像"
+  },
+  "spaceCreateImageHelp": {
+    "message": "画像は正方形に切り抜いて小さく保存されます。画像を選ばない場合はカラーの点が表示されます。"
   }
 }

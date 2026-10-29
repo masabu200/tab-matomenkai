@@ -1564,5 +1564,23 @@
   },
   "driveAutoLockedBuy": {
     "message": "这是 Pro 版功能。可在设置的“Pro 版”中购买。手动备份和恢复仍然免费。"
+  },
+  "spaceCreateTitle": {
+    "message": "创建空间"
+  },
+  "spaceCreateName": {
+    "message": "空间名称"
+  },
+  "spaceCreateNamePlaceholder": {
+    "message": "例如：项目 A"
+  },
+  "spaceCreateCategory": {
+    "message": "所属分类"
+  },
+  "spaceCreateImage": {
+    "message": "图标图片"
+  },
+  "spaceCreateImageHelp": {
+    "message": "图片会裁剪为正方形并以小尺寸保存。未选择图片时显示颜色圆点。"
   }
 }

@@ -12,8 +12,8 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
   // 1) fresh install: the guide offers the first action directly
   assert.equal(await page.locator('#noSpaceNote').isVisible(),true);
   assert.equal(await page.locator('#guideCreateSpace').isVisible(),true);
-  page.once('dialog',d=>d.accept('最初の案件'));
   await page.locator('#guideCreateSpace').click();
+  await page.locator('#spaceCreateName').fill('最初の案件');await page.locator('#spaceCreateOk').click();
   await page.waitForFunction(()=>document.querySelector('#spaceTitle').textContent==='最初の案件');
   assert.equal(await page.locator('#noSpaceNote').isHidden(),true);
   // 2) empty space: save button inside the guide saves the open tabs

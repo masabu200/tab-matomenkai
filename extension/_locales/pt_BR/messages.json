@@ -1573,5 +1573,23 @@
   },
   "driveAutoLockedBuy": {
     "message": "Este é um recurso Pro. Assine na seção “Pro” das Configurações. Backup e restauração manuais continuam grátis."
+  },
+  "spaceCreateTitle": {
+    "message": "Criar um espaço"
+  },
+  "spaceCreateName": {
+    "message": "Nome do espaço"
+  },
+  "spaceCreateNamePlaceholder": {
+    "message": "ex.: Projeto A"
+  },
+  "spaceCreateCategory": {
+    "message": "Categoria"
+  },
+  "spaceCreateImage": {
+    "message": "Imagem do ícone"
+  },
+  "spaceCreateImageHelp": {
+    "message": "A imagem é recortada em quadrado e salva em tamanho pequeno. Sem imagem, o ponto colorido é exibido."
   }
 }

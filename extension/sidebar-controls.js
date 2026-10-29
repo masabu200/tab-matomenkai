@@ -12,8 +12,8 @@
   button.title = t('m_0b845075d6');
   sidebar.id = 'dashboardSidebar';button.setAttribute('aria-controls',sidebar.id);button.setAttribute('aria-expanded','true');
   controls.append(button);
-  const header = sidebar.querySelector('.sidebar__header');
-  sidebar.insertBefore(controls, header.nextSibling);
+  // Settings and collapse sit at the bottom of the rail.
+  sidebar.append(controls);
   button.addEventListener('click', () => {
     const collapsed = document.body.classList.toggle('sidebar-collapsed');
     button.textContent = collapsed ? '›' : t('m_74f34a1534');

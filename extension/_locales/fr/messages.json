@@ -1564,5 +1564,23 @@
   },
   "driveAutoLockedBuy": {
     "message": "Fonction Pro. Passez à Pro dans la section « Pro » des paramètres. La sauvegarde et la restauration manuelles restent gratuites."
+  },
+  "spaceCreateTitle": {
+    "message": "Créer un espace"
+  },
+  "spaceCreateName": {
+    "message": "Nom de l’espace"
+  },
+  "spaceCreateNamePlaceholder": {
+    "message": "ex. : Projet A"
+  },
+  "spaceCreateCategory": {
+    "message": "Catégorie"
+  },
+  "spaceCreateImage": {
+    "message": "Image de l’icône"
+  },
+  "spaceCreateImageHelp": {
+    "message": "L’image est recadrée en carré et enregistrée en petit format. Sans image, la pastille de couleur s’affiche."
   }
 }
