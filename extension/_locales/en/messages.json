@@ -1188,14 +1188,6 @@
     "message": "Changing the display language reloads the screen.",
     "description": "settings help text"
   },
-  "reviewTitle": {
-    "message": "Is Tab Matomen Kai helping you?",
-    "description": "review prompt title"
-  },
-  "reviewBody": {
-    "message": "If so, a review on the Chrome Web Store would mean a lot and helps development.",
-    "description": "review prompt body"
-  },
   "reviewWrite": {
     "message": "Write a review",
     "description": "review prompt button"
@@ -1592,5 +1584,57 @@
   },
   "spaceCreateImageHelp": {
     "message": "The image is cropped to a square and saved small. Without an image, the colour dot is shown."
+  },
+  "reviewAskTitle": {
+    "message": "How is Tab Matomen Kai working for you?",
+    "description": "review prompt"
+  },
+  "reviewAskBody": {
+    "message": "Just tap a star to answer.",
+    "description": "review prompt"
+  },
+  "reviewStarLabel": {
+    "message": "$1 out of 5 stars",
+    "description": "review prompt ; $1 = number of stars"
+  },
+  "reviewHappyTitle": {
+    "message": "Glad to hear it — thank you!",
+    "description": "review prompt"
+  },
+  "reviewHappyBody": {
+    "message": "Would you share that rating on the Chrome Web Store? It takes about 30 seconds and helps others find the extension.",
+    "description": "review prompt"
+  },
+  "reviewNotNow": {
+    "message": "Not now",
+    "description": "review prompt"
+  },
+  "reviewSadTitle": {
+    "message": "Thank you for telling us",
+    "description": "review prompt"
+  },
+  "reviewSadBody": {
+    "message": "Tell us what's getting in your way or what's missing. We'll use it to improve the next version.",
+    "description": "review prompt"
+  },
+  "reviewFeedback": {
+    "message": "Send feedback",
+    "description": "review prompt"
+  },
+  "reviewWriteAnyway": {
+    "message": "Write a store review",
+    "description": "review prompt"
+  },
+  "reviewThanksBody": {
+    "message": "Your feedback really keeps development going.",
+    "description": "review prompt"
+  },
+  "reviewSettingsHeading": {
+    "message": "Reviews & feedback",
+    "description": "review prompt"
+  },
+  "reviewSettingsHelp": {
+    "message": "If you like it, a rating on the Chrome Web Store supports development. Bugs and requests are welcome by email.",
+    "description": "review prompt"
   }
 }

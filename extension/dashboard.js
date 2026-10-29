@@ -996,6 +996,9 @@ async function switchToSpace(targetSpaceId) {
     console.warn('[PWM] タブ操作エラー（ドラッグ中など）:', err);
   }
 
+  // A finished switch is the moment the review prompt waits for (review-prompt.js).
+  window.dispatchEvent(new CustomEvent('pwm-space-switched'));
+
   return data;
 }
 

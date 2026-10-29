@@ -258,6 +258,8 @@ body.theme-dark .sidebar .space-item--active .space-item__badge { background: #1
 body.theme-dark .undo-toast,
 body.theme-dark .review-prompt { background: var(--surface-dark-2); color: var(--rail-text); }
 .review-prompt .btn--ghost { color: inherit; border-color: rgba(255, 255, 255, 0.25); }
+.review-prompt .btn--primary { background: #ffffff; color: var(--ink); }
+.review-prompt .btn--primary:hover { background: #eceeef; }
 .nav-full-title,
 .nav-tab-preview { background: #ffffff; color: var(--ink); border-radius: 12px; box-shadow: 0 8px 28px rgba(25, 28, 29, 0.25); }
 .nav-tab-preview-item { color: #191c1d; }

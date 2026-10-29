@@ -1184,12 +1184,6 @@
   "languageHelp": {
     "message": "更改显示语言后，界面会重新加载。"
   },
-  "reviewTitle": {
-    "message": "Tab Matomen Kai 对你有帮助吗？"
-  },
-  "reviewBody": {
-    "message": "如果有帮助，欢迎在 Chrome 应用商店留下评价，这对开发是很大的支持。"
-  },
   "reviewWrite": {
     "message": "撰写评价"
   },
@@ -1582,5 +1576,57 @@
   },
   "spaceCreateImageHelp": {
     "message": "图片会裁剪为正方形并以小尺寸保存。未选择图片时显示颜色圆点。"
+  },
+  "reviewAskTitle": {
+    "message": "Tab Matomen Kai 用起来怎么样？",
+    "description": "review prompt"
+  },
+  "reviewAskBody": {
+    "message": "点一下星星即可回答。",
+    "description": "review prompt"
+  },
+  "reviewStarLabel": {
+    "message": "$1 星（满分 5 星）",
+    "description": "review prompt ; $1 = number of stars"
+  },
+  "reviewHappyTitle": {
+    "message": "太好了，谢谢！",
+    "description": "review prompt"
+  },
+  "reviewHappyBody": {
+    "message": "能否也在 Chrome 应用商店留下这个评分？大约 30 秒，能帮助更多人找到它。",
+    "description": "review prompt"
+  },
+  "reviewNotNow": {
+    "message": "暂时不了",
+    "description": "review prompt"
+  },
+  "reviewSadTitle": {
+    "message": "感谢你告诉我们",
+    "description": "review prompt"
+  },
+  "reviewSadBody": {
+    "message": "请告诉我们哪里不好用、缺少什么功能，我们会用于下一次改进。",
+    "description": "review prompt"
+  },
+  "reviewFeedback": {
+    "message": "发送反馈",
+    "description": "review prompt"
+  },
+  "reviewWriteAnyway": {
+    "message": "在商店写评价",
+    "description": "review prompt"
+  },
+  "reviewThanksBody": {
+    "message": "你的反馈是我们开发的动力。",
+    "description": "review prompt"
+  },
+  "reviewSettingsHeading": {
+    "message": "评价与反馈",
+    "description": "review prompt"
+  },
+  "reviewSettingsHelp": {
+    "message": "如果喜欢，在 Chrome 应用商店评分是对开发的支持。问题与建议请通过邮件发送。",
+    "description": "review prompt"
   }
 }

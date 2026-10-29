@@ -1187,14 +1187,6 @@
     "message": "Alterar o idioma de exibição recarrega a tela.",
     "description": "settings help text"
   },
-  "reviewTitle": {
-    "message": "O Tab Matomen Kai está ajudando você?",
-    "description": "review prompt title"
-  },
-  "reviewBody": {
-    "message": "Se sim, uma avaliação na Chrome Web Store ajudaria muito e apoia o desenvolvimento.",
-    "description": "review prompt body"
-  },
   "reviewWrite": {
     "message": "Escrever uma avaliação",
     "description": "review prompt button"
@@ -1591,5 +1583,57 @@
   },
   "spaceCreateImageHelp": {
     "message": "A imagem é recortada em quadrado e salva em tamanho pequeno. Sem imagem, o ponto colorido é exibido."
+  },
+  "reviewAskTitle": {
+    "message": "O que você está achando do Tab Matomen Kai?",
+    "description": "review prompt"
+  },
+  "reviewAskBody": {
+    "message": "É só tocar em uma estrela para responder.",
+    "description": "review prompt"
+  },
+  "reviewStarLabel": {
+    "message": "$1 de 5 estrelas",
+    "description": "review prompt ; $1 = number of stars"
+  },
+  "reviewHappyTitle": {
+    "message": "Que bom, obrigado!",
+    "description": "review prompt"
+  },
+  "reviewHappyBody": {
+    "message": "Você poderia compartilhar essa avaliação na Chrome Web Store? Leva uns 30 segundos e ajuda outras pessoas a encontrar a extensão.",
+    "description": "review prompt"
+  },
+  "reviewNotNow": {
+    "message": "Agora não",
+    "description": "review prompt"
+  },
+  "reviewSadTitle": {
+    "message": "Obrigado por nos contar",
+    "description": "review prompt"
+  },
+  "reviewSadBody": {
+    "message": "Conte o que está atrapalhando ou faltando. Vamos usar isso para melhorar a próxima versão.",
+    "description": "review prompt"
+  },
+  "reviewFeedback": {
+    "message": "Enviar feedback",
+    "description": "review prompt"
+  },
+  "reviewWriteAnyway": {
+    "message": "Escrever avaliação na loja",
+    "description": "review prompt"
+  },
+  "reviewThanksBody": {
+    "message": "Seu retorno nos motiva muito.",
+    "description": "review prompt"
+  },
+  "reviewSettingsHeading": {
+    "message": "Avaliações e feedback",
+    "description": "review prompt"
+  },
+  "reviewSettingsHelp": {
+    "message": "Se gostou, uma avaliação na Chrome Web Store apoia o desenvolvimento. Bugs e pedidos por e-mail.",
+    "description": "review prompt"
   }
 }

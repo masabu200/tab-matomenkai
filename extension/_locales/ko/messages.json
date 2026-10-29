@@ -1184,12 +1184,6 @@
   "languageHelp": {
     "message": "표시 언어를 변경하면 화면이 새로 고쳐져요."
   },
-  "reviewTitle": {
-    "message": "Tab Matomen Kai가 도움이 되고 있나요?"
-  },
-  "reviewBody": {
-    "message": "도움이 되셨다면 Chrome 웹 스토어에 리뷰를 남겨 주세요. 개발에 큰 힘이 돼요."
-  },
   "reviewWrite": {
     "message": "리뷰 쓰기"
   },
@@ -1582,5 +1576,57 @@
   },
   "spaceCreateImageHelp": {
     "message": "이미지는 정사각형으로 잘라 작게 저장됩니다. 이미지를 선택하지 않으면 색상 점이 표시됩니다."
+  },
+  "reviewAskTitle": {
+    "message": "탭 마토멘 카이, 사용해 보니 어떠세요?",
+    "description": "review prompt"
+  },
+  "reviewAskBody": {
+    "message": "별을 누르기만 하면 됩니다.",
+    "description": "review prompt"
+  },
+  "reviewStarLabel": {
+    "message": "5점 중 $1점",
+    "description": "review prompt ; $1 = number of stars"
+  },
+  "reviewHappyTitle": {
+    "message": "기쁘네요, 감사합니다!",
+    "description": "review prompt"
+  },
+  "reviewHappyBody": {
+    "message": "이 평가를 Chrome 웹 스토어에도 남겨 주시겠어요? 30초 정도면 되고, 다른 분들이 찾기 쉬워집니다.",
+    "description": "review prompt"
+  },
+  "reviewNotNow": {
+    "message": "다음에 할게요",
+    "description": "review prompt"
+  },
+  "reviewSadTitle": {
+    "message": "알려 주셔서 감사합니다",
+    "description": "review prompt"
+  },
+  "reviewSadBody": {
+    "message": "불편한 점이나 부족한 기능을 알려 주세요. 다음 개선에 반영하겠습니다.",
+    "description": "review prompt"
+  },
+  "reviewFeedback": {
+    "message": "의견 보내기",
+    "description": "review prompt"
+  },
+  "reviewWriteAnyway": {
+    "message": "스토어에 리뷰 쓰기",
+    "description": "review prompt"
+  },
+  "reviewThanksBody": {
+    "message": "보내 주신 의견은 개발에 큰 힘이 됩니다.",
+    "description": "review prompt"
+  },
+  "reviewSettingsHeading": {
+    "message": "리뷰 · 의견",
+    "description": "review prompt"
+  },
+  "reviewSettingsHelp": {
+    "message": "마음에 드셨다면 Chrome 웹 스토어 평가가 개발에 큰 힘이 됩니다. 버그와 요청은 이메일로 받습니다.",
+    "description": "review prompt"
   }
 }

@@ -1579,14 +1579,6 @@
     "message": "表示言語を変更すると画面を読み込み直します。",
     "description": "settings help text"
   },
-  "reviewTitle": {
-    "message": "タブまとめん改はお役に立っていますか？",
-    "description": "review prompt title"
-  },
-  "reviewBody": {
-    "message": "よろしければ Chrome ウェブストアでレビューをお願いします。開発の大きな励みになります。",
-    "description": "review prompt body"
-  },
   "reviewWrite": {
     "message": "レビューを書く",
     "description": "review prompt button"
@@ -1983,5 +1975,57 @@
   },
   "spaceCreateImageHelp": {
     "message": "画像は正方形に切り抜いて小さく保存されます。画像を選ばない場合はカラーの点が表示されます。"
+  },
+  "reviewAskTitle": {
+    "message": "タブまとめん改の使い心地はいかがですか？",
+    "description": "review prompt"
+  },
+  "reviewAskBody": {
+    "message": "星をタップするだけで答えられます。",
+    "description": "review prompt"
+  },
+  "reviewStarLabel": {
+    "message": "星 $1 つ",
+    "description": "review prompt ; $1 = number of stars"
+  },
+  "reviewHappyTitle": {
+    "message": "うれしいです、ありがとうございます！",
+    "description": "review prompt"
+  },
+  "reviewHappyBody": {
+    "message": "その評価を Chrome ウェブストアにも書いていただけませんか？30秒ほどで終わり、ほかの方が見つけやすくなります。",
+    "description": "review prompt"
+  },
+  "reviewNotNow": {
+    "message": "今回はやめておく",
+    "description": "review prompt"
+  },
+  "reviewSadTitle": {
+    "message": "教えてくださってありがとうございます",
+    "description": "review prompt"
+  },
+  "reviewSadBody": {
+    "message": "使いにくいところや、足りない機能を聞かせてください。次の改善に使います。",
+    "description": "review prompt"
+  },
+  "reviewFeedback": {
+    "message": "ご意見を送る",
+    "description": "review prompt"
+  },
+  "reviewWriteAnyway": {
+    "message": "ストアにレビューを書く",
+    "description": "review prompt"
+  },
+  "reviewThanksBody": {
+    "message": "いただいた声は、開発の大きな励みになります。",
+    "description": "review prompt"
+  },
+  "reviewSettingsHeading": {
+    "message": "レビュー・ご意見",
+    "description": "review prompt"
+  },
+  "reviewSettingsHelp": {
+    "message": "気に入っていただけたら、Chrome ウェブストアでの評価が開発の支えになります。不具合や要望はメールで受け付けています。",
+    "description": "review prompt"
   }
 }
