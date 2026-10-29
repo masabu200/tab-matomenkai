@@ -1,11 +1,11 @@
 # Chrome Web Store listing (English)
 
-Target version: 1.3.0 (live). "Share spaces" ships in 1.4.0, so it is kept under "Add in the next release" below.
+Target version: 1.4.0 (submission).
 
 ## Name (max 45 characters)
 Tab Matomen Kai – Tab Spaces
 
-## Summary (max 132 characters) — not editable in the dashboard; it comes from the manifest description (appDescription in `_locales/en/messages.json`) and changes with the next package.
+## Summary (max 132 characters) — not editable in the dashboard; it comes from the manifest description (appDescription in `_locales/en/messages.json`) and is included in 1.4.0.
 Save and switch whole tab sets per project. Pinned tabs, bulk actions, right-click save and Google Drive backup end tab overload.
 
 ## Detailed description (paste into the dashboard "Description" field)
@@ -33,6 +33,7 @@ Save the tabs of each project or task as a "space", then switch the whole set wi
 [Bulk actions] Select tabs to open, move to another space, group, archive or delete in one go. Select all and Shift-click ranges.
 [Undo] Take back a delete or archive right after it happens with Ctrl/⌘+Z.
 [Right-click save] Save the page or link you are looking at into any space from the context menu. No trip back to the dashboard.
+[Share spaces] Export only the spaces you choose as a file or a share code; the recipient adds them to their own data. Great for project handovers and sharing with your team. You can strip everything after "?" in URLs before sharing.
 [Copy URL lists] Markdown, title + URL, or URLs only, straight to the clipboard for reports and notes.
 [Search & shortcuts] Filter tabs by title or URL. Ctrl/⌘+K to search spaces, / to filter tabs, Ctrl/⌘+S to save. Press your mouse's Forward button to jump back to the dashboard.
 [Backup] Timestamped backups to a dedicated Google Drive folder. Choose how many to keep and restore any of them from a list (your current data is set aside first, and you can undo). JSON export/import and scheduled automatic backups (hourly, every 6 hours or daily) are included too.
@@ -42,9 +43,6 @@ Save the tabs of each project or task as a "space", then switch the whole set wi
 ■ Your data
 Everything you save stays in your own Chrome (chrome.storage.local). Nothing you browse is sent anywhere.
 Google Drive backup writes to your own Drive only when you connect and save, and the extension can access only the files it created.
-
-## Add in the next release (insert after [Right-click save] when 1.4.0 is live)
-[Share spaces] Export only the spaces you choose as a file or a share code; the recipient adds them to their own data. Great for project handovers and sharing with your team. You can strip everything after "?" in URLs before sharing.
 
 ## Permission justifications (dashboard "Privacy practices")
 - tabs / tabGroups: read the open tabs and tab groups to save and restore them as spaces.

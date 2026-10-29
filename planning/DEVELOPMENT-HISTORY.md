@@ -388,3 +388,10 @@ Playwright 1.62 の `page.waitForFunction` に async 関数を渡すと、最初
 - 利用者の Chrome（開発版、組み込み認証）で「今すぐ自動保存を実行」→「Googleドライブにバックアップを保存しました」を確認。AUTO-01 の手動実行経路は実 Google で動作。
 - 直前の「応答がありませんでした」の原因：ダッシュボードのタブだけ再読み込みしており、Service Worker は旧版（自動保存の受け口がない）のままだった。`chrome://extensions` の「↻」で解消。開発中は、Service Worker を変更したら必ず拡張ごと再読み込みする。
 - 残り：一定間隔での自動実行（アラーム経由）が実環境で走ること、数日放置後の認証更新（AUTO-02）。
+
+## 2026-10-29 1.4.0 の提出用 ZIP
+
+- version 1.4.0。`tools/build-store-zip.sh` で `dist/tab-matomenkai-1.4.0.zip` を作成。権限は 1.3.0 と同じ（追加の権限警告は出ない）。`chrome.management.getSelf` は権限不要。
+- 中身：スペース単位の共有、新しい概要文（ja/en）、自動保存（Pro 判定の後ろ。ストア版の installType は normal なので「準備中」表示で使えない）、実行結果の表示改善。
+- ZIP を展開して読み込み、共有ボタン・自動保存欄・Service Worker の `DriveAuto` とアラーム、ストア版相当で Pro が無効になることを確認。
+- 掲載文（ja/en）は【スペースの共有】を主な機能へ移した。
