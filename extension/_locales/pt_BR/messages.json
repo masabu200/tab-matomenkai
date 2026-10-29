@@ -1501,5 +1501,77 @@
   },
   "paletteNavy": {
     "message": "Azul-marinho (sóbrio)"
+  },
+  "billingHeading": {
+    "message": "Pro"
+  },
+  "billingHelp": {
+    "message": "O Pro adiciona o backup automático no Google Drive. Todo o resto continua grátis."
+  },
+  "billingBuy": {
+    "message": "Assinar o Pro"
+  },
+  "billingCheck": {
+    "message": "Verificar compra"
+  },
+  "billingManage": {
+    "message": "Gerenciar ou cancelar"
+  },
+  "billingStatusFree": {
+    "message": "Você está na versão gratuita."
+  },
+  "billingStatusActive": {
+    "message": "O Pro está ativo (renova em $1)."
+  },
+  "billingStatusCanceling": {
+    "message": "Cancelado. O Pro continua ativo até $1."
+  },
+  "billingStatusPastDue": {
+    "message": "Não conseguimos cobrar o pagamento. Confira os dados do cartão."
+  },
+  "billingStatusDev": {
+    "message": "Versão de desenvolvimento: os recursos Pro estão ativados."
+  },
+  "billingStatusOffline": {
+    "message": "Não foi possível verificar a compra. Usando o último status conhecido."
+  },
+  "billingUnavailable": {
+    "message": "A compra do Pro estará disponível em breve."
+  },
+  "billingOpening": {
+    "message": "Abrindo a página…"
+  },
+  "billingOpened": {
+    "message": "Conclua na nova aba e volte aqui. A compra é verificada automaticamente."
+  },
+  "billingError": {
+    "message": "Não foi possível conectar: $1"
+  },
+  "billingIdHeading": {
+    "message": "ID da compra (levar para outro PC)"
+  },
+  "billingIdHelp": {
+    "message": "Use para levar o Pro a outro PC ou após reinstalar. Não compartilhe com ninguém."
+  },
+  "billingIdCopy": {
+    "message": "Copiar"
+  },
+  "billingIdCopied": {
+    "message": "ID da compra copiado."
+  },
+  "billingIdRestore": {
+    "message": "ID da compra do seu outro PC"
+  },
+  "billingIdApply": {
+    "message": "Transferir"
+  },
+  "billingIdInvalid": {
+    "message": "Esse ID da compra não é válido."
+  },
+  "billingIdApplied": {
+    "message": "ID da compra transferido."
+  },
+  "driveAutoLockedBuy": {
+    "message": "Este é um recurso Pro. Assine na seção “Pro” das Configurações. Backup e restauração manuais continuam grátis."
   }
 }

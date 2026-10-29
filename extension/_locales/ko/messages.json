@@ -1492,5 +1492,77 @@
   },
   "paletteNavy": {
     "message": "네이비(단정함)"
+  },
+  "billingHeading": {
+    "message": "Pro 버전"
+  },
+  "billingHelp": {
+    "message": "Pro 버전에서는 Google 드라이브 자동 백업을 사용할 수 있습니다. 그 밖의 기능은 계속 무료입니다."
+  },
+  "billingBuy": {
+    "message": "Pro 구매"
+  },
+  "billingCheck": {
+    "message": "구매 상태 확인"
+  },
+  "billingManage": {
+    "message": "구독 관리·해지"
+  },
+  "billingStatusFree": {
+    "message": "현재 무료 버전입니다."
+  },
+  "billingStatusActive": {
+    "message": "Pro 버전 이용 중입니다(다음 갱신: $1)."
+  },
+  "billingStatusCanceling": {
+    "message": "해지되었습니다. Pro 버전은 $1까지 사용할 수 있습니다."
+  },
+  "billingStatusPastDue": {
+    "message": "결제를 확인하지 못했습니다. 카드 정보를 확인해 주세요."
+  },
+  "billingStatusDev": {
+    "message": "개발 버전이므로 Pro 기능이 활성화되어 있습니다."
+  },
+  "billingStatusOffline": {
+    "message": "구매 상태를 확인하지 못했습니다. 마지막 확인 결과로 동작합니다."
+  },
+  "billingUnavailable": {
+    "message": "Pro 버전 구매는 준비 중입니다."
+  },
+  "billingOpening": {
+    "message": "페이지를 여는 중…"
+  },
+  "billingOpened": {
+    "message": "새 탭에서 절차를 마친 뒤 이 화면으로 돌아오세요. 구매 상태는 자동으로 확인합니다."
+  },
+  "billingError": {
+    "message": "연결하지 못했습니다: $1"
+  },
+  "billingIdHeading": {
+    "message": "구매 ID(다른 PC로 이전)"
+  },
+  "billingIdHelp": {
+    "message": "다른 PC나 재설치 후 Pro 버전을 이어서 쓸 때 사용합니다. 다른 사람에게 알려 주지 마세요."
+  },
+  "billingIdCopy": {
+    "message": "복사"
+  },
+  "billingIdCopied": {
+    "message": "구매 ID를 복사했습니다."
+  },
+  "billingIdRestore": {
+    "message": "다른 PC에서 쓰던 구매 ID"
+  },
+  "billingIdApply": {
+    "message": "이전"
+  },
+  "billingIdInvalid": {
+    "message": "구매 ID 형식이 올바르지 않습니다."
+  },
+  "billingIdApplied": {
+    "message": "구매 ID를 이전했습니다."
+  },
+  "driveAutoLockedBuy": {
+    "message": "Pro 버전 기능입니다. 설정의 \"Pro 버전\"에서 구매할 수 있습니다. 수동 백업과 복원은 계속 무료입니다."
   }
 }

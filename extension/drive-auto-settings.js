@@ -38,7 +38,7 @@
     for (const id of ['driveAutoEnabled', 'driveAutoInterval', 'driveAutoRunNow']) el(id).disabled = !entitled;
     el('driveAutoEnabled').checked = entitled && !!state.enabled;
     el('driveAutoInterval').value = String([1, 6, 24].includes(state.intervalHours) ? state.intervalHours : 6);
-    el('driveAutoStatus').textContent = entitled ? describe(state, connected) : t('driveAutoLocked');
+    el('driveAutoStatus').textContent = entitled ? describe(state, connected) : t(Entitlements.available() ? 'driveAutoLockedBuy' : 'driveAutoLocked');
   }
   async function save() {
     const cur = (await chrome.storage.local.get('pwm_drive_auto')).pwm_drive_auto || {};
@@ -59,5 +59,6 @@
     finally { button.disabled = false; }
   });
   chrome.storage.onChanged.addListener((changes, area) => { if (area === 'local' && (changes.pwm_drive_auto || changes.pwm_drive_connected)) render().catch(() => {}); });
+  window.addEventListener('pwm-entitlement-changed', () => render().catch(() => {}));
   render().catch(() => {});
 })();

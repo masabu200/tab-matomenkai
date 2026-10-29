@@ -2377,3 +2377,12 @@ body.sidebar-collapsed .sidebar-controls > * { flex-shrink:0; }
 .drive-auto__toggle span { white-space:normal; }
 .drive-auto__result { font-size:13px; font-weight:600; min-height:0; }
 .drive-auto__result:empty { display:none; }
+/* Pro purchase card (billing-settings.js) */
+.billing-settings h3 { display:flex; align-items:center; gap:8px; }
+.billing-status { font-weight:600; }
+.billing-actions { display:flex; flex-wrap:wrap; gap:8px; }
+.billing-actions [hidden], .billing-id[hidden] { display:none; }
+.billing-id summary { cursor:pointer; font-size:13px; }
+.billing-id__row { display:flex; gap:8px; align-items:center; margin:6px 0; }
+.billing-id__row code { font-size:11px; word-break:break-all; flex:1; }
+.billing-id__row input { flex:1; font-family:ui-monospace,monospace; font-size:12px; }

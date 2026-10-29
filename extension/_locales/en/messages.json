@@ -1502,5 +1502,77 @@
   },
   "paletteNavy": {
     "message": "Navy (crisp)"
+  },
+  "billingHeading": {
+    "message": "Pro"
+  },
+  "billingHelp": {
+    "message": "Pro adds automatic backup to Google Drive. Everything else stays free."
+  },
+  "billingBuy": {
+    "message": "Get Pro"
+  },
+  "billingCheck": {
+    "message": "Check purchase"
+  },
+  "billingManage": {
+    "message": "Manage or cancel"
+  },
+  "billingStatusFree": {
+    "message": "You are on the free version."
+  },
+  "billingStatusActive": {
+    "message": "Pro is active (renews $1)."
+  },
+  "billingStatusCanceling": {
+    "message": "Canceled. Pro stays active until $1."
+  },
+  "billingStatusPastDue": {
+    "message": "We couldn’t take your payment. Please check your card details."
+  },
+  "billingStatusDev": {
+    "message": "Development build: Pro features are enabled."
+  },
+  "billingStatusOffline": {
+    "message": "Couldn’t check your purchase. Using the last known status."
+  },
+  "billingUnavailable": {
+    "message": "Pro purchases are coming soon."
+  },
+  "billingOpening": {
+    "message": "Opening the page…"
+  },
+  "billingOpened": {
+    "message": "Finish in the new tab, then come back here. Your purchase is checked automatically."
+  },
+  "billingError": {
+    "message": "Could not connect: $1"
+  },
+  "billingIdHeading": {
+    "message": "Purchase ID (move to another PC)"
+  },
+  "billingIdHelp": {
+    "message": "Use it to carry Pro to another PC or after reinstalling. Don’t share it with anyone."
+  },
+  "billingIdCopy": {
+    "message": "Copy"
+  },
+  "billingIdCopied": {
+    "message": "Purchase ID copied."
+  },
+  "billingIdRestore": {
+    "message": "Purchase ID from your other PC"
+  },
+  "billingIdApply": {
+    "message": "Transfer"
+  },
+  "billingIdInvalid": {
+    "message": "That purchase ID doesn’t look right."
+  },
+  "billingIdApplied": {
+    "message": "Purchase ID transferred."
+  },
+  "driveAutoLockedBuy": {
+    "message": "This is a Pro feature. Get Pro in the “Pro” section of Settings. Manual backup and restore stay free."
   }
 }

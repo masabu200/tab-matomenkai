@@ -1492,5 +1492,77 @@
   },
   "paletteNavy": {
     "message": "海軍藍（俐落）"
+  },
+  "billingHeading": {
+    "message": "Pro 版"
+  },
+  "billingHelp": {
+    "message": "Pro 版可自動備份到 Google 雲端硬碟。其他功能依然免費。"
+  },
+  "billingBuy": {
+    "message": "購買 Pro 版"
+  },
+  "billingCheck": {
+    "message": "查看購買狀態"
+  },
+  "billingManage": {
+    "message": "管理或取消訂閱"
+  },
+  "billingStatusFree": {
+    "message": "目前為免費版。"
+  },
+  "billingStatusActive": {
+    "message": "Pro 版使用中（下次續訂：$1）。"
+  },
+  "billingStatusCanceling": {
+    "message": "已取消。Pro 版可使用至 $1。"
+  },
+  "billingStatusPastDue": {
+    "message": "未能完成扣款，請檢查您的信用卡資訊。"
+  },
+  "billingStatusDev": {
+    "message": "開發版：Pro 功能已啟用。"
+  },
+  "billingStatusOffline": {
+    "message": "無法查看購買狀態，將沿用上次的結果。"
+  },
+  "billingUnavailable": {
+    "message": "Pro 版購買功能即將推出。"
+  },
+  "billingOpening": {
+    "message": "正在開啟頁面…"
+  },
+  "billingOpened": {
+    "message": "請在新分頁中完成操作後返回此處，系統會自動查看購買狀態。"
+  },
+  "billingError": {
+    "message": "無法連線：$1"
+  },
+  "billingIdHeading": {
+    "message": "購買 ID（移轉到其他電腦）"
+  },
+  "billingIdHelp": {
+    "message": "用於在其他電腦或重新安裝後繼續使用 Pro 版。請勿告訴他人。"
+  },
+  "billingIdCopy": {
+    "message": "複製"
+  },
+  "billingIdCopied": {
+    "message": "已複製購買 ID。"
+  },
+  "billingIdRestore": {
+    "message": "在其他電腦上使用的購買 ID"
+  },
+  "billingIdApply": {
+    "message": "移轉"
+  },
+  "billingIdInvalid": {
+    "message": "購買 ID 格式不正確。"
+  },
+  "billingIdApplied": {
+    "message": "已移轉購買 ID。"
+  },
+  "driveAutoLockedBuy": {
+    "message": "這是 Pro 版功能。可在設定的「Pro 版」中購買。手動備份與還原依然免費。"
   }
 }

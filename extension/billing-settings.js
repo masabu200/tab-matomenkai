@@ -1,0 +1,81 @@
+'use strict';
+// Settings card for Pro: buy (Stripe Checkout), check status, manage or cancel, and carry the
+// purchase id to another PC. Talks to the billing worker through Entitlements.
+(() => {
+  const dialog = document.getElementById('settingsDialog');
+  if (!dialog) return;
+  const section = document.createElement('section');
+  section.className = 'ai-settings billing-settings';
+  section.innerHTML = `<h3>${t('billingHeading')} <span class="pro-badge">Pro</span></h3>
+    <p>${t('billingHelp')}</p>
+    <p id="billingStatus" class="billing-status" role="status"></p>
+    <div class="billing-actions">
+      <button type="button" class="btn" id="billingBuy">${t('billingBuy')}</button>
+      <button type="button" class="btn btn--ghost" id="billingCheck">${t('billingCheck')}</button>
+      <button type="button" class="btn btn--ghost" id="billingManage">${t('billingManage')}</button>
+    </div>
+    <p id="billingResult" class="settings-help" role="status"></p>
+    <details class="billing-id"><summary>${t('billingIdHeading')}</summary>
+      <p class="settings-help">${t('billingIdHelp')}</p>
+      <div class="billing-id__row"><code id="billingId"></code><button type="button" class="btn btn--ghost" id="billingIdCopy">${t('billingIdCopy')}</button></div>
+      <label for="billingIdInput">${t('billingIdRestore')}</label>
+      <div class="billing-id__row"><input id="billingIdInput" autocomplete="off" spellcheck="false"><button type="button" class="btn btn--ghost" id="billingIdApply">${t('billingIdApply')}</button></div>
+    </details>`;
+  const drive = dialog.querySelector('.drive-settings');
+  if (drive) drive.after(section); else dialog.append(section);
+  const el = id => section.querySelector('#' + id);
+  const date = ms => new Date(ms).toLocaleDateString(I18n.current().replace('_', '-'));
+  const say = text => { el('billingResult').textContent = text; };
+
+  function describe(s) {
+    if (s.reason === 'development') return t('billingStatusDev');
+    if (s.reason === 'unavailable') return t('billingUnavailable');
+    if (s.reason === 'offline' || s.reason === 'offline-grace') return t('billingStatusOffline');
+    if (s.status === 'past_due') return t('billingStatusPastDue');
+    if (s.pro && s.cancelAtPeriodEnd) return t('billingStatusCanceling', [date(s.until)]);
+    if (s.pro) return t('billingStatusActive', [date(s.until)]);
+    return t('billingStatusFree');
+  }
+  async function render(force) {
+    const s = await (force ? Entitlements.refresh() : Entitlements.status());
+    const live = Entitlements.available() && s.reason !== 'development';
+    el('billingStatus').textContent = describe(s);
+    el('billingBuy').hidden = !live || s.pro;
+    el('billingCheck').hidden = !live;
+    el('billingManage').hidden = !live || s.status === 'none';
+    section.querySelector('.billing-id').hidden = !live;
+    if (live) el('billingId').textContent = await Entitlements.accountId();
+    return s;
+  }
+  let awaitingReturn = false;
+  async function openFrom(getUrl) {
+    say(t('billingOpening'));
+    try { await chrome.tabs.create({url: await getUrl()}); awaitingReturn = true; say(t('billingOpened')); }
+    catch (error) { say(t('billingError', [error.message])); }
+  }
+  el('billingBuy').addEventListener('click', () => openFrom(Entitlements.checkoutUrl));
+  el('billingManage').addEventListener('click', () => openFrom(Entitlements.portalUrl));
+  el('billingCheck').addEventListener('click', async () => {
+    say('');
+    const s = await render(true);
+    if (s.reason === 'offline') say(t('billingError', [s.error || '']));
+    window.dispatchEvent(new CustomEvent('pwm-entitlement-changed'));
+  });
+  el('billingIdCopy').addEventListener('click', async () => {
+    await navigator.clipboard.writeText(el('billingId').textContent); say(t('billingIdCopied'));
+  });
+  el('billingIdApply').addEventListener('click', async () => {
+    try { await Entitlements.setAccountId(el('billingIdInput').value); }
+    catch { say(t('billingIdInvalid')); return; }
+    el('billingIdInput').value = ''; say(t('billingIdApplied'));
+    await render(true); window.dispatchEvent(new CustomEvent('pwm-entitlement-changed'));
+  });
+  // Coming back from the Stripe tab: check once, so the user rarely needs the button.
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState !== 'visible' || !awaitingReturn) return;
+    awaitingReturn = false;
+    render(true).then(() => window.dispatchEvent(new CustomEvent('pwm-entitlement-changed'))).catch(() => {});
+  });
+  dialog.addEventListener('toggle', () => { if (dialog.open) render().catch(() => {}); });
+  render().catch(() => {});
+})();

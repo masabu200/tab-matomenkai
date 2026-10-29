@@ -1893,5 +1893,77 @@
   },
   "paletteNavy": {
     "message": "ネイビー（きりっと）"
+  },
+  "billingHeading": {
+    "message": "Pro 版"
+  },
+  "billingHelp": {
+    "message": "Pro 版では、Google ドライブへの自動バックアップが使えます。そのほかの機能は、これまでどおり無料です。"
+  },
+  "billingBuy": {
+    "message": "Pro 版を購入"
+  },
+  "billingCheck": {
+    "message": "購入状況を確認"
+  },
+  "billingManage": {
+    "message": "契約の確認・解約"
+  },
+  "billingStatusFree": {
+    "message": "現在は無料版です。"
+  },
+  "billingStatusActive": {
+    "message": "Pro 版をご利用中です（次回更新：$1）。"
+  },
+  "billingStatusCanceling": {
+    "message": "解約済みです。Pro 版は $1 まで使えます。"
+  },
+  "billingStatusPastDue": {
+    "message": "お支払いを確認できていません。カード情報をご確認ください。"
+  },
+  "billingStatusDev": {
+    "message": "開発版のため、Pro の機能が有効です。"
+  },
+  "billingStatusOffline": {
+    "message": "購入状況を確認できませんでした。前回の確認結果で動作しています。"
+  },
+  "billingUnavailable": {
+    "message": "Pro 版の購入は準備中です。"
+  },
+  "billingOpening": {
+    "message": "手続きのページを開いています…"
+  },
+  "billingOpened": {
+    "message": "新しいタブで手続きを済ませて、この画面に戻ってください。購入状況は自動で確認します。"
+  },
+  "billingError": {
+    "message": "接続できませんでした：$1"
+  },
+  "billingIdHeading": {
+    "message": "購入 ID（別の PC への引き継ぎ）"
+  },
+  "billingIdHelp": {
+    "message": "別の PC や入れ直したあとに Pro 版を引き継ぐときに使います。他の人には教えないでください。"
+  },
+  "billingIdCopy": {
+    "message": "コピー"
+  },
+  "billingIdCopied": {
+    "message": "購入 ID をコピーしました。"
+  },
+  "billingIdRestore": {
+    "message": "別の PC で使っていた購入 ID"
+  },
+  "billingIdApply": {
+    "message": "引き継ぐ"
+  },
+  "billingIdInvalid": {
+    "message": "購入 ID の形式が正しくありません。"
+  },
+  "billingIdApplied": {
+    "message": "購入 ID を引き継ぎました。"
+  },
+  "driveAutoLockedBuy": {
+    "message": "Pro 版の機能です。設定の「Pro 版」から購入できます。手動のバックアップと復元は、これまでどおり無料です。"
   }
 }

@@ -1492,5 +1492,77 @@
   },
   "paletteNavy": {
     "message": "藏青（干练）"
+  },
+  "billingHeading": {
+    "message": "Pro 版"
+  },
+  "billingHelp": {
+    "message": "Pro 版可自动备份到 Google 云端硬盘。其他功能仍然免费。"
+  },
+  "billingBuy": {
+    "message": "购买 Pro 版"
+  },
+  "billingCheck": {
+    "message": "查看购买状态"
+  },
+  "billingManage": {
+    "message": "管理或取消订阅"
+  },
+  "billingStatusFree": {
+    "message": "当前为免费版。"
+  },
+  "billingStatusActive": {
+    "message": "Pro 版已启用（下次续订：$1）。"
+  },
+  "billingStatusCanceling": {
+    "message": "已取消。Pro 版可使用至 $1。"
+  },
+  "billingStatusPastDue": {
+    "message": "未能完成扣款，请检查您的银行卡信息。"
+  },
+  "billingStatusDev": {
+    "message": "开发版：Pro 功能已启用。"
+  },
+  "billingStatusOffline": {
+    "message": "无法查看购买状态，将沿用上次的结果。"
+  },
+  "billingUnavailable": {
+    "message": "Pro 版购买功能即将推出。"
+  },
+  "billingOpening": {
+    "message": "正在打开页面…"
+  },
+  "billingOpened": {
+    "message": "请在新标签页中完成操作后返回此处，系统会自动查看购买状态。"
+  },
+  "billingError": {
+    "message": "无法连接：$1"
+  },
+  "billingIdHeading": {
+    "message": "购买 ID（迁移到其他电脑）"
+  },
+  "billingIdHelp": {
+    "message": "用于在其他电脑或重新安装后继续使用 Pro 版。请勿告诉他人。"
+  },
+  "billingIdCopy": {
+    "message": "复制"
+  },
+  "billingIdCopied": {
+    "message": "已复制购买 ID。"
+  },
+  "billingIdRestore": {
+    "message": "在其他电脑上使用的购买 ID"
+  },
+  "billingIdApply": {
+    "message": "迁移"
+  },
+  "billingIdInvalid": {
+    "message": "购买 ID 格式不正确。"
+  },
+  "billingIdApplied": {
+    "message": "已迁移购买 ID。"
+  },
+  "driveAutoLockedBuy": {
+    "message": "这是 Pro 版功能。可在设置的“Pro 版”中购买。手动备份和恢复仍然免费。"
   }
 }

@@ -1501,5 +1501,77 @@
   },
   "paletteNavy": {
     "message": "Blu navy (deciso)"
+  },
+  "billingHeading": {
+    "message": "Pro"
+  },
+  "billingHelp": {
+    "message": "Pro aggiunge il backup automatico su Google Drive. Tutto il resto resta gratuito."
+  },
+  "billingBuy": {
+    "message": "Passa a Pro"
+  },
+  "billingCheck": {
+    "message": "Verifica acquisto"
+  },
+  "billingManage": {
+    "message": "Gestisci o annulla"
+  },
+  "billingStatusFree": {
+    "message": "Stai usando la versione gratuita."
+  },
+  "billingStatusActive": {
+    "message": "Pro è attivo (rinnovo il $1)."
+  },
+  "billingStatusCanceling": {
+    "message": "Annullato. Pro resta attivo fino al $1."
+  },
+  "billingStatusPastDue": {
+    "message": "Non è stato possibile addebitare il pagamento. Controlla i dati della carta."
+  },
+  "billingStatusDev": {
+    "message": "Versione di sviluppo: le funzioni Pro sono attive."
+  },
+  "billingStatusOffline": {
+    "message": "Impossibile verificare l’acquisto. Si usa l’ultimo stato noto."
+  },
+  "billingUnavailable": {
+    "message": "L’acquisto di Pro sarà presto disponibile."
+  },
+  "billingOpening": {
+    "message": "Apertura della pagina…"
+  },
+  "billingOpened": {
+    "message": "Completa nella nuova scheda e torna qui. L’acquisto viene verificato automaticamente."
+  },
+  "billingError": {
+    "message": "Impossibile connettersi: $1"
+  },
+  "billingIdHeading": {
+    "message": "ID acquisto (trasferimento su altro PC)"
+  },
+  "billingIdHelp": {
+    "message": "Serve a portare Pro su un altro PC o dopo una reinstallazione. Non condividerlo."
+  },
+  "billingIdCopy": {
+    "message": "Copia"
+  },
+  "billingIdCopied": {
+    "message": "ID acquisto copiato."
+  },
+  "billingIdRestore": {
+    "message": "ID acquisto dell’altro PC"
+  },
+  "billingIdApply": {
+    "message": "Trasferisci"
+  },
+  "billingIdInvalid": {
+    "message": "Questo ID acquisto non è valido."
+  },
+  "billingIdApplied": {
+    "message": "ID acquisto trasferito."
+  },
+  "driveAutoLockedBuy": {
+    "message": "È una funzione Pro. Passa a Pro nella sezione «Pro» delle Impostazioni. Backup e ripristino manuali restano gratuiti."
   }
 }

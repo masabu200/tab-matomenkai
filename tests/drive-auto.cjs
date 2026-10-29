@@ -25,7 +25,7 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
   const state=()=>worker.evaluate(async()=>(await chrome.storage.local.get('pwm_drive_auto')).pwm_drive_auto||{});
   const H=3600000;const t0=await worker.evaluate(()=>Date.now());
   // development install → entitled
-  assert.deepEqual(await worker.evaluate(()=>Entitlements.status()),{pro:true,reason:'development'});
+  assert.deepEqual(await worker.evaluate(async()=>{const s=await Entitlements.status();return {pro:s.pro,reason:s.reason}}),{pro:true,reason:'development'});
   // alarm registered on install
   assert.ok((await worker.evaluate(()=>chrome.alarms.getAll())).some(a=>a.name==='pwm-drive-auto'));
   // off by default

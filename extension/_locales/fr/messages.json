@@ -1492,5 +1492,77 @@
   },
   "paletteNavy": {
     "message": "Bleu marine (net)"
+  },
+  "billingHeading": {
+    "message": "Pro"
+  },
+  "billingHelp": {
+    "message": "Pro ajoute la sauvegarde automatique sur Google Drive. Tout le reste reste gratuit."
+  },
+  "billingBuy": {
+    "message": "Passer à Pro"
+  },
+  "billingCheck": {
+    "message": "Vérifier l’achat"
+  },
+  "billingManage": {
+    "message": "Gérer ou résilier"
+  },
+  "billingStatusFree": {
+    "message": "Vous utilisez la version gratuite."
+  },
+  "billingStatusActive": {
+    "message": "Pro est actif (renouvellement le $1)."
+  },
+  "billingStatusCanceling": {
+    "message": "Résilié. Pro reste actif jusqu’au $1."
+  },
+  "billingStatusPastDue": {
+    "message": "Le paiement a échoué. Vérifiez les informations de votre carte."
+  },
+  "billingStatusDev": {
+    "message": "Version de développement : les fonctions Pro sont activées."
+  },
+  "billingStatusOffline": {
+    "message": "Impossible de vérifier l’achat. Le dernier état connu est utilisé."
+  },
+  "billingUnavailable": {
+    "message": "L’achat de Pro sera bientôt disponible."
+  },
+  "billingOpening": {
+    "message": "Ouverture de la page…"
+  },
+  "billingOpened": {
+    "message": "Terminez dans le nouvel onglet puis revenez ici. L’achat est vérifié automatiquement."
+  },
+  "billingError": {
+    "message": "Connexion impossible : $1"
+  },
+  "billingIdHeading": {
+    "message": "ID d’achat (transfert vers un autre PC)"
+  },
+  "billingIdHelp": {
+    "message": "Sert à garder Pro sur un autre PC ou après réinstallation. Ne le communiquez à personne."
+  },
+  "billingIdCopy": {
+    "message": "Copier"
+  },
+  "billingIdCopied": {
+    "message": "ID d’achat copié."
+  },
+  "billingIdRestore": {
+    "message": "ID d’achat de votre autre PC"
+  },
+  "billingIdApply": {
+    "message": "Transférer"
+  },
+  "billingIdInvalid": {
+    "message": "Cet ID d’achat n’est pas valide."
+  },
+  "billingIdApplied": {
+    "message": "ID d’achat transféré."
+  },
+  "driveAutoLockedBuy": {
+    "message": "Fonction Pro. Passez à Pro dans la section « Pro » des paramètres. La sauvegarde et la restauration manuelles restent gratuites."
   }
 }

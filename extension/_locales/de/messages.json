@@ -1492,5 +1492,77 @@
   },
   "paletteNavy": {
     "message": "Marineblau (klar)"
+  },
+  "billingHeading": {
+    "message": "Pro"
+  },
+  "billingHelp": {
+    "message": "Pro ergänzt die automatische Sicherung in Google Drive. Alles andere bleibt kostenlos."
+  },
+  "billingBuy": {
+    "message": "Pro holen"
+  },
+  "billingCheck": {
+    "message": "Kauf prüfen"
+  },
+  "billingManage": {
+    "message": "Verwalten oder kündigen"
+  },
+  "billingStatusFree": {
+    "message": "Du nutzt die kostenlose Version."
+  },
+  "billingStatusActive": {
+    "message": "Pro ist aktiv (Verlängerung am $1)."
+  },
+  "billingStatusCanceling": {
+    "message": "Gekündigt. Pro bleibt bis $1 aktiv."
+  },
+  "billingStatusPastDue": {
+    "message": "Die Zahlung ist fehlgeschlagen. Bitte prüfe deine Kartendaten."
+  },
+  "billingStatusDev": {
+    "message": "Entwicklerversion: Pro-Funktionen sind aktiviert."
+  },
+  "billingStatusOffline": {
+    "message": "Kauf konnte nicht geprüft werden. Der letzte bekannte Stand gilt."
+  },
+  "billingUnavailable": {
+    "message": "Pro kann bald gekauft werden."
+  },
+  "billingOpening": {
+    "message": "Seite wird geöffnet …"
+  },
+  "billingOpened": {
+    "message": "Schließe den Vorgang im neuen Tab ab und kehre hierher zurück. Der Kauf wird automatisch geprüft."
+  },
+  "billingError": {
+    "message": "Verbindung fehlgeschlagen: $1"
+  },
+  "billingIdHeading": {
+    "message": "Kauf-ID (auf anderen PC übertragen)"
+  },
+  "billingIdHelp": {
+    "message": "Damit nimmst du Pro auf einen anderen PC oder nach einer Neuinstallation mit. Gib sie nicht weiter."
+  },
+  "billingIdCopy": {
+    "message": "Kopieren"
+  },
+  "billingIdCopied": {
+    "message": "Kauf-ID kopiert."
+  },
+  "billingIdRestore": {
+    "message": "Kauf-ID von deinem anderen PC"
+  },
+  "billingIdApply": {
+    "message": "Übertragen"
+  },
+  "billingIdInvalid": {
+    "message": "Diese Kauf-ID ist ungültig."
+  },
+  "billingIdApplied": {
+    "message": "Kauf-ID übertragen."
+  },
+  "driveAutoLockedBuy": {
+    "message": "Dies ist eine Pro-Funktion. Hol dir Pro im Bereich „Pro“ der Einstellungen. Manuelles Sichern und Wiederherstellen bleibt kostenlos."
   }
 }

@@ -415,3 +415,15 @@ Playwright 1.62 の `page.waitForFunction` に async 関数を渡すと、最初
 - 文言は10言語に `palette*` の7キーを追加（追記のみ）。
 - テスト：`tests/theme-palette.cjs`（カードの順序と5択・重なりなし、ピンクを選ぶと背景・文字・左バー・ボタン・ダイアログの色が変わり保存される、再読み込みで最初の描画からピンク、ピンク×ダークも最初からダーク、別の画面での変更の反映と不正値の扱い、5テーマ×ライト/ダークで150組のコントラスト）。`tests/drive-backup.cjs` の「元に戻す」ボタン非表示の確認が、状態文の直後の再描画を待たずに判定していて、読み込むスクリプトが増えたことで失敗するようになったため、非表示になるまで待つ形に修正。`node --test tests/*.test.cjs` と全ブラウザテストが通過。
 - スクリーンショット：`evidence/palettes/`（各テーマ×ライト/ダーク、ダッシュボードと設定、1280x800）。再生成は `node tools/palette-screenshots.cjs`。撮影時の作業ツリーには別作業（Pro 版カード）の未コミット変更が含まれている。
+
+## 2026-10-29 PAY-02〜05：Stripe 連携（購入記録サーバーと Pro 判定）
+
+- 依頼：「Stripe連携して」「実装進めて」。PAY-01 の推奨どおり Stripe Checkout ＋ Managed Payments（月額サブスクリプション）。
+- `server/worker.js`（Cloudflare Workers、依存なし）：Checkout 作成、カスタマーポータル、購入状態の照会、Webhook。Webhook は HMAC 署名と時刻（5分）を確認し、event id で二重受信を、`created` で古いイベントの後着を無視する。成功画面だけでは Pro にしない。CORS は拡張機能の ID だけ許可。
+- 契約の紐付けはログインではなく、インストールごとのランダムな購入 ID（`chrome.storage.sync`）。名前やメールは扱わない。別 PC や再インストール時は設定の「購入 ID」から引き継ぐ。
+- `extension/entitlements.js`：開発版は従来どおり Pro。ストア版はサーバーに確認して6時間保存、届かないときは前回 Pro なら7日間猶予。購入 ID が変わる・確認結果が更新されると Service Worker 側の保存結果も捨てる。`pwm_billing_live_test` で開発版でも本物の確認を通せる（Stripe テストモードでの通し確認用）。
+- `extension/billing-config.js`：Worker の URL。空の間は「購入は準備中」と表示し、Pro はこれまでどおり開発版だけ。
+- `extension/billing-settings.js`：設定に「Pro 版」カード（購入／購入状況を確認／契約の確認・解約／購入 ID のコピーと引き継ぎ）。Stripe のタブから戻ると自動で確認する。自動バックアップの案内は、購入できる状態なら「設定の Pro 版から購入できます」に切り替わる。
+- 10言語に24キー追加（同じ作業フォルダでテーマのセッションが並行していたため、言語ファイルと `dashboard.html` への追記は最後にまとめて行い、相手のキーを消していないことを確認）。
+- テスト：`tests/billing-worker.test.mjs`（署名・Checkout の中身・状態遷移・重複・順序逆転・ポータル・CORS、4件）、`tests/billing.cjs`（ストア版を模して、未設定・未購入・購入・保存・オフライン猶予と期限切れ・解約・自動バックアップの連動・ID 引き継ぎ・設定カードの購入→戻って自動確認→管理→解約予約、開発版は Pro のまま）。全単体テスト 19件、ブラウザテスト 18本が通過。
+- 実際の Stripe アカウントには何も作成していない（接続できるのが本番モードだけのため）。利用者の作業：Stripe（テストモード）で商品・価格・ポータル・Webhook、Cloudflare に KV とデプロイと秘密鍵登録、`billing-config.js` に URL。手順は `server/README.md`。公開前にプライバシーポリシーへ購入 ID の送信を追記、特商法の価格・解約方法の記入、税理士確認。

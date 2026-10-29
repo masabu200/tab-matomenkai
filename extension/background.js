@@ -8,7 +8,7 @@
 
 importScripts('i18n.js');
 importScripts('auto-clean.js');
-importScripts('backup-validation.js', 'drive-backup.js', 'entitlements.js', 'drive-auto.js');
+importScripts('backup-validation.js', 'drive-backup.js', 'billing-config.js', 'entitlements.js', 'drive-auto.js');
 
 const DASHBOARD_URL = chrome.runtime.getURL('dashboard.html');
 const ALARM_NAME    = 'pwm-auto-backup';
