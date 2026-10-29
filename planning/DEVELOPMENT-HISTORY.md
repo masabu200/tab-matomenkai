@@ -436,3 +436,12 @@ Playwright 1.62 の `page.waitForFunction` に async 関数を渡すと、最初
 - 文言は10言語に `spaceCreate*` の6キーを追加（追記のみ）。既存の「作成」「キャンセル」「カラー」「画像を設定」「画像を解除」「未分類」は再利用。
 - テスト：`tests/space-create-dialog.cjs`（ボタンがサイドバー下端にある（展開・折りたたみ）、モーダルの欄と初期フォーカス、空・重複名のエラー、名前＋子カテゴリー＋カラー＋画像で作成され保存される、キャンセル/Escape で作られない・フォーカス復帰・入力リセット、ダーク時の色）。`tests/onboarding.cjs` は旧入力欄を前提にしていたのでモーダル入力に更新。`tests/theme-palette.cjs` は設定ダイアログがピンクでもダークでもグレーのままであることを確認する形に変更。`node --test tests/*.test.cjs` と全ブラウザテストが通過。
 - スクリーンショット：`evidence/space-create-dialog.png`、`evidence/space-create-dialog-dark.png`（1280x800）。
+
+## 2026-10-29 決済の設定を最後まで（Stripe テストモードで通し確認）
+
+- 購入記録サーバーを Cloudflare Workers に公開。workers.dev の名前は `kws-tools` が使用済みで、自動入力の誤りで `kws-toolskws-toolskws-toolskws-tools` が登録された（利用者の判断でこのまま使う）。`wrangler.toml` の `PUBLIC_URL`、`extension/billing-config.js` の `apiBase` を設定。
+- Stripe サンドボックスに Webhook（`tab-matomen-billing`、4イベント）を作成。カスタマーポータルは既定で解約・支払い方法変更が有効だった。秘密鍵2つは利用者がターミナルで登録（最初は API キーのページの URL が貼られていて 401 になった）。
+- 通し確認：テストカードで ¥300/月を購入 → サーバーが Pro（active）、ポータルで解約予約 → 期間末まで Pro、ダッシュボードで即時解約 → Pro 解除。
+- 不具合修正：即時解約しても、支払済み期間の終わりまで Pro のままになっていた。Stripe の `ended_at`（実際に終了した時刻）を記録し、解約済みはその時刻で判定するように変更（`server/worker.js`、`tests/billing-worker.test.mjs` に確認を追加）。サーバーのエラーは原因が分かるよう、メッセージだけをログに出す（鍵や購入 ID は出さない）。
+- `tests/billing.cjs` は接続先が設定済みでも「未設定」の状態を確かめられるよう、最初に `apiBase` を空にする形に変更。
+- 未確認・残り：拡張機能の設定画面から実際に購入ボタンを押す通し確認（サーバー単体と、画面はモックで確認済み）。Stripe の設定ガイドに「Managed Payments を始める」が残っており、テストの決済画面では税金 ¥0 だった。本番前に Managed Payments の有効化を確認すること。本番切り替え（本番の価格・Webhook・鍵）、プライバシーポリシーと特商法の記入、税理士確認は従来どおり残り。

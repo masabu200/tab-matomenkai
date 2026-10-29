@@ -86,7 +86,8 @@ async function putRecord(env, account, record) {
 }
 export function entitlementOf(record, now = Date.now()) {
   if (!record || !record.status) return {pro: false, status: 'none', until: 0, cancelAtPeriodEnd: false};
-  const until = Number(record.periodEnd || 0) * 1000;
+  // A canceled subscription ends at ended_at (now for an immediate cancel, the period end otherwise).
+  const until = Number((record.status === 'canceled' && record.endedAt) || record.periodEnd || 0) * 1000;
   const pro = ACTIVE.has(record.status) || (record.status === 'canceled' && until > now);
   return {pro, status: record.status, until, cancelAtPeriodEnd: !!record.cancelAtPeriodEnd};
 }
@@ -103,6 +104,7 @@ async function applySubscription(env, account, subscription, eventCreated) {
     status: subscription.status,
     periodEnd: subscription.current_period_end || item?.current_period_end || prev.periodEnd || 0,
     cancelAtPeriodEnd: !!subscription.cancel_at_period_end,
+    endedAt: subscription.ended_at || 0,
     eventCreated,
   };
   await putRecord(env, account, record);
@@ -199,6 +201,7 @@ export default {
       if (url.pathname === '/cancel') return page('Tab Matomen Kai', '購入は完了していません。この画面を閉じて構いません。<br>The purchase was not completed. You can close this page.');
       return json({error: 'not found'}, 404, headers);
     } catch (error) {
+      console.error(`${request.method} ${url.pathname}: ${error.status || ''} ${error.message}`);
       return json({error: 'server error'}, error.status && error.status < 500 ? 502 : 500, headers);
     }
   },

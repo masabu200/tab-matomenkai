@@ -83,4 +83,6 @@ test('entitlement rules', () => {
   assert.equal(entitlementOf({status: 'unpaid', periodEnd: future}, now).pro, false);
   assert.equal(entitlementOf({status: 'canceled', periodEnd: future}, now).pro, true);
   assert.equal(entitlementOf({status: 'canceled', periodEnd: past}, now).pro, false);
+  assert.equal(entitlementOf({status: 'canceled', periodEnd: future, endedAt: past}, now).pro, false, 'immediate cancel ends Pro now even if the paid period runs on');
+  assert.equal(entitlementOf({status: 'canceled', periodEnd: future, endedAt: past}, now).until, past * 1000);
 });

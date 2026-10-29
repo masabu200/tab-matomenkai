@@ -19,6 +19,14 @@ Stripe Checkout（Managed Payments）で Pro 版の月額契約を受け付け�
 
 Webhook は同じイベントの二重受信（event id で判定）と、古いイベントの後着（`created` で判定）を無視します。
 
+## 現在の設定（2026-10-29、テストモード）
+
+- Worker：`https://tab-matomen-billing.kws-toolskws-toolskws-toolskws-tools.workers.dev`（workers.dev のサブドメインは `kws-toolskws-toolskws-toolskws-tools`。`kws-tools` は使用済みだった）
+- Stripe サンドボックスの Webhook：`tab-matomen-billing`（`we_1UVqXXRvCR021e0t6BObkUay`、下の4イベント）
+- 秘密鍵 2 つ（`STRIPE_SECRET_KEY`、`STRIPE_WEBHOOK_SECRET`）は登録済み。カスタマーポータルは解約・支払い方法の変更を許可済み。
+- テストカードで購入 → Pro、解約予約 → 期間末まで Pro、即時解約 → Pro 解除、まで本番のテストモードで確認済み。
+- wrangler 4 は Node 22 以上が必要。このマシンの Node は 20 なので、`npx -y -p node@22 -p wrangler@4 -- wrangler <コマンド>` で実行する。
+
 ## 公開までに利用者が行う作業
 
 秘密鍵やトークンはチャットに貼らず、下のコマンドで直接登録してください。最初は Stripe の **テストモード** で通しの確認をします。
