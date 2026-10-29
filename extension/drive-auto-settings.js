@@ -18,8 +18,9 @@
   const el = id => box.querySelector('#' + id);
   const when = ms => ms ? new Date(ms).toLocaleString(I18n.current().replace('_', '-')) : '';
 
-  function describe(state) {
+  function describe(state, connected) {
     if (state.needsReconnect) return t('driveAutoNeedsReconnect');
+    if (state.enabled && !connected) return t('driveAutoNeedConnect');
     if (state.failures >= DriveAutoLimits.MAX_FAILURES) return t('driveAutoPaused', [state.lastError || '']);
     if (state.lastError) return t('driveAutoRetrying', [state.lastError, when(state.nextRetryAt)]);
     if (!state.enabled) return t('driveAutoOff');
@@ -29,12 +30,14 @@
   const DriveAutoLimits = {MAX_FAILURES: 8};
   async function render() {
     const entitled = await Entitlements.has('driveAutoSave');
-    const state = {enabled: false, intervalHours: 6, failures: 0, ...((await chrome.storage.local.get('pwm_drive_auto')).pwm_drive_auto || {})};
+    const stored = await chrome.storage.local.get(['pwm_drive_auto', 'pwm_drive_connected']);
+    const state = {enabled: false, intervalHours: 6, failures: 0, ...(stored.pwm_drive_auto || {})};
+    const connected = !!stored.pwm_drive_connected || DriveBackup.mode() === 'manual';
     box.classList.toggle('drive-auto--locked', !entitled);
     for (const id of ['driveAutoEnabled', 'driveAutoInterval', 'driveAutoRunNow']) el(id).disabled = !entitled;
     el('driveAutoEnabled').checked = entitled && !!state.enabled;
     el('driveAutoInterval').value = String([1, 6, 24].includes(state.intervalHours) ? state.intervalHours : 6);
-    el('driveAutoStatus').textContent = entitled ? describe(state) : t('driveAutoLocked');
+    el('driveAutoStatus').textContent = entitled ? describe(state, connected) : t('driveAutoLocked');
   }
   async function save() {
     const cur = (await chrome.storage.local.get('pwm_drive_auto')).pwm_drive_auto || {};
@@ -49,12 +52,11 @@
     const button = el('driveAutoRunNow'); button.disabled = true; el('driveAutoStatus').textContent = t('m_f11b0168dc');
     try {
       const response = await chrome.runtime.sendMessage({type: 'DRIVE_AUTO_RUN_NOW'});
-      if (response?.action === 'saved') el('driveAutoStatus').textContent = t('m_f714e3e49d');
-      else if (response?.error) el('driveAutoStatus').textContent = response.error;
-      else await render();
+      const messages = {saved: t('m_f714e3e49d'), 'not-connected': t('driveAutoNeedConnect'), disabled: t('driveAutoEnableFirst'), 'not-entitled': t('driveAutoLocked'), 'needs-reconnect': t('driveAutoNeedsReconnect')};
+      el('driveAutoStatus').textContent = response?.error || messages[response?.action] || t('driveAutoNoResponse');
     } catch (error) { el('driveAutoStatus').textContent = error.message; }
     finally { button.disabled = false; }
   });
-  chrome.storage.onChanged.addListener((changes, area) => { if (area === 'local' && changes.pwm_drive_auto) render().catch(() => {}); });
+  chrome.storage.onChanged.addListener((changes, area) => { if (area === 'local' && (changes.pwm_drive_auto || changes.pwm_drive_connected)) render().catch(() => {}); });
   render().catch(() => {});
 })();

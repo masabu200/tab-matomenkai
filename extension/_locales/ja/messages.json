@@ -1863,5 +1863,14 @@
   },
   "driveAutoBadgeTitle": {
     "message": "タブまとめん改：自動バックアップを確認してください"
+  },
+  "driveAutoNeedConnect": {
+    "message": "先に上の「Googleドライブに接続」を押して接続してください。接続すると自動保存が始まります。"
+  },
+  "driveAutoEnableFirst": {
+    "message": "「自動バックアップを使う」にチェックを入れてから実行してください。"
+  },
+  "driveAutoNoResponse": {
+    "message": "応答がありませんでした。拡張を再読み込みしてから、もう一度お試しください。"
   }
 }

@@ -1462,5 +1462,14 @@
   },
   "driveAutoBadgeTitle": {
     "message": "Tab Matomen Kai：请检查自动备份"
+  },
+  "driveAutoNeedConnect": {
+    "message": "请先点击上方的“连接 Google 云端硬盘”。连接后自动备份即开始。"
+  },
+  "driveAutoEnableFirst": {
+    "message": "请先勾选“使用自动备份”。"
+  },
+  "driveAutoNoResponse": {
+    "message": "没有响应。请重新加载扩展程序后再试。"
   }
 }

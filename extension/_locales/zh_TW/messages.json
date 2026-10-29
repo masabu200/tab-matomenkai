@@ -1462,5 +1462,14 @@
   },
   "driveAutoBadgeTitle": {
     "message": "Tab Matomen Kai：請檢查自動備份"
+  },
+  "driveAutoNeedConnect": {
+    "message": "請先按上方的「連線至 Google 雲端硬碟」。連線後即開始自動備份。"
+  },
+  "driveAutoEnableFirst": {
+    "message": "請先勾選「使用自動備份」。"
+  },
+  "driveAutoNoResponse": {
+    "message": "沒有回應。請重新載入擴充功能後再試。"
   }
 }

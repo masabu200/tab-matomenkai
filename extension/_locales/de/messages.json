@@ -1462,5 +1462,14 @@
   },
   "driveAutoBadgeTitle": {
     "message": "Tab Matomen Kai: Automatische Sicherung prüfen"
+  },
+  "driveAutoNeedConnect": {
+    "message": "Klicken Sie zuerst oben auf „Mit Google Drive verbinden“. Die automatische Sicherung beginnt nach dem Verbinden."
+  },
+  "driveAutoEnableFirst": {
+    "message": "Aktivieren Sie zuerst „Automatische Sicherung verwenden“."
+  },
+  "driveAutoNoResponse": {
+    "message": "Keine Antwort. Laden Sie die Erweiterung neu und versuchen Sie es erneut."
   }
 }

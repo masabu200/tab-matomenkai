@@ -1472,5 +1472,14 @@
   },
   "driveAutoBadgeTitle": {
     "message": "Tab Matomen Kai: check automatic backup"
+  },
+  "driveAutoNeedConnect": {
+    "message": "Press \"Connect to Google Drive\" above first. Automatic backup starts once you are connected."
+  },
+  "driveAutoEnableFirst": {
+    "message": "Check \"Use automatic backup\" first."
+  },
+  "driveAutoNoResponse": {
+    "message": "No response. Reload the extension and try again."
   }
 }

@@ -1462,5 +1462,14 @@
   },
   "driveAutoBadgeTitle": {
     "message": "Tab Matomen Kai: 자동 백업을 확인하세요"
+  },
+  "driveAutoNeedConnect": {
+    "message": "먼저 위의 \"Google 드라이브에 연결\"을 눌러 주세요. 연결되면 자동 백업이 시작돼요."
+  },
+  "driveAutoEnableFirst": {
+    "message": "먼저 \"자동 백업 사용\"을 체크하세요."
+  },
+  "driveAutoNoResponse": {
+    "message": "응답이 없어요. 확장 프로그램을 다시 로드한 뒤 다시 시도하세요."
   }
 }

@@ -1462,5 +1462,14 @@
   },
   "driveAutoBadgeTitle": {
     "message": "Tab Matomen Kai: revisa la copia automática"
+  },
+  "driveAutoNeedConnect": {
+    "message": "Primero pulsa \"Conectar con Google Drive\" arriba. La copia automática empieza al conectarte."
+  },
+  "driveAutoEnableFirst": {
+    "message": "Marca primero \"Usar copia automática\"."
+  },
+  "driveAutoNoResponse": {
+    "message": "Sin respuesta. Recarga la extensión e inténtalo de nuevo."
   }
 }

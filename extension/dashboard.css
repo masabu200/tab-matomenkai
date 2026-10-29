@@ -2373,3 +2373,5 @@ body.sidebar-collapsed .sidebar-controls > * { flex-shrink:0; }
 .drive-auto__row { display:flex; align-items:center; gap:8px; flex-wrap:wrap; font-size:13px; }
 .drive-auto__row select { font-size:13px; padding:4px 6px; border-radius:6px; }
 .drive-auto--locked .drive-auto__toggle, .drive-auto--locked .drive-auto__row, .drive-auto--locked #driveAutoRunNow { opacity:.45; }
+.drive-auto__toggle input[type=checkbox] { width:auto; padding:0; margin:0; flex-shrink:0; }
+.drive-auto__toggle span { white-space:normal; }

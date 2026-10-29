@@ -1462,5 +1462,14 @@
   },
   "driveAutoBadgeTitle": {
     "message": "Tab Matomen Kai : vérifiez la sauvegarde automatique"
+  },
+  "driveAutoNeedConnect": {
+    "message": "Appuyez d’abord sur « Se connecter à Google Drive » ci-dessus. La sauvegarde automatique démarre une fois connecté."
+  },
+  "driveAutoEnableFirst": {
+    "message": "Cochez d’abord « Utiliser la sauvegarde automatique »."
+  },
+  "driveAutoNoResponse": {
+    "message": "Aucune réponse. Rechargez l’extension et réessayez."
   }
 }
