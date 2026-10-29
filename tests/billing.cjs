@@ -21,7 +21,7 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
   });
   const st=(o)=>worker.evaluate(o=>Entitlements.status(o).then(s=>({pro:s.pro,reason:s.reason,status:s.status})),o||{});
   // not configured yet → purchases unavailable, Pro off
-  await worker.evaluate(()=>Entitlements.reset());
+  await worker.evaluate(()=>{BillingConfig.apiBase='';Entitlements.reset()});
   assert.deepEqual(await st(),{pro:false,reason:'unavailable',status:undefined});
   assert.equal(await worker.evaluate(()=>Entitlements.has('driveAutoSave')),false);
   // configured, not bought

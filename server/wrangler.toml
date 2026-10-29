@@ -5,13 +5,15 @@
 name = "tab-matomen-billing"
 main = "worker.js"
 compatibility_date = "2026-10-01"
+workers_dev = true
+preview_urls = false
 
 [vars]
 ALLOWED_ORIGINS = "chrome-extension://ofpnbokbnlfjglogdhoegmiallanobdb"
-PUBLIC_URL = "https://tab-matomen-billing.example.workers.dev"
-STRIPE_PRICE_ID = "price_REPLACE_ME"
+PUBLIC_URL = "https://tab-matomen-billing.kws-toolskws-toolskws-toolskws-tools.workers.dev"
+STRIPE_PRICE_ID = "price_1UVoGbRvCR021e0tYfNTWWdg"
 MANAGED_PAYMENTS = "true"
 
 [[kv_namespaces]]
 binding = "BILLING"
-id = "REPLACE_WITH_KV_NAMESPACE_ID"
+id = "d64bccbe884241da9ea30a69be884d8e"
