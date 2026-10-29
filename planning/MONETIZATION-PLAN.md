@@ -160,7 +160,7 @@
 2. [x] BASE-02（2026-10-26）：`tests/data-safety-regression.cjs` で旧形式JSON・往復・壊れたインポート10種・タブグループ・複数ウィンドウ・読み込み中タブの自動保存を検証しPASS。残件は planning/DEVELOPMENT-HISTORY.md の同日項を参照。
 3. [x] DRIVE-01（2026-10-28、コード側）：方式を決定し `planning/DRIVE-01-OAUTH.md` に記録。`drive-backup.js` は manifest の `oauth2` があれば `getAuthToken`（Chrome が自動更新）、無ければ従来方式＋無操作更新。残件は開発者作業：ストアの公開鍵を manifest `key` に、Google Cloud で「Chrome 拡張機能」クライアントを作成し `oauth2.client_id` を設定、同意画面を本番に。
 4. [ ] DRIVE-02：実Googleへの保存・取得・内容照合を完了する。
-5. [ ] 利用検証の募集文と質問票を作る。送信は別途依頼を受けて行う。
+5. [x] 利用検証の募集文と質問票（2026-10-29）：`planning/USER-TEST-KIT.md`（個別・公開の募集文、初回／2週間後アンケート、集計と判断の目安）。送信は利用者が行う。
 6. [ ] 無料/Pro配分と価格を検証結果で更新し、有料実装の範囲を確定する。
 6.5. [x] BASE-03（2026-10-28）：初回案内に直接操作ボタン、設定の並び替えとAI連携の折りたたみ、エラーの持続表示。Chrome設定への案内は利用者の指示で撤去し、サイドパネルは配置に関係なく開く。
 7. [x] 多言語化（2026-10-28）：UI 10言語（ja/en/zh_CN/zh_TW/ko/es/pt_BR/de/fr/it）と設定での切り替え、`store/listing/<言語>.md` の掲載文。残件：製品名の英語表記（現状 "Tab Matomen Kai"）の確定、各言語のネイティブ確認、ストアのダッシュボードへの登録。
