@@ -68,10 +68,11 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
   const cb=await page.locator('#driveAutoEnabled').boundingBox();assert.ok(cb.width<40,'checkbox keeps its natural size: '+JSON.stringify(cb));
   // not connected: run-now explains why instead of doing nothing
   await worker.evaluate(()=>chrome.storage.local.set({pwm_drive_connected:false}));
-  await page.locator('#driveAutoRunNow').click();await page.waitForFunction(()=>document.getElementById('driveAutoStatus').textContent.includes('Googleドライブに接続'));
+  await page.locator('#driveAutoRunNow').click();await page.waitForFunction(()=>document.getElementById('driveAutoResult').textContent.includes('Googleドライブに接続'));
   await worker.evaluate(()=>chrome.storage.local.set({pwm_drive_connected:true}));await page.waitForTimeout(300);
   const before=await worker.evaluate(()=>mock.uploads.length);
-  await page.locator('#driveAutoRunNow').click();await page.waitForFunction(()=>document.getElementById('driveAutoStatus').textContent.includes('保存しました'));
+  await page.locator('#driveAutoRunNow').click();await page.waitForFunction(()=>document.getElementById('driveAutoResult').textContent.includes('保存しました'));
+  await page.waitForTimeout(500);assert.match(await page.locator('#driveAutoResult').textContent(),/保存しました/,'result is not overwritten by the status refresh');
   assert.equal(await worker.evaluate(()=>mock.uploads.length),before+1,'run now forces a save');
   await page.locator('#driveAutoEnabled').uncheck();await page.waitForFunction(async()=>((await chrome.storage.local.get('pwm_drive_auto')).pwm_drive_auto||{}).enabled===false);
   assert.match(await page.locator('#driveAutoStatus').textContent(),/オフ/);

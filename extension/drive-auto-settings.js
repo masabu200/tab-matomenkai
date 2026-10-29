@@ -12,7 +12,8 @@
     <div class="drive-auto__row"><label for="driveAutoInterval">${t('driveAutoIntervalLabel')}</label>
       <select id="driveAutoInterval">${[1, 6, 24].map(h => `<option value="${h}">${t('driveAutoEvery', [h])}</option>`).join('')}</select></div>
     <button type="button" class="btn btn--ghost" id="driveAutoRunNow">${t('driveAutoRunNow')}</button>
-    <p id="driveAutoStatus" class="settings-help" role="status"></p>`;
+    <p id="driveAutoResult" class="drive-auto__result" role="status"></p>
+    <p id="driveAutoStatus" class="settings-help"></p>`;
   const anchor = drive.querySelector('.drive-keep');
   drive.insertBefore(box, anchor || null);
   const el = id => box.querySelector('#' + id);
@@ -49,12 +50,12 @@
   el('driveAutoEnabled').addEventListener('change', save);
   el('driveAutoInterval').addEventListener('change', save);
   el('driveAutoRunNow').addEventListener('click', async () => {
-    const button = el('driveAutoRunNow'); button.disabled = true; el('driveAutoStatus').textContent = t('m_f11b0168dc');
+    const button = el('driveAutoRunNow'); button.disabled = true; el('driveAutoResult').textContent = t('m_f11b0168dc');
     try {
       const response = await chrome.runtime.sendMessage({type: 'DRIVE_AUTO_RUN_NOW'});
       const messages = {saved: t('m_f714e3e49d'), 'not-connected': t('driveAutoNeedConnect'), disabled: t('driveAutoEnableFirst'), 'not-entitled': t('driveAutoLocked'), 'needs-reconnect': t('driveAutoNeedsReconnect')};
-      el('driveAutoStatus').textContent = response?.error || messages[response?.action] || t('driveAutoNoResponse');
-    } catch (error) { el('driveAutoStatus').textContent = error.message; }
+      el('driveAutoResult').textContent = response?.error || messages[response?.action] || t('driveAutoNoResponse');
+    } catch (error) { el('driveAutoResult').textContent = error.message; }
     finally { button.disabled = false; }
   });
   chrome.storage.onChanged.addListener((changes, area) => { if (area === 'local' && (changes.pwm_drive_auto || changes.pwm_drive_connected)) render().catch(() => {}); });
