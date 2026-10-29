@@ -29,7 +29,7 @@ There is no analytics or advertising measurement.
 - To check whether the Pro edition has been bought, the extension sends a random string created for each installation (the "purchase ID", 64 hexadecimal characters) to our purchase record server, which runs on Cloudflare Workers (Cloudflare, Inc.). Your name, email address, browsing history and saved tabs are not sent.
 - The purchase ID is kept in Chrome's sync storage (`chrome.storage.sync`), so it is shared between your Chrome browsers signed in with the same Google account.
 - Checkout and payment take place on pages of Stripe, Inc. and its affiliate Link, LLC, which acts as the seller (the "payment providers"). Your email address and card details go directly to the payment providers and are handled under their privacy policies. **We never receive your card number.**
-- The purchase record server keeps, linked to the purchase ID, the payment provider's customer ID, subscription ID, subscription status (active, cancellation scheduled, canceled, etc.) and the end of the current period. In the payment provider's dashboard we can see the buyer's name, email address, country and transaction records.
+- The purchase record server keeps, linked to the purchase ID, the payment provider's customer ID, payment ID, the purchase status (purchased or refunded) and its date. In the payment provider's dashboard we can see the buyer's name, email address, country and transaction records.
 
 ### Local AI connection (optional, for advanced users)
 - Only after you enter a connection key and connect, the extension sends space titles, URLs and group information to a helper running on your own computer (`127.0.0.1`). Page contents are not sent, and nothing is sent to servers on the internet.
@@ -39,7 +39,7 @@ There is no analytics or advertising measurement.
 
 ## 4. Purposes
 Information we receive (from the purchase record server, from the payment providers, and in your messages) is used only to:
-- provide the Pro edition, check purchases, and handle cancellations and refunds;
+- provide the Pro edition, check purchases, and handle refunds;
 - answer questions and provide support;
 - keep the accounting records required by law and deal with misuse.
 
@@ -52,7 +52,7 @@ Traffic to the purchase record server is encrypted (HTTPS). Notifications from t
 ## 7. Retention and deletion
 - Uninstalling the extension deletes all data stored in your browser.
 - Delete backup files in your own Google Drive. You can revoke the extension's access to your Google account at any time under Google Account → Security → Third-party apps & services.
-- Purchase records and payment records are kept after a subscription ends for as long as the law requires (for example, for accounting). To ask for other deletion, contact us with your purchase ID (shown under Settings → Pro edition → Purchase ID).
+- Purchase records and payment records are kept for as long as the law requires (for example, for accounting). To ask for other deletion, contact us with your purchase ID (shown under Settings → Pro edition → Purchase ID).
 
 ## 8. Requests about your information
 If you ask us to disclose, correct or stop using personal information we hold about you, we will respond as required by law after confirming your identity. Please use the contact below.

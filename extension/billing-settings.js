@@ -41,6 +41,8 @@
     if (s.reason === 'development') return t('billingStatusDev');
     if (s.reason === 'unavailable') return t('billingUnavailable');
     if (s.reason === 'offline' || s.reason === 'offline-grace') return t('billingStatusOffline');
+    if (s.status === 'paid') return t('billingStatusPurchased');
+    if (s.status === 'refunded') return t('billingStatusRefunded');
     if (s.status === 'past_due') return t('billingStatusPastDue');
     if (s.pro && s.cancelAtPeriodEnd) return t('billingStatusCanceling', [date(s.until)]);
     if (s.pro) return t('billingStatusActive', [date(s.until)]);
@@ -52,7 +54,8 @@
     el('billingStatus').textContent = describe(s);
     el('billingBuy').hidden = !live || s.pro;
     el('billingCheck').hidden = !live;
-    el('billingManage').hidden = !live || s.status === 'none';
+    // Cancel/manage only exists for the earlier monthly plan; a one-time purchase has nothing to manage.
+    el('billingManage').hidden = !live || ['none', 'paid', 'refunded'].includes(s.status || 'none');
     section.querySelector('.billing-id').hidden = !live;
     el('billingLegal').hidden = !live;
     if (live) el('billingId').textContent = await Entitlements.accountId();

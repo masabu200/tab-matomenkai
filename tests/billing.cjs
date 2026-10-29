@@ -32,28 +32,33 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
   assert.equal((await worker.evaluate(()=>chrome.storage.sync.get('pwm_account_id'))).pwm_account_id,account,'kept in sync storage');
   assert.ok((await worker.evaluate(()=>server.calls))[0].includes(account));
   // bought → refresh turns Pro on and caches it; a fresh cached answer does not hit the server again
-  await worker.evaluate(()=>{server.pro=true;server.status='active';server.until=Date.now()+30*86400000});
-  assert.deepEqual(await st({force:true}),{pro:true,reason:'purchased',status:'active'});
+  await worker.evaluate(()=>{server.pro=true;server.status='paid';server.until=0});
+  assert.deepEqual(await st({force:true}),{pro:true,reason:'purchased',status:'paid'});
   const callsBefore=(await worker.evaluate(()=>server.calls)).length;
   await worker.evaluate(()=>Entitlements.reset());assert.equal((await st()).pro,true);
   assert.equal((await worker.evaluate(()=>server.calls)).length,callsBefore,'served from the 6h cache');
-  // server unreachable: Pro is kept for the grace period, then dropped
+  // server unreachable: a one-time purchase stays Pro offline for good
   await worker.evaluate(()=>{server.down=true});
-  assert.deepEqual(await st({force:true}),{pro:true,reason:'offline-grace',status:'active'});
+  assert.deepEqual(await st({force:true}),{pro:true,reason:'offline-grace',status:'paid'});
+  const lateBought=await worker.evaluate(()=>Entitlements.status({force:true,now:Date.now()+400*86400000}).then(s=>({pro:s.pro,reason:s.reason})));
+  assert.deepEqual(lateBought,{pro:true,reason:'offline-grace'});
+  // a legacy monthly subscription is kept only for the grace period
+  await worker.evaluate(()=>{server.down=false;server.status='active';server.until=Date.now()+30*86400000});
+  await st({force:true});await worker.evaluate(()=>{server.down=true});
   const late=await worker.evaluate(()=>Entitlements.status({force:true,now:Date.now()+8*86400000}).then(s=>({pro:s.pro,reason:s.reason})));
   assert.deepEqual(late,{pro:false,reason:'offline'});
-  // cancelled at the server → Pro off on the next check
-  await worker.evaluate(()=>{server.down=false;server.pro=false;server.status='canceled'});
-  assert.deepEqual(await st({force:true}),{pro:false,reason:'not-purchased',status:'canceled'});
+  // refunded at the server → Pro off on the next check
+  await worker.evaluate(()=>{server.down=false;server.pro=false;server.status='refunded'});
+  assert.deepEqual(await st({force:true}),{pro:false,reason:'not-purchased',status:'refunded'});
   // auto backup follows the entitlement
   await worker.evaluate(()=>chrome.storage.local.set({pwm_drive_connected:true,pwm_drive_auto:{enabled:true,intervalHours:6}}));
   assert.equal((await worker.evaluate(()=>pwmDriveAutoTick({force:true}))).action,'not-entitled');
   // carrying an id over: invalid rejected, valid replaces the id and clears the cache
   assert.equal(await worker.evaluate(()=>Entitlements.setAccountId('xyz').then(()=>'ok',()=>'rejected')),'rejected');
-  await worker.evaluate(()=>{server.pro=true;server.status='active'});
+  await worker.evaluate(()=>{server.pro=true;server.status='paid'});
   await worker.evaluate(id=>Entitlements.setAccountId(id.toUpperCase()),'b'.repeat(64));
   assert.equal(await worker.evaluate(()=>Entitlements.accountId()),'b'.repeat(64));
-  assert.deepEqual(await st(),{pro:true,reason:'purchased',status:'active'},'cache cleared by the id change');
+  assert.deepEqual(await st(),{pro:true,reason:'purchased',status:'paid'},'cache cleared by the id change');
 
   // --- settings page: the Pro card ---
   await worker.evaluate(()=>chrome.storage.local.remove('pwm_entitlement'));
@@ -88,17 +93,22 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
   assert.deepEqual(await page.evaluate(()=>server.posts[0]),{account:pageAccount});
   assert.match(await page.locator('#billingResult').textContent(),/自動で確認/);
   // paid in the other tab, then back → checked automatically, card and auto-backup unlock
-  await page.evaluate(()=>{server.pro=true;server.status='active';server.until=Date.UTC(2026,10,29)});
+  await page.evaluate(()=>{server.pro=true;server.status='paid';server.until=0});
   await page.evaluate(()=>{Object.defineProperty(document,'visibilityState',{configurable:true,get:()=>'visible'});document.dispatchEvent(new Event('visibilitychange'))});
   await page.waitForFunction(()=>document.getElementById('billingStatus').textContent.includes('ご利用中'));
-  assert.match(await page.locator('#billingStatus').textContent(),/2026/);
+  assert.match(await page.locator('#billingStatus').textContent(),/買い切り/);
   assert.equal(await page.locator('#billingBuy').isVisible(),false);
-  assert.equal(await page.locator('#billingManage').isVisible(),true);
+  assert.equal(await page.locator('#billingManage').isVisible(),false,'a one-time purchase has nothing to cancel');
   await page.waitForFunction(()=>!document.getElementById('driveAutoEnabled').disabled);
-  // manage → customer portal
+  // refunded → free again, can buy again
+  await page.evaluate(()=>{server.pro=false;server.status='refunded'});await page.locator('#billingCheck').click();
+  await page.waitForFunction(()=>document.getElementById('billingStatus').textContent.includes('返金済み'));
+  assert.equal(await page.locator('#billingBuy').isVisible(),true);
+  // a legacy monthly subscription still shows manage → customer portal, and canceling
+  await page.evaluate(()=>{server.pro=true;server.status='active';server.until=Date.UTC(2026,10,29)});await page.locator('#billingCheck').click();
+  await page.waitForFunction(()=>document.getElementById('billingStatus').textContent.includes('2026'));
   await page.locator('#billingManage').click();await page.waitForFunction(()=>server.opened.length===2);
   assert.equal(await page.evaluate(()=>server.opened[1]),'https://billing.stripe.com/p/test');
-  // canceled at period end
   await page.evaluate(()=>{server.cancel=true});await page.locator('#billingCheck').click();
   await page.waitForFunction(()=>document.getElementById('billingStatus').textContent.includes('解約済み'));
   // purchase id: shown, invalid input rejected
@@ -118,6 +128,6 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
   assert.notEqual(viaServer,'development');
   await worker.evaluate(()=>chrome.storage.local.remove('pwm_billing_live_test'));
   assert.deepEqual(errors,[]);
-  console.log('PASS billing: unavailable until configured, stable synced purchase id, purchased → Pro with 6h cache, offline grace then off, cancel turns Pro off, auto backup follows, id transfer, settings card buy/return check/manage/canceling/id, dev install stays Pro');
+  console.log('PASS billing: unavailable until configured, stable synced purchase id, one-time purchase → Pro with 6h cache and kept offline, subscription grace then off, refund turns Pro off, auto backup follows, id transfer, settings card buy/return check/manage/canceling/id, dev install stays Pro');
  }finally{await context.close();fs.rmSync(dir,{recursive:true,force:true});}
 })().catch(e=>{console.error(e);process.exitCode=1});

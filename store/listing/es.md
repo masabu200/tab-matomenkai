@@ -25,7 +25,7 @@ Tab Matomen Kai guarda tus pestañas como «espacios», uno por proyecto o tarea
 Todo se almacena en el almacenamiento local de tu navegador. La copia en Google Drive solo se escribe en tu propio Drive cuando pulsas «Conectar» y «Copia de seguridad ahora». Nada de lo que navegas se envía a ningún sitio.
 
 ■ Edición Pro
-La mayoría de las funciones son gratuitas. La edición Pro (300 ¥ al mes) añade la copia de seguridad automática en Google Drive. Se compra o cancela en Ajustes → Pro. Para comprobar la compra, solo se envía a nuestro servidor un ID de compra aleatorio creado para tu instalación (sin nombre, correo ni datos de navegación). El pago lo gestiona Stripe, con Link como vendedor.
+La mayoría de las funciones son gratuitas. La edición Pro (compra única, 300 ¥) añade la copia de seguridad automática en Google Drive. Se compra en Ajustes → Pro; no hay cargos recurrentes. Para comprobar la compra, solo se envía a nuestro servidor un ID de compra aleatorio creado para tu instalación (sin nombre, correo ni datos de navegación). El pago lo gestiona Stripe, con Link como vendedor.
 
 ## Justificación de permisos (para el panel de desarrollador)
 - tabs / tabGroups: leer las pestañas y los grupos de pestañas abiertos para guardarlos y restaurarlos como espacios.

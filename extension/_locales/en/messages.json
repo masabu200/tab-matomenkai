@@ -1648,5 +1648,11 @@
   },
   "billingLegalPrivacy": {
     "message": "Privacy policy"
+  },
+  "billingStatusPurchased": {
+    "message": "You have Pro (one-time purchase). Thank you!"
+  },
+  "billingStatusRefunded": {
+    "message": "Refunded, so you are back on the free version."
   }
 }

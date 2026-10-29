@@ -1640,5 +1640,11 @@
   },
   "billingLegalPrivacy": {
     "message": "隐私政策"
+  },
+  "billingStatusPurchased": {
+    "message": "您正在使用 Pro 版（一次性购买）。感谢您的购买！"
+  },
+  "billingStatusRefunded": {
+    "message": "已退款，已恢复为免费版。"
   }
 }

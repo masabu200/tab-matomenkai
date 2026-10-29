@@ -61,7 +61,8 @@ globalThis.Entitlements = (() => {
       const record = await fromServer(now);
       return {...record, reason: record.pro ? 'purchased' : 'not-purchased'};
     } catch (error) {
-      if (last?.pro && now - last.checkedAt < OFFLINE_GRACE_MS) return {...last, reason: 'offline-grace'};
+      // A one-time purchase (status 'paid') stays Pro offline for good; a subscription only for the grace period.
+      if (last?.pro && (last.status === 'paid' || now - last.checkedAt < OFFLINE_GRACE_MS)) return {...last, reason: 'offline-grace'};
       return {pro: false, status: last?.status || 'none', reason: 'offline', error: error.message};
     }
   }

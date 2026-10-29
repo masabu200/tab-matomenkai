@@ -1640,5 +1640,11 @@
   },
   "billingLegalPrivacy": {
     "message": "Datenschutzerklärung"
+  },
+  "billingStatusPurchased": {
+    "message": "Du hast Pro (Einmalkauf). Vielen Dank!"
+  },
+  "billingStatusRefunded": {
+    "message": "Erstattet – du nutzt wieder die kostenlose Version."
   }
 }

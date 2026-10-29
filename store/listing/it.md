@@ -25,7 +25,7 @@ Tab Matomen Kai salva le tue schede come «spazi», uno per progetto o attività
 Tutto è memorizzato nell'archiviazione locale del tuo browser. Il backup su Google Drive scrive nel tuo Drive solo quando premi «Connetti» e «Esegui il backup ora». Nulla di ciò che navighi viene inviato altrove.
 
 ■ Edizione Pro
-La maggior parte delle funzioni è gratuita. L’edizione Pro (300 ¥ al mese) aggiunge il backup automatico su Google Drive. Si acquista o si annulla da Impostazioni → Pro. Per verificare l’acquisto viene inviato al nostro server solo un ID di acquisto casuale creato per la tua installazione (niente nome, email o dati di navigazione). Il pagamento è gestito da Stripe, con Link come venditore.
+La maggior parte delle funzioni è gratuita. L’edizione Pro (acquisto una tantum, 300 ¥) aggiunge il backup automatico su Google Drive. Si acquista da Impostazioni → Pro; nessun addebito ricorrente. Per verificare l’acquisto viene inviato al nostro server solo un ID di acquisto casuale creato per la tua installazione (niente nome, email o dati di navigazione). Il pagamento è gestito da Stripe, con Link come venditore.
 
 ## Motivazioni delle autorizzazioni (per la dashboard dello sviluppatore)
 - tabs / tabGroups: leggere le schede e i gruppi di schede aperti per salvarli e ripristinarli come spazi.

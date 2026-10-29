@@ -1647,5 +1647,11 @@
   },
   "billingLegalPrivacy": {
     "message": "Informativa sulla privacy"
+  },
+  "billingStatusPurchased": {
+    "message": "Hai Pro (acquisto una tantum). Grazie!"
+  },
+  "billingStatusRefunded": {
+    "message": "Rimborsato: sei tornato alla versione gratuita."
   }
 }

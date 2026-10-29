@@ -25,7 +25,7 @@ O Tab Matomen Kai salva suas guias como "espaços", um por projeto ou tarefa, e 
 Tudo é armazenado no armazenamento local do seu navegador. O backup no Google Drive só grava no seu próprio Drive quando você clica em "Conectar" e "Fazer backup agora". Nada do que você navega é enviado para lugar nenhum.
 
 ■ Edição Pro
-A maioria dos recursos é gratuita. A edição Pro (¥300 por mês) adiciona o backup automático no Google Drive. Compre ou cancele em Configurações → Pro. Para verificar a compra, só um ID de compra aleatório criado para a sua instalação é enviado ao nosso servidor (sem nome, e-mail ou dados de navegação). O pagamento é feito pela Stripe, com a Link como vendedora.
+A maioria dos recursos é gratuita. A edição Pro (compra única, ¥300) adiciona o backup automático no Google Drive. Compre em Configurações → Pro; não há cobrança recorrente. Para verificar a compra, só um ID de compra aleatório criado para a sua instalação é enviado ao nosso servidor (sem nome, e-mail ou dados de navegação). O pagamento é feito pela Stripe, com a Link como vendedora.
 
 ## Justificativas das permissões (para o painel do desenvolvedor)
 - tabs / tabGroups: ler as guias e os grupos de guias abertos para salvá-los e restaurá-los como espaços.

@@ -1,16 +1,18 @@
 // Tab Matomen Kai billing worker (Cloudflare Workers, no dependencies).
 // Records who paid for Pro (Stripe Checkout + Managed Payments) and answers the extension.
+// Pro is a one-time purchase: a paid Checkout makes the account Pro for good; a full refund
+// takes it back. Subscription records from the earlier monthly plan (test mode only) still resolve.
 //
 // Routes
-//   POST /v1/checkout     {account}  -> {url}   Stripe Checkout Session (subscription, Managed Payments)
-//   POST /v1/portal       {account}  -> {url}   Stripe customer portal for the account's customer
-//   GET  /v1/entitlement?account=... -> {pro, status, until, cancelAtPeriodEnd}
+//   POST /v1/checkout     {account}  -> {url}   Stripe Checkout Session (one-time payment, Managed Payments)
+//   POST /v1/portal       {account}  -> {url}   Stripe customer portal (legacy subscriptions only)
+//   GET  /v1/entitlement?account=... -> {pro, status, until, cancelAtPeriodEnd}   status 'paid' = bought
 //   POST /v1/webhook      Stripe webhook (signature verified)
 //   GET  /done, /cancel   small pages shown after Checkout
 //
 // Environment (wrangler secrets / vars):
 //   STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET  (secrets — never commit)
-//   STRIPE_PRICE_ID       price of the Pro subscription
+//   STRIPE_PRICE_ID       one-time price of Pro
 //   ALLOWED_ORIGINS       comma-separated, e.g. chrome-extension://ofpnbokbnlfjglogdhoegmiallanobdb
 //   PUBLIC_URL            this worker's https URL (for success/cancel pages)
 //   MANAGED_PAYMENTS      "true" to sell through Stripe Managed Payments
@@ -79,6 +81,7 @@ export async function verifySignature(payload, header, secret, nowSeconds = Math
 // ---------- storage ----------
 const recordKey = account => `acct:${account}`;
 const customerKey = customer => `cust:${customer}`;
+const paymentKey = paymentIntent => `pi:${paymentIntent}`;
 async function getRecord(env, account) { return JSON.parse((await env.BILLING.get(recordKey(account))) || 'null'); }
 async function putRecord(env, account, record) {
   await env.BILLING.put(recordKey(account), JSON.stringify(record));
@@ -86,6 +89,8 @@ async function putRecord(env, account, record) {
 }
 export function entitlementOf(record, now = Date.now()) {
   if (!record || !record.status) return {pro: false, status: 'none', until: 0, cancelAtPeriodEnd: false};
+  // One-time purchase: Pro with no end date until refunded.
+  if (record.status === 'paid' || record.status === 'refunded') return {pro: record.status === 'paid', status: record.status, until: 0, cancelAtPeriodEnd: false};
   // A canceled subscription ends at ended_at (now for an immediate cancel, the period end otherwise).
   const until = Number((record.status === 'canceled' && record.endedAt) || record.periodEnd || 0) * 1000;
   const pro = ACTIVE.has(record.status) || (record.status === 'canceled' && until > now);
@@ -110,6 +115,14 @@ async function applySubscription(env, account, subscription, eventCreated) {
   await putRecord(env, account, record);
   return record;
 }
+// A paid one-time Checkout Session. Remembers the PaymentIntent so a later refund can find the account.
+async function applyPurchase(env, account, session, eventCreated) {
+  const prev = (await getRecord(env, account)) || {};
+  const record = {...prev, customer: session.customer || prev.customer, status: 'paid', paymentIntent: session.payment_intent || prev.paymentIntent, paidAt: eventCreated, eventCreated};
+  await putRecord(env, account, record);
+  if (record.paymentIntent) await env.BILLING.put(paymentKey(record.paymentIntent), account);
+  return record;
+}
 async function accountFor(env, object) {
   const fromMetadata = object?.metadata?.account || object?.subscription_details?.metadata?.account;
   if (ACCOUNT_RE.test(fromMetadata || '')) return fromMetadata;
@@ -125,9 +138,13 @@ async function handleWebhook(request, env) {
   if (await env.BILLING.get(seen)) return json({received: true, duplicate: true});
   const object = event.data?.object || {};
   switch (event.type) {
-    case 'checkout.session.completed': {
+    case 'checkout.session.completed':
+    case 'checkout.session.async_payment_succeeded': {
       const account = ACCOUNT_RE.test(object.client_reference_id || '') ? object.client_reference_id : await accountFor(env, object);
-      if (account && object.subscription) {
+      if (account && object.mode === 'payment') {
+        // Card payments arrive paid; delayed methods arrive later as async_payment_succeeded.
+        if (object.payment_status === 'paid') await applyPurchase(env, account, object, event.created);
+      } else if (account && object.subscription) {
         const subscription = await stripe(env, 'GET', `/subscriptions/${object.subscription}`);
         await applySubscription(env, account, {...subscription, customer: object.customer || subscription.customer}, event.created);
       }
@@ -138,6 +155,15 @@ async function handleWebhook(request, env) {
     case 'customer.subscription.deleted': {
       const account = await accountFor(env, object);
       if (account) await applySubscription(env, account, object, event.created);
+      break;
+    }
+    case 'charge.refunded': {
+      // Only a full refund takes Pro back; a partial refund (goodwill) keeps it.
+      const account = object.payment_intent ? await env.BILLING.get(paymentKey(object.payment_intent)) : null;
+      if (ACCOUNT_RE.test(account || '') && object.refunded) {
+        const prev = (await getRecord(env, account)) || {};
+        if (prev.status === 'paid') await putRecord(env, account, {...prev, status: 'refunded', refundedAt: event.created, eventCreated: event.created});
+      }
       break;
     }
     default: break;
@@ -155,13 +181,13 @@ async function handleCheckout(request, env, headers) {
   const account = await readAccount(request);
   if (!account) return json({error: 'bad account'}, 400, headers);
   const record = await getRecord(env, account);
-  if (entitlementOf(record).pro) return json({error: 'already subscribed'}, 409, headers);
+  if (entitlementOf(record).pro) return json({error: 'already purchased'}, 409, headers);
   const base = String(env.PUBLIC_URL || '').replace(/\/$/, '');
   const session = await stripe(env, 'POST', '/checkout/sessions', {
-    mode: 'subscription',
+    mode: 'payment',
     line_items: {0: {price: env.STRIPE_PRICE_ID, quantity: 1}},
     client_reference_id: account,
-    subscription_data: {metadata: {account}},
+    payment_intent_data: {metadata: {account}},
     metadata: {account},
     ...(record?.customer ? {customer: record.customer} : {}),
     ...(env.MANAGED_PAYMENTS === 'true' ? {managed_payments: {enabled: true}} : {}),
@@ -175,7 +201,7 @@ async function handlePortal(request, env, headers) {
   const account = await readAccount(request);
   if (!account) return json({error: 'bad account'}, 400, headers);
   const record = await getRecord(env, account);
-  if (!record?.customer) return json({error: 'no subscription'}, 404, headers);
+  if (!record?.customer || !record.subscription) return json({error: 'no subscription'}, 404, headers);
   const base = String(env.PUBLIC_URL || '').replace(/\/$/, '');
   const session = await stripe(env, 'POST', '/billing_portal/sessions', {customer: record.customer, return_url: `${base}/done`});
   return json({url: session.url}, 200, headers);
@@ -197,7 +223,7 @@ export default {
         if (!ACCOUNT_RE.test(account)) return json({error: 'bad account'}, 400, headers);
         return json(entitlementOf(await getRecord(env, account)), 200, {...headers, 'Cache-Control': 'no-store'});
       }
-      if (url.pathname === '/done') return page('Tab Matomen Kai Pro', 'ありがとうございます。拡張機能の設定画面に戻り、「購入状況を確認」を押してください。<br>Thank you! Go back to the extension settings and press "Check purchase".');
+      if (url.pathname === '/done') return page('Tab Matomen Kai Pro', 'ありがとうございます。この画面を閉じて拡張機能に戻ると、Pro 版が使えるようになります（反映されない場合は、設定の「購入状況を確認」を押してください）。領収書はメールでお送りします。<br>Thank you! Close this page and go back to the extension; Pro turns on automatically (if not, press "Check purchase" in Settings). A receipt is sent by email.');
       if (url.pathname === '/cancel') return page('Tab Matomen Kai', '購入は完了していません。この画面を閉じて構いません。<br>The purchase was not completed. You can close this page.');
       return json({error: 'not found'}, 404, headers);
     } catch (error) {

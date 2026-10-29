@@ -2039,5 +2039,11 @@
   },
   "billingLegalPrivacy": {
     "message": "プライバシーポリシー"
+  },
+  "billingStatusPurchased": {
+    "message": "Pro 版をご利用中です（買い切り・ご購入ありがとうございます）。"
+  },
+  "billingStatusRefunded": {
+    "message": "返金済みのため、無料版に戻りました。"
   }
 }

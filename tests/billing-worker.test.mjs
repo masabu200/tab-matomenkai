@@ -32,22 +32,46 @@ test('webhook signature: valid, wrong secret, tampered, stale, missing', async (
   assert.equal(await verifySignature(payload, '', 'whsec_test', now), false);
 });
 
-test('checkout creates a subscription session with Managed Payments and the account reference; CORS only for the extension', async () => {
+test('checkout creates a one-time payment session with Managed Payments and the account reference; CORS only for the extension', async () => {
   const e = env(); stripeCalls = [];
   const response = await call(e, '/v1/checkout', {account: ACCOUNT});
   assert.equal(response.status, 200);
   assert.equal(response.headers.get('Access-Control-Allow-Origin'), ORIGIN);
   assert.equal((await response.json()).url, 'https://checkout.stripe.com/c/cs_1');
   const body = stripeCalls[0].body;
-  assert.equal(body.mode, 'subscription'); assert.equal(body['line_items[0][price]'], 'price_pro');
-  assert.equal(body.client_reference_id, ACCOUNT); assert.equal(body['subscription_data[metadata][account]'], ACCOUNT);
+  assert.equal(body.mode, 'payment'); assert.equal(body['line_items[0][price]'], 'price_pro');
+  assert.equal(body.client_reference_id, ACCOUNT); assert.equal(body['payment_intent_data[metadata][account]'], ACCOUNT);
   assert.equal(body['managed_payments[enabled]'], 'true'); assert.equal(stripeCalls[0].auth, 'Bearer sk_test_x');
   assert.equal((await call(e, '/v1/checkout', {account: 'nope'})).status, 400);
   const other = await worker.fetch(new Request('https://billing.example/v1/checkout', {method: 'POST', headers: {Origin: 'https://evil.example'}, body: JSON.stringify({account: ACCOUNT})}), e);
   assert.equal(other.headers.get('Access-Control-Allow-Origin'), null);
 });
 
-test('webhooks drive the entitlement: completed → pro, duplicate ignored, canceled at period end stays pro until the end, deleted later → not pro, old events ignored', async () => {
+test('one-time purchase: paid checkout → Pro for good, delayed payment only after it succeeds, partial refund keeps Pro, full refund takes it back', async () => {
+  const e = env(); const created = Math.floor(Date.now() / 1000);
+  const ent = async () => (await call(e, '/v1/entitlement?account=' + ACCOUNT, null, 'GET')).json();
+  // a delayed payment method: the session completes unpaid → not Pro yet
+  await webhook(e, {id: 'evt_p0', type: 'checkout.session.completed', created, data: {object: {mode: 'payment', payment_status: 'unpaid', client_reference_id: ACCOUNT, payment_intent: 'pi_1', customer: 'cus_9'}}});
+  assert.equal((await ent()).pro, false);
+  await webhook(e, {id: 'evt_p1', type: 'checkout.session.async_payment_succeeded', created: created + 5, data: {object: {mode: 'payment', payment_status: 'paid', client_reference_id: ACCOUNT, payment_intent: 'pi_1', customer: 'cus_9'}}});
+  assert.deepEqual(await ent(), {pro: true, status: 'paid', until: 0, cancelAtPeriodEnd: false});
+  // bought → no second checkout, no subscription portal
+  assert.equal((await call(e, '/v1/checkout', {account: ACCOUNT})).status, 409);
+  assert.equal((await call(e, '/v1/portal', {account: ACCOUNT})).status, 404);
+  // partial refund keeps Pro; full refund takes it back
+  await webhook(e, {id: 'evt_r1', type: 'charge.refunded', created: created + 10, data: {object: {payment_intent: 'pi_1', refunded: false, amount_refunded: 100}}});
+  assert.equal((await ent()).pro, true);
+  await webhook(e, {id: 'evt_r2', type: 'charge.refunded', created: created + 20, data: {object: {payment_intent: 'pi_1', refunded: true, amount_refunded: 300}}});
+  assert.deepEqual(await ent(), {pro: false, status: 'refunded', until: 0, cancelAtPeriodEnd: false});
+  // a refund for an unknown payment is ignored
+  assert.equal((await webhook(e, {id: 'evt_r3', type: 'charge.refunded', created, data: {object: {payment_intent: 'pi_other', refunded: true}}})).status, 200);
+  // after a refund the same purchase ID can buy again; a card payment arrives already paid
+  assert.equal((await call(e, '/v1/checkout', {account: ACCOUNT})).status, 200);
+  await webhook(e, {id: 'evt_p2', type: 'checkout.session.completed', created: created + 30, data: {object: {mode: 'payment', payment_status: 'paid', client_reference_id: ACCOUNT, payment_intent: 'pi_2'}}});
+  assert.equal((await ent()).status, 'paid');
+});
+
+test('legacy monthly subscriptions (test mode) still resolve: completed → pro, duplicate ignored, canceled at period end stays pro until the end, deleted later → not pro, old events ignored', async () => {
   const e = env();
   assert.deepEqual(await (await call(e, '/v1/entitlement?account=' + ACCOUNT, null, 'GET')).json(), {pro: false, status: 'none', until: 0, cancelAtPeriodEnd: false});
   assert.equal((await webhook(e, {id: 'evt_bad', type: 'checkout.session.completed', created: 1, data: {object: {}}}, 't=1,v1=00')).status, 400);
@@ -78,6 +102,8 @@ test('webhooks drive the entitlement: completed → pro, duplicate ignored, canc
 test('entitlement rules', () => {
   const now = Date.now(); const future = Math.floor(now / 1000) + 100; const past = Math.floor(now / 1000) - 100;
   assert.equal(entitlementOf(null).pro, false);
+  assert.deepEqual(entitlementOf({status: 'paid'}, now), {pro: true, status: 'paid', until: 0, cancelAtPeriodEnd: false});
+  assert.equal(entitlementOf({status: 'refunded'}, now).pro, false);
   assert.equal(entitlementOf({status: 'trialing', periodEnd: future}, now).pro, true);
   assert.equal(entitlementOf({status: 'past_due', periodEnd: future}, now).pro, true, 'grace while Stripe retries the payment');
   assert.equal(entitlementOf({status: 'unpaid', periodEnd: future}, now).pro, false);

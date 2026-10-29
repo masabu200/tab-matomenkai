@@ -25,7 +25,7 @@ Tab Matomen Kai enregistre vos onglets sous forme d'« espaces », un par projet
 Tout est stocké dans le stockage local de votre navigateur. La sauvegarde sur Google Drive n'écrit dans votre propre Drive que lorsque vous cliquez sur « Se connecter » et « Sauvegarder maintenant ». Rien de ce que vous consultez n'est envoyé où que ce soit.
 
 ■ Édition Pro
-La plupart des fonctions sont gratuites. L’édition Pro (300 ¥ par mois) ajoute la sauvegarde automatique sur Google Drive. Achat et résiliation dans Paramètres → Pro. Pour vérifier l’achat, seul un identifiant d’achat aléatoire propre à votre installation est envoyé à notre serveur (ni nom, ni e-mail, ni données de navigation). Le paiement est traité par Stripe, Link apparaissant comme vendeur.
+La plupart des fonctions sont gratuites. L’édition Pro (achat unique, 300 ¥) ajoute la sauvegarde automatique sur Google Drive. Achat dans Paramètres → Pro ; aucun paiement récurrent. Pour vérifier l’achat, seul un identifiant d’achat aléatoire propre à votre installation est envoyé à notre serveur (ni nom, ni e-mail, ni données de navigation). Le paiement est traité par Stripe, Link apparaissant comme vendeur.
 
 ## Justification des autorisations (pour le tableau de bord développeur)
 - tabs / tabGroups : lire les onglets et groupes d'onglets ouverts pour les enregistrer et les restaurer sous forme d'espaces.
