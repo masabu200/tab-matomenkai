@@ -1,7 +1,7 @@
 # Chrome 应用商店商品详情（简体中文）
 
 ## 名称（最多 45 个字符）
-Tab Matomen Kai – 标签页空间
+Tab Matomen Kai – 按项目管理和保存标签页 (from appStoreName in the manifest; shipped in 1.5.0)
 
 ## 摘要（最多 132 个字符）
 为每个项目创建一个“空间”，在同一窗口中整组切换标签页。支持保存、恢复、批量操作、撤销和右键保存，提供 10 种语言。

@@ -1,7 +1,7 @@
 # Chrome Web Store Eintrag (Deutsch)
 
 ## Name (max. 45 Zeichen)
-Tab Matomen Kai – Tab-Bereiche
+Tab Matomen Kai – Tab-Manager pro Projekt (from appStoreName in the manifest; shipped in 1.5.0)
 
 ## Kurzbeschreibung (max. 132 Zeichen)
 Ein „Bereich“ pro Projekt, ganze Tab-Sets im Fenster wechseln. Speichern, Wiederherstellen, Sammelaktionen, Rückgängig. 10 Sprachen.

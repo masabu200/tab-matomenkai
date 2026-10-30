@@ -1058,6 +1058,10 @@
   "appName": {
     "message": "Tab Matomen Kai"
   },
+  "appStoreName": {
+    "message": "Tab Matomen Kai – Gestionnaire d'onglets",
+    "description": "Store listing name (manifest name). Max 45 characters."
+  },
   "appDescription": {
     "message": "Créez un espace par projet et passez d'un jeu d'onglets à l'autre dans la même fenêtre Chrome."
   },

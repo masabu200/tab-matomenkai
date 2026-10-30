@@ -1,7 +1,7 @@
 # Fiche Chrome Web Store (Français)
 
 ## Nom (45 caractères max.)
-Tab Matomen Kai – Espaces d'onglets
+Tab Matomen Kai – Gestionnaire d'onglets (from appStoreName in the manifest; shipped in 1.5.0)
 
 ## Résumé (132 caractères max.)
 Un « espace » par projet, changez d'ensemble d'onglets d'un coup. Enregistrer, restaurer, actions groupées, annuler. 10 langues.

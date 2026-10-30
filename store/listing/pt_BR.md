@@ -1,7 +1,7 @@
 # Página da Chrome Web Store (Português do Brasil)
 
 ## Nome (máx. 45 caracteres)
-Tab Matomen Kai – Espaços de guias
+Tab Matomen Kai – Gerenciador de guias (from appStoreName in the manifest; shipped in 1.5.0)
 
 ## Resumo (máx. 132 caracteres)
 Crie um "espaço" por projeto e troque o conjunto de guias em uma janela. Salvar, restaurar, ações em lote, desfazer. 10 idiomas.

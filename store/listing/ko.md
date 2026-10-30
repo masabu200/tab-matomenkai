@@ -1,7 +1,7 @@
 # Chrome 웹 스토어 등록 정보 (한국어)
 
 ## 이름 (최대 45자)
-Tab Matomen Kai – 탭 스페이스
+Tab Matomen Kai – 프로젝트별 탭 관리 (from appStoreName in the manifest; shipped in 1.5.0)
 
 ## 요약 (최대 132자)
 프로젝트마다 '스페이스'를 만들어 같은 창에서 탭 구성을 통째로 전환하세요. 저장, 복원, 일괄 작업, 실행 취소, 우클릭 저장을 지원하며 10개 언어로 제공됩니다.

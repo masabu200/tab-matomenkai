@@ -1411,6 +1411,10 @@
     "message": "タブまとめん改",
     "description": "manifest name"
   },
+  "appStoreName": {
+    "message": "タブまとめん改 – 案件ごとのタブ管理・保存",
+    "description": "Store listing name (manifest name). Max 45 characters."
+  },
   "appDescription": {
     "message": "案件ごとにタブをまるごと保存・切り替え。ピン留め、一括操作、右クリック保存、Googleドライブのバックアップで、タブ地獄から抜け出す拡張機能。",
     "description": "manifest description (store summary, max 132)"

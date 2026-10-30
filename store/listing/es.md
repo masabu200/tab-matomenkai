@@ -1,7 +1,7 @@
 # Ficha de Chrome Web Store (Español)
 
 ## Nombre (máx. 45 caracteres)
-Tab Matomen Kai – Espacios de pestañas
+Tab Matomen Kai – Gestor de pestañas (from appStoreName in the manifest; shipped in 1.5.0)
 
 ## Resumen (máx. 132 caracteres)
 Crea un «espacio» por proyecto y cambia de conjunto de pestañas en una ventana. Guardar, restaurar, acciones en bloque, deshacer.

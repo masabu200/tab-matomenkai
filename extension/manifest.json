@@ -28,7 +28,7 @@
     "48": "icons/icon48.png"
   },
   "manifest_version": 3,
-  "name": "__MSG_appName__",
+  "name": "__MSG_appStoreName__",
   "permissions": [
     "tabs",
     "storage",

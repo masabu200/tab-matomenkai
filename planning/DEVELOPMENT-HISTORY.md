@@ -487,4 +487,5 @@ Playwright 1.62 の `page.waitForFunction` に async 関数を渡すと、最初
 - `tools/store-screenshots.cjs`：今の画面（設定ボタンがサイドバー下）で撮り直し、スペース作成モーダルの撮影を追加。お気に入り・最近使った欄の重複表示をなくした。
 - `tools/store-composite.cjs`：5枚の順と文言を変更（案件ごとのスペース → Googleドライブに自動保存（Pro・買い切り300円）→ 右クリック保存 → 一括操作 → 色とアイコン）。Drive の保存一覧は画面の見本（ファイル名とフォルダ名は実際の命名に合わせた）。日本語・英語とプロモーションタイル2種を生成。
 - `store/SUBMIT-1.5.0.md` に画像の差し替え手順を追加。ストアへのアップロードは利用者の手作業。
+- 続き：ストアの名前に検索語を追加。`_locales/*/messages.json` に `appStoreName` を追加し（キー追加のみ。拡張内の表示名 appName はそのまま）、manifest の name をそれに切り替え。日本語は「タブまとめん改 – 案件ごとのタブ管理・保存」、英語は「Tab Matomen Kai – Tab Manager & Session Saver」、ほか8言語も45文字以内。詳細説明の冒頭（日本語・英語）に Google ドライブへの自動バックアップ（Pro・買い切り300円）を追加。i18n・スペース作成のテスト合格、ZIP を作り直して展開読み込みで名前を確認。
 

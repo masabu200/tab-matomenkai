@@ -1,7 +1,7 @@
 # Scheda Chrome Web Store (Italiano)
 
 ## Nome (max 45 caratteri)
-Tab Matomen Kai – Spazi di schede
+Tab Matomen Kai – Gestione schede (from appStoreName in the manifest; shipped in 1.5.0)
 
 ## Riepilogo (max 132 caratteri)
 Uno «spazio» per progetto, cambia serie di schede in una finestra. Salva, ripristina, azioni multiple, annulla. 10 lingue.

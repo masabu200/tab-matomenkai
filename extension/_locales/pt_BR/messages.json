@@ -1058,6 +1058,10 @@
   "appName": {
     "message": "Tab Matomen Kai"
   },
+  "appStoreName": {
+    "message": "Tab Matomen Kai – Gerenciador de guias",
+    "description": "Store listing name (manifest name). Max 45 characters."
+  },
   "appDescription": {
     "message": "Crie um espaço para cada projeto e alterne entre conjuntos de guias na mesma janela do Chrome."
   },

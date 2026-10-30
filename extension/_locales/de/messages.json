@@ -1058,6 +1058,10 @@
   "appName": {
     "message": "Tab Matomen Kai"
   },
+  "appStoreName": {
+    "message": "Tab Matomen Kai – Tab-Manager pro Projekt",
+    "description": "Store listing name (manifest name). Max 45 characters."
+  },
   "appDescription": {
     "message": "Legen Sie für jedes Projekt einen Bereich an und wechseln Sie im selben Chrome-Fenster zwischen Tab-Sets."
   },

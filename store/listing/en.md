@@ -1,9 +1,9 @@
 # Chrome Web Store listing (English)
 
-Target version: 1.4.0 (submission).
+Target version: 1.5.0 (submission).
 
 ## Name (max 45 characters)
-Tab Matomen Kai – Tab Spaces
+Tab Matomen Kai – Tab Manager & Session Saver (from appStoreName in the manifest; shipped in 1.5.0)
 
 ## Summary (max 132 characters) — not editable in the dashboard; it comes from the manifest description (appDescription in `_locales/en/messages.json`) and is included in 1.4.0.
 Save and switch whole tab sets per project. Pinned tabs, bulk actions, right-click save and Google Drive backup end tab overload.
@@ -11,6 +11,7 @@ Save and switch whole tab sets per project. Pinned tabs, bulk actions, right-cli
 ## Detailed description (paste into the dashboard "Description" field)
 Too many tabs, and you no longer know which belongs to what? Keeping tabs open overnight so you can pick up tomorrow?
 Tab Matomen Kai ends tab overload.
+Your saved tabs are backed up to your own Google Drive automatically (Pro, one-time ¥300). If your laptop dies, restore everything on the new one.
 
 Save the tabs of each project or task as a "space", then switch the whole set with one click inside the same Chrome window. Only the tabs for the project at hand are open, and your head stays clear too.
 

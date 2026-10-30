@@ -1058,6 +1058,10 @@
   "appName": {
     "message": "Tab Matomen Kai"
   },
+  "appStoreName": {
+    "message": "Tab Matomen Kai – 按项目管理和保存标签页",
+    "description": "Store listing name (manifest name). Max 45 characters."
+  },
   "appDescription": {
     "message": "为每个项目创建一个空间，在同一个 Chrome 窗口内切换不同的标签页组合。"
   },

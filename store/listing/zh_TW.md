@@ -1,7 +1,7 @@
 # Chrome 線上應用程式商店商品資訊（繁體中文）
 
 ## 名稱（最多 45 個字元）
-Tab Matomen Kai – 分頁空間
+Tab Matomen Kai – 依專案管理與儲存分頁 (from appStoreName in the manifest; shipped in 1.5.0)
 
 ## 摘要（最多 132 個字元）
 為每個專案建立一個「空間」，在同一個視窗中整組切換分頁。支援儲存、還原、批次操作、復原與右鍵儲存，提供 10 種語言。

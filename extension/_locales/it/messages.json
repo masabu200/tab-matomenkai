@@ -1058,6 +1058,10 @@
   "appName": {
     "message": "Tab Matomen Kai"
   },
+  "appStoreName": {
+    "message": "Tab Matomen Kai – Gestione schede",
+    "description": "Store listing name (manifest name). Max 45 characters."
+  },
   "appDescription": {
     "message": "Crea uno spazio per ogni progetto e passa da un gruppo di schede all'altro nella stessa finestra di Chrome."
   },
