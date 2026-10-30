@@ -26,7 +26,7 @@ Webhook は同じイベントの二重受信（event id で判定）と、古い
 ## 現在の設定（2026-10-29、**本番**）
 
 - **本番で販売中の状態**：Managed Payments 有効（すぐに使用可能）、商品 `prod_VWvwZkdKxGJYk9`、価格 `price_1UVs4TRvCR021e0tup1AvrcH`（¥300・1回限り）、Webhook `we_1UVs6LRvCR021e0ts6OOkLii`（3イベント）、鍵2つは本番用に登録済み。設定画面から本番の決済画面が開くことを確認済み（`evidence/billing-checkout-live.png`）。
-- 本番で実際に購入した確認はまだ（1回買って、すぐ返金して確かめるとよい）。
+- 2026-10-29 に本番で実際に ¥300 を購入し、Webhook 200 → `paid` になることを確認済み。テストモードの Webhook は無効化、Managed Payments の「デフォルトで有効」はオフ（Pro 版の Checkout は引き続き Link 経由）。
 - テストモードに戻すときは、`STRIPE_PRICE_ID` をテストの価格にし、鍵2つをテスト用に入れ直して deploy。
 
 ### テストモードのときの記録
@@ -102,7 +102,7 @@ chrome.storage.local.set({pwm_billing_live_test: true})
 ### 6. 公開前の書類
 - 利用規約・特定商取引法に基づく表記・プライバシーポリシーは `store/terms.*.md`・`store/tokushoho.ja.md`・`store/privacy-policy.*.md` が正本。編集したら `node tools/build-legal.cjs` で `server/public/` を作り直し、`wrangler deploy` する。公開先は Worker の `/terms`・`/tokushoho`・`/privacy`（英語は `/en/terms`・`/en/privacy`）。拡張機能の設定の「Pro 版」からリンクしている。
 - Chrome ウェブストアのダッシュボードで、プライバシーポリシーの URL に `/privacy` を入れ、「アプリ内購入あり」を選ぶ。
-- 国内の消費税の扱いと海外売上の申告区分を税理士に確認する（`planning/PAY-01-PROVIDERS.md`）。
+- 消費税・所得税の扱いと記帳の方法は `planning/TAX-NOTES.md`（税理士には相談しない方針）。
 - 特商法の表記に、運営統括責任者の氏名と電話番号を出している（Webの相棒の表記と同じ）。省略して「請求があれば遅滞なく開示」とするかは、必要なら専門家に確認する。
 
 ## テスト
