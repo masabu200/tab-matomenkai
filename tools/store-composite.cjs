@@ -10,22 +10,22 @@ const LOGO=fileUrl(path.join(ROOT,'extension','logo.png'));
 const COPY={
  ja:{brand:'タブまとめん改',font:'"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP",system-ui,sans-serif',
   slides:[
-   {img:'01-spaces.png',crop:{x:0,y:0,w:920,h:760},label:'案件ごとのスペース',title:'タブ地獄から、<br>ワンクリックで脱出。',sub:'案件ごとにタブをまとめて保存。切り替えれば、その案件のタブだけがさっと開きます。',chips:['カテゴリーで整理','タブグループもそのまま','お気に入り・最近使った'],callouts:[{x:120,y:530,text:'クリックで切り替え'},{x:330,y:628,text:'タブグループも保存'}],tone:'light'},
-   {img:'02-bulk-actions.png',crop:{x:236,y:96,w:900,h:640},label:'一括操作',title:'選んで、<br>まとめて片付ける。',sub:'必要なタブを選んで、別の案件へ移動・グループ化・アーカイブ。間違えても元に戻せます。',chips:['Shift で範囲選択','URL一覧をコピー','⌘Z / Ctrl+Z で元に戻す'],callouts:[{x:340,y:182,text:'3件をまとめて移動'}],tone:'dark'},
-   {mock:'context',label:'右クリック保存',title:'見ているページを、<br>右クリックで保存。',sub:'どのサイトからでも、右クリックして保存先のスペースを選ぶだけ。ダッシュボードに戻る必要はありません。',chips:['どのページからでも','保存先を選ぶだけ','重複は自動でスキップ'],tone:'light',menu:{save:'タブまとめん改に保存',items:['コーポレートサイト制作','ECサイト改修','LP 制作（春キャンペーン）','Chrome 拡張の学習'],page:'参考になる記事 - Web制作ブログ',others:['戻る','進む','再読み込み','名前を付けて保存…','印刷…']}},
-   {img:'04-settings.png',crop:{x:450,y:140,w:790,h:640},label:'バックアップと自動整理',title:'バックアップも<br>整理も、おまかせ。',sub:'Googleドライブに日時付きで保存して世代管理。しばらく使っていない案件は自動でアーカイブ。',chips:['Googleドライブ連携','残す世代数を選べる','30日間のゴミ箱'],tone:'dark'},
-   {img:'03-card-dark.png',crop:{x:0,y:0,w:1000,h:720},label:'ダークモード・10言語',title:'ダークモードと、<br>10言語に対応。',sub:'リスト表示とカード表示を切り替え。表示言語は設定からいつでも変えられます。',chips:['日本語','English','简体中文','繁體中文','한국어','Español','Português','Deutsch','Français','Italiano'],tone:'dark'},
+   {img:'01-spaces.png',crop:{x:0,y:0,w:920,h:760},label:'案件ごとのスペース',title:'タブ地獄から、<br>ワンクリックで脱出。',sub:'A社のサイト、B社のLP、請求・経理…。案件ごとにタブをまとめて保存。切り替えれば、その案件のタブだけが開きます。',chips:['カテゴリーで整理','タブグループもそのまま','ピン留めタブは残る'],callouts:[{x:236,y:300,text:'← クリックで切り替え'},{x:300,y:504,text:'タブグループも保存'}],tone:'light'},
+   {mock:'drive',label:'Googleドライブに自動保存',title:'PCが壊れても、<br>タブは消えない。',sub:'保存したスペースを、あなたのGoogleドライブに日時付きで自動バックアップ。新しいPCでも、選んだ日時のバックアップから元に戻せます。',chips:['自動バックアップは Pro（買い切り300円）','世代を残して選んで復元','開発者のサーバーには送らない'],tone:'dark',drive:{folder:'タブまとめん改 バックアップ',prefix:'タブまとめん改_',status:'自動バックアップ：6時間ごと',last:'最終バックアップ 10/30 12:00',pro:'Pro'}},
+   {mock:'context',label:'右クリック保存',title:'見ているページを、<br>右クリックで保存。',sub:'参考サイトも資料も、右クリックして保存先の案件を選ぶだけ。ダッシュボードに戻る必要はありません。',chips:['どのページからでも','保存先を選ぶだけ','重複は自動でスキップ'],tone:'light',menu:{save:'タブまとめん改に保存',items:['コーポレートサイト制作','ECサイト改修','LP 制作（春キャンペーン）','Chrome 拡張の学習'],page:'参考になる記事 - Web制作ブログ',others:['戻る','進む','再読み込み','名前を付けて保存…','印刷…']}},
+   {img:'02-bulk-actions.png',crop:{x:236,y:96,w:900,h:640},label:'一括操作',title:'選んで、<br>まとめて片付ける。',sub:'必要なタブを選んで、別の案件へ移動・グループ化・アーカイブ。URL一覧は報告用にそのままコピー。間違えても元に戻せます。',chips:['Shift で範囲選択','URL一覧をコピー','⌘Z / Ctrl+Z で元に戻す'],callouts:[{x:560,y:150,text:'3件をまとめて移動'}],tone:'dark'},
+   {img:'06-create-space.png',crop:{x:210,y:80,w:860,h:640},label:'見分けやすく',title:'案件が増えても、<br>色とアイコンで迷わない。',sub:'スペースを作るときに、所属カテゴリー・色・アイコン画像をまとめて設定。クライアントのロゴも使えます。',chips:['カテゴリーは3階層まで','色・画像のアイコン','テーマ5色・ダークモード'],tone:'light'},
   ],
-  promo:{tag:'案件ごとに、タブをまるごと切り替え。',sub:'保存・復元・一括操作・右クリック保存・Googleドライブ'}},
+  promo:{tag:'案件ごとに、タブをまるごと切り替え。',sub:'フリーランスの案件管理に。Googleドライブへ自動保存'}},
  en:{brand:'Tab Matomen Kai',font:'"Inter","Helvetica Neue",Arial,system-ui,sans-serif',
   slides:[
-   {img:'01-spaces.png',crop:{x:0,y:0,w:920,h:760},label:'One space per project',title:'Escape tab overload<br>in one click.',sub:'Save the tabs of each project as a space. Switch, and only that project\'s tabs open.',chips:['Organize with categories','Tab groups kept intact','Favorites & recents'],callouts:[{x:120,y:530,text:'Click to switch'},{x:330,y:628,text:'Tab groups saved too'}],tone:'light'},
-   {img:'02-bulk-actions.png',crop:{x:236,y:96,w:900,h:640},label:'Bulk actions',title:'Select, then tidy up<br>in one go.',sub:'Pick tabs and move, group or archive them. Made a mistake? Undo it.',chips:['Shift-click ranges','Copy URL lists','Undo with ⌘Z / Ctrl+Z'],callouts:[{x:340,y:182,text:'Move 3 tabs at once'}],tone:'dark'},
-   {mock:'context',label:'Right-click save',title:'Right-click to save<br>any page.',sub:'From any site, right-click and pick a space. No trip back to the dashboard.',chips:['Works on any page','Just pick a space','Duplicates skipped'],tone:'light',menu:{save:'Save to Tab Matomen Kai',items:['Corporate website','Online store refresh','Spring campaign landing page','Learning Chrome extensions'],page:'A helpful article - Web design blog',others:['Back','Forward','Reload','Save as…','Print…']}},
-   {img:'04-settings.png',crop:{x:450,y:140,w:790,h:640},label:'Backup & auto-tidy',title:'Backups and tidying<br>on autopilot.',sub:'Timestamped backups to Google Drive with version history. Unused projects are archived automatically.',chips:['Google Drive backup','Choose how many to keep','30-day trash'],tone:'dark'},
-   {img:'03-card-dark.png',crop:{x:0,y:0,w:1000,h:720},label:'Dark mode · 10 languages',title:'Dark mode.<br>10 languages.',sub:'Switch between list and card views. Change the display language anytime in Settings.',chips:['English','日本語','简体中文','繁體中文','한국어','Español','Português','Deutsch','Français','Italiano'],tone:'dark'},
+   {img:'01-spaces.png',crop:{x:0,y:0,w:920,h:760},label:'One space per project',title:'Escape tab overload<br>in one click.',sub:'Client A\'s website, client B\'s landing page, invoices… Save each project\'s tabs as a space. Switch, and only that project\'s tabs open.',chips:['Organize with categories','Tab groups kept intact','Pinned tabs stay open'],callouts:[{x:236,y:300,text:'← Click to switch'},{x:300,y:504,text:'Tab groups saved too'}],tone:'light'},
+   {mock:'drive',label:'Automatic Google Drive backup',title:'Your laptop dies.<br>Your tabs don\'t.',sub:'Spaces are backed up to your own Google Drive with timestamps. On a new computer, restore from any backup you choose.',chips:['Auto backup with Pro (one-time ¥300)','Pick a version to restore','Never sent to our servers'],tone:'dark',drive:{folder:'Tab Matomen Kai Backups',prefix:'TabMatomenKai_',status:'Automatic backup: every 6 hours',last:'Last backup Oct 30, 12:00',pro:'Pro'}},
+   {mock:'context',label:'Right-click save',title:'Right-click to save<br>any page.',sub:'References and docs: right-click and pick the project. No trip back to the dashboard.',chips:['Works on any page','Just pick a space','Duplicates skipped'],tone:'light',menu:{save:'Save to Tab Matomen Kai',items:['Corporate website','Online store refresh','Spring campaign landing page','Learning Chrome extensions'],page:'A helpful article - Web design blog',others:['Back','Forward','Reload','Save as…','Print…']}},
+   {img:'02-bulk-actions.png',crop:{x:236,y:96,w:900,h:640},label:'Bulk actions',title:'Select, then tidy up<br>in one go.',sub:'Pick tabs and move, group or archive them. Copy the URL list for a report. Made a mistake? Undo it.',chips:['Shift-click ranges','Copy URL lists','Undo with ⌘Z / Ctrl+Z'],callouts:[{x:560,y:150,text:'Move 3 tabs at once'}],tone:'dark'},
+   {img:'06-create-space.png',crop:{x:210,y:80,w:860,h:640},label:'Easy to tell apart',title:'More projects,<br>no confusion.',sub:'Set the category, colour and icon image when you create a space. Use your client\'s logo if you like.',chips:['Up to 3 category levels','Colour or image icons','5 themes · dark mode'],tone:'light'},
   ],
-  promo:{tag:'Switch whole tab sets per project.',sub:'Save · restore · bulk actions · right-click save · Google Drive'}},
+  promo:{tag:'Switch whole tab sets per project.',sub:'For freelancers and agencies. Automatic Google Drive backup'}},
 };
 
 const css=(font)=>`
@@ -77,6 +77,20 @@ h1{font-size:40px;line-height:1.3;font-weight:800;letter-spacing:-.01em;margin-b
 .menu img{width:16px;height:16px}
 .sub-menu .first{background:#e8f6f3;font-weight:700}
 .cursor{position:absolute;z-index:6;width:22px;height:22px}
+/* drive mock */
+.drv{position:absolute;left:530px;top:110px;width:700px;border-radius:16px;overflow:hidden;background:#fff;color:#1f232b;z-index:2;box-shadow:0 30px 90px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.08)}
+.drv .bar{background:#e9ebef}
+.drv .hd{display:flex;align-items:center;gap:12px;padding:22px 28px 14px;font-size:20px;font-weight:700}
+.drv .hd svg{width:28px;height:28px}
+.drv .row{display:flex;align-items:center;gap:14px;padding:13px 28px;border-top:1px solid #eef0f3;font-size:15px}
+.drv .row .ic{width:26px;height:30px;border-radius:4px;background:#e8f0fe;color:#1a73e8;font-size:10px;font-weight:800;display:grid;place-items:center;flex:none}
+.drv .row .d{margin-left:auto;color:#6b7280;font-size:13px}
+.drv .row.new{background:#e8f6f3}
+.toast{position:absolute;left:820px;top:560px;z-index:4;background:#1c1f24;color:#f2f4f7;border-radius:14px;padding:18px 22px;min-width:340px;box-shadow:0 20px 50px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.1)}
+.toast .t1{display:flex;align-items:center;gap:10px;font-size:17px;font-weight:700}
+.toast .t1 b{font-size:12px;background:#ff9e3d;color:#1b1206;border-radius:999px;padding:3px 9px}
+.toast .t1 i{width:20px;height:20px;border-radius:50%;background:#2bb3a3;display:inline-block;flex:none}
+.toast .t2{font-size:14px;opacity:.7;margin-top:6px;padding-left:30px}
 `;
 const frameHtml=(locale,img,crop,urlText)=>{
  const src=fileUrl(path.join(RAW,locale,img));
@@ -87,7 +101,12 @@ function slideHtml(locale,s){
  const c=COPY[locale];
  const copy=`<div class="copy"><div class="brand"><img src="${LOGO}">${c.brand}</div><span class="label">${s.label}</span><h1>${s.title}</h1><p class="sub">${s.sub}</p><div class="chips ${s.chips.length>6?'lang':''}">${s.chips.map(x=>`<span class="chip">${x}</span>`).join('')}</div></div>`;
  let visual='';
- if(s.mock==='context'){
+ if(s.mock==='drive'){
+  const d=s.drive;const pad=n=>String(n).padStart(2,'0');
+  const rows=[['10-30',12],['10-30',6],['10-30',0],['10-29',18],['10-29',12],['10-29',6]].map(([day,h],i)=>{const name=`${d.prefix}2026-${day}T${pad(h)}-00-00-000Z.json`;return `<div class="row ${i===0?'new':''}"><span class="ic">JSON</span>${name}<span class="d">${day.replace('-','/')} ${pad(h)}:00</span></div>`}).join('');
+  visual=`<div class="drv"><div class="bar"><i></i><i></i><i></i><div class="url">drive.google.com</div></div><div class="hd"><svg viewBox="0 0 24 24"><path d="M10 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z" fill="#5f6368"/></svg>${d.folder}</div>${rows}</div>
+  <div class="toast"><div class="t1"><i></i>${d.status}<b>${d.pro}</b></div><div class="t2">${d.last}</div></div>`;
+ } else if(s.mock==='context'){
   const m=s.menu;
   visual=`<div class="page"><div class="bar"><i></i><i></i><i></i><div class="url">https://blog.example.com/article</div></div><div class="art"><h2>${m.page}</h2><p style="width:92%"></p><p style="width:84%"></p><div class="img"></div><p style="width:95%"></p><p style="width:70%"></p><p style="width:88%"></p></div></div>
   <div class="menu" style="left:700px;top:300px">${m.others.slice(0,3).map(x=>`<div>${x}</div>`).join('')}<hr>${m.others.slice(3).map(x=>`<div>${x}</div>`).join('')}<hr><div class="hi"><img src="${LOGO}">${m.save}</div></div>
@@ -121,7 +140,7 @@ function promoHtml(locale,w,h){
   for(const locale of Object.keys(COPY)){
    const out=path.join(ROOT,'store','screenshots',locale);fs.mkdirSync(out,{recursive:true});
    const page=await browser.newPage({viewport:{width:1280,height:800},deviceScaleFactor:1});
-   const names=['01-spaces','02-bulk-actions','03-right-click','04-backup-tidy','05-dark-languages'];
+   const names=['01-spaces','02-drive-backup','03-right-click','04-bulk-actions','05-create-space'];
    for(const [i,s] of COPY[locale].slides.entries()){
     const f=path.join(tmp,`${locale}-${i}.html`);fs.writeFileSync(f,slideHtml(locale,s));
     await page.goto(fileUrl(f));await page.waitForLoadState('networkidle');await page.evaluate(()=>document.fonts.ready);

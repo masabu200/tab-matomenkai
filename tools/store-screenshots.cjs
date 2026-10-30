@@ -13,14 +13,14 @@ const DEMO={
   ['s3','c1','LP 制作（春キャンペーン）',[['ワイヤーフレーム','https://www.figma.com/file/lp'],['広告管理画面','https://ads.google.com/']],[]],
   ['s4','c2','Chrome 拡張の学習',[['chrome.tabs API','https://developer.chrome.com/docs/extensions/reference/api/tabs'],['Manifest V3 概要','https://developer.chrome.com/docs/extensions/develop/migrate']],[]],
   ['s5','c2','請求・経理',[['請求書テンプレート','https://docs.google.com/document/d/invoice'],['会計ソフト','https://example.com/accounting']],[]],
-  ['s6',null,'あとで読む',[['技術ブログ','https://example.net/blog']],[]]],pinned:'Gmail',q:'案件'},
+  ['s6',null,'あとで読む',[['技術ブログ','https://example.net/blog']],[]]],pinned:'Gmail',q:'案件',newSpace:'D社 採用サイト'},
  en:{cats:[['c1','Client projects','#4a7ef8'],['c2','Learning & admin','#4aaa5a']],spaces:[
   ['s1','c1','Corporate website',[['Design mockups - Figma','https://www.figma.com/design/demo'],['WordPress admin','https://example.com/wp-admin/'],['Competitor research','https://example.org/'],['Contact form spec','https://docs.google.com/document/d/demo'],['Staging site','https://staging.example.com/']],[['g1','References','#4a7ef8',[2]],['g2','Launch checklist','#e07835',[4]]]],
   ['s2','c1','Online store refresh',[['Product listing','https://shop.example.com/products'],['Payment settings','https://dashboard.stripe.com/test'],['Inventory sheet','https://docs.google.com/spreadsheets/d/demo']],[]],
   ['s3','c1','Spring campaign landing page',[['Wireframe','https://www.figma.com/file/lp'],['Ads dashboard','https://ads.google.com/']],[]],
   ['s4','c2','Learning Chrome extensions',[['chrome.tabs API','https://developer.chrome.com/docs/extensions/reference/api/tabs'],['Manifest V3 overview','https://developer.chrome.com/docs/extensions/develop/migrate']],[]],
   ['s5','c2','Invoices & bookkeeping',[['Invoice template','https://docs.google.com/document/d/invoice'],['Accounting app','https://example.com/accounting']],[]],
-  ['s6',null,'Read later',[['Engineering blog','https://example.net/blog']],[]]],pinned:'Gmail',q:'project'},
+  ['s6',null,'Read later',[['Engineering blog','https://example.net/blog']],[]]],pinned:'Gmail',q:'project',newSpace:'Recruiting site for Client D'},
 };
 
 const COLORS={'figma.com':'#a259ff','example.com':'#21759b','example.org':'#0f9d58','docs.google.com':'#4285f4','staging.example.com':'#f4b400','shop.example.com':'#ff6d00','dashboard.stripe.com':'#635bff','ads.google.com':'#34a853','developer.chrome.com':'#1a73e8','example.net':'#e91e63'};
@@ -29,7 +29,7 @@ function fav(url){const host=new URL(url).hostname.replace(/^www\./,'');const co
  return 'data:image/svg+xml;base64,'+Buffer.from(svg).toString('base64');}
 function buildData(locale,winId){
  const d=DEMO[locale];const now=Date.now();
- const spaces=d.spaces.map(([id,cat,name,tabs,groups],i)=>({id,name,categoryId:cat,archived:false,color:'',createdAt:new Date(now-86400000*(20+i)).toISOString(),updatedAt:new Date(now-3600000*(i+1)).toISOString(),lastOpenedAt:new Date(now-3600000*(i+1)).toISOString(),favorite:i===0,
+ const spaces=d.spaces.map(([id,cat,name,tabs,groups],i)=>({id,name,categoryId:cat,archived:false,color:'',createdAt:new Date(now-86400000*(20+i)).toISOString(),updatedAt:new Date(now-3600000*(i+1)).toISOString(),favorite:false,
   tabGroups:groups.map(([gid,gname,color])=>({id:gid,name:gname,color,collapsed:false})),
   tabs:tabs.map(([title,url],ti)=>{const g=groups.find(x=>x[3].includes(ti));return {title,url,favIconUrl:fav(url),pinned:false,groupId:g?g[0]:null}})}));
  return {categories:d.cats.map(([id,name,color])=>({id,name,color,parentId:null})),spaces,activeSpaceId:'s1',windowActiveSpaces:{[winId]:'s1'}};
@@ -65,6 +65,13 @@ function buildData(locale,winId){
    await page.locator('#openSettings').click();await page.waitForTimeout(400);
    await shot('04-settings.png');
    await page.locator('#closeSettings').click();
+   // 6: space creation modal (category, colour and image in one step)
+   await page.locator('#btnCreateSpace').click();await page.locator('#spaceCreateDialog').waitFor({state:'visible'});
+   await page.locator('#spaceCreateName').fill(DEMO[locale].newSpace);
+   await page.locator('#spaceCreateCategory').selectOption('c1');
+   await page.locator('#spaceCreateDialog .modal__color-swatch').nth(3).click();
+   await shot('06-create-space.png');
+   await page.keyboard.press('Escape');
    // 5: space search
    await page.locator('#spaceSearch').fill(DEMO[locale].q).catch(()=>{});
    await shot('05-search.png');
