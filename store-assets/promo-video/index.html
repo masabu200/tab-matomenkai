@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>タブまとめん改 紹介動画</title>
+<style>
+:root{
+  --ink:#191c1d; --ink2:#4a5052; --ink3:#8a9092; --bg:#f5f6f6; --line:#e3e6e7;
+  --blue:#3f7fe0; --green:#35a05a; --orange:#ec7a2c; --yellow:#f2b632; --teal:#4fb3d3; --red:#e5484d;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:var(--bg);
+  font-family:"Noto Sans JP","Hiragino Sans",sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+#stage{position:absolute;inset:0;overflow:hidden;
+  background:radial-gradient(1200px 700px at 80% -10%,#e6eef6 0,transparent 60%),radial-gradient(900px 600px at 0% 110%,#eef0e6 0,transparent 60%),var(--bg)}
+.scene{position:absolute;inset:0;opacity:0}
+.abs{position:absolute}
+.cap{position:absolute;left:0;right:0;text-align:center}
+.h1{font-size:74px;font-weight:900;letter-spacing:.02em;line-height:1.25}
+.sub{font-size:32px;font-weight:500;color:var(--ink2);margin-top:16px}
+.mark{background:linear-gradient(transparent 62%,#ffe08a 62%)}
+
+/* browser mock */
+.win{position:absolute;background:#fff;border-radius:18px;overflow:hidden;
+  box-shadow:0 1px 0 #fff inset,0 30px 80px rgba(40,55,70,.16),0 0 0 1px rgba(25,28,29,.08)}
+.strip{position:absolute;left:0;right:0;top:0;height:48px;background:#e9ecee}
+.dots{position:absolute;left:18px;top:18px;display:flex;gap:8px}
+.dots i{width:13px;height:13px;border-radius:50%;background:#d5d9db;display:block}
+.dots i:nth-child(1){background:#f26b5e}.dots i:nth-child(2){background:#f5bf4f}.dots i:nth-child(3){background:#5ec35a}
+.tab{position:absolute;top:8px;height:40px;border-radius:11px 11px 0 0;display:flex;align-items:center;gap:9px;
+  padding:0 12px;overflow:hidden;white-space:nowrap;font-size:16px;color:var(--ink2);background:transparent}
+.tab::after{content:"";position:absolute;right:0;top:11px;width:1px;height:18px;background:#c9ced1}
+.tab.on{background:#fff;color:var(--ink)}
+.fav{flex:none;width:18px;height:18px;border-radius:5px;display:grid;place-items:center;color:#fff;font-size:11px;font-weight:700}
+.addr{position:absolute;left:0;right:0;top:48px;height:52px;background:#fff;border-bottom:1px solid var(--line)}
+.url{position:absolute;left:120px;right:200px;top:9px;height:34px;border-radius:17px;background:#f0f2f3;
+  font-size:16px;color:var(--ink3);line-height:34px;padding-left:22px}
+.navs{position:absolute;left:24px;top:15px;display:flex;gap:16px}
+.navs i{width:22px;height:22px;border-radius:6px;background:#eceeef;display:block}
+.ext{position:absolute;right:22px;top:10px;width:32px;height:32px;border-radius:8px;display:grid;place-items:center}
+.skel{position:absolute;border-radius:10px;background:#f0f2f3}
+
+.pill{display:inline-flex;align-items:center;gap:10px;border-radius:999px;font-weight:700}
+.bubble{position:absolute;background:#fff;border-radius:22px;padding:26px 34px;font-size:38px;font-weight:700;
+  box-shadow:0 20px 60px rgba(40,55,70,.18),0 0 0 1px rgba(25,28,29,.06);white-space:nowrap;display:flex;align-items:center;gap:20px}
+.bubble::after{content:"";position:absolute;left:54px;bottom:-14px;width:28px;height:28px;background:#fff;transform:rotate(45deg);
+  box-shadow:6px 6px 10px rgba(40,55,70,.06)}
+.qmark{flex:none;width:52px;height:52px;border-radius:50%;background:#fff1e6;color:var(--orange);display:grid;place-items:center;font-size:30px;font-weight:900}
+
+/* logo layers */
+.layer{position:absolute;width:200px;height:200px;border-radius:30px;transform:rotateX(58deg) rotateZ(45deg)}
+.logo{position:absolute;width:300px;height:300px;perspective:none}
+
+.chip{position:absolute;width:290px;height:62px;background:#fff;border-radius:14px;display:flex;align-items:center;gap:14px;
+  padding:0 18px;font-size:21px;font-weight:500;white-space:nowrap;overflow:hidden;
+  box-shadow:0 10px 30px rgba(40,55,70,.12),0 0 0 1px rgba(25,28,29,.06)}
+.chip .fav{width:26px;height:26px;border-radius:7px;font-size:14px}
+.space{position:absolute;width:700px;height:176px;background:#fff;border-radius:22px;padding:28px 32px;
+  box-shadow:0 18px 50px rgba(40,55,70,.10),0 0 0 1px rgba(25,28,29,.06)}
+.space .hd{display:flex;align-items:center;gap:16px;font-size:30px;font-weight:700}
+.space .dot{width:20px;height:20px;border-radius:50%}
+.space .cnt{margin-left:auto;min-width:56px;height:40px;border-radius:20px;background:#eceeef;font-size:22px;font-weight:700;
+  display:grid;place-items:center;color:var(--ink2)}
+.space .row{position:absolute;left:32px;bottom:28px;display:flex;gap:10px}
+.space .row .fav{width:40px;height:40px;border-radius:10px;font-size:18px}
+.btn{position:absolute;height:72px;border-radius:36px;background:var(--ink);color:#fff;font-size:26px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;gap:12px;box-shadow:0 14px 36px rgba(25,28,29,.25)}
+
+/* dashboard */
+.side{position:absolute;left:0;top:100px;bottom:0;width:340px;background:#1c1f21;color:#e8eaeb}
+.brand{position:absolute;left:28px;top:26px;display:flex;align-items:center;gap:12px;font-size:22px;font-weight:700}
+.sitem{position:absolute;left:18px;right:18px;height:58px;border-radius:12px;display:flex;align-items:center;gap:14px;padding:0 18px;font-size:20px;font-weight:500;color:#c9cdcf}
+.sitem .dot{width:14px;height:14px;border-radius:50%}
+.sitem .n{margin-left:auto;font-size:15px;color:#8a9092;background:#2a2e30;border-radius:10px;padding:2px 10px}
+.hl{position:absolute;left:18px;right:18px;height:58px;border-radius:12px;background:#2f3437;box-shadow:inset 3px 0 0 var(--c,#3f7fe0)}
+.main{position:absolute;left:340px;right:0;top:100px;bottom:0;background:#f5f6f6}
+.mh{position:absolute;left:44px;top:30px;font-size:32px;font-weight:900;display:flex;align-items:center;gap:14px}
+.card{position:absolute;width:560px;height:96px;background:#fff;border-radius:16px;display:flex;align-items:center;gap:16px;padding:0 22px;
+  box-shadow:0 6px 24px rgba(68,87,101,.07),0 0 0 1px #e6e8e9}
+.card .fav{width:34px;height:34px;border-radius:9px;font-size:16px}
+.card b{font-size:21px;font-weight:700;display:block}
+.card small{font-size:15px;color:var(--ink3)}
+#cursor{position:absolute;left:0;top:0;width:44px;height:44px;opacity:0;z-index:50;filter:drop-shadow(0 4px 8px rgba(0,0,0,.25))}
+.ripple{position:absolute;width:90px;height:90px;margin:-45px 0 0 -45px;border-radius:50%;border:4px solid var(--blue);opacity:0;z-index:49}
+
+.feat{position:absolute;width:500px;height:380px;background:#fff;border-radius:28px;padding:44px 40px;
+  box-shadow:0 18px 50px rgba(40,55,70,.10),0 0 0 1px rgba(25,28,29,.06)}
+.feat .ic{width:96px;height:96px;border-radius:24px;display:grid;place-items:center;margin-bottom:30px}
+.feat h3{font-size:36px;font-weight:900;margin-bottom:14px}
+.feat p{font-size:24px;color:var(--ink2);line-height:1.6}
+.kbd{display:inline-grid;place-items:center;min-width:58px;height:58px;padding:0 12px;border-radius:12px;background:#fff;border:2px solid #d3d7d9;
+  box-shadow:0 4px 0 #d3d7d9;font-size:28px;font-weight:700;color:var(--ink)}
+.toast{position:absolute;height:84px;border-radius:20px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:28px;padding:0 18px 0 32px;font-size:26px;font-weight:500;
+  box-shadow:0 20px 50px rgba(25,28,29,.3)}
+.toast .undo{height:56px;border-radius:14px;background:#33383a;padding:0 24px;display:grid;place-items:center;font-weight:700;color:#9cc2ff}
+.tag{display:inline-flex;align-items:center;height:56px;padding:0 26px;border-radius:28px;background:#fff;font-size:24px;font-weight:700;color:var(--ink2);
+  box-shadow:0 0 0 1px rgba(25,28,29,.08)}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="scene" id="s1"></div>
+  <div class="scene" id="s2" style="background:#15181a"></div>
+  <div class="scene" id="s3"></div>
+  <div class="scene" id="s4"></div>
+  <div class="scene" id="s5"></div>
+  <div class="scene" id="s6"></div>
+  <div class="scene" id="s7"></div>
+  <div class="ripple" id="ripple"></div>
+  <svg id="cursor" viewBox="0 0 24 24"><path d="M5 3l14 8.2-6.1 1.3 3.6 6.6-2.6 1.4-3.6-6.6L5 18.2z" fill="#191c1d" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
+</div>
+
+<script>
+// ---------- helpers ----------
+const $ = (s, r = document) => r.querySelector(s);
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const p = (t, s, d) => clamp((t - s) / d);
+const lerp = (a, b, k) => a + (b - a) * k;
+const eo = k => 1 - Math.pow(1 - k, 3);
+const eio = k => k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
+const back = k => { const c = 1.6; return 1 + (c + 1) * Math.pow(k - 1, 3) + c * Math.pow(k - 1, 2); };
+const vis = (t, a, b, f = .45) => Math.min(eo(p(t, a, f)), 1 - eio(p(t, b - f, f)));
+const css = (el, o) => { for (const k in o) el.style[k] = o[k]; };
+const C = { blue: '#3f7fe0', green: '#35a05a', orange: '#ec7a2c', yellow: '#e9a91c', teal: '#3aa6c8', purple: '#8a63d2', red: '#e5484d', gray: '#7d868a' };
+const favs = [C.blue, C.red, C.green, C.orange, C.teal, C.purple, C.yellow, C.gray];
+const fav = (c, ch) => `<span class="fav" style="background:${c}">${ch}</span>`;
+const DURATION = 40;
+
+const browser = (w, h, url) => `
+  <div class="win" style="width:${w}px;height:${h}px">
+    <div class="strip"><div class="dots"><i></i><i></i><i></i></div><div class="tabs abs" style="left:96px;right:16px;top:0;bottom:0"></div></div>
+    <div class="addr"><div class="navs"><i></i><i></i></div><div class="url">${url}</div>
+      <div class="ext" style="background:#eef3fb">${logoMini(22)}</div></div>
+  </div>`;
+function logoMini(s) {
+  const cs = ['#4fb3d3', '#3aa58a', '#7cc66b', '#f2b632', '#ec7a2c'];
+  return `<svg width="${s}" height="${s}" viewBox="0 0 24 24">${cs.map((c, i) => `<path d="M12 ${3 + i * 3.2}l9 4.2-9 4.2-9-4.2z" fill="${c}" />`).reverse().join('')}</svg>`;
+}
+
+// ---------- Scene 1: too many tabs ----------
+const s1 = $('#s1');
+const titles = ['メール', 'カレンダー', '見積書_A社.pdf', 'デザインカンプ v3', '議事録 10/21', '競合サイト①', '競合サイト②', '請求書テンプレ', 'LP 参考まとめ', '動画を見る', '天気予報', '写真素材', 'アクセス解析', 'チャット', '確定申告とは', '翻訳', '地図', 'ネット通販', 'ニュース', 'B社 原稿.docx', 'レシピ', 'ブランドガイド', '旅行の候補', 'ノートPC 比較'];
+const NT = 48;
+s1.innerHTML = `
+  <div class="cap" id="h1a" style="top:84px"><div class="h1">また、<span class="mark">タブが増えすぎた。</span></div></div>
+  <div class="cap" id="h1b" style="top:84px"><div class="h1">こんなこと、ありませんか？</div></div>
+  <div class="abs" id="b1w" style="left:210px;top:250px">${browser(1500, 720, 'https://…')}</div>
+  <div class="abs pill" id="tcount" style="left:1480px;top:212px;height:52px;padding:0 24px;background:var(--red);color:#fff;font-size:24px;z-index:3">開いているタブ <span id="tcn" style="font-size:30px">5</span></div>
+  <div class="bubble" id="bb1" style="left:330px;top:450px"><span class="qmark">?</span>あの資料、どのタブだっけ…</div>
+  <div class="bubble" id="bb2" style="left:900px;top:600px"><span class="qmark">!</span>閉じたら、もう見つからない気がする</div>
+  <div class="bubble" id="bb3" style="left:430px;top:760px"><span class="qmark">↻</span>案件が変わるたび、全部開き直し</div>`;
+const b1tabs = $('.tabs', s1);
+for (let i = 0; i < NT; i++) {
+  const d = document.createElement('div');
+  d.className = 'tab' + (i === 2 ? ' on' : '');
+  d.innerHTML = fav(favs[i % favs.length], titles[i % titles.length][0]) + `<span>${titles[i % titles.length]}</span>`;
+  b1tabs.appendChild(d);
+}
+const b1win = $('.win', s1);
+for (const [l, t, w, h] of [[60, 140, 620, 54], [60, 220, 1000, 22], [60, 262, 880, 22], [60, 330, 420, 260], [520, 330, 420, 260], [980, 330, 440, 260]]) {
+  const s = document.createElement('div'); s.className = 'skel'; css(s, { left: l + 'px', top: t + 'px', width: w + 'px', height: h + 'px' }); b1win.appendChild(s);
+}
+
+function r1(t) {
+  const v = vis(t, 0, 10.6, .6);
+  const out = eio(p(t, 9.9, .7));
+  css(s1, { opacity: v, transform: `scale(${1 - out * .06})`, filter: `blur(${out * 10}px)` });
+  const ha = vis(t, .5, 4.0, .5), hb = vis(t, 4.2, 10.4, .5);
+  css($('#h1a'), { opacity: ha, transform: `translateY(${(1 - eo(p(t, .5, .6))) * 30}px)` });
+  css($('#h1b'), { opacity: hb, transform: `translateY(${(1 - eo(p(t, 4.2, .6))) * 30}px)` });
+  const n = Math.round(lerp(5, NT, eio(p(t, .4, 3.4))));
+  $('#tcn').textContent = n;
+  const tc = $('#tcount'); const pulse = n >= NT ? 0 : Math.abs(Math.sin(t * 9)) * .05;
+  css(tc, { opacity: eo(p(t, .6, .4)), transform: `scale(${1 + pulse})` });
+  const SW = 1500 - 96 - 16;
+  const tw = Math.min(230, SW / n);
+  [...b1tabs.children].forEach((el, i) => {
+    if (i >= n) { el.style.display = 'none'; return; }
+    el.style.display = 'flex';
+    const jit = t > 4 ? Math.sin(t * 11 + i * 1.7) * 1.6 : 0;
+    css(el, { left: (i * tw + jit) + 'px', width: tw + 'px', padding: tw < 44 ? '0 0 0 7px' : '0 12px' });
+    el.lastChild.style.display = tw < 70 ? 'none' : '';
+  });
+  [['#bb1', 4.7], ['#bb2', 6.5], ['#bb3', 8.2]].forEach(([id, s]) => {
+    const k = p(t, s, .55);
+    css($(id), { opacity: Math.min(eo(k), 1 - p(t, 9.9, .4)), transform: `translateY(${(1 - eo(k)) * 40}px) scale(${.85 + .15 * back(k)})` });
+  });
+}
+
+// ---------- Scene 2: logo reveal ----------
+const s2 = $('#s2');
+const layerCols = [['#4fb3d3', '#2f8fb0'], ['#3aa58a', '#25806a'], ['#7cc66b', '#56a046'], ['#f2b632', '#cf9416'], ['#ec7a2c', '#c45d17']];
+s2.innerHTML = `<div class="logo" id="lg2" style="left:810px;top:180px"></div>
+  <div class="cap" id="t2a" style="top:640px"><div class="h1" style="color:#fff;font-size:104px">タブまとめん改</div></div>
+  <div class="cap" id="t2b" style="top:810px"><div class="sub" style="color:#b9c0c3;font-size:38px">案件ごとに、タブをまとめる。</div></div>`;
+function buildLogo(el, scale) {
+  el.innerHTML = '';
+  layerCols.slice().reverse().forEach(([c, d], ri) => {
+    const i = layerCols.length - 1 - ri;
+    const g = document.createElement('div'); g.className = 'abs'; g.dataset.i = i;
+    css(g, { left: 0, top: 0, width: '300px', height: '300px' });
+    g.innerHTML = `<div class="layer" style="left:50px;top:${40 + i * 46 + 16}px;background:${d}"></div><div class="layer" style="left:50px;top:${40 + i * 46}px;background:${c}"></div>`;
+    el.appendChild(g);
+  });
+  css(el, { transform: `scale(${scale})`, transformOrigin: '50% 50%' });
+}
+buildLogo($('#lg2'), 1);
+function r2(t) {
+  css(s2, { opacity: vis(t, 10.2, 14.6, .5) });
+  [...$('#lg2').children].forEach(g => {
+    const i = +g.dataset.i; const k = p(t, 10.6 + i * .13, .55);
+    css(g, { opacity: eo(p(t, 10.6 + i * .13, .2)), transform: `translateY(${(1 - back(k)) * -160}px)` });
+  });
+  css($('#t2a'), { opacity: eo(p(t, 11.6, .5)), transform: `translateY(${(1 - eo(p(t, 11.6, .6))) * 24}px)` });
+  css($('#t2b'), { opacity: eo(p(t, 12.1, .5)), transform: `translateY(${(1 - eo(p(t, 12.1, .6))) * 24}px)` });
+}
+
+// ---------- Scene 3: save into spaces ----------
+const s3 = $('#s3');
+const spaces = [
+  { name: 'A社 ホームページ', c: C.blue, tabs: [['トップページ デザイン案', 'デ'], ['原稿_会社概要.docx', '原'], ['見積書_A社.pdf', '見'], ['競合サイト①', '競'], ['写真素材フォルダ', '写'], ['打ち合わせメモ', '打']] },
+  { name: 'B社 LP制作', c: C.green, tabs: [['LP ワイヤーフレーム', 'W'], ['キャッチコピー案', 'キ'], ['広告バナー 入稿規定', '広'], ['アクセス解析', '解'], ['B社 ブランドガイド', 'B'], ['参考LP まとめ', '参']] },
+  { name: '調べもの', c: C.orange, tabs: [['旅行の候補 京都', '旅'], ['ノートPC 比較', 'PC'], ['作り置きレシピ', 'レ'], ['確定申告のやり方', '税'], ['読みたい本リスト', '本'], ['週末の天気', '天']] },
+];
+const chipFav = [C.blue, C.teal, C.purple, C.red, C.gray, C.yellow];
+s3.innerHTML = `
+  <div class="cap" id="h3" style="top:70px"><div class="h1">案件ごとに「スペース」へ保存</div><div class="sub">いま開いているタブを、まるごとワンクリックで。</div></div>
+  ${spaces.map((s, i) => `<div class="space" id="sp${i}" style="left:1060px;top:${330 + i * 206}px">
+      <div class="hd"><span class="dot" style="background:${s.c}"></span>${s.name}<span class="cnt">0</span></div><div class="row"></div></div>`).join('')}
+  <div class="btn" id="savebtn" style="left:250px;top:908px;width:520px">＋ 現在のタブを保存</div>
+  <div class="abs" id="saved" style="left:170px;top:520px;width:700px;text-align:center">
+    <div style="width:120px;height:120px;border-radius:50%;background:#e8f6ed;display:grid;place-items:center;margin:0 auto 28px"><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#35a05a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+    <div style="font-size:40px;font-weight:900">18枚のタブを保存しました</div>
+    <div style="font-size:26px;color:var(--ink2);margin-top:12px">閉じても、スペースにちゃんと残っています。</div></div>`;
+const chips = [];
+const chipPos = [[170, 330, -6], [500, 352, 4], [240, 430, 3], [560, 455, -5], [160, 535, -2], [470, 560, 6], [250, 640, -4], [560, 665, 2], [170, 745, 5], [480, 770, -3], [300, 395, 1], [380, 505, -7], [330, 600, 5], [420, 715, -2], [220, 822, 3], [540, 830, -5], [600, 395, -3], [140, 620, 6]];
+spaces.forEach((s, si) => s.tabs.forEach(([title, ch], ti) => {
+  const idx = chips.length;
+  const el = document.createElement('div'); el.className = 'chip';
+  el.innerHTML = fav(si === 2 ? s.c : chipFav[(idx) % chipFav.length], ch) + title;
+  s3.appendChild(el);
+  chips.push({ el, si, ti, pos: chipPos[idx], order: ti * 3 + si });
+}));
+spaces.forEach((s, si) => {
+  const row = $(`#sp${si} .row`);
+  s.tabs.forEach(([_, ch], ti) => { const f = document.createElement('span'); f.innerHTML = fav(si === 2 ? s.c : chipFav[(si * 6 + ti) % chipFav.length], ch); row.appendChild(f.firstChild); });
+});
+function r3(t) {
+  css(s3, { opacity: vis(t, 14.4, 20.8, .5) });
+  css($('#h3'), { opacity: eo(p(t, 14.6, .5)), transform: `translateY(${(1 - eo(p(t, 14.6, .6))) * 24}px)` });
+  spaces.forEach((s, si) => css($(`#sp${si}`), { opacity: eo(p(t, 14.9 + si * .12, .5)), transform: `translateX(${(1 - eo(p(t, 14.9 + si * .12, .6))) * 60}px)` }));
+  const bk = eo(p(t, 15.0, .5));
+  const press = t > 15.95 && t < 16.2 ? .94 : 1;
+  css($('#savebtn'), { opacity: bk * (1 - p(t, 18.6, .5)), transform: `translateY(${(1 - bk) * 30}px) scale(${press})` });
+  const sk = p(t, 18.9, .5);
+  css($('#saved'), { opacity: eo(sk), transform: `scale(${.85 + .15 * back(sk)})` });
+  const arrived = [0, 0, 0];
+  chips.forEach(c => {
+    const appear = p(t, 14.8 + c.order * .03, .4);
+    const fs = 16.15 + c.order * .1, k = eio(p(t, fs, .62));
+    const [x0, y0, r0] = c.pos;
+    const x1 = 1100 + c.ti * 50, y1 = 330 + c.si * 206 + 106;
+    const x = lerp(x0, x1, k), y = lerp(y0, y1, k) - Math.sin(k * Math.PI) * 90;
+    const sc = lerp(1, .16, k);
+    css(c.el, { left: x + 'px', top: y + 'px', opacity: eo(appear) * (k > .9 ? 1 - p(k, .9, .1) : 1), transform: `rotate(${r0 * (1 - k)}deg) scale(${(.8 + .2 * back(appear)) * sc})`, transformOrigin: '0 0' });
+    if (k >= 1) arrived[c.si]++;
+  });
+  spaces.forEach((s, si) => {
+    $(`#sp${si} .cnt`).textContent = arrived[si];
+    [...$(`#sp${si} .row`).children].forEach((f, ti) => {
+      const on = ti < arrived[si];
+      const fs = 16.15 + (ti * 3 + si) * .1 + .62;
+      const k = p(t, fs, .3);
+      css(f, { opacity: on ? 1 : 0, transform: `scale(${on ? back(k) : .4})` });
+    });
+  });
+}
+
+// ---------- Scene 4: one-click switch ----------
+const s4 = $('#s4');
+const WX = 160, WY = 230, WW = 1600, WH = 780;
+s4.innerHTML = `
+  <div class="cap" id="h4" style="top:56px"><div class="h1">ワンクリックで、仕事ごと切り替え</div><div class="sub">同じウィンドウのまま、タブ一式が入れ替わる。</div></div>
+  <div class="abs" id="w4" style="left:${WX}px;top:${WY}px">${browser(WW, WH, 'タブまとめん改 ダッシュボード')}</div>`;
+const w4 = $('.win', s4);
+w4.insertAdjacentHTML('beforeend', `
+  <div class="side"><div class="brand">${logoMini(30)}タブまとめん改</div>
+    <div style="position:absolute;left:30px;top:96px;font-size:14px;color:#8a9092;letter-spacing:.1em">スペース</div>
+    <div class="hl" id="hl"></div>
+    ${spaces.concat([{ name: '営業メール 下書き', c: C.purple, tabs: [1, 2] }]).map((s, i) => `<div class="sitem" style="top:${128 + i * 66}px"><span class="dot" style="background:${s.c}"></span>${s.name}<span class="n">${s.tabs.length}</span></div>`).join('')}
+  </div>
+  <div class="main">${spaces.map((s, si) => `<div class="abs pane" id="pane${si}" style="inset:0">
+      <div class="mh"><span class="dot" style="width:18px;height:18px;border-radius:50%;background:${s.c};display:inline-block"></span>${s.name}<span style="font-size:20px;font-weight:500;color:var(--ink3);margin-left:6px">${s.tabs.length} タブ</span></div>
+      ${s.tabs.map(([tt, ch], ti) => `<div class="card" style="left:${44 + (ti % 2) * 590}px;top:${110 + Math.floor(ti / 2) * 116}px">${fav(si === 2 ? s.c : chipFav[(si * 6 + ti) % chipFav.length], ch)}<div><b>${tt}</b><small>${['example.com', 'docs.example.jp', 'drive.example.com'][ti % 3]}</small></div></div>`).join('')}
+    </div>`).join('')}</div>`);
+const strip4 = $('.tabs', s4);
+spaces.forEach((s, si) => {
+  const g = document.createElement('div'); g.className = 'abs grp'; css(g, { inset: 0 });
+  g.innerHTML = s.tabs.map(([tt, ch], ti) => `<div class="tab${ti === 0 ? ' on' : ''}" style="left:${ti * 236}px;width:236px">${fav(si === 2 ? s.c : chipFav[(si * 6 + ti) % chipFav.length], ch)}<span>${tt}</span></div>`).join('');
+  strip4.appendChild(g);
+});
+const SW_T = [[-99, 22.75], [22.75, 25.05], [25.05, 99]];
+const itemY = i => WY + 100 + 128 + i * 66 + 29;
+const itemX = WX + 200;
+function r4(t) {
+  css(s4, { opacity: vis(t, 20.6, 27.4, .5) });
+  css($('#h4'), { opacity: eo(p(t, 20.8, .5)), transform: `translateY(${(1 - eo(p(t, 20.8, .6))) * 24}px)` });
+  css($('#w4'), { transform: `translateY(${(1 - eo(p(t, 20.6, .7))) * 50}px)` });
+  [...strip4.children].forEach((g, si) => {
+    const [a, b] = SW_T[si];
+    [...g.children].forEach((tab, ti) => {
+      const ki = eo(p(t, a + .08 + ti * .045, .35)), ko = eio(p(t, b, .22));
+      css(tab, { opacity: ki * (1 - ko), transform: `translateY(${(1 - ki) * 20 - ko * 14}px)` });
+    });
+  });
+  spaces.forEach((s, si) => {
+    const [a, b] = SW_T[si]; const pane = $('#pane' + si);
+    const ko = eio(p(t, b, .22));
+    pane.style.opacity = 1 - ko;
+    [...pane.children].forEach((ch, ci) => {
+      const ki = eo(p(t, a + .12 + ci * .04, .38));
+      css(ch, { opacity: ki, transform: `translateY(${(1 - ki) * 22}px)` });
+    });
+  });
+  // highlight
+  const k1 = eio(p(t, 22.75, .35)), k2 = eio(p(t, 25.05, .35));
+  const hy = 128 + 66 * (k1 + k2);
+  const hc = t < 22.9 ? C.blue : t < 25.2 ? C.green : C.orange;
+  css($('#hl'), { top: hy + 'px', '--c': hc });
+  $('#hl').style.setProperty('--c', hc);
+  // cursor
+  const cur = $('#cursor');
+  const P0 = [1500, 900], P1 = [itemX, itemY(1)], P2 = [itemX, itemY(2)], P3 = [itemX + 380, itemY(2) + 160];
+  let pos = P0;
+  if (t < 22.6) pos = P0.map((v, i) => lerp(v, P1[i], eio(p(t, 21.7, .9))));
+  else if (t < 24.9) pos = P1.map((v, i) => lerp(v, P2[i], eio(p(t, 24.2, .7))));
+  else pos = P2.map((v, i) => lerp(v, P3[i], eio(p(t, 25.6, .9))));
+  const cv = vis(t, 21.5, 26.9, .3);
+  if (t >= 20.6 && t <= 27.4) css(cur, { opacity: cv, transform: `translate(${pos[0] - 8}px,${pos[1] - 6}px) scale(${(t > 22.7 && t < 22.85) || (t > 25.0 && t < 25.15) ? .85 : 1})` });
+  ripple(t, [[22.7, P1], [25.0, P2]]);
+}
+
+function ripple(t, clicks) {
+  const r = $('#ripple');
+  let shown = false;
+  for (const [ct, [x, y]] of clicks) {
+    const k = p(t, ct, .5);
+    if (t >= ct && k < 1) { css(r, { left: x + 'px', top: y + 'px', opacity: 1 - k, transform: `scale(${.3 + k * .9})` }); shown = true; }
+  }
+  if (!shown) r.style.opacity = 0;
+}
+
+// ---------- Scene 5: safety ----------
+const s5 = $('#s5');
+const icUndo = `<svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#3f7fe0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14L4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 010 11H11"/></svg>`;
+const icClock = `<svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#35a05a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 11-3-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M12 7v5l3 2"/></svg>`;
+const icCloud = `<svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#ec7a2c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a5 5 0 01-.5-9.97A6 6 0 0118 8a4.5 4.5 0 01-.5 10z"/><path d="M12 11v6M9.5 13.5L12 11l2.5 2.5"/></svg>`;
+s5.innerHTML = `
+  <div class="cap" id="h5" style="top:70px"><div class="h1">閉じても、ちゃんと戻せる。</div><div class="sub">うっかり削除も、パソコンの買い替えも、こわくない。</div></div>
+  <div class="feat" id="f0" style="left:160px;top:350px"><div class="ic" style="background:#eaf1fd">${icUndo}</div><h3>すぐ元に戻す</h3><p>削除やアーカイブを<br>その場で取り消し<br><span class="kbd" style="margin-top:14px">⌘</span> <span class="kbd">Z</span></p></div>
+  <div class="feat" id="f1" style="left:710px;top:350px"><div class="ic" style="background:#e8f6ed">${icClock}</div><h3>自動バックアップ</h3><p>毎時・6時間ごと・毎日。<br>手を動かさなくても、<br>ちゃんと残る。</p></div>
+  <div class="feat" id="f2" style="left:1260px;top:350px"><div class="ic" style="background:#fdf0e6">${icCloud}</div><h3>Googleドライブに保存</h3><p>自分のドライブに置いて、<br>別のパソコンでも<br>選んで復元。</p></div>
+  <div class="toast" id="toast" style="left:560px;top:870px;width:800px">スペース「B社 LP制作」を削除しました<span style="margin-left:auto" class="undo" id="undo">元に戻す</span></div>`;
+function r5(t) {
+  css(s5, { opacity: vis(t, 27.2, 32.6, .5) });
+  css($('#h5'), { opacity: eo(p(t, 27.4, .5)), transform: `translateY(${(1 - eo(p(t, 27.4, .6))) * 24}px)` });
+  [0, 1, 2].forEach(i => { const k = p(t, 27.8 + i * .32, .6); css($('#f' + i), { opacity: eo(k), transform: `translateY(${(1 - eo(k)) * 60}px)` }); });
+  const tk = p(t, 29.7, .5), tout = p(t, 31.4, .35);
+  css($('#toast'), { opacity: eo(tk) * (1 - tout), transform: `translateY(${(1 - eo(tk)) * 50 + tout * 20}px)` });
+  const pressed = t > 30.75 && t < 31.0;
+  css($('#undo'), { background: pressed ? '#3f7fe0' : '#33383a', color: pressed ? '#fff' : '#9cc2ff', transform: `scale(${pressed ? .94 : 1})` });
+  const cur = $('#cursor');
+  if (t >= 27.2 && t <= 32.6) {
+    const P0 = [1500, 1060], P1 = [1265, 912];
+    const pos = P0.map((v, i) => lerp(v, P1[i], eio(p(t, 30.0, .65))));
+    css(cur, { opacity: vis(t, 29.9, 31.5, .25), transform: `translate(${pos[0] - 8}px,${pos[1] - 6}px) scale(${pressed ? .85 : 1})` });
+    ripple(t, [[30.75, P1]]);
+  }
+}
+
+// ---------- Scene 6: privacy ----------
+const s6 = $('#s6');
+s6.innerHTML = `
+  <div class="abs" id="lock" style="left:250px;top:290px;width:460px;height:460px;border-radius:120px;background:#191c1d;display:grid;place-items:center;box-shadow:0 40px 90px rgba(25,28,29,.25)">
+    <svg width="230" height="230" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path id="shackle" d="M8 10.5V7.5a4 4 0 018 0v3"/><circle cx="12" cy="15.5" r="1.4" fill="#fff"/></svg>
+  </div>
+  <div class="abs" id="t6" style="left:820px;top:340px;width:1000px">
+    <div class="h1" style="font-size:70px">データは、<br>あなたのChromeの中に。</div>
+    <div class="sub" style="font-size:32px;margin-top:26px">保存したタブを、外部のサーバーへ送ることはありません。</div>
+    <div id="tags" style="display:flex;gap:16px;margin-top:44px"><span class="tag">10言語に対応</span><span class="tag">ダークモード</span><span class="tag">キーボードで操作</span></div>
+  </div>`;
+function r6(t) {
+  css(s6, { opacity: vis(t, 32.4, 35.9, .5) });
+  const k = p(t, 32.5, .7);
+  css($('#lock'), { transform: `scale(${.7 + .3 * back(k)}) rotate(${(1 - eo(k)) * -8}deg)` });
+  css($('#shackle'), { transform: `translateY(${(1 - eio(p(t, 33.1, .35))) * -2.2}px)` });
+  css($('#t6'), { opacity: eo(p(t, 32.8, .5)), transform: `translateX(${(1 - eo(p(t, 32.8, .6))) * 40}px)` });
+  [...$('#tags').children].forEach((g, i) => { const kk = p(t, 33.6 + i * .15, .4); css(g, { opacity: eo(kk), transform: `translateY(${(1 - eo(kk)) * 16}px)` }); });
+}
+
+// ---------- Scene 7: end card ----------
+const s7 = $('#s7');
+s7.innerHTML = `
+  <div class="logo" id="lg7" style="left:810px;top:110px"></div>
+  <div class="cap" id="t7a" style="top:520px"><div class="h1" style="font-size:92px">もう、タブに追われない。</div></div>
+  <div class="cap" id="t7b" style="top:680px"><div style="display:inline-flex;align-items:center;gap:18px;font-size:44px;font-weight:900">${logoMini(48)}タブまとめん改</div></div>
+  <div class="cap" id="t7c" style="top:800px"><span class="pill" style="height:88px;padding:0 48px;background:var(--ink);color:#fff;font-size:32px;box-shadow:0 18px 40px rgba(25,28,29,.25)">Chrome ウェブストアで追加する</span></div>`;
+buildLogo($('#lg7'), .9);
+function r7(t) {
+  css(s7, { opacity: vis(t, 35.7, 99, .5) });
+  [...$('#lg7').children].forEach(g => {
+    const i = +g.dataset.i; const k = p(t, 35.8 + i * .09, .5);
+    css(g, { opacity: eo(p(t, 35.8 + i * .09, .2)), transform: `translateY(${(1 - back(k)) * -110 + Math.sin(t * 1.6 + i * .5) * 3 * p(t, 37, 1)}px)` });
+  });
+  [['#t7a', 36.4], ['#t7b', 37.0], ['#t7c', 37.5]].forEach(([id, s]) => css($(id), { opacity: eo(p(t, s, .5)), transform: `translateY(${(1 - eo(p(t, s, .6))) * 26}px)` }));
+}
+
+// ---------- driver ----------
+function render(t) {
+  r1(t); r2(t); r3(t); r4(t); r5(t); r6(t); r7(t);
+  if (!(t >= 20.6 && t <= 27.4) && !(t >= 27.2 && t <= 32.6)) { $('#cursor').style.opacity = 0; $('#ripple').style.opacity = 0; }
+}
+window.__render = render;
+window.__duration = DURATION;
+const q = new URLSearchParams(location.search);
+if (q.has('t')) render(+q.get('t'));
+else if (!q.has('capture')) {
+  const t0 = performance.now();
+  const loop = () => { render(((performance.now() - t0) / 1000) % DURATION); requestAnimationFrame(loop); };
+  loop();
+}
+</script>
+</body>
+</html>
