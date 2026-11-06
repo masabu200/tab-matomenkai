@@ -1650,5 +1650,113 @@
   },
   "billingStatusRefunded": {
     "message": "Remboursé : vous êtes revenu à la version gratuite."
+  },
+  "popupSettings": {
+    "message": "Paramètres"
+  },
+  "popupSaveWindow": {
+    "message": "Enregistrer les onglets de cette fenêtre"
+  },
+  "popupSaveWindowTo": {
+    "message": "Enregistrer dans « $1 »"
+  },
+  "popupTabCount": {
+    "message": "$1 onglets"
+  },
+  "popupSaveTab": {
+    "message": "Enregistrer cet onglet"
+  },
+  "popupOpenDashboard": {
+    "message": "Tableau de bord"
+  },
+  "popupSearchPlaceholder": {
+    "message": "Rechercher des espaces et des onglets"
+  },
+  "popupRecentTitle": {
+    "message": "Reprendre où vous en étiez"
+  },
+  "popupSeeAll": {
+    "message": "Tout voir"
+  },
+  "popupSearchTitle": {
+    "message": "Résultats"
+  },
+  "popupNoResults": {
+    "message": "Aucun résultat"
+  },
+  "popupNoSpaces": {
+    "message": "Aucun espace pour l’instant. Utilisez le bouton ci-dessus pour enregistrer vos onglets."
+  },
+  "popupCurrentSpace": {
+    "message": "Cette fenêtre"
+  },
+  "popupSpaceMeta": {
+    "message": "$1 onglets · $2"
+  },
+  "popupTabInSpace": {
+    "message": "Onglet dans « $1 »"
+  },
+  "popupCannotOpen": {
+    "message": "Impossible d’ouvrir cet onglet"
+  },
+  "popupUndo": {
+    "message": "Annuler"
+  },
+  "popupDriveProblem": {
+    "message": "La sauvegarde automatique sur Drive est arrêtée"
+  },
+  "popupDriveSaved": {
+    "message": "Enregistré sur Drive · $1"
+  },
+  "popupDriveWaiting": {
+    "message": "En attente de la sauvegarde automatique sur Drive"
+  },
+  "popupAutoCleanDelete": {
+    "message": "Le prochain rangement mettra $1 espace(s) à la corbeille"
+  },
+  "popupAutoCleanArchive": {
+    "message": "Le prochain rangement archivera $1 espace(s)"
+  },
+  "popupNewSpaceName": {
+    "message": "Onglets du $1"
+  },
+  "popupNothingToSave": {
+    "message": "Aucun onglet à enregistrer"
+  },
+  "popupSaveFailed": {
+    "message": "Échec de l’enregistrement"
+  },
+  "popupSavedNew": {
+    "message": "Enregistré dans le nouvel espace « $1 »"
+  },
+  "popupSavedTo": {
+    "message": "Enregistré dans « $1 »"
+  },
+  "popupSaved": {
+    "message": "Enregistré"
+  },
+  "popupUndone": {
+    "message": "Annulé"
+  },
+  "popupUndoFailed": {
+    "message": "Impossible d’annuler"
+  },
+  "popupTabSaved": {
+    "message": "Enregistré dans « $1 » ($2 onglets)"
+  },
+  "popupTabDuplicate": {
+    "message": "Déjà enregistré dans « $1 »"
+  },
+  "toolbarActionHeading": {
+    "message": "Icône de la barre d’outils"
+  },
+  "toolbarActionPopup": {
+    "message": "Afficher la petite fenêtre"
+  },
+  "toolbarActionDashboard": {
+    "message": "Ouvrir le tableau de bord"
+  },
+  "toolbarActionHelp": {
+    "message": "Ce qui se passe quand vous cliquez sur l’icône. Le tableau de bord s’ouvre aussi depuis la petite fenêtre."
   }
 }

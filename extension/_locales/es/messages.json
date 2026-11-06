@@ -1650,5 +1650,113 @@
   },
   "billingStatusRefunded": {
     "message": "Se reembolsó la compra; vuelves a la versión gratuita."
+  },
+  "popupSettings": {
+    "message": "Ajustes"
+  },
+  "popupSaveWindow": {
+    "message": "Guardar las pestañas de esta ventana"
+  },
+  "popupSaveWindowTo": {
+    "message": "Guardar en «$1»"
+  },
+  "popupTabCount": {
+    "message": "$1 pestañas"
+  },
+  "popupSaveTab": {
+    "message": "Guardar solo esta pestaña"
+  },
+  "popupOpenDashboard": {
+    "message": "Panel"
+  },
+  "popupSearchPlaceholder": {
+    "message": "Buscar espacios y pestañas guardadas"
+  },
+  "popupRecentTitle": {
+    "message": "Continuar donde lo dejaste"
+  },
+  "popupSeeAll": {
+    "message": "Ver todo"
+  },
+  "popupSearchTitle": {
+    "message": "Resultados"
+  },
+  "popupNoResults": {
+    "message": "No se encontró nada"
+  },
+  "popupNoSpaces": {
+    "message": "Aún no hay espacios. Usa el botón de arriba para guardar tus pestañas."
+  },
+  "popupCurrentSpace": {
+    "message": "Esta ventana"
+  },
+  "popupSpaceMeta": {
+    "message": "$1 pestañas · $2"
+  },
+  "popupTabInSpace": {
+    "message": "Pestaña en «$1»"
+  },
+  "popupCannotOpen": {
+    "message": "No se puede abrir esta pestaña"
+  },
+  "popupUndo": {
+    "message": "Deshacer"
+  },
+  "popupDriveProblem": {
+    "message": "La copia automática en Drive se ha detenido"
+  },
+  "popupDriveSaved": {
+    "message": "Guardado en Drive · $1"
+  },
+  "popupDriveWaiting": {
+    "message": "Esperando la copia automática en Drive"
+  },
+  "popupAutoCleanDelete": {
+    "message": "La próxima limpieza moverá $1 espacio(s) a la papelera"
+  },
+  "popupAutoCleanArchive": {
+    "message": "La próxima limpieza archivará $1 espacio(s)"
+  },
+  "popupNewSpaceName": {
+    "message": "Pestañas del $1"
+  },
+  "popupNothingToSave": {
+    "message": "No hay pestañas que guardar"
+  },
+  "popupSaveFailed": {
+    "message": "No se pudo guardar"
+  },
+  "popupSavedNew": {
+    "message": "Guardado en el nuevo espacio «$1»"
+  },
+  "popupSavedTo": {
+    "message": "Guardado en «$1»"
+  },
+  "popupSaved": {
+    "message": "Guardado"
+  },
+  "popupUndone": {
+    "message": "Deshecho"
+  },
+  "popupUndoFailed": {
+    "message": "No se pudo deshacer"
+  },
+  "popupTabSaved": {
+    "message": "Guardado en «$1» ($2 pestañas)"
+  },
+  "popupTabDuplicate": {
+    "message": "Ya está guardada en «$1»"
+  },
+  "toolbarActionHeading": {
+    "message": "Icono de la barra"
+  },
+  "toolbarActionPopup": {
+    "message": "Mostrar la ventana pequeña"
+  },
+  "toolbarActionDashboard": {
+    "message": "Abrir el panel"
+  },
+  "toolbarActionHelp": {
+    "message": "Qué ocurre al hacer clic en el icono. También puedes abrir el panel desde la ventana pequeña."
   }
 }

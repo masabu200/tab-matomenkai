@@ -3334,6 +3334,7 @@ async function init() {
     if (area !== 'local') return;
     if (changes.pwm_theme) applyTheme(changes.pwm_theme.newValue || 'light');
     if (changes[STORAGE_KEY]) renderAll();
+    if (changes.pwm_popup_request && changes.pwm_popup_request.newValue) handlePopupRequest();
     if (changes.pwm_settings) {
       const settings = changes.pwm_settings.newValue || {};
       document.getElementById('autoSaveOnSwitch').checked = settings.autoSaveOnSwitch ?? false;
@@ -3341,6 +3342,24 @@ async function init() {
     }
   });
   await renderAll();
+  await handlePopupRequest();
+}
+
+// 小窓（popup.js）からの依頼。スペースの切り替えはタブを閉じて確認も出すので、ダッシュボードで行う。
+// 自分のウィンドウ宛てで、30秒以内の依頼だけを1回だけ処理する。
+const POPUP_REQUEST_KEY = 'pwm_popup_request';
+async function handlePopupRequest() {
+  try {
+    const request = (await chrome.storage.local.get(POPUP_REQUEST_KEY))[POPUP_REQUEST_KEY];
+    if (!request || typeof request !== 'object') return;
+    if (g_dashboardWindowId !== null && request.windowId != null && request.windowId !== g_dashboardWindowId) return;
+    await chrome.storage.local.remove(POPUP_REQUEST_KEY);
+    if (!(Date.now() - Number(request.at) < 30000)) return;
+    if (request.type === 'switch' && request.spaceId) await handleSwitchSpace(request.spaceId);
+    else if (request.type === 'settings') document.getElementById('openSettings')?.click();
+  } catch (err) {
+    console.error('[PWM] popup request', err);
+  }
 }
 
 document.addEventListener('DOMContentLoaded', init);

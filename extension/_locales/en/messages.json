@@ -1658,5 +1658,113 @@
   },
   "billingStatusRefunded": {
     "message": "Refunded, so you are back on the free version."
+  },
+  "popupSettings": {
+    "message": "Settings"
+  },
+  "popupSaveWindow": {
+    "message": "Save this window’s tabs"
+  },
+  "popupSaveWindowTo": {
+    "message": "Save to “$1”"
+  },
+  "popupTabCount": {
+    "message": "$1 tabs"
+  },
+  "popupSaveTab": {
+    "message": "Save this tab"
+  },
+  "popupOpenDashboard": {
+    "message": "Dashboard"
+  },
+  "popupSearchPlaceholder": {
+    "message": "Search spaces and saved tabs"
+  },
+  "popupRecentTitle": {
+    "message": "Pick up where you left off"
+  },
+  "popupSeeAll": {
+    "message": "See all"
+  },
+  "popupSearchTitle": {
+    "message": "Search results"
+  },
+  "popupNoResults": {
+    "message": "Nothing found"
+  },
+  "popupNoSpaces": {
+    "message": "No spaces yet. Use the button above to save your open tabs."
+  },
+  "popupCurrentSpace": {
+    "message": "This window"
+  },
+  "popupSpaceMeta": {
+    "message": "$1 tabs · $2"
+  },
+  "popupTabInSpace": {
+    "message": "Tab in “$1”"
+  },
+  "popupCannotOpen": {
+    "message": "This tab can’t be opened"
+  },
+  "popupUndo": {
+    "message": "Undo"
+  },
+  "popupDriveProblem": {
+    "message": "Automatic Drive backup has stopped"
+  },
+  "popupDriveSaved": {
+    "message": "Saved to Drive · $1"
+  },
+  "popupDriveWaiting": {
+    "message": "Waiting for automatic Drive backup"
+  },
+  "popupAutoCleanDelete": {
+    "message": "Next auto-tidy will move $1 space(s) to the trash"
+  },
+  "popupAutoCleanArchive": {
+    "message": "Next auto-tidy will archive $1 space(s)"
+  },
+  "popupNewSpaceName": {
+    "message": "$1 tabs"
+  },
+  "popupNothingToSave": {
+    "message": "No tabs to save"
+  },
+  "popupSaveFailed": {
+    "message": "Couldn’t save"
+  },
+  "popupSavedNew": {
+    "message": "Saved to new space “$1”"
+  },
+  "popupSavedTo": {
+    "message": "Saved to “$1”"
+  },
+  "popupSaved": {
+    "message": "Saved"
+  },
+  "popupUndone": {
+    "message": "Undone"
+  },
+  "popupUndoFailed": {
+    "message": "Couldn’t undo"
+  },
+  "popupTabSaved": {
+    "message": "Saved to “$1” ($2 tabs)"
+  },
+  "popupTabDuplicate": {
+    "message": "Already saved in “$1”"
+  },
+  "toolbarActionHeading": {
+    "message": "Toolbar icon"
+  },
+  "toolbarActionPopup": {
+    "message": "Show the small window"
+  },
+  "toolbarActionDashboard": {
+    "message": "Open the dashboard"
+  },
+  "toolbarActionHelp": {
+    "message": "What happens when you click the icon. You can open the dashboard from the small window too."
   }
 }

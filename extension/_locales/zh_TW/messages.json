@@ -1650,5 +1650,113 @@
   },
   "billingStatusRefunded": {
     "message": "已退款，已回到免費版。"
+  },
+  "popupSettings": {
+    "message": "設定"
+  },
+  "popupSaveWindow": {
+    "message": "儲存此視窗的分頁"
+  },
+  "popupSaveWindowTo": {
+    "message": "儲存到「$1」"
+  },
+  "popupTabCount": {
+    "message": "$1 個"
+  },
+  "popupSaveTab": {
+    "message": "只儲存目前分頁"
+  },
+  "popupOpenDashboard": {
+    "message": "控制台"
+  },
+  "popupSearchPlaceholder": {
+    "message": "搜尋空間和已儲存的分頁"
+  },
+  "popupRecentTitle": {
+    "message": "從上次繼續"
+  },
+  "popupSeeAll": {
+    "message": "查看全部"
+  },
+  "popupSearchTitle": {
+    "message": "搜尋結果"
+  },
+  "popupNoResults": {
+    "message": "找不到"
+  },
+  "popupNoSpaces": {
+    "message": "還沒有空間。可用上方按鈕儲存目前的分頁。"
+  },
+  "popupCurrentSpace": {
+    "message": "此視窗"
+  },
+  "popupSpaceMeta": {
+    "message": "$1 個 · $2"
+  },
+  "popupTabInSpace": {
+    "message": "「$1」中的分頁"
+  },
+  "popupCannotOpen": {
+    "message": "無法開啟此分頁"
+  },
+  "popupUndo": {
+    "message": "復原"
+  },
+  "popupDriveProblem": {
+    "message": "Drive 自動儲存已停止"
+  },
+  "popupDriveSaved": {
+    "message": "已儲存到 Drive · $1"
+  },
+  "popupDriveWaiting": {
+    "message": "等待 Drive 自動儲存"
+  },
+  "popupAutoCleanDelete": {
+    "message": "下次自動整理會將 $1 個空間移到垃圾桶"
+  },
+  "popupAutoCleanArchive": {
+    "message": "下次自動整理會封存 $1 個空間"
+  },
+  "popupNewSpaceName": {
+    "message": "$1 的分頁"
+  },
+  "popupNothingToSave": {
+    "message": "沒有可儲存的分頁"
+  },
+  "popupSaveFailed": {
+    "message": "無法儲存"
+  },
+  "popupSavedNew": {
+    "message": "已儲存到新空間「$1」"
+  },
+  "popupSavedTo": {
+    "message": "已儲存到「$1」"
+  },
+  "popupSaved": {
+    "message": "已儲存"
+  },
+  "popupUndone": {
+    "message": "已復原"
+  },
+  "popupUndoFailed": {
+    "message": "無法復原"
+  },
+  "popupTabSaved": {
+    "message": "已儲存到「$1」（$2 個）"
+  },
+  "popupTabDuplicate": {
+    "message": "「$1」中已儲存過"
+  },
+  "toolbarActionHeading": {
+    "message": "工具列圖示"
+  },
+  "toolbarActionPopup": {
+    "message": "顯示小視窗"
+  },
+  "toolbarActionDashboard": {
+    "message": "開啟控制台"
+  },
+  "toolbarActionHelp": {
+    "message": "按下圖示時的動作。也可以從小視窗開啟控制台。"
   }
 }

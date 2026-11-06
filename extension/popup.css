@@ -1,0 +1,91 @@
+/* ツールバーのアイコンから開く小窓。色は theme-refined.css / theme-palettes.css の変数をそのまま使う。 */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; }
+body.pp {
+  width: 360px; padding: 14px; background: var(--body-bg); color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", "Segoe UI", sans-serif;
+  font-size: 13px; line-height: 1.45;
+  --pp-ok: #1f7a4d; --pp-ok-bg: #e6f4ec; --pp-warn: #a33a1f; --pp-warn-bg: #fbeae4;
+  --pp-ring: rgba(25, 28, 29, 0.10);
+}
+body.pp.theme-dark { --pp-ok: #7fd3a6; --pp-ok-bg: #18301f; --pp-warn: #f4a48c; --pp-warn-bg: #3a2018; --pp-ring: rgba(238, 240, 240, 0.12); }
+button { font: inherit; color: inherit; }
+[hidden] { display: none !important; }
+
+.pp-head { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+.pp-logo { width: 22px; height: 22px; border-radius: 6px; }
+.pp-title { font-size: 14px; }
+.pp-spacer { flex: 1; }
+.pp-icon-btn { width: 28px; height: 28px; border-radius: 8px; border: 0; background: transparent; color: var(--text-secondary); cursor: pointer; font-size: 15px; }
+.pp-icon-btn:hover, .pp-icon-btn:focus-visible { background: var(--btn-ghost-hover-bg); }
+
+.pp-main, .pp-done { display: flex; flex-direction: column; gap: 12px; }
+
+.pp-primary {
+  width: 100%; border: 0; border-radius: 12px; background: var(--ink); color: var(--on-ink);
+  padding: 12px 14px; font-size: 14px; font-weight: 600; cursor: pointer;
+  display: flex; align-items: center; gap: 10px; text-align: left;
+}
+.pp-primary:hover { background: var(--ink-hover); }
+.pp-primary:disabled { opacity: .45; cursor: default; }
+.pp-primary span:nth-child(2) { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pp-primary small { font-weight: 400; opacity: .75; font-size: 12px; white-space: nowrap; }
+
+.pp-ghosts { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.pp-ghost {
+  border: 1px solid var(--btn-ghost-border); background: var(--card-bg); color: var(--btn-ghost-color);
+  border-radius: 10px; padding: 9px 8px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; gap: 6px; white-space: nowrap;
+}
+.pp-ghost:hover { background: var(--btn-ghost-hover-bg); border-color: var(--btn-ghost-hover-border); }
+.pp-ghost:disabled { opacity: .45; cursor: default; }
+.pp-primary:focus-visible, .pp-ghost:focus-visible, .pp-link:focus-visible, .pp-toast button:focus-visible { outline: 2px solid var(--text-primary); outline-offset: 2px; }
+
+.pp-search {
+  display: flex; align-items: center; gap: 8px; background: var(--search-bg);
+  border: 1px solid var(--search-border); border-radius: 10px; padding: 0 10px;
+}
+.pp-search:focus-within { box-shadow: 0 0 0 3px var(--pp-ring); }
+.pp-search__icon { color: var(--text-tertiary); font-size: 15px; }
+.pp-search input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--search-text); font: inherit; padding: 9px 0; }
+.pp-search input::placeholder { color: var(--text-tertiary); }
+
+.pp-sec-title { display: flex; justify-content: space-between; align-items: baseline; font-size: 12px; color: var(--text-tertiary); margin: 2px 2px -4px; }
+.pp-link { border: 0; background: none; padding: 0; color: var(--text-secondary); cursor: pointer; font-size: 12px; }
+.pp-link:hover { text-decoration: underline; }
+
+.pp-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px; box-shadow: var(--card-shadow); overflow: hidden; }
+.pp-item { display: flex; align-items: center; gap: 10px; padding: 9px 12px; cursor: pointer; }
+.pp-item + .pp-item { border-top: 1px solid var(--card-border); }
+.pp-item:hover, .pp-item[aria-selected="true"] { background: var(--btn-ghost-hover-bg); }
+.pp-dot { width: 10px; height: 10px; border-radius: 50%; flex: none; background: var(--text-tertiary); }
+.pp-fav { width: 14px; height: 14px; border-radius: 3px; flex: none; }
+.pp-item__text { flex: 1; min-width: 0; }
+.pp-item__name { font-weight: 600; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pp-item__sub { display: block; color: var(--text-tertiary); font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pp-item__meta { color: var(--text-tertiary); font-size: 12px; white-space: nowrap; }
+.pp-item__current { font-size: 11px; color: var(--text-secondary); background: var(--badge-bg); border-radius: 999px; padding: 1px 7px; white-space: nowrap; }
+.pp-favs { display: flex; padding-left: 4px; }
+.pp-favs img { width: 14px; height: 14px; border-radius: 3px; margin-left: -4px; background: var(--card-bg); box-shadow: 0 0 0 1.5px var(--card-bg); }
+.pp-empty { padding: 14px 12px; color: var(--text-tertiary); text-align: center; }
+
+.pp-status { display: flex; flex-wrap: wrap; gap: 6px; }
+.pp-status:empty { display: none; }
+.pp-chip { display: inline-flex; align-items: center; gap: 5px; background: var(--badge-bg); color: var(--badge-color); border-radius: 999px; padding: 4px 9px; font-size: 12px; }
+.pp-chip--ok { background: var(--pp-ok-bg); color: var(--pp-ok); }
+.pp-chip--warn { background: var(--pp-warn-bg); color: var(--pp-warn); }
+
+.pp-done__card { padding: 18px 14px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.pp-done__big { font-size: 28px; font-weight: 700; }
+.pp-done p { margin: 0; color: var(--text-secondary); line-height: 1.6; text-wrap: pretty; word-break: keep-all; overflow-wrap: anywhere; }
+.pp-toast { display: flex; align-items: center; gap: 10px; background: var(--ink); color: var(--on-ink); border-radius: 12px; padding: 10px 12px; }
+.pp-toast span { flex: 1; }
+.pp-toast button { border: 0; background: transparent; color: var(--on-ink); font-weight: 700; cursor: pointer; text-decoration: underline; }
+.pp-bar { height: 3px; border-radius: 3px; background: var(--card-border); overflow: hidden; }
+.pp-bar i { display: block; height: 100%; width: 100%; background: var(--text-secondary); transform-origin: left; }
+.pp-bar i.pp-bar--run { animation: pp-shrink 2.5s linear forwards; }
+@keyframes pp-shrink { from { transform: scaleX(1); } to { transform: scaleX(0); } }
+@media (prefers-reduced-motion: reduce) { .pp-bar i.pp-bar--run { animation: none; transform: scaleX(0); } }
+
+.pp-notice { margin: 10px 2px 0; font-size: 12px; color: var(--text-secondary); }
+.pp-notice:empty { display: none; }

@@ -1650,5 +1650,113 @@
   },
   "billingStatusRefunded": {
     "message": "已退款，已恢复为免费版。"
+  },
+  "popupSettings": {
+    "message": "设置"
+  },
+  "popupSaveWindow": {
+    "message": "保存此窗口的标签页"
+  },
+  "popupSaveWindowTo": {
+    "message": "保存到“$1”"
+  },
+  "popupTabCount": {
+    "message": "$1 个"
+  },
+  "popupSaveTab": {
+    "message": "只保存当前标签页"
+  },
+  "popupOpenDashboard": {
+    "message": "控制台"
+  },
+  "popupSearchPlaceholder": {
+    "message": "搜索空间和已保存的标签页"
+  },
+  "popupRecentTitle": {
+    "message": "继续上次"
+  },
+  "popupSeeAll": {
+    "message": "查看全部"
+  },
+  "popupSearchTitle": {
+    "message": "搜索结果"
+  },
+  "popupNoResults": {
+    "message": "未找到"
+  },
+  "popupNoSpaces": {
+    "message": "还没有空间。可用上方按钮保存当前标签页。"
+  },
+  "popupCurrentSpace": {
+    "message": "此窗口"
+  },
+  "popupSpaceMeta": {
+    "message": "$1 个 · $2"
+  },
+  "popupTabInSpace": {
+    "message": "“$1”中的标签页"
+  },
+  "popupCannotOpen": {
+    "message": "无法打开此标签页"
+  },
+  "popupUndo": {
+    "message": "撤销"
+  },
+  "popupDriveProblem": {
+    "message": "Drive 自动保存已停止"
+  },
+  "popupDriveSaved": {
+    "message": "已保存到 Drive · $1"
+  },
+  "popupDriveWaiting": {
+    "message": "等待 Drive 自动保存"
+  },
+  "popupAutoCleanDelete": {
+    "message": "下次自动整理将把 $1 个空间移到回收站"
+  },
+  "popupAutoCleanArchive": {
+    "message": "下次自动整理将归档 $1 个空间"
+  },
+  "popupNewSpaceName": {
+    "message": "$1 的标签页"
+  },
+  "popupNothingToSave": {
+    "message": "没有可保存的标签页"
+  },
+  "popupSaveFailed": {
+    "message": "无法保存"
+  },
+  "popupSavedNew": {
+    "message": "已保存到新空间“$1”"
+  },
+  "popupSavedTo": {
+    "message": "已保存到“$1”"
+  },
+  "popupSaved": {
+    "message": "已保存"
+  },
+  "popupUndone": {
+    "message": "已撤销"
+  },
+  "popupUndoFailed": {
+    "message": "无法撤销"
+  },
+  "popupTabSaved": {
+    "message": "已保存到“$1”（$2 个）"
+  },
+  "popupTabDuplicate": {
+    "message": "“$1”中已保存过"
+  },
+  "toolbarActionHeading": {
+    "message": "工具栏图标"
+  },
+  "toolbarActionPopup": {
+    "message": "显示小窗口"
+  },
+  "toolbarActionDashboard": {
+    "message": "打开控制台"
+  },
+  "toolbarActionHelp": {
+    "message": "点击图标时的操作。也可以从小窗口打开控制台。"
   }
 }

@@ -1650,5 +1650,113 @@
   },
   "billingStatusRefunded": {
     "message": "환불되어 무료 버전으로 돌아왔습니다."
+  },
+  "popupSettings": {
+    "message": "설정"
+  },
+  "popupSaveWindow": {
+    "message": "이 창의 탭 저장"
+  },
+  "popupSaveWindowTo": {
+    "message": "“$1”에 저장"
+  },
+  "popupTabCount": {
+    "message": "$1개"
+  },
+  "popupSaveTab": {
+    "message": "현재 탭만 저장"
+  },
+  "popupOpenDashboard": {
+    "message": "대시보드"
+  },
+  "popupSearchPlaceholder": {
+    "message": "스페이스·저장한 탭 검색"
+  },
+  "popupRecentTitle": {
+    "message": "이어서 하기"
+  },
+  "popupSeeAll": {
+    "message": "모두 보기"
+  },
+  "popupSearchTitle": {
+    "message": "검색 결과"
+  },
+  "popupNoResults": {
+    "message": "찾을 수 없습니다"
+  },
+  "popupNoSpaces": {
+    "message": "아직 스페이스가 없습니다. 위 버튼으로 열린 탭을 저장할 수 있습니다."
+  },
+  "popupCurrentSpace": {
+    "message": "이 창"
+  },
+  "popupSpaceMeta": {
+    "message": "$1개 · $2"
+  },
+  "popupTabInSpace": {
+    "message": "“$1”의 탭"
+  },
+  "popupCannotOpen": {
+    "message": "이 탭은 열 수 없습니다"
+  },
+  "popupUndo": {
+    "message": "실행 취소"
+  },
+  "popupDriveProblem": {
+    "message": "Drive 자동 저장이 멈췄습니다"
+  },
+  "popupDriveSaved": {
+    "message": "Drive에 저장됨 · $1"
+  },
+  "popupDriveWaiting": {
+    "message": "Drive 자동 저장 대기 중"
+  },
+  "popupAutoCleanDelete": {
+    "message": "다음 자동 정리에서 $1개를 휴지통으로 옮깁니다"
+  },
+  "popupAutoCleanArchive": {
+    "message": "다음 자동 정리에서 $1개를 보관합니다"
+  },
+  "popupNewSpaceName": {
+    "message": "$1 탭 모음"
+  },
+  "popupNothingToSave": {
+    "message": "저장할 탭이 없습니다"
+  },
+  "popupSaveFailed": {
+    "message": "저장하지 못했습니다"
+  },
+  "popupSavedNew": {
+    "message": "새 스페이스 “$1”에 저장했습니다"
+  },
+  "popupSavedTo": {
+    "message": "“$1”에 저장했습니다"
+  },
+  "popupSaved": {
+    "message": "저장했습니다"
+  },
+  "popupUndone": {
+    "message": "되돌렸습니다"
+  },
+  "popupUndoFailed": {
+    "message": "되돌리지 못했습니다"
+  },
+  "popupTabSaved": {
+    "message": "“$1”에 저장했습니다($2개)"
+  },
+  "popupTabDuplicate": {
+    "message": "“$1”에 이미 저장되어 있습니다"
+  },
+  "toolbarActionHeading": {
+    "message": "툴바 아이콘"
+  },
+  "toolbarActionPopup": {
+    "message": "작은 창 표시"
+  },
+  "toolbarActionDashboard": {
+    "message": "대시보드 열기"
+  },
+  "toolbarActionHelp": {
+    "message": "아이콘을 눌렀을 때의 동작입니다. 작은 창에서도 대시보드를 열 수 있습니다."
   }
 }

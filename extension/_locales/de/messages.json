@@ -1650,5 +1650,113 @@
   },
   "billingStatusRefunded": {
     "message": "Erstattet – du nutzt wieder die kostenlose Version."
+  },
+  "popupSettings": {
+    "message": "Einstellungen"
+  },
+  "popupSaveWindow": {
+    "message": "Tabs dieses Fensters speichern"
+  },
+  "popupSaveWindowTo": {
+    "message": "In „$1“ speichern"
+  },
+  "popupTabCount": {
+    "message": "$1 Tabs"
+  },
+  "popupSaveTab": {
+    "message": "Nur diesen Tab speichern"
+  },
+  "popupOpenDashboard": {
+    "message": "Übersicht"
+  },
+  "popupSearchPlaceholder": {
+    "message": "Bereiche und gespeicherte Tabs suchen"
+  },
+  "popupRecentTitle": {
+    "message": "Weitermachen"
+  },
+  "popupSeeAll": {
+    "message": "Alle anzeigen"
+  },
+  "popupSearchTitle": {
+    "message": "Suchergebnisse"
+  },
+  "popupNoResults": {
+    "message": "Nichts gefunden"
+  },
+  "popupNoSpaces": {
+    "message": "Noch keine Bereiche. Mit der Schaltfläche oben speicherst du deine offenen Tabs."
+  },
+  "popupCurrentSpace": {
+    "message": "Dieses Fenster"
+  },
+  "popupSpaceMeta": {
+    "message": "$1 Tabs · $2"
+  },
+  "popupTabInSpace": {
+    "message": "Tab in „$1“"
+  },
+  "popupCannotOpen": {
+    "message": "Dieser Tab kann nicht geöffnet werden"
+  },
+  "popupUndo": {
+    "message": "Rückgängig"
+  },
+  "popupDriveProblem": {
+    "message": "Die automatische Drive-Sicherung ist angehalten"
+  },
+  "popupDriveSaved": {
+    "message": "In Drive gesichert · $1"
+  },
+  "popupDriveWaiting": {
+    "message": "Warte auf automatische Drive-Sicherung"
+  },
+  "popupAutoCleanDelete": {
+    "message": "Beim nächsten Aufräumen kommen $1 Bereich(e) in den Papierkorb"
+  },
+  "popupAutoCleanArchive": {
+    "message": "Beim nächsten Aufräumen werden $1 Bereich(e) archiviert"
+  },
+  "popupNewSpaceName": {
+    "message": "Tabs vom $1"
+  },
+  "popupNothingToSave": {
+    "message": "Keine Tabs zum Speichern"
+  },
+  "popupSaveFailed": {
+    "message": "Speichern fehlgeschlagen"
+  },
+  "popupSavedNew": {
+    "message": "Im neuen Bereich „$1“ gespeichert"
+  },
+  "popupSavedTo": {
+    "message": "In „$1“ gespeichert"
+  },
+  "popupSaved": {
+    "message": "Gespeichert"
+  },
+  "popupUndone": {
+    "message": "Rückgängig gemacht"
+  },
+  "popupUndoFailed": {
+    "message": "Rückgängig machen fehlgeschlagen"
+  },
+  "popupTabSaved": {
+    "message": "In „$1“ gespeichert ($2 Tabs)"
+  },
+  "popupTabDuplicate": {
+    "message": "Bereits in „$1“ gespeichert"
+  },
+  "toolbarActionHeading": {
+    "message": "Symbol in der Symbolleiste"
+  },
+  "toolbarActionPopup": {
+    "message": "Kleines Fenster zeigen"
+  },
+  "toolbarActionDashboard": {
+    "message": "Übersicht öffnen"
+  },
+  "toolbarActionHelp": {
+    "message": "Was beim Klick auf das Symbol passiert. Die Übersicht lässt sich auch aus dem kleinen Fenster öffnen."
   }
 }

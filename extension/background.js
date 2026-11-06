@@ -1,7 +1,7 @@
 /**
  * background.js — サービスワーカー
  *
- * - アイコンクリック時に dashboard.html を開く（またはフォーカス）
+ * - アイコンクリック時に小窓（popup.html）を出す。設定で dashboard.html を開く動きにも戻せる
  * - ダッシュボードタブを常にピン留め＆最左端に固定する
  * - chrome.alarms で定期自動バックアップを実行する
  */
@@ -24,11 +24,12 @@ async function pinAndMoveToFirst(tabId) {
   await chrome.tabs.move(tabId, { index: 0 });
 }
 
-chrome.action.onClicked.addListener(async () => {
+// windowId を省くと今のウィンドウ。そのウィンドウにダッシュボードがあれば切り替え、無ければ開く。
+async function openDashboard(windowId) {
   try {
-    // 現在のウィンドウ内だけを検索（他ウィンドウのダッシュボードには飛ばない）
-    const currentWindow = await chrome.windows.getCurrent();
-    const tabsInWindow  = await chrome.tabs.query({ windowId: currentWindow.id });
+    // 指定ウィンドウ内だけを検索（他ウィンドウのダッシュボードには飛ばない）
+    const targetWindowId = windowId ?? (await chrome.windows.getCurrent()).id;
+    const tabsInWindow  = await chrome.tabs.query({ windowId: targetWindowId });
     const existingTab   = tabsInWindow.find((t) => t.url && t.url.startsWith(DASHBOARD_URL));
 
     if (existingTab) {
@@ -36,12 +37,46 @@ chrome.action.onClicked.addListener(async () => {
       await pinAndMoveToFirst(existingTab.id);
       await addDashboardTabId(existingTab.id);
     } else {
-      const newTab = await chrome.tabs.create({ url: DASHBOARD_URL });
+      const newTab = await chrome.tabs.create({ url: DASHBOARD_URL, windowId: targetWindowId });
       await pinAndMoveToFirst(newTab.id);
       await addDashboardTabId(newTab.id);
     }
   } catch (err) {
     console.error('[PWM] dashboard.html を開く際にエラーが発生しました:', err);
+  }
+}
+
+// 小窓（popup.html）を使う設定のときは onClicked は呼ばれない
+chrome.action.onClicked.addListener(() => openDashboard());
+
+// ツールバーのアイコンを押したときの動き（pwm_settings.toolbarAction: 'popup' | 'dashboard'、既定は小窓）
+async function applyToolbarAction() {
+  if (!chrome.action || typeof chrome.action.setPopup !== 'function') return;
+  try {
+    const settings = (await chrome.storage.local.get(SETTINGS_KEY))[SETTINGS_KEY] || {};
+    await chrome.action.setPopup({ popup: settings.toolbarAction === 'dashboard' ? '' : 'popup.html' });
+  } catch (err) {
+    console.warn('[PWM] toolbar action', err);
+  }
+}
+try {
+  chrome.runtime.onInstalled.addListener(applyToolbarAction);
+  chrome.runtime.onStartup.addListener(applyToolbarAction);
+  chrome.storage?.onChanged?.addListener((changes, area) => {
+    if (area === 'local' && changes[SETTINGS_KEY] && (changes[SETTINGS_KEY].oldValue || {}).toolbarAction !== (changes[SETTINGS_KEY].newValue || {}).toolbarAction) applyToolbarAction();
+  });
+} catch (e) { /* 最小限のモック環境では登録しない */ }
+applyToolbarAction();
+
+// 小窓からの依頼
+chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
+  if (msg?.type === 'OPEN_DASHBOARD') {
+    openDashboard(msg.windowId ?? undefined).then(() => sendResponse({ ok: true }));
+    return true;
+  }
+  if (msg?.type === 'POPUP_SAVE_TAB') {
+    saveTabToSpace(msg.spaceId, msg.tab || {}).then(sendResponse).catch((e) => sendResponse({ ok: false, reason: String(e) }));
+    return true;
   }
 });
 

@@ -1657,5 +1657,113 @@
   },
   "billingStatusRefunded": {
     "message": "A compra foi reembolsada; você voltou à versão gratuita."
+  },
+  "popupSettings": {
+    "message": "Configurações"
+  },
+  "popupSaveWindow": {
+    "message": "Salvar as abas desta janela"
+  },
+  "popupSaveWindowTo": {
+    "message": "Salvar em “$1”"
+  },
+  "popupTabCount": {
+    "message": "$1 abas"
+  },
+  "popupSaveTab": {
+    "message": "Salvar só esta aba"
+  },
+  "popupOpenDashboard": {
+    "message": "Painel"
+  },
+  "popupSearchPlaceholder": {
+    "message": "Pesquisar espaços e abas salvas"
+  },
+  "popupRecentTitle": {
+    "message": "Continuar de onde parou"
+  },
+  "popupSeeAll": {
+    "message": "Ver tudo"
+  },
+  "popupSearchTitle": {
+    "message": "Resultados"
+  },
+  "popupNoResults": {
+    "message": "Nada encontrado"
+  },
+  "popupNoSpaces": {
+    "message": "Ainda não há espaços. Use o botão acima para salvar suas abas."
+  },
+  "popupCurrentSpace": {
+    "message": "Esta janela"
+  },
+  "popupSpaceMeta": {
+    "message": "$1 abas · $2"
+  },
+  "popupTabInSpace": {
+    "message": "Aba em “$1”"
+  },
+  "popupCannotOpen": {
+    "message": "Não é possível abrir esta aba"
+  },
+  "popupUndo": {
+    "message": "Desfazer"
+  },
+  "popupDriveProblem": {
+    "message": "O backup automático no Drive parou"
+  },
+  "popupDriveSaved": {
+    "message": "Salvo no Drive · $1"
+  },
+  "popupDriveWaiting": {
+    "message": "Aguardando o backup automático no Drive"
+  },
+  "popupAutoCleanDelete": {
+    "message": "A próxima limpeza moverá $1 espaço(s) para a lixeira"
+  },
+  "popupAutoCleanArchive": {
+    "message": "A próxima limpeza arquivará $1 espaço(s)"
+  },
+  "popupNewSpaceName": {
+    "message": "Abas de $1"
+  },
+  "popupNothingToSave": {
+    "message": "Não há abas para salvar"
+  },
+  "popupSaveFailed": {
+    "message": "Não foi possível salvar"
+  },
+  "popupSavedNew": {
+    "message": "Salvo no novo espaço “$1”"
+  },
+  "popupSavedTo": {
+    "message": "Salvo em “$1”"
+  },
+  "popupSaved": {
+    "message": "Salvo"
+  },
+  "popupUndone": {
+    "message": "Desfeito"
+  },
+  "popupUndoFailed": {
+    "message": "Não foi possível desfazer"
+  },
+  "popupTabSaved": {
+    "message": "Salvo em “$1” ($2 abas)"
+  },
+  "popupTabDuplicate": {
+    "message": "Já está salva em “$1”"
+  },
+  "toolbarActionHeading": {
+    "message": "Ícone da barra"
+  },
+  "toolbarActionPopup": {
+    "message": "Mostrar a janela pequena"
+  },
+  "toolbarActionDashboard": {
+    "message": "Abrir o painel"
+  },
+  "toolbarActionHelp": {
+    "message": "O que acontece ao clicar no ícone. Você também pode abrir o painel pela janela pequena."
   }
 }

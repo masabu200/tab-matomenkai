@@ -2049,5 +2049,113 @@
   },
   "billingStatusRefunded": {
     "message": "返金済みのため、無料版に戻りました。"
+  },
+  "popupSettings": {
+    "message": "設定"
+  },
+  "popupSaveWindow": {
+    "message": "このウィンドウのタブを保存"
+  },
+  "popupSaveWindowTo": {
+    "message": "「$1」に保存"
+  },
+  "popupTabCount": {
+    "message": "$1枚"
+  },
+  "popupSaveTab": {
+    "message": "今のタブだけ保存"
+  },
+  "popupOpenDashboard": {
+    "message": "ダッシュボード"
+  },
+  "popupSearchPlaceholder": {
+    "message": "スペース・保存したタブを検索"
+  },
+  "popupRecentTitle": {
+    "message": "続きから"
+  },
+  "popupSeeAll": {
+    "message": "すべて見る"
+  },
+  "popupSearchTitle": {
+    "message": "検索結果"
+  },
+  "popupNoResults": {
+    "message": "見つかりませんでした"
+  },
+  "popupNoSpaces": {
+    "message": "まだスペースがありません。上のボタンで今のタブを保存できます"
+  },
+  "popupCurrentSpace": {
+    "message": "このウィンドウ"
+  },
+  "popupSpaceMeta": {
+    "message": "$1枚・$2"
+  },
+  "popupTabInSpace": {
+    "message": "「$1」のタブ"
+  },
+  "popupCannotOpen": {
+    "message": "このタブは開けません"
+  },
+  "popupUndo": {
+    "message": "取り消す"
+  },
+  "popupDriveProblem": {
+    "message": "Driveへの自動保存が止まっています"
+  },
+  "popupDriveSaved": {
+    "message": "Driveに保存済み・$1"
+  },
+  "popupDriveWaiting": {
+    "message": "Driveへの自動保存を待っています"
+  },
+  "popupAutoCleanDelete": {
+    "message": "次の自動整理で $1 件をゴミ箱へ移します"
+  },
+  "popupAutoCleanArchive": {
+    "message": "次の自動整理で $1 件をアーカイブします"
+  },
+  "popupNewSpaceName": {
+    "message": "$1のまとめ"
+  },
+  "popupNothingToSave": {
+    "message": "保存できるタブがありません"
+  },
+  "popupSaveFailed": {
+    "message": "保存できませんでした"
+  },
+  "popupSavedNew": {
+    "message": "新しいスペース「$1」に保存しました"
+  },
+  "popupSavedTo": {
+    "message": "「$1」に保存しました"
+  },
+  "popupSaved": {
+    "message": "保存しました"
+  },
+  "popupUndone": {
+    "message": "元に戻しました"
+  },
+  "popupUndoFailed": {
+    "message": "元に戻せませんでした"
+  },
+  "popupTabSaved": {
+    "message": "「$1」に保存しました（$2枚）"
+  },
+  "popupTabDuplicate": {
+    "message": "「$1」にはもう保存されています"
+  },
+  "toolbarActionHeading": {
+    "message": "ツールバーのアイコン"
+  },
+  "toolbarActionPopup": {
+    "message": "小窓を出す"
+  },
+  "toolbarActionDashboard": {
+    "message": "ダッシュボードを開く"
+  },
+  "toolbarActionHelp": {
+    "message": "アイコンを押したときの動きです。小窓からもダッシュボードを開けます。"
   }
 }

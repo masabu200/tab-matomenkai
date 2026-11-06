@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="theme-refined.css">
+  <link rel="stylesheet" href="theme-palettes.css">
+  <link rel="stylesheet" href="popup.css">
+  <script src="theme-palette.js"></script>
+</head>
+<body class="pp">
+  <header class="pp-head">
+    <img class="pp-logo" src="icons/icon48.png" alt="">
+    <b class="pp-title" data-i18n="appName"></b>
+    <span class="pp-spacer"></span>
+    <button type="button" class="pp-icon-btn" id="ppSettings" data-i18n-attr="title:popupSettings;aria-label:popupSettings">⚙</button>
+  </header>
+
+  <main id="ppMain" class="pp-main">
+    <button type="button" class="pp-primary" id="ppSaveWindow">
+      <span aria-hidden="true">⇣</span>
+      <span id="ppSaveWindowLabel" data-i18n="popupSaveWindow"></span>
+      <small id="ppSaveWindowCount"></small>
+    </button>
+    <div class="pp-ghosts">
+      <button type="button" class="pp-ghost" id="ppSaveTab"><span aria-hidden="true">＋</span><span data-i18n="popupSaveTab"></span></button>
+      <button type="button" class="pp-ghost" id="ppOpenDashboard"><span aria-hidden="true">▦</span><span data-i18n="popupOpenDashboard"></span></button>
+    </div>
+
+    <label class="pp-search">
+      <span aria-hidden="true" class="pp-search__icon">⌕</span>
+      <input id="ppSearch" type="search" autocomplete="off" spellcheck="false" data-i18n-attr="placeholder:popupSearchPlaceholder;aria-label:popupSearchPlaceholder" aria-controls="ppList">
+    </label>
+
+    <div class="pp-sec-title">
+      <span id="ppListTitle" data-i18n="popupRecentTitle"></span>
+      <button type="button" class="pp-link" id="ppSeeAll" data-i18n="popupSeeAll"></button>
+    </div>
+    <div class="pp-card" id="ppList" role="listbox" aria-labelledby="ppListTitle"></div>
+
+    <div class="pp-status" id="ppStatus"></div>
+  </main>
+
+  <section id="ppDone" class="pp-done" hidden>
+    <div class="pp-card pp-done__card">
+      <div class="pp-done__big" id="ppDoneCount"></div>
+      <p id="ppDoneText"></p>
+    </div>
+    <div class="pp-toast" role="status">
+      <span id="ppToastText"></span>
+      <button type="button" id="ppUndo" data-i18n="popupUndo"></button>
+    </div>
+    <div class="pp-bar"><i id="ppBar"></i></div>
+  </section>
+
+  <p class="pp-notice" id="ppNotice" role="status" aria-live="polite"></p>
+
+  <script src="i18n.js"></script>
+  <script src="auto-clean.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

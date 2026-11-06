@@ -1657,5 +1657,113 @@
   },
   "billingStatusRefunded": {
     "message": "Rimborsato: sei tornato alla versione gratuita."
+  },
+  "popupSettings": {
+    "message": "Impostazioni"
+  },
+  "popupSaveWindow": {
+    "message": "Salva le schede di questa finestra"
+  },
+  "popupSaveWindowTo": {
+    "message": "Salva in «$1»"
+  },
+  "popupTabCount": {
+    "message": "$1 schede"
+  },
+  "popupSaveTab": {
+    "message": "Salva solo questa scheda"
+  },
+  "popupOpenDashboard": {
+    "message": "Pannello"
+  },
+  "popupSearchPlaceholder": {
+    "message": "Cerca spazi e schede salvate"
+  },
+  "popupRecentTitle": {
+    "message": "Riprendi da dove eri"
+  },
+  "popupSeeAll": {
+    "message": "Vedi tutto"
+  },
+  "popupSearchTitle": {
+    "message": "Risultati"
+  },
+  "popupNoResults": {
+    "message": "Nessun risultato"
+  },
+  "popupNoSpaces": {
+    "message": "Ancora nessuno spazio. Usa il pulsante sopra per salvare le schede aperte."
+  },
+  "popupCurrentSpace": {
+    "message": "Questa finestra"
+  },
+  "popupSpaceMeta": {
+    "message": "$1 schede · $2"
+  },
+  "popupTabInSpace": {
+    "message": "Scheda in «$1»"
+  },
+  "popupCannotOpen": {
+    "message": "Impossibile aprire questa scheda"
+  },
+  "popupUndo": {
+    "message": "Annulla"
+  },
+  "popupDriveProblem": {
+    "message": "Il backup automatico su Drive si è fermato"
+  },
+  "popupDriveSaved": {
+    "message": "Salvato su Drive · $1"
+  },
+  "popupDriveWaiting": {
+    "message": "In attesa del backup automatico su Drive"
+  },
+  "popupAutoCleanDelete": {
+    "message": "Il prossimo riordino sposterà $1 spazio/i nel cestino"
+  },
+  "popupAutoCleanArchive": {
+    "message": "Il prossimo riordino archivierà $1 spazio/i"
+  },
+  "popupNewSpaceName": {
+    "message": "Schede del $1"
+  },
+  "popupNothingToSave": {
+    "message": "Nessuna scheda da salvare"
+  },
+  "popupSaveFailed": {
+    "message": "Impossibile salvare"
+  },
+  "popupSavedNew": {
+    "message": "Salvato nel nuovo spazio «$1»"
+  },
+  "popupSavedTo": {
+    "message": "Salvato in «$1»"
+  },
+  "popupSaved": {
+    "message": "Salvato"
+  },
+  "popupUndone": {
+    "message": "Annullato"
+  },
+  "popupUndoFailed": {
+    "message": "Impossibile annullare"
+  },
+  "popupTabSaved": {
+    "message": "Salvato in «$1» ($2 schede)"
+  },
+  "popupTabDuplicate": {
+    "message": "Già salvata in «$1»"
+  },
+  "toolbarActionHeading": {
+    "message": "Icona della barra"
+  },
+  "toolbarActionPopup": {
+    "message": "Mostra la finestra piccola"
+  },
+  "toolbarActionDashboard": {
+    "message": "Apri il pannello"
+  },
+  "toolbarActionHelp": {
+    "message": "Cosa succede quando fai clic sull’icona. Puoi aprire il pannello anche dalla finestra piccola."
   }
 }
